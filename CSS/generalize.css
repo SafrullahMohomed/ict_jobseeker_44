@@ -1,0 +1,54 @@
+/* button */
+color: rgb(255, 255, 255);
+    background-color: #1D6989;
+    height: 30px;
+    width: 90px;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+/* button:hover */
+
+color: #1D6989 ;
+cursor: pointer;
+  background-color: #ffffff;
+  height: 30px;
+  border:1px solid #1D6989 ;
+
+/* selection-boxes */
+
+
+
+    /* css */
+
+    .service-name {
+        width: 285px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        border: 1px solid #91a4c7;
+        border-radius: 7px;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: center;
+        box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%), 0 6px 20px 0 rgb(90 127 210 / 15%);
+      }
+      
+      .service-name:hover{
+        cursor: pointer;
+        box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+        }
+
+/* box shadow */
+
+box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+/* hovering box shadow */
+box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+
+/* hovering text color */
+rgb(127, 135, 245)
