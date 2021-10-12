@@ -1,0 +1,207 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/CSS/normalize.css">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  font-family: "Quicksand", sans-serif;
+
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 7px;
+  overflow-x:hidden;
+}
+
+/*header division* starts here*/
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+/*This is for login bar of the header*/
+.login-bar {
+  background-color: #004867;
+  width: 100%;
+  height: 35px;
+  border-radius: 7px;
+}
+
+.login-bar ul {
+  float: right;
+  background-color: rgba(226, 226, 226, 0);
+  padding-right: 6px;
+  margin-top: 9px;
+  margin-right: 12px;
+}
+.login-list {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  padding: 0%;
+  background-color: #04293500;
+  margin-left: 5px;
+}
+
+.login-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: xx-large;
+  transition: ease-in-out 0.2s;
+}
+
+.login-list a:hover {
+  color: rgb(127, 135, 245);
+  font-weight: xx-large;
+}
+
+/*here login bar of the header ends*/
+
+/*here navigation menu and logo starts*/
+
+/*navigation header style*/
+
+.navigation-header {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  background-color: #1d6989;
+  border-radius: 7px;
+  justify-content: space-between;
+}
+
+/*navigation logo style*/
+
+.navigation-header .logo img {
+  float: left;
+  border-radius: 7px;
+  object-fit: cover;
+  height: 85px;
+  margin-top: 2px;
+  width: 90px;
+
+}
+
+/*navigation menu main division*/
+
+.navigation-menu {
+  align-self: flex-end;
+  float: right;
+}
+
+/* make the ul as right in that div*/
+.navigation-menu ul {
+  float: right;
+  list-style: none;
+}
+
+/*make the lists to one horizontal block*/
+.navigation-menu ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/*menu items property*/
+.navigation-menu a {
+  letter-spacing: 1px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  margin-right: 20px;
+  transition: ease-in-out 0.2s;
+}
+
+/*make the navigation menu hover property*/
+.navigation-menu a:hover {
+  color: rgb(127, 135, 245);
+  font-weight: xx-large;
+}
+
+/*header part ends here*/
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 690px) {
+/* header starts here */
+/* login */
+.login-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: xx-large;
+  transition: ease-in-out 0.2s;
+  font-size: 16px;
+}
+}
+
+
+@media only screen and (max-width: 570px) {
+ /* navigation list starts here */
+ .navigation-menu ul li {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.navigation-menu a{
+  font-size: 16px;
+}
+.navigation-header{
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start
+}
+
+        </style>
+
+
+    </head>
+    <body>
+    <header>
+    <!-- login bar starts here  -->
+    <div class="login-bar">
+        <ul>
+            <li class="login-list"><a href="#Login.html">Login</a></li>
+            <li class="login-list">|</li>
+            <li class="login-list"><a href="#Register.html">Register</a></li>
+        </ul>
+    </div>
+    <!-- login bar ends here  -->
+
+    <!-- logo and navigation bar starts here -->
+    <div class="navigation-header">
+        <div class="logo">
+            <img src="../images/home/logo_old.jpg" alt="logo of the website in the header part" />
+        </div>
+        <!-- logo ends here -->
+
+        <!-- navigation menu starts here -->
+        <div class="navigation-menu">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Jobs">Jobs</a></li>
+                <li><a href="#Companies">Companies</a></li>
+                <li>
+                    <a href="#freelancing projects">Freelancing&nbsp;Projects</a>
+                </li>
+                <li><a href="#Contact us">Contact&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <!-- navigates menu ends here -->
+    </div>
+</header>
+    </body>
+    </html>

@@ -1,0 +1,749 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  font-family: "Quicksand", sans-serif;
+
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 7px;
+  overflow-x:hidden;
+}
+
+/*header division* starts here*/
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+/*This is for login bar of the header*/
+.login-bar {
+  background-color: #004867;
+  width: 100%;
+  height: 35px;
+  border-radius: 7px;
+}
+
+.login-bar ul {
+  float: right;
+  background-color: rgba(226, 226, 226, 0);
+  padding-right: 6px;
+  margin-top: 9px;
+  margin-right: 12px;
+}
+.login-list {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  padding: 0%;
+  background-color: #04293500;
+  margin-left: 5px;
+}
+
+.login-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: xx-large;
+  transition: ease-in-out 0.2s;
+}
+
+.login-list a:hover {
+  color: rgb(127, 135, 245);
+  font-weight: xx-large;
+}
+
+/*here login bar of the header ends*/
+
+/*here navigation menu and logo starts*/
+
+/*navigation header style*/
+
+.navigation-header {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  background-color: #1d6989;
+  border-radius: 7px;
+  justify-content: space-between;
+}
+
+/*navigation logo style*/
+
+.navigation-header .logo img {
+  float: left;
+  border-radius: 7px;
+  object-fit: cover;
+  height: 85px;
+  margin-top: 2px;
+  width: 90px;
+
+}
+
+/*navigation menu main division*/
+
+.navigation-menu {
+  align-self: flex-end;
+  float: right;
+}
+
+/* make the ul as right in that div*/
+.navigation-menu ul {
+  float: right;
+  list-style: none;
+}
+
+/*make the lists to one horizontal block*/
+.navigation-menu ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/*menu items property*/
+.navigation-menu a {
+  letter-spacing: 1px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  margin-right: 20px;
+  transition: ease-in-out 0.2s;
+}
+
+/*make the navigation menu hover property*/
+.navigation-menu a:hover {
+  color: rgb(127, 135, 245);
+  font-weight: xx-large;
+}
+
+/*header part ends here*/
+
+/*division for jobs search part starts here*/
+
+.job-search-part {
+  position: relative;
+  transform: translate(0%, 10%);
+}
+
+.theme-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 226px;
+  border-radius: 10px;
+}
+
+.job-search-box {
+  margin: auto;
+  display: flex;
+  background-color: #eeeeee;
+  width: 95%;
+  height: 145px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(0%, -50%);
+  border-radius: 7px;
+  padding-bottom: 10px;
+}
+
+/* search box inside for input fields */
+.search-your-keywords input,
+.location input {
+  height: 30px;
+  width: 277px;
+  border-radius: 7px;
+  border: 1px solid #1d6989;
+  margin:10px auto;
+}
+
+.category select {
+  height: 36px;
+  width: fit-content;
+  border-radius: 7px;
+}
+
+.search-button button {
+  color: rgb(255, 255, 255);
+  background-color: #1d6989;
+  height: 30px;
+  width: 120px;
+  border-radius: 15px;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.search-button button:hover {
+  cursor: pointer;
+  color: #1d6989;
+  background-color: #ffffff;
+  height: 30px;
+  border: 1px solid #1d6989;
+  /* border-color: #1D6989 ; */
+}
+
+/* themes image and jobsearching part ends here */
+
+/* counting part starts here */
+.counting-part {
+  display: flex;
+  flex-direction: row;
+  background-color: #c4c4c4;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 78%;
+  height: 99px;
+  border-radius: 7px;
+  padding-bottom: 10px;
+}
+
+.posted-jobs,
+.companies,
+.jobseekers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 18px;
+  width: 28%;
+  align-items: center;
+}
+
+.posted-jobs-heading,
+.companies-heading,
+.jobseekers-heading {
+  padding: 3px 0px;
+  font-size: 22px;
+}
+
+.posted-jobs-value,
+.companies-value,
+.jobseekers-value {
+  height: 68%;
+  width: 100%;
+  min-width: 120px;
+  color: white;
+  background-color: #0d435a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: -5px;
+  font-size: 33px;
+}
+
+/* counting part ends here */
+
+/* our services and text part starts here */
+
+.our-services {
+  transform: translate(0%, 28%);
+  margin-bottom: 55px;
+}
+
+/* horizontal line */
+.horizontal-line {
+  height: 8px;
+  width: 16%;
+  overflow: visible;
+  background-color: #084c8b;
+  border-radius: 17px;
+  position: relative;
+  margin: 0 auto;
+  bottom: 3%;
+  transform: translate(0%, 18%);
+}
+
+/* our services text */
+
+.our-services-text {
+  text-align: center;
+  color: #084c8b;
+  font-size: 44px;
+  margin-bottom: 14px;
+}
+.our-services #services {
+  font-weight: bold;
+}
+
+/* descriptive text  */
+.descriptive-text {
+  text-align: center;
+  font-size: 30px;
+}
+
+.descriptive-text .ict {
+  color: red;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+/* our services and text part is ends here */
+
+/* service boxes starts here */
+.service-boxes {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  align-content: center;
+}
+
+.box-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 30px;
+}
+
+/* .create-resume, .job-rankings, .learning-materials, .counselling{
+    border: 1px solid blue;
+    width:230px;
+    height:100px;
+
+} */
+.service-name {
+  width: 285px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid #91a4c7;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%), 0 6px 20px 0 rgb(90 127 210 / 15%);
+}
+
+.service-name:hover{
+  cursor: pointer;
+  box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+  }
+
+
+.service-text {
+  text-decoration: none;
+}
+/* service boxes ends here */
+
+/* review part starts here */
+
+.main_container {
+  width: 70%;
+  height: 500px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.right_picture {
+  width: 60%;
+}
+img {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  transition: 0.3s;
+  float: right;
+  border-radius: 20px;
+}
+
+.tittle {
+  font-size: 4vw;
+  font-weight: 800;
+  color: #1d6989;
+}
+.description {
+  font-size:20px;
+  font-weight: 600;
+  text-align: justify;
+}
+.button {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #1d6989;
+  width: 150px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  text-align: center;
+  border: 1px;
+  margin:auto;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #585656;
+  background-color: white;
+  border: 1px solid #1d6989;
+}
+
+
+/* review part ends here */
+
+/* footer starts here */
+
+.footer {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* footer main  3 columns */
+.footer .first-col,
+.footer .second-col,
+.footer .third-col {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  /* position: relative; */
+  /* left: 22px; */
+}
+
+/* name logo */
+.ictjobseeker-name {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ictjobseeker-name .footer-jobseeker {
+  color: rgb(222, 206, 248);
+  font-size: 22px;
+}
+
+/* first column text */
+.site-text {
+  text-align: justify;
+}
+
+.contactus-header {
+  color: #748aff;
+  font-size: 25px;
+  font-weight: bolder;
+  transform: translate(0%, 73%);
+  margin-bottom:10px;
+}
+.contactus-details {
+  transform: translate(0%, 25%);
+  position: relative;
+}  
+
+.contactus-details .footer-list, .contactus-details .footer-list a:link{
+ color:white;
+}   
+
+/* footer second column starts here */
+.services-link-header,
+.information-header {
+  color: #748aff;
+  font-size: 25px;
+  font-weight: bolder;
+  position: relative;
+  left: 37px;
+}
+
+/* css for links */
+.services-link-details a,
+.information-details a,
+.social-media-icons a {
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+
+.services-link-details a:hover,
+.information-details a:hover,
+.social-media-icons a:hover {
+  color: rgb(127, 135, 245);
+}
+
+.footer-list {
+  list-style: none;
+  color: white;
+  margin: 10px 0px;
+}
+
+/* email */
+.footer-list a:link {
+  text-decoration: none;
+  color: white;
+  transition: ease-in-out 0.2s;
+}
+
+.footer-list a:link:hover {
+  color: rgb(127, 135, 245);
+}
+
+/* social media icons */
+.social-media-icons ul li {
+  display: inline-flex;
+  margin-right: 5px;
+}
+
+.social-media-icons ul li:hover {
+  color: rgb(127, 135, 245);
+}
+
+/* footer ends here */
+
+
+
+/* media queries */
+
+/* for review parts */
+@media only screen and (max-width: 1060px) {
+  /* review part */
+  .main_container {
+    flex-direction: column;
+    min-height: 1000px;
+    align-items: center;
+  }
+  .left {
+    width: 80%;
+    min-height: 400px;
+
+    margin: auto;
+  }
+  .description {
+    font-size: 2vw;
+  }
+  /* review part ends here */
+}
+
+/* media queries starts here */
+@media only screen and (max-width: 952px){
+  /* to adjust the job search part */
+  .job-search-box{
+    display: flex;
+    flex-direction: column;
+    height:auto;
+  }
+  
+}
+
+@media only screen and (max-width: 900px) {
+  /* review part */
+  .main_container {
+    flex-direction: column;
+    min-height: 640px;
+  }
+  .left {
+    min-height: 280px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  /* review part ends here */
+}
+
+@media only screen and (max-width: 690px) {
+/* header starts here */
+/* login */
+.login-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: xx-large;
+  transition: ease-in-out 0.2s;
+  font-size: 16px;
+}
+  
+
+  
+  /* review part */
+  .main_container{
+    height:100%;
+    padding:20px;
+  }
+  .main_container .tittle {
+    font-size: 22px;
+  }
+
+  .main_container .description {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .left {
+    min-height: 280px;
+  }
+  .button {
+    width: 120px;
+    height: 20px;
+  }
+  /* review part ends here */
+
+  /* our services */
+  .our-services-text {
+    font-size: 30px;
+  }
+
+  /* for service boxes */
+  .box-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-row a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .first-row{
+    margin: 30px 30px 0px 30px;
+  }
+  .second-row{
+    margin: 0px 30px 30px 30px;
+  }
+/* service boxes ends here */
+
+/* counter part starts here */
+  .counting-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height:100%;
+}
+
+/* counting values */
+.posted-jobs-value, .companies-value, .jobseekers-value {
+ font-size: 25px;
+}
+
+.descriptive-text{
+  font-size: 20px;
+  margin:auto 10px;
+}
+}
+
+@media only screen and (max-width: 570px) {
+ /* navigation list starts here */
+ .navigation-menu ul li {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.navigation-menu a{
+  font-size: 16px;
+}
+.navigation-header{
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start
+}
+ 
+ 
+  /* footer */
+.footer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer header */
+
+.footer-head{
+  font-size: 22px;
+}
+.first-col, .second-col, .third-col{
+ min-width: 220px;
+ display:flex;
+ align-items: left;
+}
+
+.site-text{
+  margin-left:0px;
+  width:250px;
+  font-size: 14px;
+}
+
+/* contact us */
+
+
+.contactus-details .footer-list, .contactus-details .footer-list a:link{
+  font-size:16px;
+}  
+.second-col{
+  margin-top: 30px;
+}
+.services-link-header{
+  font-size:22px;
+  position:relative;
+  transform: translate(-18%, 10%);
+
+}
+
+.information-header{
+  font-size: 22px;
+  position:relative;
+  transform: translate(-18%, 20%);
+
+}
+
+.services-link-details, .information-details{
+  position:relative;
+  transform: translate(-18%, 5%);
+  font-size: 14px;
+}
+
+
+.social-media-icons ul{
+  position:relative;
+  transform:translate(-18%, -11%);
+}
+/* footer ends here */
+  
+}
+
+}
+@media only screen and (max-width: 501px) {
+  /* review part starts here */
+  .main_container {
+    padding: 10px;
+    max-height: 400px;
+    justify-content: initial;
+  }
+  .left {
+    min-height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .button {
+    width: 20vw;
+    height: 3vw;
+    font-size: 0.6em;
+  }
+  /* review part ends here */
+
+}
+
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../CSS/Home.css" />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <!-- link to font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- js links -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script defer src="Home.js"></script>
+  </head>
+
+  <body>
+    <!-- header of the page starts  -->
+    <header>
+      <!-- login bar starts here  -->
+      <div class="login-bar">
+        <ul>
+          <li class="login-list"><a href="#Login.html">Login</a></li>
+          <li class="login-list">|</li>
+          <li class="login-list"><a href="#Register.html">Register</a></li>
+        </ul>
+      </div>
+      <!-- login bar ends here  -->
+
+      <!-- logo and navigation bar starts here -->
+      <div class="navigation-header">
+        <div class="logo">
+          <img
+            src="../images/home/logo_old.jpg"
+            alt="logo of the website in the header part"
+          />
+        </div>
+        <!-- logo ends here -->
+
+        <!-- navigation menu starts here -->
+        <div class="navigation-menu">
+          <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Jobs">Jobs</a></li>
+            <li><a href="#Companies">Companies</a></li>
+            <li>
+              <a href="#freelancing projects">Freelancing&nbsp;Projects</a>
+            </li>
+            <li><a href="#Contact us">Contact&nbsp;Us</a></li>
+          </ul>
+        </div>
+        <!-- navigates menu ends here -->
+      </div>
+    </header>
+    <!-- header ends here -->
+
+    <!-- theme image and jobs search part divisions starts here -->
+    <div class="job-search-part">
+      <div class="theme-image">
+        <img
+          src="../images/home/hometheme.jpg"
+          alt="a theme image with some computer animations for the homepage of ict job seeker"
+        />
+      </div>
+      <!-- theme image ends here -->
+      <div class="job-search-box">
+        <div class="search-your-keywords">
+          <input
+            type="text"
+            name="Search your keyword"
+            placeholder="Search your keyword"
+          />
+        </div>
+        <div class="category">
+          <select name="Category">
+            <option value="none" selected disabled hidden>
+              <span id="category-id-home">Select a Catogory</span>
+            </option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Qaulity Assurance">Qaulity Assurance</option>
+            <option value="Frontend Developing">Frontend Developing</option>
+            <option value="Backend Developing">Backend Developing</option>
+            <option value="Senior Sofware Engineering">
+              Senior Sofware Engineering
+            </option>
+            <option value="Fullstack developing">Fullstack developing</option>
+            <option value="Data Science">Data Science</option>
+          </select>
+        </div>
+        <div class="location">
+          <input type="text" name="location" placeholder="location" />
+        </div>
+        <div class="search-button">
+          <button type="submit">Search</button>
+        </div>
+      </div>
+    </div>
+    <!-- themes image and job search part ends here -->
+
+    <!-- counting part starts here -->
+    <div class="counting-part">
+      <div class="posted-jobs">
+        <div class="posted-jobs-heading">Posted&nbsp;jobs</div>
+        <div class="posted-jobs-value">1250</div>
+      </div>
+      <div class="companies">
+        <div class="companies-heading">Companies</div>
+        <div class="companies-value">55</div>
+      </div>
+      <div class="jobseekers">
+        <div class="jobseekers-heading">Jobseekers</div>
+        <div class="jobseekers-value">28560</div>
+      </div>
+    </div>
+    <!-- counting part ends here -->
+
+    <!-- our services and text part starts here -->
+    <div class="our-services">
+      <hr class="horizontal-line" />
+      <div class="our-services-text">
+        our <span id="services">Services</span>
+      </div>
+      <div class="descriptive-text">
+        Grab many <span class="ict">ICT</span> facilities from here to be
+        success in your future career!
+      </div>
+    </div>
+    <!-- our services and text part ends here -->
+
+    <!-- Service boxes starts here -->
+    <div class="service-boxes">
+      <div class="first-row box-row">
+        <a href="#"
+          ><div class="create-resume service-name">
+            Create and manage create resume
+          </div></a
+        >
+        <a href="#"
+          ><div class="job-rankings service-name">Job Rankings</div></a
+        >
+      </div>
+      <div class="second-row box-row">
+        <a href="#"
+          ><div class="learning-materials service-name">
+            Learning Materials
+          </div></a
+        >
+        <a href="#"
+          ><div class="counselling service-name">
+            Counselling & Mock interviews
+          </div></a
+        >
+      </div>
+    </div>
+    <!-- service boxes ends here -->
+
+    <!-- review part starts here -->
+    <div class="main_container">
+      <div class="left">
+        <div class="tittle">
+          Custormer <br />
+          Review
+        </div>
+        <div class="description">
+          As one of our preferred users, your feedback is of the utmost
+          importance to us. We are constantly striving to provide the ideal
+          service for our users, and your input help us to define that
+          experience. That being said, if you could take a minute to post a
+          review, we would so appreciate it.
+        </div>
+        <div class="button">Learn More</div>
+      </div>
+      <div class="right_picture">
+        <img
+          src="/images/home/rightimage.png"
+          alt="image of a rate and review part with some star images"
+        />
+      </div>
+    </div>
+
+    <!-- review part ends here -->
+
+    <!-- footer part starts here -->
+    <div class="footer">
+      <!-- first col starts here -->
+      <div class="first-col">
+        <div class="ictjobseeker-name">
+          ICT<span class="footer-jobseeker footer-head">jobseeker</span>
+        </div>
+        <div class="site-text">
+          ICTjobseeker is a job seeking website specially for ICT career roles
+          and it provides more facilities for ICT jobseekers to get a better job
+        </div>
+        <div class="contactus-header footer-head">Contact Us</div>
+        <div class="contactus-details">
+          
+            <div class="footer-list">+94 123456789</div>
+            <div class="footer-list">
+              <a href="mailto:info@ictjobseeker.com">info@ictjobseeker.com</a>
+            </div>
+         
+        </div>
+
+        <!-- <div class="contactus-details">
+          <ul>
+            <li class="footer-list">+94 123456789</li>
+            <li class="footer-list">
+              <a href="mailto:info@ictjobseeker.com">info@ictjobseeker.com</a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+      <!-- first col ends here -->
+
+      <!-- second col starts here -->
+      <div class="second-col">
+        <div class="services-link-header footer-head">Services Link</div>
+        <div class="services-link-details">
+          <ul>
+            <li class="footer-list"><a href="#">Jobs</a></li>
+            <li class="footer-list"><a href="#">Company</a></li>
+            <li class="footer-list"><a href="#">Freelancing Jobs</a></li>
+            <li class="footer-list"><a href="#">Resume</a></li>
+            <li class="footer-list"><a href="#">Job Rankings</a></li>
+            <li class="footer-list"><a href="#">Learning Materials</a></li>
+            <li class="footer-list">
+              <a href="#">Counselling & Mock interviews</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="third-col">
+        <div class="information-header footer-head">Information</div>
+        <div class="information-details">
+          <ul>
+            <li class="footer-list"><a href="#">About Us</a></li>
+            <li class="footer-list"><a href="#">Privacy</a></li>
+            <li class="footer-list"><a href="#">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="social-media-icons">
+          <ul>
+            <li class="footer-list">
+              <a href="#"
+                ><i class="fa fa-facebook-square" style="font-size: 40px"></i
+              ></a>
+            </li>
+            <li class="footer-list">
+              <a href="#"
+                ><i class="fa fa-twitter-square" style="font-size: 40px"></i
+              ></a>
+            </li>
+            <li class="footer-list">
+              <a href="#"
+                ><i class="fa fa-linkedin-square" style="font-size: 40px"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
