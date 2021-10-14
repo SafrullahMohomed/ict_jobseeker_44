@@ -9,11 +9,16 @@ html, body {
   padding: 0;
   background-color: #ffffff;
   border-radius: 7px;
-  overflow-x:hidden;
+  
 }
 
 /*header division* starts here*/
 header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  overflow-x:hidden;
   display: flex;
   flex-direction: column;
 }
@@ -132,6 +137,7 @@ header {
   width: 100%;
   height: 226px;
   border-radius: 10px;
+  margin-top:130px;
 }
 
 .job-search-box {
@@ -724,7 +730,7 @@ img {
   
 }
 
-}
+
 @media only screen and (max-width: 501px) {
   /* review part starts here */
   .main_container {

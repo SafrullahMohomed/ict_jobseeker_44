@@ -24,6 +24,11 @@ html, body {
 
 /*header division* starts here*/
 header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  overflow-x:hidden;
   display: flex;
   flex-direction: column;
 }
@@ -163,7 +168,7 @@ header {
   display:flex;
   align-items: center;
   justify-content: flex-start
-}
+}}
 
         </style>
 
@@ -184,7 +189,9 @@ header {
     <!-- logo and navigation bar starts here -->
     <div class="navigation-header">
         <div class="logo">
-            <img src="../images/home/logo_old.jpg" alt="logo of the website in the header part" />
+        <?php
+      echo "<img src='http://localhost/ict_jobseeker_mvc_final/views/images/Home/logo_old.jpg' >"; 
+    ?>
         </div>
         <!-- logo ends here -->
 

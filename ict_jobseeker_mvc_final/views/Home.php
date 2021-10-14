@@ -1,23 +1,32 @@
-<!DOCTYPE html>
+
+
+<!DOCTYPE html> 
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="../CSS/Home.css" />
-    <link rel="stylesheet" href="../CSS/normalize.css" />
+    
+     <style>
+
+    <?php include "CSS/Home.css" ?>
+    <?php include "CSS/normalize.css" ?>
+
+     </style>
+    
+   <!--  <link rel="stylesheet" href="C:/xampp new/htdocs/ict_jobseeker_mvc_final/views/CSS/Home.css"/> -->
+  
     <!-- link to font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-    <!-- js links -->
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-    <script defer src="Home.js"></script>
+    <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+   
   </head>
 
   <body>
@@ -26,9 +35,9 @@
       <!-- login bar starts here  -->
       <div class="login-bar">
         <ul>
-          <li class="login-list"><a href="#Login.html">Login</a></li>
+          <li class="login-list"><a href="">Login</a></li>
           <li class="login-list">|</li>
-          <li class="login-list"><a href="#Register.html">Register</a></li>
+          <li class="login-list"><a href="">Register</a></li>
         </ul>
       </div>
       <!-- login bar ends here  -->
@@ -36,21 +45,21 @@
       <!-- logo and navigation bar starts here -->
       <div class="navigation-header">
         <div class="logo">
-          <img
-            src="../images/home/logo_old.jpg"
-            alt="logo of the website in the header part"
-          />
+        <?php
+          echo "<img src='http://localhost/ict_jobseeker_mvc_final/views/images/Home/logo_old.jpg'>"; 
+        ?>
+          
         </div>
         <!-- logo ends here -->
 
         <!-- navigation menu starts here -->
         <div class="navigation-menu">
           <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Jobs">Jobs</a></li>
-            <li><a href="#Companies">Companies</a></li>
+            <li><a href=".">Home</a></li>
+            <li><a href="#../../Jobs/Jobs main page/jobs_main_page.php">Jobs</a></li>
+            <li><a href="">Companies</a></li>
             <li>
-              <a href="#freelancing projects">Freelancing&nbsp;Projects</a>
+              <a href="#../../contract ui/contracts main page/contract.php">Freelancing&nbsp;Projects</a>
             </li>
             <li><a href="#Contact us">Contact&nbsp;Us</a></li>
           </ul>
@@ -63,10 +72,10 @@
     <!-- theme image and jobs search part divisions starts here -->
     <div class="job-search-part">
       <div class="theme-image">
-        <img
-          src="../images/home/hometheme.jpg"
-          alt="a theme image with some computer animations for the homepage of ict job seeker"
-        />
+      <?php
+          echo "<img src='http://localhost/ict_jobseeker_mvc_final/views/images/Home/hometheme.jpg' >"; 
+        ?>
+        
       </div>
       <!-- theme image ends here -->
       <div class="job-search-box">
@@ -174,18 +183,24 @@
           experience. That being said, if you could take a minute to post a
           review, we would so appreciate it.
         </div>
-        <div class="button">Learn More</div>
+        <div class="button" type="onclick="loadRateAndreview()" > More</div>
       </div>
       <div class="right_picture">
-        <img
+      <?php
+          echo "<img src='http://localhost/ict_jobseeker_mvc_final/views/images/Home/rightimage.png' >"; 
+        ?>
+        <!-- <img
           src="/images/home/rightimage.png"
           alt="image of a rate and review part with some star images"
-        />
+        /> -->
       </div>
     </div>
 
     <!-- review part ends here -->
+   <!--  <a href="../../rate and review-sys/1/sys_rate_and_review.html"></a> -->
 
+  <!--  include review part -->
+<?php #include("../../rate and review-sys/1/sys_rate_and_review.html");?>
     <!-- footer part starts here -->
     <div class="footer">
       <!-- first col starts here -->
@@ -265,5 +280,14 @@
         </div>
       </div>
     </div>
+     <!-- js links -->
+  
+ 
+  
+
+
+<script type="text/javascript" src="JS/Home.js"></script>   
+
+    <!-- <script defer src="JS/Home.js"></script> -->
   </body>
 </html>
