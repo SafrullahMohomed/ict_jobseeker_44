@@ -38,7 +38,7 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
-    <!-- header ends here -->
+    <!-- header  ends here -->
 
     <!-- theme image and jobs search part divisions starts here -->
     <div class="job-search-part">
