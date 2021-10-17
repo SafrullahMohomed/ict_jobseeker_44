@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #585656;
+    /*font-size: 1em;*/
+    /*font-weight: 600;*/
+}
+
+.resource-search-part 
+{
+    position: relative;
+    transform: translate(0%, 20%);
+}
+  
+.theme-image img 
+{
+    object-fit: cover;
+    width: 100%;
+    height: 226px ;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+  
+.resource-search-box 
+{
+    margin: auto;
+    display: flex;
+    background-color: #eeeeee;
+    width: 85%;
+    height: 145px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translate(0%, -50%);
+    border-radius: 7px;
+   
+}
+  
+  /* search box inside for input fields */
+  .search-your-keywords{
+      width: 70%;
+  }
+.search-your-keywords input
+{
+  height: 30px;
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid #1d6989;
+   
+}
+  
+.search-button button 
+{
+    color: rgb(255, 255, 255);
+    background-color: #1d6989;
+    height: 30px;
+    width: 90px;
+    border-radius: 20px;
+    transition: ease-in-out 0.2s;
+    border:0;
+}
+  
+.search-button button:hover 
+{
+    color: #1d6989;
+    background-color: #ffffff;
+    height: 30px;
+    border:1px solid #1d6989;
+
+}
+.Trending 
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size:50px;
+    line-height: 75px;
+    margin-bottom: 30px;
+    color: #084C8B;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
+    margin-top: 35px;
+}
+.ResourceRow
+{
+    height: 80px;
+    /* width: 95vw; */
+    width: 80%;
+    margin: 20px;
+    border-radius: 20px;
+    border-left: 10px solid #c0c1c4 !important;
+    border: 3px solid #c0c1c4;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    color: #585656;  
+    justify-content: space-around;
+    margin-left: 10%;
+}
+.ResourceRow:hover
+{
+    border-left: 10px solid #0C1778 !important;    
+    border-top-left-radius: 0;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgb(248, 244, 244);
+    cursor: pointer;
+    /* border: 3px solid #c0c1c4; */
+}
+.Academy
+{
+    width: 10%;
+    height: 100%; 
+    display: flex;
+    align-items: center;  
+}
+.Academy img
+{
+    width: 60px;
+    height: 60px; 
+    margin: auto;
+    
+    border: 3px solid #ece9e9;
+    border-radius:100%; 
+    box-shadow: 5px 5px 10px rgba(172, 167, 167, 0.16) ;     
+}
+.Tutorial
+{
+    width: 30%;
+    height:100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.Lesson
+{
+    width: 10%;
+    height: 100%; 
+    display: flex;
+    align-items: center; 
+}
+.Lesson img
+{
+    width: 50%;
+    height: 70%;  
+    margin: auto;
+    
+    border: 3px solid #ece9e9;
+    border-radius:100%; 
+    box-shadow: 5px 5px 10px rgba(172, 167, 167, 0.16) ; 
+}
+a{
+ text-decoration: none;
+}
+/* .resource-boxes
+{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin: 45px;
+}
+
+.resource-boxes .first-row, .resource-boxes .second-row
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    margin-bottom: 80px;
+}
+.first-row
+{
+    margin-top: 6%;
+}
+.Resource
+{
+    border: 1px solid blue;
+    min-width:20%;
+    height:75px;
+    text-align: center;
+    padding-top: 40px;
+    background-color: #eeeeee;
+}
+#link
+{
+    color: #1D6989;
+    font-weight: 600;
+    text-decoration: none;
+} */
+
+@media only screen and (max-width: 960px)
+{
+.Resource
+{
+    margin-top: 40px;
+    min-width:30%;
+    height: 60px;
+}
+.resource-search-box 
+{
+    height: 120px;
+}
+.first-row
+{
+    margin-top: 3%;
+}
+.theme-image img 
+{
+    height: 175px;
+}
+}
+@media only screen and (max-width: 660px)
+{
+.resource-boxes .first-row, .resource-boxes .second-row
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0%;
+    align-content: space-around;
+}
+.resource-search-box 
+{
+    height: 80px;
+}
+.first-row
+{
+    margin-top: 0%;
+}
+.Resource
+{
+    margin-top: 40px;
+    min-width:30%;
+    height: 50px;
+}
+.theme-image img 
+{
+    height: 120px;
+}
+}

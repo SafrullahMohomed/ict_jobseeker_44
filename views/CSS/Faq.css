@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+* {
+ margin: 0;
+ padding: 0;
+ font-family: 'Quicksand', sans-serif;
+ color: #585656;
+}
+body{
+  
+}
+.faq_container{
+    width: 45%;
+    height: fit-content;
+    min-height: 200px;
+    background-color:white;
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 40px;
+    padding: 40px;
+    /*display: flex;
+    flex-direction: column;*/
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+label{
+    font-weight: 800;  
+}
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border:2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
+  input:hover
+ { 
+    border: 2px solid #273c75;
+
+  }
+.input:focus
+ { 
+    border: 2px solid #273c75;
+
+  }
+.btn{
+  display: flex;
+  align-items: center;
+}
+  button{
+    width: 150px;
+    background-color: #1D6989;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px auto ;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600; 
+    transition: ease-in-out 0.2s;
+    letter-spacing: 1px;
+  
+  }
+  
+ button:hover {
+    background-color:  #ffffff;
+    border:1px solid #1D6989 ;
+    color: #1D6989 ;
+    cursor: pointer;
+  }
+  #question{
+   height: 100px;
+   
+  }
