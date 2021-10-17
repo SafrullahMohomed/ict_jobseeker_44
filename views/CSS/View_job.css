@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #585656;
+}
+/*.main_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}*/
+.job_detail_sub_container{
+ 
+    width:80%;
+    min-height: 800px;
+    max-height: 2000px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 140px;
+   
+    
+    
+   
+}
+.job_detail_title_and_apply_button{
+
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+margin-top: 20px;
+
+}
+.job_detail_title{
+    font-size: 30px;
+    font-weight: 600;
+}
+button{
+    width: 120px;
+    height: 40px;
+    color: white; 
+    background-color: #273c75;
+    font-size: 18px;
+    border-color: #273c75;
+    font-weight: 600;
+    border-radius: 5px;
+   
+}
+button:hover{
+    background-color: white;
+    color: #273c75;
+    cursor: pointer;
+}
+.social_media_icons{
+    
+    font-size:25px;
+}
+i:hover{
+color:#5eacda ;
+cursor: pointer;
+}
+
+/* .job_detail_sub_container{
+    width: 100%;
+    
+    display: flex;
+    
+} */
+
+
+.job_detail_left{
+    
+    width:70%;
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    border-radius: 10px;
+    font-size:20px ;
+    font-weight: 500;
+   
+}
+.job_description_title{
+    background-color:#227093 ;
+    color: white;
+    height: 60px;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 3px;
+    margin-bottom: 10px;
+    }
+
+.job_detail_right{
+    width:30%;
+   min-height: 600px;
+    margin-top: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    border: 3px solid #227093;
+    font-size: 20px;
+    
+   
+    
+   
+    
+}
+
+.company_details{
+
+height: 200px;
+display: flex;
+flex-direction: column;
+padding:20px;
+align-items: center;
+margin: auto;
+/*margin-left:20px ;*/
+
+font-weight: 600;
+
+
+}
+p{
+    margin: auto;
+}
+#clickme{
+    background-color: white;
+    color: gray;
+    box-shadow: 2px 3px 1px gray;
+    border: 3px solid #227093 ;
+    margin: auto;
+    
+
+  
+}
+#clickme:hover{
+    background-color:#3f83a3 ;
+    color: white;
+}
+.job_overview{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:20px;
+    
+    margin-left:20px ;
+    
+    font-weight: 600;  
+
+}
+.job_overview_text{
+background-color:#227093 ;
+margin-right: 20px;
+color: white;
+text-align: center;
+}
+.application_deadline{
+   font-weight: bolder; 
+}
+
+.salary{
+
+}
+.Job_Type{
+
+}
+
+.year_of_experience{
+
+}
+
+.phone_number{
+
+}
+
+.Email{
+
+}
+.job_post_image img{
+    max-width: 80%;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    margin: 20px auto;
+}
+/*faq start from here*/
+.FAQ{
+    width: 80%;
+   
+    margin: auto;
+}
+
+.FAQ button{
+    width:200px;
+    background-color: white;
+    color: gray;
+    box-shadow: 2px 3px 1px gray;
+    border: 3px solid #227093 ;
+    margin: 10px 10px 10px 0;
+}
+.FAQ button:hover{
+    background-color:#3f83a3 ;
+    color: white;
+}
+
+.Q_and_A{
+    width: 80%;   
+   
+    margin: auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.Q_and_A p{
+    background-color:#227093 ;
+    color: white;
+    height: 60px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 3px;
+    margin-bottom: 30px;
+   
+}
+
+ .Q_and_A_container 
+{
+   
+   min-height: 150px;
+   margin: 20px 0 20px 0;
+   display:flex;
+   flex-direction: column;
+
+   
+
+}
+.Q{
+    
+    min-height: 75px;
+    background-color: #FBF8F9;
+    border-left:5px solid #273c75 ;
+    display:flex;
+    align-items: center;
+
+}
+.Q_letter{
+    width: 12%;
+    font-size: 50px;
+    font-weight: 600;
+    color: #273c75;
+    padding: 5px;
+
+}
+.Q_text{
+font-size: 1.2em;
+font-weight: 700;
+/*text-align: left;*/
+
+}
+.A{
+    min-height: 75px;
+    display:flex;
+    border-left:5px solid #807e7e; 
+    
+    display:flex;
+    align-items: center;
+
+}
+.A_letter{
+    width: 12%;
+    font-size: 50px;
+    font-weight: 600;
+    color: #807e7e;
+    padding: 5px;
+    
+}
+.A_text{
+    font-size: 1.2em;
+    font-weight: 400;
+        
+ }
+
+
+@media only screen and (max-width: 1190px){
+    .job_detail_sub_container{
+      
+        height: fit-content;
+       
+    }
+.job_detail_left{
+    font-size:16px ;
+
+}
+.job_detail_right{
+
+font-size:16px ;
+}
+
+
+.Q_letter,.A_letter{
+  
+    font-size: 40px;
+    width:15%;
+}
+
+
+.Q_text{
+    font-size: 1em;
+}
+}
+@media only screen and (max-width: 996px){
+    .job_detail_container{
+        width: 90%;
+    } 
+    .job_detail_left{
+        font-size:15px ;
+    
+    }
+    .job_detail_right{
+
+        font-size:15px ;
+        }  
+        .Q_letter ,.A_letter{
+            font-size: 38px;
+        }
+        .Q_text,.A_text{
+            font-size:16px;
+        }
+}
+
+@media only screen and (max-width: 925px){
+    .job_detail_sub_container{
+        flex-direction: column;
+        height: fit-content;
+        margin-top: 10px;
+    }
+
+    
+    .job_detail_left{
+        width:80%;  
+        margin: auto;
+        font-size:15px ;
+    }
+    .job_detail_right{
+        width:80%;  
+        margin: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #227093;
+        font-size: 15px;
+          
+    }
+    .application_deadline , .salary , .Job_Type, .year_of_experience, .phone_number, .Email{
+        display: flex;
+        flex-direction: row;
+
+    }
+     .FAQ{
+         width: 65%;
+      
+        
+     }
+     .Q_letter,.A_letter{
+         width:18%;
+        font-size: 22px;
+    }
+    .Q_text,.A_text{
+        font-size: 14px;
+    }
+    
+    }
+    
+    
+
+@media only screen and (max-width: 490px){
+button{
+    font-size: 15px;
+}
+.job_description_title{
+    font-size: 20px;
+    height: 40px;
+}
+.job_detail_title{
+font-size: 20px;
+}
+.application_deadline , .salary , .Job_Type, .year_of_experience, .phone_number, .Email{
+    display:block;
+   
+}
+.job_detail_left{
+    
+    font-size:15px ;
+}
+.job_detail_right{
+margin: 20px;
+}
+.FAQ button{
+    margin-top: 60px;
+
+}
+.Q_letter,.A_letter{
+    width:22%;
+   font-size: 10px;
+}
+.Q_text,.A_text{
+   font-size: 13px;
+}
+.Q_and_A p{
+
+    font-size: 14px;
+    height: 40px;
+}
+.job_detail_sub_container{
+ 
+   height: fit-content;
+   
+    
+    
+   
+}
+}
