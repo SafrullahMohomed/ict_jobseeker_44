@@ -1,0 +1,307 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0; 
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color:#2f3640 ;
+}
+.top_trending_categories_title  {
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+ 
+    margin-bottom: 30px;
+    color: #084C8B;
+    text-align: center;
+    text-shadow: 0px 2px 4px #192a56 ;
+    margin-top: 140px;
+}
+.top_trending_categories_container{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom:50px;
+   
+   
+}
+.top_trending_categories_box_row{
+ width: 80%;
+ margin: auto;
+ height: 125px;
+ display: flex;
+ 
+ flex-direction: row;
+ justify-content: space-around;
+ 
+}
+
+.top_trending_categories_box{
+width: 23vw;
+height: 117px;
+
+padding: auto;
+border: 3px solid #1a479c;
+/*border-radius: 20px;*/
+
+
+}
+.top_trending_categories_box:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 5px 0 #273c75, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.top_trending_categories_box_text{
+  
+    font-size: 36px;
+    line-height: 32px;
+    text-align: center;
+    color: #585656;
+}
+.top_trending_categories_box_arrows{
+
+width: 98%;
+margin: auto;
+display: flex;
+justify-content: space-between;
+
+}
+.top_trending_categories_box_arrows i fa fa-chevron-left svg{
+    cursor: pointer;
+    font-size: 50px;
+   
+}
+
+.top_trending_categories_box_arrows i fa fa-chevron-right svg{
+    cursor: pointer;
+}
+
+
+/* features contracts*/
+.features_contract{
+width: 80%;
+margin: auto;
+display: flex;
+flex-direction: column;
+justify-content:space-around ;
+
+}
+.features_contract_row{
+
+
+
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+
+margin: 20px;
+
+}
+
+.features_contract_row_contract{
+/*border:1px solid #a4b0be;*/
+height: 450px;
+width:22%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
+
+padding: 10px;
+box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.break{
+  
+    
+}
+.features_contract_row_contract:hover{
+    box-shadow: 5px 5px 3px grey;
+    cursor: pointer;
+}
+.features_contract_row_contract_title{
+font-weight: 600;
+font-size: 18px;
+}
+.features_contract_row_contract_description{
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 500;
+}
+.features_contract_row_contract_expiredate_and_avg_bid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.features_contract_row_contract_expiredate_container{
+
+}
+.features_contract_row_contract_expiredate_container_expirson{
+
+}
+.features_contract_row_contract_expiredate_container_expiredate{
+
+}
+.features_contract_row_contract_bid_container{
+
+}
+.features_contract_row_contract_bid_container_avg_bid{
+
+display: flex;
+flex-direction: row;
+}
+.features_contract_row_contract_bid_container_avg_bid_avg_text{
+
+}
+.features_contract_row_contract_bid_container_avg_bid_currency_type{
+    margin-left: 5px;
+    font-weight: 600;
+}
+.features_contract_row_contract_bid_container_avg_bid_avg_no{
+    
+    margin-left: 5px;
+    font-weight: 600;
+}
+.features_contract_row_contract_bid_container_count_and_bid_button{
+
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+.features_contract_row_contract_bid_container_count{
+
+
+display: flex;
+flex-direction: row;
+}
+.features_contract_row_contract_bid_container_count_no{
+   
+}
+.features_contract_row_contract_bid_container_count_bid_text{
+   margin-left: 5px; 
+}
+.features_contract_row_contract_bid_container_count_bid_button{
+background-color: #273c75;
+color:#f5f6fa ;
+font-weight: 400;
+border: 3px solid #273c75;
+}
+.features_contract_row_contract_bid_container_count_bid_button:hover{
+color:#273c75 ;
+background-color:#f5f6fa;
+border: 3px solid #273c75;
+cursor: pointer;
+}
+.load_more{
+    background-color: #1D6989;
+    width:170px;
+    height: auto;
+    color: white;
+    padding: 5px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin: 30px auto;
+    border: none;
+    font-size: 0.8em;
+}
+.load_more:hover{
+    cursor: pointer;
+    color:#1D6989 ;
+    background-color: white;
+
+    border: 2px solid #1D6989;
+}
+
+
+#more {
+    margin: 0 !important;
+    display: none;
+    
+   
+    
+}
+.btn_div{
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width: 1200px){
+    body{
+      
+        
+    }
+    .top_trending_categories_title{
+        font-size: 50px;
+       
+
+    }
+    .top_trending_categories_box_text{
+        font-size: 28px;
+ 
+
+    }
+    .features_contract_row_contract{
+        font-size: 15px;
+    }
+    
+}
+@media only screen and (max-width: 1050px){
+    body{
+       
+    }
+
+    .top_trending_categories_title{
+        font-size: 35px;
+       
+
+    }
+    .top_trending_categories_box_text{
+        font-size: 25px;
+       
+
+    }
+    .features_contract_row{
+        flex-wrap: wrap; 
+    }
+
+.break{
+    flex-basis: 100%;
+    height: 0;  
+}
+.features_contract_row_contract{
+    width: 40%;
+    height: 350px;
+    margin-bottom: 30px;
+}
+
+}
+
+
+@media only screen and (max-width: 600px){
+.top_trending_categories_title  {
+
+    font-size: 28px;
+    }
+    .top_trending_categories_box_text{
+        font-size: 14px;
+       
+
+    }
+    .features_contract_row{
+        flex-direction: column;
+margin-bottom: 0px;
+    }
+    .features_contract_row_contract{
+        width: 80%;
+        height: 350px;
+    }
+    
+}
