@@ -10,6 +10,7 @@ class Companies extends Controller
     function Companies()
     {
         #$this->model->printSomething();
+        
         #echo "Hello from the Test controller - Index Method";
 
         //pass view name

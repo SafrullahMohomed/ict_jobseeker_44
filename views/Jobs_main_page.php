@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobs main page</title>
 
-<style>
+ <style>
    
-<?php include "CSS/Jobs_main_page.css" ?>
+ <?php include "CSS/Jobs_main_page.css" ?> 
 
-</style>
+</style> 
 <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
 </head>
 <body>
