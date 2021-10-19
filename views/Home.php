@@ -36,8 +36,7 @@
        <!-- header part with css html js -->
  <div class="header_div" >
         <?php include 'Header.php'?>
-</div>
-      <!-- header part end  -->
+</div
     <!-- header ends here -->
 
     <!-- theme image and jobs search part divisions starts here -->
