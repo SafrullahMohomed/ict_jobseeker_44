@@ -1,5 +1,5 @@
 <?php
-class Companies extends Controller
+class ForgotPassword extends Controller
 {
     function __construct()
     {
@@ -7,14 +7,14 @@ class Companies extends Controller
 
     }
 
-    function Companies()
+    function ForgotPassword()
     {
         #$this->model->printSomething();
         
         #echo "Hello from the Test controller - Index Method";
 
         //pass view name
-        $this->view ->render('Companies'); 
+        $this->view ->render('ForgotPassword'); 
         
     }
 }

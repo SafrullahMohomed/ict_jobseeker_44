@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #585656;
+    font: size 1.1em;;
+}
+.CompanyBanner
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    align-items: center;
+    background-color: white;
+    margin: 20px auto 20px auto;
+    width: 60%;
+}
+.CompanyLogo
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* background-image: url(/wso2logo.png); */
+    background-position: top;
+    background-repeat: no-repeat;
+    margin: 3% 50% 3% 35%;
+}
+.CompanyBanner .image
+{
+    padding-left: 200px;
+}
+.JobDetails
+{
+    width: 80%;
+    margin: 5px 5px 5px;
+    background-color: #1D6989;
+    padding: 10px 10px;
+    margin-left: 10%;
+}
+.JobDetails p
+{
+   text-align: center;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 600;
+   color: #ffff;
+}
+.main_container
+{
+    width:60%;
+    min-height:1000px;
+    margin: 20px auto 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row
+{
+    width: 80%;
+    margin-top:15px ;
+}
+
+label
+{
+    font-weight: 600;
+    font-size: 18px;
+}
+#titles
+{
+    font-weight: 600;
+    font-size: 24px;
+    text-align: left;
+    color: #ffff;
+    background-color: #1D6989;
+    padding: 5px 5px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 80%;
+}
+.inputfield
+{
+    width: 100%;
+    border: 3px solid #ccc;
+    padding: 3px;
+}
+
+.inputfield:hover{
+    border: 3px solid #1D6989;
+}  
+
+.inputfield:focus
+{
+    outline: none;
+    border: 3px solid #1D6989;
+}  
+.Resume
+{
+    display: flex;
+    gap: 15%;
+    flex-direction: row;
+    padding-top: 20px;
+    width: 80%;
+    padding-bottom: 10px;
+}
+.attach
+{
+    width: 45%;
+    padding-left: 10%;
+}
+.create
+{
+    width: 40%;
+   
+}
+ .Resume #resume
+{
+    font-weight: 600;
+}
+.Resume #attach1
+{
+    font-weight: 500;
+    text-decoration: none;
+    color: #1D6989;
+    font-size: 16px;
+    padding-left: 10%;
+}
+
+.Resume #create
+{
+    text-decoration: none;
+    font-weight: 600;
+}
+.Resume #attach2
+{
+    color: #1D6989;
+    text-decoration: none;
+    font-size: 16px; 
+} 
+.submit_button
+{
+    background-color: #1D6989;
+    width:150px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin: 10px;  
+}
+.submit_button:hover
+{
+    cursor: pointer;
+    color:#1D6989 ;
+    background-color: white;
+    border: 2px solid #1D6989;
+}
+
+@media only screen and (max-width: 990px)
+{
+    *{
+        font-size: 1em;
+
+    }
+    .main_container{
+
+        min-height:900px;
+    } 
+    #titles
+    {
+        font-size: 18px;
+    }
+    .Resume
+    {
+        display: flex;
+        flex-direction: column; 
+        gap: 30px; 
+        align-items: center;
+    }
+    .attach
+    {
+        width: 40%;
+        padding-left: 0%;
+    }
+    .Resume #attach1
+    {
+        padding-left: 0%;
+        font-size: 12px;
+    }
+    .Resume #attach2
+    {
+        font-size: 12px;
+    }
+    .CompanyLogo
+    {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: url(/wso2logo.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        margin: 3% 50% 3% 35%;
+    }
+  
+}
+@media only screen and (max-width: 640px){
+    *{
+       font-size: 1em;
+    
+    }
+    .main_container
+    {
+        width: 80%;
+        min-height:900px;
+    } 
+    .CompanyBanner
+    {
+        width: 80%;
+    }
+    #titles
+    {
+        font-size: 16px;
+    }
+    .Resume #attach1
+    {
+        font-size: 10px;
+    }
+    .Resume #attach2
+    {
+        font-size: 10px;
+    }
+    .CompanyLogo
+    {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-image: url(/wso2logo.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        margin: 3% 50% 3% 35%;
+    }
+ }
+ @media only screen and (max-width: 452px){
+    *{
+       font-size: 0.9em;
+    }
+    .main_container{    
+        min-height:700px;
+    } 
+    #titles
+    {
+        font-size: 14px;
+    }
+    .CompanyLogo
+    {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: url(/wso2logo.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        margin: 3% 50% 3% 35%;
+    }
+ }
