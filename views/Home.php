@@ -152,7 +152,7 @@
           experience. That being said, if you could take a minute to post a
           review, we would so appreciate it.
         </div>
-        <div class="button" type="onclick="loadRateAndreview()" > More</div>
+        <div class="button" type="" onclick="loadRateAndreview()" > More</div>
       </div>
       <div class="right_picture">
       <?php
