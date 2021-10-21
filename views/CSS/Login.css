@@ -9,25 +9,28 @@
 {
     height: 100vh;
     width: 100vw;
-    padding-top: 250px; 
+    padding-top: 270px;
 }
 .flex-container
 {
-    height: 540px;
-    width: 675px;
-    background-color:rgb(141, 188, 235);
+    height: 500px;
+     width: 675px; 
+    /* width: 44%; */
+    background-color:rgb(141, 188, 235); 
+    /* background-color: ; */
     border-radius: 7px;
     margin: auto;
-    /* padding-top: 10px; */
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    column-gap: 10px;
+    /* column-gap: 10px; */
+    column-gap: 1.48%;
 }
 .right-container
 {
-    width: 360px;
-    height: 520px;
+    /* width: 360px; */
+    width: 53%;
+    height: 480px;
     background-color: #f6f6f8;
     align-items: center;
     justify-content: end;
@@ -35,59 +38,55 @@
     margin-top: 10px;
     border-radius: 7px;
 }
-.input-container
+.logo-container
 {
-    flex-direction: row;
     align-items: center;
     margin: auto;
-    padding-left: 50px;
-    padding-top: 40px;
+    padding-left: 35%;
+    /* padding-top: 60px; */
+    border:none;
 }
-#users
+.logo-container img
 {
-    margin-left: 60px;
-    border:solid rgb(6, 8, 124) ;
-    border-radius: 12px;
-    width:50% ;
-    height: 40px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(6, 8, 124);
-    padding: auto;
+    height: 25%;
+    width: 25%;
+    margin: 10%;    
+    border-radius: 50%;
+    border-color: rgb(6, 8, 124);
+    border-width: 1px solid ;
+    border: 2px solid rgb(15 45 90);
 }
-#users select :focus{
-    border-radius: 12px;
-}
+
+
 .right-container p
 {
     margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
 }
 .right-container form
 {
     padding-left: 40px;
-    padding-top: 30px;
+    padding-top: 40px;
 }
 .right-container input
 {
-    width: 300px;
+    /* width: 300px; */
+    width: 44%;
     margin: auto;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px; 
 }
-.right-container input[type="text"],input[type="email"], input[type="password"]
+.right-container input[type="email"], input[type="password"]
 {
     border: none;
     border-bottom: 2px solid;
     background: transparent;
-    height: 20px;
+    height: 35px;
     outline: none;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     width: 80%;
-    font-size: 14px;
+    font-size: 15px;
     font: pt-serif caption;
     
 }
@@ -101,8 +100,7 @@
     color: white;
     font-size: 20px;
     align-items: center;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 .right-container input[type="submit"]:hover
 {
@@ -112,23 +110,37 @@
     position: relative;
     transition:ease-in-out 0.2s;
 }
-.right-container input[type="text"]:hover,input[type="email"]:hover, input[type="password"]:hover
+.right-container input[type="email"]:hover, input[type="password"]:hover
 {
     padding-bottom: 20px;
     border-bottom: 2px solid rgb(6, 8, 124);
     transition: 0.5s;
 }
+.right-container a
+{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color:rgb(4, 71, 138);
+    text-align:inherit;
+    float: right;
+    padding-right: 20px;
+    font: weight 600px; 
+    font-family: 'Quicksand', sans-serif;
+}
+
 .left-container
 {
     background-image: url(/login1.jpg);
     background-position: top;
     background-repeat: no-repeat;
     padding-left: 45px;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
     border-radius: 7px;
     opacity: 0.6;
-    width: 240px; 
-    height:385px;
+    /* width: 240px;  */
+    width: 35.5%;
+    height: 320px;
     margin-top: 10px;
     justify-content: start;
     margin-bottom: 10px;
@@ -139,40 +151,38 @@
 }
 #label
 {
-    
     font-family: 'Quicksand', sans-serif;  
     color: rgb(6, 8, 124);
     font-weight: 550;
 }
-#register
+#login
 {
     position: relative;
-    top: -110px;
-    left: 30px;
-    font-family: 'Quicksand', sans-serif;
+    top: -102px;
+    left: 55px;
+    font-family: 'Quicksand', sans-serif; 
     color: rgb(6, 8, 124);
-    font-weight:bolder;
     font-size:xx-large;
+    font-weight: 700;
     /* border-bottom: rgb(99, 14, 99) 6px solid;
-    width: 130px; */
+    width: 85px; */
 }
-#log_link 
+#reg_link
 {
     position: relative;
-    top: -95px;
-    left: 30px;
-    text-decoration: none;
+    top: -90px;
+    left: 15px;
     font-size: 14px;
     line-height: 20px;
-    color:rgb(6, 8, 124);
+    color:rgb(3, 4, 37);
     text-align:inherit;
-    font: weight 550px; ;
 }
-#log_link a
+#reg_link a
 {
     text-decoration: none;
     font-family: 'Quicksand', sans-serif; 
 }
+
 .left-container p
 {
     margin: 0;
@@ -181,24 +191,26 @@
     color: rgb(6, 8, 124);
     font-weight:550;
     font-size: 14px;
-
+}
 span
 {
     color: red;
-    font-size: 12px;
 }
 
-
-@media screen and (max-width: 680px)
+ @media screen and (max-width: 683px)
  {
+   /* .left-container
+   {
+       display: none;
+   }  */
    .flex-container
    {
         display: flex;
         flex-direction: column;   
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: stretch;
         width: 95%;
-        height: 640px;
+        height: 500px;
         padding-top: 10px;
    }
    .right-container
@@ -232,29 +244,27 @@ span
     border-style:outset ;
     border-width: 3px*/
 } 
-
-#register
+#login
 {
     position: relative;
-    top: -50px;
-    left: 17%;
-    font-family: 'Quicksand', sans-serif;
+    top: 5%;
+    left: 30%;
+    font-family: 'Quicksand', sans-serif; 
     color: rgb(6, 8, 124);
-    font-weight:bolder;
-    font-size:xx-large;
+    font: weight 700px;;
+    font-size:x-large;
     /* border-bottom: rgb(99, 14, 99) 6px solid;
-    width: 130px; */
+    width: 20%; */
 }
-#log_link 
+#reg_link
 {
     position: relative;
-    top: -45px;
-    left: 17%;
+    top: 10px;
+    left: 15px;
     font-size: 14px;
     line-height: 20px;
     color:rgb(6, 8, 124);
     text-align:inherit;
-    font: weight 550px; ;
 }
 .input-container
 {
