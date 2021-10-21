@@ -5,7 +5,7 @@ class Registration_Model extends Model{
     {
        parent :: __construct(); 
     }
-    public function Registration($data) {
+    public function checkUserByUserType($data) {
         $fname = $data['fname'];
         $lname = $data['lname'];
         $email = $data['email'];
@@ -16,26 +16,29 @@ class Registration_Model extends Model{
         // $landowner_type = null;
 
         if($user_type && $verify != 0) {
+            echo $user_type;
+          
             $query = "UPDATE user SET fname='$fname', lname='$lname', verify='$verify', password='$password' WHERE email='$email'";
             switch($user_type) {
-                case 'JobSeeker' :
-                    $queryUser = "INSERT INTO JobSeeker(emp_id) values('$user_id')";
+                case 'Jobseeker' :
+                    $queryUser = "INSERT INTO jobseeker(User_ID) values('$User_ID')";
+                  
                     break;
                 
-                case 'admin' :
-                    $queryUser = "INSERT INTO admin(emp_id) values('$user_id')";
+                case 'Admin' :
+                    $queryUser = "INSERT INTO admin(User_ID) values('$User_ID')";
                     break;
                 
-                case 'company' :
-                    $queryUser = "INSERT INTO manager(emp_id) values('$user_id')";
+                case 'Company' :
+                    $queryUser = "INSERT INTO company(User_ID) values('$User_ID')";
                     break;
 
-                case 'contract_provider' :
-                    $queryUser = "INSERT INTO product_manager(emp_id) values('$user_id')";
+                case 'Contract provider' :
+                    $queryUser = "INSERT INTO Contractprovider(User_ID) values('$User_ID')";
                     break;
 
-                case 'counsellor' :
-                    $queryUser = "INSERT INTO supervisor(emp_id) values('$user_id')";
+                case 'Counsellor' :
+                    $queryUser = "INSERT INTO counsellor(User_ID) values('$User_ID')";
                     break;
                     
             }
@@ -60,7 +63,7 @@ class Registration_Model extends Model{
     public function verifyemail($email,$token)
     {
         $query = "SELECT emailToken FROM user WHERE email = '$email'";
-
+        echo "verifyemail";
         if(emailToken==$token)
         {
             $query = "UPDATE user SET emailVerified=true, emailToken=1 WHERE email='$email'";
@@ -71,10 +74,12 @@ class Registration_Model extends Model{
         $query = "SELECT * FROM user WHERE email = '$email'";
     
         $row = $this->db->runQuery($query);
-    
+        echo "JobSeeker";
         if(count($row)) {
+            echo "row";
             return true;
         }else {
+            echo "row";
             return false;
         }
     }

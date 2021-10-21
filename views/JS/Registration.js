@@ -1,3 +1,4 @@
+
 function validateForm() {
     var fname=document.myForm.fname.value;  
    
@@ -12,7 +13,7 @@ function validateForm() {
     /*validate last name*/
     var lname=document.myForm.lname.value;  
     if (lname == "") {
-      
+
         document.getElementById("lname_error").innerHTML="Last name must be filled out";
      
         return false;

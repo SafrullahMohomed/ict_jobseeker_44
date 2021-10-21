@@ -1,0 +1,14 @@
+<?php
+
+class JobSeekerHome_Model extends Model{
+    function __construct()
+    {
+       parent :: __construct(); 
+    }
+
+   
+}
+
+
+
+?>

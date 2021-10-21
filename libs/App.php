@@ -51,7 +51,7 @@ class App{
     
     {
         $file1='controllers/' . $this->_url[0] . '.php';//path of controller
-
+        $file2;
 
         if (isset($this->_url[1])) {
             #$this->_url[1] = null;

@@ -8,6 +8,7 @@ class Database extends PDO{
 
  //function for view cp profile select data from cp table   
 public function runQuery($query1){
+    echo "Lulakshi";
     $stmt=$this->prepare($query1);
     $stmt->execute();
     return $stmt->fetchAll();

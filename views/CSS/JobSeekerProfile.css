@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #585656;
+    font-size: 1.1em;
+}
+.MainContainer
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 150px auto 20px auto;
+}
+.MainDetails
+{
+    display: flex;
+    flex-direction: row;
+    min-height: 250px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    gap: 7%;
+}
+.ProfilePic img
+{
+    height: 240px;
+    width: 200px;
+    margin: 10px;    
+}
+.FirstName
+{
+    font-size: 3em;
+    font-weight: 600;
+    color:#227093;
+    padding-top: 15%;  
+}
+.LastName
+{
+    font-size: 2.8em;
+    font-weight: 600;
+    color:#935522;
+}
+.Post
+{
+    color: #585656;
+}
+.SocialLinks
+{ 
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-top: 3%;
+    margin-left: 7%;
+}
+.social_media i
+{
+    font-size: 50px;
+}
+.social_media i:hover
+{
+    color:#5eacda;
+    cursor: pointer;  
+}
+.review_row
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.Address 
+{
+    font-size:1.4em;
+    font-weight: 600;
+}
+.Projects
+{
+    font-size: 1.2em;
+
+}
+.Rating
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 600;
+}
+.Rating i
+{
+    color: gold; 
+    font-size: 40px;
+    margin-right: 20px;  
+} 
+
+.star_row
+{
+    padding-bottom: 1%;
+    font-size: 2vw;
+}
+.star_row i
+{
+    color: gold;
+} 
+.NoOfRating
+{
+    font-size: 30px;  
+    margin-top: 0.5%; 
+}
+
+.Contact
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.1%;
+    gap: 10px;
+}
+.About
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.ContactNumber
+{
+    font-size:1.2em;
+    font-weight: 550;
+}
+#topic
+{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.do_rate
+{
+    display: flex;
+    flex-direction: row;
+}
+.do_rate_text
+{
+
+    margin-right: 10px;
+}
+.do_rate i
+{
+    color: gold; 
+    font-size: 30px;  
+}
+.JobSeekerDetails
+{
+    height: fit-content;
+    text-align: justify;
+}
+#titles
+{
+    font-weight: 600;
+    font-size: 24px;
+    text-align: left;
+    color: #ffff;
+    background-color: #1D6989;
+    padding: 5px 5px;
+    float: left;
+    margin-top: 30px;
+    width: 99%;
+    margin-bottom: 10px;
+}
+#Jobs
+{
+    font-weight: 550;
+    font-size: 1em;
+    margin-top: 1.5%;
+}
+span
+{
+    font-size: 1.1em;
+    color:#227093 ;
+}
+ul
+{
+    margin-left: 2%;
+}
+#works
+{
+    margin: 1.5% 0% 0% 10%;
+    font-size: 0.8em;
+}
+.Skills , .Education
+{
+    font-size: 0.8em;
+}
+
+.resume #link
+{
+    font-weight: 500;
+    text-decoration: none;
+    color: #1D6989;
+    font-size: 0.8em;
+} 
+#resumeDetails
+{
+    font-size: 0.8em;
+    color: #585656;
+}
+.review_row
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+.user_picture img
+{
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+} 
+.review_detail
+{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    margin-left: 20px;
+    font-size: 0.7em;
+}
+.review_detail_name
+{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+hr
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.review_row i
+{
+    color: gold;
+}
+.YourReview
+{
+    width :100%;
+    min-height:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ .Review1
+ {
+     width: 85%;
+     margin-top:15px ;
+     font-size: 0.8em;
+ }  
+ .rate_me_text
+ {
+    font-size:1.2em;
+    color:#1D6989 ;
+    font-weight: 800;
+}
+.inputfield
+{
+    width: 100%;
+    border: 3px solid #ccc;
+    padding: 3px;
+}
+
+.inputfield:hover
+{
+    border: 3px solid #1D6989;
+}  
+
+.inputfield:focus
+{
+    outline: none;
+    border: 3px solid #1D6989;
+} 
+.submit_button
+{
+    background-color: #1D6989;
+    width:150px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin: 10px;  
+}
+.submit_button:hover
+{
+    cursor: pointer;
+    color:#1D6989 ;
+    background-color: white;
+    border: 2px solid #1D6989;
+}
+
+@media only screen and (max-width: 975px)
+{
+    
+    .MainDetails
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ProfilePic img
+    {
+        height: 200px;
+        width: 160px;
+        margin: 10px;    
+    }
+    .FirstName
+    {
+
+        font-size: 2.5em;
+        padding-top: 0%;
+         
+    }
+    .LastName
+    {
+        font-size: 2.2em;
+    }
+    .Post
+    {
+        font-size: 0.8em;
+    }
+    .SocialLinks
+    {
+        justify-content: center;
+        align-items: center;
+        font-size: 0.6em;
+    }
+    .social_media i
+    {
+        font-size: 40px;
+    }   
+    #titles
+    {
+        align-items: center;
+        font-size: 18px;
+    }
+    .Address , .ContactNumber
+    {
+        font-size:0.9em;
+    
+    }
+    .Projects
+    {
+        font-size: 0.8em;
+    }
+    .Rating i
+    {
+        font-size: 25px;
+    } 
+    .NoOfRating
+    {
+        font-size: 20px;
+        margin-top: 0%;
+    } 
+    .user_picture img
+    {
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+    } 
+    .rate_me_text
+    {
+        font-size: 0.7em;
+    }
+    .row 
+    {
+        font-size: 0.7em;
+    }
+    .Skills, .Education, .Review
+    {
+        font-size: 0.6em;
+    }
+    .resume #link, #resumeDetails
+    {
+        font-size: 0.9em;
+    }
+    .submit_button
+    {
+        width:130px;
+        padding: 4px;
+        font-weight: 550;
+        font-size: 0.8em;
+        margin: 10px;  
+    }
+
+}
+
+@media only screen and (max-width: 690px)
+{
+    .ProfilePic img
+    {
+        height: 160px;
+        width: 120px;
+        margin: 10px;    
+    }
+    .FirstName
+    {
+
+        font-size: 2em;
+        padding-top: 0%;
+         
+    }
+    .LastName
+    {
+        font-size: 1.8em;
+    }
+    .Post
+    {
+        font-size: 0.7em;
+    }
+    .Address , .ContactNumber
+    {
+        font-size:0.8em;
+    
+    }
+    .social_media i
+    {
+        font-size: 30px;
+    }
+    .rate_me_text
+    {
+        font-size: 0.6em;
+    }
+    .row, .resume
+    {
+        font-size: 0.6em;
+    }
+    .Skills, .Education, .Review1
+    {
+        font-size: 0.4em;
+    }
+    .submit_button
+    {
+        width:110px;
+        padding: 4px;
+        font-weight: 550;
+        font-size: 0.6em;
+        margin: 8px;  
+    }
+    
+}

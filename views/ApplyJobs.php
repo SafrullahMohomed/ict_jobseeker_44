@@ -12,8 +12,11 @@
     </style>
 </head>
 <body>
+    <div class="header_div" >
+        <?php include 'Header.php'?>
+    </div>
     <div class="CompanyBanner">
-        <div class="CompanyLogo" style="background-image:url('http://localhost/ict_jobseeker_mvc_final/views/images/Jobseeker/wso2logo.png');">
+        <div class="CompanyLogo" style="background-image:url('http://localhost/ict_jobseeker_44/views/images/Jobseeker/wso2logo.png');">
         </div>
         <div class="JobDetails">
             <p>Software Engineer(JAVA)</p>
