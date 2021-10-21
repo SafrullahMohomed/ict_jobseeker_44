@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+} 
+.container
+{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 250px; 
+}
+.flex-container
+{
+    height: 540px;
+    width: 675px;
+    background-color:rgb(141, 188, 235);
+    border-radius: 7px;
+    margin: auto;
+    /* padding-top: 10px; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    column-gap: 10px;
+}
+.right-container
+{
+    width: 360px;
+    height: 520px;
+    background-color: #f6f6f8;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+.input-container
+{
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    padding-left: 50px;
+    padding-top: 40px;
+}
+#users
+{
+    margin-left: 60px;
+    border:solid rgb(6, 8, 124) ;
+    border-radius: 12px;
+    width:50% ;
+    height: 40px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(6, 8, 124);
+    padding: auto;
+}
+#users select :focus{
+    border-radius: 12px;
+}
+.right-container p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+.right-container form
+{
+    padding-left: 40px;
+    padding-top: 30px;
+}
+.right-container input
+{
+    width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+    
+}
+.right-container input[type="text"],input[type="email"], input[type="password"]
+{
+    border: none;
+    border-bottom: 2px solid;
+    background: transparent;
+    height: 20px;
+    outline: none;
+    padding-bottom: 5px;
+    width: 80%;
+    font-size: 14px;
+    font: pt-serif caption;
+    
+}
+.right-container input[type="submit"]
+{
+    width: 100px;
+    border-radius: 12px;
+    border: rgb(6, 8, 124) solid;
+    background: rgb(6, 8, 124);
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.right-container input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: white;
+    color: rgb(6, 8, 124);
+    position: relative;
+    transition:ease-in-out 0.2s;
+}
+.right-container input[type="text"]:hover,input[type="email"]:hover, input[type="password"]:hover
+{
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(6, 8, 124);
+    transition: 0.5s;
+}
+.left-container
+{
+    background-image: url(/login1.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    padding-left: 45px;
+    padding-bottom: 10px;
+    border-radius: 7px;
+    opacity: 0.6;
+    width: 240px; 
+    height:385px;
+    margin-top: 10px;
+    justify-content: start;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    /*border-color: rgb(6, 8, 124);
+    border-style:outset ;
+    border-width: 3px*/
+}
+#label
+{
+    
+    font-family: 'Quicksand', sans-serif;  
+    color: rgb(6, 8, 124);
+    font-weight: 550;
+}
+#register
+{
+    position: relative;
+    top: -110px;
+    left: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(6, 8, 124);
+    font-weight:bolder;
+    font-size:xx-large;
+    /* border-bottom: rgb(99, 14, 99) 6px solid;
+    width: 130px; */
+}
+#log_link 
+{
+    position: relative;
+    top: -95px;
+    left: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color:rgb(6, 8, 124);
+    text-align:inherit;
+    font: weight 550px; ;
+}
+#log_link a
+{
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif; 
+}
+.left-container p
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(6, 8, 124);
+    font-weight:550;
+    font-size: 14px;
+}
+span
+{
+    color: red;
+    font-size: 12px;
+}
+@media screen and (max-width: 680px)
+ {
+   .flex-container
+   {
+        display: flex;
+        flex-direction: column;   
+        justify-content: flex-end;
+        align-items: stretch;
+        width: 95%;
+        height: 640px;
+        padding-top: 10px;
+   }
+   .right-container
+   {
+       justify-content: center;
+       width: 90%;
+       background-color: #f6f6f8;
+       align-items: center;
+       margin-bottom: 10px;
+       margin-top: 10px;
+       border-radius: 7px;
+       margin-left: 5%;
+   }
+   
+ .left-container
+{
+    background-image:none;
+    background-position: top;
+    background-repeat: no-repeat;
+    /* padding-left: 45px; */
+    /* padding-bottom: 50px; */
+    border-radius: 7px;
+    /* width: 240px;  */
+    width: 75%;
+    height: 20px;
+    margin-top: 5px;
+    justify-content: center;
+    /*margin-bottom: 50px;*/
+    margin-left: 7%;  
+    /*border-color: rgb(6, 8, 124);
+    border-style:outset ;
+    border-width: 3px*/
+} 
+
+#register
+{
+    position: relative;
+    top: -50px;
+    left: 17%;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(6, 8, 124);
+    font-weight:bolder;
+    font-size:xx-large;
+    /* border-bottom: rgb(99, 14, 99) 6px solid;
+    width: 130px; */
+}
+#log_link 
+{
+    position: relative;
+    top: -45px;
+    left: 17%;
+    font-size: 14px;
+    line-height: 20px;
+    color:rgb(6, 8, 124);
+    text-align:inherit;
+    font: weight 550px; ;
+}
+.input-container
+{
+    padding-top: 35px;
+}
+.right-container form
+{
+    padding-left: 40px;
+    padding-top: 20px;
+}
+}
+
+@media screen and (max-width:360px)
+{
+    .left-container  
+    {
+        width: 75%;
+        margin-left: 5%; 
+    }  
+} 

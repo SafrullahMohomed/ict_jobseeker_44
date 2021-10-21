@@ -8,6 +8,6 @@
 </head>
 <body>
     <p>hi</p>
-<?php print_r($this->cp);?>
+<?php print_r($this->c);?>
 </body>
 </html>

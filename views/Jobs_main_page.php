@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobs main page</title>
-
- <style>
+    <style>
    
- <?php include "CSS/Jobs_main_page.css" ?> 
-
-</style> 
+   <?php include "CSS/Jobs_main_page.css" ?> 
+  
+  </style> 
+ 
 <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header part with css html js -->
-<div class="header_div" style="height:140px">
+<div class="header_div">
 <?php  include 'Header.php'?>
 </div>
       <!-- header part end  -->
+      
     <div class="main_container">
     <div class="top_trending_categories_title ">Top Trending Categories </div>
 

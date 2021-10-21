@@ -19,7 +19,7 @@
    <div class="header_div" >
         <?php include 'Header.php'?>
 </div>
-      <!-- header part end  -->
+      <!-- header part end -->
     <div class="resource-search-part">
         <div class="theme-image">
        

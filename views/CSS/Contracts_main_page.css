@@ -132,6 +132,9 @@ font-weight: 600;
 font-size: 18px;
 }
 .features_contract_row_contract_description{
+    overflow: hidden;
+    text-overflow: clip;
+    max-height: 100px; 
     text-align: justify;
     font-size: 15px;
     font-weight: 500;
