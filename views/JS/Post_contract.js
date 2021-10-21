@@ -14,7 +14,7 @@ if (contract_name == "") {
 var description=document.myForm.description.value;  
 if (description.length<100 ) {
   
-    document.getElementById("description_error").innerHTML="Project describtion must be filled with minimum 100 letters";
+    document.getElementById("description_error").innerHTML="Project description must be filled with minimum 100 letters";
   
     return false;
   }
@@ -30,3 +30,9 @@ if (avg_bid=="") {
 
 
 }
+
+/*fuction to hide error msg*/
+function hideFormError(x) {
+  
+  x.innerHTML="";
+  }

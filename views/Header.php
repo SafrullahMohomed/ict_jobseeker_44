@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <!-- <link rel="stylesheet" href="CSS/normalize.css"> -->
-       
+        
 
 
 
@@ -21,8 +21,8 @@
 
 }
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   background-color: #ffffff;
   border-radius: 7px;
   margin-bottom: 50px;
@@ -38,7 +38,7 @@ html, body {
   overflow-x:hidden;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 
 /*This is for login bar of the header*/
@@ -46,7 +46,7 @@ html, body {
   background-color: #004867;
   width: 100%;
   height: 35px;
-  border-radius: 7px;
+  border-radius: 0px;
 }
 
 .login-bar ul {
@@ -89,7 +89,7 @@ html, body {
   width: 100%;
   height: 90px;
   background-color: #1d6989;
-  border-radius: 7px;
+  border-radius: 0 0 7px 7px;
   justify-content: space-between;
 }
 
@@ -100,7 +100,7 @@ html, body {
   border-radius: 7px;
   object-fit: cover;
   height: 85px;
-  margin-top: 2px;
+  margin-top: 2px !important;
   width: 90px;
 
 }
@@ -114,8 +114,10 @@ html, body {
 
 /* make the ul as right in that div*/
 .navigation-menu ul {
+  margin-bottom: 20px;
   float: right;
   list-style: none;
+  font-weight: 400;
 }
 
 /*make the lists to one horizontal block*/
@@ -189,7 +191,7 @@ html, body {
         <ul>
             <li class="login-list"><a href="#Login.html">Login</a></li>
             <li class="login-list">|</li>
-            <li class="login-list"><a href="#Register.html">Register</a></li>
+            <li class="login-list"><a href="<?php echo URL?>Registration">Register</a></li>
         </ul>
     </div>
     <!-- login bar ends here  -->

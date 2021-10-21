@@ -35,6 +35,8 @@
         justify-content: space-around;
         background-color: #2c3e50;
         color: white;
+        font-size: 15px;
+        font-weight: 400;
       }
 
       /* footer main  3 columns */
@@ -45,7 +47,7 @@
         flex-direction: column;
         width: 30%;
         /* position: relative; */
-        /* left: 22px; */
+        /*left: 27px; */
       }
 
       /* name logo */
@@ -64,6 +66,7 @@
       /* first column text */
       .site-text {
         text-align: justify;
+        color: white;
       }
 
       .contactus-header {
@@ -90,7 +93,7 @@
         font-size: 25px;
         font-weight: bolder;
         position: relative;
-        left: 37px;
+        /*left: 37px;*/
       }
 
       /* css for links */
@@ -123,11 +126,14 @@
       .footer-list a:link:hover {
         color: rgb(127, 135, 245);
       }
-
+       ul{
+        color: white !important;
+      }
       /* social media icons */
       .social-media-icons ul li {
         display: inline-flex;
         margin-right: 5px;
+       
       }
 
       .social-media-icons ul li:hover {

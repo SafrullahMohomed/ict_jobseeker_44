@@ -77,6 +77,39 @@ public function run_post_contract_insert_query()
    
 
 
- }   
+ }  
+ public function run_post_contract_select_query(){
+$stmt1=$this->prepare("SELECT  `Contract_title`, `Contract_description`,
+                      `Contract_deadline`, `Contract_bid_avg`
+                       FROM `contract`");
+
+$stmt1->execute();
+$s=$stmt1->fetchAll();
+
+return $s;
+//(C)output results
+//echo json_encode(count($stmt2) == 0 ? null : $stmt2);
+
+ } 
+ public function  run_insert_reg_data($data){
+    $fname=$data['fname'];
+    $lname=$data['lname'];
+    $email=$data['email'];
+    $password=$data['password'];
+    
+
+    $stmt1 =$this->prepare("INSERT INTO user (Password,Email, First_name, 	Last_name,	Email_varify,Email_varify_token)
+     VALUES (:password,:email, :deadline,:fname,:lname,:verify,:varify_token )");
+
+     $stmt1->bindParam(':password', $password);
+     $stmt1->bindParam(':email', $email);
+     $stmt1->bindParam(':lname', $lname);
+     $stmt1->bindParam(':password', $password);
+     $stmt1->bindParam(':verify', $data['verify']);
+     $stmt1->bindParam(':varify_token',  $emailToken);
+     $stmt1->execute();
+
+}
+ 
 }
 ?>
