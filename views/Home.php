@@ -38,7 +38,7 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
-    <!-- header ends here -->
+    <!-- header  ends here -->
 
     <!-- theme image and jobs search part divisions starts here -->
     <div class="job-search-part">
@@ -152,7 +152,7 @@
           experience. That being said, if you could take a minute to post a
           review, we would so appreciate it.
         </div>
-        <div class="button" type="onclick="loadRateAndreview()" > More</div>
+        <div class="button" type="" onclick="loadRateAndreview()" > More</div>
       </div>
       <div class="right_picture">
       <?php

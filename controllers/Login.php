@@ -1,6 +1,5 @@
-
 <?php
-class Show_cp_profile extends Controller
+class Login extends Controller
 {
     function __construct()
     {
@@ -8,15 +7,13 @@ class Show_cp_profile extends Controller
 
     }
 
-    function Show_cp_profile()
+    function Login()
     {
         #$this->model->printSomething();
         #echo "Hello from the Test controller - Index Method";
 
         //pass view name
+        $this->view ->render('Login'); 
         
-    
-           $this->view->cp= $this->model->Get_cp_data();
-           $this->view ->render('Show_cp_profile'); 
-        }
     }
+}

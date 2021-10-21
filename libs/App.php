@@ -78,7 +78,7 @@ class App{
            
     
             require $file2;
-           
+          
             $this->_controller = new $this->_url[1];
             //load model
             $this->_controller->loadModel2($this->_url[0],$this->_url[1]);
@@ -127,12 +127,17 @@ class App{
                 break;
 
             case 2:
+                
                 $this->_controller->{$this->_url[1]}();
                # $this->_controller -> {$this->_url[0]}($this->_url[1]); 
                 break;    
 
             case 1:
-                $this->_controller -> {$this->_url[0]}(); 
+                $this->_controller -> {$this->_url[0]}();  
+
+                /*test->test()*/
+               /* $this->_controller -> {$this->_url[0]}($this->_url[1]);*/
+              
                 break;
 
             default:
