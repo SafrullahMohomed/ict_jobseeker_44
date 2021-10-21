@@ -181,7 +181,14 @@
     color: rgb(6, 8, 124);
     font-weight:550;
     font-size: 14px;
+
+span
+{
+    color: red;
+    font-size: 12px;
 }
+
+
 @media screen and (max-width: 680px)
  {
    .flex-container

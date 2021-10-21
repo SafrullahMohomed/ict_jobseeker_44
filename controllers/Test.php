@@ -14,8 +14,10 @@ class Test extends Controller
         #echo "Hello from the Test controller - Index Method";
 
         //pass view name
-        echo "hh";
+      
         $this->view->cp= $this->model->Get_cp_data();
+        $this->view->c=$this->model->select_query_post_contract();
+        
         $this->view ->render('Test'); 
         
     }

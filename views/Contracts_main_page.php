@@ -15,7 +15,7 @@
 </head>
 
 
-<body>
+<body onload="contractLoad()">
       <!-- header part with css html js -->
       <div class="header_div" >
         <?php include 'Header.php'?>
@@ -54,230 +54,16 @@
     <!-- top trending category contracts end -->
     <!-- features contracts start -->
 <div class="features_contract">
+
 <div class="features_contract_row">
-  <div class="features_contract_row_contract" onclick="viewContract()">
-<div class="features_contract_row_contract_title">
-  I'm looking for React-Native Expert.
+<!-- load data from  database -->
 </div>
-<div class="features_contract_row_contract_description">
-  I am looking for experienced developers to build me 
-   Villa booking app. Overview:
-  Hi, I am looking for a cross-platform application that 
-  connects Villas hosts with the guests. 
-  Requirements: * I need the app to have 3 
-  types of users
-</div>
-<div class="features_contract_row_contract_expiredate_and_avg_bid">
-  <div class="features_contract_row_contract_expiredate_container">
-    <div class="features_contract_row_contract_expiredate_container_expirson">
-      Expires on
-    </div>
-  <div class="features_contract_row_contract_expiredate_container_expiredate">
-    2021/09/25
-  </div>
-  </div>
-  <div class="features_contract_row_contract_bid_container_avg_bid">
-    <div class="features_contract_row_contract_bid_container_avg_bid_avg_text">
-      Avg 
-    </div>
-    <div class="features_contract_row_contract_bid_container_avg_bid_currency_type">
-RS
-    </div>
-    <div class="features_contract_row_contract_bid_container_avg_bid_avg_no">
-      1000
-    </div>
-    </div>
-
-
-
-</div>
-
-  
-<div class="features_contract_row_contract_bid_container">
-
-<div class="features_contract_row_contract_bid_container_count_and_bid_button">
-<div class="features_contract_row_contract_bid_container_count">
-<div class="features_contract_row_contract_bid_container_count_no">
-  8
-</div>
-<div class="features_contract_row_contract_bid_container_count_bid_text">bids</div>
-</div>
-  <button class="features_contract_row_contract_bid_container_count_bid_button" onclick="Bidnow()">
-Bid now
-  </button>
-</div>
-</div>
-
-  </div>
-  <div class="features_contract_row_contract">
-    <div class="features_contract_row_contract_title">
-      I'm looking for React-Native Expert.
-    </div>
-    <div class="features_contract_row_contract_description">
-      I am looking for experienced developers to build me 
-       Villa booking app. Overview:
-      Hi, I am looking for a cross-platform application that 
-      connects Villas hosts with the guests. 
-      Requirements: * I need the app to have 3 
-      types of users
-    </div>
-    <div class="features_contract_row_contract_expiredate_and_avg_bid">
-      <div class="features_contract_row_contract_expiredate_container">
-        <div class="features_contract_row_contract_expiredate_container_expirson">
-          Expires on
-        </div>
-      <div class="features_contract_row_contract_expiredate_container_expiredate">
-        2021/09/25
-      </div>
-      </div>
-      <div class="features_contract_row_contract_bid_container_avg_bid">
-        <div class="features_contract_row_contract_bid_container_avg_bid_avg_text">
-          Avg 
-        </div>
-        <div class="features_contract_row_contract_bid_container_avg_bid_currency_type">
-    RS
-        </div>
-        <div class="features_contract_row_contract_bid_container_avg_bid_avg_no">
-          1000
-        </div>
-        </div>
-    
-    
-    
-    </div>
-    
-      
-    <div class="features_contract_row_contract_bid_container">
-    
-    <div class="features_contract_row_contract_bid_container_count_and_bid_button">
-    <div class="features_contract_row_contract_bid_container_count">
-    <div class="features_contract_row_contract_bid_container_count_no">
-      8
-    </div>
-    <div class="features_contract_row_contract_bid_container_count_bid_text">bids</div>
-    </div>
-      <button class="features_contract_row_contract_bid_container_count_bid_button">
-    Bid now
-      </button>
-    </div>
-    </div>
-    
-      </div>
-      <div class="break"></div>
-      <div class="features_contract_row_contract">
-        <div class="features_contract_row_contract_title">
-          I'm looking for React-Native Expert.
-        </div>
-        <div class="features_contract_row_contract_description">
-          I am looking for experienced developers to build me 
-           Villa booking app. Overview:
-          Hi, I am looking for a cross-platform application that 
-          connects Villas hosts with the guests. 
-          Requirements: * I need the app to have 3 
-          types of users
-        </div>
-        <div class="features_contract_row_contract_expiredate_and_avg_bid">
-          <div class="features_contract_row_contract_expiredate_container">
-            <div class="features_contract_row_contract_expiredate_container_expirson">
-              Expires on
-            </div>
-          <div class="features_contract_row_contract_expiredate_container_expiredate">
-            2021/09/25
-          </div>
-          </div>
-          <div class="features_contract_row_contract_bid_container_avg_bid">
-            <div class="features_contract_row_contract_bid_container_avg_bid_avg_text">
-              Avg 
-            </div>
-            <div class="features_contract_row_contract_bid_container_avg_bid_currency_type">
-        RS
-            </div>
-            <div class="features_contract_row_contract_bid_container_avg_bid_avg_no">
-              1000
-            </div>
-            </div>
-        
-        
-        
-        </div>
-        
-          
-        <div class="features_contract_row_contract_bid_container">
-        
-        <div class="features_contract_row_contract_bid_container_count_and_bid_button">
-        <div class="features_contract_row_contract_bid_container_count">
-        <div class="features_contract_row_contract_bid_container_count_no">
-          8
-        </div>
-        <div class="features_contract_row_contract_bid_container_count_bid_text">bids</div>
-        </div>
-          <button class="features_contract_row_contract_bid_container_count_bid_button">
-        Bid now
-          </button>
-        </div>
-        </div>
-        
-          </div>
-          <div class="features_contract_row_contract">
-            <div class="features_contract_row_contract_title">
-              I'm looking for React-Native Expert.
-            </div>
-            <div class="features_contract_row_contract_description">
-              I am looking for experienced developers to build me 
-               Villa booking app. Overview:
-              Hi, I am looking for a cross-platform application that 
-              connects Villas hosts with the guests. 
-              Requirements: * I need the app to have 3 
-              types of users
-            </div>
-            <div class="features_contract_row_contract_expiredate_and_avg_bid">
-              <div class="features_contract_row_contract_expiredate_container">
-                <div class="features_contract_row_contract_expiredate_container_expirson">
-                  Expires on
-                </div>
-              <div class="features_contract_row_contract_expiredate_container_expiredate">
-                2021/09/25
-              </div>
-              </div>
-              <div class="features_contract_row_contract_bid_container_avg_bid">
-                <div class="features_contract_row_contract_bid_container_avg_bid_avg_text">
-                  Avg 
-                </div>
-                <div class="features_contract_row_contract_bid_container_avg_bid_currency_type">
-            RS
-                </div>
-                <div class="features_contract_row_contract_bid_container_avg_bid_avg_no">
-                  1000
-                </div>
-                </div>
-            
-            
-            
-            </div>
-            
-              
-            <div class="features_contract_row_contract_bid_container">
-            
-            <div class="features_contract_row_contract_bid_container_count_and_bid_button">
-            <div class="features_contract_row_contract_bid_container_count">
-            <div class="features_contract_row_contract_bid_container_count_no">
-              8
-            </div>
-            <div class="features_contract_row_contract_bid_container_count_bid_text">bids</div>
-            </div>
-              <button class="features_contract_row_contract_bid_container_count_bid_button">
-            Bid now
-              </button>
-            </div>
-            </div>
-            
-              </div>
-</div>
+ 
 <!-- contract row start -->
 <div class="features_contract_row">
-  <div class="features_contract_row_contract">
+  <div  class="features_contract_row_contract" onclick="viewContract()">
 <div class="features_contract_row_contract_title">
-  I'm looking for React-Native Expert.
+  I'm looking for React -Native Expert.
 </div>
 <div class="features_contract_row_contract_description">
   I am looking for experienced developers to build me 
@@ -329,7 +115,7 @@ Bid now
 </div>
 
   </div>
-  <div class="features_contract_row_contract">
+  <div  class="features_contract_row_contract">
     <div class="features_contract_row_contract_title">
       I'm looking for React-Native Expert.
     </div>

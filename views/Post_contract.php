@@ -26,7 +26,7 @@
         
         <div class="row">
             <label for="projectname" class="labelfield">Project Name</label><br>
-            <input type="text" id="project name" name="contract_name" placeholder= "Enter your project name/title..." class="inputfield" required><br>
+            <input type="text" id="project name" name="contract_name"  placeholder= "Enter your project name/title..." class="inputfield" required onfocus=" hideFormError(contract_name_error)"><br>
             <span id="contract_name_error"></span>
         </div>
         <div class="row">
@@ -52,7 +52,7 @@
             
         <div class="row">
             <label for="description" class="labelfield"> Brief Description</label><br>
-           <textarea  id="description" rows="4" name="description" placeholder="Include an overview of what you need done..." class="inputfield" required></textarea><br>
+           <textarea  id="description" rows="4" name="description" onfocus=" hideFormError(description_error)" placeholder="Include an overview of what you need done..." class="inputfield" required></textarea><br>
            <span id="description_error"></span>
         </div>
         
@@ -64,14 +64,14 @@
     
         <div class="row">
             <label for="avg_bid" class="labelfield">Averag_bid</label><br>
-            <input type="text" id="avg_bid" name="avg_bid" placeholder= "avg_bid" class="inputfield" required><br>    
+            <input type="text" id="avg_bid" name="avg_bid" onfocus=" hideFormError(avg_bid_error)" placeholder= "avg_bid" class="inputfield" required><br>    
             <span id="avg_bid_error"></span>
         </div>
         
 
        <div class="submit">
         <label for="submit" class="labelfield"></label><br>
-        <input type="submit" id="submit" name="submit"  class="submit_button" onclick="validateForm()"><br>
+        <input type="submit" id="submit" name="submit"  class="submit_button" onclick="return validateForm()"><br>
        </div>
     </form>
  </div>
