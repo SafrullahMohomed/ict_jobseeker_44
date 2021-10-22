@@ -142,7 +142,7 @@ class Registration extends Controller
                     'confirmPassword_err' => '',
                     'controller'=>''
                 ]; */
-                //echo "hi";
+               
                 $this->view ->render2('Registration',$data);
             }
     
