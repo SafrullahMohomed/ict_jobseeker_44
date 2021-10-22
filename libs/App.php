@@ -51,6 +51,7 @@ class App{
     
     {
         $file1='controllers/' . $this->_url[0] . '.php';//path of controller
+       
 
 
         if (isset($this->_url[1])) {
@@ -111,19 +112,21 @@ class App{
         }
         switch ($urlLength){
             case 6:
-            $this->_controller -> {$this->_url[0]}($this->_url[1],$this->_url[2],$this->_url[3],$this->_url[4],$this->_url[5]); 
+            $this->_controller -> {$this->_url[1]}($this->_url[2],$this->_url[3],$this->_url[4],$this->_url[5],$this->_url[5]); 
             break;
 
             case 5:
-                $this->_controller -> {$this->_url[0]}($this->_url[1],$this->_url[2],$this->_url[3],$this->_url[4]); 
+                $this->_controller -> {$this->_url[1]}($this->_url[2],$this->_url[3],$this->_url[4]); 
                 break;
             
             case 4:
-                $this->_controller -> {$this->_url[0]}($this->_url[1],$this->_url[2],$this->_url[3]); 
+                $this->_controller -> {$this->_url[1]}($this->_url[2],$this->_url[3]); 
                 break;
 
             case 3:
-                $this->_controller -> {$this->_url[0]}($this->_url[1],$this->_url[2]); 
+              
+               
+                $this->_controller -> {$this->_url[1]}($this->_url[2]); 
                 break;
 
             case 2:
