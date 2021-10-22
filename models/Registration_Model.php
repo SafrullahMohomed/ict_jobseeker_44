@@ -13,55 +13,7 @@ class Registration_Model extends Model{
     {
        parent :: __construct(); 
     }
-    public function checkUserByUserType($data) {
-        $fname = $data['fname'];
-        $lname = $data['lname'];
-        $email = $data['email'];
-        $password = $data['password'];
-        $confirmPassword = $data['confirmPassword'];
-        $verify = $data['verify'];
-        $user_type = $data['user_type'];
-        // $landowner_type = null;
-
-        if($user_type && $verify != 0) {
-          
-
-          
-            $query = "UPDATE user SET fname='$fname', lname='$lname', verify='$verify', password='$password' WHERE email='$email'";
-          /*  switch($user_type) {
-                case 'Jobseeker' :
-                    $queryUser = "INSERT INTO jobseeker(User_ID) values('$User_ID')";
-                  
-                    break;
-                
-                case 'Admin' :
-                    $queryUser = "INSERT INTO admin(User_ID) values('$User_ID')";
-                    break;
-                
-                case 'Company' :
-                    $queryUser = "INSERT INTO company(User_ID) values('$User_ID')";
-                    break;
-
-                case 'Contract provider' :
-                    $queryUser = "INSERT INTO Contractprovider(User_ID) values('$User_ID')";
-                    break;
-
-                case 'Counsellor' :
-                    $queryUser = "INSERT INTO counsellor(User_ID) values('$User_ID')";
-                    break;
-                    
-            }*/
-            $this->db->runQuery($query);
-           // $this->db->runQuery($queryUser);
-        }
-    }   
-        
-  /*  public function create_token($email) {
-        $emailToken = openssl_random_pseudo_bytes(16);
-        $emailToken = bin2hex($emailToken);
-       
-    }
-      */
+   
     
     public function  sendMail($email,$emailToken,$fname)
     {
@@ -91,9 +43,10 @@ class Registration_Model extends Model{
                     </head>
                     <body>';
             $message .= '<h1>Hi ' . $fname . '!</h1>';
-            $message .= '<p><a href="<?php echo URL ?>/Registration/activate/$emailToken">CLICK TO ACTIVATE YOUR ACCOUNT</a>';
+            $message .='<p>Welcome to ICT Jobseeker</p>';
+            $message .= '<p><a href="'.URL.'Registration/activation'. '/'.$email.'/'. $emailToken. '">CLICK TO ACTIVATE YOUR ACCOUNT</a>';
             $message .= "</body></html>";
-                    
+         
                     //$mail->isSendMail();
                 /* Set the mail sender. */
                 $mail->setFrom('secondyeargroupproject44@gmail.com', 'ICT Jobseeker');
@@ -128,20 +81,51 @@ class Registration_Model extends Model{
 
 
     }
-  /* public function verifyemail($email,$emailToken)
+  //  verifyemail_update($_SESSION['email'],$emailToken)
+  public function verifyemail_update($email,$emailToken)
     {
        
-        $query = "SELECT emailToken FROM user WHERE email = '$email'";
-      
-        if($emailToken==$token)
-        {
-            $query = "UPDATE user SET emailVerified=true, emailToken=1 WHERE email='$email'";
-        }
+        $query = "SELECT Email_varify_token	 FROM user WHERE email = '$email'";
+        $result= $this->db->runQuery_single($query);
+     
+ 
 
+        try {
         
+                
+                if ($result->Email_varify_token == -1) {
+
+                    $msg = "Your account has already been activated.";
+                    return $msg;
+                  } 
+                else {
+                    if($emailToken==$result->Email_varify_token){
+                        echo "verifyemail_update";
+                        $query = "UPDATE user SET Email_varify=1, Email_varify_token=-1 WHERE email='$email'";
+                        $this->db->runQuery($query);
+                        $msg = "Your account has been activated.";
+                        
+                        return $msg;
+                       
+                    }
+                    else{
+                        $msg = "No account found";
+                        return $msg; 
+                    }
+                    
+                  }
+    
+    
+            
+            
+
+        }
+        catch (Exception $ex) {
+            echo $ex->getMessage();
+          }
 
                     
-    }*/
+    }
 
     //one email account can has one account.if there has a another account using that email select that user details
     public function isRegisteredUser($email) {
@@ -161,10 +145,12 @@ class Registration_Model extends Model{
     //insert user data when registration
     
     public function insert_reg_data($data,  $emailToken){
+
         return $this->db-> run_insert_reg_data($data,  $emailToken);
        
        }
 
+ 
 }
      
 

@@ -12,6 +12,7 @@ class Controller{
         $path ='models/'.$modelName. '_Model.php'; 
 
         if(file_exists($path)){
+           
             require $path;
             $className =$modelName . '_Model';
             $this->model=new $className();

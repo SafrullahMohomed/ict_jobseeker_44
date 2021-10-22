@@ -54,8 +54,8 @@
                     <input type="password" name="confirmPassword" placeholder="Confirm Your Password" onfocus="hideFormError(confirm_password_error)"><br>
                     <span id="confirm_password_error" class="error"><?php echo $data['confirmPassword_err']?></span>
 
-                    <!-- <input type="submit" id="submit" name="submit" value="Register" onclick="return validateForm()"><br> -->
-                    <input type="submit" id="submit" name="submit" value="Register" ><br>
+                   <input type="submit" id="submit" name="submit" value="Register" onclick="return validateForm()"><br>
+                    <!-- <input type="submit" id="submit" name="submit" value="Register" ><br> -->
                 </form>
             </div>
         </div>

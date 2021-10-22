@@ -12,6 +12,12 @@ public function runQuery($query1){
     $stmt->execute();
     return $stmt->fetchAll();
 }
+public function runQuery_single($query1){
+    $stmt=$this->prepare($query1);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_OBJ);
+}
+
 
 //insert cp data into database
 public function run_cp_insert_query()
@@ -91,22 +97,26 @@ return $s;
 //echo json_encode(count($stmt2) == 0 ? null : $stmt2);
 
  } 
- public function  run_insert_reg_data($data){
+ public function  run_insert_reg_data($data,$emailToken){
     $fname=$data['fname'];
     $lname=$data['lname'];
     $email=$data['email'];
+    $user_type=$data['user_type'];
     $password=$data['password'];
-    
+    $varify=$data['verify'];
 
-    $stmt1 =$this->prepare("INSERT INTO user (Password,Email, First_name, 	Last_name,	Email_varify,Email_varify_token)
-     VALUES (:password,:email, :deadline,:fname,:lname,:verify,:varify_token )");
+
+    $stmt1 =$this->prepare("INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type)
+     VALUES (:password,:email,:fname,:lname,:verify,:varify_token,:user_type )");
 
      $stmt1->bindParam(':password', $password);
      $stmt1->bindParam(':email', $email);
+     $stmt1->bindParam(':fname', $fname);
      $stmt1->bindParam(':lname', $lname);
      $stmt1->bindParam(':password', $password);
-     $stmt1->bindParam(':verify', $data['verify']);
+     $stmt1->bindParam(':verify',$varify );
      $stmt1->bindParam(':varify_token',  $emailToken);
+     $stmt1->bindParam(':user_type',  $user_type);
      $stmt1->execute();
 
 }

@@ -67,11 +67,10 @@ class Registration extends Controller
                     $data['user_type_err'] = "Please enter the user type";
                 
                 }
-                else if(!($this->model->checkUserByUserType($data))) {
-                    $data['user_type_err'] = "Entered user type is wrong!";
-                }
+                
                 //Validate fname
                 if(empty($data['fname'])) {
+                    echo "kk";
                     $data['fname_err'] = "Please enter the first name";
                 }
                 //Validate lname
@@ -99,91 +98,73 @@ class Registration extends Controller
                     $data['confirmPassword_err'] = "Doesn't match with password";
                 }
     
-                //Make sure errors are empty
-               /* if(empty($data['fname_err']) && empty($data['lname_err']) && empty($data['email_err']) && empty($data['password_err']) && empty($data['confirmPassword_err'])) {
+               
+
+                if(empty($data['fname_err']) && empty($data['lname_err']) && empty($data['email_err']) && empty($data['password_err']) && empty($data['confirmPassword_err'])&& empty($data['user_type_err'])  ) {
                     //Validated
                    
                     //Hash Password
                     $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-                    
-                    //Register a user
-                    if(!($this->model->isRegisteredUser($data['email']))) {
-                        $email = $data['email'];
-                        //$this->model->verifyemail($email);
-                        if($this->model->findUser($data['email'])) {
-                            $_SESSION['email_new'] = $data['email'];
-                           
-                            $_SESSION['controller'] = $data['controller'];
-                            //send mail to user and varify
-                            $this->model->verifyemail( $_SESSION['email_new']);
-                        }
-
-                        
-                    }
-                    
-    
-                }
-                else {
-                    // $this->view->render('user/registration', $data);
-                    $this->view ->render2('Registration',$data); 
-                }*/
-
-                if(empty($data['fname_err']) && empty($data['lname_err']) && empty($data['email_err']) && empty($data['password_err']) && empty($data['confirmPassword_err'])) {
-                    //Validated
-                   
-                    //Hash Password
-                    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-                    //if there exist no email priviosly in the database
+                    //if there exist no email previously in the database
                     if(!$this->model->isRegisteredUser($data['email'])) {
                         //create token
                         $emailToken = openssl_random_pseudo_bytes(16);
                         $emailToken = bin2hex($emailToken);
-
+                        $_SESSION['emailToken'] =$emailToken ;
                         $this->model->insert_reg_data($data,  $emailToken);
-                        $this->model->sendMail($data['email'],$emailToken,$data['fname']);
+                       $this->model->sendMail($data['email'],$emailToken,$data['fname']);
                         
 
+                    }
+                    //it mean there has a already registered account of relavant email.then redirect to login page
+                    else{
+                       // $this->view ->render2('Login',$data['email']);
                     }
 
 
                 
             }
             else {
-                $data = [
+              /*  $data = [
                     'fname' => trim($_POST['fname']),
                     'lname' => trim($_POST['lname']),
                     'email' => trim($_POST['email']),
                     'password' => trim($_POST['password']),
-                    
+                    'user_type' => trim($_POST['user_type']),
                     'verify' => '0',
                     'confirmPassword' => trim($_POST['confirmPassword']),
                       //***** */
     
-                    'fname_err' => '',
+                    /*'fname_err' => '',
                     'lname_err' => '',
                     'email_err' => '',
                     'password_err' => '',
                     'confirmPassword_err' => '',
                     'controller'=>''
-                ];
+                ]; */
+                //echo "hi";
                 $this->view ->render2('Registration',$data);
             }
     
         }
+    }
     
-        //para1=email and para2=token
-        /*public function verifyemail($param1,$param2)
-         {
-             if($this->Registration_Model->isRegisteredUser($param1))
-             {
-                 $this->Registration_Model->verify($param1,$param2);
-                 echo "succses"
-                 //$this->redirect(login);
-             }
-             else{
-                 die("Something went wrong");
-             }
-          }*/
+      
     
-}
-}
+
+          //after user click on the link and varify token is valid then activate the account for that call to varify function in model
+          public function  activation($email,$emailToken){
+
+          
+          
+           $this->model->verifyemail_update($email,$emailToken);
+
+          
+           //  $this->view ->render2('registration');
+            }
+
+            
+ }
+          
+
+
