@@ -47,7 +47,7 @@ class Registration_Model extends Model{
             $message .= '<p><a href="'.URL.'Registration/activation'. '/'.$email.'/'. $emailToken. '">CLICK TO ACTIVATE YOUR ACCOUNT</a>';
             $message .= "</body></html>";
          
-                    //$mail->isSendMail();
+                   
                 /* Set the mail sender. */
                 $mail->setFrom('secondyeargroupproject44@gmail.com', 'ICT Jobseeker');
 
@@ -100,7 +100,7 @@ class Registration_Model extends Model{
                   } 
                 else {
                     if($emailToken==$result->Email_varify_token){
-                        echo "verifyemail_update";
+                       
                         $query = "UPDATE user SET Email_varify=1, Email_varify_token=-1 WHERE email='$email'";
                         $this->db->runQuery($query);
                         $msg = "Your account has been activated.";

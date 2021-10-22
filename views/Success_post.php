@@ -17,21 +17,21 @@
         <?php include 'Header.php'?>
 </div>
     <div class="main_container">
-        <div class="circle">
+        <!-- <div class="circle">
             
             <i class="fas fa-check"></i>
  
            
-        </div>
+        </div> -->
         <div class="text">
             <div class="text1">
-                Successfully
+               <?php echo "$info_msg "?>
 
             </div> 
            
-           <div class="text2" id="change">
-               Posted
-           </div>
+           <!-- <div class="text2" id="change">
+               
+           </div> -->
         </div> 
     </div>
     <?php include 'Footer.php'?>
