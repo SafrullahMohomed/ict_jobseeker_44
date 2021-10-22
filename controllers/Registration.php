@@ -112,7 +112,9 @@ class Registration extends Controller
                         $emailToken = bin2hex($emailToken);
                         $_SESSION['emailToken'] =$emailToken ;
                         $this->model->insert_reg_data($data,  $emailToken);
-                       $this->model->sendMail($data['email'],$emailToken,$data['fname']);
+                        $this->model->sendMail($data['email'],$emailToken,$data['fname']);
+                        $info_msg ="We have sent an email with a confirmation link to your email address. In order to complete the sign-up process, please click the confirmation link.";
+                        $this->view ->render2('Success_post',$info_msg);
                         
 
                     }
@@ -156,11 +158,11 @@ class Registration extends Controller
           public function  activation($email,$emailToken){
 
           
+        
+          $info_msg= $this->model->verifyemail_update($email,$emailToken);
+           
           
-           $this->model->verifyemail_update($email,$emailToken);
-
-          
-           //  $this->view ->render2('registration');
+            $this->view ->render2('Success_post', $info_msg);
             }
 
             

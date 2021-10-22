@@ -41,8 +41,9 @@ i{
 }
 .text1 ,.text2{
    
-    font-size: 3vw;
-    font-weight: 600;
+    font-size: 2vw;
+    font-weight: 400;
     color: #1D6989;
     margin-right: 20px;
+    text-align: justify;
 }
