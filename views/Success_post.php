@@ -16,6 +16,7 @@
 <div class="header_div" >
         <?php include 'Header.php'?>
 </div>
+
     <div class="main_container">
         <!-- <div class="circle">
             
@@ -23,11 +24,11 @@
  
            
         </div> -->
-        <div class="text">
-            <div class="text1">
-               <?php echo "$info_msg "?>
+        <div class="text" >
+            <form class="text1" method="GET">
+               <?php echo $info_msg;?>
 
-            </div> 
+</form> 
            
            <!-- <div class="text2" id="change">
                

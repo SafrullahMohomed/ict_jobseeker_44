@@ -409,6 +409,7 @@ img {
 /* footer starts here */
 
 .footer {
+  margin-top: 40px;
   padding-top: 20px;
   display: flex;
   flex-direction: row;

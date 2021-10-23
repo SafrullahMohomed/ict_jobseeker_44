@@ -7,10 +7,19 @@ class View{
 public function render($viewName){
     require 'views/'.$viewName. '.php';
 }
+
+//when pass array objects
 public function render2($viewName, $data = []) {
     
         require 'views/'.$viewName. '.php';
 }
+
+//when pass variable
+public function render3($viewName, $data) {
+   
+    require 'views/'.$viewName. '.php';
+}
+
 
 
 

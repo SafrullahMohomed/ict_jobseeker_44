@@ -5,7 +5,7 @@
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     color: #585656;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 .main_container{
 width:60%;
@@ -18,6 +18,7 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .row{
@@ -106,9 +107,17 @@ color: white;
 font-weight: 600;
 
 }
-.my_jobs_row_container{
-
+.job_title_data{
+    
+   text-overflow:clip;
+   overflow: hidden;
 }
+.my_jobs_row_container{
+    margin-bottom: 40px;
+}
+.my_jobs_row_container:hover{
+    cursor: pointer;
+    }
 .my_jobs_row{
     display: flex;
     flex-direction: row;
@@ -120,13 +129,16 @@ font-weight: 600;
     border: 3px solid #ccc;
     align-items: center;
     text-align: center;
+  
    
 }
+
 .icon i{
-    font-size: 40px;
-   color:#1D6989 ;
+    font-size: 30px;
+   color:#1D6989 !important;
    margin: 6px;
    cursor: pointer;
+    
 }
 
 

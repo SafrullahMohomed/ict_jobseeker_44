@@ -97,8 +97,11 @@
         <div class="my_jobs_title">
             My Job Posts
         </div>
+       
         <div class="my_jobs_row_container">
-            <div class="my_jobs_row">
+
+        <a href="<?php echo URL ?>Jobseeker/Search_jobseeker" style="text-decoration: none;">
+        <div class="my_jobs_row" title = "click to view details of applied jobseekers" >
                <div class="job_id">
                    <div class="job_id_text">
                       Job ID
@@ -118,18 +121,27 @@
 
             </div> 
             <div class="icon">
-                <i class="fa fa-eye" aria-hidden="true"></i>
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <a href="<?php echo URL ?>jobs/View_job" style="text-decoration: none;">
+            <i title="View post" class="fa fa-eye" aria-hidden="true"></i>
+        </a>
+        <a href="<?php echo URL ?>jobs/Post_job" style="text-decoration: none;">
+        <i  title="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
+    </a>
+                
+                <i
+                 title="Delete post" class="fa fa-trash-o" aria-hidden="true"></i>
             </div>
             </div>
-            <div class="my_jobs_row">
+</a>
+           
+            
+            <div title= "click to view details of applied jobseekers" class="my_jobs_row">
                 <div class="job_id">
                     <div class="job_id_text">
                        Job ID
                     </div>
                     <div class="job_id_data">
-                        0001
+                        0002
                     </div>
  
                 </div> 
