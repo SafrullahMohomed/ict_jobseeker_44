@@ -238,5 +238,12 @@ a{
 .theme-image img 
 {
     height: 120px;
+    margin-top: 0px;
+    display: none;
 }
+.resource-search-box{
+min-height: 150px;
+}
+
+
 }

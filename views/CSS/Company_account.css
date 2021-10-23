@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 *{
-    margin:140px  0;
+    margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     color: #585656;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 .main_container{
 width:60%;
 min-height:1000px;
 
-margin: 20px auto 20px auto;
+margin: 140px auto 20px auto;
 padding: 10px;
 display: flex;
 flex-direction: column;
@@ -109,9 +110,14 @@ padding: 10px;
 color: white;
 font-weight: 600;
 
+
 }
 .my_jobs_row_container{
+    margin-bottom: 40px;
+}
 
+.my_jobs_row_container:hover{
+cursor: pointer;
 }
 .my_jobs_row{
     display: flex;
@@ -127,11 +133,14 @@ font-weight: 600;
    
 }
 .icon i{
-    font-size: 40px;
-   color:#1D6989 ;
+    font-size: 30px;
+   color:#1D6989 !important;
    margin: 6px;
    cursor: pointer;
 }
+
+
+
 span{
     font-size: 0.7em;
     color: red;

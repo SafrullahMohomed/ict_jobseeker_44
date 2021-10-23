@@ -116,8 +116,9 @@
         <div class="my_jobs_title">
             My Contract Posts
         </div>
-        <div class="my_jobs_row_container">
-            <div class="my_jobs_row">
+        <div class="my_jobs_row_container" >
+        <!-- <a href="<?php echo URL ?>Jobseeker/Search_jobseeker" style="text-decoration: none;"> -->
+        <div class="my_jobs_row" title = "click to view details of applied jobseekers" onclick="return loadAppliedJobseekers()">
                <div class="job_id">
                    <div class="job_id_text">
                     Contract ID
@@ -132,23 +133,33 @@
                     Contract Title
                 </div>
                 <div class="job_title_data">
-                    Mockup UI Design
+                I am looking for a react native expert
                 </div>
 
             </div> 
             <div class="icon">
-                <i class="fa fa-eye" aria-hidden="true"></i>
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <a href="<?php echo URL ?>Contracts/View_contract" style="text-decoration: none;">
+            <i title ="View post"class="fa fa-eye" aria-hidden="true"></i>
+        <!-- </a> -->
+        <a href="<?php echo URL ?>Contracts/Post_contract" style="text-decoration: none;">
+        <i title ="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
+        </a>
+
+               
+               
+                <i title ="Delete post" class="fa fa-trash-o" aria-hidden="true"></i>
             </div>
             </div>
-            <div class="my_jobs_row">
+
+        </a>
+         
+            <div  title = "click to view details of applied jobseekers" class="my_jobs_row">
                 <div class="job_id">
                     <div class="job_id_text">
                         Contract ID
                     </div>
                     <div class="job_id_data">
-                        0001
+                        0002
                     </div>
  
                 </div> 
@@ -157,14 +168,14 @@
                     Contract Title
                  </div>
                  <div class="job_title_data">
-                    Data Entry
+                 CHANGE Re-type a PDF into WORD 83 pages
                  </div>
  
              </div> 
              <div class="icon">
-                 <i class="fa fa-eye" aria-hidden="true"></i>
-                 <i class="fa fa-pencil" aria-hidden="true"></i>
-                 <i class="fa fa-trash-o" aria-hidden="true"></i>
+                 <i title ="View post" class="fa fa-eye" aria-hidden="true"></i>
+                 <i title ="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
+                 <i title ="Delete post"  class="fa fa-trash-o" aria-hidden="true"></i>
              </div>
              </div>
         </div>

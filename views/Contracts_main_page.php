@@ -21,6 +21,50 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
+
+   <!--search bar start-->
+   <div class="resource-search-part">
+        <div class="theme-image">
+       
+     <img src='<?php echo URL ?>views/images/Companies/hometheme.jpg' > 
+    
+          
+        </div>
+       <!-- theme image start here -->
+      <div class="job-search-box">
+        <div class="search-your-keywords">
+          <input
+            type="text"
+            name="Search your keyword"
+            placeholder="Search your keyword"
+          />
+        </div>
+        <div class="category">
+          <select name="Category">
+            <option value="none" selected disabled hidden>
+              <span id="category-id-home">Select a Catogory</span>
+            </option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Qaulity Assurance">Qaulity Assurance</option>
+            <option value="Frontend Developing">Frontend Developing</option>
+            <option value="Backend Developing">Backend Developing</option>
+            <option value="Senior Sofware Engineering">
+              Senior Sofware Engineering
+            </option>
+            <option value="Fullstack developing">Fullstack developing</option>
+            <option value="Data Science">Data Science</option>
+          </select>
+        </div>
+        <div class="location">
+          <input type="text" name="location" placeholder="location" />
+        </div>
+        <div class="search-button">
+          <button type="submit">Search</button>
+        </div>
+      </div>
+    </div>
+    <!-- themes image and job search part ends here -->
+
   <div class="main_container">
   <!--   Top trending contracts category start -->
   <div class="top_trending_categories_title ">Top Trending Categories </div>
@@ -35,10 +79,10 @@
         
     
     </div>
-    <div class="top_trending_categories_box_arrows">
+    <!-- <div class="top_trending_categories_box_arrows">
         <i class="fa fa-chevron-left" ></i>
         <i class="fa fa-chevron-right" ></i>
-    </div>
+    </div> -->
     
     <div class="top_trending_categories_box_row">
     
