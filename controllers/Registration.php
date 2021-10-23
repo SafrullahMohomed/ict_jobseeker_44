@@ -113,8 +113,8 @@ class Registration extends Controller
                         $_SESSION['emailToken'] =$emailToken ;
                         $this->model->insert_reg_data($data,  $emailToken);
                         $this->model->sendMail($data['email'],$emailToken,$data['fname']);
-                        $info_msg ="We have sent an email with a confirmation link to your email address. In order to complete the sign-up process, please click the confirmation link.";
-                        $this->view ->render2('Success_post',$info_msg);
+                        $_SESSION['info_msg1'] ="We have sent an email with a confirmation link to your email address. In order to complete the sign-up process, please click the confirmation link.";
+                        $this->view ->render3('Success_post', $_SESSION['info_msg1']);
                         
 
                     }
@@ -159,10 +159,10 @@ class Registration extends Controller
 
           
         
-          $info_msg= $this->model->verifyemail_update($email,$emailToken);
+            $_SESSION['info_msg2'] = $this->model->verifyemail_update($email,$emailToken);
            
           
-            $this->view ->render2('Success_post', $info_msg);
+            $this->view ->render3('Success_post',  $_GET['info_msg2']);
             }
 
             

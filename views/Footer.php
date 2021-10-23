@@ -100,7 +100,7 @@
       .services-link-details a,
       .information-details a,
       .social-media-icons a {
-        color: white;
+        color: white !important;
         transition: ease-in-out 0.2s;
       }
 
@@ -126,20 +126,27 @@
       .footer-list a:link:hover {
         color: rgb(127, 135, 245);
       }
-       ul{
-        color: white !important;
-      }
+      
       /* social media icons */
       .social-media-icons ul li {
         display: inline-flex;
         margin-right: 5px;
        
+       
+      }
+      .social-media-icons ul li  a i{
+        color: white !important;
       }
 
-      .social-media-icons ul li:hover {
-        color: rgb(127, 135, 245);
+      .social-media-icons ul li :hover {
+        color: rgb(127, 135, 245) !important;
       }
-
+   /* i {
+       color: white !important;
+     }
+     i:hover{
+      color: rgb(127, 135, 245) !important;
+     }*/
       /* footer ends here */
 
       /* media queries */

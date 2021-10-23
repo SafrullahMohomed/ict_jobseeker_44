@@ -20,8 +20,8 @@ class Registration_Model extends Model{
                 /* Create a new PHPMailer object. Passing TRUE to the constructor enables exceptions. */
                 $mail = new PHPMailer(TRUE);
                         
-                //Enable SMTP debugging.
-                $mail->SMTPDebug = 3;                               
+                //Enable SMTP debugging.but i disable it by putting zero here.if you want change zero to 3
+                $mail->SMTPDebug = 0;                               
                 //Set PHPMailer to use SMTP.
                 $mail->isSMTP();            
                 //Set SMTP host name                          
@@ -72,7 +72,7 @@ class Registration_Model extends Model{
                 catch (\Exception $e)
                 {
                 /* PHP exception (note the backslash to select the global namespace Exception class). */
-                echo $e->getMessage();
+            //echo $e->getMessage();
                 }
 
 

@@ -31,8 +31,12 @@
    
     font-size: 2vw;
 }
-i{
+/*
+i fa-star,i fa-star -o ,.do_rate_star_row i{
     color: gold;
+}*/
+.star_row i,.do_rate_star_row i {
+    color: gold !important;
 }
 p{
     font-size: 1.2em;
