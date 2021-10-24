@@ -113,8 +113,11 @@ class Registration extends Controller
                         $_SESSION['emailToken'] =$emailToken ;
                         $this->model->insert_reg_data($data,  $emailToken);
                         $this->model->sendMail($data['email'],$emailToken,$data['fname']);
-                        $_SESSION['info_msg1'] ="We have sent an email with a confirmation link to your email address. In order to complete the sign-up process, please click the confirmation link.";
-                        $this->view ->render3('Success_post', $_SESSION['info_msg1']);
+                        $info['mail_msg'] ="We have sent an email with a confirmation link to your email address. In order to complete the sign-up process, please click the confirmation link.";
+                        
+                       
+                        $this->view ->render('Mail_info');
+                        #$this->view ->Success_post2($info['info_msg1']);
                         
 
                     }
@@ -159,10 +162,17 @@ class Registration extends Controller
 
           
         
-            $_SESSION['info_msg2'] = $this->model->verifyemail_update($email,$emailToken);
+            $info['active_msg'] = $this->model->verifyemail_update($email,$emailToken);
            
           
-            $this->view ->render3('Success_post',  $_GET['info_msg2']);
+            $this->view ->render('Success_post');
+
+            }
+
+
+            //js call to this and pass json array
+            public function pass_msg( $info){
+                echo json_encode(count( $info) == 0 ? null :  $info);
             }
 
             
