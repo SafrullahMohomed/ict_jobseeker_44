@@ -18,15 +18,16 @@
 </div>
 
     <div class="main_container">
-        <div class="circle">
+        <!-- <div class="circle">
             
             <i class="fas fa-check"></i>
  
            
-        </div>
+        </div> -->
         <div class="text" >
-            <div class="text2" >
-             Success
+            <div class="text1" >
+            We have sent an email with a confirmation link to your email address. 
+                    In order to complete the sign-up process, please click the confirmation link
                <?php #echo $info['mail_msg'];?>
 
 
