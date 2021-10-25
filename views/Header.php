@@ -152,6 +152,10 @@ html, body {
 @media only screen and (max-width: 690px) {
 /* header starts here */
 /* login */
+
+.header_div {
+  position:unset;
+}
 .login-list a {
   text-decoration: none;
   color: white;
@@ -212,7 +216,7 @@ html, body {
                 <li><a href="<?php echo URL?>Jobs_main_page">Jobs</a></li>
                 <li><a href="<?php echo URL?>Companies">Companies</a></li>
                 <li> <a href="<?php echo URL?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
-                <li><a href="#Contact us">Contact&nbsp;Us</a></li>
+                <li><a href="<?php echo URL?>Contact_us">Contact&nbsp;Us</a></li>
             </ul>
         </div>
         <!-- navigates menu ends here -->

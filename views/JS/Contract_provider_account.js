@@ -118,3 +118,10 @@ function validateForm() {
       var image = document.getElementById("output");
       image.src = URL.createObjectURL(event.target.files[0]);
     };
+
+
+    //after click my contract post then load a applied job seekers for relavent contracts
+    function loadAppliedJobseekers(){
+      
+      window.open("http://localhost/ict_jobseeker_44/Jobseeker/Search_jobseeker","_self");
+    }

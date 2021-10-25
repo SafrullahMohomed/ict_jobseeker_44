@@ -176,7 +176,7 @@
             <div class="rate_us_text">
                 Rate Us
             </div>
-            <div class="star_row">
+            <div class="star_row" >
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>

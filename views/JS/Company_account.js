@@ -73,3 +73,9 @@ var loadFile = function (event) {
     var image = document.getElementById("output");
     image.src = URL.createObjectURL(event.target.files[0]);
   };
+
+//after click my job post then load a applied job seekers for relavent job
+function loadAppliedJobseekers(){
+
+  window.open("http://localhost/ict_jobseeker_44/Jobseeker/Search_jobseeker","_self");
+}

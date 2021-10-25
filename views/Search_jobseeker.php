@@ -57,14 +57,14 @@
        
       </div>
       <div class="Trending">Applied Jobseekers</div>
-      <a href="<?php echo URL ?>Company_profiles/Company_profile" class="ResourceRow" type = " button" onclick="loadCompanyProfile()">
+      <a href="<?php echo URL ?>Jobseeker/JobSeekerprofile" class="ResourceRow" type = " button" >
           <div class="Academy">
           <img src='<?php echo URL ?>views/images/Jobseeker/j1.jfif' > 
         
            
           </div>
           <div class="Tutorial">
-             Kasun Perera
+             Chamal Perera
           </div>
          <!--  <div class="Lesson">
             <img src="images/2.jfif" alt="company icon">
