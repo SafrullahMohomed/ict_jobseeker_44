@@ -11,23 +11,38 @@
     <title>JobSeeker Profile</title>
 </head>
 <body>
-    <div class="header_div" >
+<div class="header_div" >
         <?php include 'Header.php'?>
-    </div>
+</div>
     <div class="MainContainer">
         <div class="MainDetails">
             <div class="ProfilePic">
                 <img src='<?php echo URL ?>views/images/JobSeekerProfile/JobSeeker.jpg' >
             </div>
-            <div class="Name">
-                <div class="FirstName">
-                    Chamal
-                </div>
-                <div class="LastName">
-                    Perera
+            <div class="Intro">
+                <div class="Name">
+                    Chamal Perera
                 </div>
                 <div class="Post">
                     Software Engineer
+                </div>
+            </div>
+           
+        </div>
+        <div class="SubContainer">
+            <div class="Contact">
+                <div class="Address">
+                    52,Senanayake Road,Colombo 02
+                </div>
+                <div class="ContactNumber">
+                    +94 71 244 1238
+                </div>
+                <div class="Projects">
+                    10 Projects
+                </div>
+                <div class="Rating">
+                    <i class="fa fa-star-o" aria-hidden="false"></i>
+                    <div class="NoOfRating">4.2</div>
                 </div>
             </div>
             <div class="SocialLinks">
@@ -63,21 +78,6 @@
             </div>
         </div>
         <div class="About">
-            <div class="Contact">
-                <div class="Address">
-                    52,Senayaka Road,Colombo 02
-                </div>
-                <div class="ContactNumber">
-                    +94 71 244 1238
-                </div>
-                <div class="Projects">
-                    10 Projects
-                </div>
-                <div class="Rating">
-                    <i class="fa fa-star-o" aria-hidden="false"></i>
-                    <div class="NoOfRating">4.2</div>
-                </div>
-            </div>
             <div class="JobSeekerDetails">
                 <p id="titles">About Me</p>
                 <div class="row">
@@ -126,7 +126,7 @@
             <hr>
             <div class="review_row">
                <div class="user_picture">
-                   <img src='<?php echo URL ?>views/images/JobSeekerProfile/review1.jpg' >
+                    <img src='<?php echo URL ?>views/images/JobSeekerProfile/review1.jpg' >
                </div>
                <div class="review_detail">
                    <div class="review_detail_name">
@@ -152,7 +152,7 @@
             <hr>
             <div class="review_row">
                <div class="user_picture">
-               <img src='<?php echo URL ?>views/images/JobSeekerProfile/review2.jpg' >
+                    <img src='<?php echo URL ?>views/images/JobSeekerProfile/review2.jpg' >
                </div>
                <div class="review_detail">
                    <div class="review_detail_name">
