@@ -1,0 +1,156 @@
+
+/* admin home button */
+.admin-home-button{
+    display:flex;
+    justify-content: right;
+    margin:30px auto;
+}
+
+
+.admin-home-button button{
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 140px;
+    height: 35px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin-right: 40px;
+}
+
+.admin-home-button button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+}
+/* admin home button ends here */
+
+/* jobs search part starts here */
+
+  
+  .job-search-box {
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    background-color: #eeeeee;
+    width: 95%;
+    height: 145px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 7px;
+    padding-bottom: 10px;
+  }
+  
+  /* search box inside for input fields */
+  .search-your-keywords input,
+  .location input {
+    height: 30px;
+    width: 277px;
+    border-radius: 7px;
+    border: 1px solid #1d6989;
+    margin:10px auto;
+  }
+  
+  .category select {
+    height: 36px;
+    width: 283px;
+    border-radius: 7px;
+  }
+  
+  .search-button button {
+    color: rgb(255, 255, 255);
+    background-color: #1d6989;
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .search-button button:hover {
+    cursor: pointer;
+    color: #1d6989;
+    background-color: #ffffff;
+    height: 30px;
+    border: 1px solid #1d6989;
+    /* border-color: #1D6989 ; */
+  }
+
+  /* search jobs field ends here */
+
+
+/*  add jobs button*/
+.add-jobs button{
+    background-color: #1f78fb87;
+    border-radius: 25px;
+    width: 300px;
+    height: 45px;
+    font-size: 25px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin:30px;
+    
+}
+
+.add-jobs button:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #1f78fb87;
+}
+
+.add-jobs .plus{
+    font-weight:bolder;
+}
+
+/* add jobs button ends here */
+
+/* table starts here */
+
+/* table ends here */
+
+/* load more button starts here */
+.load-more{
+    margin:20px auto;
+    display:flex;
+    justify-content: center;
+}
+.load-more button{
+    color: white;
+    background-color: #496575;
+    border-radius: 25px;
+    width: 200px;
+    height: 45px;
+    font-size:25px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    
+}
+
+.load-more button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+}
+/* laod more button ends here */
+/* media queries */
+@media only screen and (max-width: 952px){
+    /* to adjust the job search part */
+    .job-search-box{
+      display: flex;
+      flex-direction: column;
+      height:auto;
+    }
+    
+  }
