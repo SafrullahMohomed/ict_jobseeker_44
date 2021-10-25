@@ -10,7 +10,7 @@ public function render($viewName){
 
 //when pass array objects
 public function render2($viewName, $data = []) {
-    
+    echo "lulakshi";
         require 'views/'.$viewName. '.php';
 }
 

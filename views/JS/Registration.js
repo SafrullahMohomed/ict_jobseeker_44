@@ -13,10 +13,10 @@ function validateForm() {
    
       return false;
     }
-<
-    /validate last name/
-    var lname=document.myForm.lname.value;  
-    if (lname == "") {
+
+    // /validate last name/
+    // var lname=document.myForm.lname.value;  
+    // if (lname == "") {
 
 
     /*validate last name*/
