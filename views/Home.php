@@ -7,8 +7,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="<?php echo URL  ?>views/images/Home/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    
+    <!-- <link href="<?php echo URL  ?>views/images/Home/favicon.ico" rel="shortcut icon" type="image/x-icon" /> -->
+     <link rel="icon" type="image/png" sizes="64x64" href="<?php echo URL  ?>views/images/favicon/favicon.ico"> 
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="<?php echo URL  ?>views/images/favicon/logo.png" /> -->
     <title>Home</title>
     
      <style>
