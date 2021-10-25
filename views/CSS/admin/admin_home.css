@@ -1,0 +1,69 @@
+/* admin home page */
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+/* first row*/
+.first-row{
+display:flex;
+flex-direction: column;
+align-items:center;
+justify-content: center;
+}
+
+/* second row */
+.second-row{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+
+/* box link */
+
+.first-row a, .second-row a{
+  margin:50px;
+}
+.box {
+  width: 285px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid #91a4c7;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%),
+    0 6px 20px 0 rgb(90 127 210 / 15%);
+}
+
+.box:hover{
+  cursor: pointer;
+  box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+  }
+/* media queries starts here */
+
+@media only screen and (max-width:750px) {
+  .main-container{
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .first-row a, .second-row a{
+    margin:20px;
+  }
+
+  .box{
+    font-size: 20px;
+  }
+}

@@ -71,7 +71,6 @@ class App
             return true;
         }
 
-        // some doubts if or else if? ***************************************************************
         else if (file_exists($file2)) {
 
 
@@ -118,7 +117,6 @@ class App
 
             case 3:
 
-
                 $this->_controller->{$this->_url[1]}($this->_url[2]);
                 break;
 
@@ -142,3 +140,5 @@ class App
         }
     }
 }
+
+?>

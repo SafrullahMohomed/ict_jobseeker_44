@@ -1,0 +1,187 @@
+
+/* admin home button */
+
+.admin-home-button{
+    display:flex;
+    justify-content: right;
+    margin:30px auto;
+}
+
+
+.admin-home-button button{
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 140px;
+    height: 35px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin-right: 40px;
+}
+
+.admin-home-button button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+}
+/* admin home button ends here */
+
+/* counsellor search part starts here */
+
+  
+  .search-counsellor {
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    background-color: #eeeeee;
+    width: 70%;
+    height: 145px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 7px;
+    padding-bottom: 10px;
+  }
+
+  .search-counsellor input{
+      width:60%;
+      max-width: 600px;
+      height:30px;
+  }
+  
+  
+  .search-counsellor button {
+    color: rgb(255, 255, 255);
+    background-color: #1d6989;
+    height: 37px;
+    width: 150px;
+    border-radius: 25px;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .search-counsellor button:hover {
+    cursor: pointer;
+    color: #1d6989;
+    background-color: #ffffff;
+    height: 30px;
+    border: 1px solid #1d6989;
+    /* border-color: #1D6989 ; */
+  }
+
+  /* search counsellors field ends here */
+
+
+/*  add counsellors button*/
+.add-counsellors button{
+    background-color: #1f78fb87;
+    border-radius: 25px;
+    width: 400px;
+    height: 45px;
+    font-size: 25px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin:30px;
+    
+}
+
+.add-counsellors button:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #1f78fb87;
+}
+
+.add-counsellors .plus{
+    font-weight:bolder;
+}
+
+/* add counsellors button ends here */
+
+/* table starts here */
+
+/* table ends here */
+
+/* load more button starts here */
+.load-more{
+    margin:20px auto;
+    display:flex;
+    justify-content: center;
+    margin: auto;
+}
+.load-more button{
+    color: white;
+    background-color: #496575;
+    border-radius: 25px;
+    width: 200px;
+    height: 45px;
+    font-size:25px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    
+}
+
+.load-more button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+}
+/* laod more button ends here */
+
+/* registration text */
+
+.registration-text{
+    margin: 40px auto;
+    width:80%;
+    font-size: 40px;
+    text-align: center;
+    
+}
+/* media queries */
+
+
+@media only screen and (max-width:900px){
+    /* search part */
+    .search-counsellor{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .search-counsellor input{
+        width: 80%;
+    }
+
+    /* add counsellors part */
+    .add-counsellors button{
+        border-radius: 25px;
+        width: 250px;
+        height: 35px;
+        font-size: 15px;
+    }
+    
+    /* load more button */
+
+    .load-more button{
+       
+        border-radius: 25px;
+        width: 150px;
+        height: 35px;
+        font-size:20px;
+        font-weight: 700;
+               
+    }
+
+    .registration-text{
+        font-size: 30px;
+    }
+}
