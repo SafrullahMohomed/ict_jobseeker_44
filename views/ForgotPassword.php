@@ -15,6 +15,7 @@
     <div class="header_div" >
             <?php include 'Header.php'?>
     </div>
+    <div>
     <form class="MainContainer">
         <div class="Title">
             Forgot Password
@@ -28,8 +29,9 @@
         </div> 
        <div class="submit">
         <label for="submit" class="labelfield"></label><br>
-        <input type="submit" id="submit" submit="submit"  class="submit_button"><br>
+        <input type="submit" id="submit" name="submit" value="Send Reset Password Link" class="submit_button"><br>
     </form>
+    </div>
     
 <?php include 'Footer.php'?>
 </body>

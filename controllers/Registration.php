@@ -70,7 +70,7 @@ class Registration extends Controller
                 
                 //Validate fname
                 if(empty($data['fname'])) {
-                    echo "kk";
+        
                     $data['fname_err'] = "Please enter the first name";
                 }
                 //Validate lname

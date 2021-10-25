@@ -9,6 +9,16 @@ function validateForm()
   
     return false;  
     } 
+    var password=document.myForm.password.value; 
+      if(password==""){
+        document.getElementById("password_error").innerHTML="Password must be filled out";
+      }
+      var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+    if(!password.match(passw)) 
+    { 
+      document.getElementById("password_error").innerHTML =" password must be between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter";
+      return false;
+    }
 }
 /*fuction to hide error msg*/
 function hideFormError(x) {

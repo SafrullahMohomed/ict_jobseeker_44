@@ -12,8 +12,9 @@
     </style>
 </head>
 <body>
+    <?php include 'Header.php'?>
     <div class="CompanyBanner">
-        <div class="CompanyLogo" style="background-image:url('http://localhost/ict_jobseeker_mvc_final/views/images/Jobseeker/wso2logo.png');">
+        <div class="CompanyLogo" style="background-image:url('http://localhost/ict_jobseeker_44/views/images/Jobseeker/wso2logo.png');">
         </div>
         <div class="JobDetails">
             <p>Software Engineer(JAVA)</p>
@@ -83,6 +84,9 @@
         <input type="submit" id="submit" submit="submit"  class="submit_button"><br>
        </div>
     </form>
+    <div>
+        
+    </div>
     <?php include 'Footer.php'?>
     <script  src="<?php echo URL?>views/JS/ApplyJobs.js"></script>
 </body>

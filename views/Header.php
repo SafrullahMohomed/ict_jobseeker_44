@@ -189,7 +189,7 @@ html, body {
     <!-- login bar starts here  -->
     <div class="login-bar">
         <ul>
-            <li class="login-list"><a href="#Login.html">Login</a></li>
+            <li class="login-list"><a href="<?php echo URL?>Login">Login</a></li>
             <li class="login-list">|</li>
             <li class="login-list"><a href="<?php echo URL?>Registration">Register</a></li>
         </ul>

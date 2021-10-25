@@ -20,7 +20,7 @@
                 <h3 id="register">Register</h3>
                 <form id="log_link">
                     <p>Already Registered?</p>
-                    <a href="#">Login here</a>
+                    <a href="<?php echo URL?>Login">Login here</a>
                 </form>
             </div>
             <div class="right-container" >
@@ -47,11 +47,11 @@
                     <span id="email_error" class="error"><?php echo $data['email_err']?></span>
 
                     <p id="label">Password</p>
-                    <input type="password" id="password" name="password" placeholder="Enter Your Password" onfocus="hideFormError(password_error)"><br>
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required onfocus="hideFormError(password_error)"><br>
                     <span id="password_error" class="error"><?php echo $data['password_err']?></span>
 
                     <p id="label">Confirm Password</p>
-                    <input type="password" name="confirmPassword" placeholder="Confirm Your Password" onfocus="hideFormError(confirm_password_error)"><br>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Your Password" required onfocus="hideFormError(confirm_password_error)"><br>
                     <span id="confirm_password_error" class="error"><?php echo $data['confirmPassword_err']?></span>
 
                    <input type="submit" id="submit" name="submit" value="Register" onclick="return validateForm()"><br>
