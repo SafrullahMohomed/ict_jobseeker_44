@@ -1,4 +1,4 @@
-
+<?php if ( empty(session_id()) ) session_start(); ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -77,6 +77,14 @@ html, body {
 .login-list a:hover {
   color: rgb(127, 135, 245);
   font-weight: xx-large;
+}
+#user{
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+  margin-left: 4px;
+  float: right;
+
 }
 
 /*here login bar of the header ends*/
@@ -185,24 +193,106 @@ html, body {
   justify-content: flex-start
 }}
 
+/*style for drop down menu start here*/
+/*.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}*/
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+ position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  top: 25px;
+  right: 25px;
+  min-width: 180px;
+  height: 95px;
+  overflow: hidden;
+  overflow-y: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+  font-size: 15px;
+}
+/*.dropdown-content::-webkit-scrollbar {
+  display: none;
+}*/
+
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+/*style for drop down menu end*/
+
+
+
+
         </style>
 
 
     </head>
     <body>
+
+    
+        
     <header>
-    <!-- login bar starts here  -->
-    <div class="login-bar">
+<!-- if user is logged in -->
+
+    <?php  if(isset($_SESSION['User_ID'])): ?>
+
+<!-- login bar starts here  -->
+<div class="login-bar">
         <ul>
-            <li class="login-list"><a href="<?php echo URL?>Login">Login</a></li>
-            <li class="login-list">|</li>
-            <li class="login-list"><a href="<?php echo URL?>Registration">Register</a></li>
+              
+
+            <!-- <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"> -->
+            <li class="login-list"><a href="<?php echo URL?>Login"> <?php echo$_SESSION['First_name'] ." ". $_SESSION['Last_name']?></a></li>
+            <!-- <li class="login-list">|</li> -->
+            <!-- <li class="login-list"><a href="<?php echo URL?>Registration">Logout</a></li> -->
+
+
+            <div class="dropdown">
+            <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"onclick="myFunction()" class="dropbtn">
+              <div id="myDropdown" class="dropdown-content">
+              <a href="#">My account</a>
+              <!-- <a href="#">My profile</a> -->
+                <a href="#">Change password</a>
+                <a href="<?php echo URL ?>Login/logout">Logout</a>
+              </div>
+            </div>
+            <!-- <div class="dropdown">
+              <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user">
+              <div class="dropdown-content">
+                <a href="#">My account</a>
+                <a href="#">Change password</a>
+                <a href="#">Logout</a>
+              </div>
+            </div> -->
         </ul>
     </div>
-    <!-- login bar ends here  -->
-
-    <!-- logo and navigation bar starts here -->
-    <div class="navigation-header">
+  <!-- logo and navigation bar starts here -->
+  <div class="navigation-header">
         <div class="logo">
         <?php
       echo "<img src='http://localhost/ict_jobseeker_44/views/images/Home/logo_old.jpg' >"; 
@@ -222,6 +312,65 @@ html, body {
         </div>
         <!-- navigates menu ends here -->
     </div>
+    <?php endif; ?>
+    <!-- login bar ends here  -->
+
+    <!-- if user is not logged in -->
+    <?php if(!isset($_SESSION['User_ID'])): ?>
+    <!-- login bar starts here  -->
+    <div class="login-bar">
+        <ul>
+            <li class="login-list"><a href="<?php echo URL?>Login">Login</a></li>
+            <li class="login-list">|</li>
+            <li class="login-list"><a href="<?php echo URL?>Registration">Register</a></li>
+        </ul>
+    </div>
+    <!-- login bar ends here  -->
+      <!-- logo and navigation bar starts here -->
+      <div class="navigation-header">
+        <div class="logo">
+        <?php
+      echo "<img src='http://localhost/ict_jobseeker_44/views/images/Home/logo_old.jpg' >"; 
+    ?>
+        </div>
+        <!-- logo ends here -->
+
+        <!-- navigation menu starts here -->
+        <div class="navigation-menu">
+            <ul>
+                <li><a href="<?php echo URL?>Home">Home</a></li>
+                <li><a href="<?php echo URL?>Jobs_main_page">Jobs</a></li>
+                <li><a href="<?php echo URL?>Companies">Companies</a></li>
+                <li> <a href="<?php echo URL?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
+                <li><a href="<?php echo URL?>Contact_us">Contact&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <!-- navigates menu ends here -->
+    </div>
+    <?php endif; ?>
+  
 </header>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+ 
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
     </body>
     </html>
