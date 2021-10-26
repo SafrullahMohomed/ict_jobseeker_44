@@ -13,7 +13,7 @@
 }
 .flex-container
 {
-    height: 540px;
+    height: 580px;
     width: 675px;
     background-color:rgb(141, 188, 235);
     border-radius: 7px;
@@ -27,7 +27,7 @@
 .right-container
 {
     width: 360px;
-    height: 520px;
+    height: 560px;
     background-color: #f6f6f8;
     align-items: center;
     justify-content: end;
@@ -41,20 +41,21 @@
     align-items: center;
     margin: auto;
     padding-left: 50px;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 #users
 {
-    margin-left: 60px;
+    margin-left: 5%;
     border:solid rgb(6, 8, 124) ;
     border-radius: 12px;
-    width:50% ;
+    width:60% ;
     height: 40px;
     font-family:'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 600;
     color: rgb(6, 8, 124);
-    padding: auto;
+    margin-bottom: 35px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 #users select :focus{
     border-radius: 12px;
@@ -83,7 +84,7 @@
     border: none;
     border-bottom: 2px solid;
     background: transparent;
-    height: 20px;
+    height: 30px;
     outline: none;
     padding-bottom: 5px;
     width: 80%;
@@ -105,7 +106,7 @@
     font-size: 20px;
     align-items: center;
     cursor: pointer;
-    
+    margin-top: 15px;
 }
 .right-container input[type="submit"]:hover
 {
@@ -151,7 +152,7 @@
 #register
 {
     position: relative;
-    top: -110px;
+    top: -135px;
     left: 30px;
     font-family: 'Quicksand', sans-serif;
     color: rgb(6, 8, 124);
@@ -163,19 +164,26 @@
 #log_link 
 {
     position: relative;
-    top: -95px;
+    top: -125px;
     left: 30px;
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
     color:rgb(6, 8, 124);
     text-align:inherit;
-    font: weight 550px; ;
+    font-weight: 600;
 }
 #log_link a
 {
     text-decoration: none;
     font-family: 'Quicksand', sans-serif; 
+    color: rgb(21, 27, 216);
+    font-weight: 550;
+}
+#log_link a :hover
+{
+    color:rgb(6, 8, 124);
+    transition: 0.5s;
 }
 .left-container p
 {
@@ -184,16 +192,16 @@
     font-family: 'Quicksand', sans-serif;
     color: rgb(6, 8, 124);
     font-weight:550;
+    font-size: 15px;
+
     font-size: 14px;
 }
 span
 {
-    color: red;
+    color:red ;
     font-size: 12px;
+    
 }
-
-
-
 
 
 @media screen and (max-width: 680px)
