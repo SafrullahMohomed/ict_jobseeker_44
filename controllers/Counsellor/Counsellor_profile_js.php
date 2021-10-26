@@ -10,6 +10,6 @@ class Counsellor_profile_js extends Controller
     {
 
         //pass view name
-        $this->view->render('Counsellor_profile_js');
+        $this->view->renderCounsellor('Counsellor_profile_js');
     }
 }

@@ -10,6 +10,6 @@ class Resume_form_education extends Controller
     {
 
         //pass view name
-        $this->view->render('Resume_form_education');
+        $this->view->renderResume('Resume_form_education');
     }
 }

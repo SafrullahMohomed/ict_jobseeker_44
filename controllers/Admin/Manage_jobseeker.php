@@ -10,6 +10,6 @@ class Manage_jobseeker extends Controller
     {
 
         //pass view name
-        $this->view->render('Manage_jobseeker');
+        $this->view->renderAdmin('Manage_jobseeker');
     }
 }

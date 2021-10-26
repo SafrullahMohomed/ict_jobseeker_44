@@ -10,6 +10,6 @@ class Counsellor_account extends Controller
     {
 
         //pass view name
-        $this->view->render('Counsellor_account');
+        $this->view->renderCounsellor('Counsellor_account');
     }
 }

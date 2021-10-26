@@ -10,6 +10,6 @@ class Manage_counselling extends Controller
     {
 
         //pass view name
-        $this->view->render('Manage_counselling');
+        $this->view->renderAdmin('Manage_counselling');
     }
 }

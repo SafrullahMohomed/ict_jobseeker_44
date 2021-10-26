@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/normalize/normalize.css">
-    <link rel="stylesheet" href="/admin/manage_lm.css">
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css">
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Manage_lm.css">
     <title>Document</title>
 </head>
 <body>

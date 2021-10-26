@@ -1,15 +1,15 @@
 <?php
-class Manage_resume extends Controller
+class Manage_jobs extends Controller
 {
     function __construct()
     {
         parent::__construct();
     }
 
-    function Manage_resume()
+    function Manage_jobs()
     {
 
         //pass view name
-        $this->view->render('Manage_resume');
+        $this->view->renderAdmin('Manage_jobs');
     }
 }

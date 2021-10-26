@@ -10,6 +10,6 @@ class Manage_cp extends Controller
     {
 
         //pass view name
-        $this->view->render('Manage_cp');
+        $this->view->renderAdmin('Manage_cp');
     }
 }
