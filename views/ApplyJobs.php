@@ -14,6 +14,9 @@
 </head>
 <body>
     <?php include 'Header.php'?>
+     <!-- check user loging  -->
+
+     <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>
     <div class="CompanyBanner">
         <div class="CompanyLogo" style="background-image:url('http://localhost/ict_jobseeker_44/views/images/Jobseeker/wso2logo.png');">
         </div>
@@ -85,9 +88,12 @@
         <input type="submit" id="submit" submit="submit"  class="submit_button"><br>
        </div>
     </form>
-    <div>
-        
-    </div>
+    
+    <?php endif; ?>
+    <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Jobseeker") : ?>
+        <div class="login_msg"> Before apply for a job you should login as Jobseeker</div>
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
+        <?php endif; ?>  
     <?php include 'Footer.php'?>
     <script  src="<?php echo URL?>views/JS/ApplyJobs.js"></script>
 </body>
