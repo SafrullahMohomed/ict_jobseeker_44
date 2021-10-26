@@ -85,7 +85,6 @@ a .mock_interviews{
     cursor: pointer;
     color: #1d6989;
     background-color: #ffffff;
-    height: 30px;
     border: 1px solid #1d6989;
     /* border-color: #1D6989 ; */
   }
@@ -113,7 +112,7 @@ a .mock_interviews{
 
 /* profile image */
 .counsellor_profile img{
-    width: 150px;
+    width: 100px;
     object-fit: cover;
     border-radius: 50px;
 }
