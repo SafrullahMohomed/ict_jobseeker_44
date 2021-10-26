@@ -5,16 +5,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/CSS/cv/cv_form_contact.css" />
-  <link rel="stylesheet" href="/CSS/normalize/normalize.css">
-  <link rel="stylesheet" href="/CSS/cv/cv_form_experience.css">
-  <link rel="stylesheet" href="/CSS/cv/cv_form_education.css">
-  <link rel="stylesheet" href="/CSS/cv/cv_form_skill.css">
-  <link rel="stylesheet" href="/CSS/cv/cv_form_project.css">
+  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_contact.css" />
+  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css" />
+  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_experience.css">
+  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_education.css">
+  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_skill.css">
+  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_project.css">
   <script defer src="/JS/cv/stepper.js"></script>
   <title>Document</title>
 </head>
-
 <body>
 
   <!-- stepper is starts here -->

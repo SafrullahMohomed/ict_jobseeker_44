@@ -13,15 +13,11 @@
 </head>
 <!-- header part with css html js -->
 <div class="header_div">
-    <?php include "../Header.php" ?>
-  </div>
-  <!-- header part end  -->
-  
+  <?php include "../Header.php" ?>
+</div>
+<!-- header part end  -->
+
 <body>
-
-
-  
-
 
   <div class="main-container">
     <div class="first-row">
