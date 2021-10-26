@@ -9,12 +9,20 @@ class View
         require 'views/' . $viewName . '.php';
     }
 
+<<<<<<< HEAD
+//when pass array objects
+public function render2($viewName, $data = []) {
+   
+        require 'views/'.$viewName. '.php';
+}
+=======
     //when pass array objects
     public function render2($viewName, $data = [])
     {
         echo "lulakshi";
         require 'views/' . $viewName . '.php';
     }
+>>>>>>> main
 
 
     //when pass variable

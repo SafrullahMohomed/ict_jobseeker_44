@@ -71,6 +71,7 @@ span{
     font-size: 0.7em;
     color: red;
 }
+/* remove default styles of input box*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
