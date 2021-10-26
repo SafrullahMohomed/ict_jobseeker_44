@@ -152,6 +152,7 @@ label
     font-weight: 600;
     font-size: 1.1em;
     margin: 10px;  
+    border: none;
 }
 .submit_button:hover
 {
@@ -160,7 +161,21 @@ label
     background-color: white;
     border: 2px solid #1D6989;
 }
-
+.login_msg{
+    height: 100px;
+    text-align: center;
+    padding: 60px;
+   
+}
+#a_tag_login{
+    display: flex;
+    align-items: center;
+    margin-bottom: 110px;
+    text-decoration: none;
+}
+#login_button{
+    margin: auto !important;
+}
 @media only screen and (max-width: 990px)
 {
     *{

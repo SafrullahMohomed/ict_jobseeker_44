@@ -20,6 +20,7 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
+     
        <div class="main_container">
  
         <div class="job_detail_sub_container">
@@ -41,8 +42,10 @@
                         
         
                     </div>
+                   <a href ="<?php echo URL ?>Jobseeker/ApplyJobs">
+                   <button >Apply Now</button>
+                   </a>
                    
-                    <button onclick="applyJob()">Apply Now</button>
         
                 </div>
                 <div class="job_description_title">
@@ -202,6 +205,7 @@
     </div>
     
 </div>
+
 <?php include 'Footer.php'?>
 <script src="<?php echo URL ?>views/JS/View_jobs.js"></script>
 </body>

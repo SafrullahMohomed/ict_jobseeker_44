@@ -276,20 +276,27 @@ html, body {
             <div class="dropdown">
             <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"onclick="myFunction()" class="dropbtn">
               <div id="myDropdown" class="dropdown-content">
-              <a href="#">My account</a>
-              <!-- <a href="#">My profile</a> -->
-                <a href="#">Change password</a>
+
+                <!-- check user type -->
+                <?php 
+                // if user is company
+                if($_SESSION['User_ID']=="Company"):
+                  $My_profile="Company_profiles/Company_profile";
+                endif;
+                // if user is Contract_provider
+                if($_SESSION['User_ID']=="Contract Provider"):
+                  $My_profile="Contracts/Contract_provider_profile";
+                endif;
+                
+                
+                
+                ?>
+                <a href="<?php  echo URL.$My_profile ?>">My profile</a>
+                <a href="<?php echo URL ?>ForgotPassword">Change password</a>
                 <a href="<?php echo URL ?>Login/logout">Logout</a>
               </div>
             </div>
-            <!-- <div class="dropdown">
-              <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user">
-              <div class="dropdown-content">
-                <a href="#">My account</a>
-                <a href="#">Change password</a>
-                <a href="#">Logout</a>
-              </div>
-            </div> -->
+           
         </ul>
     </div>
   <!-- logo and navigation bar starts here -->
