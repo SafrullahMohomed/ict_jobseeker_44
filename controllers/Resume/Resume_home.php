@@ -10,6 +10,6 @@ class Resume_home extends Controller
     {
 
         //pass view name
-        $this->view->render('Resume_home');
+        $this->view->renderResume('Resume_home');
     }
 }

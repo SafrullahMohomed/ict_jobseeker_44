@@ -10,6 +10,6 @@ class Manage_contracts extends Controller
     {
 
         //pass view name
-        $this->view->render('Manage_contracts');
+        $this->view->renderAdmin('Manage_contracts');
     }
 }

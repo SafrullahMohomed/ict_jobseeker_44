@@ -1,15 +1,15 @@
 <?php
-class Manage_jobs extends Controller
+class Manage_chat extends Controller
 {
     function __construct()
     {
         parent::__construct();
     }
 
-    function Manage_jobs()
+    function Manage_chat()
     {
 
         //pass view name
-        $this->view->render('Manage_jobs');
+        $this->view->renderAdmin('Manage_chat');
     }
 }

@@ -10,6 +10,6 @@ class Admin_home extends Controller
     {
 
         //pass view name
-        $this->view->render('Admin_home');
+        $this->view->renderAdmin('Admin_home');
     }
 }

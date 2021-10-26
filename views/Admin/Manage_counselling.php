@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/normalize/normalize.css">
-    <link rel="stylesheet" href="/CSS/admin/manage_counselling.css">
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Manage_counselling.css">
     <title>Document</title>
 </head>
 <body>

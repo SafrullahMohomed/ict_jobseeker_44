@@ -10,6 +10,6 @@ class Manage_companies extends Controller
     {
 
         //pass view name
-        $this->view->render('Manage_companies');
+        $this->view->renderAdmin('Manage_companies');
     }
 }
