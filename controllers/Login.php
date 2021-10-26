@@ -103,6 +103,7 @@ class Login extends Controller
       $_SESSION['User_type'] = str_replace("_", "", $user->User_type);
       $_SESSION['Email'] = $user->Email;
       $_SESSION['First_name'] = $user->First_name;
+      $_SESSION['Last_name'] = $user->Last_name;
       // $_SESSION['address'] = $user[0]['address'];
       
       $this->view ->render('Home'); 
@@ -116,7 +117,8 @@ class Login extends Controller
       unset($_SESSION['First_name']);
           
       session_destroy();
-      redirect('login');
+      $this->view ->render('Home'); 
+     # redirect('login');
   }
 
     public function isLoggedIn()
