@@ -10,6 +10,6 @@ class Manage_lm extends Controller
     {
 
         //pass view name
-        $this->view->render('Manage_lm');
+        $this->view->renderAdmin('Manage_lm');
     }
 }

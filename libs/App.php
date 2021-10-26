@@ -71,7 +71,7 @@ class App
             return true;
         }
 
-        else if (file_exists($file2)) {
+        elseif (file_exists($file2)) {
 
 
             require $file2;

@@ -10,6 +10,6 @@ class Resume_form_project extends Controller
     {
 
         //pass view name
-        $this->view->render('Resume_form_project');
+        $this->view->renderResume('Resume_form_project');
     }
 }

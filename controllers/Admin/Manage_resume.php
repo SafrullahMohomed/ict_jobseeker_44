@@ -1,15 +1,15 @@
 <?php
-class Manage_chat extends Controller
+class Manage_resume extends Controller
 {
     function __construct()
     {
         parent::__construct();
     }
 
-    function Manage_chat()
+    function Manage_resume()
     {
 
         //pass view name
-        $this->view->render('Manage_chat');
+        $this->view->renderAdmin('Manage_resume');
     }
 }
