@@ -1,110 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- stepper is starts here -->
-    <div class="stepper"></div>
-    <!-- stepper is ends here -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css">
+  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_home.css">
+  <title>Resume Home</title>
+</head>
+<body>
+  <!-- Title part -->
+<div class="template_title">Create Your Own Resume</div>
 
-    <!-- text field starts here -->
-    <div class="title_text">
-      <div class="text1"></div>
-      <div class="text2"></div>
+  <!-- Text -->
+<div class="template_text">Select a Template to create your resume like a pro</div>
+
+  <!-- cv templates -->
+
+  <div class="resume_templates">
+
+  <!-- template 01 -->
+
+    <div class="resume_template1">
+      <div class="template_preview">image 01</div>
+      <div class="template_name">Design 01</div>
     </div>
 
-    <!-- text field ends here -->
-
-    <!-- contact form field starts here -->
-    <form action="/" method="get" id = contact_form>
-      <div class="contact_form">
-<div class="contact_form">
-
-        <!-- profile picture -->
-        <div class="profilePic">
-            
-        </div>
-
-        <!-- first name -->
-        <div class="firstName">
-
-        </div>
-
-        <!-- last name  -->
-        <div class="lastName">
-
-        </div>
-
-        <!-- email -->
-        <div class="email">
-
-        </div>
-
-        <!-- phone number -->
-        <div class="phoneNumber">
-
-        </div>
-
-        <!-- Address -->
-        <div class="address">
-
-        </div>
-
-        <!-- city -->
-        <div class="city">
-
-        </div>
-
-        <!-- nationality -->
-        <div class="nationality">
-
-        </div>
-        
-        <!-- gender -->
-        <div class="gender">
-
-        </div>
-
-        <!-- description -->
-        <div class="description">
-
-        </div>
-
-
+    <!-- template 02 -->
+    <div class="resume_template2">
+      <div class="template_preview">image 02</div>
+      <div class="template_name">Design 02</div>
     </div>
-        
-        <!-- first name -->
-        <div class="firstName"></div>
-            <label for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName">
-        <!-- last name  -->
-        <div class="lastName"></div>
 
-        <!-- email -->
-        <div class="email"></div>
+    <!-- template 03 -->
+    <div class="resume_template3">
+      <div class="template_preview">image 03</div>
+      <div class="template_name">Design 03</div>
+    </div>
 
-        <!-- phone number -->
-        <div class="phoneNumber"></div>
-
-        <!-- Address -->
-        <div class="address"></div>
-
-        <!-- city -->
-        <div class="city"></div>
-
-        <!-- nationality -->
-        <div class="nationality"></div>
-
-        <!-- gender -->
-        <div class="gender"></div>
-
-        <!-- description -->
-        <div class="description"></div>
-      </div>
-    </form>
-  </body>
+  </div>
+</body>
 </html>

@@ -30,7 +30,6 @@
     .header_div {
       position: fixed;
       width: 100%;
-
       top: 0;
       z-index: 10;
       overflow-x: hidden;
@@ -54,6 +53,12 @@
       margin-top: 9px;
       margin-right: 12px;
     }
+
+    /* login list */
+    /* 
+    #login_ul{
+      margin-bottom: 0px;
+    } */
 
     .login-list {
       list-style: none;
@@ -86,7 +91,7 @@
     .navigation-header {
       display: flex;
       width: 100%;
-      height: 90px;
+      height: 60px;
       background-color: #1d6989;
       border-radius: 0 0 7px 7px;
       justify-content: space-between;
@@ -96,11 +101,13 @@
 
     .navigation-header .logo img {
       float: left;
-      border-radius: 7px;
+      border-radius: 50%;
       object-fit: cover;
-      height: 85px;
       margin-top: 2px !important;
-      width: 90px;
+      width: 55px;
+      height:auto;
+      margin-left: 10px;
+      
 
     }
 
@@ -195,7 +202,7 @@
   <header>
     <!-- login bar starts here  -->
     <div class="login-bar">
-      <ul>
+      <ul style="margin-bottom: 0px;">
         <li class="login-list"><a href="<?php echo URL ?>Login">Login</a></li>
         <li class="login-list">|</li>
         <li class="login-list"><a href="<?php echo URL ?>Registration">Register</a></li>
@@ -224,6 +231,7 @@
       </div>
       <!-- navigates menu ends here -->
     </div>
+
   </header>
 </body>
 

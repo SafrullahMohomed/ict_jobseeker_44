@@ -93,7 +93,7 @@ a .mock_interviews{
 
 /* counsellor list starts here */
 
-.counsellor{
+a .counsellor{
     display:flex;
     width:80%;
     height: auto;
@@ -105,7 +105,7 @@ a .mock_interviews{
 
 }
 
-.counsellor:hover{
+a .counsellor:hover{
     box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
 
 }
