@@ -21,9 +21,8 @@
   margin-bottom: 30px;
 }
 
-.picture {
-
-}
+/* .picture {
+} */
 .picture img {
   width: 200px;
   object-fit: cover;
@@ -44,11 +43,25 @@
   color: #227093;
 }
 
+/* .full_address{
+  text-align: center;
+} */
+
 .address,
 .city {
   font-size: 30px;
   font-weight: 600;
-  margin: 5px 0px;
+}
+
+.city{
+  font-size: 30px;
+  color: rgb(25, 25, 53);
+  
+}
+
+/* detailsText */
+.detailsText{
+  margin: 0px 0px;
 }
 
 /* mock interview providing mark */
@@ -58,11 +71,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width:50%;
+  width: 50%;
   padding-right: 10px;
-  margin-top:30px;
+  margin-top: 30px;
   margin-bottom: 30px;
-
 }
 
 .mk_interview {
@@ -84,7 +96,8 @@
   margin: 30px 30px 0 0;
   text-align: justify;
 }
-.sub_parts {
+/* sub part starts here */
+/* .sub_parts {
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -92,8 +105,23 @@
   font-size: 1.2em;
   font-weight: 500;
   margin: 30px 30px 0 0;
+} */
+
+.subhead{
+  margin:40px 0px;
 }
 
+.subhead_text{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(13, 13, 80);
+}
+
+/* make the list inside */
+
+.qualifications_data ul{
+  list-style-position: inside;
+}
 .social_media i {
   font-size: 30px;
 }
@@ -107,61 +135,58 @@
     font-size: 2.5em;
   }
   .address,
-  .city{
+  .city {
     font-size: 1.5em;
   }
 }
 
 @media only screen and (max-width: 820px) {
-  
-    /* mock interview providing mark */
-.mi_provider {
-    width:60%;
+  /* mock interview providing mark */
+  .mi_provider {
+    width: 60%;
   }
-  
+
   .mk_interview {
     font-size: 30px;
   }
   /* mock interviews end here */
 
+  @media only screen and (max-width: 750px) {
+    .main_details {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
 
-@media only screen and (max-width: 750px) {
-  .main_details{
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+    .picture {
+      margin: auto;
+    }
 
-  .picture{
-      margin:auto;
-  }
-  
- .name {
-    font-size: 2.2em;
-    margin-top:5px;
-    margin-bottom: 5px;
-    margin:auto;
-  }
-  .address,
-  .city {
-    font-size: 1.3em;
-  }
+    .name {
+      font-size: 2.2em;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin: auto;
+    }
+    .address,
+    .city {
+      font-size: 1.3em;
+    }
 
-  /* mock interview providing mark */
-.mi_provider {
-    width:80%;
-  }
-  
-  .mk_interview {
-    font-size: 25px;
-  }
-  
-  /* mock interviews end here */
-}
+    /* mock interview providing mark */
+    .mi_provider {
+      width: 80%;
+    }
 
+    .mk_interview {
+      font-size: 25px;
+    }
+
+    /* mock interviews end here */
+  }
 }
 @media only screen and (max-width: 650px) {
   .main_details {
@@ -173,11 +198,10 @@
   }
   .picture img {
     width: 150px;
-
   }
   .name {
     font-size: 1.5em;
-    margin-top:5px;
+    margin-top: 5px;
     margin-bottom: 5px;
   }
   .address,
@@ -188,7 +212,7 @@
   /* mock interview providing mark */
 
   .mi_provider {
-    width:90%;
+    width: 90%;
   }
 
   .mk_interview {

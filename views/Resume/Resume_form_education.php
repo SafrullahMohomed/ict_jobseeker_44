@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/CSS/cv/cv_form_education.css" />
-    <link rel="stylesheet" href="/CSS/normalize/normalize.css" />
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_education.css">
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css" />
 
     <title>Document</title>
   </head>
@@ -50,11 +50,11 @@
         </div>
 
         <!-- state -->
-        <div class="state inp">
-          <label for="state">Country</label>
+        <!-- <div class="state inp">
+          <label for="state">State</label>
           <br />
-          <input type="tel" name="state" id="state" />
-        </div>
+          <input type="text" name="state" id="state" />
+        </div> -->
 
         <!-- country -->
         <div class="country inp">

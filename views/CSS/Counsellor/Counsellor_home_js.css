@@ -85,7 +85,6 @@ a .mock_interviews{
     cursor: pointer;
     color: #1d6989;
     background-color: #ffffff;
-    height: 30px;
     border: 1px solid #1d6989;
     /* border-color: #1D6989 ; */
   }
@@ -94,7 +93,7 @@ a .mock_interviews{
 
 /* counsellor list starts here */
 
-.counsellor{
+a .counsellor{
     display:flex;
     width:80%;
     height: auto;
@@ -106,14 +105,14 @@ a .mock_interviews{
 
 }
 
-.counsellor:hover{
+a .counsellor:hover{
     box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
 
 }
 
 /* profile image */
 .counsellor_profile img{
-    width: 150px;
+    width: 100px;
     object-fit: cover;
     border-radius: 50px;
 }

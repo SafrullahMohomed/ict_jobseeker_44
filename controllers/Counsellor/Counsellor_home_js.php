@@ -10,6 +10,6 @@ class Counsellor_home_js extends Controller
     {
 
         //pass view name
-        $this->view->render('Counsellor_home_js');
+        $this->view->renderCounsellor('Counsellor_home_js');
     }
 }

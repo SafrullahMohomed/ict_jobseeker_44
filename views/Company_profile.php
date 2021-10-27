@@ -1,3 +1,4 @@
+<?php if ( empty(session_id()) ) session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,10 @@
 
 <?php include "CSS/company_profile.css" ?>
  </style>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <title>company_profile</title>
 </head>
@@ -73,16 +77,25 @@
           </div>
         
       </div>
-      <div class="social_media">
+      <!-- <div class="social_media">
           <div class="social_media_text">Social media</div>
           <div class="social_media_links">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-facebook-square social_icon"></i>
+            <i class="fab fa-linkedin social_icon" ></i>
+            <i class="fab fa-twitter-square social_icon"></i>
            </div>
         
-      </div>
+      </div> -->
+      <div class="hero">
      
+      <div class="social-links">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+       
+        <a href=""><i class="fab fa-twitter"></i></a>
+        
+        <a href=""><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
 
          </div>
         

@@ -10,7 +10,7 @@ class Controller
     public  function loadModel($modelName)
     {
 
-        //all models which are store direclty stored in model directory
+        //all models which are stored direclty in the model directory
         $path = 'models/' . $modelName . '_Model.php';
 
         if (file_exists($path)) {

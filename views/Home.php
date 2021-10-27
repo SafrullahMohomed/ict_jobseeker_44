@@ -1,4 +1,5 @@
 
+<?php if ( empty(session_id()) ) session_start(); ?>
 
 <!DOCTYPE html> 
 
@@ -7,8 +8,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="<?php echo URL  ?>views/images/Home/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    
+    <!-- <link href="<?php echo URL  ?>views/images/Home/favicon.ico" rel="shortcut icon" type="image/x-icon" /> -->
+     <link rel="icon" type="image/png" sizes="64x64" href="<?php echo URL  ?>views/images/favicon/favicon.ico"> 
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="<?php echo URL  ?>views/images/favicon/logo.png" /> -->
     <title>Home</title>
     
      <style>
@@ -52,7 +54,7 @@
           <input
             type="text"
             name="Search your keyword"
-            placeholder="Search your keyword"
+            placeholder="Search for a job"
           />
         </div>
         <div class="category">
@@ -114,25 +116,33 @@
     <!-- Service boxes starts here -->
     <div class="service-boxes">
       <div class="first-row box-row">
-        <a href="#"
+        <a href="<?php echo URL ?>Resume/Resume_home"
           ><div class="create-resume service-name">
             Create and manage create resume
-          </div></a
+          </div>
+          <div class="create-resume-text">By clicking this section you can create a resume for free and can manage it as a jobseeker. we provide different templates to create your own resume</div>
+          </a
         >
         <a href="#"
-          ><div class="job-rankings service-name">Job Rankings</div></a
+          ><div class="job-rankings service-name">Job Rankings</div>
+          <div class="job-rankings-text">In this field you can explore job rankings according to posted jobs in our system.</div>
+          </a
         >
       </div>
       <div class="second-row box-row">
         <a href="#"
           ><div class="learning-materials service-name">
             Learning Materials
-          </div></a
+          </div>
+          <div class="lm-text">We provide learning material's links which are recommended by the ICT community</div>
+          </a
         >
-        <a href="#"
+        <a href="<?php echo URL ?>Counsellor/Counsellor_home_js"
           ><div class="counselling service-name">
             Counselling & Mock interviews
-          </div></a
+          </div>
+          <div class="counselling-text">Before selecting a job you can consume a counselling service from our expertise and you can take mock interviews to get a better experience before facing an interview</div>
+          </a
         >
       </div>
     </div>
