@@ -33,8 +33,8 @@
                     <input type="email" name="email" placeholder="Enter Your Email"   onfocus="hideFormError(email_error)"><br>
                     <span id="email_error" class="error"><?php echo $data['email_err']?></span>
                     <p id="label">Password</p>
-                    <input type="password" name="password" placeholder="Enter Your Password"  onfocus="hideFormError(password_error)"><br>
-                    <span id="password_error" class="error"><?php echo $data['password_err']?></span>
+                    <input type="password" name="password" placeholder="Enter Your Password"  onfocus="hideFormError(password_error)">
+                    <br><span id="password_error" class="error"><?php echo $data['password_err']?></span><br>
                     <input type="submit" id="submit" name="submit" value="Login" ><br>
                     <a href="<?php echo URL?>ForgotPassword">Forgot Your Password?</a><br>
                 </form>
