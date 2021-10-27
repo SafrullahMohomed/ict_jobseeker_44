@@ -221,12 +221,13 @@ html, body {
   top: 25px;
   right: 25px;
   min-width: 180px;
-  height: 95px;
+  height: 91px;
   overflow: hidden;
   overflow-y: hidden;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 10;
   font-size: 15px;
+  border-radius: 3px;
 }
 /*.dropdown-content::-webkit-scrollbar {
   display: none;
