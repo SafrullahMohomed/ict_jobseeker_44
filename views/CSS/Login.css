@@ -65,18 +65,19 @@
     padding: 0;
     font-weight: bold;
     font-size: 20px;
+    margin-top: 20px;
 }
 .right-container form
 {
     padding-left: 40px;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .right-container input
 {
     /* width: 300px; */
     width: 44%;
     margin: auto;
-    margin-bottom: 20px; 
+    /* margin-bottom: 20px;  */
 }
 .right-container input[type="email"], input[type="password"]
 {
@@ -103,7 +104,8 @@
     font-size: 20px;
     align-items: center;
     cursor: pointer;  
-    margin-top: 22px;
+    /* margin-top: 22px; */
+    margin-top: 30px;
 }
 .right-container input[type="submit"]:hover
 {
@@ -205,6 +207,13 @@ span
 {
     color: red;
     font-size: 10px;
+}
+/* remove default styles of input box*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #f6f6f8 inset !important;
 }
 
  @media screen and (max-width: 683px)

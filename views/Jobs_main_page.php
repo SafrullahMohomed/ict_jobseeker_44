@@ -1,3 +1,4 @@
+<?php if ( empty(session_id()) ) session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,9 @@
 <body>
     <!-- header part with css html js -->
 <div class="header_div">
-<?php  include 'Header.php'?>
+
+<?php  
+include 'Header.php'?>
 </div>
       <!-- header part end  -->
        <!--search bar start-->
