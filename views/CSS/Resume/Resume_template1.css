@@ -1,0 +1,15 @@
+.resume_page{
+    width:80%;
+    margin:auto;
+}
+
+/* header part name and other details */
+.resume_header{
+    text-align: center;
+}
+
+/* candidate name */
+.candidate_name{
+    font-size: 3em;
+    font-weight: 900;
+}

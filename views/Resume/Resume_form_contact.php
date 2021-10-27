@@ -115,12 +115,6 @@
           <input type="text" name="city" id="city" />
         </div>
 
-        <!-- nationality -->
-        <div class="nationality inp">
-          <label for="natioanality">Nationality</label>
-          <br />
-          <input type="text" name="nationality" id="firstName" />
-        </div>
 
         <!-- About You -->
         <div class="aboutYou inp">
@@ -172,11 +166,11 @@
         </div>
 
         <!-- state -->
-        <div class="state inp">
+        <!-- <div class="state inp">
           <label for="state">State</label>
           <br />
           <input type="tel" name="state" id="state" />
-        </div>
+        </div> -->
 
         <!-- country -->
         <div class="country inp">
@@ -260,11 +254,11 @@
         </div>
 
         <!-- state -->
-        <div class="state inp">
-          <label for="state">Country</label>
+        <!-- <div class="state inp">
+          <label for="state">State</label>
           <br />
           <input type="tel" name="state" id="state" />
-        </div>
+        </div> -->
 
         <!-- country -->
         <div class="country inp">

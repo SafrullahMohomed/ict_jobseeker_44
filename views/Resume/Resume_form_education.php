@@ -50,11 +50,11 @@
         </div>
 
         <!-- state -->
-        <div class="state inp">
-          <label for="state">Country</label>
+        <!-- <div class="state inp">
+          <label for="state">State</label>
           <br />
-          <input type="tel" name="state" id="state" />
-        </div>
+          <input type="text" name="state" id="state" />
+        </div> -->
 
         <!-- country -->
         <div class="country inp">
