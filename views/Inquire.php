@@ -14,7 +14,6 @@
 </head>
 <body>
     <!-- Chat bar header starts here -->
-    <?php  include 'Header.php'?>
     <div class="InquireBox">
         <button id="ChatButton" type="button" class="collapsiable">
             <!-- <div class="logo"></div> -->
@@ -48,7 +47,6 @@
             </div>
         </div>
     </div>
-    <?php include 'Footer.php'?>
 </body>
 <script src="<?php echo URL ?>views/JS/Inquire.js"></script>
 </html>
