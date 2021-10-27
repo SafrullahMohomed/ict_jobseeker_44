@@ -43,11 +43,25 @@
   color: #227093;
 }
 
+/* .full_address{
+  text-align: center;
+} */
+
 .address,
 .city {
   font-size: 30px;
   font-weight: 600;
-  margin: 5px 0px;
+}
+
+.city{
+  font-size: 30px;
+  color: rgb(25, 25, 53);
+  
+}
+
+/* detailsText */
+.detailsText{
+  margin: 0px 0px;
 }
 
 /* mock interview providing mark */
@@ -82,7 +96,8 @@
   margin: 30px 30px 0 0;
   text-align: justify;
 }
-.sub_parts {
+/* sub part starts here */
+/* .sub_parts {
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -90,8 +105,23 @@
   font-size: 1.2em;
   font-weight: 500;
   margin: 30px 30px 0 0;
+} */
+
+.subhead{
+  margin:40px 0px;
 }
 
+.subhead_text{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(13, 13, 80);
+}
+
+/* make the list inside */
+
+.qualifications_data ul{
+  list-style-position: inside;
+}
 .social_media i {
   font-size: 30px;
 }

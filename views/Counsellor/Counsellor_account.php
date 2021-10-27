@@ -10,9 +10,10 @@
   <title>Document</title>
 </head>
 
-<div class="header_div">
-  <?php include "../Header.php" ?>
-</div>
+<!-- <div class="header_div">
+ 
+</div> -->
+
 
 <body>
   <!-- title field starts here -->
