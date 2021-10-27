@@ -16,7 +16,7 @@
 </div>
     <div class="container">
         <div class="flex-container">
-            <div class="left-container" style="background-image:url('http://localhost/ict_jobseeker_mvc_final/views/images/Login/login1.jpg');" >
+            <div class="left-container" style="background-image:url('http://localhost/ict_jobseeker_44/views/images/Login/login1.jpg');" >
 
                 <h3 id="login">Login</h3>
                 <form id="reg_link">
