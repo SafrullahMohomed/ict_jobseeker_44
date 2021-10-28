@@ -26,9 +26,11 @@
         </div>
 
         <!-- add lms -->
-        <div class="add-lms">
-            <button><span class="plus">+</span>Add Learning Materials</button>
-        </div>
+        <a href="<?php echo URL ?>Admin/Admin_add_lm">
+            <div class="add-lms">
+                <button><span class="plus">+</span>Add Learning Materials</button>
+            </div>
+        </a>
 
         <!-- table -->
         <div class="table-lms">

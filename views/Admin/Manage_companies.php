@@ -27,9 +27,12 @@
         </div>
 
         <!-- add company division -->
-        <div class="add-company">
-            <button><span class="plus">+</span>Add Company</button>
-        </div>
+        <a href="<?php echo URL ?>Admin/Admin_add_companies">
+            <div class="add-company">
+                <button><span class="plus">+</span>Add Company</button>
+            </div>
+        </a>
+
 
         <!-- table -->
         <div class="table-Company">

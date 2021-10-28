@@ -27,9 +27,11 @@
         </div>
 
         <!-- add contract-provider division -->
+        <a href="<?php echo URL ?>Admin/Admin_add_cp">
         <div class="add-contract-provider">
             <button><span class="plus">+</span>Add contract-provider</button>
         </div>
+        </a>
 
         <!-- table -->
         <div class="table-contract-provider">

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_education.css">
   <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_skill.css">
   <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_form_project.css">
-  <script defer src="/JS/cv/stepper.js"></script>
+  <script defer src="<?php echo URL?>views/JS/Resume/Resume_form.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -65,7 +65,7 @@
         <!-- profile picture -->
         <div class="profilePic">
           <div class="profilePic_image">
-            <img src="/images/cv/cv.png" alt="image for profile picture" />
+            <img src="/ict_jobseeker_44/views/images/Resume/Resume.png" alt="image for profile picture" />
           </div>
           <div class="image_insertion">
             <label for="profilePic">Profile Picture</label>

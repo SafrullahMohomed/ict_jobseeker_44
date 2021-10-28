@@ -50,9 +50,11 @@
     </div>
 
     <!-- add jobs -->
+    <a href="<?php echo URL ?>Admin/Admin_add_jobs">
     <div class="add-jobs">
       <button><span class="plus">+</span> Add Jobs</button>
     </div>
+    </a>
 
     <!-- table -->
     <div class="table-jobs">

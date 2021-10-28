@@ -27,9 +27,11 @@
         </div>
 
         <!-- add contracts division -->
+        <a href="<?php echo URL ?>Admin/Admin_add_contracts">
         <div class="add-contracts">
             <button><span class="plus">+</span>Add Contracts</button>
         </div>
+        </a>
 
         <!-- table -->
         <div class="table-contracts">

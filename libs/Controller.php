@@ -32,4 +32,18 @@ class Controller
             $this->model = new $className();
         }
     }
+
+    // to run three length path
+
+    // public function loadModel3($modelName, $modelName2, $modelName3)
+    // {
+    //     $path = 'models/' . $modelName . '/ ' . $modelName2 . '/ ' . $modelName3 . '_Model.php';
+
+    //     if(file_exists($path)){
+
+    //         require $path;
+    //         $className = $modelName3. '_Model';
+    //         $this->model = new $className();
+    //     }
+    // }
 }
