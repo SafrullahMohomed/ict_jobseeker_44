@@ -48,6 +48,18 @@ public function render2($viewName, $data = []) {
         require 'views/Admin/' . $viewName . '.php';
     }
 
+    // admin add
+    // public function renderAdminAdd($viewName)
+    // {
+    //     require 'views/Admin/Admin_add/' . $viewName . '.php';
+    // }
+
+    // admin edit
+    // public function renderAdminEdit($viewName)
+    // {
+    //     require 'views/Admin/Admin_edit/' . $viewName . '.php';
+    // }
+
     // counsellor
     public function renderCounsellor($viewName)
     {

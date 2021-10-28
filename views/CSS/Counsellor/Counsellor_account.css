@@ -213,4 +213,20 @@ textarea#aboutYou {
     font-size: large;
     text-align: center;
   }
+
+  .cancel button,
+  .update button {
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .update button {
+    background-color: green;
+  }
 }
+
+
