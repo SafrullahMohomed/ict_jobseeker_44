@@ -58,7 +58,9 @@ class App
             $file2 = 'controllers/' . $this->_url[0] . '/' . $this->_url[1] . '.php';
         }
 
-
+        if (isset($this->_url[2])) {
+            $file3 = 'controllers/' . $this->_url[0] . '/' . $this->_url[1] . '/' . $this->_url[2] . '.php';
+        }
 
         if (file_exists($file1)) {
             require $file1;
@@ -70,8 +72,7 @@ class App
             // $this->_controller->Home();
             return true;
         }
-
-        elseif (file_exists($file2)) {
+        if (file_exists($file2)) {
 
 
             require $file2;
@@ -82,7 +83,21 @@ class App
 
             // $this->_controller->Home();
             return true;
-        } else //file not in controller
+        }
+        // if (file_exists($file3)) {
+
+        //     require $file3;
+
+        //     $this->_controller = new $this->_url[2];
+
+        //     // load model
+
+        //     $this->_controller->loadModel3($this->_url[0], $this->_url[1], $this->_url[2]);
+
+        //     return true;
+        //     # code...
+        // } 
+        else //file not in controller
         {
             echo "Sorry, Page not found";
             return false;

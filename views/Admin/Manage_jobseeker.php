@@ -26,9 +26,11 @@
         </div>
 
         <!-- add jobseeker division -->
-        <div class="add-jobseeker">
-            <button><span class="plus">+</span>Add Jobseeker</button>
-        </div>
+        <a href="<?php echo URL ?>Admin/Admin_add_jobseeker">
+            <div class="add-jobseeker">
+                <button><span class="plus">+</span>Add Jobseeker</button>
+            </div>
+        </a>
 
         <!-- table -->
         <div class="table-jobseeker">
