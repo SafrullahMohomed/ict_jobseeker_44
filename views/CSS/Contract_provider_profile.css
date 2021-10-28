@@ -98,6 +98,9 @@ text-align: justify;
     color:#5eacda;
     cursor: pointer;  
 }
+.fa-linkedin::before{
+    content: "\f08c" !important;
+ }
 .review_row{
 display: flex;
 flex-direction: row;
@@ -184,6 +187,7 @@ hr{
     color: gold;
     font-size: 30px;
 }
+
 
 @media only screen and (max-width: 975px){
     .name{
