@@ -26,9 +26,11 @@
         </div>
 
         <!-- add resume division -->
+        <a href="<?php echo URL ?>Admin/Admin_add_resume">
         <div class="add-resume">
             <button><span class="plus">+</span>Add Resume</button>
         </div>
+        </a>
 
         <!-- table -->
         <div class="table-resume">

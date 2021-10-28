@@ -151,18 +151,20 @@
 
     </div>
 
-     <!-- cancel, add buttons -->
+    <!-- cancel, add buttons -->
 
-     <div class="cu_buttons">
+    <div class="cu_buttons">
+        <a href="<?php echo URL ?>Admin/Manage_jobs">
             <div class="cancel">
                 <button class="cancel" form="myForm">Cancel</button>
             </div>
-            <div class="update">
-                <button type="submit" form="myForm">Add</button>
-            </div>
+        </a>
+        <div class="update">
+            <button type="submit" form="myForm">Add</button>
         </div>
+    </div>
 
-        <!-- cancel, add buttons ends here -->
+    <!-- cancel, add buttons ends here -->
     <?php include 'Footer.php' ?>
     <script src="<?php echo URL ?>views/JS/Post_job.js"></script>
 

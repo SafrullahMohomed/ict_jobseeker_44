@@ -27,10 +27,12 @@
         </div>
 
         <!-- add counsellors -->
+        <a href="<?php echo URL ?>Admin/Admin_add_counselling">
         <div class="add-counsellors">
             <button><span class="plus">+</span>Add Counsellors</button>
         </div>
-
+        </a>
+        
         <!-- table -->
         <div class="table-counsellors">
             Table....

@@ -1,4 +1,6 @@
 // get elements to perform button operations
+
+// console.log("Hi I am from js");
 const back_button = document.getElementById("back");
 const next_button = document.getElementById("next");
 const finish_button = document.getElementById("finish");

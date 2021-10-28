@@ -79,9 +79,11 @@
     <!-- cancel, add buttons -->
 
     <div class="cu_buttons">
-        <div class="cancel">
-            <button class="cancel" form="myForm">Cancel</button>
-        </div>
+        <a href="<?php echo URL ?>Admin/Manage_contracts">
+            <div class="cancel">
+                <button class="cancel" form="myForm">Cancel</button>
+            </div>
+        </a>
         <div class="update">
             <button type="submit" form="myForm">Update</button>
         </div>

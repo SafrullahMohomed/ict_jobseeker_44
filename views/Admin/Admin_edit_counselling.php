@@ -136,9 +136,11 @@
   <!-- next, back buttons -->
 
   <div class="cu_buttons">
-    <div class="cancel">
-      <button class="cancel" form="contact_form">Cancel</button>
-    </div>
+    <a href="<?php echo URL ?>Admin/Manage_counselling">
+      <div class="cancel">
+        <button class="cancel" form="myForm">Cancel</button>
+      </div>
+    </a>
     <div class="update">
       <button type="submit" form="contact_form">Update</button>
     </div>

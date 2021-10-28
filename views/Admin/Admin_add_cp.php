@@ -114,9 +114,11 @@
     <!-- update, cancel buttons -->
 
     <div class="cu_buttons">
-            <div class="cancel">
-                <button class="cancel" form="myForm">Cancel</button>
-            </div>
+    <a href="<?php echo URL ?>Admin/Manage_cp">
+                <div class="cancel">
+                    <button class="cancel" form="myForm">Cancel</button>
+                </div>
+            </a>
             <div class="update">
                 <button type="submit" form="myForm">Add</button>
             </div>
