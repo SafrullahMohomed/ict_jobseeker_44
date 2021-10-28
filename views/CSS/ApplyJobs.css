@@ -162,6 +162,7 @@ label
     background-color: white;
     border: 2px solid #1D6989;
 }
+/*user access msg start*/
 .login_msg{
     margin-top: 140px;
     height: 100px;
@@ -178,6 +179,7 @@ label
 #login_button{
     margin: auto !important;
 }
+/*user access msg end*/
 @media only screen and (max-width: 990px)
 {
     *{

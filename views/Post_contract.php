@@ -19,6 +19,9 @@
 <?php  include 'Header.php'?>
 </div>
       <!-- header part end  -->
+
+      <!-- check user is contract provider or not -->
+      <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Contract provider" ): ?>
  <div class="all">
  <div class="post_contract_bar">
         Post a Project 
@@ -44,7 +47,7 @@
         <option>WordPress</option>
         <option>PHP</option>
         
-        <option>WordPress</option>
+        <option>Data Entry</option>
     
     
     </select>
@@ -76,7 +79,13 @@
        </div>
     </form>
  </div>
-    
+    <?php endif; ?>
+    <!-- user is not contract provider -->
+<?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Contract provider") : ?>
+        <div class="login_msg"> Before post a contract you should login as a Contract provider</div>
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
+<?php endif; ?>  
+
    
     <?php  include 'Footer.php'?>
     <script src="<?php echo URL ?>views/JS/Post_contract.js"></script>

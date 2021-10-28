@@ -22,7 +22,7 @@
       margin: 0;
       padding: 0;
       background-color: #ffffff;
-      border-radius: 7px;
+      border-radius: 0px;
       overflow-x: hidden;
     }
 

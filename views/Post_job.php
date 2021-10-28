@@ -18,6 +18,10 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
+
+<!-- check user is company or not -->
+      <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Company" ): ?>
+
   <div class="post_job_description" style="background-image:url('<?php echo URL?>views/images/Post_job/1.png');" >
     <div class="post_job_description_left">
 
@@ -77,12 +81,39 @@
     <label for="Education_Level" class="labelfield">Education Level</label><br>
     <input type="text" id="EducationLevel" name="Education_Level" placeholder="" class="inputfield"><br>
 
-    <label for="Country" class="labelfield">Country</label><br>
-    <input type="text" id="Country" name="Country" placeholder="" class="inputfield"><br>
+    <!-- <label for="Country" class="labelfield">Country</label><br>
+    <input type="text" id="Country" name="Country" placeholder="" class="inputfield"><br> -->
 
-    <label for="City" class="labelfield">City</label><br>
-    <input type="text" id="City" name="City" placeholder="" class="inputfield"><br>
+    <label for="City" class="labelfield ">City</label><br>
+    <select type="text" id="City" name="City" placeholder="" class="inputfield"><br>
+    <option value="Colombo">Colombo</option>
+    <option value="Gampaha">Gampaha</option>
+    <option value="Kaluthara ">Kaluthara </option>
+    <option value="Matale  ">Matale  </option>
+    <option value="Nuwera Eliya ">Nuwera Eliya </option>
+    <option value="Galle  ">Galle  </option>
+    <option value="Matara ">Matara </option>
+    <option value="Hambanthota ">Hambanthota </option>
+    <option value="Jaffna  ">Jaffna  </option>
+    <option value="Mannar ">Mannar </option>
 
+    <option value="Vauniya ">Vauniya </option>
+    <option value="Mulathivu  ">Mulathivu  </option>
+    <option value="Kilinochchi ">Kilinochchi </option>
+    <option value="Batticaloa ">Batticaloa </option>
+    <option value="Ampara ">Ampara  </option>
+    <option value="Trincomalee  ">Trincomalee </option>
+    <option value="Kurunegala ">Kurunegala </option>
+    <option value="Puttalam ">Puttalam </option>
+    <option value="Anuradhapura ">Anuradhapura </option>
+    <option value=" Polonnaruwa "> Polonnaruwa </option>
+
+    <option value="Badulla ">Badulla </option>
+    <option value="Monaragala ">Monaragala </option>
+    <option value="Rathnapura ">Rathnapura </option>
+    <option value="Kegalle ">Kegalle </option>
+    
+    </select><br>
     <label for="Full_Address" class="labelfield">Full Address</label><br>
     <input type="text" id="Full_Address" name="Full_Address" placeholder="" class="inputfield"><br>
 
@@ -108,8 +139,6 @@
 
     <div class="radiobutton_class">
         <span class="labelfield">Urgent</span>
-
-
 
 
           <div class="radiobutton_style">
@@ -171,6 +200,14 @@
 </div>
 
 </div>
+
+<?php endif; ?>
+<!-- user is not company -->
+<?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Company") : ?>
+        <div class="login_msg"> Before post a job you should login as a Company</div>
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
+<?php endif; ?>  
+
 <?php include 'Footer.php'?>
 <script  src="<?php echo URL?>views/JS/Post_job.js"></script>
 
