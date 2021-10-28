@@ -117,7 +117,7 @@
 }
 .right-container input[type="email"]:hover, input[type="password"]:hover
 {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     border-bottom: 2px solid rgb(6, 8, 124);
     transition: 0.5s;
 }
@@ -213,7 +213,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px #f6f6f8 inset !important;
+    -webkit-box-shadow: 0 0 0 0px #f6f6f8 inset !important;
 }
 
  @media screen and (max-width: 683px)

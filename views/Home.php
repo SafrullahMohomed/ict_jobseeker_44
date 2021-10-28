@@ -123,14 +123,14 @@
           <div class="create-resume-text">By clicking this section you can create a resume for free and can manage it as a jobseeker. we provide different templates to create your own resume</div>
           </a
         >
-        <a href="#"
+        <a href="<?php echo URL ?>JobRanking"
           ><div class="job-rankings service-name">Job Rankings</div>
           <div class="job-rankings-text">In this field you can explore job rankings according to posted jobs in our system.</div>
           </a
         >
       </div>
       <div class="second-row box-row">
-        <a href="#"
+        <a href="<?php echo URL ?>LearningMaterials"
           ><div class="learning-materials service-name">
             Learning Materials
           </div>

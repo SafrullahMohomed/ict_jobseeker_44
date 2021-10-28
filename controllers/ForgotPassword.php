@@ -19,7 +19,7 @@ class ForgotPassword extends Controller
         
     }
 
-    public function ResetForgotPassword
+    public function ResetForgotPassword()
     {
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -44,40 +44,37 @@ class ForgotPassword extends Controller
         {
             if($this->model->isRegisteredUser($data['email']))
             {
-                $emailToken = openssl_random_pseudo_bytes(16);
-                $emailToken = bin2hex($emailToken);
-                $_SESSION['emailToken'] =$emailToken ;
-                $this->model->insert_reg_data($data,  $emailToken);
-                $this->model->sendMail($data['email'],$emailToken,$data['fname']);
-                $info['mail_msg'] ="We have sent an email with a confirmation link to your email address. In order to complete the sign-up process, please click the confirmation link.";
+                $passwordToken = openssl_random_pseudo_bytes(16);
+                $passwordToken = bin2hex($passwordToken);
+                $_SESSION['passwordToken'] =$passwordToken ;
+                $this->model->insert_reg_data($data,  $passwordToken);
+                $this->model->sendMail($data['email'],$passwordToken,$data['fname']);
+                $info['mail_msg'] ="We have sent an email with a confirmation link to your email address. In order to reset password, please click the confirmation link.";
             
                 $this->view ->render('Mail_info');
             }
+            else
+            {
+
+            }
         }
+        else
+        {
+            $this->view ->render2('ForgotPassword',$data);
+        }
+        }      
     }
 
-    function forgetPassword() {
-      if(isset($_POST['enter_btn'])) {
-          $data = [
-              'contact_number' => trim($_POST['contact_number']),
-              'controller' => 'login'
-          ];
+    public function  Reset($email,$passwordToken){
+
           
-          if($this->model->isRegisteredUser($data['contact_number'])) {
-              // $otp = new OtpVerify;
-              // $otp->otpSend($data);
-              $_SESSION['contact_number'] = $data['contact_number'];
-              $_SESSION['controller'] = $data['controller'];
-              otpSend();
-          }else {
-              $this->view->render('User/forgetPassword/wrongNumber', $data);
-          }
+        
+      $info['active_msg'] = $this->model->verifyemail_update($email,$passwordToken);
+     
+    
+      $this->view ->render('Success_post');
+
       }
-      
-      else {
-          $this->view->render('User/forgetPassword/forgetPassword');
-      }
-  }
 
 
 }
