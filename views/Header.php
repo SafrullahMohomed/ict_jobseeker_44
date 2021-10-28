@@ -285,6 +285,9 @@ ul{
     }
 
     /*style for drop down menu end*/
+    #line_among_loging_reg{
+      opacity: 0.7;
+    }
   </style>
 
 
@@ -319,11 +322,11 @@ ul{
               <!-- check user type -->
               <?php
               // if user is company
-              if ($_SESSION['User_ID'] == "Company") :
+              if ($_SESSION['User_type'] == "Company") :
                 $My_profile = "Company_profiles/Company_profile";
               endif;
               // if user is Contract_provider
-              if ($_SESSION['User_ID'] == "Contract Provider") :
+              if ($_SESSION['User_type'] == "Contract provider") :
                 $My_profile = "Contracts/Contract_provider_profile";
               endif;
 
@@ -373,7 +376,7 @@ ul{
       <div class="login-bar">
         <ul style="margin-bottom: 0px;">
           <li class="login-list"><a href="<?php echo URL ?>Login">Login</a></li>
-          <li class="login-list">|</li>
+          <li class="login-list" id="line_among_loging_reg">|</li>
           <li class="login-list"><a href="<?php echo URL ?>Registration">Register</a></li>
         </ul>
       </div>

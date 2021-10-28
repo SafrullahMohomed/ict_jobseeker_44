@@ -83,6 +83,22 @@
     </div>
     <!-- themes image and job search part ends here -->
 
+<!-- posing part start here -->
+<div class="post_button">
+<a href="<?php echo URL ?>jobs/Post_job"><button class="post_btn">Post a Job</button></a>
+
+
+<a href="<?php echo URL ?>Contracts/Post_contract"><button class="post_btn"> Post a Contract</button></a>
+
+</div>
+
+
+
+
+
+
+
+<!-- posing part end here -->
     <!-- counting part starts here -->
     <div class="counting-part">
       <div class="posted-jobs">

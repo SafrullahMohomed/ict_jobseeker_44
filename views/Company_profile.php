@@ -77,7 +77,7 @@
           </div>
         
       </div>
-      <!-- <div class="social_media">
+      <div class="social_media">
           <div class="social_media_text">Social media</div>
           <div class="social_media_links">
             <i class="fab fa-facebook-square social_icon"></i>
@@ -85,8 +85,8 @@
             <i class="fab fa-twitter-square social_icon"></i>
            </div>
         
-      </div> -->
-      <div class="hero">
+      </div>
+      <!-- <div class="hero">
      
       <div class="social-links">
         <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -95,7 +95,7 @@
         
         <a href=""><i class="fab fa-linkedin-in"></i></a>
       </div>
-    </div>
+    </div> -->
 
          </div>
         
