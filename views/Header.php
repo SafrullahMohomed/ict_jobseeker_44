@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Document</title>
-  
+
 
 
   <style>
@@ -37,7 +37,11 @@
     header {
       position: fixed;
       width: 100%;
+
       height:100px ;
+
+
+
       top: 0;
       z-index: 2;
       overflow-x: hidden;
@@ -100,6 +104,15 @@
       margin-bottom: 2px !important;
     }
 
+    #user {
+      width: 22px;
+      height: 22px;
+      border-radius: 100px;
+      margin-left: 4px;
+      float: right;
+
+    }
+
     /*here login bar of the header ends*/
 
     /*here navigation menu and logo starts*/
@@ -109,7 +122,9 @@
     .navigation-header {
       /*display: flex;*/
       width: 100%;
+
       height: 58px;
+
       background-color: #1d6989;
       border-radius: 0 0 7px 7px;
       justify-content: space-between;
@@ -119,12 +134,12 @@
 
     .navigation-header .logo img {
       float: left;
+
       border-radius:50%;
       object-fit: cover;
       height: 50px;
       margin: 4px 7px!important;
-      width: 50px; 
-
+      width: 50px;      
     }
 
     /*navigation menu main division*/
@@ -290,7 +305,9 @@ ul{
 
 
           <!-- <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"> -->
+
           <li class="login-list"><a href="<?php echo URL ?>Login" id="user_name"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></a></li>
+
           <!-- <li class="login-list">|</li> -->
           <!-- <li class="login-list"><a href="<?php echo URL ?>Registration">Logout</a></li> -->
 
