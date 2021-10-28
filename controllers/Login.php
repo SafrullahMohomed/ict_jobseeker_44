@@ -98,7 +98,7 @@ class Login extends Controller
     }
 
    public function createUserSession($user) {
-         session_start();
+         #session_start();
       $_SESSION['User_ID'] = $user->User_ID;
       $_SESSION['User_type'] = str_replace("_", "", $user->User_type);
       $_SESSION['Email'] = $user->Email;

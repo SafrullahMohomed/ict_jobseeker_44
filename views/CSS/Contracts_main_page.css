@@ -54,6 +54,7 @@
     height: 36px;
     width: fit-content;
     border-radius: 7px;
+    padding-left: 8px;
   }
   
   .search-button button {
@@ -189,7 +190,7 @@ margin: 20px;
 
 .features_contract_row_contract{
 /*border:1px solid #a4b0be;*/
-height: 450px;
+height: 350px;
 width:22%;
 display: flex;
 flex-direction: column;

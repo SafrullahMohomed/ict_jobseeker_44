@@ -70,6 +70,7 @@ body{
     height: 36px;
     width: fit-content;
     border-radius: 7px;
+    padding-left: 8px;
   }
   
   .search-button button {

@@ -1,5 +1,5 @@
 <?php
-
+ if ( empty(session_id()) ) session_start(); 
 class Database extends PDO{
     function __construct($DB_TYPE,$DB_HOST,$DB_NAME,$DB_USER,$DB_PASSWORD)
     {
@@ -71,15 +71,19 @@ public function run_post_contract_insert_query()
 
 // prepare sql and bind parameters 
 //Insert data into contract tables
-    $stmt1 =$this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
-    VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,1 )");
+    //$stmt1 =$this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
+   // VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,75 )");
+   $stmt1 =$this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
+    VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,:user_id )");
         $stmt1->bindParam(':contract_name', $contract_name);
         $stmt1->bindParam(':contract_category', $contract_category);
         $stmt1->bindParam(':description', $description);
         $stmt1->bindParam(':deadline', $deadline);
         $stmt1->bindParam(':avg_bid', $avg_bid);
+        $stmt1->bindParam(':user_id', $_SESSION['User_ID']);
 
-    $stmt1->execute();
+
+       $stmt1->execute();
    
 
 
