@@ -107,9 +107,9 @@ text-align: justify;
 }
 
 .hero {
-  width: 100%;
+  width:50px;
   height: 100vh;
-  background: #f1f9ff;
+  
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -125,6 +125,8 @@ h1 {
 .social-links {
   display: flex;
   font-size: 30px;
+  padding-left: 174px;
+  
 }
 
 .social-links a {

@@ -12,118 +12,7 @@ html, body {
   
 }
 
-/*header division* starts here*/
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  overflow-x:hidden;
-  display: flex;
-  flex-direction: column;
-}
 
-/*This is for login bar of the header*/
-.login-bar {
-  background-color: #004867;
-  width: 100%;
-  height: 35px;
-  border-radius: 7px;
-}
-
-.login-bar ul {
-  float: right;
-  background-color: rgba(226, 226, 226, 0);
-  padding-right: 6px;
-  margin-top: 9px;
-  margin-right: 12px;
-}
-.login-list {
-  list-style: none;
-  text-decoration: none;
-  display: inline-block;
-  color: rgb(255, 255, 255);
-  padding: 0%;
-  background-color: #04293500;
-  margin-left: 5px;
-}
-
-.login-list a {
-  text-decoration: none;
-  color: white;
-  font-weight: xx-large;
-  transition: ease-in-out 0.2s;
-}
-
-.login-list a:hover {
-  color: rgb(127, 135, 245);
-  font-weight: xx-large;
-}
-
-/*here login bar of the header ends*/
-
-/*here navigation menu and logo starts*/
-
-/*navigation header style*/
-
-.navigation-header {
-  display: flex;
-  width: 100%;
-  height: 90px;
-  background-color: #1d6989;
-  border-radius: 7px;
-  justify-content: space-between;
-}
-
-/*navigation logo style*/
-
-.navigation-header .logo img {
-  float: left;
-  border-radius: 7px;
-  object-fit: cover;
-  height: 85px;
-  margin-top: 2px;
-  width: 90px;
-
-}
-
-/*navigation menu main division*/
-
-.navigation-menu {
-  align-self: flex-end;
-  float: right;
-}
-
-/* make the ul as right in that div*/
-.navigation-menu ul {
-  float: right;
-  list-style: none;
-}
-
-/*make the lists to one horizontal block*/
-.navigation-menu ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/*menu items property*/
-.navigation-menu a {
-  letter-spacing: 1px;
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-size: 22px;
-  margin-right: 20px;
-  transition: ease-in-out 0.2s;
-}
-
-/*make the navigation menu hover property*/
-.navigation-menu a:hover {
-  color: rgb(127, 135, 245);
-  font-weight: xx-large;
-}
-
-/*header part ends here*/
 
 /*division for jobs search part starts here*/
 
@@ -373,32 +262,50 @@ img {
 }
 
 .tittle {
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: 800;
   color: #1d6989;
+  margin-bottom: 20px;
 }
 .description {
-  font-size:20px;
+  font-size:18px;
   font-weight: 600;
   text-align: justify;
 }
 .button {
+    color: rgb(255, 255, 255);
+    background-color: #1d6989;
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s;
+    border: 1px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    
+  /*
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   background-color: #1d6989;
-  width: 150px;
-  height: 30px;
-  border-radius: 30px;
-  padding: 10px;
+  width: 120px;
+  height: 25px;
+  border-radius: 25px;
+  padding:8px 5px;
   text-align: center;
   border: 1px;
   margin:auto;
+  transition: ease-in-out 0.2s;*/
 }
-
+.button .btn_div{
+text-align: center;
+width: 120px;
+}
 .button:hover {
   cursor: pointer;
-  color: #585656;
+  color: #1d6989;
   background-color: white;
   border: 1px solid #1d6989;
 }
@@ -669,66 +576,7 @@ img {
 }
  
  
-  /* footer */
-.footer{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* footer header */
-
-.footer-head{
-  font-size: 22px;
-}
-.first-col, .second-col, .third-col{
- min-width: 220px;
- display:flex;
- align-items: left;
-}
-
-.site-text{
-  margin-left:0px;
-  width:250px;
-  font-size: 14px;
-}
-
-/* contact us */
-
-
-.contactus-details .footer-list, .contactus-details .footer-list a:link{
-  font-size:16px;
-}  
-.second-col{
-  margin-top: 30px;
-}
-.services-link-header{
-  font-size:22px;
-  position:relative;
-  transform: translate(-18%, 10%);
-
-}
-
-.information-header{
-  font-size: 22px;
-  position:relative;
-  transform: translate(-18%, 20%);
-
-}
-
-.services-link-details, .information-details{
-  position:relative;
-  transform: translate(-18%, 5%);
-  font-size: 14px;
-}
-
-
-.social-media-icons ul{
-  position:relative;
-  transform:translate(-18%, -11%);
-}
-/* footer ends here */
+ 
   
 }
 
