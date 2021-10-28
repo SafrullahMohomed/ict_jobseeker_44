@@ -17,7 +17,7 @@
             <?php include 'Header.php'?>
     </div>
     <div>
-    <form class="MainContainer">
+    <form class="MainContainer" action="http://localhost/ict_jobseeker_44/ForgotPassword/ResetForgotPassword" method="POST"  name="myForm">
         <div class="Title">
             Forgot Password
         </div>

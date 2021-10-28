@@ -55,7 +55,7 @@ function validateForm() {
       var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
     if(!password.match(passw)) 
     { 
-      document.getElementById("password_error").innerHTML =" password must be between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter";
+      document.getElementById("password_error").innerHTML ="A password must have at least 1 numeric digit, 1 uppercase, and 1 lowercase letter and be between 6 and 20 characters long.";
       return false;
     }
     var confirmPassword=document.myForm.confirmPassword.value; 
