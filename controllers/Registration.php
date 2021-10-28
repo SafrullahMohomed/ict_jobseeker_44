@@ -123,7 +123,7 @@ class Registration extends Controller
                     }
                     //it mean there has a already registered account of relavant email.then redirect to login page
                     else{
-                       // $this->view ->render2('Login',$data['email']);
+                        $this->view ->render2('Login',$data['email']);
                     }
 
 

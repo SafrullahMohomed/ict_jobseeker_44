@@ -119,7 +119,7 @@
 }
 .right-container input[type="text"]:hover,input[type="email"]:hover, input[type="password"]:hover
 {
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
     border-bottom: 2px solid rgb(6, 8, 124);
     transition: 0.5s;
     

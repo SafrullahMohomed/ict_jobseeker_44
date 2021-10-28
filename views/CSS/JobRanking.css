@@ -28,7 +28,9 @@ th
     text-align: left;
 }
 tr:nth-child(even) {background-color: #d9eff8;}
-tr:hover {background-color: #1d6989;}
+tr:hover {background-color: #1d6989;
+            color: white;
+    }
 
 th, td 
 {
