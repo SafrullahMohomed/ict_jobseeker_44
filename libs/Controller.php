@@ -28,7 +28,7 @@ class Controller
         if (file_exists($path)) {
 
             require $path;
-            $className = $modelName . '_Model';
+            $className = $modelName2 . '_Model';
             $this->model = new $className();
         }
     }

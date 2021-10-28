@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Document</title>
-  <!-- <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css"> -->
+
 
 
   <style>
@@ -29,17 +29,28 @@
     }
 
     /*header division* starts here*/
-    .header_div {
+    /*.header_div{
+    
+      margin-bottom: 140px;
+      overflow-x: hidden;
+    }*/
+    header {
       position: fixed;
       width: 100%;
 
+      height:100px ;
+
+
+
       top: 0;
-      z-index: 10;
+      z-index: 2;
       overflow-x: hidden;
       display: flex;
       flex-direction: column;
-      margin-bottom: 50px !important;
+     
+     
     }
+   
 
     /*This is for login bar of the header*/
     .login-bar {
@@ -52,9 +63,10 @@
     .login-bar ul {
       float: right;
       background-color: rgba(226, 226, 226, 0);
-      padding-right: 6px;
-      margin-top: 9px;
-      margin-right: 12px;
+      padding-right: 6px !important;
+      margin-top: 9px !important;
+      margin-right: 12px !important;
+      margin-bottom: 0 !important;
     }
 
     .login-list {
@@ -68,15 +80,28 @@
     }
 
     .login-list a {
-      text-decoration: none;
+      text-decoration: none !important;
       color: white;
-      font-weight: xx-large;
+      font-weight: xx-large !important;
       transition: ease-in-out 0.2s;
+
     }
 
     .login-list a:hover {
       color: rgb(127, 135, 245);
-      font-weight: xx-large;
+      font-weight: xx-large !important;
+    }
+
+    #user {
+      width: 22px;
+      height: 22px;
+      border-radius: 100px;
+      margin-left: 4px;
+      float: right;
+
+    }
+    #user_name{
+      margin-bottom: 2px !important;
     }
 
     #user {
@@ -95,9 +120,11 @@
     /*navigation header style*/
 
     .navigation-header {
-      display: flex;
+      /*display: flex;*/
       width: 100%;
-      height: 90px;
+
+      height: 58px;
+
       background-color: #1d6989;
       border-radius: 0 0 7px 7px;
       justify-content: space-between;
@@ -107,12 +134,12 @@
 
     .navigation-header .logo img {
       float: left;
-      border-radius: 7px;
-      object-fit: cover;
-      height: 85px;
-      margin-top: 2px !important;
-      width: 90px;
 
+      border-radius:50%;
+      object-fit: cover;
+      height: 50px;
+      margin: 4px 7px!important;
+      width: 50px;      
     }
 
     /*navigation menu main division*/
@@ -121,7 +148,10 @@
       align-self: flex-end;
       float: right;
     }
-
+ul{
+  margin-top: 16px !important;
+  margin-bottom: 20px !important;
+}
     /* make the ul as right in that div*/
     .navigation-menu ul {
       margin-bottom: 20px;
@@ -275,7 +305,9 @@
 
 
           <!-- <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"> -->
-          <li class="login-list"><a href="<?php echo URL ?>Login"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></a></li>
+
+          <li class="login-list"><a href="<?php echo URL ?>Login" id="user_name"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></a></li>
+
           <!-- <li class="login-list">|</li> -->
           <!-- <li class="login-list"><a href="<?php echo URL ?>Registration">Logout</a></li> -->
 

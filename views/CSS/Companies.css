@@ -21,7 +21,7 @@
     width: 100%;
     height: 226px ;
     border-radius: 10px;
-    margin-top: 100px;
+    margin-top: 95px;
 }
   
 .resource-search-box 
@@ -47,6 +47,7 @@
   height: 30px;
   width: 277px;
   border-radius: 7px;
+  padding-left: 10px;
   border: 1px solid #1d6989;
    
 }
@@ -72,16 +73,16 @@
 }
 .Trending 
 {
-    font-family: Roboto;
-    font-style: normal;
+    
+   
     font-weight: bold;
     font-size:50px;
     line-height: 75px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #084C8B;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
-    margin-top: 35px;
+    margin-top: 40px;
 }
 .ResourceRow
 {
@@ -153,6 +154,30 @@
 }
 a{
  text-decoration: none;
+}
+.btn_div{
+    display: flex;
+    align-items: center;
+}
+.load_more{
+    background-color: #1D6989;
+    width:170px;
+    height: auto;
+    color: white;
+    padding: 5px;
+    border-radius: 30px;
+    font-weight: 400;
+    margin: 30px auto;
+    border: 1px solid #1D6989;
+    font-size:15px;
+    transition: ease-in-out 0.2s;
+}
+.load_more:hover{
+    cursor: pointer;
+    color:#1D6989 ;
+    background-color: white;
+
+    border: 1px solid #1D6989;
 }
 /* .resource-boxes
 {
