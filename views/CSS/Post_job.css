@@ -12,9 +12,9 @@
 
 .post_job_description{
     
-  background-image:url("images/Post_job/1.png") ;
+   background-image:url("images/Post_job/1.png") ;
 
-    background-color: #cccccc;
+    
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,6 +24,7 @@
    display: flex;
    justify-content:left;
    margin-bottom: 40px;
+ 
 
   }
   .post_job_description_left{
@@ -31,8 +32,8 @@
    flex-direction: column;
    justify-content: space-around;
    padding: 30px;
-   /*color:rgb(37, 37, 37);*/
-
+  
+   font-weight: bold;
    background-color: transparent;
   }
   .post_job_description_left_text{
@@ -40,7 +41,7 @@
     font-size: 25px;
     font-weight: 1000;
     text-align: left;
-    Text-shadow: 2px 2px rgba(216, 189, 189, 0.3);
+    Text-shadow: 1px 2px rgba(216, 189, 189, 0.3);
    
   }
 
@@ -148,6 +149,9 @@ p{
 
 color:rgb(54, 53, 53);
 }
+#City ::after{
+height: 100px;
+}
 ::placeholder{
   font-size:0.8em ;
 }
@@ -176,20 +180,21 @@ option{
 
 .post_New_Job_submit{
   background-color: #1D6989;
-  width:200px;
+  width:160px;
   height: auto;
   color: white;
   padding: 5px;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 400;
   margin: 20px auto;
-  border: none;
+  border: 1px solid #1D6989;
+  transition: ease-in-out 0.2s;
 }
 button:hover{
   cursor: pointer;
   color:#1D6989 ;
   background-color: white;
-  border: 2px solid #1D6989;
+  border: 1px solid #1D6989;
 
 }
 .radiobutton_class{
@@ -212,6 +217,40 @@ padding-right: 70px;
   float: right;
   width: 200px;
 }
+/*user access msg start*/
+.login_msg{
+  margin-top: 140px;
+  height: 100px;
+  text-align: center;
+  padding: 60px;
+ 
+}
+#a_tag_login{
+  display: flex;
+  align-items: center;
+  margin-bottom: 110px;
+  text-decoration: none;
+}
+#login_button{
+  background-color: #1D6989;
+  width:150px;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin: auto;  
+  border: 2px solid #1D6989;
+  transition: ease-in-out 0.2s;
+}
+#login_button :hover{
+  cursor: pointer;
+    color:#1D6989 ;
+    background-color: white;
+    border: 2px solid #1D6989;
+}
+
+/*user access msg end*/
 
 @media only screen and (max-width: 1000px){
    .main_container{

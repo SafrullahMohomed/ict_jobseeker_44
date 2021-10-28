@@ -77,6 +77,7 @@
       padding: 0%;
       background-color: #04293500;
       margin-left: 5px;
+      
     }
 
     .login-list a {
@@ -98,20 +99,14 @@
       border-radius: 100px;
       margin-left: 4px;
       float: right;
+    
 
     }
     #user_name{
       margin-bottom: 2px !important;
     }
 
-    #user {
-      width: 22px;
-      height: 22px;
-      border-radius: 100px;
-      margin-left: 4px;
-      float: right;
-
-    }
+    
 
     /*here login bar of the header ends*/
 
@@ -309,7 +304,7 @@ ul{
 
           <!-- <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"> -->
 
-          <li class="login-list"><a href="<?php echo URL ?>Login" id="user_name"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></a></li>
+          <li class="login-list"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></li>
 
           <!-- <li class="login-list">|</li> -->
           <!-- <li class="login-list"><a href="<?php echo URL ?>Registration">Logout</a></li> -->
