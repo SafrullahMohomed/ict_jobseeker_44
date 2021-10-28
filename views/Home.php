@@ -14,9 +14,9 @@
     <title>Home</title>
     
      <style>
-
+ <?php include "CSS/Normalize/Normalize.css" ?>
     <?php include "CSS/Home.css" ?>
-    <?php include "CSS/normalize.css" ?>
+   
 
      </style>
     
@@ -162,7 +162,7 @@
           experience. That being said, if you could take a minute to post a
           review, we would so appreciate it.
         </div>
-        <div class="button" type="button" onclick="loadRateAndreview()" > More</div>
+        <div class="button" type="button" onclick="loadRateAndreview()" ><div class="btn_div">More</div> </div>
       </div>
       <div class="right_picture">
       <?php

@@ -52,7 +52,7 @@
            provides solutions that help companies work smarter, faster. IT Strategy. Business Consulting. DPA.
          </div>
          <div class="description_vedio">
-          <video autoplay muted controls id="vedioid">
+          <video  controls id="vedioid">
             <source src='<?php echo URL ?>views/video/description_vedio1.mp4' type="video/mp4">
           
             Your browser does not support the video tag.

@@ -21,7 +21,7 @@
     width: 100%;
     height: 226px;
     border-radius: 10px;
-    margin-top: 190px;
+    margin-top: 140px;
     
   }
   
@@ -47,7 +47,7 @@
     border-radius: 7px;
     border: 1px solid #1d6989;
     margin:10px auto;
-    padding-left: 5px;
+    padding-left: 10px;
   }
   
   .category select {
@@ -82,22 +82,10 @@
 /*search bar end*/
 .top_trending_categories_title  {
 
-  /*  font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
     font-size: 50px;
-    line-height: 75px;
- 
-    margin-bottom: 30px;
-    color: #084C8B;
-    text-align: center;
-    text-shadow: 0px 2px 4px #192a56 ;*/
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    margin-top: 30px;
     color: #084C8B;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
@@ -285,14 +273,16 @@ flex-direction: row;
    margin-left: 5px; 
 }
 .features_contract_row_contract_bid_container_count_bid_button{
+width: 60px;
 background-color: #273c75;
 color:#f5f6fa ;
 font-weight: 400;
+border-radius: 4px;
 border: 3px solid #273c75;
 }
 .features_contract_row_contract_bid_container_count_bid_button:hover{
 color:#273c75 ;
-background-color:#f5f6fa;
+background-color:white;
 border: 3px solid #273c75;
 cursor: pointer;
 }
@@ -303,17 +293,18 @@ cursor: pointer;
     color: white;
     padding: 5px;
     border-radius: 30px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 30px auto;
-    border: none;
-    font-size: 0.8em;
+    border: 1px solid #1D6989;
+    font-size:15px;
+    transition: ease-in-out 0.2s;
 }
 .load_more:hover{
     cursor: pointer;
     color:#1D6989 ;
     background-color: white;
 
-    border: 2px solid #1D6989;
+    border: 1px solid #1D6989;
 }
 
 

@@ -108,6 +108,10 @@
           <div class="Resource"><a href="#" id="link">Quizes</a></div>
         </div> -->
       </div>
+      <div class="btn_div">
+      <button type="button "class="load_more" id="loadmore_btn" onclick="loadmore()">Load More...</button>
+      </div>
+      
       <?php include 'Footer.php'?>
       <!-- <a src="../company_profile/company_profile.html"></a> -->
       <script src = "companies_search.js"></script>

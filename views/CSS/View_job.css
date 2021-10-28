@@ -46,13 +46,16 @@ button{
     border-color: #273c75;
     font-weight: 600;
     border-radius: 5px;
-    border: none;
-   
+    border: 1px solid #273c75;
+    transition: ease-in-out 0.2s;
 }
+   
+
 button:hover{
     background-color: white;
     color: #273c75;
     cursor: pointer;
+    border: 1px solid #273c75;
 }
 .social_media_icons{
     
@@ -87,7 +90,7 @@ cursor: pointer;
 .job_description_title{
     background-color:#227093 ;
     color: white;
-    height: 60px;
+    height: 40px;
     font-size: 30px;
     font-weight: 600;
     padding-left: 3px;
@@ -132,7 +135,7 @@ p{
 #clickme{
     background-color: white;
     color: gray;
-    box-shadow: 2px 3px 1px gray;
+    transition: ease-in-out 0.2s;
     border: 3px solid #227093 ;
     margin: auto;
     
@@ -160,6 +163,7 @@ background-color:#227093 ;
 margin-right: 20px;
 color: white;
 text-align: center;
+height: 30px;
 }
 .application_deadline{
    font-weight: bolder; 
@@ -194,14 +198,14 @@ text-align: center;
 .FAQ{
     width: 80%;
    
-    margin: auto;
+    margin: 60px auto;
 }
 
 .FAQ button{
     width:200px;
     background-color: white;
     color: gray;
-    box-shadow: 2px 3px 1px gray;
+    transition: ease-in-out 0.2s;
     border: 3px solid #227093 ;
     margin: 10px 10px 10px 0;
 }
@@ -221,7 +225,7 @@ text-align: center;
 .Q_and_A p{
     background-color:#227093 ;
     color: white;
-    height: 60px;
+    height: 40px;
     width: 100%;
     font-size: 30px;
     font-weight: 600;
