@@ -78,27 +78,21 @@ text-align: justify;
     font-weight: 500;
     margin: 30px 30px 0 0;
 }
-/* .social_media i{
+ .social_media i{
     font-size: 30px;
 }
 .social_media i:hover{
     color:#5eacda;
     cursor: pointer;  
-} */
-/*.social_icon::before{
-    
-    background-color: rgb(211, 206, 206);
+} 
+
+
+.fa-linkedin::before{
+   content: "\f08c" !important;
 }
-.social_icon::after{
-    
-    background-color: rgb(87, 212, 14);
-}*/
-/*.fa-linkedin::before{
-    content:none !important ;
-}*/
 
 /*social media*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
