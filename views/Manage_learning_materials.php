@@ -7,7 +7,7 @@
     <style>
         <?php include "CSS/Manage_learning_materials.css" ?> 
     </style>
-    <title>Forgot Password</title>
+    <title>Manage Learning Materials</title>
 </head>
 <body>
     <div class="header_div" >
