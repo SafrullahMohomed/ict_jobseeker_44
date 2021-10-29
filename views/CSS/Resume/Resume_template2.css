@@ -1,0 +1,109 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.resume_page {
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+/* left part */
+.leftbox {
+  color: white;
+  background-color: rgb(48 129 139);
+  width: 30%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  word-wrap: break-word;
+}
+
+.profile_image {
+  display: flex;
+  width: 80%;
+  margin: 3px 10px;
+  /* justify-content: center; */
+}
+.leftbox img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+/* header part name and other details */
+.resume_header {
+  margin-left: 10px;
+}
+
+/* candidate name */
+.candidate_name {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.candidate_personal_details{
+  margin-top:5px ;
+  margin-bottom: 5px;
+}
+
+/* skills part starts here */
+.skills {
+  margin-top: 10px;
+}
+
+.skills_title_head {
+  display: flex;
+  background-color: rgb(42 90 96);
+  margin-left: 0px;
+  padding-left: 10px;
+  height: 20px;
+  align-items: center;
+  font-weight: 700;
+}
+.skills_details {
+  text-align: left;
+  margin-left: 10px;
+}
+.skills_details ul {
+  padding-left: 16px;
+}
+
+/* left part ends here */
+
+/* right part starts here */
+
+.rightbox {
+  width: 70%;
+  margin: 20px;
+}
+
+.sub_title:not(.skills_title_head) {
+  color: rgb(42 90 96);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+.experience_job_title, .education_degree, .project_title{
+  font-size: 17px;
+  color: #474788;
+}
+
+.experience_employer, .education_main{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.experience_timeline, .education_timeline{
+  display:flex;
+  align-items: center;
+}
+
+ ul{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
