@@ -13,171 +13,147 @@
 <body>
 
     <!-- resume division -->
-    <div class="resume_page">
-        <!-- Header part starts here -->
-        <div class="resume_header">
-            <div class="candidate_name">Rowan Akitsan</div>
-            <div class="candidate_address">12, Main Street, <span class="candidate_city">Matara</span></div>
-            <div class="candidate_email">Rowanakn@gmail.com</div>
-            <div class="candidate_phone">+94771234567</div>
-        </div>
-        <!-- Header part ends here -->
+    <div class="resume-page">
+        <div class="basic-info">
+            <div class="profile-image"><img src="/ict_jobseeker_44/views/images/lulakshi/lulz.png" alt=""></div>
 
-        <!-- professional summary starts here -->
-        <div class="professional_summary">
-            <div class="summary_title sub_title">Professional Summary</div>
-            <div class="summary_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque omnis aliquam quidem eum? Quidem quas, fugiat sapiente eveniet dolorem deserunt deleniti repellendus voluptatum! Deserunt magni quos quibusdam commodi exercitationem veniam perferendis error recusandae vel aperiam minus deleniti neque vero, eligendi voluptatum delectus, saepe iure natus consectetur excepturi incidunt, molestias optio.zk</div>
-        </div>
-
-        <!-- skills starts here -->
-        <div class="skills ">
-            <div class="skills_title_head sub_title">Skills</div>
-            <div class="skills_details">
-                <ul>
-                    <li>Skill 1</li>
-                    <li>Skill 2</li>
-                    <li>Skill 3</li>
-                    <li>Skill 4</li>
-                    <li>Skill 5</li>
-                </ul>
+            <div class="name-summary">
+                <div class="candidate-name">Lulashi Hettiarachchi</div>
+                <div class="candidate-summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem, non nemo amet at provident similique molestias recusandae tempora perspiciatis praesentium? Numquam veritatis velit optio doloribus enim aliquam cum voluptatibus voluptatem praesentium obcaecati cupiditate illo quisquam repudiandae id exercitationem repellendus blanditiis error, deleniti amet. Nisi eius repudiandae consectetur suscipit harum?</div>
             </div>
         </div>
 
 
-        <!-- experience starts here -->
-        <div class="experience_title_head sub_title">Experience</div>
-        <div class="experience">
-            <!-- experience 1 -->
-            <div class="experience1 experience_main">
+        <!-- name and summary part ends here -->
 
-                <!-- first div for experient details and timelines -->
-                <div class="experience_timeline">
-                    <div class="experience_employer">
-                        <div class="experience_job_title">Software Engineer</div>
-                        <div class="experience_employer">ABC Technologies</div>
+        <!-- main division starts here  -->
+        <div class="main-div">
+            <div class="first-col">
+
+                <!-- experience -->
+                <div class="experience">
+                    <div class="experience-title"><span class="experience-icon"><i class="fa fa-suitcase" style="font-size:25px;color:#45647e"></i>
+                        </span> Work Experience</div>
+                    <hr>
+
+
+                    <!-- experience 1 -->
+                    <div class="experience1 experience-main">
+                        <div class="experience-timeline">
+                            2019-09 -</br> current
+                        </div>
+                        <div class="experience-details">
+                            <div class="experience-job-title">SOFTWARE ENGINEER</div>
+                            <div class="experience-employer">ABC Technologies -<span class="experience-location">New York, USA</span></div>
+
+                            <!-- experience points -->
+                            <div class="experience-detail-points">
+                                <ul>
+                                    <li>experience point 1</li>
+                                    <li>experience point 2</li>
+                                    <li>experience point 3</li>
+                                    <li>experience point 4</li>
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="experience_time_city">
-                        <div class="timeline">September 2019 - current</div>
-                        <div class="experience_location">New York, USA</div>
+
+                    <!-- experience 2 -->
+                    <div class="experience2 experience-main">
+                        <div class="experience-timeline">
+                       2016-02 -</br> 2018-03
+                        </div>
+                        <div class="experience-details">
+                            <div class="experience-job-title">FRONT-END WEB DEVELOPER</div>
+                            <div class="experience-employer">Binary Bits -<span class="experience-location">Colombo, Srilanka</span></div>
+
+                            <!-- experience points -->
+                            <div class="experience-detail-points">
+                                <ul>
+                                    <li>experience point 1</li>
+                                    <li>experience point 2</li>
+                                    <li>experience point 3</li>
+                                    <li>experience point 4</li>
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
-                <!-- experience points  -->
-                <div class="experience_details">
-                    <ul>
-                        <li>experience point 1</li>
-                        <li>experience point 2</li>
-                        <li>experience point 3</li>
-                        <li>experience point 4</li>
-                    </ul>
+                <!-- experience ends here -->
+
+
+                <!-- education -->
+                <div class="education">
+
+                    <div class="education-title"><span class="education-icon"><i class="fa fa-mortar-board" style="font-size:25px;color:#45647e"></i>
+                        </span>Education</div>
+                    <hr>
+
+                    <!-- education 1 -->
+                    <div class="education1 education-main">
+                        <div class="education-timeline">
+                            2009-10 -</br> 2012-02
+                        </div>
+                        <div class=education-details">
+                            <div class="education-degree">MSC IN COMPUTER SCIENCE</div>
+                            <div class="education-employer">University of Oxford -<span class="education-location">Oxford, UK</span></div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- experience 2 -->
+                    <div class="education2 education-main">
+                        <div class="education-timeline">
+                            2019-09 -</br> current
+                        </div>
+                        <div class="education-details">
+                            <div class="education-degree">BCS IN SOFTWARE ENGINEERING</div>
+                            <div class="education-employer">University of Kelaniya -<span class="education-location">Kelaniya, Srilanka </span></div>
+
+                        </div>
+                    </div>
                 </div>
+
+                <!-- education ends here -->
             </div>
 
 
+            <!-- second column starts here -->
+            <div class="second-col">
+                <div class="contact">
+                    <div class="education-title"><span class="education-icon"><i class='fa fa-address-book' style='font-size:25px;color:#45647e'></i>
+                        </span>Contact</div>
+                    <hr>
+                    <div class="candidate-address candidate-personal-details"><span class="address-emoji"><i class="fa fa-map-marker" style="font-size:18px;color:#45647e;width:20px"></i>
+                        </span>12, Main Street, <span class="candidate-city ">Matara</span></div>
+                    <div class="candidate-email candidate-personal-details"><i class="fa fa-envelope" style="font-size:18px;color:#45647e;width:20px"></i>
+                        Rowanakn@gmail.com</div>
+                    <div class="candidate-phone candidate-personal-details"><i class="fa fa-phone" style="font-size:18px;color:#45647e;width:20px"></i>
+                        +94771234567</div>
 
-
-            <!-- experience 2 -->
-            <div class="experience2 experience_main">
-
-                <!-- first div for experience details and timelines -->
-                <div class="experience_timeline">
-                    <div class="experience_employer">
-                        <div class="experience_job_title">Frond-end web developer</div>
-                        <div class="experience_employer">Binary Bits </div>
-                    </div>
-                    <div class="experience_time_city">
-                        <div class="timeline"> february 2016 - march 2018</div>
-                        <div class="experience_location">Colombo, Srilanka</div>
-                    </div>
                 </div>
 
-                <!-- experience points  -->
-                <div class="experience_details">
-                    <ul>
-                        <li>experience point 1</li>
-                        <li>experience point 2</li>
-                        <li>experience point 3</li>
-                        <li>experience point 4</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- Education starts here -->
-        <div class="education_title_head sub_title">Education</div>
-        <div class="education">
-
-            <!-- education 1-->
-            <div class="education1 education_main">
-
-                <!-- first div for education details and timelines -->
-                <div class="education_timeline">
-                    <div class="education_provider">
-                        <div class="education_degree">Msc in Computer Science</div>
-                        <div class="education_institute">University of Oxford</div>
-                    </div>
-                    <div class="education_time_city">
-                        <div class="timeline">October 2009 - February 2012</div>
-                        <div class="education_location">Oxford, UK </div>
+                <div class="skills">
+                    <div class="education-title"><span class="education-icon"><i class="fa fa-trophy" style="font-size:25px;color:#45647e"></i>
+                        </span>Skills</div>
+                    <hr>
+                    <div class="skill-details">
+                        <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                            <li>Skill 4</li>
+                            <li>Skill 5</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-
-            <!-- education 2-->
-            <div class="education2 education_main">
-
-                <!-- first div for education details and timelines -->
-                <div class="education_timeline">
-                    <div class="education_provider">
-                        <div class="education_degree">Bsc in Software Engineering</div>
-                        <div class="education_insttitute">University of Kelaniya</div>
-                    </div>
-                    <div class="education_time_city">
-                        <div class="timeline">September 2004 - March 2008</div>
-                        <div class="education_location">Colombo 04, Srilanka</div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-
-
-
-        <!-- project detals starts here -->
-        <div class="project">
-            <div class="project_title_head sub_title">Project</div>
-
-            <!-- project1 -->
-            <div class="project1">
-                <div class="project_title">E-Commerce website</div>
-                <div class="project_details">
-                    <ul>
-                        <li>project point 1</li>
-                        <li>project point 2</li>
-                        <li>project point 3</li>
-                        <li>project point 4</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- project2 -->
-            <div class="project2">
-                <div class="project_title">Colombo 04</div>
-                <div class="project_details">
-                    <ul>
-                        <li>project point 1</li>
-                        <li>project point 2</li>
-                        <li>project point 3</li>
-                        <li>project point 4</li>
-                    </ul>
-                </div>
-            </div>
-
+            <!-- second column ends here  -->
         </div>
 
 
