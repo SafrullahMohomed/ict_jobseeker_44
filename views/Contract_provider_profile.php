@@ -19,6 +19,17 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
+
+      
+      <!-- check user loging  -->
+
+      <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Contract provider" ): ?>  
+         <!-- edit your profile -->
+    <div class="edit_profile">
+      <a href="<?php echo URL ?>Contract_provider/Contract_provider_account"><button>Edit your profile</button></a>  
+    </div>
+   <?php endif; ?>
+
     <div class="main_container">
         <div class="main_details">
             <div class="picture">
@@ -121,6 +132,7 @@
                  
              </div>
              <hr>
+            
              <div class="review_row">
                 <div class="user_picture">
                 <img src='<?php echo URL ?>views/images/Contract_provider_profile/review_user2.jpg' >
@@ -150,6 +162,8 @@
              
              <hr>
          </div>
+         <!-- rate us box show only for others except owner -->
+         <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Contract provider") : ?>
          <div class="rate_us_box">
           <div class="rate_us_text">
               Rate me
@@ -167,7 +181,7 @@
           </div>
           <button class="loadmore_button">Submit</button>
       </div>
-
+<?php endif;?>
     </div>
     <?php include 'Footer.php'?>
 </body>

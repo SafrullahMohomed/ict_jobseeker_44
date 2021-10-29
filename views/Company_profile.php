@@ -23,6 +23,17 @@
 </div>
       <!-- header part end  -->
     <div class="main_container">
+
+    <!-- check user loging  -->
+
+    <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Company" ): ?>  
+      <!-- edit your profile -->
+    <div class="edit_profile">
+      <a href="<?php echo URL ?>Company/company_account"><button>Edit your profile</button></a>
+      
+    </div>
+    <?php endif; ?>
+
         <div class="main_details">
             <div class="picture">
             <img src='<?php echo URL ?>views/images/Company_profile/company_logo1.jfif' >
@@ -57,7 +68,7 @@
           
             Your browser does not support the video tag.
           </video>
-                   </div>
+           </div>
          <div class="sub_parts">
       <div class="email">
           <div class="email_text">

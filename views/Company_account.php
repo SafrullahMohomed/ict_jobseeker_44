@@ -101,8 +101,9 @@
        
         <div class="my_jobs_row_container">
 
-        <a href="<?php echo URL ?>Jobseeker/Search_jobseeker" style="text-decoration: none;">
-        <div class="my_jobs_row" title = "click to view details of applied jobseekers" >
+        
+        <div class="my_jobs_row" title = "click to view details of applied jobseekers" onclick="return loadAppliedJobseekers()">
+        <!-- <a href="<?php echo URL ?>Jobseeker/Search_jobseeker" style="text-decoration: none;"> -->
                <div class="job_id">
                    <div class="job_id_text">
                       Job ID
@@ -127,13 +128,14 @@
         </a>
         <a href="<?php echo URL ?>jobs/Post_job" style="text-decoration: none;">
         <i  title="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
-    </a>
+         </a>
                 
                 <i
                  title="Delete post" class="fa fa-trash-o" aria-hidden="true"></i>
             </div>
+            <!-- </a> -->
             </div>
-</a>
+
            
             
             <div title= "click to view details of applied jobseekers" class="my_jobs_row">
