@@ -21,6 +21,7 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end -->
+      <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>
     <div class="resource-search-part">
         <div class="theme-image">
        
@@ -111,7 +112,11 @@
       <div class="btn_div">
       <button type="button "class="load_more" id="loadmore_btn" onclick="loadmore()">Load More...</button>
       </div>
-      
+      <?php endif; ?>
+    <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Jobseeker") : ?>
+        <div class="login_msg"> Before apply for a job you should login as Jobseeker</div>
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
+        <?php endif; ?>  
       <?php include 'Footer.php'?>
       <!-- <a src="../company_profile/company_profile.html"></a> -->
       <script src = "companies_search.js"></script>

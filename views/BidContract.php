@@ -19,7 +19,7 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
-    
+      <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>
        <div class="main_container">
 
 
@@ -124,6 +124,11 @@
 
         </div>
         <?php include 'ApplyContracts.php'?>
+        <?php endif; ?>
+    <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Jobseeker") : ?>
+        <div class="login_msg"> Before apply for a job you should login as Jobseeker</div>
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
+        <?php endif; ?>  
         <?php include 'Footer.php'?>
 
 </div>

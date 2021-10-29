@@ -54,7 +54,7 @@
     font-size: 16px;
     font-weight: 600;
     color: rgb(6, 8, 124);
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 #users select :focus{
@@ -71,7 +71,7 @@
 .right-container form
 {
     padding-left: 40px;
-    padding-top: 30px;
+    padding-top: 15px;
 }
 .right-container input
 {
@@ -87,7 +87,7 @@
     background: transparent;
     height: 30px;
     outline: none;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     width: 80%;
     font-size: 14px;
     font: pt-serif caption;
@@ -119,7 +119,7 @@
 }
 .right-container input[type="text"]:hover,input[type="email"]:hover, input[type="password"]:hover
 {
-    /* padding-bottom: 15px; */
+    padding-bottom: 8px;
     border-bottom: 2px solid rgb(6, 8, 124);
     transition: 0.5s;
     

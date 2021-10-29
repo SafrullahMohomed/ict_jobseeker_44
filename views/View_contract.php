@@ -45,7 +45,7 @@
         
                     </div>
                    
-                    <button>Bid Now</button>
+                    <button onclick="BidContract()">Bid Now</button>
         
                 </div>
                 <div class="job_description_title">
