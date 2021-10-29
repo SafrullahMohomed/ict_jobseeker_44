@@ -1,84 +1,112 @@
 * {
-    font-family: "Times New Roman", Times, serif;
+    font-family: Century Gothic;
   }
   
-  .resume_page {
+  .resume-page {
+    display:flex;
+    flex-direction: column;
     width: 700px;
     margin: auto;
     border: 1px solid black;
-    padding-left: 20px;
+    padding: 20px 20px 50px 20px;
+    /* background-color: rgb(84, 104, 64); */
+    color: rgb(67, 69, 82);
+  
   }
   
-  /* header part name and other details */
-  .resume_header {
-    text-align: center;
+  hr{
+    width:80%;
+  }
+.basic-info{
+  display:flex;
+  flex-direction: row;
+}
+
+.profile-image{
+  display:flex;
+  width:80%;
+  margin:auto;
+  margin-right: 5px;
+
+}
+
+.profile-image img{
+  /* width:80%; */
+  border-radius: 50%;
+  width:150px;
+  height: auto;
+
+}
+  .name-summary{
+    
   }
   
-  /* candidate name */
-  .candidate_name {
-    font-size: 3em;
-    font-weight: 900;
-   
+  .candidate-name{
+    color:#45647e;
+    font-size: 35px;
+    margin-top:20px;
+    margin-bottom: 10px;
   }
   
-  .candidate_address, .candidate_city{
-      font-size: 18px;
-  }
-  
-  /* sub titles */
-  
-  .sub_title {
-  
-    font-size: 30px;
-    margin-top: 20px;
-  }
-  
-  /* experience starts here */
-  
-  .experience {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  
-  .experience_main {
-    flex-direction: column;
-    margin: 10px 0px 0px 0px;
-  }
-  
-  .experience_timeline {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 17px;
-    /* font-weight: bold; */
-  }
-  
-  .experience_employer {
-  }
-  
-  .experience_time_city {
-    margin-right: 20px;
-  }
-  
-  /* experience ends here */
-  
-  /* education starts here */
-  .education {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .education_time_city {
-    margin-right: 20px;
-  }
-  
-  .education_timeline {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 17px;
-    /* font-weight: bold; */
-    margin-top: 10px;
-  }
-  
+.candidate-summary{
+  text-align: justify;
+  width:95%;
+  margin-bottom: 30px;
+
+}
+
+.main-div{
+  display: flex;
+  flex-direction: row;
+}
+
+.first-col{
+  width:470px;
+ 
+}
+
+.second-col{
+  margin-left: 20px;
+}
+.experience-main, .education-main{
+  display:flex;
+  margin-top: 10px;
+
+}
+.experience-timeline, .education-timeline{
+width:100px;
+font-weight: 600;
+
+
+}
+
+.experience-title, .education-title{
+  font-weight: 600;
+  font-size: 25px;
+  color:#45647e;
+  margin-top: 20px;
+}
+
+.experience-job-title, .education-degree{
+  font-weight: 600;
+}
+
+
+/* contact details starts here */
+
+.candidate-personal-details{
+  margin-top:3px;
+}
+
+.experience-employer, .education-employer{
+  font-style: italic;
+}
+
+/* skills details */
+.skills{
+  margin-top: 20px;
+}
+
+ul{
+  padding-left:18px;
+}

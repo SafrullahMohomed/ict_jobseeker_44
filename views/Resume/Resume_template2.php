@@ -156,9 +156,9 @@
 
                     <!-- first div for education details and timelines -->
                     <div class="education_provider">
-                        <div class="education_degree">BSC IN Software Engineering</div>
+                        <div class="education_degree">BSC IN SOFTWARE ENGINEERING</div>
                         <div class="education_institute">University of Kelaniya</div>
-                        <div class="education_location">Colombo 04, Srilanka</div>
+                        <div class="education_location">Kelaniya, Srilanka</div>
                     </div>
 
                     <div class="education_timeline">
