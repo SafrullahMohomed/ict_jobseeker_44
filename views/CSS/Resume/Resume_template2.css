@@ -5,7 +5,7 @@
 .resume_page {
   display: flex;
   flex-direction: row;
-  width: 700px;
+  width: 660px;
   margin: auto;
   border: 1px solid black;
 }
@@ -48,6 +48,11 @@
   margin-bottom: 5px;
 }
 
+/* candidate address */
+
+/* .experience_location, .education_location{
+  font-style: italic;
+} */
 /* skills part starts here */
 .skills {
   margin-top: 10px;
@@ -81,7 +86,7 @@
 
 .sub_title:not(.skills_title_head) {
   color: rgb(42 90 96);
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 5px;
   font-size: 25px;
 }
