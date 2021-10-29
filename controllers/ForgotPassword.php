@@ -42,12 +42,12 @@ class ForgotPassword extends Controller
         }
         if(empty($data['email_err']))
         {
-            if($this->model->isRegisteredUser($data['email']))
+            if($this->model->check_verification($data['email']))
             {
                 $passwordToken = openssl_random_pseudo_bytes(16);
                 $passwordToken = bin2hex($passwordToken);
                 $_SESSION['passwordToken'] =$passwordToken ;
-                $this->model->insert_reg_data($data,  $passwordToken);
+                $this->model->run_insert_password_data($data,  $passwordToken);
                 $this->model->sendMail($data['email'],$passwordToken,$data['fname']);
                 $info['mail_msg'] ="We have sent an email with a confirmation link to your email address. In order to reset password, please click the confirmation link.";
             
