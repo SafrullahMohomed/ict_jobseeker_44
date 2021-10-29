@@ -1,0 +1,84 @@
+* {
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .resume_page {
+    width: 700px;
+    margin: auto;
+    border: 1px solid black;
+    padding-left: 20px;
+  }
+  
+  /* header part name and other details */
+  .resume_header {
+    text-align: center;
+  }
+  
+  /* candidate name */
+  .candidate_name {
+    font-size: 3em;
+    font-weight: 900;
+   
+  }
+  
+  .candidate_address, .candidate_city{
+      font-size: 18px;
+  }
+  
+  /* sub titles */
+  
+  .sub_title {
+  
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  
+  /* experience starts here */
+  
+  .experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .experience_main {
+    flex-direction: column;
+    margin: 10px 0px 0px 0px;
+  }
+  
+  .experience_timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+    /* font-weight: bold; */
+  }
+  
+  .experience_employer {
+  }
+  
+  .experience_time_city {
+    margin-right: 20px;
+  }
+  
+  /* experience ends here */
+  
+  /* education starts here */
+  .education {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .education_time_city {
+    margin-right: 20px;
+  }
+  
+  .education_timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+    /* font-weight: bold; */
+    margin-top: 10px;
+  }
+  

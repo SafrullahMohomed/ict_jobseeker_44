@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_template3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
@@ -16,21 +17,21 @@
         <!-- Header part starts here -->
         <div class="resume_header">
             <div class="candidate_name">Rowan Akitsan</div>
-            <div class="candidate_name">12, Main Street, Matara</div>
-            <div class="candidate_name">Rowanakn@gmail.com</div>
-            <div class="candidate_name">+94771234567</div>
+            <div class="candidate_address">12, Main Street, <span class="candidate_city">Matara</span></div>
+            <div class="candidate_email">Rowanakn@gmail.com</div>
+            <div class="candidate_phone">+94771234567</div>
         </div>
         <!-- Header part ends here -->
 
         <!-- professional summary starts here -->
         <div class="professional_summary">
-            <div class="summary_title">Professional Summary</div>
+            <div class="summary_title sub_title">Professional Summary</div>
             <div class="summary_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque omnis aliquam quidem eum? Quidem quas, fugiat sapiente eveniet dolorem deserunt deleniti repellendus voluptatum! Deserunt magni quos quibusdam commodi exercitationem veniam perferendis error recusandae vel aperiam minus deleniti neque vero, eligendi voluptatum delectus, saepe iure natus consectetur excepturi incidunt, molestias optio.zk</div>
         </div>
 
         <!-- skills starts here -->
-        <div class="skills">
-            <div class="skills_title_head">Skills</div>
+        <div class="skills ">
+            <div class="skills_title_head sub_title">Skills</div>
             <div class="skills_details">
                 <ul>
                     <li>Skill 1</li>
@@ -44,13 +45,24 @@
 
 
         <!-- experience starts here -->
+        <div class="experience_title_head sub_title">Experience</div>
         <div class="experience">
-            <div class="experience_title_head">Experience</div>
             <!-- experience 1 -->
-            <div class="experience1">
-                <div class="experience_job_title">Software Engineer</div>
-                <div class="experience_employer">ABC technologies</div>
-                <div class="experience_city">Colombo 04</div>
+            <div class="experience1 experience_main">
+
+                <!-- first div for experient details and timelines -->
+                <div class="experience_timeline">
+                    <div class="experience_employer">
+                        <div class="experience_job_title">Software Engineer</div>
+                        <div class="experience_employer">ABC Technologies</div>
+                    </div>
+                    <div class="experience_time_city">
+                        <div class="timeline">September 2019 - current</div>
+                        <div class="experience_location">New York, USA</div>
+                    </div>
+                </div>
+
+                <!-- experience points  -->
                 <div class="experience_details">
                     <ul>
                         <li>experience point 1</li>
@@ -61,11 +73,25 @@
                 </div>
             </div>
 
-            <!-- experience2 -->
-            <div class="experience2">
-                <div class="experience_job_title">Front-end development</div>
-                <div class="experience_employer">Bytecode technologies</div>
-                <div class="experience_city">Kandy</div>
+
+
+
+            <!-- experience 2 -->
+            <div class="experience2 experience_main">
+
+                <!-- first div for experience details and timelines -->
+                <div class="experience_timeline">
+                    <div class="experience_employer">
+                        <div class="experience_job_title">Frond-end web developer</div>
+                        <div class="experience_employer">Binary Bits </div>
+                    </div>
+                    <div class="experience_time_city">
+                        <div class="timeline"> february 2016 - march 2018</div>
+                        <div class="experience_location">Colombo, Srilanka</div>
+                    </div>
+                </div>
+
+                <!-- experience points  -->
                 <div class="experience_details">
                     <ul>
                         <li>experience point 1</li>
@@ -77,48 +103,54 @@
             </div>
 
         </div>
+
 
         <!-- Education starts here -->
+        <div class="education_title_head sub_title">Education</div>
         <div class="education">
-            <div class="education_title_head">Education</div>
 
-            <!-- education 1 -->
-            <div class="education1">
-                <div class="education_institute">University of colombo </div>
-                <div class="education_degree">Bsc in Computer Science</div>
-                <div class="education_city">Colombo</div>
-                <div class="education_country">Sri Lanka</div>
-                <div class="education_details">
-                    <ul>
-                        <li>education point 1</li>
-                        <li>education point 2</li>
-                        <li>education point 3</li>
-                        <li>education point 4</li>
-                    </ul>
+            <!-- education 1-->
+            <div class="education1 education_main">
+
+                <!-- first div for education details and timelines -->
+                <div class="education_timeline">
+                    <div class="education_provider">
+                        <div class="education_degree">Msc in Computer Science</div>
+                        <div class="education_institute">University of Oxford</div>
+                    </div>
+                    <div class="education_time_city">
+                        <div class="timeline">October 2009 - February 2012</div>
+                        <div class="education_location">Oxford, UK </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- education2 -->
-            <div class="education1">
-                <div class="education_institute">Diploma in Information technologies</div>
-                <div class="education_degree">Vocational Training Authority</div>
-                <div class="education_city">Matara</div>
-                <div class="education_country">Sri Lanka</div>
-                <div class="education_details">
-                    <ul>
-                        <li>education point 1</li>
-                        <li>education point 2</li>
-                        <li>education point 3</li>
-                        <li>education point 4</li>
-                    </ul>
+
+            <!-- education 2-->
+            <div class="education2 education_main">
+
+                <!-- first div for education details and timelines -->
+                <div class="education_timeline">
+                    <div class="education_provider">
+                        <div class="education_degree">Bsc in Software Engineering</div>
+                        <div class="education_insttitute">University of Kelaniya</div>
+                    </div>
+                    <div class="education_time_city">
+                        <div class="timeline">September 2004 - March 2008</div>
+                        <div class="education_location">Colombo 04, Srilanka</div>
+                    </div>
                 </div>
             </div>
+
 
         </div>
+
+
+
 
         <!-- project detals starts here -->
         <div class="project">
-            <div class="project_title">Project</div>
+            <div class="project_title_head sub_title">Project</div>
 
             <!-- project1 -->
             <div class="project1">
@@ -150,6 +182,7 @@
 
 
     </div>
+
 
 
 </body>
