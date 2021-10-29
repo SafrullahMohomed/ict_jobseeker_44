@@ -14,6 +14,7 @@
 <div class="header_div" >
         <?php include 'Header.php'?>
 </div>
+<?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>
     <div class="WelcomeBanner">
         <div class="PersonalDetails">
             <p id="name">Hello Sandaruwan,</p>
@@ -107,6 +108,11 @@
         <input type="submit" id="submit" name="submit"  class="submit_button" onclick="return validateForm()"><br>
        </div>
     </form>
+    <?php endif; ?>
+    <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Jobseeker") : ?>
+        <div class="login_msg"> Before apply for a job you should login as Jobseeker</div>
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
+        <?php endif; ?>  
     <?php include 'Footer.php'?>
     <script src="<?php echo URL ?>views/JS/JobSeekerAccount.js"></script>
 </body>

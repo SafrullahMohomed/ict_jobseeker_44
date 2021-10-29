@@ -31,12 +31,12 @@
                 </div>
                 <form action="http://localhost/ict_jobseeker_44/Login/UserAuthentication" method="POST"  name="myForm">
                     <p id="label">Email</p>
-                    <input type="email" name="email" placeholder="Enter Your Email"   onfocus="hideFormError(email_error)"><br>
+                    <input type="email" name="email" placeholder="Enter Your Email" required onfocus="hideFormError(email_error)"><br>
                     <span id="email_error" class="error"><?php echo $data['email_err']?></span>
                     <p id="label">Password</p>
-                    <input type="password" name="password" placeholder="Enter Your Password"  onfocus="hideFormError(password_error)">
+                    <input type="password" name="password" placeholder="Enter Your Password" required onfocus="hideFormError(password_error)">
                     <br><span id="password_error" class="error"><?php echo $data['password_err']?></span><br>
-                    <input type="submit" id="submit" name="submit" value="Login" ><br>
+                    <input type="submit" id="submit" name="submit" value="Login"  onclick="return validateForm()"><br>
                     <a href="<?php echo URL?>ForgotPassword">Forgot Your Password?</a><br>
                 </form>
             </div>
