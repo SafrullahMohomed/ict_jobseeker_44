@@ -2,17 +2,14 @@
 
 * {
   font-family: "Quicksand", sans-serif;
-
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   border-radius: 7px;
-  
 }
-
-
 
 /*division for jobs search part starts here*/
 
@@ -27,7 +24,6 @@ html, body {
   height: 226px;
   border-radius: 10px;
   margin-top: 140px;
-  
 }
 
 .job-search-box {
@@ -52,7 +48,7 @@ html, body {
   width: 277px;
   border-radius: 7px;
   border: 1px solid #1d6989;
-  margin:10px auto;
+  margin: 10px auto;
   padding-left: 10px;
 }
 
@@ -136,31 +132,34 @@ html, body {
 /* counting part ends here */
 
 /*post job button start here*/
-.post_button{
+.post_button {
   width: 80%;
   height: 80px;
   margin: auto;
   display: flex;
   justify-content: space-around;
 }
-.post_btn{
-    width: 150px;
-    height: 40px;
-    background-color: white;
-    color: #273c75;
-    
-    font-size: 18px;
-    border-color: #273c75;
-    font-weight: 600;
-    border-radius: 5px;
-    border: 1px solid #273c75;
-    transition: ease-in-out 0.2s;
+.post_job, .post_contracts {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  color: #273c75;
+
+  font-size: 18px;
+  border-color: #273c75;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid #273c75;
+  transition: ease-in-out 0.2s;
 }
-.post_btn:hover{
-    color: white; 
-    background-color: #273c75;
-    cursor: pointer;
-    border: 1px solid #273c75;
+.post_job:hover, .post_contracts:hover {
+  color: white;
+  background-color: #273c75;
+  cursor: pointer;
+  border: 1px solid #273c75;
 }
 /*post job button start here*/
 
@@ -192,6 +191,7 @@ html, body {
   font-size: 44px;
   margin-bottom: 14px;
 }
+
 .our-services #services {
   font-weight: bold;
 }
@@ -227,35 +227,48 @@ html, body {
   margin: 30px;
 }
 
+.service-name {
+  width: 450px;
+  height: 150px;
+  box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%),
+    0 6px 20px 0 rgb(90 127 210 / 15%);
+  border: 1px solid #91a4c7;
+  border-radius: 7px;
+}
+
 /* .create-resume, .job-rankings, .learning-materials, .counselling{
     border: 1px solid blue;
     width:230px;
     height:100px;
 
 } */
-.service-name {
-  width: 285px;
-  height: 100px;
+.service-name-header {
+  width: 100%;
+  margin: auto;
+  height: 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 3px;
-  border: 1px solid #91a4c7;
+  padding-top: 15px;
+  /* border: 1px solid #91a4c7; */
   border-radius: 7px;
   font-weight: 600;
   font-size: 24px;
   text-align: center;
-  box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%), 0 6px 20px 0 rgb(90 127 210 / 15%);
+  /* box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%), 0 6px 20px 0 rgb(90 127 210 / 15%); */
 }
 
-.service-name:hover{
+.service-name:hover {
   cursor: pointer;
   box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
-  }
-
+}
 
 .service-text {
   text-decoration: none;
+  width: 90%;
+  margin: auto;
+  text-align: justify;
 }
 /* service boxes ends here */
 
@@ -299,23 +312,23 @@ img {
   margin-bottom: 20px;
 }
 .description {
-  font-size:18px;
+  font-size: 18px;
   font-weight: 600;
   text-align: justify;
 }
 .button {
-    color: rgb(255, 255, 255);
-    background-color: #1d6989;
-    height: 30px;
-    width: 120px;
-    border-radius: 15px;
-    transition: ease-in-out 0.2s;
-    border: 1px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    
+  color: rgb(255, 255, 255);
+  background-color: #1d6989;
+  height: 30px;
+  width: 120px;
+  border-radius: 15px;
+  transition: ease-in-out 0.2s;
+  border: 1px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+
   /*
   color: white;
   font-size: 16px;
@@ -330,9 +343,9 @@ img {
   margin:auto;
   transition: ease-in-out 0.2s;*/
 }
-.button .btn_div{
-text-align: center;
-width: 120px;
+.button .btn_div {
+  text-align: center;
+  width: 120px;
 }
 .button:hover {
   cursor: pointer;
@@ -340,7 +353,6 @@ width: 120px;
   background-color: white;
   border: 1px solid #1d6989;
 }
-
 
 /* review part ends here */
 
@@ -390,16 +402,17 @@ width: 120px;
   font-size: 25px;
   font-weight: bolder;
   transform: translate(0%, 73%);
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 .contactus-details {
   transform: translate(0%, 25%);
   position: relative;
-}  
+}
 
-.contactus-details .footer-list, .contactus-details .footer-list a:link{
- color:white;
-}   
+.contactus-details .footer-list,
+.contactus-details .footer-list a:link {
+  color: white;
+}
 
 /* footer second column starts here */
 .services-link-header,
@@ -454,8 +467,6 @@ width: 120px;
 
 /* footer ends here */
 
-
-
 /* media queries */
 
 /* for review parts */
@@ -478,15 +489,41 @@ width: 120px;
   /* review part ends here */
 }
 
-/* media queries starts here */
-@media only screen and (max-width: 952px){
-  /* to adjust the job search part */
-  .job-search-box{
+/* media queries for service boxes @ 975 */
+
+@media only screen and (max-width: 985px) {
+  /* for service boxes */
+  .box-row {
     display: flex;
     flex-direction: column;
-    height:auto;
+    align-items: center;
   }
-  
+
+  .box-row a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .first-row {
+    margin: 30px 30px 0px 30px;
+  }
+  .second-row {
+    margin: 0px 30px 30px 30px;
+  }
+  /* service boxes ends here */
+}
+
+
+/* media queries starts here */
+@media only screen and (max-width: 952px) {
+  /* to adjust the job search part */
+  .job-search-box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -507,22 +544,20 @@ width: 120px;
 }
 
 @media only screen and (max-width: 690px) {
-/* header starts here */
-/* login */
-.login-list a {
-  text-decoration: none;
-  color: white;
-  font-weight: xx-large;
-  transition: ease-in-out 0.2s;
-  font-size: 16px;
-}
-  
+  /* header starts here */
+  /* login */
+  .login-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: xx-large;
+    transition: ease-in-out 0.2s;
+    font-size: 16px;
+  }
 
-  
   /* review part */
-  .main_container{
-    height:100%;
-    padding:20px;
+  .main_container {
+    height: 100%;
+    padding: 20px;
   }
   .main_container .tittle {
     font-size: 22px;
@@ -547,70 +582,83 @@ width: 120px;
   }
 
   /* for service boxes */
-  .box-row{
+  .box-row {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .box-row a{
+  .box-row a {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
   }
 
-  .first-row{
+  .first-row {
     margin: 30px 30px 0px 30px;
   }
-  .second-row{
+  .second-row {
     margin: 0px 30px 30px 30px;
   }
-/* service boxes ends here */
+  /* service boxes ends here */
 
-/* counter part starts here */
-  .counting-part{
+  /* counter part starts here */
+  .counting-part {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height:100%;
-}
+    height: 100%;
+  }
 
-/* counting values */
-.posted-jobs-value, .companies-value, .jobseekers-value {
- font-size: 25px;
-}
+  /* counting values */
+  .posted-jobs-value,
+  .companies-value,
+  .jobseekers-value {
+    font-size: 25px;
+  }
 
-.descriptive-text{
-  font-size: 20px;
-  margin:auto 10px;
-}
+  .descriptive-text {
+    font-size: 20px;
+    margin: auto 10px;
+  }
 }
 
 @media only screen and (max-width: 570px) {
- /* navigation list starts here */
- .navigation-menu ul li {
-  display: flex;
-  flex-direction: column;
-  margin-right: 10px;
-}
+  /* navigation list starts here */
+  .navigation-menu ul li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
 
-.navigation-menu a{
-  font-size: 16px;
-}
-.navigation-header{
-  height: 100%;
-  display:flex;
-  align-items: center;
-  justify-content: flex-start
-}
- 
- 
- 
+  .navigation-menu a {
+    font-size: 16px;
+  }
+  .navigation-header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* for service boxes */
   
-}
 
+  .box-row .service-name {
+    width:300px;
+  }
+
+  .service-name{
+    height: 180px;
+  }
+  
+  .service-name-header{
+    height:50px;
+  }
+  /* service boxes ends here */
+}
 
 @media only screen and (max-width: 501px) {
   /* review part starts here */
@@ -630,7 +678,4 @@ width: 120px;
     font-size: 0.6em;
   }
   /* review part ends here */
-
 }
-
-
