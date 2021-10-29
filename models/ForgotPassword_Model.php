@@ -53,12 +53,12 @@ class ForgotPassword_Model extends Model{
         /* Open the try/catch block. */
         try {
             $message = '<html><head>
-            <title>Email Verification</title>
+            <title>Email Verification To Reset Password</title>
             </head>
             <body>';
             $message .= '<h1>Hello ' . $fname . '!</h1>';
             $message .='<p>You are receiving this email because we received a password reset request for your account.</p>';
-            $message .= '<p><a href="'.URL.'ForgotPassword/activation'. '/'.$email.'/'. $passwordVerifyToken. '">CLICK HERE TO RESET YOUR PASSWORD</a>';
+            $message .= '<p><a href="'.URL.'ForgotPassword/Reset'. '/'.$email.'/'. $passwordVerifyToken. '">CLICK HERE TO RESET YOUR PASSWORD</a>';
             $message .= "</body></html>";
          
                    
@@ -89,40 +89,44 @@ class ForgotPassword_Model extends Model{
         //echo $e->getMessage();
             }
     }
+    public function check_verification($email)
+    {
+      $query = "SELECT Email_varify_token FROM user WHERE email = '$email'";
+          $result= $this->db->runQuery_single($query);
+            
+                  
+                  if ($result->Email_varify_token == -1) 
+                  {
+  
+                      return true;
+                  }
+                  else
+                  {
+                      return false;
+                  }
+    }
      //  verifyemail_update($_SESSION['email'],$emailToken)
   public function verifyemail_update($email,$passwordToken)
   {
      
-      $query = "SELECT Password_verify_token	 FROM user WHERE email = '$email'";
+      $query = "SELECT Password_verify_token FROM user WHERE email = '$email'";
       $result= $this->db->runQuery_single($query);
    
-
-
       try {
       
-              
-              if ($result->Password_verify_token == -1) {
-
-                  $msg = "Your account has already been activated.";
-                  return $msg;
-                } 
-              else {
-                  if($passwordToken==$result->Password_verify_token){
+        if($passwordToken==$result->Password_verify_token){
                      
-                      $query = "UPDATE user SET Email_varify=1, Email_varify_token=-1 WHERE email='$email'";
-                      $this->db->runQuery($query);
-                      $msg = "Your account has been activated.";
-                      
-                      return $msg;
-                     
-                  }
-                  else{
-                      $msg = "No account found";
-                      return $msg; 
-                  }
-                  
-                }
-  
+            $query = "UPDATE user SET Password_verify_token=null WHERE email='$email'";
+            $this->db->runQuery($query);
+            $msg = "You can reset your password.";
+            
+            return $msg;
+           
+        }
+        else{
+            $msg = "Try Again";
+            return $msg; 
+        }
   
           
           
@@ -134,26 +138,13 @@ class ForgotPassword_Model extends Model{
 
                   
   }
-  //one email account can has one account.if there has a another account using that email select that user details
-//   public function isRegisteredUser($email) {
-//     $query = "SELECT * FROM user WHERE email = '$email'";
+  
 
-//     $row = $this->db->runQuery($query);
-   
-//     if(count($row)) {
-   
-//         return true;
-//     }else {
+    public function run_insert_password_data($data,  $passwordToken){
+
+        return $this->db-> run_insert_password_data($data,  $passwordToken);
        
-//         return false;
-//     }
-// }
-
-//     public function insert_reg_data($data,  $passwordToken){
-
-//         return $this->db-> run_insert_reg_data($data,  $passwordToken);
-       
-//        }
+       }
 
     
 }
