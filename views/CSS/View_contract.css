@@ -266,7 +266,9 @@ font-weight: 700;
     font-weight: 400;
         
  }
-
+ .fa-linkedin::before{
+    content: "\f08c" !important;
+ }
 
 @media only screen and (max-width: 1190px){
     .job_detail_sub_container{

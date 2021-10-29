@@ -61,6 +61,9 @@ button:hover{
     
     font-size:25px;
 }
+.fa-linkedin::before{
+    content: "\f08c" !important;
+ }
 i:hover{
 color:#5eacda ;
 cursor: pointer;
