@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        <?php include "CSS/JobRanking.css" ?> 
+        <?php include "CSS/JobRanking.css" ?>
     </style>
     <title>JobRanking</title>
 </head>
+
 <body>
-    <div class="header_div" >
-        <?php include 'Header.php'?>
+    <div class="header_div">
+        <?php include 'Header.php' ?>
     </div>
     <div class="MainContainer">
         <div class="Table">
@@ -20,22 +22,22 @@
                     <th colspan="4" id="topic">Career Role Rankings According To Vacancies</th>
                 </tr>
                 <tr id="columnTopic">
-                  <th>Job category</th>
-                  <th>Vacancies</th>
-                  <th>Rank</th>
-                  <th>%</th>
+                    <th>Job category</th>
+                    <th>Vacancies</th>
+                    <th>Rank</th>
+                    <th>%</th>
                 </tr>
                 <tr>
-                  <td>Software Engineer</td>
-                  <td>1365</td>
-                  <td>1</td>
-                  <td>23.67%</td>
+                    <td>Software Engineer</td>
+                    <td>1365</td>
+                    <td>1</td>
+                    <td>23.67%</td>
                 </tr>
                 <tr>
-                  <td>Business Analyst</td>
-                  <td>986</td>
-                  <td>2</td>
-                  <td>19.65%</td>
+                    <td>Business Analyst</td>
+                    <td>986</td>
+                    <td>2</td>
+                    <td>19.65%</td>
                 </tr>
                 <tr>
                     <td>Quality Assuarance</td>
@@ -85,12 +87,13 @@
                     <td>10</td>
                     <td>0.67%</td>
                 </tr>
-              </table>
+            </table>
         </div>
         <div class="Graph">
 
         </div>
     </div>
-    <?php include 'Footer.php'?>
+    <?php include 'Footer.php' ?>
 </body>
+
 </html>
