@@ -13,7 +13,7 @@ class View
 //when pass array objects
 public function render2($viewName, $data = []) {
    
-       require 'views/'.$viewName. '.php';
+       include 'views/'.$viewName. '.php';
 }
 
    /* //when pass array objects

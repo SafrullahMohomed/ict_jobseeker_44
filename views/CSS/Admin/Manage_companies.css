@@ -1,181 +1,216 @@
-
 /* admin home button */
 
-.admin-home-button{
-    display:flex;
-    justify-content: right;
-    margin:30px auto;
+.admin-home-button {
+  display: flex;
+  justify-content: right;
+  margin: 30px auto;
+  margin-top: 150px;
 }
 
-
-.admin-home-button button{
-    color: white;
-    background-color: #496575;
-    border-radius: 7px;
-    width: 140px;
-    height: 35px;
-    font-size: 17px;
-    font-weight: 700;
-    transition: ease-in-out 0.2s;
-    border: 0;
-    letter-spacing: 1px;
-    margin-right: 40px;
+.admin-home-button button {
+  color: white;
+  background-color: #496575;
+  border-radius: 7px;
+  width: 140px;
+  height: 35px;
+  font-size: 17px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  letter-spacing: 1px;
+  margin-right: 40px;
 }
 
-.admin-home-button button:hover{
-    cursor: pointer;
-    color: #496575;
-    background-color: #ffffff;
-    border: 1px solid #496575;
+.admin-home-button button:hover {
+  cursor: pointer;
+  color: #496575;
+  background-color: #ffffff;
+  border: 1px solid #496575;
 }
 /* admin home button ends here */
 
 /* company search part starts here */
 
-  
-  .search-company {
-    margin: auto;
-    margin-bottom: 30px;
-    display: flex;
-    background-color: #eeeeee;
-    width: 70%;
-    height: 145px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 7px;
-    padding-bottom: 10px;
-  }
+.search-company {
+  margin: auto;
+  margin-bottom: 30px;
+  display: flex;
+  background-color: #eeeeee;
+  width: 70%;
+  height: 145px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 7px;
+  padding-bottom: 10px;
+}
 
-  .search-company input{
-      width:60%;
-      max-width: 600px;
-      height:30px;
-  }
-  
-  
-  .search-company button {
-    color: rgb(255, 255, 255);
-    background-color: #1d6989;
-    height: 37px;
-    width: 150px;
-    border-radius: 25px;
-    transition: ease-in-out 0.2s;
-    border: 1px;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
-  
-  .search-company button:hover {
-    cursor: pointer;
-    color: #1d6989;
-    background-color: #ffffff;
-    border: 1px solid #1d6989;
-    /* border-color: #1D6989 ; */
-  }
+.search-company input {
+  width: 60%;
+  max-width: 600px;
+  height: 30px;
+}
 
-  /* search company field ends here */
+.search-company button {
+  color: rgb(255, 255, 255);
+  background-color: #1d6989;
+  height: 37px;
+  width: 150px;
+  border-radius: 25px;
+  transition: ease-in-out 0.2s;
+  border: 1px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
+.search-company button:hover {
+  cursor: pointer;
+  color: #1d6989;
+  background-color: #ffffff;
+  border: 1px solid #1d6989;
+  /* border-color: #1D6989 ; */
+}
+
+/* search company field ends here */
 
 /*  add company button*/
-.add-company button{
-    background-color: #1f78fb87;
-    border-radius: 25px;
-    width: 400px;
-    height: 45px;
-    font-size: 25px;
-    font-weight: 700;
-    transition: ease-in-out 0.2s;
-    border: 0;
-    letter-spacing: 1px;
-    margin:30px;
-    
+.add-company button {
+  background-color: #1f78fb87;
+  border-radius: 25px;
+  width: 400px;
+  height: 45px;
+  font-size: 25px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  letter-spacing: 1px;
+  margin: 30px;
 }
 
-.add-company button:hover{
-    cursor: pointer;
-    background-color: #ffffff;
-    border: 1px solid #1f78fb87;
+.add-company button:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #1f78fb87;
 }
 
-.add-company .plus{
-    font-weight:bolder;
+.add-company .plus {
+  font-weight: bolder;
 }
 
 /* add company button ends here */
 
 /* table starts here */
 
+table {
+  /* border-collapse: collapse; */
+  /* margin-top: 40px; */
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+  /* margin: 10% 25% 10% 15%; */
+  margin: 50px auto;
+}
+#topic,
+#columnTopic {
+  background-color: #1d6989;
+  color: white;
+  text-align: center;
+}
+th {
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: #d9eff8;
+}
+tr:hover {
+  background-color: #1d6989;
+  color: white;
+}
+
+th,
+td {
+  padding-top: 6px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+@media only screen and (max-width: 960px) {
+  table {
+    /* border-collapse: collapse; */
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+    margin: 5% 4% 5% 4%;
+  }
+}
 /* table ends here */
 
 /* load more button starts here */
-.load-more{
-    margin:20px auto;
-    display:flex;
-    justify-content: center;
-    margin: auto;
+.load-more {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
-.load-more button{
-    color: white;
-    background-color: #496575;
-    border-radius: 25px;
-    width: 200px;
-    height: 45px;
-    font-size:25px;
-    font-weight: 700;
-    transition: ease-in-out 0.2s;
-    border: 0;
-    letter-spacing: 1px;
-    
+.load-more button {
+  color: white;
+  background-color: #496575;
+  border-radius: 25px;
+  width: 200px;
+  height: 45px;
+  font-size: 25px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  letter-spacing: 1px;
 }
 
-.load-more button:hover{
-    cursor: pointer;
-    color: #496575;
-    background-color: #ffffff;
-    border: 1px solid #496575;
+.load-more button:hover {
+  cursor: pointer;
+  color: #496575;
+  background-color: #ffffff;
+  border: 1px solid #496575;
 }
 /* laod more button ends here */
 /* media queries */
-@media only screen and (max-width: 952px){
-    /* search company input feild */
-    .search-company input{
-        width:60%;
-        max-width: 600px;
-        height:30px;
-    }
+@media only screen and (max-width: 952px) {
+  /* search company input feild */
+  .search-company input {
+    width: 60%;
+    max-width: 600px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* search part */
+  .search-company {
+    display: flex;
+    flex-direction: column;
   }
 
+  .search-company input {
+    width: 80%;
+  }
 
-@media only screen and (max-width:900px){
-    /* search part */
-    .search-company{
-        display:flex;
-        flex-direction: column;
-    }
+  /* add company part */
+  .add-company button {
+    border-radius: 25px;
+    width: 250px;
+    height: 35px;
+    font-size: 15px;
+  }
 
-    .search-company input{
-        width: 80%;
-    }
+  /* load more button */
 
-    /* add company part */
-    .add-company button{
-        border-radius: 25px;
-        width: 250px;
-        height: 35px;
-        font-size: 15px;
-    }
-    
-    /* load more button */
-
-    .load-more button{
-       
-        border-radius: 25px;
-        width: 150px;
-        height: 35px;
-        font-size:20px;
-        font-weight: 700;
-        
-        
-    }
+  .load-more button {
+    border-radius: 25px;
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 }
