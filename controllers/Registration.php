@@ -105,6 +105,7 @@ class Registration extends Controller
                    
                     //Hash Password
                     $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+                    
                     //if there exist no email previously in the database
                     if(!$this->model->isRegisteredUser($data['email'])) {
                         //create token
