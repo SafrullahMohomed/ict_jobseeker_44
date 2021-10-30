@@ -37,13 +37,13 @@
           <input
             type="text"
             name="Search your keyword"
-            placeholder="Search your keyword"
+            placeholder="Search for a contract"
           />
         </div>
         <div class="category">
           <select name="Category">
             <option value="none" selected disabled hidden>
-              <span id="category-id-home">Select a Catogory</span>
+              <span id="category-id-home">Select a contract Catogory</span>
             </option>
             <option value="Software Engineering">Software Engineering</option>
             <option value="Qaulity Assurance">Qaulity Assurance</option>
@@ -56,9 +56,9 @@
             <option value="Data Science">Data Science</option>
           </select>
         </div>
-        <div class="location">
+        <!-- <div class="location">
           <input type="text" name="location" placeholder="location" />
-        </div>
+        </div> -->
         <div class="search-button">
           <button type="submit">Search</button>
         </div>

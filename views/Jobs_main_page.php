@@ -37,13 +37,13 @@ include 'Header.php'?>
           <input
             type="text"
             name="Search your keyword"
-            placeholder="Search your keyword"
+            placeholder="Search for a job"
           />
         </div>
         <div class="category">
           <select name="Category">
             <option value="none" selected disabled hidden>
-              <span id="category-id-home">Select a Catogory</span>
+              <span id="category-id-home">Select a job Catogory</span>
             </option>
             <option value="Software Engineering">Software Engineering</option>
             <option value="Qaulity Assurance">Qaulity Assurance</option>
