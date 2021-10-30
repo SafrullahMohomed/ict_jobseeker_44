@@ -34,11 +34,12 @@
       margin-bottom: 140px;
       overflow-x: hidden;
     }*/
+
     header {
       position: fixed;
       width: 100%;
 
-      height:100px ;
+      height: 100px;
 
 
 
@@ -47,11 +48,9 @@
       overflow-x: hidden;
       display: flex;
       flex-direction: column;
-     
-     
-    }
-   
 
+
+    }
     /*This is for login bar of the header*/
     .login-bar {
       background-color: #004867;
@@ -77,7 +76,7 @@
       padding: 0%;
       background-color: #04293500;
       margin-left: 5px;
-      
+
     }
 
     .login-list a {
@@ -99,14 +98,15 @@
       border-radius: 100px;
       margin-left: 4px;
       float: right;
-    
+
 
     }
-    #user_name{
+
+    #user_name {
       margin-bottom: 2px !important;
     }
 
-    
+
 
     /*here login bar of the header ends*/
 
@@ -130,11 +130,11 @@
     .navigation-header .logo img {
       float: left;
 
-      border-radius:50%;
+      border-radius: 50%;
       object-fit: cover;
       height: 50px;
-      margin: 4px 7px!important;
-      width: 50px;      
+      margin: 4px 7px !important;
+      width: 50px;
     }
 
     /*navigation menu main division*/
@@ -143,10 +143,12 @@
       align-self: flex-end;
       float: right;
     }
-ul{
-  margin-top: 16px !important;
-  margin-bottom: 20px !important;
-}
+
+    ul {
+      margin-top: 16px !important;
+      margin-bottom: 20px !important;
+    }
+
     /* make the ul as right in that div*/
     .navigation-menu ul {
       margin-bottom: 20px;
@@ -280,7 +282,7 @@ ul{
     }
 
     /*style for drop down menu end*/
-    #line_among_loging_reg{
+    #line_among_loging_reg {
       opacity: 0.7;
     }
   </style>
@@ -298,66 +300,67 @@ ul{
   <?php if (isset($_SESSION['User_ID'])) : ?>
     <header>
       <!-- login bar starts here  -->
-      <div class="login-bar">
-        <ul>
-
-
-          <!-- <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"> -->
-
-          <li class="login-list"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></li>
-
-          <!-- <li class="login-list">|</li> -->
-          <!-- <li class="login-list"><a href="<?php echo URL ?>Registration">Logout</a></li> -->
-
-
-          <div class="dropdown">
-            <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
-            <div id="myDropdown" class="dropdown-content">
-
-              <!-- check user type -->
-              <?php
-              // if user is company
-              if ($_SESSION['User_type'] == "Company") :
-                $My_profile = "Company_profiles/Company_profile";
-              endif;
-              // if user is Contract_provider
-              if ($_SESSION['User_type'] == "Contract provider") :
-                $My_profile = "Contracts/Contract_provider_profile";
-              endif;
-
-
-
-              ?>
-              <a href="<?php echo URL . $My_profile ?>">My profile</a>
-              <a href="<?php echo URL ?>ForgotPassword">Change password</a>
-              <a href="<?php echo URL ?>Login/logout">Logout</a>
-            </div>
-          </div>
-
-        </ul>
-      </div>
-      <!-- logo and navigation bar starts here -->
-      <div class="navigation-header">
-        <div class="logo">
-          <?php
-          echo "<img src='http://localhost/ict_jobseeker_44/views/images/Home/logo_old.jpg' >";
-          ?>
-        </div>
-        <!-- logo ends here -->
-
-        <!-- navigation menu starts here -->
-        <div class="navigation-menu">
+      <div class="header-main">
+        <div class="login-bar">
           <ul>
-            <li><a href="<?php echo URL ?>Home">Home</a></li>
-            <li><a href="<?php echo URL ?>Jobs_main_page">Jobs</a></li>
-            <li><a href="<?php echo URL ?>Companies">Companies</a></li>
-            <li> <a href="<?php echo URL ?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
-            <li><a href="<?php echo URL ?>Contact_us">Contact&nbsp;Us</a></li>
+
+
+            <!-- <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"> -->
+
+            <li class="login-list"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></li>
+
+            <!-- <li class="login-list">|</li> -->
+            <!-- <li class="login-list"><a href="<?php echo URL ?>Registration">Logout</a></li> -->
+
+
+            <div class="dropdown">
+              <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
+              <div id="myDropdown" class="dropdown-content">
+
+                <!-- check user type -->
+                <?php
+                // if user is company
+                if ($_SESSION['User_type'] == "Company") :
+                  $My_profile = "Company_profiles/Company_profile";
+                endif;
+                // if user is Contract_provider
+                if ($_SESSION['User_type'] == "Contract provider") :
+                  $My_profile = "Contracts/Contract_provider_profile";
+                endif;
+
+
+
+                ?>
+                <a href="<?php echo URL . $My_profile ?>">My profile</a>
+                <a href="<?php echo URL ?>ForgotPassword">Change password</a>
+                <a href="<?php echo URL ?>Login/logout">Logout</a>
+              </div>
+            </div>
+
           </ul>
         </div>
-        <!-- navigates menu ends here -->
-      </div>
-      <!-- login bar ends here  -->
+        <!-- logo and navigation bar starts here -->
+        <div class="navigation-header">
+          <div class="logo">
+            <?php
+            echo "<img src='http://localhost/ict_jobseeker_44/views/images/Home/logo_old.jpg' >";
+            ?>
+          </div>
+          <!-- logo ends here -->
+
+          <!-- navigation menu starts here -->
+          <div class="navigation-menu">
+            <ul>
+              <li><a href="<?php echo URL ?>Home">Home</a></li>
+              <li><a href="<?php echo URL ?>Jobs_main_page">Jobs</a></li>
+              <li><a href="<?php echo URL ?>Companies">Companies</a></li>
+              <li> <a href="<?php echo URL ?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
+              <li><a href="<?php echo URL ?>Contact_us">Contact&nbsp;Us</a></li>
+            </ul>
+          </div>
+          <!-- navigates menu ends here -->
+        </div>
+        <!-- login bar ends here  -->
     </header>
   <?php endif; ?>
 
@@ -404,6 +407,8 @@ ul{
             </div>
             <!-- navigates menu ends here -->
           </div>
+        </div>
+
 
     </header>
   <?php endif; ?>

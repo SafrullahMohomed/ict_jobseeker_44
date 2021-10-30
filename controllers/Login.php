@@ -75,12 +75,12 @@ class Login extends Controller
           else 
           {
               $data['password_err'] = "Password incorrect"; 
-              $this->view ->render2('login', $data);
+              $this->view ->render2('Login', $data);
           }
         }
         else 
         {
-          $this->view ->render2('login', $data);
+          $this->view ->render2('Login', $data);
         }
       }
       else {
@@ -93,7 +93,7 @@ class Login extends Controller
         ];
 
         // Load view
-        $this->view ->render2('login', $data);
+        $this->view ->render2('Login', $data);
       }
     }
 
