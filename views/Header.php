@@ -39,7 +39,7 @@
       position: fixed;
       width: 100%;
 
-      height: 100px;
+      height: 150px;
 
 
 
@@ -285,6 +285,13 @@
     #line_among_loging_reg {
       opacity: 0.7;
     }
+
+    .username_icon_bar{
+display: flex;
+flex-direction: row;
+align-items: center;
+
+    }
   </style>
 
 
@@ -304,38 +311,41 @@
         <div class="login-bar">
           <ul>
 
+                <div class="username_icon_bar">
+                <!-- <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"> -->
 
-            <!-- <img src='<?php echo URL ?>views/images/Contract_provider/user.png'id="user"> -->
+                <li class="login-list"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></li>
 
-            <li class="login-list"> <?php echo $_SESSION['First_name'] . " " . $_SESSION['Last_name'] ?></li>
-
-            <!-- <li class="login-list">|</li> -->
-            <!-- <li class="login-list"><a href="<?php echo URL ?>Registration">Logout</a></li> -->
-
-
-            <div class="dropdown">
-              <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
-              <div id="myDropdown" class="dropdown-content">
-
-                <!-- check user type -->
-                <?php
-                // if user is company
-                if ($_SESSION['User_type'] == "Company") :
-                  $My_profile = "Company_profiles/Company_profile";
-                endif;
-                // if user is Contract_provider
-                if ($_SESSION['User_type'] == "Contract provider") :
-                  $My_profile = "Contracts/Contract_provider_profile";
-                endif;
+                <!-- <li class="login-list">|</li> -->
+                <!-- <li class="login-list"><a href="<?php echo URL ?>Registration">Logout</a></li> -->
 
 
+                <div class="dropdown">
+                  <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
+                  <div id="myDropdown" class="dropdown-content">
 
-                ?>
-                <a href="<?php echo URL . $My_profile ?>">My profile</a>
-                <a href="<?php echo URL ?>ForgotPassword">Change password</a>
-                <a href="<?php echo URL ?>Login/logout">Logout</a>
-              </div>
-            </div>
+                    <!-- check user type -->
+                    <?php
+                    // if user is company
+                    if ($_SESSION['User_type'] == "Company") :
+                      $My_profile = "Company_profiles/Company_profile";
+                    endif;
+                    // if user is Contract_provider
+                    if ($_SESSION['User_type'] == "Contract provider") :
+                      $My_profile = "Contracts/Contract_provider_profile";
+                    endif;
+
+
+
+                    ?>
+                    <a href="<?php echo URL . $My_profile ?>">My profile</a>
+                    <a href="<?php echo URL ?>ForgotPassword">Change password</a>
+                    <a href="<?php echo URL ?>Login/logout">Logout</a>
+                  </div>
+                </div>
+
+                </div>
+                            
 
           </ul>
         </div>
