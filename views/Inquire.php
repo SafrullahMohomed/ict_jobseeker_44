@@ -30,7 +30,7 @@
                             <p id="StarterMessage" class="Text"><span>Loading...</span></p>
                         </div>
                         <!-- User Inputs starts here -->
-                        <div class="InputContainer">
+                        <div class="InputContainer1">
                             <div class="Input">
                                 <input id="TextInput" class="InputBox" type="text" name="msg" placeholder="Enter Your Inquire">
                                 <p></p>

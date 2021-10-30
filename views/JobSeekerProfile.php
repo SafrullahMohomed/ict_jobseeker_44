@@ -193,7 +193,7 @@
                     <input type="email" id="email" email="email" placeholder= "Email" class="inputfield" required><br>
                 </div> -->
                 <div class="Review1">        
-                    <textarea  id="brief_description" rows="4" brief_description="brief_description" placeholder="Write your review here..." class="inputfield" required></textarea><br>
+                    <textarea  id="brief_description" rows="8" brief_description="brief_description" placeholder="Write your review here..." class="inputfield" required></textarea><br>
                 </div>
                 <button class="submit_button">Submit</button>
             </div>

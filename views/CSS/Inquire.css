@@ -3,14 +3,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
-    color: #585656;
+    /* color: #585656; */
     scroll-behavior: smooth;
-    font-size: 1.1em; 
+    /* font-size: 1.1em;  */
 } 
 body 
 {
     margin: 0 auto;
-    background-color: #222;
+    background-color: white;
 }
 .InquireBox
 {
@@ -35,7 +35,7 @@ body
     border-bottom: none;
 }
 
-img
+.InquireBox img
 {
     border-radius: 50%;
     width: 35px;
@@ -86,7 +86,7 @@ img
     display: none;
 }
 
-.InputContainer 
+.InputContainer1 
 {
     display: flex;
     float: left;

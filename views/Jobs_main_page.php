@@ -145,7 +145,7 @@ include 'Header.php'?>
                 <div class="features_job_row_deadline_date_container">
                     <p>Expires on </p>
                 <div class="features_job_row_deadline_date">
-                    2021/08/30
+                    2021/11/30
                 </div>
                 </div>
                 
@@ -195,7 +195,7 @@ include 'Header.php'?>
                     <div class="features_job_row_deadline_date_container">
                         <p>Expires on </p>
                     <div class="features_job_row_deadline_date">
-                        2021/08/28
+                        2021/11/28
                     </div>
                     </div>
                     
@@ -245,7 +245,7 @@ include 'Header.php'?>
                         <div class="features_job_row_deadline_date_container">
                             <p>Expires on </p>
                         <div class="features_job_row_deadline_date">
-                            2021/08/28
+                            2021/11/26
                         </div>
                         </div>
                         
@@ -269,7 +269,7 @@ include 'Header.php'?>
     </div>
     <div class="features_job_row_job_and_company">
             <div class="features_job_row_job">
-                Senior Engineer
+                Software Engineer
 
             </div>
             <div class="features_job_row__company">
@@ -297,7 +297,7 @@ include 'Header.php'?>
         <div class="features_job_row_deadline_date_container">
             <p>Expires on </p>
         <div class="features_job_row_deadline_date">
-            2021/10/29
+            2021/11/29
         </div>
         </div>
         
@@ -348,7 +348,7 @@ include 'Header.php'?>
             <div class="features_job_row_deadline_date_container">
                 <p>Expires on </p>
             <div class="features_job_row_deadline_date">
-                2021/08/28
+                2021/11/22
             </div>
             </div>
             
