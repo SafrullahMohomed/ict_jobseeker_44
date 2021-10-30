@@ -5,7 +5,7 @@
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     color: #585656;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
 }
 .MainContainer
 {
@@ -13,6 +13,7 @@
     flex-direction: column;
     width: 80%;
     margin: 160px auto 100px auto;
+    font-size: 1.1em; 
 }
 .MainDetails
 {
@@ -22,6 +23,7 @@
     margin-top:30px;
     margin-bottom: 30px;
     gap: 15%;
+    font-size: 1.1em; 
 }
 .ProfilePic img
 {
@@ -31,7 +33,7 @@
 }
 .Name
 {
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 600;
     color:#227093;
     padding-top: 15%;  
@@ -41,11 +43,14 @@
 {
     color: #935522;
     font-weight: 600;
+    font-size: 1.8em; 
+
 }
 .Contact
 {
     display: flex;
     flex-direction: column;
+    font-size: 1.4em; 
 }
 .SubContainer
 {
@@ -54,6 +59,7 @@
     width: 100%;
     margin: auto;
     justify-content: space-between;
+    font-size: 1.1em; 
 }
 .SocialLinks
 { 
@@ -62,6 +68,7 @@
     gap: 6%;
     font-size: 0.8em;
     font-weight: 600;
+    font-size: 1.1em; 
     /* margin-top: 3%; */
     /* margin-left: 7%; */
 }
@@ -137,7 +144,10 @@
     flex-direction: column;
     text-align: center;
 }
-
+.row
+{
+    font-size: 1.1em; 
+}
 .do_rate
 {
     display: flex;
@@ -185,15 +195,16 @@ span
 ul
 {
     margin-left: 2%;
+    font-size: 1em; 
 }
 #works
 {
     margin: 1.5% 0% 0% 10%;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 .Skills , .Education
 {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .resume #link
@@ -201,11 +212,11 @@ ul
     font-weight: 500;
     text-decoration: none;
     color: #1D6989;
-    font-size: 0.8em;
+    font-size: 1.1em;
 } 
 #resumeDetails
 {
-    font-size: 0.8em;
+    font-size: 1.1em;
     color: #585656;
 }
 .review_row
@@ -226,7 +237,7 @@ ul
     flex-direction:column;
     justify-content: space-around;
     margin-left: 20px;
-    font-size: 0.7em;
+    font-size: 1em;
 }
 .review_detail_name
 {
@@ -245,18 +256,19 @@ hr
 .YourReview
 {
     width :100%;
-    min-height:360px;
+    min-height:320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
  }
  .Review1
  {
      width: 85%;
      margin-top:15px ;
-     font-size: 0.8em;
+     font-size: 1em;
  }  
  .rate_me_text
  {

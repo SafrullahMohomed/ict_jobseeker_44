@@ -18,11 +18,11 @@
 
      <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>
     <div class="CompanyBanner">
-        <div class="CompanyLogo" style="background-image:url('http://localhost/ict_jobseeker_44/views/images/Jobseeker/wso2logo.png');">
+        <div class="CompanyLogo" style="background-image:url('http://localhost/ict_jobseeker_44/views/images/Jobseeker/4.png');">
         </div>
         <div class="JobDetails">
-            <p>Software Engineer(JAVA)</p>
-            <p>WSO2 Sri Lanaka, 20 Palm Grove, Colombo 00300</p>
+            <p>Senior Software Engineer(C++)</p>
+            <p>Virtusa Pvt Limited, 752 Dr Danister De Silva Mawatha, Colombo 00900</p>
         </div>       
     </div>
     <form class="main_container">

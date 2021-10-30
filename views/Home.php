@@ -201,7 +201,7 @@
 
 
 
-
+  <?php include 'Inquire.php' ?>
   <script src="<?php echo URL ?>views/JS/Home.js"></script>
 
   <!-- <script defer src="JS/Home.js"></script> -->
