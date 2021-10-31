@@ -30,35 +30,7 @@
     
           
         </div>
-       <!-- theme image start here -->
-      <div class="job-search-box">
-        <div class="search-your-keywords">
-          <input
-            type="text"
-            name="Search your keyword"
-            placeholder="Search for a job"
-          />
-        </div>
-        <div class="category">
-          <select name="Category">
-            <option value="none" selected disabled hidden>
-              <span id="category-id-home">Select a job Catogory</span>
-            </option>
-            <option value="Software Engineering">Software Engineering</option>
-            <option value="Qaulity Assurance">Qaulity Assurance</option>
-            <option value="Frontend Developing">Frontend Developing</option>
-            <option value="Backend Developing">Backend Developing</option>
-            <option value="Senior Sofware Engineering">
-              Senior Sofware Engineering
-            </option>
-            <option value="Fullstack developing">Fullstack developing</option>
-            <option value="Data Science">Data Science</option>
-          </select>
-        </div>
-        <div class="location">
-          <input type="text" name="location" placeholder="location" />
-
-        </div>
+      
         <!-- theme image start here -->
         <div class="job-search-box">
             <div class="search-your-keywords">
