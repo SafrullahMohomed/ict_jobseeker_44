@@ -17,7 +17,7 @@
 <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>
     <div class="WelcomeBanner">
         <div class="PersonalDetails">
-            <p id="name">Hello Sandaruwan,</p>
+            <p id="name">Hello Chamal,</p>
             <p id="info">To complete your profile, please fill out and submit the following information.</p>
         </div>       
     </div>
