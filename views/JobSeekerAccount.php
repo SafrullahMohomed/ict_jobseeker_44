@@ -22,7 +22,7 @@
         </div>       
     </div>
     <div class="ProfileBar">
-        <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' >
+        <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' id="output">
          <div class="row1">
             <label for="profile_pic" class="labelfield">Profile picture</label><br>
             <input type="file" id="profile_pic" name="profile_pic" class="inputfield" accept="image/*" onchange="loadFile(event)" ><br>
