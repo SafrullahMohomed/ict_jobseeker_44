@@ -18,7 +18,7 @@
     <div class="container">
         <div class="flex-container">
             <div class="left-container" style="background-image:url('http://localhost/ict_jobseeker_44/views/images/Registration/login1.jpg');">
-                <h3 id="register">Register</h3>
+                <h3 id="Register">Register</h3>
                 <form id="log_link">
                     <p>Already Registered?</p>
                     <a href="<?php echo URL?>Login">Login here</a>

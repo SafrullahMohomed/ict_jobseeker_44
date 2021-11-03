@@ -121,8 +121,35 @@
                 
             </div>
 
-
+            
         </div>
+        <!-- bid proposal parts start from here -->
+        <!-- <div class="bid_part">
+            <div class="bid_row">
+                    <div class="first">
+                     <div class="name">
+                     Maneesha Yohani
+                     </div>
+                     <div class="rs_price">
+                     <div class="rs">
+                            Rs.
+                        </div>
+                        <div class="price">
+                            1500
+                        </div>  
+                     </div>
+                     
+                    </div>
+                    <div class="second">
+                    I have more experience with other university projects.I would like to
+             do my work within average time and average
+             hourly rate.I will do my best.I have good typing speed because of my previous projects.
+                    </div>
+            </div>
+
+        </div> -->
+
+        <!-- bid proposal parts end from here -->
       
         <?php include 'Footer.php'?>
 

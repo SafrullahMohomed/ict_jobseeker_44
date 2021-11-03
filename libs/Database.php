@@ -102,16 +102,18 @@ return $s;
 
  } 
  public function  run_insert_reg_data($data,$emailToken){
+    date_default_timezone_set("Asia/Colombo");
     $fname=$data['fname'];
     $lname=$data['lname'];
     $email=$data['email'];
     $user_type=$data['user_type'];
     $password=$data['password'];
     $varify=$data['verify'];
+    $Created_at=date("Y-m-d H:i:s");
 
 
-    $stmt1 =$this->prepare("INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type)
-     VALUES (:password,:email,:fname,:lname,:verify,:varify_token,:user_type )");
+    $stmt1 =$this->prepare("INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at)
+     VALUES (:password,:email,:fname,:lname,:verify,:varify_token,:user_type,:Created_at )");
 
      $stmt1->bindParam(':password', $password);
      $stmt1->bindParam(':email', $email);
@@ -121,9 +123,19 @@ return $s;
      $stmt1->bindParam(':verify',$varify );
      $stmt1->bindParam(':varify_token',  $emailToken);
      $stmt1->bindParam(':user_type',  $user_type);
+     $stmt1->bindParam(':Created_at',  $Created_at);
+
      $stmt1->execute();
 
 }
+
+
+
+
+
+
+
+
  
 }
 ?>

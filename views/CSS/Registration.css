@@ -150,7 +150,7 @@
     color: rgb(6, 8, 124);
     font-weight: 550;
 }
-#register
+#Register
 {
     position: relative;
     top: -135px;
@@ -255,7 +255,7 @@ input:-webkit-autofill:active{
     border-width: 3px*/
 } 
 
-#register
+#Register
 {
     position: relative;
     top: -50px;
