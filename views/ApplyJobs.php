@@ -25,48 +25,58 @@
             <p>Virtusa Pvt Limited, 752 Dr Danister De Silva Mawatha, Colombo 00900</p>
         </div>       
     </div>
-    <form class="main_container">
+    <form class="main_container" method="POST" name="myForm">
         <p id="titles">Personal Details</p>
         <div class="row">
             <label for="fname" class="labelfield">First Name</label><br>
-            <input type="text" id="fname" name="fname" placeholder= "Enter Your First Name" class="inputfield" required><br>
+            <input type="text" id="fname" name="fname" placeholder= "Enter Your First Name" class="inputfield" required onfocus=" hideFormError(fname_error)"><br>
+            
         </div>
         <div class="row">
             <label for="lname" class="labelfield">Last Name</label><br>
-            <input type="text" id="lname" name="name" placeholder= "Enter Your Last Name" class="inputfield" required><br>
+            <input type="text" id="lname" name="lname" placeholder= "Enter Your Last Name" class="inputfield" required onfocus=" hideFormError(lname_error)"><br>
+            
         </div>
         <div class="row">
             <label for="email" class="labelfield">Email</label><br>
-            <input type="email" id=email" email="email" placeholder="Enter Your Email" class="inputfield" required><br>
+            <input type="email" id=email" name="email" placeholder="Enter Your Email" class="inputfield" required onfocus="hideFormError(email_error)"><br>
+            
         </div>
         <div class="row">
             <label for="email" class="labelfield">Confirm Email</label><br>
-            <input type="email" id="email" email="email" placeholder= "Confirm Your Email" class="inputfield" required><br>    
+            <input type="email" id="email" name="confirm_email" placeholder= "Confirm Your Email" class="inputfield" required onfocus="hideFormError(confirm_email_error)"><br>   
+            
         </div>
         <div class="row">
             <label for="phonenumber" class="labelfield">Phone Number</label><br>
-            <input type="text" id="phonenumber" phonenumber="Phone number" placeholder= "Enter Your Phone Number" class="inputfield" required><br>    
+            <input type="text" id="phonenumber" name="phonenumber" placeholder= "Enter Your Phone Number" class="inputfield" required onfocus="hideFormError(phonenumber_error)"><br>    
+            
         </div>
         <div class="row">
             <label for="Residence" class="labelfield">Place Of Residence</label><br>
-            <input type="text" id="Residence" Residence="Residence" placeholder= "Enter Place Of Your Residence" class="inputfield" required><br>    
+            <input type="text" id="Residence" name="residence" placeholder= "Enter Place Of Your Residence" class="inputfield" required onfocus="hideFormError(residence_error)"><br>  
+             
         </div>
         <p id="titles">On The Web</p>
         <div class="row">
             <label for="LinkedIn_link" class="labelfield">LinkedIn</label><br>
-            <input type="url" id="LinkedIn_link" LinkedIn_link="LinkedInlink" placeholder= "Enter Your Linkedin Link" class="inputfield"><br>
+            <input type="url" id="LinkedIn_link" name="LinkedInlink" placeholder= "Enter Your Linkedin Link" class="inputfield" onfocus="hideFormError(LinkedInlink_error)"><br>
+            
         </div>         
         <div class="row">
             <label for="Facebook_link" class="labelfield">Facebook</label><br>
-            <input type="url" id="Facebook_link" Facebook_link="Facebooklink" placeholder= "Enter Your Facebook Link" class="inputfield"><br>
+            <input type="url" id="Facebook_link" name="Facebooklink" placeholder= "Enter Your Facebook Link" class="inputfield" onfocus="hideFormError(Facebooklink_error)"><br>
+            
         </div>
         <div class="row">
             <label for="Twitter_link" class="labelfield">Twitter</label><br>
-            <input type="url" id="Twitter_link" Twitter_link="Twitterlink" placeholder= "Enter Your Twitter Link" class="inputfield"><br>
+            <input type="url" id="Twitter_link" name="Twitterlink" placeholder= "Enter Your Twitter Link" class="inputfield" onfocus="hideFormError(Twitterlink_error)"><br>
+           
         </div>
         <div class="row">
             <label for="website_link" class="labelfield">Website</label><br>
-            <input type="url" id="website_link" website_link="websitelink" placeholder= "Enter Your Website Link" class="inputfield"><br>
+            <input type="url" id="website_link" name="websitelink" placeholder= "Enter Your Website Link" class="inputfield" onfocus="hideFormError(websitelink_error)"><br>
+       
         </div>
         <p id="titles">Resume</p>
         <div class="Resume">
@@ -85,7 +95,7 @@
         </div>   
        <div class="submit">
         <label for="submit" class="labelfield"></label><br>
-        <input type="submit" id="submit" submit="submit"  class="submit_button"><br>
+        <input type="submit" id="submit" submit="submit"  class="submit_button" onclick="return validateForm()"><br>
        </div>
     </form>
     

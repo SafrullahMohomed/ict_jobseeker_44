@@ -324,12 +324,15 @@ ul{
               if ($_SESSION['User_type'] == "Contract provider") :
                 $My_profile = "Contracts/Contract_provider_profile";
               endif;
-
+               // if user is Jobseeker
+               if ($_SESSION['User_type'] == "Jobseeker") :
+                $My_profile = "Jobseeker/JobSeekerProfile";
+              endif;
 
 
               ?>
               <a href="<?php echo URL . $My_profile ?>">My profile</a>
-              <a href="<?php echo URL ?>ForgotPassword">Change password</a>
+              <a href="<?php echo URL ?>ResetPassword">Change password</a>
               <a href="<?php echo URL ?>Login/logout">Logout</a>
             </div>
           </div>
