@@ -177,6 +177,7 @@
                  
             </div>
             <hr>
+            <?php if ( !isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>  
             <p id="titles">Your Review</p>
             <div class="YourReview">
                 <div class="rate_me_text">
@@ -197,6 +198,13 @@
                 </div>
                 <button class="submit_button">Submit</button>
             </div>
+            <?php endif; ?>  
+            <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>  
+      <!-- edit your profile -->
+        <div class="edit_profile">
+            <a href="<?php echo URL ?>Jobseeker/JobSeekerAccount"><button>Edit your profile</button></a> 
+        </div>
+        <?php endif; ?>
         </div>
     </div>
     <?php include 'Footer.php'?>

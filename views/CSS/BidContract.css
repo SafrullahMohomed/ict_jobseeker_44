@@ -37,7 +37,8 @@ flex-wrap: wrap;
     font-size: 30px;
     font-weight: 600;
 }
-button{
+button
+{
     width: 120px;
     height: 40px;
     color: white; 
@@ -46,7 +47,6 @@ button{
     border-color: #273c75;
     font-weight: 600;
     border-radius: 5px;
-   
 }
 button:hover{
     background-color: white;

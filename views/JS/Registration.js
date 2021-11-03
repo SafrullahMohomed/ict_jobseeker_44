@@ -3,7 +3,6 @@ function validateForm() {
    
     var brief_intro
 
-    /validate first name/
 
     /*validate first name*/
 
@@ -29,23 +28,17 @@ function validateForm() {
         return false;
       }
 
-      /*validate email*/
-
-
-      /validate email/
-
-      var email=document.myForm.email.value;  
-      var validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
-
+     
       /*validate email*/
       var email=document.myForm.email.value;  
       var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     
-      if (!email.match(validRegex) ){ 
+      if (!email.match(validRegex) )
+      { 
           document.getElementById("email_error").innerHTML="Please enter a valid e-mail address";
     
-      return false;  
+          return false;  
       } 
 
       var password=document.myForm.password.value; 

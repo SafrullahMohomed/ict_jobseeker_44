@@ -336,6 +336,22 @@ align-items: center;
                     endif;
 
 
+              <!-- check user type -->
+              <?php
+              // if user is company
+              if ($_SESSION['User_type'] == "Company") :
+                $My_profile = "Company_profiles/Company_profile";
+              endif;
+              // if user is Contract_provider
+              if ($_SESSION['User_type'] == "Contract provider") :
+                $My_profile = "Contracts/Contract_provider_profile";
+              endif;
+               // if user is Jobseeker
+               if ($_SESSION['User_type'] == "Jobseeker") :
+                $My_profile = "Jobseeker/JobSeekerProfile";
+              endif;
+
+
 
                     ?>
                     <a href="<?php echo URL . $My_profile ?>">My profile</a>
@@ -344,8 +360,28 @@ align-items: center;
                   </div>
                 </div>
 
+
+              ?>
+              <a href="<?php echo URL . $My_profile ?>">My profile</a>
+              <a href="<?php echo URL ?>ResetPassword">Change password</a>
+              <a href="<?php echo URL ?>Login/logout">Logout</a>
+            </div>
+          </div>
+
+        </ul>
+      </div>
+      <!-- logo and navigation bar starts here -->
+      <div class="navigation-header">
+        <div class="logo">
+          <?php
+          echo "<img src='http://localhost/ict_jobseeker_44/views/images/Home/logo_old.jpg' >";
+          ?>
+        </div>
+        <!-- logo ends here -->
+
                 </div>
                             
+
 
           </ul>
         </div>
