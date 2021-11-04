@@ -11,26 +11,27 @@ class View
 
 
 //when pass array objects
-public function render2($viewName, $data = []) {
+      public function render2($viewName, $data = []) {
    
        include 'views/'.$viewName. '.php';
 }
 
-   /* //when pass array objects
-    public function render2($viewName, $data = [])
-    {
-        
-        require 'views/' . $viewName . '.php';
-    }*/
-
-
-
+   
     //when pass variable
     public function render3($viewName, $data)
     {
 
         require 'views/' . $viewName . '.php';
     }
+
+    //when view file is inside a folder
+    public function render4($viewName1, $viewName2)
+    {
+
+        require 'views/' . $viewName1 .'/'.$viewName2. '.php';
+    }
+
+
 
 
     public function show_contract($viewName)
@@ -71,4 +72,5 @@ public function render2($viewName, $data = []) {
     {
         require 'views/Resume/' . $viewName . '.php';
     }
+
 }

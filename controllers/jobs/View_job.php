@@ -13,7 +13,7 @@ class View_job extends Controller
         #echo "Hello from the Test controller - Index Method";
 
         //pass view name
-        $this->view ->render('View_job'); 
+        $this->view ->render('Jobs/View_job'); 
         
     }
 }

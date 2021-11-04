@@ -57,6 +57,7 @@ label{
     padding: 3px;
     font-size: 0.8em;
     color: #585656;
+    font-weight: 600;
 }
 
 .inputfield:hover{

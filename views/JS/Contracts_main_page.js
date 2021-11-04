@@ -35,7 +35,7 @@ function Bidnow(){
       function contractLoad() {
         
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost/ict_jobseeker_44//Contracts_main_page/select_post_contract_data");
+        xhr.open("POST", "http://localhost/ict_jobseeker_44/Contracts_main_page/select_post_contract_data");
         
         xhr.onload = function () {
           let Contract = document.querySelector(".features_contract_row");

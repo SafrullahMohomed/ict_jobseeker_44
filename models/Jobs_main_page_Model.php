@@ -6,6 +6,12 @@ class Jobs_main_page_Model extends Model{
        parent :: __construct(); 
     }
 
+
+
+
+
+    
+
    
 }
 
