@@ -23,11 +23,13 @@ class Controller
 
     public function loadModel2($modelName, $modelName2)
     {
-        $path = 'models/' . $modelName . '/ ' . $modelName2 . '_Model.php';
-
-        if (file_exists($path)) {
-
-            require $path;
+        $path2 = 'models/' . $modelName . '/' . $modelName2 . '_Model.php';
+        
+        
+        if (file_exists($path2)) {
+            
+            require $path2;
+            
             $className = $modelName2 . '_Model';
             $this->model = new $className();
         }
