@@ -324,16 +324,7 @@ align-items: center;
                   <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
                   <div id="myDropdown" class="dropdown-content">
 
-                    <!-- check user type -->
-                    <?php
-                    // if user is company
-                    if ($_SESSION['User_type'] == "Company") :
-                      $My_profile = "Company_profiles/Company_profile";
-                    endif;
-                    // if user is Contract_provider
-                    if ($_SESSION['User_type'] == "Contract provider") :
-                      $My_profile = "Contracts/Contract_provider_profile";
-                    endif;
+                   
 
 
               <!-- check user type -->
@@ -353,13 +344,6 @@ align-items: center;
 
 
 
-                    ?>
-                    <a href="<?php echo URL . $My_profile ?>">My profile</a>
-                    <a href="<?php echo URL ?>ForgotPassword">Change password</a>
-                    <a href="<?php echo URL ?>Login/logout">Logout</a>
-                  </div>
-                </div>
-
 
               ?>
               <a href="<?php echo URL . $My_profile ?>">My profile</a>
@@ -370,19 +354,7 @@ align-items: center;
 
         </ul>
       </div>
-      <!-- logo and navigation bar starts here -->
-      <div class="navigation-header">
-        <div class="logo">
-          <?php
-          echo "<img src='http://localhost/ict_jobseeker_44/views/images/Home/logo_old.jpg' >";
-          ?>
-        </div>
-        <!-- logo ends here -->
-
-                </div>
-                            
-
-
+    
           </ul>
         </div>
         <!-- logo and navigation bar starts here -->
