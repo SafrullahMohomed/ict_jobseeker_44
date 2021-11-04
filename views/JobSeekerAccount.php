@@ -21,6 +21,7 @@
             <p id="info">To complete your profile, please fill out and submit the following information.</p>
         </div>       
     </div>
+    <form name="myForm" action="<?php echo URL ?>JobSeekerAcc/insert_data" method="post">
     <div class="ProfileBar">
         <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' id="output">
          <div class="row1">
@@ -28,7 +29,7 @@
             <input type="file" id="profile_pic" name="profile_pic" class="inputfield" accept="image/*" onchange="loadFile(event)" ><br>
         </div>
     </div>
-    <form class="main_container" name="myForm" method="post">
+    <div class="main_container" >
         <p id="titles">Check & Update The Personal Details In Your Profile</p>
         <div class="row">
             <label for="fname" class="labelfield">First Name</label><br>
@@ -54,7 +55,7 @@
         </div>
         <div class="row">
             <label for="age" class="labelfield">Age</label><br>
-            <input type="text" id="age" age="age" placeholder= "Enter Your Age" class="inputfield" required><br>    
+            <input type="text" id="age" name="age" placeholder= "Enter Your Age" class="inputfield" required><br>    
         </div>
         <div class="row">
             <label for="phonenumber" class="labelfield">Phone Number</label><br>
@@ -107,6 +108,7 @@
         <label for="submit" class="labelfield"></label><br>
         <input type="submit" id="submit" name="submit"  class="submit_button" onclick="return validateForm()"><br>
        </div>
+    </div>   
     </form>
     <?php endif; ?>
     <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Jobseeker") : ?>
@@ -114,6 +116,6 @@
         <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
         <?php endif; ?>  
     <?php include 'Footer.php'?>
-    <script src="<?php echo URL ?>views/JS/JobSeekerAccount.js"></script>
+    <!-- <script src="<?php# echo URL ?>views/JS/JobSeekerAccount.js"></script> -->
 </body>
 </html>
