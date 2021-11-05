@@ -10,13 +10,14 @@ class View
     }
 
 
-//when pass array objects
-public function render2($viewName, $data = []) {
-   
-       include 'views/'.$viewName. '.php';
-}
+    //when pass array objects
+    public function render2($viewName, $data = [])
+    {
 
-   /* //when pass array objects
+        include 'views/' . $viewName . '.php';
+    }
+
+    /* //when pass array objects
     public function render2($viewName, $data = [])
     {
         
@@ -71,4 +72,10 @@ public function render2($viewName, $data = []) {
     {
         require 'views/Resume/' . $viewName . '.php';
     }
+
+//     // test view
+//     public function renderTest($viewName)
+//     {
+//         require 'views/Test/' . $viewName . '.php';
+//     }
 }

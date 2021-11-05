@@ -58,9 +58,9 @@ class App
             $file2 = 'controllers/' . $this->_url[0] . '/' . $this->_url[1] . '.php';
         }
 
-        if (isset($this->_url[2])) {
-            $file3 = 'controllers/' . $this->_url[0] . '/' . $this->_url[1] . '/' . $this->_url[2] . '.php';
-        }
+        // if (isset($this->_url[2])) {
+        //     $file3 = 'controllers/' . $this->_url[0] . '/' . $this->_url[1] . '/' . $this->_url[2] . '.php';
+        // }
 
         if (file_exists($file1)) {
             require $file1;
@@ -144,8 +144,8 @@ class App
             case 1:
                 $this->_controller->{$this->_url[0]}();
 
-                /*test->test()*/
-                /* $this->_controller -> {$this->_url[0]}($this->_url[1]);*/
+                // test->test()
+                //  $this->_controller -> {$this->_url[0]}($this->_url[1]);
 
                 break;
 

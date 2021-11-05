@@ -1,4 +1,5 @@
 <?php
+
 class Admin_add_counselling extends Controller
 {
     function __construct()
@@ -11,5 +12,10 @@ class Admin_add_counselling extends Controller
 
         //pass view name
         $this->view->renderAdmin('Admin_add_counselling');
+    }
+
+    function insert_counsellor_admin()
+    {
+        var_dump($_POST);
     }
 }

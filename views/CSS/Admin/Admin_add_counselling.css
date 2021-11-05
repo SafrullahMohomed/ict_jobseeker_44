@@ -117,33 +117,59 @@ textarea#aboutYou {
   display: flex;
   justify-content: center;
 }
-.add-another button {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #1f78fb87;
-  border-radius: 25px;
-  width: 100%;
-  max-width: 450px;
-  min-width: 250px;
-  height: 45px;
-  font-size: 18px;
-  font-weight: 700;
-  transition: ease-in-out 0.2s;
-  border: 1px solid #1f78fb87;
-  letter-spacing: 1px;
+
+/*qualifications*/
+/*qualification list button*/
+
+#qualification_button{
+  display: block;
+  border: none;
+  padding: 0.5rem;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+
 }
 
-.add-another button:hover {
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid #1f78fb87;
+#qualification_box {
+  height: auto;
+  min-height: 100px;
+  word-wrap: break-word;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+
 }
 
-.add-another button .plus_for_button {
-  font-weight: bolder;
-  font-size: xx-large;
-}
+
+/*.add-another button {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-evenly;*/
+/*  background-color: #1f78fb87;*/
+/*  border-radius: 25px;*/
+/*  width: 100%;*/
+/*  max-width: 450px;*/
+/*  min-width: 250px;*/
+/*  height: 45px;*/
+/*  font-size: 18px;*/
+/*  font-weight: 700;*/
+/*  transition: ease-in-out 0.2s;*/
+/*  border: 1px solid #1f78fb87;*/
+/*  letter-spacing: 1px;*/
+/*}*/
+
+/*.add-another button:hover {*/
+/*  cursor: pointer;*/
+/*  background-color: #ffffff;*/
+/*  border: 1px solid #1f78fb87;*/
+/*}*/
+
+/*.add-another button .plus_for_button {*/
+/*  font-weight: bolder;*/
+/*  font-size: xx-large;*/
+/*}*/
 
 /* add another button ends here */
 

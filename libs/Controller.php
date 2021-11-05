@@ -7,7 +7,7 @@ class Controller
         $this->view = new View();
     }
 
-    public  function loadModel($modelName)
+    public function loadModel($modelName)
     {
 
         //all models which are stored direclty in the model directory
