@@ -41,6 +41,7 @@
     font-size: 25px;
     font-weight: 1000;
     text-align: left;
+    color: black;
     Text-shadow: 1px 2px rgba(216, 189, 189, 0.3);
    
   }
@@ -58,6 +59,12 @@ animation-name:post_job_description_left_button_animation;
 animation:post_job_description_left_button_animation 5s infinite;
 cursor: pointer;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;}
+
 
 @keyframes post_job_description_left_button_animation{
 
@@ -118,7 +125,7 @@ p{
     
     }
     .labelfield{    
-    font-size: 25px;
+    font-size: 20px;
      margin: auto;
      font-weight: 600;
 
@@ -132,7 +139,9 @@ p{
     border-radius: 2px;
     resize: vertical; 
     margin-bottom: 20px;
-    font-size:20px ;
+    font-size:17px ;
+    color: #3b2f2f !important;
+    
 }
 .inputfield:hover{ 
  
@@ -248,6 +257,11 @@ padding-right: 70px;
     color:#1D6989 ;
     background-color: white;
     border: 2px solid #1D6989;
+}
+.err{
+  font-size: 15px;
+  color: red;
+  margin-bottom: 5px;
 }
 
 /*user access msg end*/

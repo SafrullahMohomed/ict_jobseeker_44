@@ -179,6 +179,10 @@ label
 #login_button{
     margin: auto !important;
 }
+span
+{
+    color: red;
+}
 /*user access msg end*/
 @media only screen and (max-width: 990px)
 {

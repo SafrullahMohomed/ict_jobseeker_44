@@ -1,9 +1,11 @@
+
 <?php
 
 class App
 {
     private $_url = null;
     private $_controller = null;
+    private $_flag1 = null;
 
     function __construct()
     {
@@ -78,7 +80,10 @@ class App
             require $file2;
 
             $this->_controller = new $this->_url[1];
+            //raise a flag for switch case
+            $this->_flag1 = 1;
             //load model
+           
             $this->_controller->loadModel2($this->_url[0], $this->_url[1]);
 
             // $this->_controller->Home();
@@ -119,21 +124,53 @@ class App
         }
         switch ($urlLength) {
             case 6:
-                $this->_controller->{$this->_url[1]}($this->_url[2], $this->_url[3], $this->_url[4], $this->_url[5], $this->_url[5]);
+                if($this->_flag1==1){
+                   
+                    $this->_controller->{$this->_url[2]}($this->_url[3],$this->_url[4],$this->_url[5]);
+                     break;
+                 }
+                else{
+                    $this->_controller->{$this->_url[1]}($this->_url[2], $this->_url[3], $this->_url[4], $this->_url[5], $this->_url[5]);
                 break;
+                }
+                
 
             case 5:
-                $this->_controller->{$this->_url[1]}($this->_url[2], $this->_url[3], $this->_url[4]);
-                break;
+                if($this->_flag1==1){
+                   
+                    $this->_controller->{$this->_url[2]}($this->_url[3],$this->_url[4]);
+                     break;
+                 }
+                 else{
+                    $this->_controller->{$this->_url[1]}($this->_url[2], $this->_url[3], $this->_url[4]);
+                    break;
+                 }
+                
 
             case 4:
-                $this->_controller->{$this->_url[1]}($this->_url[2], $this->_url[3]);
-                break;
+                if($this->_flag1==1){
+                   
+                    $this->_controller->{$this->_url[2]}($this->_url[3]);
+                     break;
+                 }
+                 else{
+                    $this->_controller->{$this->_url[1]}($this->_url[2], $this->_url[3]);
+                    break;
+                 }
+                
 
             case 3:
-
-                $this->_controller->{$this->_url[1]}($this->_url[2]);
-                break;
+                //file is in inside of a folder and call to method
+                if($this->_flag1==1){
+                   
+                   $this->_controller->{$this->_url[2]}();
+                    break;
+                }
+                else{
+                    $this->_controller->{$this->_url[1]}($this->_url[2]);
+                    break;
+                 }
+                
 
             case 2:
 

@@ -30,7 +30,7 @@
 
     /*header division* starts here*/
     /*.header_div{
-    
+
       margin-bottom: 140px;
       overflow-x: hidden;
     }*/
@@ -324,28 +324,35 @@ align-items: center;
                   <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
                   <div id="myDropdown" class="dropdown-content">
 
-                    <!-- check user type -->
-                    <?php
-                    // if user is company
-                    if ($_SESSION['User_type'] == "Company") :
-                      $My_profile = "Company_profiles/Company_profile";
-                    endif;
-                    // if user is Contract_provider
-                    if ($_SESSION['User_type'] == "Contract provider") :
-                      $My_profile = "Contracts/Contract_provider_profile";
-                    endif;
+                      
+
+              <!-- check user type -->
+              <?php
+              // if user is company
+              if ($_SESSION['User_type'] == "Company") :
+                $My_profile = "Company_profiles/Company_profile";
+              endif;
+              // if user is Contract_provider
+              if ($_SESSION['User_type'] == "Contract provider") :
+                $My_profile = "Contracts/Contract_provider_profile";
+              endif;
+               // if user is Jobseeker
+               if ($_SESSION['User_type'] == "Jobseeker") :
+                $My_profile = "Jobseeker/JobSeekerProfile";
+              endif;
 
 
 
-                    ?>
-                    <a href="<?php echo URL . $My_profile ?>">My profile</a>
-                    <a href="<?php echo URL ?>ForgotPassword">Change password</a>
-                    <a href="<?php echo URL ?>Login/logout">Logout</a>
-                  </div>
-                </div>
 
-                </div>
-                            
+              ?>
+              <a href="<?php echo URL . $My_profile ?>">My profile</a>
+              <a href="<?php echo URL ?>ResetPassword">Change password</a>
+              <a href="<?php echo URL ?>Login/logout">Logout</a>
+            </div>
+          </div>
+
+        </ul>
+      </div>
 
           </ul>
         </div>
@@ -444,7 +451,6 @@ align-items: center;
         }
       }
     }
-  </script>
-</body>
+  </script></body>
 
 </html>

@@ -11,7 +11,8 @@
     </style>
 </head>
 <body>
-    <form class="MainContainer">
+<?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>
+    <form class="MainContainer" name="myForm" action="<?php echo URL ?>Bid/insert_bid" method="post">
         <div class="Title">
             Bid on this project
         </div>
@@ -24,13 +25,17 @@
         </div>
         <div class="row">
             <label for="proposal" class="labelfield">Proposal</label><br>
-            <textarea  id="proposal" rows="8"  class="inputfield" placeholder="Describe your proposal here to get more chance..." required></textarea><br>
+            <textarea  id="proposal" name="proposal" rows="8"  class="inputfield" placeholder="Describe your proposal here to get more chance..." required></textarea><br>
         </div>   
        <div class="submit">
             <label for="submit" class="labelfield"></label><br>
-            <input type="submit" id="submit" submit="submit"  class="submit_button"><br>
+            <input type="submit" id="submit" name="submit"  class="submit_button"><br>
         </div> 
     </form>
-
+    <?php endif; ?>
+    <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Jobseeker") : ?>
+        <div class="login_msg"> Before apply for a job you should login as Jobseeker</div>
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
+        <?php endif; ?>  
 </body>
 </html>

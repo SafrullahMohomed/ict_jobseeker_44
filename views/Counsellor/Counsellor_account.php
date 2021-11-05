@@ -85,13 +85,11 @@
       <div class="qualification inp">
         <label for="qualification">Qualification</label>
         <br />
-        <input type="text" name="quaulification" id="qualification" />
+          <textarea name="qualification_box" id="" cols="30" rows="10"></textarea>
       </div>
 
       <!--  -->
-
-      <?php include "../richtext.php" ?>
-
+        
 
       <!-- Facebook -->
       <div class="facebook inp">

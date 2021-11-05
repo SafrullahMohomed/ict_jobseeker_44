@@ -1,6 +1,6 @@
 <?php
 
-class Counsellor_home_js_Model extends Model
+class Counsellor_home_js_Model.php extends Model
 {
     function __construct()
     {

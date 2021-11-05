@@ -5,3 +5,8 @@ let ul_button = document.getElementById("qualification_button");
         let cmd = ul_button.dataset[""];
         document.execCommand(cmd, false, null);
     });
+
+
+
+    //form validation
+

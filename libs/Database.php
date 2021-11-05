@@ -15,54 +15,52 @@ class Database extends PDO
         return $stmt->fetchAll();
     }
 
-
-    public function runQuery_single($query1)
-    {
-        $stmt = $this->prepare($query1);
+    public function runQuery_single($query1){
+        $stmt=$this->prepare($query1);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
+//insert cp data into database
+// public function run_cp_insert_query()
+// {
+//     $profile_pic  =$_POST["profile_pic"];
+//     $fname 	  = $_POST["fname"];
+//     $lname    =$_POST["lname"];
+//     $phone_number  =$_POST["phone_number"];
+//     $nic  =$_POST["nic"];
+//     $Brief_description  =$_POST["brief_description"];
+//     $email  =$_POST["email"];
+//     $web_url  =$_POST["web_url"];
+//     $fb_url  =$_POST["fb_url"];
+//     $linkedin_url  =$_POST["linkedin_url"];
+//     $twitter_url  =$_POST["twitter_url"];
 
+// // prepare sql and bind parameters 
+// //Insert data into user table
+//
 
-    //insert cp data into database
-    public function run_cp_insert_query()
-    {
-        $profile_pic  = $_POST["profile_pic"];
-        $fname       = $_POST["fname"];
-        $lname    = $_POST["lname"];
-        $phone_number  = $_POST["phone_number"];
-        $nic  = $_POST["nic"];
-        $Brief_description  = $_POST["brief_description"];
-        $email  = $_POST["email"];
-        $web_url  = $_POST["web_url"];
-        $fb_url  = $_POST["fb_url"];
-        $linkedin_url  = $_POST["linkedin_url"];
-        $twitter_url  = $_POST["twitter_url"];
+//     $stmt1 =$this->prepare("INSERT INTO user (email,first_name, Last_name, Phone_number,Description)
+//     VALUES (:email,:fname, :lname,:phone_number,:Brief_description )");
+//         $stmt1->bindParam(':email', $email);
+//         $stmt1->bindParam(':fname', $fname);
+//         $stmt1->bindParam(':lname', $lname);
+//         $stmt1->bindParam(':phone_number', $phone_number);
+//         $stmt1->bindParam(':Brief_description', $Brief_description);
 
-        // prepare sql and bind parameters 
-        //Insert data into user table
-        $stmt1 = $this->prepare("INSERT INTO user (email,first_name, Last_name, Phone_number,Description)
-    VALUES (:email,:fname, :lname,:phone_number,:Brief_description )");
-        $stmt1->bindParam(':email', $email);
-        $stmt1->bindParam(':fname', $fname);
-        $stmt1->bindParam(':lname', $lname);
-        $stmt1->bindParam(':phone_number', $phone_number);
-        $stmt1->bindParam(':Brief_description', $Brief_description);
+//     $stmt1->execute();
+//     $User_ID = $this->lastInsertId();
 
-        $stmt1->execute();
-        $User_ID = $this->lastInsertId();
+// //Insert data into contractprovider table  
+// $stmt2 = $this->prepare("INSERT INTO contractprovider (User_ID,ContractProvider_NIC,Website_url,Fb_url, Linkedin_url,Twitter_url)
+// VALUES ( $User_ID,:nic,:web_url, :fb_url,:linkedin_url,:twitter_url )");
+//     $stmt2->bindParam(':nic', $nic);
+//     $stmt2->bindParam(':web_url', $web_url);
+//     $stmt2->bindParam(':fb_url', $fb_url);
+//     $stmt2->bindParam(':linkedin_url', $linkedin_url);
+//     $stmt2->bindParam(':twitter_url', $twitter_url);
 
-        //Insert data into contractprovider table  
-        $stmt2 = $this->prepare("INSERT INTO contractprovider (User_ID,ContractProvider_NIC,Website_url,Fb_url, Linkedin_url,Twitter_url)
-VALUES ( $User_ID,:nic,:web_url, :fb_url,:linkedin_url,:twitter_url )");
-        $stmt2->bindParam(':nic', $nic);
-        $stmt2->bindParam(':web_url', $web_url);
-        $stmt2->bindParam(':fb_url', $fb_url);
-        $stmt2->bindParam(':linkedin_url', $linkedin_url);
-        $stmt2->bindParam(':twitter_url', $twitter_url);
-
-        $stmt2->execute();
-    }
+// $stmt2->execute();
+// }
 
     //when post a contract insert this data to database
     public function run_post_contract_insert_query()
@@ -124,36 +122,15 @@ VALUES ( $User_ID,:nic,:web_url, :fb_url,:linkedin_url,:twitter_url )");
         $varify = $data['verify'];
         $Created_at = date("Y-m-d H:i:s");
 
-//        echo $fname, $lname, $email, $user_type, $password, $varify, $Created_at;
 
-        // $stmt1 =$this->prepare("INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at)
-        //  VALUES (:password,:email,:fname,:lname,:verify,:varify_token,:user_type,:Created_at )");
-
-        //  $stmt1->bindParam(':password', $password);
-        //  $stmt1->bindParam(':email', $email);
-        //  $stmt1->bindParam(':fname', $fname);
-        //  $stmt1->bindParam(':lname', $lname);
-        // //  $stmt1->bindParam(':password', $password);
-        //  $stmt1->bindParam(':verify',$varify );
-        //  $stmt1->bindParam(':varify_token',  $emailToken);
-        //  $stmt1->bindParam(':user_type',  $user_type);
-        //  $stmt1->bindParam(':Created_at',  $Created_at);
-
-        //  $stmt1->execute();
-
+        
         $sql = "INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at) VALUES (?,?,?,?,?,?,?,?);";
         
         $stmt1 = $this->prepare($sql);
 
-        //  $stmt1->bindParam(':password', $password);
-        //  $stmt1->bindParam(':email', $email);
-        //  $stmt1->bindParam(':fname', $fname);
-        //  $stmt1->bindParam(':lname', $lname);
-        // //  $stmt1->bindParam(':password', $password);
-        //  $stmt1->bindParam(':verify',$varify );
-        //  $stmt1->bindParam(':varify_token',  $emailToken);
-        //  $stmt1->bindParam(':user_type',  $user_type);
-        //  $stmt1->bindParam(':Created_at',  $Created_at);
+
+        $sql2 ="INSERT INTO";
+
 
         $stmt1->execute([$password, $email, $fname, $lname, $varify, $emailToken, $user_type, $Created_at]);
     }

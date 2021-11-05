@@ -36,14 +36,14 @@
         </div>
         <div class="row">
             <label for="fname" class="labelfield">First Name</label><br>
-            <input type="text" id="fname" name="fname" placeholder= "Enter your first name..." require class="inputfield" onfocus=" hideFormError(fname_error)"><br>
+            <input type="text" id="fname" name="fname" placeholder= "Enter your first name..." value="<?php echo $_SESSION['First_name']?>" autocomplete="fname" require class="inputfield" onfocus=" hideFormError(fname_error)"><br>
             <span id="fname_error"><?php #echo  $_SESSION["fnameErr"] ?></span>
 
            
         </div>
         <div class="row">
             <label for="lname" class="labelfield">Last Name</label><br>
-            <input type="text" id="lname" name="lname" placeholder= "Enter your last name..." require class="inputfield" onfocus=" hideFormError(lname_error)"><br>
+            <input type="text" id="lname" name="lname" placeholder= "Enter your last name..."  value=" <?php echo $_SESSION['Last_name']?>" autocomplete="lname" require class="inputfield" onfocus=" hideFormError(lname_error)"><br>
             <span id="lname_error"><?php #echo  $_SESSION["lnameErr"]?></span>
         </div>
         <div class="row">
@@ -66,13 +66,13 @@
         <div class="row">
             <label for="brief_description" class="labelfield"> Brief description</label><br>
             
-            <textarea  id="brief_description"name="brief_description" rows="4"   require placeholder="Type brief introduction about your self..." class="inputfield"></textarea><br>
+            <textarea  id="brief_description"name="brief_description" rows="4"   placeholder="Type brief introduction about your self..." class="inputfield"></textarea><br>
             <span id="brief_description_error"><?php #echo    $_SESSION["Brief_descriptionErr"]  ?></span>
         </div>
         
         <div class="row">
             <label for="email" class="labelfield">Email</label><br>
-            <input type="email" id="email" name="email" placeholder= "Email" require class="inputfield" onfocus=" hideFormError(email_error)"><br>
+            <input type="email" id="email" name="email" placeholder= "Email" value="<?php echo $_SESSION['Email']  ?>" autocomplete="email" readonly  require class="inputfield" onfocus=" hideFormError(email_error)"><br>
             <span id="email_error" class="error"><?php #echo   $_SESSION["emailErr"]?></span>
         </div>
     

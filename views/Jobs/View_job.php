@@ -10,14 +10,15 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     
     <style>
-        <?php include "CSS/View_job.css" ?>
+        <?php include ("views/CSS/View_job.css" )?>
+      
     </style>
     <title>view_job</title>
 </head>
 <body>
      <!-- header part with css html js -->
    <div class="header_div" >
-        <?php include 'Header.php'?>
+   <?php include ("views/Header.php" )?>
 </div>
       <!-- header part end  -->
      
@@ -124,14 +125,14 @@
                              Part Time
                          </div>
                     </div>
-                    <div class="year_of_experience">
+                    <!-- <div class="year_of_experience">
                         <div class="year_of_experience_text">
                             Year Of Experience :
                         </div>
                         <div class="year_of_experience_answer">
                             2 Years
                         </div>
-                   </div>
+                   </div> -->
                    <div class="phone_number">
                     <div class="phone_number_text">
                         Phone number :
@@ -206,7 +207,7 @@
     
 </div>
 
-<?php include 'Footer.php'?>
+<?php include  ("views/Footer.php" )?>
 <script src="<?php echo URL ?>views/JS/View_jobs.js"></script>
 </body>
 </html>
