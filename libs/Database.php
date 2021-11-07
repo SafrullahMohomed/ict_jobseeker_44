@@ -127,6 +127,47 @@ return $s;
      $stmt1->bindParam(':Created_at',  $Created_at);
 
      $stmt1->execute();
+     $User_ID=$this->lastInsertId();
+    
+//when registration is success then create user table row for relavent user type
+    switch ($user_type) {
+        case 'Jobseeker':
+    
+           $query="INSERT INTO jobseeker(User_ID) VALUES (?)";
+           $stmt2 =$this->prepare( $query);
+           $stmt2->execute([$User_ID]);
+            break;
+        
+       case 'Contract provider':
+        $query="INSERT INTO contractprovider(User_ID) VALUES (?)";
+        $stmt2 =$this->prepare( $query);
+        $stmt2->execute([$User_ID]);
+         break;
+            
+
+       case 'Company':
+        $query="INSERT INTO company(User_ID) VALUES (?)";
+        $stmt2 =$this->prepare( $query);
+        $stmt2->execute([$User_ID]);
+        break;
+
+        case 'Counsellor':
+        $query="INSERT INTO counsellor(User_ID) VALUES (?)";
+        $stmt2 =$this->prepare( $query);
+        $stmt2->execute([$User_ID]);
+        break;
+
+        case 'Admin':
+        $query="INSERT INTO admin(User_ID) VALUES (?)";
+        $stmt2 =$this->prepare( $query);
+        $stmt2->execute([$User_ID]);
+        break;
+
+    
+        default:
+            echo "no case found for user type";
+            break;
+    }
 
 }
 
