@@ -142,8 +142,8 @@
     <input type="date" id="Deadline" name="Deadline" placeholder="" class="inputfield" onfocus=" hideFormError(Deadline_error)"><br>
     <span class="err" id="Deadline_error"><?php echo $data['Deadline_err']?></span><br>
 
-    <label for="Company_Logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
-    <input type="file" id="CompanyLogo" name="Company_Logo" placeholder="" class="inputfield" accept="image/*"><br>
+    <label for="Company_logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
+    <input type="file" id="CompanyLogo" name="Company_logo" placeholder="" class="inputfield" accept="image/*"><br>
     
     <label for="Job_image" class="labelfield">Job post image(JPEG/PNG)</label><br>
     <input type="file" id="CompanyLogo" name="Job_image" placeholder="" class="inputfield" accept="image/*"><br>
