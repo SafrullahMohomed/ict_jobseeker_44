@@ -61,7 +61,6 @@ function validateForm() {
   	}
 
 
-
 }
 /*fuction to hide error msg*/
 function hideFormError(x) {

@@ -30,7 +30,7 @@
 
     /*header division* starts here*/
     /*.header_div{
-    
+
       margin-bottom: 140px;
       overflow-x: hidden;
     }*/
@@ -324,8 +324,7 @@ align-items: center;
                   <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
                   <div id="myDropdown" class="dropdown-content">
 
-                   
-
+                      
 
               <!-- check user type -->
               <?php
@@ -354,7 +353,7 @@ align-items: center;
 
         </ul>
       </div>
-    
+
           </ul>
         </div>
         <!-- logo and navigation bar starts here -->
@@ -452,7 +451,6 @@ align-items: center;
         }
       }
     }
-  </script>
-</body>
+  </script></body>
 
 </html>

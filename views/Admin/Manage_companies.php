@@ -45,9 +45,6 @@
 
         <div class="Table">
             <table>
-                <tr>
-                    <th colspan="4" id="topic">Registered Companies</th>
-                </tr>
                 <tr id="columnTopic">
                     <th>ID</th>
                     <th>Email</th>

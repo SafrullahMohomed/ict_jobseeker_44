@@ -17,7 +17,7 @@
 <body>
     <!-- header part with css html js -->
     <div class="header_div">
-        <?php include 'Header.php' ?>
+        <?php include './views/Header.php' ?>
     </div>
     <!-- header part end  -->
 
@@ -165,7 +165,7 @@
     </div>
 
     <!-- cancel, add buttons ends here -->
-    <?php include 'Footer.php' ?>
+    <?php include './views/Footer.php' ?>
     <script src="<?php echo URL ?>views/JS/Post_job.js"></script>
 
 </body>
