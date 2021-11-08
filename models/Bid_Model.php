@@ -6,21 +6,24 @@ class Bid_Model extends Model{
        parent :: __construct(); 
     }
 
-    function run_insert_bid($Bid_value, $Bid_proposal)
+    function run_insert_bid()
    {
-        try
-        {
-            $sql= "INSERT INTO dobid (Bid_value,Bid_proposal) VALUES (?,?) ";
+        // try
+        // {
+        //   $Jobseeker_ID=$_SESSION['User_ID'];
+        //   $sql= "INSERT INTO dobid (Bid_value,Bid_proposal,Jobseeker_ID) VALUES (?,?,?) ";
             
-            $stmt=$this->db->prepare($sql);
-            $stmt->execute([$Bid_value,$Bid_proposal]);
+        //     $stmt=$this->db->prepare($sql);
+        //     $stmt->execute([$Bid_value,$Bid_proposal,$Jobseeker_ID]);
 
-          echo "Successfully inserted"  ;
-        }
-        catch(Exception $e)
-        {
-            echo "message $e->getMessage()";
-        }
+        //   echo "Successfully inserted"  ;
+        // }
+        // catch(Exception $e)
+        // {
+        //     echo "message $e->getMessage()";
+        // }
+        return $this->db->run_insert_bid_query();
+
    }
    
 }

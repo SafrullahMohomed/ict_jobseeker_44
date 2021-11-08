@@ -16,16 +16,27 @@ class Bid extends Controller
         //pass view name
         $this->view ->render('Bid'); 
     }
+    // function insert_bid()
+    // {
+    //     if(isset($_POST['submit']))  
+    //     {
+    //         $bid  =$_POST['bid'];
+    //         $proposal=$_POST['proposal'];
+    //     } 
+    //     $this->model->run_insert_bid($bid, $proposal);
+    //     // var_dump($_POST);
+        
+    // }
+    //insert bidr data into database (user and dobid table)
     function insert_bid()
     {
-        if(isset($_POST['submit']))  
-        {
-            $bid  =$_POST['bid'];
-            $proposal=$_POST['proposal'];
-            
-        } 
-        $this->model->run_insert_bid($bid, $proposal);
-        // var_dump($_POST);
+       
+
+        //pass view name
+       
+        $this->view->Bid= $this->model->run_insert_bid();
+        
+        $this->view ->render('View_contract'); 
         
     }
 }
