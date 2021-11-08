@@ -145,7 +145,7 @@ class Database extends PDO
     
     $stmt1->execute();
     $s=$stmt1->fetchAll();
-    
+    print_r($s);
     return $s;
     
 }

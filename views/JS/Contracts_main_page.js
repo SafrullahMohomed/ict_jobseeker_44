@@ -41,7 +41,7 @@ function Bidnow(){
           let Contract = document.querySelector(".features_contract_row");
          
           search = JSON.parse(this.response);
-          //console.log(search[0][0])
+          
 
         
           Contract.innerHTML = "";
