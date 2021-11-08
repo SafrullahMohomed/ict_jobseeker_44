@@ -9,24 +9,25 @@
 </head>
 
 <body>
-    Hi there I am test from view
+Hi there I am test from view
 
-    <form action="http://localhost/ict_jobseeker_44/Test1/get_user_inputs" method="post">
-    <label for="Name" name = "Name">Name :</label>
+<form action="http://localhost/ict_jobseeker_44/Test1/get_user_inputs" method="post">
+    <label for="Name" name="Name">Name :</label>
     <input type="text" name="Name" id="Name">
     <br>
-    <label for="Age" name = "Age"> Age :</label>
+    <label for="Age" name="Age"> Age :</label>
     <input type="text" name="Age" id="Age">
     <br>
-    <label for="Address" name = "Address">Address :</label>
+    <label for="Address" name="Address">Address :</label>
     <input type="text" name="Address" id="Address">
     <br>
-    <label for="City" name = "City">City :</label>
+    <label for="City" name="City">City :</label>
     <input type="text" name="City" id="City">
     <br>
 
-    <input type="submit" name = "Submit" value="Submit">
-    </form>
+    <input type="submit" name="Submit" value="Submit">
+</form>
+
 </body>
 
 </html>

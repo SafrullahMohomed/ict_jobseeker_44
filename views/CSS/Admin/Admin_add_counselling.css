@@ -93,7 +93,7 @@ input#profilePicture {
 }
 
 /* each input boxes */
-input {
+input{
   width: 100%;
   height: 35px;
   border-radius: 2px;
@@ -142,7 +142,24 @@ textarea#aboutYou {
 
 }
 
+/*radio button mock interviews*/
+.provideMi{
+  display:flex;
+  flex-direction: column;
+  justify-content:left;
+}
 
+ .mi_yes, .mi_no{
+  display:flex;
+  flex-direction: row;
+   align-items: center;
+
+}
+/*error message*/
+
+.input_error{
+  color: darkred;
+}
 /*.add-another button {*/
 /*  display: flex;*/
 /*  align-items: center;*/

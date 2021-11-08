@@ -6,4 +6,6 @@ class Counsellor_mock_Model extends Model
     {
         parent::__construct();
     }
+
 }
+

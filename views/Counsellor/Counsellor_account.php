@@ -43,7 +43,8 @@
       <div class="firstName inp">
         <label for="firstName">First Name</label>
         <br />
-        <input type="text" name="firstName" id="firstName" />
+        <input type="text" name="firstName" id="firstName" required/>
+          span.
       </div>
       <!-- last name  -->
       <div class="lastName inp">
@@ -115,7 +116,7 @@
 
       <!-- About You -->
       <div class="aboutYou inp">
-        <label for="aboutYou">About You</label>
+        <label for="aboutYou">Description/label>
         <br />
         <textarea name="aboutYou" id="aboutYou" cols="30" rows="10"></textarea>
       </div>

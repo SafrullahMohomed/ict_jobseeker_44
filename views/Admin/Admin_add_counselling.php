@@ -12,15 +12,15 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-<!--    include script-->
+    <!--    include script-->
     <script defer src="<?php echo URL ?>views/JS/Admin/Admin_add/Admin_add_counselling.js"></script>
 
     <title>Document</title>
 </head>
 
-<!-- <div class="header_div">
- 
-</div> -->
+<div class="header_div">
+    <?php include './views/Header.php'?>
+</div>
 
 
 <body>
@@ -33,8 +33,8 @@
 <!-- title field ends here -->
 
 <!-- counsellor form field starts here -->
-<form action="http:/ict_jobseeker_44/Admin/Admin_add_counselling/insert_counsellor_admin" method="get"
-      id="contact_form">
+<form action="http:/ict_jobseeker_44/Admin/Admin_add_counselling/insert_counsellor_admin" method="post"
+      id="admin_counsellor_form" name="admin_counsellor_form">
     <div class="counsellor_form">
         <!-- profile picture -->
         <div class="profilePic">
@@ -52,34 +52,24 @@
         <div class="firstName inp">
             <label for="firstName">First Name</label>
             <br/>
-            <input type="text" name="firstName" id="firstName"/ required>
+            <input type="text" name="firstName" id="firstName" onfocus="hideFormError(firstName_error)" required/>
+            <span id="firstName_error" class="input_error"></span>
         </div>
+
         <!-- last name  -->
         <div class="lastName inp">
             <label for="lastName">Last Name</label>
             <br/>
-            <input type="text" name="lastName" id="lastName" required/>
-        </div>
-
-        <!-- password -->
-        <div class="password inp">
-            <label for="password">Password</label>
-            <br/>
-            <input type="password" name="password" id="password"/ required>
-        </div>
-
-        <!--confirm password -->
-        <div class="confirm_password inp">
-            <label for="password">Confirm Password</label>
-            <br/>
-            <input type="password" name="confirm_password" id="confirm_password"/>
+            <input type="text" name="lastName" id="lastName" onfocus="hideFormError(lastName_error)" required/>
+            <span id="lastName_error" class="input_error"></span>
         </div>
 
         <!-- email -->
         <div class="email inp">
             <label for="email">Email</label>
             <br/>
-            <input type="email" name="email" id="email" required/>
+            <input type="email" name="email" id="email" onfocus="hideFormError(email_error)" required/>
+            <span id="email_error" class="input_error"></span>
         </div>
 
 
@@ -87,15 +77,18 @@
         <div class="phoneNumber inp">
             <label for="phoneNumber">Phone Number</label>
             <br/>
-            <input type="tel" name="phoneNumber" id="phoneNumber"/>
+            <input type="tel" name="phoneNumber" id="phoneNumber" onfocus="hideFormError(phoneNumber_error)"/>
+            <span id="phoneNumber_error" class="input_error"></span>
         </div>
+
 
         <!-- Address -->
         <div class="address inp">
             <label for="address">Address</label>
             <br/>
-            <input type="text" name="Address" id="firstName"/>
+            <input type="text" name="address" id="firstName"/>
         </div>
+
 
         <!-- city -->
         <div class="city inp">
@@ -113,7 +106,7 @@
             <button
                     type="button"
                     data-command="insertUnorderedList"
-                    id = "qualification_button"
+                    id="qualification_button"
             >
                 <i class="fa fa-list-ul"></i>
             </button>
@@ -133,22 +126,36 @@
         <div class="linkedin inp">
             <label for="linkedin">LinkedIn</label>
             <br/>
-            <input type="text" name="linkedin" id="linkedin"/>
+            <input type="url" name="linkedin" id="linkedin"/>
         </div>
 
         <!-- Twitter -->
         <div class="twitter inp">
             <label for="twitter">Twitter</label>
             <br/>
-            <input type="text" name="twitter" id="twitter"/>
+            <input type="url" name="twitter" id="twitter"/>
         </div>
 
 
         <!-- About You -->
         <div class="aboutYou inp">
-            <label for="aboutYou">About You</label>
+            <label for="aboutYou">Description</label>
             <br/>
             <textarea name="aboutYou" id="aboutYou" cols="30" rows="10"></textarea>
+        </div>
+
+        <!--        provide mock interviews-->
+        <div class="provideMi">
+            <p class="inp">Provide Mock Interviews</p>
+            <br>
+            <div class="mi_yes">
+                <input type="radio" name="provideMi" id="yes" value="yes" required><label for="yes">Yes</label><br>
+
+            </div>
+            <div class="mi_no">
+                <input type="radio" name="provideMi" id="no" value="no"><label for="no">No</label><br>
+            </div>
+
         </div>
 
         <!-- add another qualifications button
@@ -158,24 +165,34 @@
             </button>
           </div> -->
 
+        <!-- password -->
+        <div class="password inp">
+            <input type="hidden" name="password" id="password" value=Counsellor@123>
+        </div>
 
+        <!--        admin approve-->
+        <div class="adminApprove">
+            <input type="hidden" name="adminApprove" id="adminApprove" value="1">
+        </div>
+
+    </div>
+
+    <div class="cu_buttons">
+        <a href="<?php echo URL ?>Admin/Manage_counselling">
+            <div class="cancel">
+                <button type="button" class="cancel" form="myForm">Cancel</button>
+            </div>
+        </a>
+        <div class="update">
+            <button type="submit" onclick="return validateForm()">Add</button>
+        </div>
     </div>
 </form>
 
 <!-- next, back buttons -->
 
-<div class="cu_buttons">
-    <a href="<?php echo URL ?>Admin/Manage_counselling">
-        <div class="cancel">
-            <button class="cancel" form="myForm">Cancel</button>
-        </div>
-    </a>
-    <div class="update">
-        <button type="submit" form="contact_form">Add</button>
-    </div>
-</div>
-
 <!-- next, back buttons ends here -->
 </body>
+<?php include './views/Footer.php'?>
 
 </html>

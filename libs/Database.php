@@ -20,6 +20,8 @@ class Database extends PDO
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
+
+
 //insert cp data into database
 // public function run_cp_insert_query()
 // {
