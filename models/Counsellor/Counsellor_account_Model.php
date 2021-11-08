@@ -1,6 +1,6 @@
 <?php
 
-class Admin_home_Model extends Model
+class Counsellor_account_Model extends Model
 {
     function __construct()
     {

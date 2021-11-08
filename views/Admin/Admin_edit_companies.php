@@ -18,7 +18,7 @@
 <body>
     <!-- header part with css html js -->
     <div class="header_div">
-        <?php include 'Header.php' ?>
+        <?php include './views/Header.php' ?>
     </div>
     <!-- header part end with css html js -->
     <div class="all">
@@ -111,7 +111,7 @@
 
         <!-- cancel, update buttons ends here -->
     </div>
-    <?php include 'Footer.php' ?>
+    <?php include './views/Footer.php' ?>
     <script src="<?php echo URL ?>views/JS/Company_account.js"></script>
 </body>
 
