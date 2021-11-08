@@ -100,7 +100,42 @@ return $s;
 //(C)output results
 //echo json_encode(count($stmt2) == 0 ? null : $stmt2);
 
- } 
+ }
+ // prepare sql and bind parameters 
+//Insert data into contract tables
+ public function run_insert_bid_query()
+ {
+    $bid  =$_POST["bid"];
+    $proposal=$_POST["proposal"];
+
+    $contract_provider_id=75;
+    $contract_id=25;
+   
+    $stmt1 =$this->prepare("INSERT INTO dobid (Bid_value,Bid_proposal,Jobseeker_ID,Contract_provider_ID,Contract_ID)
+    VALUES (:bid,:proposal,:user_id,:contract_provider_id,:contract_id)");
+     
+        $stmt1->bindParam(':bid', $bid);
+        $stmt1->bindParam(':proposal', $proposal);
+        $stmt1->bindParam(':user_id', $_SESSION['User_ID']);
+        $stmt1->bindParam(':contract_provider_id',$contract_provider_id);
+        $stmt1->bindParam(':contract_id',$contract_id);
+        
+        $stmt1->execute();
+
+ }
+
+ public function run_bid_contract_select_query()
+ {
+    $stmt1=$this->prepare("SELECT  `Bid_value`, `Bid_proposal`,
+                          `Jobseeker_ID`
+                           FROM `dobid`");
+    
+    $stmt1->execute();
+    $s=$stmt1->fetchAll();
+    
+    return $s;
+    
+}
  public function  run_insert_reg_data($data,$emailToken){
     date_default_timezone_set("Asia/Colombo");
     $fname=$data['fname'];
