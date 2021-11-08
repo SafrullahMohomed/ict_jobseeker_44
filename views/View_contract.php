@@ -13,7 +13,8 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <title>view_contract</title>
 </head>
-<body onload="BidLoad()">
+<!-- <body onload="BidLoad()"> -->
+    <body>
      <!-- header part start  -->
 <div class="header_div" >
         <?php include 'Header.php'?>
@@ -123,11 +124,12 @@
 
             
         </div>
+        
         <!-- bid proposal parts start from here -->
         <div class="bid_part">
-            <div class="bid_row">
+            <!-- <div class="bid_row">
             <!-- load data from  database -->
-            </div>
+            </div> -->
             <div class="bid_row">
                     <div class="first">
                      <div class="name">
@@ -135,7 +137,7 @@
                      </div>
                      <div class="rs_price">
                      <div class="rs">
-                            Rs.
+                            Rs.1500
                         </div>
                         <div class="price">
                             1500

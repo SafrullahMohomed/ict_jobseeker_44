@@ -6,20 +6,36 @@ function contractProviderProfile(){
 function BidContract(){
     
     window.open("http://localhost/ict_jobseeker_44/Jobseeker/BidContract","_self");
+   // window.open("http://localhost/ict_jobseeker_44/Contracts/View_contract/select_query_bid_contract_data","_self");
+
+
 }
 
 
       /*load  bids*/
       function BidLoad() {
-        alert("SSSSSS");
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost/ict_jobseeker_44/Contracts/View_contract/select_query_bid_contract_data");
         
+       /* var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost/ict_jobseeker_44/Contracts_main_page/select_post_contract_data");
+        
+        xhr.onload = function () {
+          let Contract = document.querySelector(".features_contract_row");
+         
+          search = JSON.parse(this.response);*/
+
+      var xhr = new XMLHttpRequest();
+      
+        xhr.open("POST", "http://localhost/ict_jobseeker_44/Contracts/View_contract/select_query_bid_contract_data");
+       
         xhr.onload = function () {
           let Bid = document.querySelector(".bid_row");
          
-          search = JSON.parse(this.response);
-          console.log(search)
+        // search = JSON.parse(this.response);
+         s =JSON.stringify(search);
+       
+
+        // search = JSON.parse(this.response);
+         console.log(s);
 
         
           Bid.innerHTML = "";
