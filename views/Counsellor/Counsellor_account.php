@@ -16,6 +16,10 @@
 
 
 <body>
+
+<div class="header_div">
+    <?php include './views/Header.php' ?>
+</div>
   <!-- title field starts here -->
   <div class="title_text">
     <div class="text1">Edit Your Profile</div>
@@ -144,6 +148,9 @@
   </div>
 
   <!-- next, back buttons ends here -->
+<!-- footer -->
+<?php include './views/Footer.php' ?>
+
 </body>
 
 </html>

@@ -110,7 +110,12 @@
     .social-media-icons a:hover {
       color: rgb(127, 135, 245);
     }
+    .services-link-details,
+    .information-details, .social-media-icons ul{
+        position: relative;
+        transform: translate(15%, 5%);
 
+    }
     .footer-list {
       list-style: none;
       color: white;
@@ -204,25 +209,25 @@
       .services-link-header {
         font-size: 22px;
         position: relative;
-        /*transform: translate(-18%, 10%);*/
+        transform: translate(-18%, 10%);
       }
 
       .information-header {
         font-size: 22px;
         position: relative;
-        /*transform: translate(-18%, 20%);*/
+        transform: translate(-18%, 20%);
       }
 
       .services-link-details,
       .information-details {
         position: relative;
-        /*transform: translate(-18%, 5%);*/
+        transform: unset;
         font-size: 14px;
       }
 
       .social-media-icons ul {
         position: relative;
-        /*transform: translate(-18%, -11%);*/
+          transform: unset;
       }
 
       /* footer ends here */

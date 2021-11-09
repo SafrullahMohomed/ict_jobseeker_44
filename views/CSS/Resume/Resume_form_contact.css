@@ -4,9 +4,9 @@
   font-family: "Quicksand", sans-serif;
 }
 /* stepper and buttons starts here */
-.tab{
-  display: none;
-}
+/*.tab{*/
+/*  display: none;*/
+/*}*/
 
 /* next, input button */
 .bn_buttons {
@@ -71,11 +71,11 @@ button:disabled:hover{
 }
 
 #stepProgressBar{
-  width: 300px;
+  width: 70%;
   display:flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin:0 auto 40px auto;
+  margin:130px auto 40px auto;
 
 }
 
@@ -105,16 +105,16 @@ button:disabled:hover{
   background-color: green;
 }
 
-.bullet.completed:after{
-  content: '';
-  position: absolute;
-  background-color:green;
-  height:4px;
-  width:55px;
-  transform: translate(0px, -60px, 10px, 0px);
-  right: -60px;
-  bottom:8px;
-}
+/*.bullet.completed:after{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  background-color:green;*/
+/*  height:4px;*/
+/*  width:55px;*/
+/*  transform: translate(0px, -60px, 10px, 0px);*/
+/*  right: -60px;*/
+/*  bottom:8px;*/
+/*}*/
 /* stepper and buttons ends here */
 
 
@@ -277,18 +277,33 @@ textarea#aboutYou{
 
 /* media queries */
 
-@media only screen and (max-width:750px){
-  
+@media only screen and (max-width:780px){
+
+        margin:0px auto 40px auto;
+
+    }
 }
 
 @media only screen and (max-width:960px){
   .time_period{
     flex-direction: column;
   }
-  
+
+
 }
 
 @media only screen and (max-width:750px){
+
+  /*  stepper*/
+
+    #stepProgressBar{
+        width: 90%;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin:0 auto 40px auto;
+
+    }
   /* title text */
   .title_text{
     display:flex;
@@ -328,6 +343,14 @@ textarea#aboutYou{
 
 
 @media only screen and (max-width:600px) {
+    #stepProgressBar{
+        width: 100%;
+        display:flex;
+        /*justify-content: space-between;*/
+        align-items: flex-end;
+        margin:0 auto 40px auto;
+
+    }
   
   /* heading texts */
   .text1{

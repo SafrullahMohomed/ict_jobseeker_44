@@ -15,10 +15,10 @@
     <!-- resume division -->
     <div class="resume-page">
         <div class="basic-info">
-            <div class="profile-image"><img src="/ict_jobseeker_44/views/images/lulakshi/lulz.png" alt=""></div>
+            <div class="profile-image"><img src="/ict_jobseeker_44/views/images/Resume/images.jpeg" alt=""></div>
 
             <div class="name-summary">
-                <div class="candidate-name">Lulashi Hettiarachchi</div>
+                <div class="candidate-name">Rowan Atkinson</div>
                 <div class="candidate-summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem, non nemo amet at provident similique molestias recusandae tempora perspiciatis praesentium? Numquam veritatis velit optio doloribus enim aliquam cum voluptatibus voluptatem praesentium obcaecati cupiditate illo quisquam repudiandae id exercitationem repellendus blanditiis error, deleniti amet. Nisi eius repudiandae consectetur suscipit harum?</div>
             </div>
         </div>

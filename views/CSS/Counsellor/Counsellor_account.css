@@ -6,6 +6,9 @@
 
 
 /* title field starts here */
+.main_container{
+  margin-top: 150px;
+}
 
 .title_text {
   display: flex;
