@@ -147,13 +147,21 @@ textarea#aboutYou {
   display:flex;
   flex-direction: column;
   justify-content:left;
+  width:100%;
+}
+.radio_inputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
- .mi_yes, .mi_no{
-  display:flex;
-  flex-direction: row;
-   align-items: center;
-
+/* .mi_yes, .mi_no{*/
+/*  display:flex;*/
+/*  flex-direction: row;*/
+/*   align-items: center;*/
+/*}*/
+.mi_yes input, .mi_no input{
+  color:black;
 }
 /*error message*/
 

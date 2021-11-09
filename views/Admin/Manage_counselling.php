@@ -98,19 +98,19 @@
     </div>
 
     <!-- counsellor registration request text -->
-    <div class="registration-text">
-        Counsellor Registration Requests
-    </div>
-
-    <!-- counsellor registration request table -->
-    <div class="registration-table">
-        Table....
-    </div>
-
-    <!-- load more button -->
-    <div class="load-more">
-        <button>Load More</button>
-    </div>
+<!--    <div class="registration-text">-->
+<!--        Counsellor Registration Requests-->
+<!--    </div>-->
+<!---->
+<!--     counsellor registration request table -->
+<!--    <div class="registration-table">-->
+<!--        Table....-->
+<!--    </div>-->
+<!---->
+<!--     load more button -->
+<!--    <div class="load-more">-->
+<!--        <button>Load More</button>-->
+<!--    </div>-->
 </div>
 
 <?php include './views/Footer.php' ?>

@@ -46,6 +46,7 @@ class Admin_add_counselling extends Controller
             ];
 
 
+
 //           var_dump($data);
 
             //Validate firstName
@@ -83,7 +84,8 @@ class Admin_add_counselling extends Controller
 //                    $this->model->sendMail($data['email'], $emailToken, $data['fname']);
 //                    $info['mail_msg'] = "We have sent an email with a confirmation link to your email address. In order to complete the sign-up process, please click the confirmation link.";
 
-
+//                    $this->view->renderAdmin2(Manage_counselling, $data);
+                    header("Location:http://localhost/ict_jobseeker_44/Admin/Manage_counselling");
 //                    $this->view->render('Mail_info');
                     #$this->view ->Success_post2($info['info_msg1']);
 

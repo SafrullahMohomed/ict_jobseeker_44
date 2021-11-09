@@ -19,7 +19,7 @@
 </head>
 
 <div class="header_div">
-    <?php include './views/Header.php'?>
+    <?php include './views/Header.php' ?>
 </div>
 
 
@@ -148,13 +148,15 @@
         <div class="provideMi">
             <p class="inp">Provide Mock Interviews</p>
             <br>
-            <div class="mi_yes">
-                <input type="radio" name="provideMi" id="yes" value="yes" required><label for="yes">Yes</label><br>
+            <div class="radio_inputs">
+                <div class="mi_yes">
+                    <input type="radio" name="provideMi" id="yes" value="yes" required><label for="yes">Yes</label><br>
+                </div>
+                <div class="mi_no">
+                    <input type="radio" name="provideMi" id="no" value="no"><label for="no">No</label><br>
+                </div>
+            </div>
 
-            </div>
-            <div class="mi_no">
-                <input type="radio" name="provideMi" id="no" value="no"><label for="no">No</label><br>
-            </div>
 
         </div>
 
@@ -193,6 +195,6 @@
 
 <!-- next, back buttons ends here -->
 </body>
-<?php include './views/Footer.php'?>
+<?php include './views/Footer.php' ?>
 
 </html>

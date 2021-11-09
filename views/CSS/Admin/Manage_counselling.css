@@ -1,6 +1,9 @@
 
 /* admin home button */
-
+.main-conatainer{
+    margin-top: 150px;
+    margin-bottom: 40px;
+}
 .admin-home-button{
     display:flex;
     justify-content: right;
@@ -162,7 +165,7 @@ td {
 
 .icon .fa-pencil{
     font-size: 20px;
-    color: #1D6989 !important;
+    color: #081b48 !important;
     margin: 6px;
     cursor: pointer;
     display: flex;
@@ -253,6 +256,8 @@ td {
         font-size: 15px;
     }
 
+
+
     /* load more button */
 
 
@@ -269,4 +274,13 @@ td {
     .registration-text{
         font-size: 30px;
     }
+}
+
+@media only screen and (max-width: 780px) {
+    .main-conatainer{
+        margin-top: 50px;
+    }
+
+
+
 }

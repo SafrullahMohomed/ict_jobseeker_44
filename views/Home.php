@@ -31,7 +31,7 @@
   <!-- header of the page starts  -->
   <!-- header part with css html js -->
   <div class="header_div">
-    <?php include 'Header.php' ?>
+    <?php include './views/Header.php' ?>
   </div>
   <!-- header part end  -->
   <!-- header  ends here -->
@@ -64,7 +64,36 @@
         </select>
       </div>
       <div class="location">
-        <input type="text" name="location" placeholder="location" />
+<!--        <input type="text" name="location" placeholder="location" />-->
+<!--          <label for="City" class="labelfield ">City</label><br>-->
+          <select type="text" id="City" name="City" placeholder="" class="inputfield" aria-multiselectable=><br>
+              <option value="Ampara ">Ampara  </option>
+              <option value="Anuradhapura ">Anuradhapura </option>
+              <option value="Badulla ">Badulla </option>
+              <option value="Batticaloa ">Batticaloa </option>
+              <option value="Colombo">Colombo</option>
+              <option value="Galle  ">Galle  </option>
+              <option value="Gampaha">Gampaha</option>
+              <option value="Hambanthota ">Hambanthota </option>
+              <option value="Jaffna  ">Jaffna  </option>
+              <option value="Kaluthara ">Kaluthara </option>
+              <option value="Kandy  ">Kandy  </option>
+              <option value="Kegalle ">Kegalle </option>
+              <option value="Kilinochchi ">Kilinochchi </option>
+              <option value="Kurunegala ">Kurunegala </option>
+              <option value="Mannar ">Mannar </option>
+              <option value="Matale  ">Matale  </option>
+              <option value="Matara ">Matara </option>
+              <option value="Monaragala ">Monaragala </option>
+              <option value="Mulathivu  ">Mulathivu  </option>
+              <option value="Nuwera Eliya ">Nuwera Eliya </option>
+              <option value=" Polonnaruwa "> Polonnaruwa </option>
+              <option value="Puttalam ">Puttalam </option>
+              <option value="Rathnapura ">Rathnapura </option>
+              <option value="Trincomalee  ">Trincomalee </option>
+              <option value="Vauniya ">Vauniya </option>
+
+          </select>
       </div>
       <div class="search-button">
         <button type="submit">Search</button>
@@ -195,7 +224,7 @@
   <!-- footer part starts here -->
 
 
-  <?php include 'Footer.php' ?>
+  <?php include './views/Footer_home.php' ?>
   <!-- js links -->
 
 
