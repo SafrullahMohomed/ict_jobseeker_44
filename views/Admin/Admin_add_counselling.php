@@ -30,7 +30,7 @@
     <!-- <div class="text2">update your profile</div> -->
 </div>
 
-<!-- title field ends here -->
+<!-- title  field ends here -->
 
 <!-- counsellor form field starts here -->
 <form action="http:/ict_jobseeker_44/Admin/Admin_add_counselling/insert_counsellor_admin" method="post"
