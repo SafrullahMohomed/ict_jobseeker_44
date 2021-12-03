@@ -92,7 +92,8 @@
 
        <div class="submit">
         <label for="submit" class="labelfield"></label><br>
-        <input type="submit" id="submit" submit="submit"  class="submit_button" onclick="return validateForm()"><br>
+        <!-- <input type="submit" id="submit" submit="submit"  class="submit_button" onclick="return validateForm()"><br> -->
+        <input type="submit" id="submit" submit="submit"  class="submit_button"><br>
        </div>
     </form>
     <div class="my_jobs">

@@ -7,11 +7,7 @@ class Companies_Model extends Model{
     }
 
 
-    //create account data insert to user and company table
-   function  insert_company_data(){
-echo "i m model";
-
-   }
+   
    
 }
 
