@@ -39,11 +39,13 @@ class Company_account extends Controller
         
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+           
                 $data = [
                     
                     'name' => trim($_POST['name']),
-                   // 'address' => trim($_POST['address']),
+                    'address' => trim($_POST['address']),
                     'phone_number' => trim($_POST['Phone_number']),
+                    'brief_description' => trim($_POST['brief_description']),
                     'email' => trim($_POST['email']),
                     'url' => trim($_POST['url']),
                     'fburl' => trim($_POST['fburl']),
@@ -77,44 +79,48 @@ class Company_account extends Controller
 
              if(!empty($data['phone_number'])){
                 if(strlen($data['phone_number'])!=10) {
-                    $data['phone_number_err'] = "Please enter valid phone_number(ex:0775689775)";
+                    $data['phone_number_err'] = "Please enter valid phone number(ex:0775689775)";
+                    
                 }
              }
              
                 //Validate user email
-                $email_regex = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/";
-                if(!empty($data['email'])) {
-                    if(!preg_match( $email_regex,$data['email'],)){
-                        $data['email_err'] = "Please enter valid email";}
+               // $email_regex = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/";
+                if(empty($data['email'])) {
+                    $data['email_err'] = "Please enter email";
                 }
-                elseif(!preg_match( $email_regex,$data['email'])){
+                elseif(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
                     $data['email_err'] = "Please enter valid email";
                 }
             
                // validate fb url
                $fb_regex = "/^(https?:\/\/)?((w{3}\.)?)facebook.com\/.*/i";
-               if(!preg_match( $fb_regex,$data['fburl'])){
+               if(!empty($data['fburl'])&&!preg_match( $fb_regex,$data['fburl'])){
                 $data['fburl_err'] = "Please enter valid facebook account link";
             }
                 // validate linkedin url
-                $linkedin_regex = "/(^((https?:\/\/)?((www|\w\w)\.)?)linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$/gmi";
-                if(!preg_match( $linkedin_regex,$data['linkedin_url'])){
+                $linkedin_regex = "/(ftp|http|https):\/\/?((www|\w\w)\.)?linkedin.com(\w+:{0,1}\w*@)?(\S+)(:([0-9])+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/";
+                if(!empty($data['linkedin_url'])&&!preg_match( $linkedin_regex,$data['linkedin_url'])){
                 $data['linkedin_url_err'] = "Please enter valid linkedin account link";
             }
 
                 // validate linkedin url
                 $twitter_regex = "/(https:\/\/twitter.com\/(?![a-zA-Z0-9_]+\/)([a-zA-Z0-9_]+))/";
-                if(!preg_match( $twitter_regex,$data['twitter_url'])){
+                if(!empty($data['twitter_url'])&&!preg_match( $twitter_regex,$data['twitter_url'])){
                 $data['twitter_url_err'] = "Please enter valid twitter account link";
             }
-
+            
                 if(empty($data['name_err'])  && empty($data['email_err']) && 
                 empty($data['phone_number_err']) && empty($data['fburl_err'])&& empty($data['linkedin_url_err'])&& empty($data['twitter_url_err'])  ) {
-                 
+                
                     $this->model->insert_company_data($data);
 
 
 
+                }
+                else{
+
+                    $this->view ->render2('Company/Company_account',$data);  
                 }
 
 
