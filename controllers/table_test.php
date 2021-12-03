@@ -12,5 +12,13 @@ class table_test extends Controller
         //pass view name
         $this->view->render('table_test');
     }
+
+    function runData()
+    {
+            $data = [];
+            $result = $this->model->getData_counsellor();
+            $data['result'] = $result;
+            
+    }
 }
 

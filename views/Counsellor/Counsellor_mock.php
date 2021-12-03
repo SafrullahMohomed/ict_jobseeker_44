@@ -12,6 +12,10 @@
 </head>
 
 <body>
+
+<div class="header_div">
+    <?php include './views/Header.php' ?>
+</div>
     <div class="main_container">
         <div class="counsellor_title"> Find&nbsp; Counsellor</div>
         <div class="counsellor_text"> Contact Counsellors and find suitable jobs for your qualificaitons.</div>
@@ -21,7 +25,7 @@
             <div class="mock_interviews">Find Mock interviews providing counsellors</div>
         </a>
 
-        <!-- seach part -->
+        <!-- search part -->
         <div class="search-counsellor">
             <input type="text" name="search-counsellors" id="search-counsellors" placeholder="Search Counsellors">
             <button>Search</button>
@@ -110,7 +114,7 @@
     <a href="#">
         <div class="counsellor">
             <div class="counsellor_profile"><img src="/ict_jobseeker_44/views/images/Counsellor/Counselling.png" alt="profile image"></div>
-            <div class="counsellor_name">10</div>
+            <div class="counsellor_name">Counsellor10</div>
             <!-- <div class="star">
                 <div class="star_icon"><span class="fa fa-star checked" style="font-size: 40px;"></span></div>
                 <div class="star_value">3.0</div>
@@ -234,6 +238,10 @@
 
     </div>
     </div>
+
+<!-- footer -->
+<?php include './views/Footer.php' ?>
+
 </body>
 
 </html>

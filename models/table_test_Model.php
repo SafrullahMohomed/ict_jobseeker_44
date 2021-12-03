@@ -9,7 +9,7 @@ class table_test_Model extends Model{
     
     function getData_counsellor(){
 
-        return $this->db-> runQuery("SELECT *FROM user");
+        return $this->db-> runQuery("SELECT * from user");
     }
 
 

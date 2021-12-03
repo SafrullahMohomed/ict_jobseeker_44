@@ -19,7 +19,7 @@
 <body>
     <!-- header part with css html js -->
     <div class="header_div" style="height:140px">
-        <?php include 'Header.php' ?>
+        <?php include './views/Header.php' ?>
     </div>
     <!-- header part end  -->
     <div class="all">
@@ -90,7 +90,7 @@
     </div>
 
     <!-- cancel, add buttons ends here -->
-    <?php include 'Footer.php' ?>
+    <?php include './views/Footer.php' ?>
     <script src="<?php echo URL ?>views/JS/Post_contract.js"></script>
 </body>
 

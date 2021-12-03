@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="header_div" >
-        <?php include 'Header.php'?>
+        <?php include './views/Header.php'?>
 </div>
     <div class="ProfileBar">
         <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' >
@@ -101,7 +101,7 @@
         </div>
 
         <!-- cancel, add buttons ends here -->
-    <?php include 'Footer.php'?>
+    <?php include './views/Footer.php'?>
     <script src="<?php echo URL ?>views/JS/JobSeekerAccount.js"></script>
 </body>
 </html>
