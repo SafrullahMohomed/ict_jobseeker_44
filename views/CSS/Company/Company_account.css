@@ -149,7 +149,7 @@ cursor: pointer;
 }*/
 .icon i{
     font-size: 30px;
-   color:#1D6989 !important;
+  color:#1D6989 !important;
    margin: 6px;
    cursor: pointer;
 }
@@ -160,7 +160,13 @@ span{
     font-size: 0.7em;
     color: red;
 }
+#view{
+color: green !important;
+}
+#delete{
+    color: red !important;
 
+}
 
 
 

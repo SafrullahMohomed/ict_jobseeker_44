@@ -139,7 +139,7 @@
             </div> 
             <div class="icon">
             <a href="<?php echo URL ?>Contracts/View_contract" style="text-decoration: none;">
-            <i title ="View post"class="fa fa-eye" aria-hidden="true"></i>
+            <i title ="View post"class="fa fa-eye" id="view"  aria-hidden="true"></i>
         <!-- </a> -->
         <a href="<?php echo URL ?>Contracts/Post_contract" style="text-decoration: none;">
         <i title ="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
@@ -147,7 +147,7 @@
 
                
                
-                <i title ="Delete post" class="fa fa-trash-o" aria-hidden="true"></i>
+                <i title ="Delete post" class="fa fa-trash-o"  id="delete" aria-hidden="true"></i>
             </div>
             </div>
 
@@ -173,9 +173,9 @@
  
              </div> 
              <div class="icon">
-                 <i title ="View post" class="fa fa-eye" aria-hidden="true"></i>
+                 <i title ="View post" class="fa fa-eye" id="view"   aria-hidden="true"></i>
                  <i title ="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
-                 <i title ="Delete post"  class="fa fa-trash-o" aria-hidden="true"></i>
+                 <i title ="Delete post"  class="fa fa-trash-o"  id="delete"aria-hidden="true"></i>
              </div>
              </div>
         </div>

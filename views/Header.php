@@ -361,7 +361,7 @@ align-items: center;
               <?php
               // if user is company
               if ($_SESSION['User_type'] == "Company") :
-                $My_profile = "Company_profiles/Company_profile";
+                $My_profile = "Company/Company_profile";
               endif;
               // if user is Contract_provider
               if ($_SESSION['User_type'] == "Contract provider") :
@@ -401,7 +401,7 @@ align-items: center;
             <ul>
               <li><a href="<?php echo URL ?>Home">Home</a></li>
               <li><a href="<?php echo URL ?>Jobs_main_page">Jobs</a></li>
-              <li><a href="<?php echo URL ?>Companies">Companies</a></li>
+              <li><a href="<?php echo URL ?>Company/Companies">Companies</a></li>
               <li> <a href="<?php echo URL ?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
               <li><a href="<?php echo URL ?>Contact_us">Contact&nbsp;Us</a></li>
             </ul>
@@ -448,7 +448,7 @@ align-items: center;
               <ul>
                 <li><a href="<?php echo URL ?>Home">Home</a></li>
                 <li><a href="<?php echo URL ?>Jobs_main_page">Jobs</a></li>
-                <li><a href="<?php echo URL ?>Companies">Companies</a></li>
+                <li><a href="<?php echo URL ?>Company/Companies">Companies</a></li>
                 <li> <a href="<?php echo URL ?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
                 <li><a href="<?php echo URL ?>Contact_us">Contact&nbsp;Us</a></li>
               </ul>

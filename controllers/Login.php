@@ -106,6 +106,7 @@ class Login extends Controller
       $_SESSION['Last_name'] = $user->Last_name;
       // $_SESSION['address'] = $user[0]['address'];
 
+
       if($_SESSION['User_type'] == "Admin44")
       {
           $this->view->renderAdmin('Admin_home');
@@ -114,6 +115,7 @@ class Login extends Controller
           $this->view ->render('Home');
 
       }
+
   }
 
   public function logout() {

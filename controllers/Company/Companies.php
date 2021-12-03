@@ -1,5 +1,5 @@
 <?php
-class Company_profile extends Controller
+class Companies extends Controller
 {
     function __construct()
     {
@@ -7,13 +7,14 @@ class Company_profile extends Controller
 
     }
 
- function Company_profile()
+    function Companies()
     {
         #$this->model->printSomething();
+        
         #echo "Hello from the Test controller - Index Method";
 
         //pass view name
-        $this->view ->render('Company_profile'); 
+        $this->view ->render('Company/Companies'); 
         
     }
 }

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
 
-<?php include "CSS/Companies.css" ?>
+<?php include "views/CSS/Company/Companies.css" ?>
 
 
  </style>
@@ -18,7 +18,7 @@
 <body>
    <!-- header part with css html js -->
    <div class="header_div" >
-        <?php include 'Header.php'?>
+        <?php include 'views/Header.php'?>
 </div>
       <!-- header part end -->
     <div class="resource-search-part">
@@ -58,7 +58,7 @@
        
       </div>
       <div class="Trending">Companies</div>
-      <a href="<?php echo URL ?>Company_profiles/Company_profile" class="ResourceRow" type = " button" onclick="loadCompanyProfile()">
+      <a href="<?php echo URL ?>Company/Company_profile" class="ResourceRow" type = " button" onclick="loadCompanyProfile()">
           <div class="Academy">
           <img src='<?php echo URL ?>views/images/Companies/company_logo1.jfif' > 
         
@@ -112,7 +112,7 @@
       <button type="button "class="load_more" id="loadmore_btn" onclick="loadmore()">Load More...</button>
       </div>
       
-      <?php include 'Footer.php'?>
+      <?php include 'views/Footer.php'?>
       <!-- <a src="../company_profile/company_profile.html"></a> -->
       <script src = "companies_search.js"></script>
 </body>
