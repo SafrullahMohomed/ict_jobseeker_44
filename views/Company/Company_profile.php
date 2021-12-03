@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
 
-<?php include "CSS/company_profile.css" ?>
+<?php include "views/CSS/Company/Company_profile.css" ?>
  </style>
     <link
       rel="stylesheet"
@@ -19,7 +19,7 @@
 <body>
     <!-- header part with css html js -->
  <div class="header_div" >
-        <?php include 'Header.php'?>
+        <?php include 'views/Header.php'?>
 </div>
       <!-- header part end  -->
     <div class="main_container">
@@ -114,7 +114,7 @@
     </div>
     <!-- header part with css html js -->
  
-        <?php include 'Footer.php'?>
+        <?php include 'views/Footer.php'?>
 
       <!-- header part end  -->
 </body>
