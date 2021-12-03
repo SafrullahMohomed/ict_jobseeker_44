@@ -105,7 +105,8 @@ class Login extends Controller
       $_SESSION['First_name'] = $user->First_name;
       $_SESSION['Last_name'] = $user->Last_name;
       // $_SESSION['address'] = $user[0]['address'];
-      
+    
+   
       $this->view ->render('Home'); 
   }
 
