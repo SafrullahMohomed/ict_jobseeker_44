@@ -139,7 +139,7 @@
                     <div class="do_rate_star_row">
                        <i class="fa fa-star" aria-hidden="true"></i>
                        <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star" aria-hidden="true"></i>
+                       <i class="fa fa-star" aria-hidden="false"></i>
                        <i class="fa fa-star-o" aria-hidden="false"></i>
                        <i class="fa fa-star-o" aria-hidden="false"></i>
                      </div>
@@ -178,17 +178,19 @@
                 Rate Us
             </div>
             <div class="star_row" >
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="false"></i>
+           
+                <i class="fa fa-star-o" aria-hidden="false" id="s1" onclick="color_star(this)"></i>
+                <i class="fa fa-star-o" aria-hidden="false"id="s2" onclick="color_star(this)"></i>
+                <i class="fa fa-star-o" aria-hidden="false" id="s3" onclick="color_star(this)"></i>
+                <i class="fa fa-star-o" aria-hidden="false" id="s4" onclick="color_star(this)"></i>
+                <i class="fa fa-star-o" aria-hidden="false" id="s5" onclick="color_star(this)"></i>
+                <span id ="count" ></span>
             </div>
             
             <div class="row">        
-                <textarea  id="brief_description" rows="4" brief_description="brief_description" placeholder="Write your review here..." class="inputfield" required></textarea><br>
+                <textarea  id="review_text" rows="4" name="brief_description" placeholder="Write your review here..." class="inputfield"  ></textarea><br>
             </div>
-            <button class="loadmore_button">Submit</button>
+            <button class="loadmore_button" onclick="review()">Submit</button>
         </div>
       
     </div></div>
