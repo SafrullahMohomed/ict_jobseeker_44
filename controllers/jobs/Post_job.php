@@ -46,7 +46,7 @@ class Post_job extends Controller
                     'Deadline' => trim($_POST['Deadline']),
                     'Company_Logo' => trim($_POST['Company_Logo']),
                     'Job_image' => trim($_POST['Job_image']),
-                    'Urgent_answer' => trim($_POST['Urgent_answer']),
+                  //  'Urgent_answer' => trim($_POST['Urgent_answer']),
                     'Supply_Mock_Interviews_answer' => trim($_POST['Supply_Mock_Interviews_answer']), 
                     'Post_a_forum_answer' => trim($_POST['Post_a_forum_answer']),
                    
@@ -95,9 +95,9 @@ class Post_job extends Controller
                   if(empty($data['Deadline'])) {
                     $data['Deadline_err'] = "Please enter the Deadline";
                     }
-                    if(empty($data['Urgent_answer'])) {
+                  /*  if(empty($data['Urgent_answer'])) {
                     $data['Urgent_answer_err'] = "Please select one";
-                   }
+                   }*/
                     if(empty($data['Supply_Mock_Interviews_answer'])) {
                         $data['Supply_Mock_Interviews_answer_err'] = "Please select one";
                 }
@@ -107,7 +107,8 @@ class Post_job extends Controller
     
                
                 //if there are no errors then insert data to database
-                if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) &&empty($data['Post_a_forum_answer_err'] ) &&empty($data['Urgent_answer_err'] )  )
+                if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) &&empty($data['Post_a_forum_answer_err'] ) 
+                  )
                 {
 
                    $this->model->insert_query_post_job( $data);

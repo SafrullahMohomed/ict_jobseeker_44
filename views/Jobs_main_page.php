@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="jobLoad()">
     <!-- header part with css html js -->
     <div class="header_div">
 
@@ -34,7 +34,7 @@
         <!-- theme image start here -->
         <div class="job-search-box">
             <div class="search-your-keywords">
-                <input type="text" name="Search your keyword" placeholder="Search for a job" />
+                <input type="text" name="Search your keyword" placeholder="Search for a job" require/>
             </div>
             <div class="category">
                 <select name="Category">
@@ -104,271 +104,14 @@
         </div>
         <div class="features_job">
 
-            <div class="features_job_row">
-                <div class="features_job_row_picture">
-                    <img src='<?php echo URL ?>views/images/Jobs_main_page/3.JFIF'>
-
-
-                </div>
-                <div class="features_job_row_job_and_company">
-                    <div class="features_job_row_job">
-                        Software Engineer
-
-
-                    </div>
-                    <div class="features_job_row__company">
-                        Dialog PVT Limited
-                    </div>
-                </div>
-                <div class="features_job_row_location">
-
-                    <i class="fas fa-map-marker-alt"></i>
-
-                    <div class="features_job_row_location_name">
-                        Gampaha
-                    </div>
-                </div>
-                <div class="features_job_row_job_type">
-                    <i class="fas fa-clock"></i>
-                    <div class="features_job_row_job_type_name">
-                        Part Time
-                    </div>
-                </div>
-
-                <div class="features_job_row_deadline_and_urgent">
-                    <div class="features_job_row_deadline">
-
-                        <div class="features_job_row_deadline_date_container">
-                            <p>Expires on </p>
-                            <div class="features_job_row_deadline_date">
-                                2021/11/30
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="features_job_row_urgent">
-                        Urgent
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="features_job_row">
-                <div class="features_job_row_picture">
-                    <img src='<?php echo URL ?>views/images/Jobs_main_page/2.JFIF'>
-
-
-                </div>
-                <div class="features_job_row_job_and_company">
-                    <div class="features_job_row_job">
-                        Graphic Designer
-
-
-                    </div>
-                    <div class="features_job_row__company">
-                        Lanka PVT Limited
-                    </div>
-                </div>
-                <div class="features_job_row_location">
-
-                    <i class="fas fa-map-marker-alt"></i>
-
-                    <div class="features_job_row_location_name">
-                        Colombo
-                    </div>
-                </div>
-                <div class="features_job_row_job_type">
-                    <i class="fas fa-clock"></i>
-                    <div class="features_job_row_job_type_name">
-                        Full Time
-                    </div>
-                </div>
-
-                <div class="features_job_row_deadline_and_urgent">
-                    <div class="features_job_row_deadline">
-
-                        <div class="features_job_row_deadline_date_container">
-                            <p>Expires on </p>
-                            <div class="features_job_row_deadline_date">
-                                2021/11/28
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="features_job_row_urgent">
-                        Urgent
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="features_job_row">
-                <div class="features_job_row_picture">
-                    <img src='<?php echo URL ?>views/images/Jobs_main_page/1.png'>
-
-
-                </div>
-                <div class="features_job_row_job_and_company">
-                    <div class="features_job_row_job">
-                        Web Designer
-
-
-                    </div>
-                    <div class="features_job_row__company">
-                        SLT PVT Limited
-                    </div>
-                </div>
-                <div class="features_job_row_location">
-
-                    <i class="fas fa-map-marker-alt"></i>
-
-                    <div class="features_job_row_location_name">
-                        Colombo
-                    </div>
-                </div>
-                <div class="features_job_row_job_type">
-                    <i class="fas fa-clock"></i>
-                    <div class="features_job_row_job_type_name">
-                        Full Time
-                    </div>
-                </div>
-
-                <div class="features_job_row_deadline_and_urgent">
-                    <div class="features_job_row_deadline">
-
-                        <div class="features_job_row_deadline_date_container">
-                            <p>Expires on </p>
-                            <div class="features_job_row_deadline_date">
-                                2021/11/26
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="features_job_row_urgent">
-                        Urgent
-                    </div>
-
-                </div>
-
-            </div>
-            <button type="button " class="load_more" id="loadmore_btn" onclick="loadmore()">Load More...</button>
-            <div id="more" class="more">
-
-                <a href="<?php echo URL ?>/Jobs/View_job" class="features_job_row" onclick="functionView()">
-
-                    <div class="features_job_row_picture">
-
-                        <img src='<?php echo URL ?>views/images/Jobs_main_page/4.png'>
-                    </div>
-                    <div class="features_job_row_job_and_company">
-                        <div class="features_job_row_job">
-                            Software Engineer
-
-                        </div>
-                        <div class="features_job_row__company">
-                            Virtusa (Pvt.) Ltd
-                        </div>
-                    </div>
-                    <div class="features_job_row_location">
-
-                        <i class="fas fa-map-marker-alt"></i>
-
-                        <div class="features_job_row_location_name">
-                            Colombo
-                        </div>
-                    </div>
-                    <div class="features_job_row_job_type">
-                        <i class="fas fa-clock"></i>
-                        <div class="features_job_row_job_type_name">
-                            Full Time
-                        </div>
-                    </div>
-
-                    <div class="features_job_row_deadline_and_urgent">
-                        <div class="features_job_row_deadline">
-
-                            <div class="features_job_row_deadline_date_container">
-                                <p>Expires on </p>
-                                <div class="features_job_row_deadline_date">
-                                    2021/11/29
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div class="features_job_row_urgent">
-                            Urgent
-                        </div>
-
-                    </div>
-
-                </a>
-                <div class="features_job_row">
-                    <div class="features_job_row_picture">
-                        <img src='<?php echo URL ?>views/images/Jobs_main_page/1.png'>
-
-
-
-                    </div>
-                    <div class="features_job_row_job_and_company">
-                        <div class="features_job_row_job">
-                            Web Designer
-
-
-                        </div>
-                        <div class="features_job_row__company">
-                            SLT PVT Limited
-                        </div>
-                    </div>
-                    <div class="features_job_row_location">
-
-                        <i class="fas fa-map-marker-alt"></i>
-
-                        <div class="features_job_row_location_name">
-                            Colombo
-                        </div>
-                    </div>
-                    <div class="features_job_row_job_type">
-                        <i class="fas fa-clock"></i>
-                        <div class="features_job_row_job_type_name">
-                            Full Time
-                        </div>
-                    </div>
-
-                    <div class="features_job_row_deadline_and_urgent">
-                        <div class="features_job_row_deadline">
-
-                            <div class="features_job_row_deadline_date_container">
-                                <p>Expires on </p>
-                                <div class="features_job_row_deadline_date">
-                                    2021/11/22
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div class="features_job_row_urgent">
-                            Urgent
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="btn_div">
-                    <button class="load_more" id="btn2">Load More...</button>
-                </div>
-
-            </div>
-
+<!-- load job data from data base -->
         </div>
     </div>
 
     </div>
 
     <?php include 'Footer.php' ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="<?php echo URL ?>views/JS/Jobs_main_page.js"></script>
 
 </body>
