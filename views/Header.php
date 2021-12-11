@@ -347,7 +347,7 @@ align-items: center;
 
               ?>
               <a href="<?php echo URL . $My_profile ?>">My profile</a>
-              <a href="<?php echo URL ?>ResetPassword">Change password</a>
+              <a href="<?php echo URL ?>ChangePassword">Change password</a>
               <a href="<?php echo URL ?>Login/logout">Logout</a>
             </div>
           </div>
