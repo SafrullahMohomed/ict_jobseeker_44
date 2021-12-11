@@ -52,7 +52,12 @@ body {
   padding-left: 10px;
 }
 
-.category select {
+/* .category select {
+  height: 36px;
+  width: fit-content;
+  border-radius: 7px;
+} */
+.category select, .location select {
   height: 36px;
   width: fit-content;
   border-radius: 7px;
