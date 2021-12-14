@@ -11,6 +11,14 @@
 </head>
 
 <body>
+
+<!-- header part starts here -->
+<div class="header_div">
+    <?php include './views/Header.php' ?>
+</div>
+
+<!-- header part ends here -->
+
     <!-- main container -->
     <div class="main-conatainer">
         <!-- divisoin for admin home -->
@@ -44,6 +52,7 @@
 
     </div>
 
+<?php include './views/Footer.php' ?>
 
 </body>
 

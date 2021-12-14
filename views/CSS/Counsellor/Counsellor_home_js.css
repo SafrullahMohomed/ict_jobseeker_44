@@ -1,4 +1,9 @@
 /* title */
+
+.main_container{
+    margin-top: 150px;
+}
+
 .counsellor_title{
     display:flex;
     margin:50px auto;

@@ -16,6 +16,10 @@
 
 
 <body>
+
+<div class="header_div">
+    <?php include './views/Header.php' ?>
+</div>
   <!-- title field starts here -->
   <div class="title_text">
     <div class="text1">Edit Your Profile</div>
@@ -43,7 +47,8 @@
       <div class="firstName inp">
         <label for="firstName">First Name</label>
         <br />
-        <input type="text" name="firstName" id="firstName" />
+        <input type="text" name="firstName" id="firstName" required/>
+          span.
       </div>
       <!-- last name  -->
       <div class="lastName inp">
@@ -85,13 +90,11 @@
       <div class="qualification inp">
         <label for="qualification">Qualification</label>
         <br />
-        <input type="text" name="quaulification" id="qualification" />
+          <textarea name="qualification_box" id="" cols="30" rows="10"></textarea>
       </div>
 
       <!--  -->
-
-      <?php include "../richtext.php" ?>
-
+        
 
       <!-- Facebook -->
       <div class="facebook inp">
@@ -117,7 +120,7 @@
 
       <!-- About You -->
       <div class="aboutYou inp">
-        <label for="aboutYou">About You</label>
+        <label for="aboutYou">Description/label>
         <br />
         <textarea name="aboutYou" id="aboutYou" cols="30" rows="10"></textarea>
       </div>
@@ -145,6 +148,9 @@
   </div>
 
   <!-- next, back buttons ends here -->
+<!-- footer -->
+<?php include './views/Footer.php' ?>
+
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 /* admin home page */
 
-.
 
 .main-container {
   display: flex;
@@ -72,11 +71,14 @@ justify-content: center;
 /* media queries starts here */
 
 @media only screen and (max-width:750px) {
-  .main-container{
+  .admin-boxes{
     display:flex;
     flex-direction: column;
   }
-  
+
+  .dashboard{
+    margin-top:0px;
+  }
   .first-row a, .second-row a{
     margin:20px;
   }

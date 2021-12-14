@@ -13,7 +13,7 @@
 
 <body>
   <!-- header part with css html js -->
-    <?php include '../Header.php' ?>
+    <?php include './views/Header.php' ?>
   <!-- header part end  -->
   <div class="main_container">
 
@@ -102,6 +102,6 @@
     </div>
 </body>
 <!-- footer -->
-<?php include '../Footer.php' ?>
+<?php include './views/Footer.php' ?>
 
 </html>
