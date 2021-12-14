@@ -97,23 +97,15 @@ class Database extends PDO
     }
 
 
-    public function run_post_contract_select_query()
-    {
-        $stmt1 = $this->prepare("SELECT  `Contract_title`, `Contract_description`,
-                      `Contract_deadline`, `Contract_bid_avg`
-                       FROM `contract`");
 
-        $stmt1->execute();
-        $s = $stmt1->fetchAll();
-
-        return $s;
-        //(C)output results
-        //echo json_encode(count($stmt2) == 0 ? null : $stmt2);
+ }  
+ 
 
 
-    }
 
- }
+    
+
+ 
  // prepare sql and bind parameters 
 //Insert data into contract tables
  public function run_insert_bid_query()

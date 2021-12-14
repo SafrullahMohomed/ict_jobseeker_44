@@ -22,17 +22,40 @@ class View_contract extends Controller
   
        
         $bid=$this->model->select_query_bid_contract();
-       // print_r($bid);
-        //$this->view ->render2('View_contract',$bid);
+       
+        
+    }
+    function View_contractjs($Contract_ID)
+    {
+      $data=[
+        'Contract_ID'=>$Contract_ID
+       ];
+     
+        //pass view name with contrac id
+        $this->view ->render2('View_contract',$data); 
+        
+    }
 
-        
-        //echo json_encode(count($bid) == 0 ? null : $bid);
-        
-      // return $contract;
+    function view_clicked_contract(){
+      $Contract_ID=$_POST['Contract_ID'];
+     
+     
+      $Contract=$this->model->select_Contract_data($Contract_ID);
+     
+      echo json_encode(count( $Contract) == 0 ? null :  $Contract);
+      return $Contract;
 
-      
-    
-        
+
+    }
+     //function for xhr req
+     function view_clicked_contract2($Contract_ID){
+     
+
+      $Contract=$this->model->select_Contract_data($Contract_ID);
+     
+      echo json_encode(count( $Contract) == 0 ? null : $Contract);
+      return $Contract;
+
     }
 
 }

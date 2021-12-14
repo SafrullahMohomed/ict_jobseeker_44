@@ -17,7 +17,7 @@ function select_query_job_data(){
     $stmt1=$this->db->prepare($query1);   
     $stmt1->execute();
     $s=$stmt1->fetchAll();
-
+    
      return $s;
 
 
