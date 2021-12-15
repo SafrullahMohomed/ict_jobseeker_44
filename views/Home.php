@@ -31,7 +31,7 @@
   <!-- header of the page starts  -->
   <!-- header part with css html js -->
   <div class="header_div">
-    <?php include 'Header.php' ?>
+    <?php include './views/Header.php' ?>
   </div>
   <!-- header part end  -->
   <!-- header  ends here -->
@@ -224,7 +224,7 @@
   <!-- footer part starts here -->
 
 
-  <?php include 'Footer.php' ?>
+  <?php include './views/Footer_home.php' ?>
   <!-- js links -->
 
 

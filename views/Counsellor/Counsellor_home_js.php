@@ -12,6 +12,10 @@
 </head>
 
 <body>
+
+<div class="header_div">
+    <?php include './views/Header.php' ?>
+</div>
     <div class="main_container">
         <div class="counsellor_title"> Find&nbsp; Counsellor</div>
         <div class="counsellor_text"> Contact Counsellors and find suitable jobs for your qualificaitons.</div>
@@ -234,6 +238,10 @@
 
     </div>
     </div>
+
+<!-- footer -->
+<?php include './views/Footer.php' ?>
+
 </body>
 
 </html>

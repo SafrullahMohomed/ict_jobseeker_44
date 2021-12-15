@@ -19,8 +19,7 @@ class Post_job extends Controller
             'Deadline_err' => '',
             'Urgent_answer_err' => '',
             'Supply_Mock_Interviews_answer_err' => '',
-            'Post_a_forum_answer_err' => '',
-            'Image_err' => ''
+            'Post_a_forum_answer_err' => ''
            
         ];
 
@@ -45,9 +44,9 @@ class Post_job extends Controller
                     'Phone_Number' => trim($_POST['Phone_Number']),
                     'Email' => trim($_POST['Email']),
                     'Deadline' => trim($_POST['Deadline']),
-                    'Company_logo' => trim($_POST['Company_logo']),
+                    'Company_Logo' => trim($_POST['Company_Logo']),
                     'Job_image' => trim($_POST['Job_image']),
-                    'Urgent_answer' => trim($_POST['Urgent_answer']),
+                  //  'Urgent_answer' => trim($_POST['Urgent_answer']),
                     'Supply_Mock_Interviews_answer' => trim($_POST['Supply_Mock_Interviews_answer']), 
                     'Post_a_forum_answer' => trim($_POST['Post_a_forum_answer']),
                    
@@ -59,8 +58,7 @@ class Post_job extends Controller
                     'Deadline_err' => '',
                     'Urgent_answer_err' => '',
                     'Supply_Mock_Interviews_answer_err' => '',
-                    'Post_a_forum_answer_err' => '',
-                    'Image_err' => ''
+                    'Post_a_forum_answer_err' => ''
                     
                 ];
                
@@ -97,26 +95,20 @@ class Post_job extends Controller
                   if(empty($data['Deadline'])) {
                     $data['Deadline_err'] = "Please enter the Deadline";
                     }
-                    if(empty($data['Urgent_answer'])) {
+                  /*  if(empty($data['Urgent_answer'])) {
                     $data['Urgent_answer_err'] = "Please select one";
-                   }
+                   }*/
                     if(empty($data['Supply_Mock_Interviews_answer'])) {
                         $data['Supply_Mock_Interviews_answer_err'] = "Please select one";
                 }
                     if(empty($data['Post_a_forum_answer'])) {
                         $data['Post_a_forum_answer_err'] = "Please select one";
                  }
-
-                 //validate image file   Company_Logo
-                 $image= filseSize($_FILES['file'],'Company_logo');
-                 $data['Company_logo']= $image;
-                 if ($image === false) {
-                    $data['Image_err '] = "Image not valid";
-                    
-                 }
+    
                
                 //if there are no errors then insert data to database
-                if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) &&empty($data['Post_a_forum_answer_err'] ) &&empty($data['Urgent_answer_err'] )&& empty($data['Image_err'])  )
+                if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) &&empty($data['Post_a_forum_answer_err'] ) 
+                  )
                 {
 
                    $this->model->insert_query_post_job( $data);

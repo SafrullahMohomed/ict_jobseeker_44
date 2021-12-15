@@ -6,6 +6,8 @@ class Companies_Model extends Model{
        parent :: __construct(); 
     }
 
+
+   
    
 }
 

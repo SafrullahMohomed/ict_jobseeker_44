@@ -47,12 +47,12 @@
 <div class="main_container">
   <form name="myForm" action="<?php echo URL ?>Jobs/Post_job/insert_post_job_data" method="post"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
     <label for="Company_name" class="labelfield">Company Name</label><br>
-    <input type="text" id="Companyname" name="Company_name" placeholder="" class="inputfield" onfocus=" hideFormError(Company_name_error)"><br>
+    <input type="text" id="Companyname" name="Company_name" placeholder="" class="inputfield" required onfocus=" hideFormError(Company_name_error)"><br>
     <span class="err" id="Company_name_error"><?php echo $data['Company_name_err']?></span><br>
 
 
     <label for="Job_Title" class="labelfield">Job Title</label><br>
-    <input type="text" id="JobTitle" name="Job_Title" placeholder="" class="inputfield" onfocus=" hideFormError(Job_Title_error)"><br>
+    <input type="text" id="JobTitle" name="Job_Title" placeholder="" class="inputfield" required onfocus=" hideFormError(Job_Title_error)"><br>
     <span class="err" id="Job_Title_error"><?php echo $data['Job_Title_err']?></span><br>
 
     <label for="Job_Category" class="labelfield">Job Category</label><br>
@@ -74,7 +74,7 @@
 
 
     <label for="Brief_Description" class="labelfield"> Brief Description</label><br>
-    <textarea  id="description" rows="6"  placeholder="Type here small description about the job (qulifications/other)..." class="inputfield" required name="Brief_Description"></textarea><br>
+    <textarea  id="description" rows="6"  placeholder="Type here small description about the job (qulifications/other)..." class="inputfield" name="Brief_Description"></textarea><br>
 
     <label for="Job_Type" class="labelfield">Job Type</label><br>
     <select id="JobType" name="Job_Type" class="inputfield">
@@ -142,8 +142,8 @@
     <input type="date" id="Deadline" name="Deadline" placeholder="" class="inputfield" onfocus=" hideFormError(Deadline_error)"><br>
     <span class="err" id="Deadline_error"><?php echo $data['Deadline_err']?></span><br>
 
-    <label for="Company_logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
-    <input type="file" id="CompanyLogo" name="Company_logo" placeholder="" class="inputfield" accept="image/*"><br>
+    <label for="Company_Logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
+    <input type="file" id="CompanyLogo" name="Company_Logo" placeholder="" class="inputfield" accept="image/*"><br>
     
     <label for="Job_image" class="labelfield">Job post image(JPEG/PNG)</label><br>
     <input type="file" id="CompanyLogo" name="Job_image" placeholder="" class="inputfield" accept="image/*"><br>
@@ -153,15 +153,15 @@
     <div class="radiobutton_class" onmouseover=" hideFormError(Urgent_answer_error)">
         <span class="labelfield">Urgent</span>
 
-
+<!-- 
           <div class="radiobutton_style">
-          <input type="radio" id="urgent_yes" name="Urgent_answer" value="Yes" class="radiobutton">
+          <input type="radio" id="urgent_yes" name="Urgent_answer" value="Yes" required class="radiobutton">
             <label for="Urgent_answer" class="radiolabel">Yes</label>
       
-            <input type="radio" id="urgent_no" name="Urgent_answer" value="No" class="radiobutton">
+            <input type="radio" id="urgent_no" name="Urgent_answer" value="No" required class="radiobutton">
             <label for="Urgent_answer" class="radiolabel">No</label>
 
-        </div>
+        </div> -->
           
           
         <br>
@@ -172,11 +172,11 @@
         <span class="labelfield">Supply Mock Interviews</span>
      <div class="radiobutton_style">
         <div class="radiobutton_style">
-      <input type="radio" id="Supply_Mock_Interviews_yes" name="Supply_Mock_Interviews_answer" value="Yes" class="radiobutton">
+      <input type="radio" id="Supply_Mock_Interviews_yes" name="Supply_Mock_Interviews_answer" required value="Yes" class="radiobutton">
       <label for="Supply_Mock_Interviews_answer" class="radiolabel">Yes</label>
  
 
-      <input type="radio" id="Supply_Mock_Interviews_no" name="Supply_Mock_Interviews_answer" value="No" class="radiobutton">
+      <input type="radio" id="Supply_Mock_Interviews_no" name="Supply_Mock_Interviews_answer"required  value="No" class="radiobutton">
       <label for="Supply_Mock_Interviews_answer" class="radiolabel">No</label>
     
 
@@ -193,10 +193,10 @@
       <span class="labelfield">Post a forum</span>
     <div class="radiobutton_style">
 
-    <input type="radio" id="Post_a_forum_yes" name="Post_a_forum_answer" value="Yes" class="radiobutton">
+    <input type="radio" id="Post_a_forum_yes" name="Post_a_forum_answer"required value="Yes" class="radiobutton">
     <label for="Post_a_forum_answer" class="radiolabel">Yes</label>
 
-    <input type="radio" id="Post_a_forum_no" name="Post_a_forum_answer" value="No" class="radiobutton">
+    <input type="radio" id="Post_a_forum_no" name="Post_a_forum_answer"required value="No" class="radiobutton">
     <label for="Post_a_forum_answer" class="radiolabel">No</label>
 
      </div>

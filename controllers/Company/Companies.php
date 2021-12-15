@@ -14,7 +14,7 @@ class Companies extends Controller
         #echo "Hello from the Test controller - Index Method";
 
         //pass view name
-        $this->view ->render('Companies'); 
+        $this->view ->render('Company/Companies'); 
         
     }
 }

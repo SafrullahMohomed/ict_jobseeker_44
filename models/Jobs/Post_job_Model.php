@@ -20,7 +20,7 @@ class Post_job_Model extends Model{
         $Deadline = $_POST['Deadline'];
         $Company_Logo = $data['Company_logo'];
         $Job_image = $_POST['Job_image'];
-        $Urgent_answer = $_POST['Urgent_answer'];
+        //$Urgent_answer = $_POST['Urgent_answer'];
         $Supply_Mock_Interviews_answer = $_POST['Supply_Mock_Interviews_answer'];
         $Post_a_forum_answer = $_POST['Post_a_forum_answer'];
         
@@ -29,11 +29,11 @@ try{
       // $this->db->beginTransaction();
       
         //insert data into job table when post a job
-        $query1="INSERT INTO job (Job_category,Job_type,Job_title,Job_deadline,Job_salary,Job_provide_mock_interviews,Job_city,Job_description,Urgent,Job_forum)
-        VALUES (?,?,?,?,?,?,?,?,?,?)";
+        $query1="INSERT INTO job (Job_category,Job_type,Job_title,Job_deadline,Job_salary,Job_provide_mock_interviews,Job_city,Job_description,Job_forum,Company_name,Job_phone_no)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         $stmt1=$this->db->prepare($query1);
 
-        $stmt1->execute([$Job_Category, $Job_Type,$Job_Title,$Deadline,$Sallary_Offered,$Supply_Mock_Interviews_answer,$City, $Brief_Description,$Urgent_answer,$Post_a_forum_answer]);
+        $stmt1->execute([$Job_Category, $Job_Type,$Job_Title,$Deadline,$Sallary_Offered,$Supply_Mock_Interviews_answer,$City, $Brief_Description,$Post_a_forum_answer,$Company_name,$Phone_Number]);
 
         $Job_ID = $this->db->lastInsertId();
 

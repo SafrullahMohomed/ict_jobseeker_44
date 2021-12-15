@@ -49,6 +49,11 @@ class View
         require 'views/Admin/' . $viewName . '.php';
     }
 
+//    passing with array
+    public function renderAdmin2($viewName, $data = [])
+    {
+        require 'views/Admin/' . $viewName . '.php';
+    }
     // admin add
     // public function renderAdminAdd($viewName)
     // {
@@ -73,4 +78,9 @@ class View
         require 'views/Resume/' . $viewName . '.php';
     }
 
+//     // test view
+//     public function renderTest($viewName)
+//     {
+//         require 'views/Test/' . $viewName . '.php';
+//     }
 }

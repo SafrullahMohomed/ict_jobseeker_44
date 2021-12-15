@@ -29,17 +29,16 @@
     }
 
     /*header division* starts here*/
-    /*.header_div{
-    
-      margin-bottom: 140px;
-      overflow-x: hidden;
-    }*/
+    /*.header_div{*/
+
+    /* display: block;*/
+    /*}*/
 
     header {
       position: fixed;
       width: 100%;
 
-      height: 150px;
+      height: 167px;
 
 
 
@@ -119,10 +118,10 @@
       width: 100%;
 
       height: 58px;
-
       background-color: #1d6989;
       border-radius: 0 0 7px 7px;
       justify-content: space-between;
+        align-items: center;
     }
 
     /*navigation logo style*/
@@ -142,6 +141,7 @@
     .navigation-menu {
       align-self: flex-end;
       float: right;
+
     }
 
     ul {
@@ -185,6 +185,37 @@
 
 
     /* media queries */
+    @media only screen and (max-width: 885px) {
+        .navigation-menu a {
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (max-width: 780px) {
+        .navigation-menu ul li {
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+        }
+
+        .navigation-menu a {
+            font-size: 17px;
+        }
+
+        .navigation-header {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start
+        }
+
+        header{
+            height: 175px;
+            position: unset;
+        }
+
+
+    }
 
     @media only screen and (max-width: 690px) {
       /* header starts here */
@@ -324,14 +355,13 @@ align-items: center;
                   <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
                   <div id="myDropdown" class="dropdown-content">
 
-                   
 
 
               <!-- check user type -->
               <?php
               // if user is company
               if ($_SESSION['User_type'] == "Company") :
-                $My_profile = "Company_profiles/Company_profile";
+                $My_profile = "Company/Company_profile";
               endif;
               // if user is Contract_provider
               if ($_SESSION['User_type'] == "Contract provider") :
@@ -354,7 +384,7 @@ align-items: center;
 
         </ul>
       </div>
-    
+
           </ul>
         </div>
         <!-- logo and navigation bar starts here -->
@@ -371,7 +401,7 @@ align-items: center;
             <ul>
               <li><a href="<?php echo URL ?>Home">Home</a></li>
               <li><a href="<?php echo URL ?>Jobs_main_page">Jobs</a></li>
-              <li><a href="<?php echo URL ?>Companies">Companies</a></li>
+              <li><a href="<?php echo URL ?>Company/Companies">Companies</a></li>
               <li> <a href="<?php echo URL ?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
               <li><a href="<?php echo URL ?>Contact_us">Contact&nbsp;Us</a></li>
             </ul>
@@ -418,7 +448,7 @@ align-items: center;
               <ul>
                 <li><a href="<?php echo URL ?>Home">Home</a></li>
                 <li><a href="<?php echo URL ?>Jobs_main_page">Jobs</a></li>
-                <li><a href="<?php echo URL ?>Companies">Companies</a></li>
+                <li><a href="<?php echo URL ?>Company/Companies">Companies</a></li>
                 <li> <a href="<?php echo URL ?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
                 <li><a href="<?php echo URL ?>Contact_us">Contact&nbsp;Us</a></li>
               </ul>
@@ -452,7 +482,6 @@ align-items: center;
         }
       }
     }
-  </script>
-</body>
+  </script></body>
 
 </html>
