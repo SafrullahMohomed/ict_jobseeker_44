@@ -36,7 +36,15 @@ class Bid extends Controller
        
         $this->view->Bid= $this->model->run_insert_bid();
         
-        $this->view ->render('View_contract'); 
+        // $this->view ->render('View_contract'); 
+
+
+        $data = [];
+        $result = $this->model->select_data_table();
+        $data['result'] = $result;
+    //   print_r($result);
+
+        $this->view->render2('BidContract2', $data);
         
     }
 }

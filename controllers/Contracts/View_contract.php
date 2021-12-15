@@ -9,12 +9,38 @@ class View_contract extends Controller
 
     function View_contract()
     {
-        
-     // $bid=[];
+
+        #$this->model->printSomething();
+        #echo "Hello from the Test controller - Index Method";
+
         //pass view name
-        //$this->view ->render('View_contract'); 
-        $this->view ->render('View_contract');
+        $this->view ->render('View_contract'); 
+      //   $data = [];
+      //   $result = $this->model->select_data_table();
+      //   $data['result'] = $result;
+      // print_r($result);
+
+      //   $this->view->render2('View_contract', $data);
+
+        
+     
     }
+
+    //select data from database and load to view contract paage
+    // function select_query_bid_contract_data()
+    // {
+  
+       
+    //     $bid=$this->model->select_query_bid_contract();
+    //     echo("ABCS");
+    //     echo json_encode(count($bid) == 0 ? null : $bid);
+        
+    //    // return $contract;
+
+      
+        
+    //     //pass js file name to view in libs
+    //   //  return $this->view ->view_contract('view_contract'); 
 
     //select data from database and load to view contract page
     function select_query_bid_contract_data()
@@ -33,8 +59,21 @@ class View_contract extends Controller
      
         //pass view name with contrac id
         $this->view ->render2('View_contract',$data); 
+
         
-    }
+    // }
+
+    
+    // function View_bid_contract()
+    // {
+    //   //   $data = [];
+    //   //   $result = $this->model->select_data_table();
+    //   //   $data['result'] = $result;
+    //   // print_r($result);
+
+    //   //   $this->view->render2('View_contract', $data);
+
+    // }
 
     function view_clicked_contract(){
       $Contract_ID=$_POST['Contract_ID'];

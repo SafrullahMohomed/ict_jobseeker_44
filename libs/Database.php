@@ -129,18 +129,25 @@ class Database extends PDO
 
  }
 
- public function run_bid_contract_select_query()
- {
-    $stmt1=$this->prepare("SELECT  `Bid_value`, `Bid_proposal`,
-                          `Jobseeker_ID`
-                           FROM `dobid`");
+//  public function run_bid_contract_select_query()
+//  {
+//     $stmt1=$this->prepare("SELECT  `Bid_value`, `Bid_proposal`,
+//                           `Jobseeker_ID`
+//                            FROM `dobid`");
     
+
+
+
     $stmt1->execute();
     $s=$stmt1->fetchAll();
     print_r($s);
     return $s;
+
     
-}
+// }
+
+
+
  public function  run_insert_reg_data($data,$emailToken){
     date_default_timezone_set("Asia/Colombo");
     $fname=$data['fname'];
@@ -209,7 +216,33 @@ class Database extends PDO
     }
 
 }
+public function  run_insert_password_data($data,$passwordToken)
+{
+    // $varify=$data['verify'];
+    $email=$data['email'];
+    date_default_timezone_set('Asia/Kolkata');
+    $expiry_time= time()+60*60;//after one hours from now
+    $datetime=date('Y-m-d H:i:s',$expiry_time);
+    $stmt1 =$this->prepare("UPDATE user SET Password_verify_token=:p_verify_token,Password_expires_at=:expiries_at
+    WHERE email='$email'");
 
+    // $stmt1->bindParam(':p_verify',$varify );
+    $stmt1->bindParam(':p_verify_token',$passwordToken);
+    $stmt1->bindParam(':expiries_at',$datetime);
+    $stmt1->execute();
+}
+
+public function  run_update_password($data,$email)
+{
+    $password=$data['password'];
+    // $email=$data['email'];
+
+    $stmt1 =$this->prepare("UPDATE user SET Password=:password
+    WHERE email='$email'");
+
+    $stmt1->bindParam(':password', $password);
+    $stmt1->execute();
+}
 
 
     public function  run_insert_reg_data($data, $emailToken)
