@@ -69,6 +69,12 @@ label
 
 }
 
+span
+{
+    color: red;
+    font-size: 10px;
+}
+
 .submit_button{
     background-color: #1D6989;
     width:150px;

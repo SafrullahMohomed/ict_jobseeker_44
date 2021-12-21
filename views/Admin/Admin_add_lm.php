@@ -19,17 +19,19 @@
     <!-- header part end  -->
     
     <div>
-    <form class="MainContainer">
+    <form class="MainContainer" name="myForm" action="<?php echo URL ?>admin/Admin_add_lm/AddLearningMaterials"  method="post">
         <div class="Title">
             Manage Learning Materials
         </div>
         <div class="row" id="link">
             <label for="MaterialLink" class="labelfield">Learning Material Link </label><br>
-            <input type="url" id="MaterialLink" name="MaterialLink" placeholder= "Enter Learning Material Link" class="inputfield" required><br>
+            <input type="url" id="MaterialLink" name="MaterialLink" placeholder= "Enter Learning Material Link" class="inputfield" required onfocus=" hideFormError(MaterialLink_error)><br>
+            <span id="MaterialLink_error"><?php #echo  $_SESSION["fnameErr"] ?></span>
         </div>
         <div class="row">
             <label for="MaterialTitle" class="labelfield">Learning Material Title </label><br>
-            <input type="text" id="MaterialTitle" name="MaterialTitle" placeholder= "Enter Learning Material Title" class="inputfield" required><br>
+            <input type="text" id="MaterialTitle" name="MaterialTitle" placeholder= "Enter Learning Material Title" class="inputfield" required onfocus=" hideFormError(MaterialTitle_error)><br>
+            <span id="MaterialTitle_error"><?php #echo  $_SESSION["fnameErr"] ?></span>
         </div> 
         <div class="row">
             <label for="MaterialCategory" class="labelfield">Learning Material Category </label><br>
@@ -42,10 +44,11 @@
         
        <div class="submit">
         <label for="submit" class="labelfield"></label><br>
-        <input type="submit" id="submit" value="Add"  class="submit_button"><br>
+        <input type="submit" id="submit" value="Add"  class="submit_button" onclick="return validateForm()"><br>
     </form>
     </div>
      
     <!-- <?php #include 'Footer.php'?> -->
+    <script src="<?php echo URL ?>views/JS/AddLearningMaterials.js"></script>
 </body>
 </html>

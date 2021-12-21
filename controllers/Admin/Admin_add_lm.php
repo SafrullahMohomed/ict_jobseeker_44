@@ -12,4 +12,9 @@ class Admin_add_lm extends Controller
         //pass view name
         $this->view->renderAdmin('Admin_add_lm');
     }
+    public function AddLearningMaterials()
+    {
+        
+    }
+
 }
