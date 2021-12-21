@@ -1,12 +1,12 @@
 function validateForm() 
 {
     
-    // alert("GGSS");
+    
     /*validate Learning Material Link*/
     var MaterialLink=document.myForm.MaterialLink.value;  
     if (MaterialLink == "")
     {
-      
+        
         document.getElementById("MaterialLink_error").innerHTML="Material link must be filled out";
      
         return false;
@@ -33,11 +33,31 @@ function validateForm()
      
         return false;
     }
-
+    checkButton();
 }
 
 /*fuction to hide error msg*/
-function hideFormError(x) {
+function hideFormError(x) 
+{
   
     x.innerHTML="";
 } 
+
+// validate the radio buttons
+function checkButton() 
+{    
+    if(document.getElementById('Tutorials').checked) {   
+        document.getElementById("disp").innerHTML   
+            = document.getElementById("Tutorials").value   
+            + " is selected";   
+    }   
+    else if(document.getElementById('Videos').checked) {   
+        document.getElementById("disp").innerHTML   
+            = document.getElementById("Videos").value   
+            + " is selected";     
+    }    
+    else {   
+        document.getElementById("error").innerHTML   
+            = "You have not selected any category";   
+    }   
+  }
