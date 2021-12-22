@@ -25,6 +25,7 @@ class Admin_add_lm extends Controller
             $data = [
                 'MaterialLink' => trim($_POST['MaterialLink']),
                 'MaterialTitle' => trim($_POST['MaterialTitle']),
+                'MaterialCategory'=>$_POST['MaterialCategory'],
                 'learning_material_link_err' => '',
                 'learning_material_title_err' => '',
             ];
@@ -40,7 +41,7 @@ class Admin_add_lm extends Controller
         //Make sure errors are empty
         if(empty($data['learning_material_link_err']) && empty($data['learning_material_title_err'])) 
         {
-            
+            $this->model->run_AddLearningMaterials($data);
         }
     }
 
