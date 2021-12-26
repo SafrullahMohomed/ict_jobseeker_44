@@ -16,4 +16,25 @@ class LearningMaterials extends Controller
         $this->view ->render('LearningMaterials'); 
         
     }
+
+    public function SearchLearningMaterials()
+    {
+      $ResourceName=NULL;
+      $Category=NULL;
+      if(isset($_POST['submit']))
+      {
+        $ResourceName=$_POST['ResourceName'];
+        $Category=$_POST['Category'];
+
+      }
+      // var_dump($_POST);
+      $data = [];
+      $result = $this->model->SelectLearningMaterials($ResourceName, $Category);
+
+
+      $data['result'] = $result;
+  //   print_r($result);
+
+      $this->view->render2('LearningMaterials', $data);
+    }
 }
