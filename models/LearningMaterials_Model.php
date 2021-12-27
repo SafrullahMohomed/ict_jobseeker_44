@@ -8,8 +8,8 @@ class LearningMaterials_Model extends Model{
     function SelectLearningMaterials($ResourceName,$Category)
     {
         $query = "SELECT * FROM learningmaterial WHERE LearningMaterial_category = '$Category' AND LearningMaterial_title ='$ResourceName'";
-        $result= $this->db->runQuery_single($query);
-        return $result; 
+        $results= $this->db->runQuery($query);
+        return $results; 
  
     }
    

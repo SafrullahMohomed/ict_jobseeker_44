@@ -33,8 +33,8 @@ class LearningMaterials extends Controller
 
 
       $data['result'] = $result;
-  //   print_r($result);
+      print_r($result);
 
-      $this->view->render2('LearningMaterials', $data);
+      $this->view->render2('ViewLearningMaterials', $data);
     }
 }
