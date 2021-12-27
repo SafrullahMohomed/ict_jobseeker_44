@@ -34,17 +34,17 @@
             <div class="row">
                 <label for="CurrPassword" class="labelfield">Current Password</label><br>
                 <input type="password" id="CurrPassword" name="CurrPassword" placeholder="Enter Your Current Password"  class="inputfield" required onfocus="hideFormError(curr_password_error)"><br>
-                
+                <span id="curr_password_error"></span>
             </div> 
             <div class="row">
                 <label for="NewPassword" class="labelfield">New Password</label><br>
                 <input type="password" id="NewPassword" name="NewPassword" placeholder="Enter Your New Password"  class="inputfield" required onfocus="hideFormError(new_password_error)"><br>
-                
+                <span id="new_password_error"></span>
             </div>   
             <div class="row">
                 <label for="ConfirmPassword" class="labelfield">Confirm New Password</label><br>
                 <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Your New Password"  class="inputfield" required required onfocus="hideFormError(confirm_password_error)"><br>
-                
+                <span id="confirm_password_error"></span>
             </div>   
             <!-- Input fields ends here -->
 

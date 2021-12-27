@@ -1,4 +1,5 @@
 // JS validation starts here
+// alert("GGSS");
 function validateForm() 
 {
   // password regular expression starts here
@@ -9,7 +10,9 @@ function validateForm()
   var CurrPassword=document.myForm.CurrPassword.value; 
   if(CurrPassword=="")
   {
+    
     document.getElementById("curr_password_error").innerHTML="Current Password must be filled out";
+    
   }
     
   if(!CurrPassword.match(passw)) 

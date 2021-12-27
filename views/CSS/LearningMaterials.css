@@ -47,7 +47,7 @@
     border-radius: 7px;
 }
   
-.search-button button 
+.search-button input[type="submit"] 
 {
     color: rgb(255, 255, 255);
     background-color: #1d6989;
@@ -58,7 +58,7 @@
     border:0;
 }
   
-.search-button button:hover 
+.search-button input[type="submit"]:hover 
 {
     color: #1d6989;
     background-color: #ffffff;
