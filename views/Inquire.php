@@ -25,13 +25,13 @@
             <div class="InquireBlock">
                 <div class="MainContainer">
                     <div class="Chat">
-                        <div class="ChatBox">
+                        <div class="ChatBox" id="ChatBox">
                             <h5 id="chat-timestamp"></h5>
-                            <p id="StarterMessage" class="Text"><span>Loading...</span></p>
+                            <p id="StarterMessage" class="Text"><span>Loading..</span></p>
                         </div>
                         <!-- User Inputs starts here -->
                         <div class="InputContainer1">
-                            <div class="Input">
+                            <div class="Input" id="Input">
                                 <input id="TextInput" class="InputBox" type="text" name="msg" placeholder="Enter Your Inquire">
                                 <p></p>
                             </div>
@@ -39,7 +39,7 @@
                                 <i id="ChatIcon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
                             </div>
                         </div>
-                        <div id="ChaBottom">
+                        <div id="ChatBottom">
                             <p></p>
                         </div>
                     </div>
@@ -48,5 +48,12 @@
         </div>
     </div>
 </body>
+<!-- <script>alert("GGSS");</script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="<?php echo URL ?>views/JS/Inquire.js"></script>
+<script src="<?php echo URL ?>views/JS/chat.js"></script>
+<script src="<?php echo URL ?>views/JS/chatting.js"></script>
+<script src="<?php echo URL ?>views/JS/Responses.js"></script>
+
+<!-- <script>alert("GGSSsss");</script> -->
 </html>
