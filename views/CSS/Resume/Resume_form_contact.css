@@ -4,9 +4,9 @@
   font-family: "Quicksand", sans-serif;
 }
 /* stepper and buttons starts here */
-/*.tab{*/
-/*  display: none;*/
-/*}*/
+.tab{
+  display: none;
+}
 
 /* next, input button */
 .bn_buttons {

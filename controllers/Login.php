@@ -111,6 +111,10 @@ class Login extends Controller
       {
           $this->view->renderAdmin('Admin_home');
       }
+      elseif ($_SESSION['User_type'] == "Counsellor")
+      {
+          $this->view->renderCounsellor('Counsellor_profile');
+      }
       else{
           $this->view ->render('Home');
 
@@ -119,7 +123,7 @@ class Login extends Controller
   }
 
   public function logout() {
-      session_start();
+//      session_start();
       unset($_SESSION['User_ID']);
       unset($_SESSION['User_type']);
       unset($_SESSION['Email']);

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Counsellor/Counsellor_profile_js.css"/>
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css"/>
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
+    <script defer src="<?php echo URL?>views/JS/Counsellor/Counsellor_profile_js.js"></script>
     <title>cousellor</title>
 </head>
 
@@ -25,10 +26,10 @@
 
         <!-- main details -->
         <div class="main_details_text">
-            <div class="name">Mosh&nbsp;Hamedani</div>
+            <div class="name"></div>
             <div class="full_address">
-                <div class="address detailsText">84, Anagarika Dharmapala Mawatha</div>
-                <div class="city detailsText">Matara</div>
+                <div class="address detailsText"></div>
+                <div class="city detailsText"></div>
             </div>
         </div>
     </div>
@@ -79,7 +80,7 @@
         <div class="Contact_details subhead">
             <div class="Contact_text subhead_text">Contact Details</div>
             <div class="qualificaitons_data">
-                <div class="email_text">Email&nbsp;:&nbsp;<a href="#"> mosh123@gmail.com </a></div>
+                <div class="email_text">Email&nbsp;:&nbsp;<a href="#" id = "counsellor_email"> mosh123@gmail.com </a></div>
                 <div class="phone_number">Contact&nbsp;NO&nbsp;:&nbsp;+94 71 244 1238</div>
             </div>
 
@@ -87,9 +88,10 @@
             <div class="social_media subhead">
                 <div class="social_media_text subhead_text">Social media</div>
                 <div class="social_media_links">
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-twitter-square"></i>
+                    <a href="" id = "facebook_icon"><i class="fab fa-facebook-square"></i></a>
+                    <a href="" id = "linkedin_icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="" id = "twitter_icon"><i class="fab fa-twitter-square"></i></a>
+
                 </div>
             </div>
         </div>
