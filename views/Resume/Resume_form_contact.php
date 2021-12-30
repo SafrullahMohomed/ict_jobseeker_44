@@ -49,11 +49,11 @@
 <!-- stepper is ends here -->
 
 <!-- form starts here -->
-<form action="/" method="get" id="form">
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact/Resume_form_data" method="post" id="form_resume">
 
 
     <!-- contact feild starts here -->
-    <div class="tab">
+    <div class="" id="form1_contact">
         <!-- title field starts here -->
         <div class="title_text">
             <div class="text1">Let’s Complete your resume heading</div>
@@ -81,20 +81,20 @@
             <div class="firstName inp">
                 <label for="firstName">First Name</label>
                 <br/>
-                <input type="text" name="firstName" id="firstName" required/>
+                <input type="text" name="firstName" id="firstName" />
             </div>
             <!-- last name  -->
             <div class="lastName inp">
                 <label for="lastName">Last Name</label>
                 <br/>
-                <input type="text" name="lastName" id="lastName" required/>
+                <input type="text" name="lastName" id="lastName" />
             </div>
 
             <!-- email -->
             <div class="email inp">
                 <label for="email">Email</label>
                 <br/>
-                <input type="email" name="email" id="email" required/>
+                <input type="email" name="email" id="email" />
             </div>
 
             <!-- phone number -->
@@ -108,7 +108,7 @@
             <div class="address inp">
                 <label for="address">Address</label>
                 <br/>
-                <input type="text" name="Address" id="firstName"/>
+                <input type="text" name="address" id="firstName"/>
             </div>
 
             <!-- city -->
@@ -127,30 +127,13 @@
             </div>
         </div>
 
-        <!-- contact form ends here -->
     </div>
+    <!-- contact form ends here -->
 
-    <!-- next, back buttons -->
 
-    <div class="bn_buttons">
-        <div class="back">
-            <button id="back" type="button" form="contact_form" disabled>
-                Back
-            </button>
-        </div>
-        <div class="next">
-            <button id="next" type="button" form="contact_form">Next</button>
-        </div>
-        <div class="next">
-            <button id="finish" type="submit" form="contact_form" disabled>
-                Submit
-            </button>
-        </div>
-    </div>
+    <!-- experience field starts here -->
 
-    <!-- experience feild starts here -->
-
-    <div class="tab">
+    <div class="tab" id="form2_experience">
         <!-- text field starts here -->
         <div class="title_text">
             <div class="text1">Work experiences</div>
@@ -170,7 +153,7 @@
             <div class="jobTitle inp">
                 <label for="jobTitle">Job Title</label>
                 <br/>
-                <input type="text" name="jobTitle" id="jobTitle" required/>
+                <input type="text" name="jobTitle" id="jobTitle"/>
             </div>
 
             <!-- employer -->
@@ -198,7 +181,7 @@
             <div class="country inp">
                 <label for="country">Country</label>
                 <br/>
-                <input type="text" name="Country" id="country"/>
+                <input type="text" name="country" id="country"/>
             </div>
 
             <!-- experience details -->
@@ -228,7 +211,7 @@
 
             <!-- add another experience button -->
             <div class="add-another">
-                <button><span class="plus_for_button">+</span>Add another experience</button>
+                <button id = "add-experience"><span class="plus_for_button">+</span>Add another experience</button>
             </div>
 
         </div>
@@ -239,7 +222,7 @@
     <!-- experience feild ends here -->
 
     <!-- education feild starts here -->
-    <div class="tab">
+    <div class="tab" id="form3_education">
 
         <!-- text field starts here -->
         <div class="title_text">
@@ -260,14 +243,14 @@
             <div class="instite inp">
                 <label for="institute">Institute</label>
                 <br/>
-                <input type="text" name="institute" id="institute" required/>
+                <input type="text" name="institute" id="institute"/>
             </div>
 
             <!-- Degree -->
             <div class="degree inp">
                 <label for="degree">Degree</label>
                 <br/>
-                <input type="text" name="degree" id="degree" required/>
+                <input type="text" name="degree" id="degree"/>
             </div>
 
             <!-- city -->
@@ -320,7 +303,7 @@
 
             <!-- add another education button -->
             <div class="add-another">
-                <button type="button">
+                <button type="button" id = "add-education">
                     <span class="plus_for_button"> + </span>Add another education
                     qualification
                 </button>
@@ -333,7 +316,7 @@
 
     <!-- skills starts here -->
 
-    <div class="tab">
+    <div class="tab" id="form4_skills">
         <!-- text field starts here -->
         <div class="title_text">
             <div class="text1">Skills</div>
@@ -361,7 +344,7 @@
 
     <!-- projects starts here -->
 
-    <div class="tab">
+    <div class="tab" id="form5_projects">
         <!-- text field starts here -->
         <div class="title_text">
             <div class="text1">Projects</div>
@@ -395,7 +378,7 @@
 
         <!-- add another project button -->
         <div class="add-another">
-            <button type="button">
+            <button type="button" id = "add-project">
                 <span class="plus_for_button"> + </span>Add another project
             </button>
         </div>
@@ -403,23 +386,47 @@
 
     <!-- projects ends here -->
 
+    <!-- next, back buttons -->
+
+    <div class="bn_buttons">
+        <div class="back">
+            <button id="back" type="button" form="contact_form" disabled>
+                Back
+            </button>
+        </div>
+        <div class="next">
+            <button id="next" type="button" form="contact_form">Next</button>
+        </div>
+        <div class="next">
+            <button id="finish" type="submit" form="contact_form" disabled>
+                Submit
+            </button>
+        </div>
+    </div>
+
+
 </form>
 
 
+<!-- <div class="bn_buttons">
+  <div class="back">
+    <button class="back" form="contact_form">Back</button>
+  </div>
+  <div class="next">
+    <button type="submit" form="contact_form">Next</button>
+  </div>
+</div> -->
 
+<!-- next, back buttons ends here -->
 
-    <!-- <div class="bn_buttons">
-      <div class="back">
-        <button class="back" form="contact_form">Back</button>
-      </div>
-      <div class="next">
-        <button type="submit" form="contact_form">Next</button>
-      </div>
-    </div> -->
+<!--form output-->
 
-    <!-- next, back buttons ends here -->
-
-<?php include './views/Footer.php' ?>
+<?php
+//
+//    if(isset($_POST)){
+//        print($_POST['']);
+//}
+include './views/Footer.php' ?>
 
 </body>
 
