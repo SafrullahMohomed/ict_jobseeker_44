@@ -11,5 +11,12 @@ class Resume_form_contact extends Controller
 
         //pass view name
         $this->view->renderResume('Resume_form_contact');
+
+    }
+
+    function Resume_form_data(){
+        echo "I am inside the function";
+        echo print_r($_POST);
+
     }
 }

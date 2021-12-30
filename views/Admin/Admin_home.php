@@ -21,69 +21,25 @@
 
 <body>
 
-<!-- admin dashboard starts here -->
-
-<div class="dashboard">
-    <div class="main-part">
-        <div class="cpanel">
-            <div class="icon-part">
-                <i class="fa fa-users" aria-hidden="true"></i><br>
-                <small>Jobseekers</small>
-                <p>28560</p>
-            </div>
-
-        </div>
-        <div class="cpanel cpanel-green">
-            <div class="icon-part">
-                <i class="fa fa-money" aria-hidden="true"></i><br>
-                <small>Jobs</small>
-                <p>1250</p>
-            </div>
-
-        </div>
-        <div class="cpanel cpanel-orange">
-            <div class="icon-part">
-                <i class="fa fa-id-card" aria-hidden="true"></i><br>
-                <small>Companies</small>
-                <p>55</p>
-            </div>
-
-        </div>
-        <div class="cpanel cpanel-blue">
-            <div class="icon-part">
-                <i class="fa fa-tasks" aria-hidden="true"></i><br>
-                <small>Contracts</small>
-                <p>198</p>
-            </div>
-
-        </div>
-        <div class="cpanel cpanel-red">
-            <div class="icon-part">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>
-                <small>Contract Providers</small>
-                <p>110</p>
-            </div>
-
-        </div>
-        <div class="cpanel cpanel-skyblue">
-            <div class="icon-part">
-                <i class="fa fa-comments" aria-hidden="true"></i><br>
-                <small>Counsellors</small>
-                <p>20</p>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- admin dashboard ends here -->
 
 <div class="main-container">
 
 
+    <!-- admin dashboard starts here-->
+    <div class="left-division">
 
-    <!-- admin boxes starts here-->
-    <div class="admin-boxes">
-        <div class="first-row">
+        <a href="<?php echo URL?>Admin/Admin_home"><div class="admin-dashboard-option">
+
+                <div class="dashboard-box-option">
+                    <i class="fa fa-dashboard" style="font-size:42px;color:aliceblue"></i>
+                    Dashboard
+                </div>
+
+
+        </div>
+        </a>
+
+        <div class="admin-options">
             <a href="<?php echo URL ?>Admin/Manage_jobseeker">
                 <div class="manage_jobseekers box">Manage Jobseekers</div>
             </a>
@@ -99,9 +55,7 @@
             <a href="<?php echo URL ?>Admin/Manage_resume">
                 <div class="manage_resume box">Manage Resume</div>
             </a>
-        </div>
 
-        <div class="second-row">
             <a href="<?php echo URL ?>Admin/Manage_cp">
                 <div class="manage_contract_providers box">
                     Manage Contract Providers
@@ -118,8 +72,70 @@
             </a>
         </div>
     </div>
-    <!-- admin boxes ends here -->
+    <!-- admin dashboard ends here -->
+
+
+    <!-- admin details starts here -->
+    <div class="right-division">
+        <div class="dashboard-content">
+            <div class="main-part">
+                <div class="cpanel">
+                    <div class="icon-part">
+                        <i class="fa fa-users" aria-hidden="true"></i><br>
+                        Jobseekers
+                        <p>28560</p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-green">
+                    <div class="icon-part">
+                        <i class="fa fa-money" aria-hidden="true"></i><br>
+                        Jobs
+                        <p>1250</p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-orange">
+                    <div class="icon-part">
+                        <i class="fa fa-id-card" aria-hidden="true"></i><br>
+                        Companies
+                        <p>55</p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-blue">
+                    <div class="icon-part">
+                        <i class="fa fa-tasks" aria-hidden="true"></i><br>
+                        Contracts
+                        <p>198</p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-red">
+                    <div class="icon-part">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>
+                        Contract Providers
+                        <p>110</p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-skyblue">
+                    <div class="icon-part">
+                        <i class="fa fa-comments" aria-hidden="true"></i><br>
+                        Counsellors
+                        <p>20</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- admin details ends here -->
+    </div>
+
+
 </div>
+
+
 
 </body>
 

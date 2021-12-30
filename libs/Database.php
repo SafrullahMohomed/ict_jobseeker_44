@@ -98,14 +98,14 @@ class Database extends PDO
 
 
 
- }  
- 
+ }
 
 
 
-    
 
- 
+
+
+
  // prepare sql and bind parameters 
 //Insert data into contract tables
  public function run_insert_bid_query()
@@ -134,32 +134,32 @@ class Database extends PDO
 //     $stmt1=$this->prepare("SELECT  `Bid_value`, `Bid_proposal`,
 //                           `Jobseeker_ID`
 //                            FROM `dobid`");
-    
+
 
 
 
     $stmt1->execute();
-    $s=$stmt1->fetchAll();
+    $s = $stmt1->fetchAll();
     print_r($s);
     return $s;
 
-    
+
 // }
 
 
 
  public function  run_insert_reg_data($data,$emailToken){
     date_default_timezone_set("Asia/Colombo");
-    $fname=$data['fname'];
-    $lname=$data['lname'];
-    $email=$data['email'];
-    $user_type=$data['user_type'];
-    $password=$data['password'];
-    $varify=$data['verify'];
-    $Created_at=date("Y-m-d H:i:s");
+    $fname = $data['fname'];
+    $lname = $data['lname'];
+    $email = $data['email'];
+    $user_type = $data['user_type'];
+    $password = $data['password'];
+    $varify = $data['verify'];
+    $Created_at = date("Y-m-d H:i:s");
 
 
-    $stmt1 =$this->prepare("INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at)
+    $stmt1 = $this->prepare("INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at)
      VALUES (:password,:email,:fname,:lname,:verify,:varify_token,:user_type,:Created_at )");
 
      $stmt1->bindParam(':password', $password);
@@ -172,16 +172,16 @@ class Database extends PDO
      $stmt1->bindParam(':user_type',  $user_type);
      $stmt1->bindParam(':Created_at',  $Created_at);
 
-     $stmt1->execute();
-     $User_ID=$this->lastInsertId();
-    
+    $stmt1->execute();
+    $User_ID = $this->lastInsertId();
+
 //when registration is success then create user table row for relavent user type
     switch ($user_type) {
         case 'Jobseeker':
-    
-           $query="INSERT INTO jobseeker(User_ID) VALUES (?)";
-           $stmt2 =$this->prepare( $query);
-           $stmt2->execute([$User_ID]);
+
+            $query = "INSERT INTO jobseeker(User_ID) VALUES (?)";
+            $stmt2 = $this->prepare($query);
+            $stmt2->execute([$User_ID]);
             break;
         
        case 'Contract provider':

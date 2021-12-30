@@ -371,6 +371,10 @@ align-items: center;
                if ($_SESSION['User_type'] == "Jobseeker") :
                 $My_profile = "Jobseeker/JobSeekerProfile";
               endif;
+              // if user is Counsellor
+              if ($_SESSION['User_type'] == "Counsellor") :
+                  $My_profile = "Counsellor/Counsellor_profile";
+              endif;
 
 
 
