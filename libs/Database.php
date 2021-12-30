@@ -94,7 +94,7 @@ class Database extends PDO
         //        $stmt1->execute([$contract_name, $description, $deadline, $avg_bid, $contract_category,$user_id]);
 
 
-    }
+
 
 
 
@@ -138,10 +138,10 @@ class Database extends PDO
 
 
 
-    $stmt1->execute();
-    $s = $stmt1->fetchAll();
-    print_r($s);
-    return $s;
+//    $stmt1->execute();
+//    $s = $stmt1->fetchAll();
+//    print_r($s);
+//    return $s;
 
 
 // }
@@ -245,27 +245,28 @@ public function  run_update_password($data,$email)
 }
 
 
-    public function  run_insert_reg_data($data, $emailToken)
-    {
-        date_default_timezone_set("Asia/Colombo");
-        $fname = $data['fname'];
-        $lname = $data['lname'];
-        $email = $data['email'];
-        $user_type = $data['user_type'];
-        $password = $data['password'];
-        $varify = $data['verify'];
-        $Created_at = date("Y-m-d H:i:s");
+//    public function  run_insert_reg_data($data, $emailToken)
+//    {
+//        date_default_timezone_set("Asia/Colombo");
+//        $fname = $data['fname'];
+//        $lname = $data['lname'];
+//        $email = $data['email'];
+//        $user_type = $data['user_type'];
+//        $password = $data['password'];
+//        $varify = $data['verify'];
+//        $Created_at = date("Y-m-d H:i:s");
+//
+//
+//
+//        $sql = "INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at) VALUES (?,?,?,?,?,?,?,?);";
+//
+//        $stmt1 = $this->prepare($sql);
+//
+//
+//        $sql2 ="INSERT INTO";
+//
+//
+//        $stmt1->execute([$password, $email, $fname, $lname, $varify, $emailToken, $user_type, $Created_at]);
+//    }
 
-
-        
-        $sql = "INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at) VALUES (?,?,?,?,?,?,?,?);";
-        
-        $stmt1 = $this->prepare($sql);
-
-
-        $sql2 ="INSERT INTO";
-
-
-        $stmt1->execute([$password, $email, $fname, $lname, $varify, $emailToken, $user_type, $Created_at]);
-    }
 }
