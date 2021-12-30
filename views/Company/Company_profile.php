@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <title>company_profile</title>
 </head>
-<body>
+<body onload="companyData(<?php echo $data['User_ID']?>)">
     <!-- header part with css html js -->
  <div class="header_div" >
         <?php include 'views/Header.php'?>
@@ -33,82 +33,10 @@
       
     </div>
     <?php endif; ?>
-
-        <div class="main_details">
-            <div class="picture">
-            <img src='<?php echo URL ?>views/images/Company_profile/company_logo1.jfif' >
-               
-            </div>  
-            <div class="main_details_text">
-               <div class="name">
-                Virtusa (Pvt.) Ltd
-               </div>
-               <div class="address">
-                40, Navam Mawatha, Colombo 02
-               </div>
-               <div class="phone_number">
-                +94 11 244 8888
-               </div>
-               <div class="no_of_contracts">
-                 2 job post
-               </div>
-               
-            </div>  
-         </div> 
-       
-         <div class="description">
-          Virtusa Corporation is an American information technology services company founded in 1996 in Sri
-           Lanka and has its headquarters in Southborough, Massachusetts, United State.At a scale and speed that
-            defies traditional IT infrastructure. Learn how Virtusa
-           provides solutions that help companies work smarter, faster. IT Strategy. Business Consulting. DPA.
-         </div>
-         <div class="description_vedio">
-          <video  controls id="vedioid">
-            <source src='<?php echo URL ?>views/video/description_vedio1.mp4' type="video/mp4">
-          
-            Your browser does not support the video tag.
-          </video>
-           </div>
-         <div class="sub_parts">
-      <div class="email">
-          <div class="email_text">
-            Email
-          </div>
-          <div class="email_data">
-            <a href="virtusa@gmail.com"> virtusa@gmail.com </a>
-          </div>
-         
-      </div>
-      <div class="website">
-          <div class="website_text">
-              Web site
-          </div>
-          <div class="website_data">
-            <a href="virtusa.com"> virtusa.com  </a> 
-          </div>
+<div class="detail">
+<!-- load data from database -->
+</div>
         
-      </div>
-      <div class="social_media">
-          <div class="social_media_text">Social media</div>
-          <div class="social_media_links">
-            <i class="fab fa-facebook-square social_icon"></i>
-            <i class="fab fa-linkedin social_icon" ></i>
-            <i class="fab fa-twitter-square social_icon"></i>
-           </div>
-        
-      </div>
-      <!-- <div class="hero">
-     
-      <div class="social-links">
-        <a href=""><i class="fab fa-facebook-f"></i></a>
-       
-        <a href=""><i class="fab fa-twitter"></i></a>
-        
-        <a href=""><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div> -->
-
-         </div>
         
 
     </div>
@@ -117,5 +45,8 @@
         <?php include 'views/Footer.php'?>
 
       <!-- header part end  -->
+     
+      <script src="<?php echo URL ?>views/JS/Company_profile.js"></script>
+
 </body>
 </html>

@@ -21,15 +21,30 @@
     align-items: center;
     height: fit-content;
     max-height: 250px;
+    margin-bottom: 30px;
 
 }
 .total_rate{
+    
     font-size: 7vw;
     font-weight: 800;
 }
-.star_row{
+.no_with_star {
+    display: flex;
+    flex-direction: row; 
+    font-size: 7vw; 
    
-    font-size: 2vw;
+}
+.no_with_star i{
+    color: gold !important;
+}
+.star{
+   
+    font-size: 7vw;
+    color: gold !important;
+}
+#s1,#s2,#s3,#s4,#s5{
+    font-size: 2vw !important;
 }
 /*
 i fa-star,i fa-star -o ,.do_rate_star_row i{
@@ -39,7 +54,7 @@ i fa-star,i fa-star -o ,.do_rate_star_row i{
    
     color: gold !important;
 }
-#count{
+#star_count{
 display: none;
 
 
@@ -77,22 +92,33 @@ p{
     hr{
         margin-top: 20px;
         margin-bottom: 20px;
+        width: 60vw;
        
     }
     .review_row i{
         color: gold;
     }
-
+    .do_rate_star_row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 25px;
+        
+  
+    }
+    .star_no{
+        font-size:15px;
+    }
 /*review row end*/
 .loadmore_button{
     background-color: #1D6989;
     width:150px;
     color: white;
     padding: 5px;
-   border: none;
+    border: none;
     border-radius: 30px;
     font-weight: 600;
-   margin: auto;
+    margin: auto;
    
 }
 .loadmore_button:hover{

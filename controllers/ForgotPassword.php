@@ -15,7 +15,7 @@ class ForgotPassword extends Controller
         $data = ['email_err' => ''];
 
         //pass view name
-        $this->view ->render2('ForgotPassword'); 
+        $this->view ->render2('ForgotPassword',$data); 
         
     }
 
@@ -26,6 +26,7 @@ class ForgotPassword extends Controller
             $data = [
                 'email' => trim($_POST['email']),
                 'controller' => 'ForgotPassword',
+                // 'password_verify' => '0',
                 'email_err' => ''
             ];
         $_SESSION['email'] = $data['email'];
@@ -47,11 +48,11 @@ class ForgotPassword extends Controller
                 $passwordToken = openssl_random_pseudo_bytes(16);
                 $passwordToken = bin2hex($passwordToken);
                 $_SESSION['passwordToken'] =$passwordToken ;
-                $this->model->run_insert_password_data($data,  $passwordToken);
-                $this->model->sendMail($data['email'],$passwordToken,$data['fname']);
+                $this->model->insert_password_data($data,  $passwordToken);
+                $this->model->sendMail($data['email'],$passwordToken);
                 $info['mail_msg'] ="We have sent an email with a confirmation link to your email address. In order to reset password, please click the confirmation link.";
             
-                $this->view ->render('Mail_info');
+                $this->view ->render('PasswordForgotEmail');
             }
             else
             {
@@ -65,16 +66,17 @@ class ForgotPassword extends Controller
         }      
     }
 
-    public function  Reset($email,$passwordToken){
+    // public function  Reset($email,$passwordToken){
 
           
         
-      $info['active_msg'] = $this->model->verifyemail_update($email,$passwordToken);
-     
+    //   $info['active_msg'] = $this->model->verifyemail_update($email,$passwordToken);
+    //   $data =['email' => $email];
     
-      $this->view ->render('Success_post');
-
-      }
+    //   $this->view ->render2('ResetPassword',$data['email']);
+    //   echo $data['email'];
+    //   // $this->view ->render('ResetPassword');
+    //   }
 
 
 }

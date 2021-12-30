@@ -42,7 +42,35 @@
         </div>
         </form>
       </div>
-      <div class="Trending">Top Trending Resources</div>
+
+      
+       <!-- Search results start from here -->
+      <div class="ResourceRow">
+           <!-- load data from  database -->
+            
+      <?php
+            
+            $result = $data['result'];
+            foreach ($result
+
+                     as $row):
+            
+                 ?>
+
+          <div class="Academy">
+            <img src='<?php echo URL ?>views/images/LearningMaterials/w3.png' >
+          </div>
+          <div class="Tutorial">
+              <?php echo $row['LearningMaterial_title'] ?>
+              <!-- HTML Tutorial -->
+          </div>
+          <div class="Lesson">
+            <img src='<?php echo URL ?>views/images/LearningMaterials/html.png' >
+          </div>
+          <?php endforeach; ?>
+      </div>
+     
+
       <div class="ResourceRow">
           <div class="Academy">
             <img src='<?php echo URL ?>views/images/LearningMaterials/w3.png' >
@@ -54,39 +82,9 @@
             <img src='<?php echo URL ?>views/images/LearningMaterials/html.png' >
           </div>
       </div>
-      <div class="ResourceRow">
-        <div class="Academy">
-          <img src='<?php echo URL ?>views/images/LearningMaterials/JavaT.png' >
-        </div>
-        <div class="Tutorial">
-            Java Script Tutorial
-        </div>
-        <div class="Lesson">
-          <img src='<?php echo URL ?>views/images/LearningMaterials/js.png' >
-        </div>
-      </div>
-        <div class="ResourceRow">
-            <div class="Academy">
-              <img src='<?php echo URL ?>views/images/LearningMaterials/gg.jpg' >
-            </div>
-            <div class="Tutorial">
-                CSS Tutorial
-            </div>
-            <div class="Lesson">
-              <img src='<?php echo URL ?>views/images/LearningMaterials/css3-.png' >
-            </div>
-        </div>
-      <!-- <div class="resource-boxes">
-        <div class="first-row">
-          <div class="Resource"><a href="#" id="link">Tutorials</a></div>
-          <div class="Resource"><a href="#" id="link">Videos</a></div>
-        </div> -->
-        <!-- <div class="second-row">
-          <div class="Resource"><a href="#" id="link">Exercises</a></div>
-          <div class="Resource"><a href="#" id="link">Quizes</a></div>
-        </div> -->
-      </div>
+     
       <?php include 'Footer.php'?>
     <script src="<?php echo URL ?>views/JS/LearningMaterials.js"></script>
 </body>
 </html>
+
