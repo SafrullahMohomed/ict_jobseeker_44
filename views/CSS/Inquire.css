@@ -129,7 +129,7 @@ body
     width: 100%;
     border-radius: 10px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     color: #000;
     background-color: white;
     outline: none
@@ -138,7 +138,7 @@ body
 .userText {
     color: white;
     font-family: Helvetica;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     text-align: right;
     clear: both;
@@ -147,13 +147,46 @@ body
 .userText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #5ca6fa;
+    background: #227093;
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;
-    max-width: 80%;
+    max-width: 70%;
+    margin-bottom: 5px;
     margin-right: 10px;
     animation: floatup .5s forwards
+}
+
+.QText {
+    color: #227093;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.QText span {
+    line-height: 1.5em;
+    display: inline-block;
+    border: #227093 solid;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 70%;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+.QText span:hover
+{
+    cursor: pointer;
+    background: #227093;
+    color: white;
+    position: relative;
+    transition:ease-in-out 0.2s;
 }
 
 .Text
@@ -161,7 +194,7 @@ body
     color: #000;
     font-family: Helvetica;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
 }
 
@@ -173,7 +206,8 @@ body
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
-    max-width: 80%;
+    max-width: 70%;
+    margin-bottom: 5px;
     margin-left: 10px;
     animation: floatup .5s forwards
 }
@@ -194,7 +228,7 @@ body
         width: 100%;
         border-radius: 0px;
     }
-    .chat-bar-collapsible {
+    .InquireBox {
         position: fixed;
         bottom: 0;
         right: 0;
@@ -207,3 +241,26 @@ body
         border-radius: 0px;
     }
 }
+
+
+/* .right-container input[type="submit"]
+{
+    width: 100px;
+    border-radius: 12px;
+    border: rgb(6, 8, 124) solid;
+    background: rgb(6, 8, 124);
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 35px;
+}
+.right-container input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: white;
+    color: rgb(6, 8, 124);
+    position: relative;
+    transition:ease-in-out 0.2s;
+} */

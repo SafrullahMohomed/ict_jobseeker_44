@@ -1,5 +1,5 @@
 
-alert("GGSS");
+// alert("GGSS");
 var coll=document.getElementsByClassName("collapsiable");
 
 for(let i=0; i< coll.length; i++)
@@ -51,17 +51,17 @@ function getTime()
 // firstInquire();
 
 // Gets the first message
-function firstInquire() {
+// function firstInquire() {
    
-    let welcomeMessage = "Welcome to ICT JobSeeker! Please let us know how we can help you."
-    document.getElementById("StarterMessage").innerHTML = '<p class="Text"><span>' + welcomeMessage + '</span></p>';
+//     let welcomeMessage = "Welcome to ICT JobSeeker! Please let us know how we can help you."
+//     document.getElementById("StarterMessage").innerHTML = '<p class="Text"><span>' + welcomeMessage + '</span></p>';
 
-    let time = getTime();
+//     let time = getTime();
 
-    $("#chat-timestamp").append(time);
-    document.getElementsByClassName("Input").scrollIntoView(false);
-}
+//     $("#chat-timestamp").append(time);
+//     document.getElementsByClassName("Input").scrollIntoView(false);
+// }
 
-firstInquire();
-getTime();
+// firstInquire();
+// getTime();
 

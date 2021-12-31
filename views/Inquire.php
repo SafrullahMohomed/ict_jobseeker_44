@@ -28,6 +28,10 @@
                         <div class="ChatBox" id="ChatBox">
                             <h5 id="chat-timestamp"></h5>
                             <p id="StarterMessage" class="Text"><span>Loading..</span></p>
+                            <p id="QuestionOne" class="QText" onclick="InquireButtonOne()"><span>Loading..</span></p>
+                            <p id="QuestionTwo" class="QText" onclick="InquireButtonTwo()"><span>Loading..</span></p>
+                            <p id="QuestionThree" class="QText" onclick="InquireButtonThree()"><span>Loading..</span></p>
+                            <p id="QuestionTFour" class="QText" onclick="InquireButtonFour()"><span>Loading..</span></p>
                         </div>
                         <!-- User Inputs starts here -->
                         <div class="InputContainer1">
@@ -36,7 +40,7 @@
                                 <p></p>
                             </div>
                             <div class="Icon">
-                                <i id="ChatIcon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                                <i id="ChatIcon" style="color: #227093;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
                             </div>
                         </div>
                         <div id="ChatBottom">
