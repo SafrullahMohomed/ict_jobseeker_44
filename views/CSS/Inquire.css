@@ -12,6 +12,8 @@ body
     margin: 0 auto;
     background-color: white;
 }
+
+/* Inquire box starts here  */
 .InquireBox
 {
     position: fixed;
@@ -19,7 +21,9 @@ body
     right: 50px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+/* Inquire box ends here  */
 
+/* Collapsiable button starts here  */
 .collapsiable
 {
     background-color: #227093;
@@ -34,7 +38,9 @@ body
     border: 3px solid white;
     border-bottom: none;
 }
+/* Collapsiable button ends here  */
 
+/* Logo starts here  */
 .InquireBox img
 {
     border-radius: 50%;
@@ -44,6 +50,9 @@ body
     margin-right: 25px;
     margin-left: 15px;
 }
+/* Logo ends here  */
+
+/* Content of the inquire box starts here  */
 .content 
 {
     max-height: 0;
@@ -51,7 +60,9 @@ body
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
 }
+/* Content of the inquire box ends here  */
 
+/* Inquire block starts here  */
 .InquireBlock
 {
     width: 280px;
@@ -62,14 +73,18 @@ body
     height: max-content;
     transition: max-height 0.2s ease-out;
 }
+/* Inquire block ends here  */
 
+/* Main container starts here  */
 .MainContainer
 {
     min-height: 500px;
     bottom: 0%;
     position: relative;
 }
+/* Main container ends here  */
 
+/* Chat starts here  */
 .Chat
 {
     max-height: 400px;
@@ -85,7 +100,9 @@ body
 {
     display: none;
 }
+/* Chat ends here  */
 
+/* Input container starts here  */
 .InputContainer1 
 {
     display: flex;
@@ -98,7 +115,9 @@ body
     border-radius: 10px 10px 0px 0px;
     padding: 10px 0px 10px 10px;
 }
+/* Input container ends here  */
 
+/* Inqure send icon starts here  */
 .Icon 
 {
     display: flex;
@@ -113,9 +132,11 @@ body
 {
     opacity: .7;
 }
+/* Inqure send icon ends here  */
 
 /* Chat bubbles */
 
+/* Input bar starts here  */
 .Input
 {
     width: 85%;
@@ -134,7 +155,9 @@ body
     background-color: white;
     outline: none
 }
+/* Input bar ends here  */
 
+/* Messages starts here  */
 .userText {
     color: white;
     font-family: Helvetica;
@@ -156,7 +179,9 @@ body
     margin-right: 10px;
     animation: floatup .5s forwards
 }
+/* Messages ends here  */
 
+/* Selecting question messages starts here  */
 .QText {
     color: #227093;
     font-family: Helvetica;
@@ -180,6 +205,7 @@ body
     animation: floatup .5s forwards
 }
 
+
 .QText span:hover
 {
     cursor: pointer;
@@ -188,7 +214,9 @@ body
     position: relative;
     transition:ease-in-out 0.2s;
 }
+/* Selecting question messages ends here  */
 
+/* Responses for question messages starts here  */
 .Text
 {
     color: #000;
@@ -211,7 +239,9 @@ body
     margin-left: 10px;
     animation: floatup .5s forwards
 }
+/* Responses for question messages ends here  */
 
+/* Media quaries starts here  */
 @keyframes floatup {
     from {
         transform: translateY(14px);
@@ -241,7 +271,7 @@ body
         border-radius: 0px;
     }
 }
-
+/* Media quaries ends here  */
 
 /* .right-container input[type="submit"]
 {
