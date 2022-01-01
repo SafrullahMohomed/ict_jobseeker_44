@@ -31,7 +31,8 @@
                             <p id="QuestionOne" class="QText" onclick="InquireButtonOne()"><span>Loading..</span></p>
                             <p id="QuestionTwo" class="QText" onclick="InquireButtonTwo()"><span>Loading..</span></p>
                             <p id="QuestionThree" class="QText" onclick="InquireButtonThree()"><span>Loading..</span></p>
-                            <p id="QuestionTFour" class="QText" onclick="InquireButtonFour()"><span>Loading..</span></p>
+                            <p id="QuestionFour" class="QText" onclick="InquireButtonFour()"><span>Loading..</span></p>
+                            <p id="QuestionFive" class="QText" onclick="InquireButtonFive()"><span>Loading..</span></p>
                         </div>
                         <!-- User Inputs starts here -->
                         <div class="InputContainer1">

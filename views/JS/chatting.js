@@ -35,7 +35,7 @@ function getResponse() {
 //Gets the first question from the selection box and processes it
 function getResponseInquireOne() {
     
-    let userText = "Hey there! Searching for career opportunities?";
+    let userText = "What confidence can we place in the counsellors here?";
    
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
@@ -52,7 +52,7 @@ function getResponseInquireOne() {
 //Gets the second question from the selection box and processes it
 function getResponseInquireTwo() {
     
-    let userText = "I'd be happy to direct you to the right resources!";
+    let userText = "Is there an opportunity to submit a pre-made CV when applying for a job?";
    
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
@@ -70,7 +70,7 @@ function getResponseInquireTwo() {
 //Gets the third question from the selection box and processes it
 function getResponseInquireThree() {
     
-    let userText = "I'd be happy";
+    let userText = "What are the benefits and specialities of job posting on this site?";
    
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
@@ -88,7 +88,24 @@ function getResponseInquireThree() {
 //Gets the fourth question from the selection box and processes it
 function getResponseInquireFour() {
     
-    let userText = "Right resources!";
+    let userText = "Will the job advertisement be removed from the website without prior notice when the agreed time limit for a job vacancy has passed?";
+   
+    let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+
+    $("#TextInput").val("");
+    $("#ChatBox").append(userHtml);
+    document.getElementById("ChatBottom").scrollIntoView(true);
+
+    setTimeout(() => {
+        getHardResponse(userText);
+    }, 1000)
+
+}
+
+//Gets the fifth question from the selection box and processes it
+function getResponseInquireFive() {
+    
+    let userText = "What is the charge for posting a job vacancy?";
    
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
 
@@ -119,14 +136,17 @@ function buttonSendText(sampleText) {
 // Gets the button selesction inquires
 function buttonInquire() {
    
-    let questionOne = "Hey there! Searching for career opportunities?";
-    let questionTwo = "I'd be happy to direct you to the right resources!";
-    let questionThree = "I'd be happy";
-    let questionFour = "Right resources!";
+    let questionOne = "What confidence can we place in the counsellors here?";
+    let questionTwo = "Is there an opportunity to submit a pre-made CV when applying for a job?";
+    let questionThree = "What are the benefits and specialities of job posting on this site?";
+    let questionFour = "Will the job advertisement be removed from the website without prior notice when the agreed time limit for a job vacancy has passed?";
+    let questionFive = "What is the charge for posting a job vacancy?";
     document.getElementById("QuestionOne").innerHTML = '<p class="QText"><span>' + questionOne + '</span></p>';
     document.getElementById("QuestionTwo").innerHTML = '<p class="QText"><span>' + questionTwo + '</span></p>';
     document.getElementById("QuestionThree").innerHTML = '<p class="QText"><span>' + questionThree + '</span></p>';
-    document.getElementById("QuestionTFour").innerHTML = '<p class="QText"><span>' + questionFour + '</span></p>';
+    document.getElementById("QuestionFour").innerHTML = '<p class="QText"><span>' + questionFour + '</span></p>';
+    document.getElementById("QuestionFive").innerHTML = '<p class="QText"><span>' + questionFive + '</span></p>';
+
 }
 
 buttonInquire();
@@ -154,6 +174,13 @@ function InquireButtonFour()
 {
     getResponseInquireFour();
 }
+
+//If button one clicked then call to getResponseInquireFive function for display question
+function InquireButtonFive()
+{
+    getResponseInquireFive();
+}
+
 
 //If send button one clicked then call to getResponse function for display question
 function sendButton() {
