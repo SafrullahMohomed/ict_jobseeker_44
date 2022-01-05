@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #585656;
+    font: size 1.1em;;
+}
+.MainContainer
+{
+    width:80%;
+    min-height:580px;
+    margin: 200px auto 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.row
+{
+    width: 80%;
+    margin-top:10px ;
+}
+
+label
+{
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.inputfield
+{
+    width: 100%;
+    border: 3px solid #ccc;
+    padding: 3px;
+}
+.RadioButton
+{
+    font-weight: 450;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    margin-top:10px ;
+}
+.inputfield:hover{
+    border: 3px solid #1D6989;
+}  
+
+.inputfield:focus
+{
+    outline: none;
+    border: 3px solid #1D6989;
+} 
+.Title
+{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: left;
+    color: #ffff;
+    background-color: #1D6989;
+    padding: 5px 5px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    width: 80%;
+
+}
+
+.ImgRow
+{
+    width: 45%;
+    height: 75%;
+    margin-left: 20%;
+}
+
+.ImgRow #MaterialImg
+{
+    width: 45%;
+    height: 75%;
+    margin: auto;
+    
+    border: 3px solid #ece9e9;
+    border-radius:100%; 
+    box-shadow: 5px 5px 10px rgba(172, 167, 167, 0.16) ; 
+}
+
+.ImgRow #ResourceImg
+{
+    width: 45%;
+    height: 80%;
+    margin: auto;
+    
+    border: 3px solid #ece9e9;
+    border-radius:100%; 
+    box-shadow: 5px 5px 10px rgba(172, 167, 167, 0.16) ; 
+}
+
+#MaterialFile
+{
+    display: none;
+}
+
+#ResourceFile
+{
+    display: none;
+}
+
+#BtnUpload
+{
+    height: 40px;
+    width: 10%;
+    position: relative;
+    top: 27%;
+    left: -45%;
+    transform:translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: wheat;
+    line-height: 30px;
+}
+
+span
+{
+    color: red;
+    font-size: 10px;
+}
+
+.flex-container
+{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top:10px ;
+}
+.submit_button{
+    background-color: #1D6989;
+    width:150px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 10px;
+    font-size: 1.1em;
+    border: none;
+}
+.submit_button:hover{
+    cursor: pointer;
+    color:#1D6989 ;
+    background-color: white;
+    border: 2px solid #1D6989;
+
+}
+@media only screen and (max-width: 996px)
+{
+    *{
+       font-size: 1em;
+    }
+}
+@media only screen and (max-width: 490px)
+{
+    button
+    {
+        font-size: 15px!important;
+        width: 8px;
+    } 
+    .flex-container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-top:10px ;
+    }
+    #BtnUpload
+    {
+        height: 40px;
+        width: 10%;
+        position: relative;
+        top: 17%;
+        left: -75%;
+        transform:translateX(-50%);
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        color: wheat;
+        line-height: 30px;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 375px)
+{
+    button
+    {
+        font-size: 15px!important;
+        width: 8px;
+    } 
+    .flex-container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-top:10px ;
+    }
+    #BtnUpload
+    {
+        height: 40px;
+        width: 10%;
+        position: relative;
+        top: 17%;
+        left: -45%;
+        transform:translateX(-50%);
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        color: wheat;
+        line-height: 30px;
+        font-size: 8px;
+    }
+
+}
