@@ -21,6 +21,6 @@ class Counsellor_profile_Model extends Model
 
         $statement = $this->db->prepare($sql);
         $statement->execute();
-        return $statement->fetch(PDO::FETCH_OBJ);
+        return $statement->fetch(PDO::FETCH_ASSOC);
     }
 }

@@ -19,9 +19,10 @@ class Manage_counselling extends Controller
 //    to get the counsellor data
     function get_counsellor_data()
     {
+
         if (isset($_POST["query"])) {
 
-            $limit = 2;
+            $limit = 5;
             $page = 1;
 
 
@@ -42,8 +43,8 @@ class Manage_counselling extends Controller
             }
 
             $pagination_html = '
-	<div>
-  		<ul class="pagination">
+	<div class="pagination">
+  
 	';
 
             $total_links = ceil($counsellor_data[1]/$limit);
@@ -115,40 +116,40 @@ class Manage_counselling extends Controller
                 if($page == $page_array[$count])
                 {
                     $page_link .= '
-			<li class="page-item active">
-	      		<a class="page-link" href="#">'.$page_array[$count].' <span class="sr-only">(current)</span></a>
-	    	</li>
+			
+	      		<a class="page-link active" href="#">'.$page_array[$count].' <span class="sr-only">(current)</span></a>
+	    	
 			';
 
                     $previous_id = $page_array[$count] - 1;
 
                     if($previous_id > 0)
                     {
-                        $previous_link = '<li class="page-item"><a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$previous_id.')">Previous</a></li>';
+                        $previous_link = '<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$previous_id.')">Previous</a>';
                     }
                     else
                     {
                         $previous_link = '
-				<li class="page-item">
-			        <a class="page-link" href="#">Previous</a>
-			    </li>
+				
+			        <a class="page-link pagination-hidden" href="#">Previous</a>
+			    
 				';
                     }
 
                     $next_id = $page_array[$count] + 1;
 
-                    if($next_id >= $total_links)
+                    if($next_id > $total_links)
                     {
                         $next_link = '
-				<li class="page-item">
-	        		<a class="page-link" href="#">Next</a>
-	      		</li>
+				
+	        		<a class="page-link pagination-hidden" href="#">Next</a>
+	      		
 				';
                     }
                     else
                     {
                         $next_link = '
-				<li class="page-item"><a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$next_id.')">Next</a></li>
+				<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$next_id.')">Next</a>
 				';
                     }
 
@@ -158,17 +159,17 @@ class Manage_counselling extends Controller
                     if($page_array[$count] == '...')
                     {
                         $page_link .= '
-				<li class="page-item">
+				
 	          		<a class="page-link" href="#">...</a>
-	      		</li>
+	      	
 				';
                     }
                     else
                     {
                         $page_link .= '
-				<li class="page-item">
+			
 					<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$page_array[$count].')">'.$page_array[$count].'</a>
-				</li>
+				
 				';
                     }
                 }
@@ -178,7 +179,7 @@ class Manage_counselling extends Controller
 
 
             $pagination_html .= '
-		</ul>
+		
 	</div>
 	';
             $output = array(

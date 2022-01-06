@@ -115,7 +115,7 @@
 /*}*/
 /* admin home button ends here */
 
-/* job search part starts here */
+/* counsellor search part starts here */
 /*.toggle-dashboard-left{*/
 /*    display: block;*/
 /*}*/
@@ -132,28 +132,28 @@
     width:0px;
 }
 
-.search-job {
-    margin: auto;
-    margin-bottom: 6px;
-    display: flex;
-    background-color: #eeeeee;
-    width: 70%;
-    height: 80px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 7px;
-    padding-bottom: 0px;
-}
+.search-counsellor {
+      margin: auto;
+      margin-bottom: 6px;
+      display: flex;
+      background-color: #eeeeee;
+      width: 70%;
+      height: 80px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 7px;
+      padding-bottom: 0px;
+  }
 
-.search-job input{
-    width:60%;
-    max-width: 600px;
-    height:30px;
-}
-
-
-.search-job button {
+  .search-counsellor input{
+      width:60%;
+      max-width: 600px;
+      height:30px;
+  }
+  
+  
+  .search-counsellor button {
     color: rgb(255, 255, 255);
     background-color: #1d6989;
     height: 37px;
@@ -163,21 +163,21 @@
     border: 0;
     font-weight: 600;
     letter-spacing: 1px;
-}
-
-.search-job button:hover {
+  }
+  
+  .search-counsellor button:hover {
     cursor: pointer;
     color: #1d6989;
     background-color: #ffffff;
     border: 1px solid #1d6989;
     /* border-color: #1D6989 ; */
-}
+  }
 
-/* search jobs field ends here */
+  /* search counsellors field ends here */
 
 
-/*  add jobs button*/
-.add-jobs button{
+/*  add counsellors button*/
+.add-counsellors button{
     background-color: #1f78fb87;
     border-radius: 25px;
     width: 170px;
@@ -189,20 +189,20 @@
     letter-spacing: 1px;
     margin: 20px;
     margin-bottom: 0px;
-
+    
 }
 
-.add-jobs button:hover{
+.add-counsellors button:hover{
     cursor: pointer;
     background-color: #ffffff;
     border: 1px solid #1f78fb87;
 }
 
-.add-jobs .plus{
+.add-counsellors .plus{
     font-weight:bolder;
 }
 
-/* add jobs button ends here */
+/* add counsellors button ends here */
 
 /* table starts here */
 
@@ -249,8 +249,6 @@ td {
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 12px;
-
 }
 
 .icon{
@@ -289,7 +287,6 @@ td {
     /*position: relative;*/
     /*transform: translate(0%);*/
     /*z-index: 100px;*/
-    background-color: #003144;
 }
 
 .toggle-dashboard-left{
@@ -308,10 +305,6 @@ td {
 
 .pagination {
     display: inline-block;
-}
-
-.pagination-hidden{
-    visibility: hidden;
 }
 
 .pagination a {
@@ -341,7 +334,7 @@ td {
         /*width:90%;*/
     }
     table {
-        /*border-collapse: collapse; */
+         /*border-collapse: collapse; */
         display: table;
         border-collapse: separate;
         border-spacing: 2px;
@@ -391,24 +384,24 @@ td {
     width:80%;
     font-size: 40px;
     text-align: center;
-
+    
 }
 /* media queries */
 
 
 @media only screen and (max-width:900px){
     /* search part */
-    .search-job{
+    .search-counsellor{
         display:flex;
         flex-direction: column;
     }
 
-    .search-job input{
+    .search-counsellor input{
         width: 80%;
     }
 
-    /* add jobs part */
-    .add-jobs button{
+    /* add counsellors part */
+    .add-counsellors button{
         border-radius: 25px;
         width: 170px;
         height: 32px;
@@ -421,13 +414,13 @@ td {
 
 
     .load-more button{
-
+       
         border-radius: 25px;
         width: 150px;
         height: 35px;
         font-size:20px;
         font-weight: 700;
-
+               
     }
 
     .registration-text{

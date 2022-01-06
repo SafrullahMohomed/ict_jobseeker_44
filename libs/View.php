@@ -72,11 +72,18 @@ class View
         require 'views/Counsellor/' . $viewName . '.php';
     }
 
+    public function renderCounsellor2($viewName, $data = [])
+    {
+        require 'views/Counsellor/' . $viewName . '.php';
+    }
+
+
     // resume
     public function renderResume($viewName)
     {
         require 'views/Resume/' . $viewName . '.php';
     }
+
 
 //     // test view
 //     public function renderTest($viewName)
