@@ -26,7 +26,7 @@
 
         <!-- main details -->
         <div class="main_details_text">
-            <div class="name"></div>
+            <div class="name"><?php $data["First_name"]?></div>
             <div class="full_address">
                 <div class="address detailsText"></div>
                 <div class="city detailsText"></div>

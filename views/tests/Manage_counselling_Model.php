@@ -1,6 +1,6 @@
 <?php
 
-class Manage_companies_Model extends Model
+class Manage_counselling_Model extends Model
 {
     function __construct()
     {
@@ -16,20 +16,36 @@ class Manage_companies_Model extends Model
         $sample_data = array(
             ':User_ID' => '%' . $condition . '%',
             ':Email' => '%' . $condition . '%',
-            ':Company_name' => '%' . $condition . '%',
-            ':Company_posted_job_count' => '%' . $condition . '%',
+            ':First_name' => '%' . $condition . '%',
+            ':Last_name' => '%' . $condition . '%',
+            ':Counsellor_provide_mock_interviews' => '%' . $condition . '%',
             ':Phone_number' => '%' . $condition . '%'
         );
 
+//        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Counsellor_provide_mock_interviews, Phone_number\n"
+//
+//            . "FROM user\n"
+//
+//            . "JOIN counsellor ON user.User_ID = counsellor.User_ID\n"
+//
+//            . "WHERE user.User_ID LIKE :User_ID OR
+//            Email LIKE :Email OR
+//            First_name LIKE :First_name OR
+//            Last_name LIKE :Last_name OR
+//            Counsellor_provide_mock_interviews LIKE :Counsellor_provide_mock_interviews OR
+//            Phone_number LIKE :Phone_number\n"
+//
+//
+//            . "ORDER BY user.User_ID\n";
 
-
-        $sql = "SELECT user.User_ID, Email, Company_name, Company_posted_job_count, Phone_number\n"
+        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Counsellor_provide_mock_interviews, Phone_number\n"
             . "FROM user\n"
-            . "JOIN company ON user.User_ID = company.User_ID\n"
+            . "JOIN counsellor ON user.User_ID = counsellor.User_ID\n"
             . "WHERE user.User_ID LIKE :User_ID OR
                 Email LIKE :Email OR
-                Company_name LIKE :Company_name OR
-                Company_posted_job_count LIKE :Company_posted_job_count OR
+                First_name LIKE :First_name OR
+                Last_name LIKE :Last_name OR
+                Counsellor_provide_mock_interviews LIKE :Counsellor_provide_mock_interviews OR
                 Phone_number LIKE :Phone_number\n"
             . "ORDER BY user.User_ID\n";
 
@@ -43,8 +59,6 @@ class Manage_companies_Model extends Model
         $statement->execute($sample_data);
 
         $result = $statement->fetchAll();
-
-//        to highlight the word
         $replace_array_1 = explode('%', $condition);
 
         foreach ($replace_array_1 as $row_data) {
@@ -53,10 +67,11 @@ class Manage_companies_Model extends Model
 
         foreach ($result as $row) {
             $data[] = array(
-                'User_ID' => str_ireplace($replace_array_1, $replace_array_2, $row["User_ID"]),
+//                'User_ID' => $row["id"],
                 'Email' => str_ireplace($replace_array_1, $replace_array_2, $row["Email"]),
-                'Company_name' => str_ireplace($replace_array_1, $replace_array_2, $row["Company_name"]),
-                'Company_posted_job_count' => str_ireplace($replace_array_1, $replace_array_2, $row["Company_posted_job_count"]),
+                'First_name' => str_ireplace($replace_array_1, $replace_array_2, $row["First_name"]),
+                'Last_name' => str_ireplace($replace_array_1, $replace_array_2, $row["Last_name"]),
+                'Counsellor_provide_mock_interviews' => str_ireplace($replace_array_1, $replace_array_2, $row["Counsellor_provide_mock_interviews"]),
                 'Phone_number' => str_ireplace($replace_array_1, $replace_array_2, $row["Phone_number"])
             );
         }
@@ -71,11 +86,11 @@ class Manage_companies_Model extends Model
     {
 //        declare an empty array
         $final = array();
-        $sql2 = "SELECT user.User_ID, Email, Company_name, Company_posted_job_count, Phone_number\n"
+        $sql2 = "SELECT user.User_ID, Email, First_name, Last_name, Counsellor_provide_mock_interviews, Phone_number\n"
 
             . "                FROM user\n"
 
-            . "                JOIN company ON user.User_ID = company.User_ID\n"
+            . "                JOIN counsellor ON user.User_ID = counsellor.User_ID\n"
             . "ORDER BY user.User_ID DESC";
 
         $filter_query = $sql2 . ' LIMIT ' . $start . ', ' . $limit;
@@ -93,20 +108,17 @@ class Manage_companies_Model extends Model
 
         $result = $statement->fetchAll();
 
-
         foreach ($result as $row) {
             $data[] = array(
                 'User_ID' => $row["User_ID"],
                 'Email' => $row['Email'],
-                'Company_name' => $row['Company_name'],
-                'Company_posted_job_count' => $row['Company_posted_job_count'],
-                'Phone_number' => $row['Phone_number']
+                'First_name' => $row['First_name'],
+                'Last_name' => $row['Last_name'],
+                'Counsellor_provide_mock_interviews' => $row['Counsellor_provide_mock_interviews'],
+                'Phone_number' => $row['Phone_number'],
 
             );
         }
-
-
-
 //        array_push($final,$data);
         return array(json_encode($data), $total_data);
 //

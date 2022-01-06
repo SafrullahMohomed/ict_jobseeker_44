@@ -79,18 +79,23 @@
 
     <!--    admin part starts here-->
     <div class="right-division">
+        <!-- divisoin for admin home -->
+<!--            <div class="admin-home-button">-->
+<!--//            </div>-->
 
+
+        <!--        search and toggle-->
 
         <div class="search-toggle">
 
-            <!--            toggle left-->
+<!--            toggle left-->
             <div class="toggle-dashboard-left">
                 <i class='fa fa-chevron-circle-left' style='font-size:40px;color:#003144;margin-top: 2px'></i>
             </div>
 
-            <!--            toggle right-->
+<!--            toggle right-->
             <div class="toggle-dashboard-right">
-                <!--                <i class="fa fa-dashboard" style="font-size:38px;color:#003144"></i>-->
+<!--                <i class="fa fa-dashboard" style="font-size:38px;color:#003144"></i>-->
                 <i class='fa fa-chevron-circle-right' style='font-size:40px;color:#003144'></i>
 
             </div>
@@ -100,15 +105,19 @@
             <div class="search-counsellor">
                 <input type="text" name="search-counsellors" id="search-counsellors" placeholder="Search Counsellors"
                        onkeyup="ajaxload(this.value);">
+                <!--        <input type="text" name="search" class="form-control" id="search" placeholder="Search Here"  />-->
 
+                <!--        <button>Search</button>-->
             </div>
         </div>
 
 
         <!-- add counsellors -->
-        <div class="add-counsellors">
-            <button id = "add-button"><span class="plus">+</span>Add Counsellors</button>
-        </div>
+        <a href="<?php echo URL ?>Admin/Admin_add_counselling">
+            <div class="add-counsellors">
+                <button><span class="plus">+</span>Add Counsellors</button>
+            </div>
+        </a>
 
         <div id="total-data">
 
@@ -149,6 +158,20 @@
     <!--    admin part ends here-->
 
 
+    <!-- counsellor registration request text -->
+    <!--    <div class="registration-text">-->
+    <!--        Counsellor Registration Requests-->
+    <!--    </div>-->
+    <!---->
+    <!--     counsellor registration request table -->
+    <!--    <div class="registration-table">-->
+    <!--        Table....-->
+    <!--    </div>-->
+    <!---->
+    <!--     load more button -->
+    <!--    <div class="load-more">-->
+    <!--        <button>Load More</button>-->
+    <!--    </div>-->
 </div>
 
 <?php include './views/Footer.php' ?>

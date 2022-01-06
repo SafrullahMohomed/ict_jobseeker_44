@@ -204,20 +204,20 @@ addExperience.addEventListener("click", () => {
             </div>`)
 });
 
-const formData = {
-  profilePicture:;
-  firstName:;
-  lastName:;
-  email:;
-  phoneNumber:;
-  address:;
-  city:;
-  aboutYou:;
-experience:[]
-  jobTitle:;
-  employer:;
-  city:;
-  country:;
-
-
-};
+// const formData = {
+//   profilePicture:;
+//   firstName:;
+//   lastName:;
+//   email:;
+//   phoneNumber:;
+//   address:;
+//   city:;
+//   aboutYou:;
+// experience:[]
+//   jobTitle:;
+//   employer:;
+//   city:;
+//   country:;
+//
+//
+// };

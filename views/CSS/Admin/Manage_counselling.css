@@ -249,6 +249,8 @@ td {
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 12px;
+
 }
 
 .icon{
@@ -287,6 +289,7 @@ td {
     /*position: relative;*/
     /*transform: translate(0%);*/
     /*z-index: 100px;*/
+    background-color: #003144;
 }
 
 .toggle-dashboard-left{
@@ -303,10 +306,32 @@ td {
 
 /*pagination*/
 
-.pagination
-{
-
+.pagination {
+    display: inline-block;
 }
+
+.pagination-hidden{
+    visibility: hidden;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
 @media only screen and (max-width: 960px) {
 
 

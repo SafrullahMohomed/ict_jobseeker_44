@@ -1,4 +1,4 @@
-//function to load the counsellor data
+//function to load the cprovider data
 function ajaxload(query = '', page_number = 1) {
     // e.preventDefault();
 
@@ -13,48 +13,48 @@ function ajaxload(query = '', page_number = 1) {
     const xhr = new XMLHttpRequest();
 
     //establish connection
-    xhr.open("POST", "http://localhost/ict_jobseeker_44/Admin/Manage_counselling/get_counsellor_data");
+    xhr.open("POST", "http://localhost/ict_jobseeker_44/Admin/Manage_cp/get_cprovider_data");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 
 
     xhr.onload = function () {
 
         if (xhr.status == 200) {
-            const counsellor_data1 = xhr.responseText; //ajax response data
-            const counsellor_data2 = JSON.parse(counsellor_data1); //convert the response data to js object
+            const cprovider_data1 = xhr.responseText; //ajax response data
+            const cprovider_data2 = JSON.parse(cprovider_data1); //convert the response data to js object
 
-            let counsellor_data = JSON.parse(counsellor_data2.data); //convert the data array into js object
+            let cprovider_data = JSON.parse(cprovider_data2.data); //convert the data array into js object
 
 
-                var counsellor_tbody = ``; //variable for table body
+                var cprovider_tbody = ``; //variable for table body
 
-                if (counsellor_data.length > 0) {
-                    for (let i = 0; i < counsellor_data.length; i++) {
-                        counsellor_tbody += ` <tr>
-                        <td>${counsellor_data[i].User_ID}</td>
-                        <td>${counsellor_data[i].Email}</td>
-                        <td>${counsellor_data[i].First_name}&nbsp${counsellor_data[i].Last_name}</td>
-                        <td>${counsellor_data[i].Counsellor_provide_mock_interviews}</td>
-                        <td>${counsellor_data[i].Phone_number}</td>
+                if (cprovider_data.length > 0) {
+                    for (let i = 0; i < cprovider_data.length; i++) {
+                        cprovider_tbody += ` <tr>
+                        <td>${cprovider_data[i].User_ID}</td>
+                        <td>${cprovider_data[i].Email}</td>
+                        <td>${cprovider_data[i].First_name}&nbsp${cprovider_data[i].Last_name}</td>
+                        <td>${cprovider_data[i].Contract_count}</td>
+                        <td>${cprovider_data[i].Phone_number}</td>
                         <td id="action">
                             <div class="icon">
-                                <i title="View post" onclick="view_counselling(${counsellor_data[i].User_ID})" class="fa fa-eye" aria-hidden="true"></i>
-                                <i title="Edit post" onclick="edit_counselling(${counsellor_data[i].User_ID})" class="fa fa-pencil" aria-hidden="true"></i>
-                                <i title="Delete post" onclick="delete_counselling(${counsellor_data[i].User_ID})" class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i title="View post" onclick="view_counselling(${cprovider_data[i].User_ID})" class="fa fa-eye" aria-hidden="true"></i>
+                                <i title="Edit post" onclick="edit_counselling(${cprovider_data[i].User_ID})" class="fa fa-pencil" aria-hidden="true"></i>
+                                <i title="Delete post" onclick="delete_counselling(${cprovider_data[i].User_ID})" class="fa fa-trash-o" aria-hidden="true"></i>
                             </div>
                         </td>
 
                     </tr>`
                     }
                 } else {
-                    counsellor_tbody += `<tr> No matching data is found</tr>`;
+                    cprovider_tbody += `<tr> No matching data is found</tr>`;
                 }
 
 
-                document.getElementById("counsellor_tbody").innerHTML = counsellor_tbody;
-                document.getElementById("pagination-link").innerHTML = counsellor_data2.pagination;
-                document.getElementById("total-data").innerHTML = counsellor_data2.total_data;
-                // document.getElementById("page_no").innerHTML = counsellor_data2.page_no;
+                document.getElementById("cprovider_tbody").innerHTML = cprovider_tbody;
+                document.getElementById("pagination-link").innerHTML = cprovider_data2.pagination;
+                document.getElementById("total-data").innerHTML = cprovider_data2.total_data;
+                // document.getElementById("page_no").innerHTML = cprovider_data2.page_no;
 
             }
 
@@ -97,8 +97,8 @@ toggle_left.addEventListener("click", () => {
 });
 
 
-const add_counsellor = document.getElementById("add-button");
+const add_cprovider = document.getElementById("add-button");
 
-add_counsellor.addEventListener("click", function (){
+add_cprovider.addEventListener("click", function (){
     location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_add_counselling"
 });

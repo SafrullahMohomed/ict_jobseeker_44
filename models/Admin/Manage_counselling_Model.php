@@ -59,6 +59,8 @@ class Manage_counselling_Model extends Model
         $statement->execute($sample_data);
 
         $result = $statement->fetchAll();
+
+//        to highlight the word
         $replace_array_1 = explode('%', $condition);
 
         foreach ($replace_array_1 as $row_data) {
@@ -67,7 +69,7 @@ class Manage_counselling_Model extends Model
 
         foreach ($result as $row) {
             $data[] = array(
-//                'User_ID' => $row["id"],
+                'User_ID' => str_ireplace($replace_array_1, $replace_array_2, $row["User_ID"]),
                 'Email' => str_ireplace($replace_array_1, $replace_array_2, $row["Email"]),
                 'First_name' => str_ireplace($replace_array_1, $replace_array_2, $row["First_name"]),
                 'Last_name' => str_ireplace($replace_array_1, $replace_array_2, $row["Last_name"]),
@@ -108,17 +110,21 @@ class Manage_counselling_Model extends Model
 
         $result = $statement->fetchAll();
 
-        foreach ($result as $row) {
-            $data[] = array(
-                'User_ID' => $row["User_ID"],
-                'Email' => $row['Email'],
-                'First_name' => $row['First_name'],
-                'Last_name' => $row['Last_name'],
-                'Counsellor_provide_mock_interviews' => $row['Counsellor_provide_mock_interviews'],
-                'Phone_number' => $row['Phone_number'],
 
-            );
-        }
+            foreach ($result as $row) {
+                $data[] = array(
+                    'User_ID' => $row["User_ID"],
+                    'Email' => $row['Email'],
+                    'First_name' => $row['First_name'],
+                    'Last_name' => $row['Last_name'],
+                    'Counsellor_provide_mock_interviews' => $row['Counsellor_provide_mock_interviews'],
+                    'Phone_number' => $row['Phone_number'],
+
+                );
+            }
+
+
+
 //        array_push($final,$data);
         return array(json_encode($data), $total_data);
 //
