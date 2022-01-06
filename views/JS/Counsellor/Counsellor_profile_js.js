@@ -14,12 +14,11 @@ const twitter = document.getElementById("twitter_icon");
 function loadCounsellorData(){
     const xhr = new XMLHttpRequest();
 
-    xhr.open("POST", "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile/get_counsellor_data");
+    xhr.open("POST", "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile_js/get_counsellor_data_js");
     xhr.onload = function (){
         if(xhr.status == 200){
             console.log(this.responseText);
             const obj = JSON.parse(this.responseText);
-            console.log(obj.Email);
 
             name.innerHTML = `${obj.First_name} ${obj.Last_name}`;
             address.innerHTML = `${obj.Address}`;

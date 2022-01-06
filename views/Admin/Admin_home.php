@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css"/>
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Admin_dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script defer src="<?php echo URL ?>views/JS/Admin/Admin_home.js"></script>
 
     <title>Document</title>
 </head>
@@ -28,7 +30,8 @@
     <!-- admin dashboard starts here-->
     <div class="left-division">
 
-        <a href="<?php echo URL?>Admin/Admin_home"><div class="admin-dashboard-option">
+        <a href="<?php echo URL ?>Admin/Admin_home">
+            <div class="admin-dashboard-option">
 
                 <div class="dashboard-box-option">
                     <i class="fa fa-dashboard" style="font-size:42px;color:aliceblue"></i>
@@ -36,7 +39,7 @@
                 </div>
 
 
-        </div>
+            </div>
         </a>
 
         <div class="admin-options">
@@ -83,7 +86,7 @@
                     <div class="icon-part">
                         <i class="fa fa-users" aria-hidden="true"></i><br>
                         Jobseekers
-                        <p>28560</p>
+                        <p id="jobseeker-count"></p>
                     </div>
 
                 </div>
@@ -91,7 +94,7 @@
                     <div class="icon-part">
                         <i class="fa fa-money" aria-hidden="true"></i><br>
                         Jobs
-                        <p>1250</p>
+                        <p id="job-count"></p>
                     </div>
 
                 </div>
@@ -99,7 +102,7 @@
                     <div class="icon-part">
                         <i class="fa fa-id-card" aria-hidden="true"></i><br>
                         Companies
-                        <p>55</p>
+                        <p id="company-count"></p>
                     </div>
 
                 </div>
@@ -107,7 +110,7 @@
                     <div class="icon-part">
                         <i class="fa fa-tasks" aria-hidden="true"></i><br>
                         Contracts
-                        <p>198</p>
+                        <p id="contract-count"></p>
                     </div>
 
                 </div>
@@ -115,7 +118,7 @@
                     <div class="icon-part">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>
                         Contract Providers
-                        <p>110</p>
+                        <p id="cp-count"></p>
                     </div>
 
                 </div>
@@ -123,18 +126,27 @@
                     <div class="icon-part">
                         <i class="fa fa-comments" aria-hidden="true"></i><br>
                         Counsellors
-                        <p>20</p>
+                        <p id="counsellor-count"></p>
                     </div>
 
                 </div>
             </div>
         </div>
         <!-- admin details ends here -->
+
+        <!--        graphs starts here-->
+        <div class="graphs_div">
+            <!--        job category graph starts here -->
+
+            <div class="job_category">
+                <canvas id="job_category_chart" width="400px" height="400px"></canvas>
+            </div>
+        </div>
+
     </div>
 
 
 </div>
-
 
 
 </body>

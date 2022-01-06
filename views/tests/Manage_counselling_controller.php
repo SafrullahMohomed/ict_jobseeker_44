@@ -1,22 +1,27 @@
 <?php
-class Counsellor_home_js extends Controller
+
+class Manage_counselling extends Controller
 {
     function __construct()
     {
         parent::__construct();
     }
 
-    function Counsellor_home_js()
+    function Manage_counselling()
     {
 
-        //pass view name
-        $this->view->renderCounsellor('Counsellor_home_js');
+
+        $this->view->renderAdmin('Manage_counselling');
+
     }
 
-    function search_counsellor()
+
+//    to get the counsellor data
+    function get_counsellor_data()
     {
         if (isset($_POST["query"])) {
-            $limit = 5;
+
+            $limit = 3;
             $page = 1;
 
 
@@ -119,31 +124,31 @@ class Counsellor_home_js extends Controller
 
                     if($previous_id > 0)
                     {
-                        $previous_link = '<a class="page-link" href="javascript:counsellor_search(`'.$_POST["query"].'`,'.$previous_id.')">Previous</a>';
+                        $previous_link = '<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$previous_id.')">Previous</a>';
                     }
                     else
                     {
                         $previous_link = '
 				
-			        <a class="page-link pagination-hidden" href="#">Previous</a>
+			        <a class="page-link" href="#">Previous</a>
 			    
 				';
                     }
 
                     $next_id = $page_array[$count] + 1;
 
-                    if($next_id > $total_links)
+                    if($next_id >= $total_links)
                     {
                         $next_link = '
 				
-	        		<a class="page-link pagination-hidden" href="#">Next</a>
+	        		<a class="page-link" href="#">Next</a>
 	      		
 				';
                     }
                     else
                     {
                         $next_link = '
-				<a class="page-link" href="javascript:counsellor_search(`'.$_POST["query"].'`,'.$next_id.')">Next</a>
+				<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$next_id.')">Next</a>
 				';
                     }
 
@@ -162,7 +167,7 @@ class Counsellor_home_js extends Controller
                     {
                         $page_link .= '
 			
-					<a class="page-link" href="javascript:counsellor_search(`'.$_POST["query"].'`,'.$page_array[$count].')">'.$page_array[$count].'</a>
+					<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$page_array[$count].')">'.$page_array[$count].'</a>
 				
 				';
                     }
@@ -176,7 +181,6 @@ class Counsellor_home_js extends Controller
 		
 	</div>
 	';
-
             $output = array(
                 'data'				=>	$counsellor_data[0],
                 'pagination'		=>	$pagination_html,
@@ -186,6 +190,7 @@ class Counsellor_home_js extends Controller
                 'pagination_html'   =>  $pagination_html
 
             );
+
             echo json_encode($output);
 
 //        print "<pre>";
@@ -199,3 +204,5 @@ class Counsellor_home_js extends Controller
 
     }
 }
+
+?>

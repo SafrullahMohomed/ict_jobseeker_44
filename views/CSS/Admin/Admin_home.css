@@ -19,12 +19,18 @@
 
 .right-division{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width:100%;
 
 
 }
 
+.graphs_div{
+  margin:30px auto;
+
+
+}
 /*.left-division{*/
 /*  width:90%;*/
 /*}*/

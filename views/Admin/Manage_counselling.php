@@ -79,12 +79,7 @@
 
     <!--    admin part starts here-->
     <div class="right-division">
-        <!-- divisoin for admin home -->
-<!--            <div class="admin-home-button">-->
-<!--//            </div>-->
 
-
-        <!--        search and toggle-->
 
         <div class="search-toggle">
 
@@ -105,24 +100,20 @@
             <div class="search-counsellor">
                 <input type="text" name="search-counsellors" id="search-counsellors" placeholder="Search Counsellors"
                        onkeyup="ajaxload(this.value);">
-                <!--        <input type="text" name="search" class="form-control" id="search" placeholder="Search Here"  />-->
 
-                <!--        <button>Search</button>-->
             </div>
         </div>
 
 
         <!-- add counsellors -->
-        <a href="<?php echo URL ?>Admin/Admin_add_counselling">
             <div class="add-counsellors">
-                <button><span class="plus">+</span>Add Counsellors</button>
+                <button id = "add-button"><span class="plus">+</span>Add Counsellors</button>
             </div>
-        </a>
 
         <div id="total-data">
 
         </div>
-        <div id="page_no"></div>
+
         <!-- table -->
         <div class="Table" id="counsellor_table">
             <table>
@@ -158,20 +149,6 @@
     <!--    admin part ends here-->
 
 
-    <!-- counsellor registration request text -->
-    <!--    <div class="registration-text">-->
-    <!--        Counsellor Registration Requests-->
-    <!--    </div>-->
-    <!---->
-    <!--     counsellor registration request table -->
-    <!--    <div class="registration-table">-->
-    <!--        Table....-->
-    <!--    </div>-->
-    <!---->
-    <!--     load more button -->
-    <!--    <div class="load-more">-->
-    <!--        <button>Load More</button>-->
-    <!--    </div>-->
 </div>
 
 <?php include './views/Footer.php' ?>

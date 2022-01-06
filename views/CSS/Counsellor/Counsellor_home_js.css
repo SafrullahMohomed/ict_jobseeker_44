@@ -55,16 +55,16 @@ a .mock_interviews{
   
 .search-counsellor {
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     display: flex;
     background-color: #eeeeee;
     width: 70%;
-    height: 145px;
+    height: 60px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 7px;
-    padding-bottom: 10px;
+
   }
 
   .search-counsellor input{
@@ -98,7 +98,7 @@ a .mock_interviews{
 
 /* counsellor list starts here */
 
-a .counsellor{
+.counsellor{
     display:flex;
     width:80%;
     height: auto;
@@ -110,7 +110,7 @@ a .counsellor{
 
 }
 
-a .counsellor:hover{
+.counsellor:hover{
     box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
 
 }
@@ -129,27 +129,6 @@ a .counsellor:hover{
     width: 200px;
 }
 
-/* star */
-
-.star{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    margin:0px 20px;
-    flex-wrap: wrap;
-    
-}
-.fa-star {
-    color:orange;
-    margin:20px;
-    justify-content: center;
-}
-
-.star_value{
-    margin:0px 20px;
-    font-size: 32px;
-    justify-content: center;
-}
 
 /* mock interview providing mark */
 .mi_provider{
@@ -171,36 +150,35 @@ a .counsellor:hover{
 }
 
 
-/* load more button starts here */
-.load-more{
-    margin:20px auto;
-    display:flex;
+.pagination {
+    display: flex;
     justify-content: center;
-    margin: auto;
+    margin-top:50px;
+    margin-bottom: 50px;
+
 }
-.load-more button{
+
+.pagination-hidden{
+    visibility: hidden;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
     color: white;
-    background-color: #496575;
-    border-radius: 25px;
-    width: 200px;
-    height: 45px;
-    font-size:25px;
-    font-weight: 700;
-    transition: ease-in-out 0.2s;
-    border: 0;
-    letter-spacing: 1px;
-    margin: 40px auto;
-    
+    border-radius: 5px;
 }
 
-.load-more button:hover{
-    cursor: pointer;
-    color: #496575;
-    background-color: #ffffff;
-    border: 1px solid #496575;
-
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
 }
-/* laod more button ends here */
 
 
 
