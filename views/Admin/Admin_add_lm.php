@@ -47,17 +47,17 @@
             <h4 id="error" style= "color:red"> </h4>  
         </div> 
         <div class="flex-container">
-            <div class="ImgRow">
+            <div class="AcademyImgRow">
                 <label for="AcademyLogo" class="labelfield">Academy logo</label><br>
-                <img src='<?php echo URL ?>views/images/LearningMaterials/academy.jpg' id="MaterialImg">
-                <input type="file" id="MaterialFile">
-                <label for="AcademyLogo" class="labelfield" id="BtnUpload">Choose a photo</label><br>
+                <img src='<?php echo URL ?>views/images/LearningMaterials/academy.jpg' id="AcademyImg">
+                <input type="file" id="AcademyFile">
+                <label for="AcademyLogo" class="labelfield" id="AcademyLogoBtnUpload">Choose a photo</label><br>
             </div> 
-            <div class="ImgRow">
+            <div class="ResourceImgRow">
                 <label for="ResourceLogo" class="labelfield">Resource logo</label><br>
                 <img src='<?php echo URL ?>views/images/LearningMaterials/resource.jpg' id="ResourceImg">
                 <input type="file" id="ResourceFile">
-                <label for="ResourceLogo" class="labelfield" id="BtnUpload">Choose a photo</label><br>
+                <label for="ResourceLogo" class="labelfield" id="ResourceLogoBtnUpload">Choose a photo</label><br>
             </div>
         </div>
        <div class="submit">
@@ -67,6 +67,6 @@
     </div>
      
     <!-- <?php #include 'Footer.php'?> -->
-    <script src="<?php echo URL ?>views/JS/AddLearningMaterials.js"></script>
+    <script src="<?php echo URL ?>views/JS/Admin_add_lm.js"></script>
 </body>
 </html>
