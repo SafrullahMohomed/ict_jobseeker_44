@@ -21,7 +21,7 @@
         
     </div>
     <div >
-    <form class="MainContainer" name="myForm" action="<?php echo URL ?>admin/Admin_add_lm/AddLearningMaterials"  method="post">
+    <form class="MainContainer" name="myForm" action="<?php echo URL ?>admin/Admin_add_lm/AddLearningMaterials"  method="post" enctype="multipart/form-data">
         <div class="Title">
             Add Learning Materials
         </div>
@@ -50,13 +50,13 @@
             <div class="AcademyImgRow">
                 <label for="AcademyLogo" class="labelfield">Academy logo</label><br>
                 <img src='<?php echo URL ?>views/images/LearningMaterials/academy.jpg' id="AcademyImg">
-                <input type="file" id="AcademyFile">
+                <input type="file" id="AcademyFile" name="AcademyFile">
                 <label for="AcademyLogo" class="labelfield" id="AcademyLogoBtnUpload">Choose a photo</label><br>
             </div> 
             <div class="ResourceImgRow">
                 <label for="ResourceLogo" class="labelfield">Resource logo</label><br>
                 <img src='<?php echo URL ?>views/images/LearningMaterials/resource.jpg' id="ResourceImg">
-                <input type="file" id="ResourceFile">
+                <input type="file" id="ResourceFile" name="ResourceFile">
                 <label for="ResourceLogo" class="labelfield" id="ResourceLogoBtnUpload">Choose a photo</label><br>
             </div>
         </div>
