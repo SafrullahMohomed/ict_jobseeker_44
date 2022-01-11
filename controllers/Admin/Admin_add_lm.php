@@ -26,9 +26,18 @@ class Admin_add_lm extends Controller
                 'MaterialLink' => trim($_POST['MaterialLink']),
                 'MaterialTitle' => trim($_POST['MaterialTitle']),
                 'MaterialCategory'=>$_POST['MaterialCategory'],
+                'AcademyFile'=>$_FILES['AcademyFile']['name'],
+                'AcademyTmpName'=>$_FILES['AcademyFile']['tmp_name'],
+                'ResourceFile'=>$_FILES['ResourceFile']['name'],
+                'ResourceTmpName'=>$_FILES['ResourceFile']['tmp_name'],
                 'learning_material_link_err' => '',
                 'learning_material_title_err' => '',
             ];
+            $AcademyFileUploadTo='views/images/LearningMaterials/';
+            $ResourceFileUploadTo='views/images/LearningMaterials/';
+            move_uploaded_file($data['AcademyTmpName'],$AcademyFileUploadTo . $data['AcademyFile']);
+            move_uploaded_file($data['ResourceTmpName'],$ResourceFileUploadTo . $data['ResourceFile']);
+            
         if(empty($data['MaterialLink'])) 
         {
           $data['learning_material_link_err'] = "Please enter the Material Link";
