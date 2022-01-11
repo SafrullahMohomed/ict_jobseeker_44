@@ -23,7 +23,7 @@ class Sys_rate extends Controller
    $review= $_POST['review'];
    
       if(isset($_SESSION['User_ID'])){
-        $this->model->insert_company_data($count,$review);
+        $this->model->insert_sys_data($count,$review);
         echo("Successfully added your rate and review.Thank you");
       }
     else{
