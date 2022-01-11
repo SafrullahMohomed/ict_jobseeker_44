@@ -36,7 +36,7 @@
         <!-- bid proposal parts start from here -->
         <div class="bid_part">
             <!-- <div class="bid_row">
-            <!-- load data from  database -->
+           
             </div> -->
             <div class="bid_row">
                     <div class="first">

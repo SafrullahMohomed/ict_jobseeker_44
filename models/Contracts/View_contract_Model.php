@@ -22,7 +22,7 @@ class View_contract_Model extends Model{
    
        $stmt1->execute();
        $s=$stmt1->fetch();
-       echo($s);
+      
        return $s;
        }
     }
