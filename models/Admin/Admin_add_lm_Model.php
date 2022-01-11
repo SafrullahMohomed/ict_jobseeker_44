@@ -12,12 +12,14 @@ class Admin_add_lm_Model extends Model
        $MaterialLink=$data['MaterialLink'];
        $MaterialCategory=$data['MaterialCategory'];
        $MaterialTitle=$data['MaterialTitle'];
+       $AcademyLogo=$data['AcademyFile'];
+       $ResourceLogo=$data['ResourceFile'];
         try
         {
-          $sql= "INSERT INTO learningmaterial (LearningMaterial_link,LearningMaterial_category,LearningMaterial_title) VALUES (?,?,?) ";
+          $sql= "INSERT INTO learningmaterial (LearningMaterial_link,LearningMaterial_category,LearningMaterial_title,Academy_logo,Resource_logo) VALUES (?,?,?,?,?) ";
             
             $stmt=$this->db->prepare($sql);
-            $stmt->execute([$MaterialLink,$MaterialCategory,$MaterialTitle]);
+            $stmt->execute([$MaterialLink,$MaterialCategory,$MaterialTitle,$AcademyLogo,$ResourceLogo]);
 
           echo "Successfully inserted"  ;
         }
