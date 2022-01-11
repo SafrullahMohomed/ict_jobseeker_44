@@ -15,21 +15,23 @@
         <?php include 'Header.php'?>
     </div>
     <div>
-        <form class="MainContainer">
+        <form class="MainContainer" action="http://localhost/ict_jobseeker_44/ResetPassword/ResettingPassword" method="POST"  name="myForm">
             <div class="Title">
                 Reset Password
             </div>
+            <input type="hidden" name="email">
             <div class="row">
                 <label for="password" class="labelfield">Password</label><br>
-                <input type="password" name="Password" placeholder="Enter Your Password"  class="inputfield" required>
+                <input type="password" name="password" placeholder="Enter Your Password"  class="inputfield" required onfocus=" hideFormError(password_err)">
             </div> 
             <div class="row">
                 <label for="ConfirmPassword" class="labelfield">Confirm Password</label><br>
-                <input type="password" name="ConfirmPassword" placeholder="Confirm Your Password"  class="inputfield" required>
+                <input type="password" name="confirmPassword" placeholder="Confirm Your Password"  class="inputfield" required onfocus=" hideFormError(confirmPassword_err)">
             </div>       
             <div class="submit">
                 <label for="submit" class="labelfield"></label><br>
-            <input type="submit" id="submit" value="Reset Password"  class="submit_button"><br>
+                <input type="submit" id="submit" value="Reset Password"  class="submit_button" onclick="return validateForm()"><br>
+            </div> 
         </form>
     </div>
     <?php include 'Footer.php'?>

@@ -27,7 +27,7 @@
         </div>
         <div class="text" >
             <div class="text2" >
-             Success
+             Successfully Registered
                <?php #echo $info['mail_msg'];?>
 
 

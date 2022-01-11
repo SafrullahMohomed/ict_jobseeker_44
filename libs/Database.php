@@ -1,22 +1,25 @@
 <?php
- if ( empty(session_id()) ) session_start(); 
-class Database extends PDO{
-    function __construct($DB_TYPE,$DB_HOST,$DB_NAME,$DB_USER,$DB_PASSWORD)
+if (empty(session_id())) session_start();
+class Database extends PDO
+{
+    function __construct($DB_TYPE, $DB_HOST, $DB_NAME, $DB_USER, $DB_PASSWORD)
     {
-        parent:: __construct($DB_TYPE.':host='.$DB_HOST.';dbname='.$DB_NAME,$DB_USER);
+        parent::__construct($DB_TYPE . ':host=' . $DB_HOST . ';dbname=' . $DB_NAME, $DB_USER);
     }
 
- //function for view cp profile select data from cp table   
-public function runQuery($query1){
-    $stmt=$this->prepare($query1);
-    $stmt->execute();
-    return $stmt->fetchAll();
-}
-public function runQuery_single($query1){
-    $stmt=$this->prepare($query1);
-    $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_OBJ);
-}
+    //function for view cp profile select data from cp table   
+    public function runQuery($query1)
+    {
+        $stmt = $this->prepare($query1);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public function runQuery_single($query1){
+        $stmt=$this->prepare($query1);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
 
 
 //insert cp data into database
@@ -61,21 +64,21 @@ public function runQuery_single($query1){
 // $stmt2->execute();
 // }
 
-//when post a contract insert this data to database
-public function run_post_contract_insert_query()
- {
-    $contract_name  =$_POST["contract_name"];
-    $contract_category 	  = $_POST["contract_category"];
-    $description    =$_POST["description"];
-    $deadline  =$_POST["deadline"];
-    $avg_bid  =$_POST["avg_bid"];
-    
+    //when post a contract insert this data to database
+    public function run_post_contract_insert_query()
+    {
+        $contract_name  = $_POST["contract_name"];
+        $contract_category       = $_POST["contract_category"];
+        $description    = $_POST["description"];
+        $deadline  = $_POST["deadline"];
+        $avg_bid  = $_POST["avg_bid"];
 
-// prepare sql and bind parameters 
-//Insert data into contract tables
-    //$stmt1 =$this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
-   // VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,75 )");
-   $stmt1 =$this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
+
+        // prepare sql and bind parameters 
+        //Insert data into contract tables
+        $stmt1 = $this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
+   VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,75 )");
+        $stmt1 = $this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
     VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,:user_id )");
         $stmt1->bindParam(':contract_name', $contract_name);
         $stmt1->bindParam(':contract_category', $contract_category);
@@ -84,13 +87,25 @@ public function run_post_contract_insert_query()
         $stmt1->bindParam(':avg_bid', $avg_bid);
         $stmt1->bindParam(':user_id', $_SESSION['User_ID']);
 
+        $stmt1->execute();
+        // $user_id = $_SESSION['User_ID'];
+        // $stmt1 =$this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
+        //  VALUES (?,?,?,?,?,?)");
+        //        $stmt1->execute([$contract_name, $description, $deadline, $avg_bid, $contract_category,$user_id]);
 
-       $stmt1->execute();
-   
 
 
- }  
- 
+
+
+
+ }
+
+
+
+
+
+
+
  // prepare sql and bind parameters 
 //Insert data into contract tables
  public function run_insert_bid_query()
@@ -114,30 +129,37 @@ public function run_post_contract_insert_query()
 
  }
 
- public function run_bid_contract_select_query()
- {
-    $stmt1=$this->prepare("SELECT  `Bid_value`, `Bid_proposal`,
-                          `Jobseeker_ID`
-                           FROM `dobid`");
-    
-    $stmt1->execute();
-    $s=$stmt1->fetchAll();
-    print_r($s);
-    return $s;
-    
-}
+//  public function run_bid_contract_select_query()
+//  {
+//     $stmt1=$this->prepare("SELECT  `Bid_value`, `Bid_proposal`,
+//                           `Jobseeker_ID`
+//                            FROM `dobid`");
+
+
+
+
+//    $stmt1->execute();
+//    $s = $stmt1->fetchAll();
+//    print_r($s);
+//    return $s;
+
+
+// }
+
+
+
  public function  run_insert_reg_data($data,$emailToken){
     date_default_timezone_set("Asia/Colombo");
-    $fname=$data['fname'];
-    $lname=$data['lname'];
-    $email=$data['email'];
-    $user_type=$data['user_type'];
-    $password=$data['password'];
-    $varify=$data['verify'];
-    $Created_at=date("Y-m-d H:i:s");
+    $fname = $data['fname'];
+    $lname = $data['lname'];
+    $email = $data['email'];
+    $user_type = $data['user_type'];
+    $password = $data['password'];
+    $varify = $data['verify'];
+    $Created_at = date("Y-m-d H:i:s");
 
 
-    $stmt1 =$this->prepare("INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at)
+    $stmt1 = $this->prepare("INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at)
      VALUES (:password,:email,:fname,:lname,:verify,:varify_token,:user_type,:Created_at )");
 
      $stmt1->bindParam(':password', $password);
@@ -150,16 +172,16 @@ public function run_post_contract_insert_query()
      $stmt1->bindParam(':user_type',  $user_type);
      $stmt1->bindParam(':Created_at',  $Created_at);
 
-     $stmt1->execute();
-     $User_ID=$this->lastInsertId();
-    
+    $stmt1->execute();
+    $User_ID = $this->lastInsertId();
+
 //when registration is success then create user table row for relavent user type
     switch ($user_type) {
         case 'Jobseeker':
-    
-           $query="INSERT INTO jobseeker(User_ID) VALUES (?)";
-           $stmt2 =$this->prepare( $query);
-           $stmt2->execute([$User_ID]);
+
+            $query = "INSERT INTO jobseeker(User_ID) VALUES (?)";
+            $stmt2 = $this->prepare($query);
+            $stmt2->execute([$User_ID]);
             break;
         
        case 'Contract provider':
@@ -194,14 +216,57 @@ public function run_post_contract_insert_query()
     }
 
 }
+public function  run_insert_password_data($data,$passwordToken)
+{
+    // $varify=$data['verify'];
+    $email=$data['email'];
+    date_default_timezone_set('Asia/Kolkata');
+    $expiry_time= time()+60*60;//after one hours from now
+    $datetime=date('Y-m-d H:i:s',$expiry_time);
+    $stmt1 =$this->prepare("UPDATE user SET Password_verify_token=:p_verify_token,Password_expires_at=:expiries_at
+    WHERE email='$email'");
 
-
-
-
-
-
-
-
- 
+    // $stmt1->bindParam(':p_verify',$varify );
+    $stmt1->bindParam(':p_verify_token',$passwordToken);
+    $stmt1->bindParam(':expiries_at',$datetime);
+    $stmt1->execute();
 }
-?>
+
+public function  run_update_password($data,$email)
+{
+    $password=$data['password'];
+    // $email=$data['email'];
+
+    $stmt1 =$this->prepare("UPDATE user SET Password=:password
+    WHERE email='$email'");
+
+    $stmt1->bindParam(':password', $password);
+    $stmt1->execute();
+}
+
+
+//    public function  run_insert_reg_data($data, $emailToken)
+//    {
+//        date_default_timezone_set("Asia/Colombo");
+//        $fname = $data['fname'];
+//        $lname = $data['lname'];
+//        $email = $data['email'];
+//        $user_type = $data['user_type'];
+//        $password = $data['password'];
+//        $varify = $data['verify'];
+//        $Created_at = date("Y-m-d H:i:s");
+//
+//
+//
+//        $sql = "INSERT INTO user (Password,Email, First_name, Last_name,Email_varify,Email_varify_token,User_type,Created_at) VALUES (?,?,?,?,?,?,?,?);";
+//
+//        $stmt1 = $this->prepare($sql);
+//
+//
+//        $sql2 ="INSERT INTO";
+//
+//
+//        $stmt1->execute([$password, $email, $fname, $lname, $varify, $emailToken, $user_type, $Created_at]);
+//    }
+
+}

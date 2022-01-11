@@ -11,8 +11,8 @@ class Registration extends Controller
      
     public function Registration()
     {
-        #$this->model->printSomething();
-        #echo "Hello from the Test controller - Index Method";
+        // $this->model->printSomething();
+        // echo "Hello from the Test controller - Index Method";
 
         //pass view name
         $data = [
@@ -62,6 +62,7 @@ class Registration extends Controller
                 $_SESSION['email'] = $data['email'];
                 $_SESSION['password'] = $data['password'];
 
+                // var_dump($_POST);
                 //Validate user_type
                 if(empty($data['user_type'])) {
                     $data['user_type_err'] = "Please enter the user type";

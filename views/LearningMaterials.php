@@ -19,13 +19,10 @@
           <img src='<?php echo URL ?>views/images/LearningMaterials/hometheme.jpg' >
         </div>
         <!-- theme image ends here -->
+        <form action="http://localhost/ict_jobseeker_44/LearningMaterials/SearchLearningMaterials" method="POST"  name="myForm">
         <div class="resource-search-box">
           <div class="search-your-keywords">
-            <input
-              type="text"
-              name="Search your keyword"
-              placeholder="Search your resource"
-            />
+            <input type="text" name="ResourceName" placeholder="Search your resource"/>
           </div>
           <div class="category">
             <select name="Category">
@@ -39,9 +36,11 @@
             </select>
           </div>
           <div class="search-button">
-            <button type="submit">Search</button>
+            <!-- <button type="submit" id="submit" name="submit">Search</button> -->
+            <input type="submit" id="submit" name="submit" value="Search"  onclick="return validateForm()"><br>
           </div>
         </div>
+        </form>
       </div>
       <div class="Trending">Top Trending Resources</div>
       <div class="ResourceRow">

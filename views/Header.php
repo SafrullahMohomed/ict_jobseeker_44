@@ -29,17 +29,16 @@
     }
 
     /*header division* starts here*/
-    /*.header_div{
-    
-      margin-bottom: 140px;
-      overflow-x: hidden;
-    }*/
+    /*.header_div{*/
+
+    /* display: block;*/
+    /*}*/
 
     header {
       position: fixed;
       width: 100%;
 
-      height: 150px;
+      height: 167px;
 
 
 
@@ -119,10 +118,10 @@
       width: 100%;
 
       height: 58px;
-
       background-color: #1d6989;
       border-radius: 0 0 7px 7px;
       justify-content: space-between;
+        align-items: center;
     }
 
     /*navigation logo style*/
@@ -142,6 +141,7 @@
     .navigation-menu {
       align-self: flex-end;
       float: right;
+
     }
 
     ul {
@@ -185,6 +185,37 @@
 
 
     /* media queries */
+    @media only screen and (max-width: 885px) {
+        .navigation-menu a {
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (max-width: 780px) {
+        .navigation-menu ul li {
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+        }
+
+        .navigation-menu a {
+            font-size: 17px;
+        }
+
+        .navigation-header {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start
+        }
+
+        header{
+            height: 175px;
+            position: unset;
+        }
+
+
+    }
 
     @media only screen and (max-width: 690px) {
       /* header starts here */
@@ -324,7 +355,6 @@ align-items: center;
                   <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
                   <div id="myDropdown" class="dropdown-content">
 
-                   
 
 
               <!-- check user type -->
@@ -341,20 +371,24 @@ align-items: center;
                if ($_SESSION['User_type'] == "Jobseeker") :
                 $My_profile = "Jobseeker/JobSeekerProfile";
               endif;
+              // if user is Counsellor
+              if ($_SESSION['User_type'] == "Counsellor") :
+                  $My_profile = "Counsellor/Counsellor_profile?User=".$_SESSION['User_ID'];
+              endif;
 
 
 
 
               ?>
               <a href="<?php echo URL . $My_profile ?>">My profile</a>
-              <a href="<?php echo URL ?>ResetPassword">Change password</a>
+              <a href="<?php echo URL ?>ChangePassword">Change password</a>
               <a href="<?php echo URL ?>Login/logout">Logout</a>
             </div>
           </div>
 
         </ul>
       </div>
-    
+
           </ul>
         </div>
         <!-- logo and navigation bar starts here -->
@@ -452,7 +486,6 @@ align-items: center;
         }
       }
     }
-  </script>
-</body>
+  </script></body>
 
 </html>

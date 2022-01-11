@@ -154,6 +154,12 @@
 
     /* media queries */
 
+    @media only screen and (min-width: 570px){
+        ul{
+            padding-left: 0px;
+        }
+
+    }
     @media only screen and (max-width: 570px) {
 
       /* footer */
@@ -198,25 +204,25 @@
       .services-link-header {
         font-size: 22px;
         position: relative;
-        transform: translate(-18%, 10%);
+        /*transform: translate(-18%, 10%);*/
       }
 
       .information-header {
         font-size: 22px;
         position: relative;
-        transform: translate(-18%, 20%);
+        /*transform: translate(-18%, 20%);*/
       }
 
       .services-link-details,
       .information-details {
         position: relative;
-        transform: translate(-18%, 5%);
+        /*transform: translate(-18%, 5%);*/
         font-size: 14px;
       }
 
       .social-media-icons ul {
         position: relative;
-        transform: translate(-18%, -11%);
+        /*transform: translate(-18%, -11%);*/
       }
 
       /* footer ends here */

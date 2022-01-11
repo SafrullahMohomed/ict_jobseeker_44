@@ -105,13 +105,25 @@ class Login extends Controller
       $_SESSION['First_name'] = $user->First_name;
       $_SESSION['Last_name'] = $user->Last_name;
       // $_SESSION['address'] = $user[0]['address'];
-    
-   
-      $this->view ->render('Home'); 
+
+
+      if($_SESSION['User_type'] == "Admin44")
+      {
+          $this->view->renderAdmin('Admin_home');
+      }
+      elseif ($_SESSION['User_type'] == "Counsellor")
+      {
+          $this->view->renderCounsellor('Counsellor_profile');
+      }
+      else{
+          $this->view ->render('Home');
+
+      }
+
   }
 
   public function logout() {
-      session_start();
+//      session_start();
       unset($_SESSION['User_ID']);
       unset($_SESSION['User_type']);
       unset($_SESSION['Email']);

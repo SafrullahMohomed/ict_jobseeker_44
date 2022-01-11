@@ -29,7 +29,7 @@ class ForgotPassword_Model extends Model{
         }
     }
 
-    public function  sendMail($email,$passwordVerifyToken,$fname)
+    public function  sendMail($email,$passwordVerifyToken)
     {
                 /* Create a new PHPMailer object. Passing TRUE to the constructor enables exceptions. */
         $mail = new PHPMailer(TRUE);
@@ -53,12 +53,13 @@ class ForgotPassword_Model extends Model{
         /* Open the try/catch block. */
         try {
             $message = '<html><head>
-            <title>Email Verification To Reset Password</title>
+            <title>Email Verification</title>
             </head>
             <body>';
-            $message .= '<h1>Hello ' . $fname . '!</h1>';
+            $message .= '<h1>Hello !</h1>';
             $message .='<p>You are receiving this email because we received a password reset request for your account.</p>';
-            $message .= '<p><a href="'.URL.'ForgotPassword/Reset'. '/'.$email.'/'. $passwordVerifyToken. '">CLICK HERE TO RESET YOUR PASSWORD</a>';
+            // $message .= '<p><a href="'.URL.'ForgotPassword/Reset'. '/'.$email.'/'. $passwordVerifyToken. '">CLICK HERE TO RESET YOUR PASSWORD</a>';
+            $message .= '<p><a href="'.URL.'ResetPassword/ResetPassword'. '/'.$email.'/'. $passwordVerifyToken. '">CLICK HERE TO RESET YOUR PASSWORD</a>';
             $message .= "</body></html>";
          
                    
@@ -70,7 +71,7 @@ class ForgotPassword_Model extends Model{
             $mail->addAddress($email, 'username',0);
 
             /* Set the subject. */
-            $mail->Subject = 'ICT Jobseeker varify your email';
+            $mail->Subject = 'Email Verification To Reset Password ICT JobSeeker';
 
             /* Set the mail message body. */
             //$mail->Body =  $message;
@@ -105,46 +106,56 @@ class ForgotPassword_Model extends Model{
                       return false;
                   }
     }
-     //  verifyemail_update($_SESSION['email'],$emailToken)
-  public function verifyemail_update($email,$passwordToken)
-  {
-     
-      $query = "SELECT Password_verify_token FROM user WHERE email = '$email'";
-      $result= $this->db->runQuery_single($query);
-   
-      try {
-      
-        if($passwordToken==$result->Password_verify_token){
-                     
-            $query = "UPDATE user SET Password_verify_token=null WHERE email='$email'";
-            $this->db->runQuery($query);
-            $msg = "You can reset your password.";
-            
-            return $msg;
-           
-        }
-        else{
-            $msg = "Try Again";
-            return $msg; 
-        }
-  
-          
-          
 
-      }
-      catch (Exception $ex) {
-          echo $ex->getMessage();
-        }
-
-                  
-  }
-  
-
-    public function run_insert_password_data($data,  $passwordToken){
+    public function insert_password_data($data,  $passwordToken)
+    {
 
         return $this->db-> run_insert_password_data($data,  $passwordToken);
        
-       }
+    }
+    
+//      //  verifyemail_update($_SESSION['email'],$emailToken)
+//   public function verifyemail_update($email,$passwordToken)
+//   {
+     
+//       $query = "SELECT Password_verify_token,Password_expires_at FROM user WHERE email = '$email'";
+//       $result= $this->db->runQuery_single($query);
+   
+//       try {
+        
+//         date_default_timezone_set('Asia/Kolkata');
+//         $current_time=time();
+//         $current_date_time=date('Y-m-d H:i:s',$current_time);
+//         echo $current_date_time;
+//         echo $result->Password_expires_at;
+//         if(($passwordToken==$result->Password_verify_token) && (strtotime($result->Password_expires_at)>strtotime($current_time))){
+                     
+//             $query = "UPDATE user SET Password_verify_token=null,Password_expires_at=null WHERE email='$email'";
+//             $this->db->runQuery($query);
+//             $msg = "You can reset your password.";
+            
+//             return $msg;
+           
+//         }
+//         else
+//         {
+//             $msg = "Your Password Token Is Invalid Or Password Token Is Expired";
+//             return $msg; 
+//         }
+  
+          
+          
+
+//       }
+//       catch (Exception $ex) {
+//           echo $ex->getMessage();
+//         }
+
+                  
+//   }
+  
+
+    
 
     
 }
