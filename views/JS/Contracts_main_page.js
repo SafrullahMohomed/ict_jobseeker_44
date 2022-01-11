@@ -9,17 +9,19 @@ function Bidnow(){
     }
     /*after click on the category box*/
     function viewContract(data){
-   
+      
       var xhr = new XMLHttpRequest();
       xhr.open("POST", "http://localhost/ict_jobseeker_44/Contracts/View_contract/view_clicked_contract2/"+data);
       
       xhr.onload = function () {
         //job_detail_sub_container mean contract_detail_sub_container (I used same class name for both because of css )
           let job_detail_sub_container = document.querySelector(".job_detail_sub_container");
-         
-         s = JSON.parse(this.response);
-         alert(s)
-      
+        
+          
+       s = JSON.parse(this.response);
+        //s= toString(this.response)
+       // console.log(s)
+       // s = JSON.parse(s);
        job_detail_sub_container.innerHTML = "";
   
       
@@ -38,9 +40,9 @@ function Bidnow(){
                      
                    </div>
                    <div class="social_media_icons">
-                       <i class="fab fa-facebook-square"></i>
-                       <i class="fab fa-linkedin"></i>
-                       <i class="fab fa-twitter-square"></i>
+                   <a href="${s.Fb_url}">   <i  class="fab fa-facebook-square"></i></a> 
+                   <a href="${s.Linkedin_url}">   <i  class="fab fa-linkedin"></i></a>
+                     <a  href="${s.Twitter_url}"><i  class="fab fa-twitter-square"></i></a>
                    </div>
                    
    
@@ -72,7 +74,7 @@ function Bidnow(){
               --> 
               <p>
                Click here to veiw contract provider details</p> 
-              <button id="clickme" onclick="contractProviderProfile()"> Click Here</button>
+              <button id="clickme" onclick="functionViewCp(${s.User_ID})"> Click Here</button>
            </div>
            <div class="job_overview">
                <div class="job_overview_text">

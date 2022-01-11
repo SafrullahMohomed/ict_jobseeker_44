@@ -39,7 +39,7 @@ function loadmore() {
         let job_detail_sub_container = document.querySelector(".job_detail_sub_container");
     
        s = JSON.parse(this.response);
-   
+       alert(s)
     
      job_detail_sub_container.innerHTML = "";
 

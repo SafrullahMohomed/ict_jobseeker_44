@@ -7,7 +7,7 @@ class Sys_rate_Model extends Model{
     }
 
     //insert star count and review data into system_rate_review table
-function insert_company_data($count,$review){
+function insert_sys_data($count,$review){
    
     
     $User_ID = $_SESSION['User_ID'];
@@ -22,11 +22,7 @@ function insert_company_data($count,$review){
 }
 
 function select_sys_rate_data(){
-   /* $query1 =" CREATE VIEW rate_data
-    AS SELECT a.System_rate_star_count, a.System_rate_and_review_reviews, a.review_date,
-     b.First_name,b.Last_name,b.Profile_picture
-    FROM system_rate_review a, user b
-    WHERE a.User_ID=b.User_ID";*/
+   
     $query1 ="  SELECT a.System_rate_star_count, a.System_rate_and_review_reviews, a.review_date,
      b.First_name,b.Last_name,b.Profile_picture
     FROM system_rate_review a, user b
