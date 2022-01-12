@@ -36,7 +36,5 @@ class Company_profile extends Controller
      return $company;
 
 
-
-
      }
 }

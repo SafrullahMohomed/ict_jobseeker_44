@@ -11,7 +11,7 @@ class Post_job extends Controller
     {
         $data = [
             
-
+            'Company_name' => '',
             'Company_name_err' => '',
             'Job_Title_err' => '',
             'Job_Category_err' => '',
@@ -19,10 +19,18 @@ class Post_job extends Controller
             'Deadline_err' => '',
             'Urgent_answer_err' => '',
             'Supply_Mock_Interviews_answer_err' => '',
-            'Post_a_forum_answer_err' => ''
-           
+            'Post_a_forum_answer_err' => '',
+            'jobCategory'=>''
         ];
+        
 
+        //if there is a company name in company table then we take it and display job post form
+        $Company_name=$this->model->getCompanyName($_SESSION['User_ID']);
+        $data['Company_name']=$Company_name;
+        
+        //load available ict job categories from database
+        $jobCategory=$this->model->getJobCategory();
+        $data['jobCategory']=$jobCategory;
         //pass view name
         $this->view ->render2('Jobs/Post_job',$data); 
         

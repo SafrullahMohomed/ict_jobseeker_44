@@ -61,7 +61,7 @@ class View_contract extends Controller
         $this->view ->render2('View_contract',$data); 
 
         
-    // }
+     }
 
     
     // function View_bid_contract()

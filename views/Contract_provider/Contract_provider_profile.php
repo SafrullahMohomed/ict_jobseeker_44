@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <title>contract_provider_profile</title>
 </head>
-<body onload="cpData(<?php echo $data['User_ID']?>)">
+<body onload="cpData(<?php echo $_SESSION['User_ID']?>)">
      <!-- header part with css html js -->
  <div class="header_div" >
         <?php include 'views/Header.php'?>
