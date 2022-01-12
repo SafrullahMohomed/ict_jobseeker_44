@@ -1,3 +1,6 @@
+
+
+
 function companyData(User_ID){
 
 
@@ -6,11 +9,12 @@ var xhr = new XMLHttpRequest();
     
     xhr.onload = function () {
         let detail = document.querySelector(".detail");
-    
+        
        s = JSON.parse(this.response);
-   
+  
     
      detail.innerHTML = "";
+
 
     
         

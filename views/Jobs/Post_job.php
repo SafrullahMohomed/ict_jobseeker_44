@@ -47,7 +47,16 @@
 <div class="main_container">
   <form name="myForm" action="<?php echo URL ?>Jobs/Post_job/insert_post_job_data" method="post"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
     <label for="Company_name" class="labelfield">Company Name</label><br>
-    <input type="text" id="Companyname" name="Company_name" placeholder="" class="inputfield" required onfocus=" hideFormError(Company_name_error)"><br>
+    <input type="text" id="Companyname" name="Company_name"
+    <?php
+    if($data['Company_name']!=null) {
+      $value= $data['Company_name']; 
+    }
+    
+    ?>
+    
+    
+   value="<?php  echo  $value  ?>" autocomplete="Company_name"  placeholder="" class="inputfield" required onfocus=" hideFormError(Company_name_error)"><br>
     <span class="err" id="Company_name_error"><?php echo $data['Company_name_err']?></span><br>
 
 
@@ -57,7 +66,21 @@
 
     <label for="Job_Category" class="labelfield">Job Category</label><br>
     <select id="JobCategory" name="Job_Category" class="inputfield" onfocus=" hideFormError(Job_Category_error)">
-        <option value="Data Scientist">Data Scientist</option>
+    <option value="" selected>Select job category</option> 
+        <?php 
+        $data_count=count($data['jobCategory']);
+        echo  $data_count;
+        for($x = 0; $x < $data_count; $x++  )
+        {
+          echo "<option value=' " .$data['jobCategory'][$x]['JobCategory_ID'] ." '>" ;
+          echo $data['jobCategory'][$x]['JobCategory_name'];
+           echo"</option>";
+        
+        }
+        
+        ?>
+
+        <!-- <option value="Data Scientist">Data Scientist</option>
         <option value="Software Developer">Software Developer</option>
         <option value="Information Security Analyst">Information Security Analyst</option>
         <option value="Web Developer">Web Developer</option>
@@ -66,7 +89,7 @@
         <option value="Computer Research Scientist">Computer Research Scientist</option>
         <option value="Network and Systems Administrator">Network and Systems Administrator</option>
         <option value="Computer Support Specialists ">Computer Support Specialists </option>
-        <option value="other ">other </option>
+        <option value="other ">other </option> -->
       </select>
       <br>
       <span class="err" id="Job_Category_error"><?php echo $data['Job_Category_err']?></span><br>
@@ -83,8 +106,8 @@
         <option value="Intern">Intern</option>
       </select><br>
 
-    <label for="Sallary_Offered" class="labelfield">Sallary Offered</label><br>
-    <input type="text" id="SallaryOffered" name="Sallary_Offered" placeholder="LKR 50 000 / LKR 20 000-50000" class="inputfield"><br>
+    <label for="Sallary_Offered" class="labelfield">Sallary Offered (Optional)</label><br>
+    <input type="text" id="SallaryOffered" name="Sallary_Offered" placeholder="LKR 50 000 / LKR 20 000-50000" class="inputfield"><br> 
 
     <!-- <label for="Year_Of_Experience" class="labelfield">Year Of Experience</label><br>
     <input type="text" id="Year_Of_Experience" name="Year_Of_Experience" placeholder="" class="inputfield"><br> -->
@@ -150,10 +173,10 @@
 
 
 
-    <div class="radiobutton_class" onmouseover=" hideFormError(Urgent_answer_error)">
+    <!-- <div class="radiobutton_class" onmouseover=" hideFormError(Urgent_answer_error)">
         <span class="labelfield">Urgent</span>
 
-<!-- 
+
           <div class="radiobutton_style">
           <input type="radio" id="urgent_yes" name="Urgent_answer" value="Yes" required class="radiobutton">
             <label for="Urgent_answer" class="radiolabel">Yes</label>
@@ -161,13 +184,13 @@
             <input type="radio" id="urgent_no" name="Urgent_answer" value="No" required class="radiobutton">
             <label for="Urgent_answer" class="radiolabel">No</label>
 
-        </div> -->
+        </div> 
           
           
         <br>
         <span class="err" id="Urgent_answer_error"><?php echo $data['Urgent_answer_err']?></span><br>
 
-    </div>
+    </div> -->
     <div class="radiobutton_class" onmouseover=" hideFormError(Supply_Mock_Interviews_answer_error)">
         <span class="labelfield">Supply Mock Interviews</span>
      <div class="radiobutton_style">
@@ -209,6 +232,7 @@
   <!-- <button type="submit" class="post_New_Job_submit" onclick="successPost()">Post New Job</button> -->
   <button type="submit" class="post_New_Job_submit" >Post New Job</button>
 </div>
+
    
 
 </form>

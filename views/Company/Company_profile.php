@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <title>company_profile</title>
 </head>
-<body onload="companyData(<?php echo $data['User_ID']?>)">
+<body onload="companyData(<?php echo $_SESSION['User_ID']?>)">
     <!-- header part with css html js -->
  <div class="header_div" >
         <?php include 'views/Header.php'?>
@@ -43,9 +43,9 @@
     <!-- header part with css html js -->
  
         <?php include 'views/Footer.php'?>
-
+        
       <!-- header part end  -->
-     
+      
       <script src="<?php echo URL ?>views/JS/Company_profile.js"></script>
 
 </body>

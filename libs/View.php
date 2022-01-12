@@ -31,6 +31,11 @@ class View
         require 'views/' . $viewName1 .'/'.$viewName2. '.php';
     }
 
+    public function render5($viewName, $data1 = [],$data2 = []) {
+   
+        include 'views/'.$viewName. '.php';
+ }
+
 
 
 
