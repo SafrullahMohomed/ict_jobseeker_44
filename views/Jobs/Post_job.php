@@ -47,16 +47,19 @@
 <div class="main_container">
   <form name="myForm" action="<?php echo URL ?>Jobs/Post_job/insert_post_job_data" method="post"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
     <label for="Company_name" class="labelfield">Company Name</label><br>
-    <input type="text" id="Companyname" name="Company_name"
+    <input  id="Companyname" name="Company_name"
     <?php
     if($data['Company_name']!=null) {
       $value= $data['Company_name']; 
+    }
+    else{
+      $value= "";
     }
     
     ?>
     
     
-   value="<?php  echo  $value  ?>" autocomplete="Company_name"  placeholder="" class="inputfield" required onfocus=" hideFormError(Company_name_error)"><br>
+   value="<?php  echo  $value  ?>" autocomplete="Company_name" onkeyup="passCompanyName(this.value);" placeholder="" class="inputfield" required onfocus=" hideFormError(Company_name_error)"><br>
     <span class="err" id="Company_name_error"><?php echo $data['Company_name_err']?></span><br>
 
 
@@ -230,7 +233,7 @@
   </div>
   <div class="btn">
   <!-- <button type="submit" class="post_New_Job_submit" onclick="successPost()">Post New Job</button> -->
-  <button type="submit" class="post_New_Job_submit" >Post New Job</button>
+  <button type="submit" class="post_New_Job_submit" onclick="companyNameWarning()">Post New Job</button>
 </div>
 
    
