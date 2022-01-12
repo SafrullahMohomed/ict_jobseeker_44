@@ -16,6 +16,25 @@
         <?php include 'Header.php' ?>
     </div>
     <div class="MainContainer">
+
+        <!-- seach part -->
+        <div class="jobcategory-search-part">
+            <!-- theme image starts here -->
+            <div class="theme-image">
+                <img src='<?php echo URL ?>views/images/LearningMaterials/hometheme.jpg' >
+            </div>
+            <!-- theme image ends here -->
+            
+            <div class="jobcategory-search-box">
+                <div class="search-your-keywords">
+                    <input type="text" name="JobcategoryName" placeholder="Search Job Categories" onkeyup="ajaxload(this.value)">
+                </div>
+            </div>
+
+        </div>
+        <!-- search part ends here -->
+
+
         <div class="Table">
             <table>
                 <tr>
@@ -27,7 +46,13 @@
                     <th>Rank</th>
                     <th>%</th>
                 </tr>
-                <tr>
+
+                <tbody id="job_category_tbody">
+
+
+                </tbody>
+
+                <!-- <tr>
                     <td>Software Engineer</td>
                     <td>1365</td>
                     <td>1</td>
@@ -86,14 +111,21 @@
                     <td>74</td>
                     <td>10</td>
                     <td>0.67%</td>
-                </tr>
+                </tr> -->
             </table>
         </div>
         <div class="Graph">
 
         </div>
+
+        <!-- load more button -->
+        <div id="pagination-link">
+
+        </div>
+
     </div>
     <?php include 'Footer.php' ?>
+    <script src="<?php echo URL ?>views/JS/JobRanking.js"></script>
 </body>
 
 </html>
