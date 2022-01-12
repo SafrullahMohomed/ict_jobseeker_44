@@ -355,8 +355,7 @@ align-items: center;
                   <img src='<?php echo URL ?>views/images/Contract_provider/user.png' id="user" onclick="myFunction()" class="dropbtn">
                   <div id="myDropdown" class="dropdown-content">
 
-
-
+                  
               <!-- check user type -->
               <?php
               // if user is company
@@ -365,7 +364,7 @@ align-items: center;
               endif;
               // if user is Contract_provider
               if ($_SESSION['User_type'] == "Contract provider") :
-                $My_profile = "Contracts/Contract_provider_profile";
+                $My_profile = "Contract_provider/Contract_provider_profile";
               endif;
                // if user is Jobseeker
                if ($_SESSION['User_type'] == "Jobseeker") :
