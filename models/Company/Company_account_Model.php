@@ -9,7 +9,7 @@ class Company_account_Model extends Model{
    //create account data insert to user and company table
    function  insert_company_data($data){
     //$profile_pic  =$data["profile_pic"];
-    $name 	  = $data["name"];
+    $name 	  = $data["name"];//here name mean company name
     $phone_number  =$data["phone_number"];
     $Brief_description  =$data["brief_description"];
     $email  =$data["email"];
@@ -21,10 +21,10 @@ class Company_account_Model extends Model{
    // prepare sql and bind parameters 
    //Insert data into user table
    
+  print_r($data);
    
    
-   
-   $query = "UPDATE user SET first_name=$name,Phone_number= $phone_number, Description=$Brief_description WHERE email='$email'";
+   $query = "UPDATE user SET Phone_number= '$phone_number', Description='$Brief_description' WHERE email='$email'";
    $this->db->runQuery($query);
                         
     

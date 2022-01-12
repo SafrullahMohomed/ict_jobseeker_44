@@ -114,7 +114,7 @@ class Company_account extends Controller
                 empty($data['phone_number_err']) && empty($data['fburl_err'])&& empty($data['linkedin_url_err'])&& empty($data['twitter_url_err'])  ) {
                 
                     $this->model->insert_company_data($data);
-
+                    
 
 
                 }
@@ -134,13 +134,13 @@ class Company_account extends Controller
     }
 
      //insert company data into database (user and company table)
-  /*   function insert_company_data()
+    /* function insert_company_data($data)
      {
         
  
          //pass view name
         
-         $this->view->company= $this->model->insert_query_company_data();
+         $this->view->company= $this->model->insert_query_company_data($data);
          
          $this->view ->render('Contract_provider_profile'); 
          
