@@ -70,7 +70,7 @@ class Post_job extends Controller
                     
                 ];
                
-      
+     
                 //Validate Company_name
                 if(empty($data['Company_name'])) {
                     $data['Company_name_err'] = "Please enter the company name";
