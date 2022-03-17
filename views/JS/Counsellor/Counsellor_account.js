@@ -42,6 +42,7 @@ function loadCounsellorData(){
             facebook.value = `${obj.Facebook}`;
             linkedin.value = `${obj.Linkedin}`;
             twitter.value = `${obj.Twitter}`;
+            qualification.value = `${obj.Qualifications}`
 
             //to mock interview icon
             if(obj.Counsellor_provide_mock_interviews == 'yes')
@@ -69,19 +70,56 @@ function loadCounsellorData(){
 loadCounsellorData();
 
 // cancel button
-cancel.addEventListener("click", () => {
-    location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile"
-});
+var baseUrl = (window.location).href; // You can also use document.URL
+var User_ID = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
 
-update.addEventListener("click", (event) => {
-   let value = confirm("Are you sure, you want to update your profile");
-   event.preventDefault();
-   // console.log(value);
-   if(value == true){
-       counsellor_form.submit();
-   }
-    // location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile"
+function Cancelclick(){
+    location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile?User="+User_ID;
+
+}
+
+function Update(){
+  update.addEventListener("click", (event) => {
+      event.preventDefault();
+      let value = confirm("Are you sure, you want to update this profile");
+        // console.log(value);
+        if(value == true){
+            counsellor_form.submit();
+        }
+    });
+
+  // location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile?User="+User_ID;
+
+}
+
+//bullet list
+
+const bullet = "\u2022";
+const bulletWithSpace = `${bullet} `;
+const enter = 13;
 
 
-});
+//for bullet points
 
+const handleInput = (event) => {
+    const { keyCode, target } = event;
+    const { selectionStart, value } = target;
+
+    if (keyCode === enter) {
+        console.log('a');
+        target.value = [...value]
+            .map((c, i) => i === selectionStart - 1
+                ? `\n${bulletWithSpace}`
+                : c
+            )
+            .join('');
+        console.log(target.value);
+
+        target.selectionStart = selectionStart+bulletWithSpace.length;
+        target.selectionEnd = selectionStart+bulletWithSpace.length;
+    }
+
+    if (value[0] !== bullet) {
+        target.value = `${bulletWithSpace}${value}`;
+    }
+}

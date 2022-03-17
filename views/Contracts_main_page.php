@@ -76,8 +76,7 @@
         <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Graphic & Design</p></div>
         <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Video Editing</p></div>
         <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Data Analyst</p></div>
-    
-        
+
     
     </div>
     <!-- <div class="top_trending_categories_box_arrows">

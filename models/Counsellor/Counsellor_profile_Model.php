@@ -9,7 +9,7 @@ class Counsellor_profile_Model extends Model
 
     function get_counsellor_data_m($ID)
     {
-        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Phone_number, Address, City, Facebook, Linkedin, Twitter, Profile_picture, Description,  Counsellor_provide_mock_interviews\n"
+        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Phone_number, Address, City, Facebook, Linkedin, Twitter, Profile_picture, Description,  Counsellor_provide_mock_interviews, Qualifications\n"
 
             . "\n"
 

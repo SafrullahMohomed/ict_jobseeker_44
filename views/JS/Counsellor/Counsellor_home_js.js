@@ -94,6 +94,6 @@ counsellor_search();
 
 function show_profile(User_id){
 
-    location.href = `http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile_js/get_counsellor_data_js/${User_id}`;
+    location.href = `http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile_js?User=${User_id}`;
 
 }
