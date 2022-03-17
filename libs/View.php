@@ -80,6 +80,7 @@ class View
     public function renderCounsellor2($viewName, $data = [])
     {
         require 'views/Counsellor/' . $viewName . '.php';
+
     }
 
 

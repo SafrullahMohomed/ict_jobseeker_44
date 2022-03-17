@@ -37,7 +37,7 @@ class Admin_add_counselling_Model extends Model
         $phoneNumber = $data['phoneNumber'];
         $address = $data['address'];
         $city = $data['city'];
-//        $qualification = $data['qualification'];
+        $qualification = $data['qualification'];
         $facebook = $data['facebook'];
         $aboutYou = $data['aboutYou'];
         $linkedin = $data['linkedin'];
@@ -58,13 +58,13 @@ class Admin_add_counselling_Model extends Model
 
             $stmtUser->execute([$password, $email, $firstName, $lastName,$phoneNumber, $address, $aboutYou, $Created_at]);
 
-            $sqlCounsellor = "INSERT INTO counsellor (User_ID, City, Facebook, Linkedin, Twitter, Counsellor_provide_mock_interviews, Approve_registration_status) VALUES (?,?,?,?,?,?,?)";
+            $sqlCounsellor = "INSERT INTO counsellor (User_ID, City, Facebook, Linkedin, Twitter, Counsellor_provide_mock_interviews, Approve_registration_status, Qualifications) VALUES (?,?,?,?,?,?,?,?)";
 
             $stmtCounsellor  = $this->db->prepare($sqlCounsellor);
 
 //            to get the last inserted ID
             $id = $this->db->lastInsertId();
-            $x = $stmtCounsellor->execute([$id, $city, $facebook, $linkedin, $twitter, $provideMi, $adminApprove]);
+            $x = $stmtCounsellor->execute([$id, $city, $facebook, $linkedin, $twitter, $provideMi, $adminApprove, $qualification]);
             echo "executed message $x";
 
         } catch (Exception $e) {

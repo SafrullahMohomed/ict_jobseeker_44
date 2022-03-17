@@ -1,4 +1,5 @@
 <?php
+if (empty(session_id())) session_start();
 
 class Admin_home extends Controller
 {
@@ -9,9 +10,16 @@ class Admin_home extends Controller
 
     function Admin_home()
     {
+        error_reporting(0);
+        if($_SESSION['User_type'] == 'Admin44'){
+            $this->view->renderAdmin('Admin_home');
+        }
+        else{
+            $this->view->render('YouDontHavePermisson');
+        }
 
-        //pass view name
-        $this->view->renderAdmin('Admin_home');
+
+
     }
 
     function get_job_category()

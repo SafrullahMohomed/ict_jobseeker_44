@@ -1,12 +1,42 @@
 //function for ul button in qualification
-let output = document.getElementById("qualification_box");
-let ul_button = document.getElementById("qualification_button");
-ul_button.addEventListener("click", () => {
-    let cmd = ul_button.dataset[""];
-    document.execCommand(cmd, false, null);
-});
+// let output = document.getElementById("qualification_box");
+// let ul_button = document.getElementById("qualification_button");
+// ul_button.addEventListener("click", () => {
+//     let cmd = ul_button.dataset["command"];
+//     document.execCommand(cmd, false, null);
+// });
+
+// console.log("hi")
+
+const bullet = "\u2022";
+const bulletWithSpace = `${bullet} `;
+const enter = 13;
 
 
+//for bullet points
+
+const handleInput = (event) => {
+    const { keyCode, target } = event;
+    const { selectionStart, value } = target;
+
+    if (keyCode === enter) {
+        console.log('a');
+        target.value = [...value]
+            .map((c, i) => i === selectionStart - 1
+                ? `\n${bulletWithSpace}`
+                : c
+            )
+            .join('');
+        console.log(target.value);
+
+        target.selectionStart = selectionStart+bulletWithSpace.length;
+        target.selectionEnd = selectionStart+bulletWithSpace.length;
+    }
+
+    if (value[0] !== bullet) {
+        target.value = `${bulletWithSpace}${value}`;
+    }
+}
 //form validation
 function validateForm() {
 //take the form name
