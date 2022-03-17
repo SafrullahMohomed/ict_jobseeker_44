@@ -8,7 +8,7 @@ class Counsellor_profile_js_Model extends Model
     }
 
     function get_counsellor_data_m($ID){
-        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Phone_number, Address, City, Facebook, Linkedin, Twitter, Profile_picture, Description,  Counsellor_provide_mock_interviews\n"
+        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Phone_number, Address, City, Facebook, Linkedin, Twitter, Profile_picture, Description,  Counsellor_provide_mock_interviews, Qualifications\n"
 
             . "\n"
 
@@ -20,7 +20,7 @@ class Counsellor_profile_js_Model extends Model
 
         $statement = $this->db->prepare($sql);
         $statement->execute();
-        return $statement->fetch(PDO::FETCH_OBJ);
+        return $statement->fetch(PDO::FETCH_ASSOC);
 //        return $stmt->fetch(PDO::FETCH_OBJ);
 
 

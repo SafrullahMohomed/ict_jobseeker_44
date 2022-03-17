@@ -32,6 +32,7 @@
 
 <!-- counsellor form field starts here -->
 <form action="http://localhost/ict_jobseeker_44/Counsellor/Counsellor_account/update_counsellor_data" method="post" id="counsellor_form">
+    <input type="hidden" name="User_ID" value="<?php echo $_GET['User'] ?>">
     <div class="counsellor_form">
         <!-- profile picture -->
         <div class="profilePic">
@@ -49,21 +50,21 @@
         <div class="firstName inp">
             <label for="firstName">First Name</label>
             <br/>
-            <input type="text" name="firstName" id="firstName" required/>
+            <input type="text" name="firstName" id="firstName" value = "<?php echo $data['First_name'] ?>" required/>
 
         </div>
         <!-- last name  -->
         <div class="lastName inp">
             <label for="lastName">Last Name</label>
             <br/>
-            <input type="text" name="lastName" id="lastName" required/>
+            <input type="text" name="lastName" id="lastName" value = "<?php echo $data['Last_name'] ?>"required/>
         </div>
 
         <!-- email -->
         <div class="email inp">
             <label for="email">Email</label>
             <br/>
-            <input type="email" name="email" id="email" required/>
+            <input type="email" name="email" id="email" value="<?php echo $data['Email'] ;?>" required/>
         </div>
 
 
@@ -71,28 +72,28 @@
         <div class="phoneNumber inp">
             <label for="phoneNumber">Phone Number</label>
             <br/>
-            <input type="tel" name="phoneNumber" id="phoneNumber"/>
+            <input type="tel" name="phoneNumber" id="phoneNumber" value="<?php echo $data['Phone_number'] ;?>"/>
         </div>
 
         <!-- Address -->
         <div class="address inp">
             <label for="address">Address</label>
             <br/>
-            <input type="text" name="address" id="address"/>
+            <input type="text" name="address" id="address" value="<?php echo $data['Address']?>"/>
         </div>
 
         <!-- city -->
         <div class="city inp">
             <label for="city">City</label>
             <br/>
-            <input type="text" name="city" id="city"/>
+            <input type="text" name="city" id="city" value="<?php echo $data['City']?>"/>
         </div>
 
         <!-- Qualification -->
         <div class="qualification inp">
             <label for="qualification">Qualification</label>
             <br/>
-            <textarea name="qualification_box" id="qualification" cols="30" rows="10"></textarea>
+            <textarea name="qualification_box" onkeyup="handleInput(event)" id="qualification" cols="30" rows="10" ><?php echo $data['Qualifications'] ;?></textarea>
         </div>
 
         <!--  -->
@@ -102,21 +103,21 @@
         <div class="facebook inp">
             <label for="facebook">Facebook</label>
             <br/>
-            <input type="url" name="facebook" id="facebook"/>
+            <input type="url" name="facebook" id="facebook" value="<?php echo $data['Facebook'] ;?>"/>
         </div>
 
         <!-- LinkedIn -->
         <div class="linkedin inp">
             <label for="linkedin">LinkedIn</label>
             <br/>
-            <input type="text" name="linkedin" id="linkedin"/>
+            <input type="text" name="linkedin" id="linkedin" value="<?php echo $data['Linkedin'] ;?>"/>
         </div>
 
         <!-- Twitter -->
         <div class="twitter inp">
             <label for="twitter">Twitter</label>
             <br/>
-            <input type="text" name="twitter" id="twitter"/>
+            <input type="text" name="twitter" id="twitter" value="<?php echo $data['Twitter'] ;?>"/>
         </div>
 
 
@@ -124,7 +125,7 @@
         <div class="description inp">
             <label for="description">Description</label>
             <br/>
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10"><?php echo $data['Description']?></textarea>
         </div>
 
         <!-- add another qualifications button
@@ -139,12 +140,22 @@
             <p class="inp">Provide Mock Interviews</p>
             <br>
             <div class="radio_inputs">
-                <div class="mi_yes">
-                    <input type="radio" name ="result_mi" id="mi_yes" value="yes" required><label for="yes">Yes</label><br>
+                <?php if ($data['Counsellor_provide_mock_interviews'] == 'yes'){
+                    echo '<div class="mi_yes">
+                    <input type="radio" name ="result_mi" id="mi_yes" value="yes" required checked><label for="yes">Yes</label><br>
                 </div>
                 <div class="mi_no">
                     <input type="radio" name ="result_mi" id="mi_no" value="no"><label for="no">No</label><br>
+                </div>';
+                }else{
+                    echo '<div class="mi_yes">
+                    <input type="radio" name ="result_mi" id="mi_yes" value="yes" required ><label for="yes">Yes</label><br>
                 </div>
+                <div class="mi_no">
+                    <input type="radio" name ="result_mi" id="mi_no" value="no" checked><label for="no" >No</label><br>
+                </div>';
+                }   ?>
+
             </div>
 
     </div>
@@ -155,10 +166,10 @@
 
 <div class="cu_buttons">
     <div class="cancel">
-        <button id="cancel" >Cancel</button>
+        <button onclick="Cancelclick(<?php echo $data['User_ID'] ?>)" id="cancel" >Cancel</button>
     </div>
     <div class="update">
-        <button type="submit" id="update" form="contact_form">Update</button>
+        <button onclick="Update(<?php echo $data['User_ID'] ?>)" type="submit" id="update" form="contact_form">Update</button>
     </div>
 </div>
 

@@ -113,7 +113,8 @@ class Login extends Controller
       }
       elseif ($_SESSION['User_type'] == "Counsellor")
       {
-          $this->view->renderCounsellor('Counsellor_profile');
+//          $this->view->renderCounsellor2("Counsellor_profile");
+          header("Location: http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile?User=".$_SESSION['User_ID']);
       }
       else{
           $this->view ->render('Home');

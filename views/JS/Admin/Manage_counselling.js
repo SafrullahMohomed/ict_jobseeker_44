@@ -26,11 +26,11 @@ function ajaxload(query = '', page_number = 1) {
             let counsellor_data = JSON.parse(counsellor_data2.data); //convert the data array into js object
 
 
-                var counsellor_tbody = ``; //variable for table body
+            var counsellor_tbody = ``; //variable for table body
 
-                if (counsellor_data.length > 0) {
-                    for (let i = 0; i < counsellor_data.length; i++) {
-                        counsellor_tbody += ` <tr>
+            if (counsellor_data.length > 0) {
+                for (let i = 0; i < counsellor_data.length; i++) {
+                    counsellor_tbody += ` <tr>
                         <td>${counsellor_data[i].User_ID}</td>
                         <td>${counsellor_data[i].Email}</td>
                         <td>${counsellor_data[i].First_name}&nbsp${counsellor_data[i].Last_name}</td>
@@ -45,27 +45,26 @@ function ajaxload(query = '', page_number = 1) {
                         </td>
 
                     </tr>`
-                    }
-                } else {
-                    counsellor_tbody += `<tr> No matching data is found</tr>`;
                 }
-
-
-                document.getElementById("counsellor_tbody").innerHTML = counsellor_tbody;
-                document.getElementById("pagination-link").innerHTML = counsellor_data2.pagination;
-                document.getElementById("total-data").innerHTML = counsellor_data2.total_data;
-                // document.getElementById("page_no").innerHTML = counsellor_data2.page_no;
-
+            } else {
+                counsellor_tbody += `<tr> No matching data is found</tr>`;
             }
 
 
-        }
-        for (var pair of form_data.entries()) {
-            console.log(pair);
-        }
-        xhr.send(urlparam);
-    }
+            document.getElementById("counsellor_tbody").innerHTML = counsellor_tbody;
+            document.getElementById("pagination-link").innerHTML = counsellor_data2.pagination;
+            document.getElementById("total-data").innerHTML = counsellor_data2.total_data;
+            // document.getElementById("page_no").innerHTML = counsellor_data2.page_no;
 
+        }
+
+
+    }
+    for (var pair of form_data.entries()) {
+        console.log(pair);
+    }
+    xhr.send(urlparam);
+}
 
 
 ajaxload();
@@ -99,6 +98,24 @@ toggle_left.addEventListener("click", () => {
 
 const add_counsellor = document.getElementById("add-button");
 
-add_counsellor.addEventListener("click", function (){
+add_counsellor.addEventListener("click", function () {
     location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_add_counselling"
 });
+
+function view_counselling(User_ID) {
+    location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile?User=" + User_ID;
+}
+
+function edit_counselling(User_ID) {
+    location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_account?User=" + User_ID;
+
+}
+
+function delete_counselling(User_ID) {
+    let value = confirm("Are you sure, you want to delete this account");
+    if(value == true){
+        location.href = "http://localhost/ict_jobseeker_44/Admin/Manage_counselling/delete_counsellor_data?User=" + User_ID;
+    }
+
+
+}

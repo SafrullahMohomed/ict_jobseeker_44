@@ -102,16 +102,8 @@
 
         <div class="qualification inp">
             <label for="qualification">Qualification</label>
-            <br/>
-            <button
-                    type="button"
-                    data-command="insertUnorderedList"
-                    id="qualification_button"
-            >
-                <i class="fa fa-list-ul"></i>
-            </button>
             <br>
-            <textarea name="qualification_box" id="qualification_box" contenteditable="true"></textarea>
+            <textarea name="qualification" onkeyup="handleInput(event)" id="qualification_box" contenteditable="true"></textarea>
         </div>
 
 
