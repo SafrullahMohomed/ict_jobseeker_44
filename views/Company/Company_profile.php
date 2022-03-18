@@ -16,7 +16,19 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <title>company_profile</title>
 </head>
-<body onload="companyData(<?php echo $_SESSION['User_ID']?>)">
+<body
+<?php
+#if user is logging and he click, click here button to view company profile .
+#then it is his own profile.then show profile with edit profile option
+if( isset($_SESSION['User_ID'])&&$_SESSION['User_type']=="Company" && $_SESSION['User_ID']==$data['User_ID']):?>
+onload="companyData(<?php echo $_SESSION['User_ID']?>)"
+ 
+<?php
+else:
+?>
+onload="companyData(<?php echo $data['User_ID']?>)"
+<?php endif; ?>
+>
     <!-- header part with css html js -->
  <div class="header_div" >
         <?php include 'views/Header.php'?>

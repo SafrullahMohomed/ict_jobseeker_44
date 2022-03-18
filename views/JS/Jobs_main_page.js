@@ -39,7 +39,7 @@ function loadmore() {
         let job_detail_sub_container = document.querySelector(".job_detail_sub_container");
     
        s = JSON.parse(this.response);
-       alert(s)
+    
     
      job_detail_sub_container.innerHTML = "";
 
@@ -85,9 +85,13 @@ function loadmore() {
      </div>
      <div class="job_detail_right">
          <div class="company_details">
-             <div class="mock_interview">
-                 We would like to supply mock interviews
-             </div>
+
+       ${parseInt(s['Job_provide_mock_interviews']) ?
+         `<div class="mock_interview">
+         We would like to supply mock interviews 
+         </div>`
+         :''}
+         
             <p>
                 Click here to veiw company details</p> 
             <button id="clickme" type="button" onclick="functionViewCompany(${s.User_ID})"> Click Here</button>
@@ -163,7 +167,7 @@ function loadmore() {
 
   /*load  jobs*/
   function jobLoad() {
-   
+
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Jobs_main_page/select_job_data");
     
@@ -172,7 +176,7 @@ function loadmore() {
      
       search = JSON.parse(this.response);
       
-      //console.log(search);
+      
     
      features_job.innerHTML = "";
 
@@ -181,7 +185,7 @@ function loadmore() {
         for (var s of search) {
       
          features_job.innerHTML += `  
-         <div class="features_job_row" onclick="jobView( ${s.	Job_ID})">
+         <div class="features_job_row" onclick="jobView( ${s.Job_ID})">
          <div class="features_job_row_picture">
              <img src='<?php echo URL ?>views/images/Jobs_main_page/3.JFIF'>
 

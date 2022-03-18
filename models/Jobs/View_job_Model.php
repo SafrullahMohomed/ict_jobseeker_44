@@ -14,7 +14,7 @@ class View_job_Model extends Model{
         b.Email,a.Job_phone_no,b.Profile_picture
        FROM job a, user b,post c
        WHERE a.Job_ID=$Job_ID AND c.User_ID=b.User_ID";*/
-       $query1 ="  SELECT a.Company_name, a.Job_type, a.Job_title,
+       $query1 ="  SELECT d.Company_name, a.Job_type, a.Job_title,
         a.Job_deadline,a.Job_provide_mock_interviews,a.Job_description,a.Job_image,
         b.Email,a.Job_phone_no,b.Profile_picture,d.Company_facebook,d.Company_twitter,d.Company_LinkedIn,b.User_ID
        FROM job a, user b,post c,company d
