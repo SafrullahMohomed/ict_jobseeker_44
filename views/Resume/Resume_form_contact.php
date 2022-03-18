@@ -144,7 +144,6 @@
     </div>
 
 
-
 </form>
 
 <!-- contact form ends here -->
@@ -167,7 +166,16 @@
         </div>
 
         <!-- experience form field starts here -->
-        <div class="experience_form" id = experience_form1>
+        <div class="experience_form" id=experience_form1>
+
+            <!--            cancel response-->
+
+            <div id="cancelButton${id_experience}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_experience(${id_experience})" class="fa fa-trash-o"
+                   aria-hidden="true"></i>
+            </div>
+
+
             <!-- job title -->
             <div class="jobTitle inp">
                 <label for="jobTitle">Job Title</label>
@@ -276,7 +284,14 @@
         </div>
 
         <!-- education form field starts here -->
-        <div class="education_form" id = "education_form1">
+        <div class="education_form" id="education_form1">
+            <!--            cancel response-->
+
+            <div id="cancelButton${id_education}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_education(${id_education})" class="fa fa-trash-o"
+                   aria-hidden="true"></i>
+            </div>
+
             <!-- Institute -->
             <div class="institute inp">
                 <label for="institute">Institute</label>
@@ -436,6 +451,14 @@
 
         <!-- project form field starts here -->
         <div class="project_form" id="project_form1">
+
+            <!--            cancel response-->
+
+            <div id="cancelButton${id_project}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_project(${id_project})" class="fa fa-trash-o"
+                   aria-hidden="true"></i>
+            </div>
+
             <!-- project title -->
             <div class="projectTitle inp">
                 <label for="projectTitle">Project title</label>
@@ -477,6 +500,8 @@
         </div>
     </div>
 </form>
+
+
 <!-- projects ends here -->
 
 
