@@ -15,7 +15,7 @@
    
     <title>company main page</title>
 </head>
-<body>
+<body onload="all_companies()">
    <!-- header part with css html js -->
    <div class="header_div" >
         <?php include 'views/Header.php'?>
@@ -42,12 +42,31 @@
               <option value="none" selected disabled hidden>
                 <span id="category-id-home">Select a City</span>
               </option>
-              <option value="Tutorials">Colombo</option>
-              <option value="Videos">Matara</option>
-              <option value="Videos">Galle</option>
-              <option value="Videos">Kandy</option>
-              <option value="Videos">Anuradhapura</option>
-              <option value="Videos">Jaffna</option>
+              <option value="Ampara ">Ampara  </option>
+              <option value="Anuradhapura ">Anuradhapura </option>
+              <option value="Badulla ">Badulla </option>
+              <option value="Batticaloa ">Batticaloa </option>
+              <option value="Colombo">Colombo</option>
+              <option value="Galle  ">Galle  </option>
+              <option value="Gampaha">Gampaha</option>
+              <option value="Hambanthota ">Hambanthota </option>
+              <option value="Jaffna  ">Jaffna  </option>
+              <option value="Kaluthara ">Kaluthara </option>
+              <option value="Kandy  ">Kandy  </option>
+              <option value="Kegalle ">Kegalle </option>
+              <option value="Kilinochchi ">Kilinochchi </option>
+              <option value="Kurunegala ">Kurunegala </option>
+              <option value="Mannar ">Mannar </option>
+              <option value="Matale  ">Matale  </option>
+              <option value="Matara ">Matara </option>
+              <option value="Monaragala ">Monaragala </option>
+              <option value="Mulathivu  ">Mulathivu  </option>
+              <option value="Nuwera Eliya ">Nuwera Eliya </option>
+              <option value=" Polonnaruwa "> Polonnaruwa </option>
+              <option value="Puttalam ">Puttalam </option>
+              <option value="Rathnapura ">Rathnapura </option>
+              <option value="Trincomalee  ">Trincomalee </option>
+              <option value="Vauniya ">Vauniya </option>
               
             </select>
           </div>
@@ -58,62 +77,14 @@
        
       </div>
       <div class="Trending">Companies</div>
-      <a href="<?php echo URL ?>Company/Company_profile" class="ResourceRow" type = " button" onclick="loadCompanyProfile()">
-          <div class="Academy">
-          <img src='<?php echo URL ?>views/images/Companies/company_logo1.jfif' > 
-        
-           
-          </div>
-          <div class="Tutorial">
-              Virtusa PVT Limited
-          </div>
-         <!--  <div class="Lesson">
-            <img src="images/2.jfif" alt="company icon">
-          </div> -->
-</a>
-      <div class="ResourceRow">
-        <div class="Academy">
-        <img src='<?php echo URL ?>views/images/Companies//2.jfif' > 
-       
-    
-         
-        </div>
-        <div class="Tutorial">
-          Lanka PVT Limited
-        </div>
-        <!-- <div class="Lesson">
-          <img src="js.png" alt="Lesson icon">
-        </div> -->
-      </div>
-        <div class="ResourceRow">
-            <div class="Academy">
-            <img src='<?php echo URL ?>views/images/Companies//3.jfif' > 
-            
-             
-            </div>
-            <div class="Tutorial">
-               Dialog
-            </div>
-            <!-- <div class="Lesson">
-              <img src="css3-.png" alt="Lesson icon">
-            </div> -->
-        </div>
-      <!-- <div class="resource-boxes">
-        <div class="first-row">
-          <div class="Resource"><a href="#" id="link">Tutorials</a></div>
-          <div class="Resource"><a href="#" id="link">Videos</a></div>
-        </div> -->
-        <!-- <div class="second-row">
-          <div class="Resource"><a href="#" id="link">Exercises</a></div>
-          <div class="Resource"><a href="#" id="link">Quizes</a></div>
-        </div> -->
-      </div>
-      <div class="btn_div">
-      <button type="button "class="load_more" id="loadmore_btn" onclick="loadmore()">Load More...</button>
+      
+      <div class="company">
+     
       </div>
       
       <?php include 'views/Footer.php'?>
-      <!-- <a src="../company_profile/company_profile.html"></a> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script  src="<?php echo URL?>views/JS/Companies.js"></script>
       <script src = "companies_search.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ let data={
 
 
 function Bidnow(){
+  
     window.open("");
     
     }

@@ -104,10 +104,10 @@
 
   <!-- posing part start here -->
   <div class="post_button">
-    <a href="<?php echo URL ?>jobs/Post_job"><div class="post_job">Post a Job</div></a>
+    <a class=" btn"href="<?php echo URL ?>jobs/Post_job">Post a Job</a>
 
 
-    <a href="<?php echo URL ?>Contracts/Post_contract"><div class="post_contracts"> Post a Contract</div></a>
+    <a  class=" btn" href="<?php echo URL ?>Contracts/Post_contract"> Post a Contract</a>
 
   </div>
 

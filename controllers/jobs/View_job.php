@@ -43,7 +43,6 @@ class View_job extends Controller
     //function for xhr req
     function view_clicked_job2($Job_ID){
      
-
       $job=$this->model->select_job_data($Job_ID);
      
       echo json_encode(count( $job) == 0 ? null :  $job);
