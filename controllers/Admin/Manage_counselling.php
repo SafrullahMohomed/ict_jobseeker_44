@@ -178,7 +178,9 @@ class Manage_counselling extends Controller
     function delete_counsellor_data()
     {
         $User_ID = $_GET['User'];
-        $this->model->delete_counsellor_data_m($User_ID);
+        if($_SESSION['User_type'] == 'Admin44'){
+            $this->model->delete_counsellor_data_m($User_ID);
+        }
         header("Location:http://localhost/ict_jobseeker_44/Admin/Manage_counselling");
     }
 
