@@ -231,6 +231,21 @@ textarea#aboutYou{
     border: 1px solid black;
 }
 
+.cancelButtonExtra {
+    position: absolute;
+    transform: translate(261px, -4px);
+    font-size: 30px;
+    color: darkred;
+}
+
+/*to shake the delete button in response*/
+.cancelButtonExtra:hover {
+    font-size: 35px;
+
+}
+
+
+
 
 /* input{
   border: 1px solid rgb(32, 15, 184);

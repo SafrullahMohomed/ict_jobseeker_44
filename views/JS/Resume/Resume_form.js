@@ -11,7 +11,7 @@ const next_button4 = document.getElementById("next_4");
 const back_button5 = document.getElementById("back_5");
 const finish_button5 = document.getElementById("finish_5");
 
-const finish_button = document.getElementById("finish");
+// const finish_button = document.getElementById("finish");
 const content = document.getElementById("content");
 const bullets = [...document.querySelectorAll(".bullet")];
 // const form1 = document.getElementById("form_1");
@@ -20,6 +20,43 @@ const bullets = [...document.querySelectorAll(".bullet")];
 // const form4 = document.getElementById("form_4");
 // const form5 = document.getElementById("form_5");
 // form5.querySelector()
+
+//input field assignments
+
+//contact form variables
+var firstName = document.getElementById("firstName").value;
+var lastName = document.getElementById("lastName").value;
+var email = document.getElementById("email").value;
+var phoneNumber = document.getElementById("phoneNumber").value;
+var address = document.getElementById("address").value;
+var city = document.getElementById("city").value;
+var aboutYou = document.getElementById("aboutYou").value;
+var skillDetails = document.getElementById("skillDetails").value;
+
+//experience form variables
+var jobTitle = document.getElementById("jobTitle").value;
+var employer = document.getElementById("employer").value;
+var city_experience = document.getElementById("city_experience").value;
+var country_experience = document.getElementById("country_experience").value;
+var experienceDetails = document.getElementById("experienceDetails").value;
+var from_experience = document.getElementById("from_experience").value;
+var to_experience = document.getElementById("to_experience").value;
+var workHere = document.getElementById("workHere").value;
+
+//education form variables
+var institute = document.getElementById("institute").value;
+var degree = document.getElementById("degree").value;
+var city_education = document.getElementById("city_education").value;
+var country_education = document.getElementById("country_education").value;
+var educationDetails = document.getElementById("educationDetails").value;
+var from_education = document.getElementById("from_education").value;
+var to_education = document.getElementById("to_education").value;
+var studyHere = document.getElementById("studyHere").value;
+
+
+//project form variables
+var projectTitle = document.getElementById("projectTitle").value;
+var projectDetails = document.getElementById("projectDetails").value;
 
 
 //for add another fields
@@ -39,9 +76,9 @@ const dynamic_education = document.getElementById("dynamic_education");
 const dynamic_project = document.getElementById("dynamic_project");
 
 //id variables for dynamically add
-let id_experience = 1;
-let id_education = 1;
-let id_project = 1;
+// let id_experience = 1;
+// let id_education = 1;
+// let id_project = 1;
 
 // console.log(bullets);
 const MAX_STEPS = 5;
@@ -58,14 +95,6 @@ next_button1.addEventListener("click", (e) => {
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
 
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const email = document.getElementById("email").value;
-    const phoneNumber = document.getElementById("phoneNumber").value;
-    const address = document.getElementById("address").value;
-    const city = document.getElementById("city").value;
-    const aboutYou = document.getElementById("aboutYou").value;
-    const skillDetails = document.getElementById("skillDetails").value;
 
     mainObj.firstName = firstName;
     mainObj.lastName = lastName;
@@ -102,15 +131,6 @@ next_button2.addEventListener("click", (e) => {
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
 
-    const jobTitle = document.getElementById("jobTitle").value;
-    const employer = document.getElementById("employer").value;
-    const city_experience = document.getElementById("city_experience").value;
-    const country_experience = document.getElementById("country_experience").value;
-    const experienceDetails = document.getElementById("experienceDetails").value;
-    const from_experience = document.getElementById("from_experience").value;
-    const to_experience = document.getElementById("to_experience").value;
-    const workHere = document.getElementById("workHere").value;
-
 
     if (mainObj.experience.length === 0) {
         let experience_object1 = new Experience(1, jobTitle, employer, city_experience, country_experience, experienceDetails, from_experience, to_experience, workHere);
@@ -124,52 +144,63 @@ next_button2.addEventListener("click", (e) => {
 });
 
 //to add or remove the add-another response button
-window.addEventListener("click",() =>{
-    if(id_experience >= 5){
-        addExperienceDiv.classList.add("tab");
-        console.log(addExperienceDiv.classList);
-        console.log("I reached the limit")
-    }
-    else{
-        console.log(addExperienceDiv.classList);
-        if(addExperienceDiv.classList.contains("tab")){
-            addExperienceDiv.classList.remove("tab");
-
-        }
-    }
-
-    if(id_education >= 5){
-        addEducationDiv.classList.add("tab");
-
-    }
-    else{
-        if(addEducationDiv.classList.contains("tab")){
-            addEducationDiv.classList.remove("tab");
-
-        }
-    }
-
-    if(id_project >= 5){
-        addProjectDiv.classList.add("tab");
-
-    }
-    else{
-        if(addProjectDiv.classList.contains("tab")){
-            addProjectDiv.classList.remove("tab");
-
-        }
-    }
-})
+// window.addEventListener("click", () => {
+//     if (id_experience >= 5) {
+//         addExperienceDiv.classList.add("tab");
+//         console.log(addExperienceDiv.classList);
+//         console.log("I reached the limit")
+//     } else {
+//         console.log(addExperienceDiv.classList);
+//         if (addExperienceDiv.classList.contains("tab")) {
+//             addExperienceDiv.classList.remove("tab");
+//
+//         }
+//     }
+//
+//     if (id_education >= 5) {
+//         addEducationDiv.classList.add("tab");
+//
+//     } else {
+//         if (addEducationDiv.classList.contains("tab")) {
+//             addEducationDiv.classList.remove("tab");
+//
+//         }
+//     }
+//
+//     if (id_project >= 5) {
+//         addProjectDiv.classList.add("tab");
+//
+//     } else {
+//         if (addProjectDiv.classList.contains("tab")) {
+//             addProjectDiv.classList.remove("tab");
+//
+//         }
+//     }
+// })
 
 
 //add another experience
 addExperience.addEventListener("click", (e) => {
     e.preventDefault();
-    // if (id_experience < 5)
-    if (mainObj.experience.length < 5){
-        id_experience++;
+    let flag = false;
+    let id_experience;
+    for(let i = 0; i < 5; i++){
+        if(mainObj.experience_id[i] == false){
+            flag = true;
+            id_experience = i;
+            mainObj.experience_id[i] = true;
+        }
+
+    }
+    if (flag == true) {
 
         let experience_html = `<div class="experience_form" id = experience_form${id_experience}>
+
+            <!--cancel button-->
+            <div id="cancelButton${id_experience}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_experience(${id_experience})" class="fa fa-trash-o" aria-hidden="true"></i>
+            </div>
+            
             <!-- job title -->
             <div class="jobTitle inp">
                 <label for="jobTitle">Job Title</label>
@@ -243,7 +274,6 @@ addExperience.addEventListener("click", (e) => {
 });
 
 
-
 back_button3.addEventListener("click", (e) => {
     e.preventDefault();
     const previousBullet = bullets[1];
@@ -265,14 +295,6 @@ next_button3.addEventListener("click", (e) => {
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
 
-    const institute = document.getElementById("institute").value;
-    const degree = document.getElementById("degree").value;
-    const city_education = document.getElementById("city_education").value;
-    const country_education = document.getElementById("country_education").value;
-    const educationDetails = document.getElementById("educationDetails").value;
-    const from_education = document.getElementById("from_education").value;
-    const to_education = document.getElementById("to_education").value;
-    const studyHere = document.getElementById("studyHere").value;
 
     if (mainObj.education.length === 0) {
         mainObj.education.push(new Education(institute, degree, city_education, country_education, educationDetails, from_education, to_education, studyHere));
@@ -290,6 +312,11 @@ addEducation.addEventListener("click", (e) => {
         id_education++;
 
         let education_html = `<div class="education_form" id = "education_form${id_education}">
+
+            <!--cancel button-->
+            <div id="cancelButton${id_education}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_education(${id_education})" class="fa fa-trash-o" aria-hidden="true"></i>
+            </div>
             <!-- Institute -->
             <div class="institute inp">
                 <label for="institute">Institute</label>
@@ -401,9 +428,6 @@ back_button5.addEventListener("click", (e) => {
 //project form
 finish_button5.addEventListener("click", () => {
 
-    const projectTitle = document.getElementById("projectTitle").value;
-    const projectDetails = document.getElementById("projectDetails").value;
-
     if (mainObj.project.length === 0) {
         mainObj.project.push(new Project(projectTitle, projectDetails));
     }
@@ -419,6 +443,12 @@ addProject.addEventListener("click", (e) => {
         id_project++;
 
         let project_html = `<div class="project_form" id="project_form${id_project}">
+
+            <!--cancel button-->
+            <div id="cancelButton${id_project}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_project(${id_project})" class="fa fa-trash-o" aria-hidden="true"></i>
+            </div>
+            
             <!-- project title -->
             <div class="projectTitle inp">
                 <label for="projectTitle">Project title</label>
@@ -437,8 +467,7 @@ addProject.addEventListener("click", (e) => {
         // mainObj.experience.push()
         dynamic_project.innerHTML += project_html;
         console.log(id_project);
-    }
-    else{
+    } else {
         addProjectDiv.classList.add("tab");
     }
 
@@ -484,7 +513,7 @@ function showTab(n) {
 
 //experience class
 class Experience {
-    constructor(id_experience, jobTitle, employer, city, country, experienceDetails, from_experience, to_experience, workHere) {
+    constructor(id_experience, jobTitle, employer, city, country, experienceDetails, from_experience, to_experience, workHere, filled) {
         this.id_experience = id_experience;
         this.jobTitle = jobTitle;
         this.employer = employer;
@@ -494,13 +523,23 @@ class Experience {
         this.from_experience = from_experience;
         this.to_experience = to_experience;
         this.workHere = workHere;
+        this.filled = filled;
+
 
     }
 }
 
+//experience objects
+var exp1 = new Experience(1,null, null, null, null, null, null, null, null);
+var exp2 = new Experience(2,null, null, null, null, null, null, null, null);
+var exp3 = new Experience(3,null, null, null, null, null, null, null, null);
+var exp4 = new Experience(4,null, null, null, null, null, null, null, null);
+var exp5 = new Experience(5,null, null, null, null, null, null, null, null);
+
+
 //education class
 class Education {
-    constructor(id_education, institute, degree, city, country, educationDetails, from_education, to_education, studyHere) {
+    constructor(id_education, institute, degree, city, country, educationDetails, from_education, to_education, studyHere, filled) {
         this.id_education = id_education;
         this.institute = institute;
         this.degree = degree;
@@ -510,18 +549,37 @@ class Education {
         this.from_education = from_education;
         this.to_education = to_education;
         this.studyHere = studyHere;
+        this.filled = filled;
 
     }
 }
+
+//education objects
+var edu1 = new Education(1, null, null, null, null, null, null, null, null);
+var edu2 = new Education(2, null, null, null, null, null, null, null, null);
+var edu3 = new Education(3, null, null, null, null, null, null, null, null);
+var edu4 = new Education(4, null, null, null, null, null, null, null, null);
+var edu5 = new Education(5, null, null, null, null, null, null, null, null);
+
 
 //project class
 class Project {
-    constructor(id_project, projectTitle, projectDetails) {
+    constructor(id_project, projectTitle, projectDetails, filled) {
         this.id_project = id_project;
         this.projectTitle = projectTitle;
         this.projectDetails = projectDetails;
+        this.filled = filled;
+
     }
 }
+
+//project object
+var proj1 = new Project(1, null, null);
+var proj2 = new Project(2, null, null);
+var proj3 = new Project(3, null, null);
+var proj4 = new Project(4, null, null);
+var proj5 = new Project(5, null, null);
+
 
 //main object
 const mainObj = {
@@ -533,10 +591,13 @@ const mainObj = {
     address: null,
     city: null,
     about: null,
-    experience: [],
-    education: [],
+    experience_id: {0:true, 1:false, 2:false, 3:false, 4:false},
+    experience: [exp1, exp2, exp3, exp4, exp5],
+    education_id: {0:true, 1:false, 2:false, 3:false, 4:false},
+    education: [edu1, edu2, edu3, edu4, edu5],
     skills: null,
-    project: []
+    project_id: {0:true, 1:false, 2:false, 3:false, 4:false},
+    project: [proj1, proj2, proj3, proj4, proj5]
 
 }
 //main object for data
@@ -548,7 +609,6 @@ const mainObj = {
 //
 //
 // });
-
 
 
 function ajaxcall() {
@@ -568,6 +628,80 @@ function ajaxcall() {
     xhr.send();
 
 }
+
+//functions for delete responses
+
+//delete experiences
+function delete_experience(exp_id) {
+        let total_exp = 0;// to store how many slots are reserved
+        for (let i = 0; i < mainObj.experience_id.length; i++){
+            if(mainObj.experience_id[i] === true){
+                total_exp++
+            }
+        }
+        if (total_exp > 1){
+            mainObj.experience_id[exp_id] = false;
+        }
+        let objName = "exp"+exp_id;
+        objName.jobTitle = null;
+        objName.employer = null;
+        objName.city = null;
+        objName.country = null;
+        objName.experienceDetails = null;
+        objName.from_experience = null;
+        objName.to_experience = null;
+        objName.workHere = null;
+
+
+}
+
+
+//delete education
+
+function delete_education(edu_id) {
+    let total_edu = 0;// to store how many slots are reserved
+    for (let i = 0; i < mainObj.education_id.length; i++){
+        if(mainObj.education_id[i] === true){
+            total_edu++
+        }
+    }
+    if (total_edu > 1){
+        mainObj.education_id[edu_id] = false;
+    }
+    let objName = "edu"+edu_id;
+    objName.institute = null;
+    objName.degree = null;
+    objName.city = null;
+    objName.country = null;
+    objName.educationDetails = null;
+    objName.from_education = null;
+    objName.to_education = null;
+    objName.studyHere = null;
+
+
+}
+
+
+
+//delete project
+
+function delete_project(proj_id) {
+    let total_proj = 0;// to store how many slots are reserved
+    for (let i = 0; i < mainObj.project_id.length; i++){
+        if(mainObj.project_id[i] === true){
+            total_proj++
+        }
+    }
+    if (total_proj > 1){
+        mainObj.project_id[proj_id] = false;
+    }
+    let objName = "proj"+proj_id;
+    objName.projectTitle = null;
+    objName.projectDetails = null;
+
+
+}
+
 
 // form.addEventListener("submit", (e) => {
 //     e.preventDefault();

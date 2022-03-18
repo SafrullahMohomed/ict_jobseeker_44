@@ -141,6 +141,19 @@
             <div class="job_category">
                 <canvas id="job_category_chart" width="400px" height="400px"></canvas>
             </div>
+            <div id="reportGen">
+                <form action="http://localhost/ict_jobseeker_44/Admin/Report_generator" method="post">
+                    <!--from date/time-->
+                    <label for="from-date">from</label>
+                    <input type="datetime-local" id="from-date" , name="from-date"> <br>
+
+                    <!--to date/time-->
+                    <label for="to-date">from</label>
+                    <input type="datetime-local" id="to-date" , name="to-date"> <br>
+                    <button type="submit" id="reportGen" name="reportGen">Generate Report</button>
+
+                </form>
+            </div>
         </div>
 
     </div>
