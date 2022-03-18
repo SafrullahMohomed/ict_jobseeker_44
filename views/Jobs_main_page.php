@@ -34,7 +34,9 @@
         <!-- theme image start here -->
         <div class="job-search-box">
             <div class="search-your-keywords">
-                <input type="text" name="Search your keyword" placeholder="Search for a job" require/>
+                <input type="text"  require
+                name="search-jobs" id="search-jobs" placeholder="Search jobs"
+                onkeyup="ajaxload(this.value);"/>
             </div>
             <div class="category">
                 <select name="Category">
@@ -53,7 +55,33 @@
                 </select>
             </div>
             <div class="location">
-                <input type="text" name="location" placeholder="location" />
+                <select type="text" name="location" placeholder="location" >
+                <option value="Ampara ">Ampara  </option>
+              <option value="Anuradhapura ">Anuradhapura </option>
+              <option value="Badulla ">Badulla </option>
+              <option value="Batticaloa ">Batticaloa </option>
+              <option value="Colombo">Colombo</option>
+              <option value="Galle  ">Galle  </option>
+              <option value="Gampaha">Gampaha</option>
+              <option value="Hambanthota ">Hambanthota </option>
+              <option value="Jaffna  ">Jaffna  </option>
+              <option value="Kaluthara ">Kaluthara </option>
+              <option value="Kandy  ">Kandy  </option>
+              <option value="Kegalle ">Kegalle </option>
+              <option value="Kilinochchi ">Kilinochchi </option>
+              <option value="Kurunegala ">Kurunegala </option>
+              <option value="Mannar ">Mannar </option>
+              <option value="Matale  ">Matale  </option>
+              <option value="Matara ">Matara </option>
+              <option value="Monaragala ">Monaragala </option>
+              <option value="Mulathivu  ">Mulathivu  </option>
+              <option value="Nuwera Eliya ">Nuwera Eliya </option>
+              <option value=" Polonnaruwa "> Polonnaruwa </option>
+              <option value="Puttalam ">Puttalam </option>
+              <option value="Rathnapura ">Rathnapura </option>
+              <option value="Trincomalee  ">Trincomalee </option>
+              <option value="Vauniya ">Vauniya </option>
+                </select>
             </div>
             <div class="search-button">
                 <button type="submit">Search</button>

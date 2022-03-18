@@ -235,7 +235,7 @@ function loadmore() {
    
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Sys_rate/tot_rate");
-    
+   
     xhr.onload = function () {
       let rating_overview_row = document.querySelector(".rating_overview_row");
      
@@ -243,7 +243,7 @@ function loadmore() {
       //let x=toString(this.response)
       search = JSON.parse(this.response);
       //console.log(this.response);
-    
+     
       rating_overview_row.innerHTML = "";
 
       

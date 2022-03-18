@@ -56,7 +56,7 @@ body{
   
   /* search box inside for input fields */
   .search-your-keywords input,
-  .location input {
+  select {
     height: 30px;
     width: 277px;
     border-radius: 7px;

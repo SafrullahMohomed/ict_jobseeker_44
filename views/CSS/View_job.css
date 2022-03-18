@@ -132,8 +132,14 @@ font-weight: 600;
 
 
 }
+.mock_interview{
+
+    text-align: center;
+
+}
 p{
     margin: auto;
+    text-align: center;
 }
 #clickme{
     background-color: white;
