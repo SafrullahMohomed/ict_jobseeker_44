@@ -19,7 +19,8 @@
 <body
 <?php
 #if user is logging and he click, click here button to view company profile .
-#then it is his own profile.then show profile with edit profile option
+#then it is his own profile.then show profile with edit profile 
+
 if( isset($_SESSION['User_ID'])&&$_SESSION['User_type']=="Company" && $_SESSION['User_ID']==$data['User_ID']):?>
 onload="companyData(<?php echo $_SESSION['User_ID']?>)"
  
