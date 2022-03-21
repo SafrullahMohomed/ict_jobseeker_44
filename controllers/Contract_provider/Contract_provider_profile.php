@@ -46,9 +46,9 @@ class Contract_provider_profile extends Controller
   
       $count=$_POST['count'];
       $review= $_POST['review'];
-      
+      $User_ID_CP=$_POST['User_ID_CP'];
          if(isset($_SESSION['User_ID'])){
-           $this->model->insert_cp_review_data($count,$review);
+           $this->model->insert_cp_review_data($User_ID_CP,$count,$review);
            echo("Successfully added your rate and review.Thank you");
          }
        else{
@@ -57,5 +57,13 @@ class Contract_provider_profile extends Controller
          }
       
    
+       }
+
+       //request cp rate and review data from data base
+       function  req_cp_rate_data($User_ID){
+        $review=$this->model->select_cp_rate_data($User_ID);
+        
+        echo json_encode(count( $review) == 0 ? null :  $review);
+        return $review;
        }
 }

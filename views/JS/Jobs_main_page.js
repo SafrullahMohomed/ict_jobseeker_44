@@ -242,6 +242,146 @@ function loadmore() {
     return false;
 
   }
+//load job according to search
+function ajaxload(query = '', page_number = 1) {
+    
+
+    //pass the page number and search query
+    const form_data = new FormData();
+    form_data.append('query', query);
+    form_data.append('page', page_number);
+    const urlparam = new URLSearchParams(form_data);
+
+
+    //initialize connection
+    const xhr = new XMLHttpRequest();
+    
+    //establish connection
+    xhr.open("POST", "http://localhost/ict_jobseeker_44/Jobs_main_page/search_job");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+
+
+    xhr.onload = function () {
+
+        if (xhr.status == 200) {
+            const job_data1 = xhr.responseText; //ajax response data
+           
+          const job_data2 = JSON.parse(job_data1); //convert the response data to js object
+          let  search = JSON.parse(job_data2.data); //convert the data array into js object
+          //search = JSON.parse(this.response);
+          console.log(search);
+
+               
+                if (search!==null) {
+       
+                    for (var s of search) {
+                  
+                     features_job.innerHTML += `  
+                     <div class="features_job_row" onclick="jobView( ${s.Job_ID})">
+                     <div class="features_job_row_picture">
+                         <img src='<?php echo URL ?>views/images/Jobs_main_page/3.JFIF'>
+            
+            
+                     </div>
+                     <div class="features_job_row_job_and_company">
+                         <div class="features_job_row_job">
+                         ${s.Job_title}
+            
+            
+                         </div>
+                         <div class="features_job_row__company">
+                         ${s.Company_name}
+                         </div>
+                     </div>
+                     <div class="features_job_row_location">
+            
+                         <i class="fas fa-map-marker-alt"></i>
+            
+                         <div class="features_job_row_location_name">
+                         ${s.Job_city}
+                         </div>
+                     </div>
+                     <div class="features_job_row_job_type">
+                         <i class="fas fa-clock"></i>
+                         <div class="features_job_row_job_type_name">
+                         ${s.Job_type}
+                         </div>
+                     </div>
+            
+                     
+                        
+            
+                             <div class="features_job_row_deadline_date_container">
+                                 <div>Expires on </div>
+                                 <div class="features_job_row_deadline_date">
+                                 ${s.Job_deadline}
+                                 </div>
+                             </div>
+            
+            
+            
+                   
+            
+                 </div>
+                      
+                     `;
+                    }
+                  } else {
+                                  
+                  }
+
+
+                document.getElementById("job_tbody").innerHTML = job_tbody;
+                document.getElementById("pagination-link").innerHTML = job_data2.pagination;
+                document.getElementById("total-data").innerHTML = job_data2.total_data;
+                // document.getElementById("page_no").innerHTML = job_data2.page_no;
+
+            }
+
+
+        }
+        for (var pair of form_data.entries()) {
+            console.log(pair);
+        }
+        xhr.send(urlparam);
+    }
+
+
+
+ajaxload();
+
+
+// dashboard navigation
+
+const toggle_right = document.querySelector(".fa-chevron-circle-right");
+document.querySelector(".toggle-dashboard-right").classList.add("display-none");
+toggle_right.addEventListener("click", () => {
+    // console.log("I am clicked");
+    if (document.querySelector(".left-division").classList.contains("display-none")) {
+        document.querySelector(".left-division").classList.remove("display-none");
+        document.querySelector(".toggle-dashboard-right").classList.add("display-none");
+        document.querySelector(".toggle-dashboard-left").classList.remove("display-none");
+
+    }
+});
+
+const toggle_left = document.querySelector(".fa-chevron-circle-left");
+toggle_left.addEventListener("click", () => {
+    // console.log("I am clicked");
+    if (!document.querySelector(".left-division").classList.contains("display-none")) {
+        document.querySelector(".left-division").classList.add("display-none");
+        document.querySelector(".toggle-dashboard-left").classList.add("display-none");
+        document.querySelector(".toggle-dashboard-right").classList.remove("display-none");
+
+    }
+});
+
+
+const add_job = document.getElementById("add-button");
+
+add_job.addEventListener("click", function (){
+    location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_add_counselling"
+});
 
 
 
