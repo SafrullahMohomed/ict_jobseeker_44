@@ -49,69 +49,15 @@ onload="cpData(<?php echo  $data['User_ID']?>)"
     <div class="main_container">
         
          <div class="detail">
-        <!-- load data from database -->
+        <!-- load data from database (cp data) -->
         
          </div>
 
 
-         <div class="review">
-             <hr>
-             <div class="review_row">
-                <div class="user_picture">
-                <img src='<?php echo URL ?>views/images/Contract_provider_profile/review_user1.jpg' >
-                   
-                </div>
-                <div class="review_detail">
-                    <div class="review_detail_name">
-                        Teran Gomaz
-                     </div>
-                     <div class="do_rate_star_row">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                      </div>
-                      <div class="date">
-                          10/20/2021
-                      </div>
-                      <div class="review_para">
-                        Thank you for give  more value to my project. 
-                      </div>
-
-                </div>
-                 
-             </div>
-             <hr>
+         <div onload="load_cp_rating(<?php echo  $data['User_ID']?>)" class="review">
+          
+             <!-- load data from database (cp rate and review data) -->
             
-             <div class="review_row">
-                <div class="user_picture">
-                <img src='<?php echo URL ?>views/images/Contract_provider_profile/review_user2.jpg' >
-                   
-                </div>
-                <div class="review_detail">
-                    <div class="review_detail_name">
-                        Chanax Fernado
-                     </div>
-                     <div class="do_rate_star_row">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                      </div>
-                      <div class="date">
-                        10/02/2020
-                      </div>
-                      <div class="review_para">
-                        Thanks for your projects.
-                      </div>
-
-                </div>
-                  
-             </div>
-             
-             <hr>
          </div>
          <!-- rate us box show only for others except owner -->
          <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']!="Contract provider") : ?>
@@ -130,7 +76,7 @@ onload="cpData(<?php echo  $data['User_ID']?>)"
           <div class="row">        
               <textarea  id="review_text" rows="4" brief_description="brief_description" placeholder="Write your review here..." class="inputfield" required></textarea><br>
           </div>
-          <button class="loadmore_button"onclick="review()">Submit</button>
+          <button class="loadmore_button"onclick="review(<?php echo  $data['User_ID']?>)">Submit</button>
       </div>
 <?php endif;?>
     </div>

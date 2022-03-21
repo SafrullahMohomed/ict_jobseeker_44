@@ -23,7 +23,6 @@ function ajaxload(query = '', page_number = 1) {
             const job_data1 = xhr.responseText; //ajax response data
             console.log(job_data1);
             const job_data2 = JSON.parse(job_data1); //convert the response data to js object
-
             let job_data = JSON.parse(job_data2.data); //convert the data array into js object
 
 
