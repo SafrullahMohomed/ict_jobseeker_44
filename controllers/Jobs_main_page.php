@@ -20,6 +20,7 @@ class Jobs_main_page extends Controller
     echo json_encode(count($job) == 0 ? null : $job);
    return $job;
   }
+  
 
   //when searching for a job
   function search_job(){
