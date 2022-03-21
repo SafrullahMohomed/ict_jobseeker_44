@@ -166,19 +166,19 @@ function loadmore() {
 
 
   /*load  jobs*/
-  function jobLoad() {
+function jobLoad() {
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Jobs_main_page/select_job_data");
     
     xhr.onload = function () {
-      let features_job = document.querySelector(".features_job");
+      const features_job = document.querySelector(".features_job");
      
       search = JSON.parse(this.response);
       
-      
     
-     features_job.innerHTML = "";
+    
+     features_job.innerHTML = ``;
 
       if (search!==null) {
        
@@ -260,7 +260,7 @@ function ajaxload(query = '', page_number = 1) {
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Jobs_main_page/search_job");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 
-
+    let features_job1 = document.querySelector(".features_job");
     xhr.onload = function () {
 
         if (xhr.status == 200) {
@@ -270,13 +270,13 @@ function ajaxload(query = '', page_number = 1) {
           let  search = JSON.parse(job_data2.data); //convert the data array into js object
           //search = JSON.parse(this.response);
           console.log(search);
-
+          features_job1.innerHTML = ``;
                
-                if (search!==null) {
+                if(search != null) {
        
                     for (var s of search) {
                   
-                     features_job.innerHTML += `  
+                     features_job1.innerHTML += `  
                      <div class="features_job_row" onclick="jobView( ${s.Job_ID})">
                      <div class="features_job_row_picture">
                          <img src='<?php echo URL ?>views/images/Jobs_main_page/3.JFIF'>
@@ -331,7 +331,7 @@ function ajaxload(query = '', page_number = 1) {
                   }
 
 
-                document.getElementById("job_tbody").innerHTML = job_tbody;
+                document.getElementById("features_job").innerHTML = features_job1;
                 document.getElementById("pagination-link").innerHTML = job_data2.pagination;
                 document.getElementById("total-data").innerHTML = job_data2.total_data;
                 // document.getElementById("page_no").innerHTML = job_data2.page_no;
