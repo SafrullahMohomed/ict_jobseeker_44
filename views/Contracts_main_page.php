@@ -38,23 +38,28 @@
             type="text"
             name="Search your keyword"
             placeholder="Search for a contract"
+            onkeyup="ajaxload(this.value);"
           />
         </div>
         <div class="category">
-          <select name="Category">
-            <option value="none" selected disabled hidden>
-              <span id="category-id-home">Select a contract Catogory</span>
-            </option>
-            <option value="Software Engineering">Software Engineering</option>
-            <option value="Qaulity Assurance">Qaulity Assurance</option>
-            <option value="Frontend Developing">Frontend Developing</option>
-            <option value="Backend Developing">Backend Developing</option>
-            <option value="Senior Sofware Engineering">
-              Senior Sofware Engineering
-            </option>
-            <option value="Fullstack developing">Fullstack developing</option>
-            <option value="Data Science">Data Science</option>
-          </select>
+        <select name="Category"  onchange="ajaxload(this.value);" >
+                    <option value="none" selected disabled hidden>
+                        <span id="category-id-home">Select a Catogory</span>
+                    </option>
+                    <?php 
+        $data_count=count($data['ContractCategory']);
+      
+        for($x = 0; $x < $data_count; $x++  )
+        {
+          echo "<option value=' " .$data['ContractCategory'][$x]['ContractCategory_name'] ." '>" ;
+          echo $data['ContractCategory'][$x]['ContractCategory_name'];
+          echo"</option>";
+        
+        }
+        
+        ?>
+                </select>
+          
         </div>
         <!-- <div class="location">
           <input type="text" name="location" placeholder="location" />
