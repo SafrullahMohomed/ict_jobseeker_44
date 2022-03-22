@@ -8,10 +8,14 @@ class Jobs_main_page extends Controller
     }
 
     function Jobs_main_page()
-    {
-
+    {//load available ict job categories from database
+        $jobCategory=$this->model->getJobCategory();
+        $data['jobCategory']=$jobCategory;
         //pass view name
-        $this->view ->render('Jobs_main_page'); 
+        $this->view ->render2('Jobs_main_page',$data); 
+        
+
+       
         
     }
 //select data from database to jobs main page
@@ -20,7 +24,7 @@ class Jobs_main_page extends Controller
     echo json_encode(count($job) == 0 ? null : $job);
    return $job;
   }
-  
+
 
   //when searching for a job
   function search_job(){

@@ -353,7 +353,7 @@ ajaxload();
 
 // dashboard navigation
 
-const toggle_right = document.querySelector(".fa-chevron-circle-right");
+/*const toggle_right = document.querySelector(".fa-chevron-circle-right");
 document.querySelector(".toggle-dashboard-right").classList.add("display-none");
 toggle_right.addEventListener("click", () => {
     // console.log("I am clicked");
@@ -381,7 +381,7 @@ const add_job = document.getElementById("add-button");
 
 add_job.addEventListener("click", function (){
     location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_add_counselling"
-});
+});*/
 
 
 

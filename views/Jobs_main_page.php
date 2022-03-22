@@ -39,23 +39,26 @@
                 onkeyup="ajaxload(this.value);"/>
             </div>
             <div class="category">
-                <select name="Category">
+                <select name="Category"  onchange="ajaxload(this.value);" >
                     <option value="none" selected disabled hidden>
                         <span id="category-id-home">Select a Catogory</span>
                     </option>
-                    <option value="Software Engineering">Software Engineering</option>
-                    <option value="Qaulity Assurance">Qaulity Assurance</option>
-                    <option value="Frontend Developing">Frontend Developing</option>
-                    <option value="Backend Developing">Backend Developing</option>
-                    <option value="Senior Sofware Engineering">
-                        Senior Sofware Engineering
-                    </option>
-                    <option value="Fullstack developing">Fullstack developing</option>
-                    <option value="Data Science">Data Science</option>
+                    <?php 
+        $data_count=count($data['jobCategory']);
+      
+        for($x = 0; $x < $data_count; $x++  )
+        {
+          echo "<option value=' " .$data['jobCategory'][$x]['JobCategory_name'] ." '>" ;
+          echo $data['jobCategory'][$x]['JobCategory_name'];
+           echo"</option>";
+        
+        }
+        
+        ?>
                 </select>
             </div>
             <div class="location">
-                <select type="text" name="location" placeholder="location" >
+                <select type="text" name="location" placeholder="location" onchange="ajaxload(this.value);" >
                 <option value="Ampara ">Ampara  </option>
               <option value="Anuradhapura ">Anuradhapura </option>
               <option value="Badulla ">Badulla </option>
