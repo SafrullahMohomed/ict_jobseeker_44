@@ -7,18 +7,10 @@ class Admin_home_Model extends Model
         parent::__construct();
     }
 
-    function get_job_category_m()
-    {
-        $sql = "SELECT JobCategory_name, JobCategory_count FROM `jobcategory`;";
-
-        return $this->db->runQuery($sql);
-
-    }
-
+//counts for admin dashboard
     function get_counts_m()
     {
-        $results = array(
-        );
+        $results = array();
 
 //        jobseeker
         $sqlJobseeker = "SELECT User_ID from `user` WHERE User_Type = 'Jobseeker';";
@@ -60,4 +52,48 @@ class Admin_home_Model extends Model
 
 
     }
+
+
+    //   to get the job category data
+    function get_job_category_m()
+    {
+        $sql = "SELECT JobCategory_name, JobCategory_count FROM `jobcategory`;";
+//        $sql1 = "SELECT COUNT()";
+
+        return $this->db->runQuery($sql);
+
+    }
+
+    //   to get the contract category data
+    function get_contract_category_m()
+    {
+        $sql = "SELECT Contract_category, COUNT(Contract_ID) as contractCount FROM `contract` GROUP BY Contract_category;";
+        return $this->db->runQuery($sql);
+
+    }
+
+    function get_monthly_user_registered_m()
+    {
+        $data = array();
+        $sql1 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Jobseeker' GROUP BY YEAR(Created_at), month(Created_at);";
+        $data['Jobseeker'] = $this->db->runQuery($sql1);
+
+        $sql2 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Counsellor' GROUP BY YEAR(Created_at), month(Created_at);";
+        $statement = $this->db->prepare($sql2);
+        $data['Counsellor'] = $this->db->runQuery($sql2);
+
+        $sql3 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Company' GROUP BY YEAR(Created_at), month(Created_at);";
+        $statement = $this->db->prepare($sql2);
+        $data['Company'] = $this->db->runQuery($sql3);
+
+        $sql4 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Company' GROUP BY YEAR(Created_at), month(Created_at);";
+        $statement = $this->db->prepare($sql2);
+        $data['Contract_provider'] = $this->db->runQuery($sql4);
+
+        return $data;
+
+
+    }
+
+
 }

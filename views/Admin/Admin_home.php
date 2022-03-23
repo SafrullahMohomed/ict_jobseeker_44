@@ -138,9 +138,16 @@
         <div class="graphs_div">
             <!--        job category graph starts here -->
 
+<!--            job category count-->
             <div class="job_category">
                 <canvas id="job_category_chart" width="400px" height="400px"></canvas>
             </div>
+
+<!--            contract category count-->
+            <div class="job_category">
+                <canvas id="contract_category_chart" width="400px" height="400px"></canvas>
+            </div>
+
             <div id="reportGen">
                 <form action="http://localhost/ict_jobseeker_44/Admin/Report_generator" method="post">
                     <!--from date/time-->

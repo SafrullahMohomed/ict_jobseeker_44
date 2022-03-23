@@ -10,7 +10,7 @@ class Counsellor_account extends Controller
 
     function Counsellor_account()
     {
-        $GLOBALS['User'] = $_GET['User'];
+//        $GLOBALS['User'] = $_GET['User'];
         if (($_SESSION['User_type'] == 'Counsellor' and $_SESSION['User_ID'] == $_GET['User']) or $_SESSION['User_type'] == 'Admin44') {
             $data = $this->model->get_counsellor_data_m($_GET['User']);
 //                print_r($data);
