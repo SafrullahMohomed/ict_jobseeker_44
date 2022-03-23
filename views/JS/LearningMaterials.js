@@ -128,13 +128,13 @@ function ajaxload(query = '', page_number = 1) {
                       learningMaterials_list += ` 
                       <div class="ResourceRow">
                         <div class="Academy">
-                            <img src='<?php echo URL ?>views/images/LearningMaterials/${learningMaterials_data[i].Academy_logo}' >
+                            <img src='views/images/LearningMaterials/${learningMaterials_data[i].Academy_logo}' >
                         </div>
                         <div class="Tutorial">
                             ${learningMaterials_data[i].LearningMaterial_title} - ${learningMaterials_data[i].LearningMaterial_category}
                         </div>
                         <div class="Lesson">
-                            <img src='<?php echo URL ?>views/images/LearningMaterials/${learningMaterials_data[i].Resource_logo}' >
+                            <img src='views/images/LearningMaterials/${learningMaterials_data[i].Resource_logo}' >
                         </div>
                       </div>
                        `
