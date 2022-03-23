@@ -92,7 +92,8 @@ function cpData(User_ID){
 //reveiw part start
     let data ={
       "review": "",
-      "count" : 0
+      "count" : 0,
+      "User_ID_CP":0
     
     
       };
@@ -225,13 +226,14 @@ function cpData(User_ID){
       }
 
  //pass rate and review data to controller
-  function review(){
-   
+  function review(User_ID_CP){
   
     data['review']=document.getElementById("review_text").value;
     let star_count=data['count'];
-    let sys_review= data['review'];
-    
+    let sys_review= data['review']; 
+    data['User_ID_CP']=User_ID_CP;
+
+    console.log(data['User_ID_CP'])
     $.post("http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_profile/cp_rate_data",
     data,
     function(data,status){
@@ -240,3 +242,64 @@ function cpData(User_ID){
 
 
   }
+//load rates and reviews from data base 
+  function load_cp_rating(User_ID){
+    alert("hi")
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_profile/req_cp_rate_data/"+User_ID);
+    
+     xhr.onload = function () {
+     let review = document.querySelector(".review");
+     
+     
+      search = JSON.parse(this.response);
+    console.log(search);
+    
+      review.innerHTML = "";
+
+      if (search!==null) {
+       
+        for (var s of search) {
+
+        
+          review.innerHTML += `  
+          <div class="review_row">
+                <div class="user_picture">
+                <img src='<?php echo URL ?>views/images/Contract_provider_profile/review_user1.jpg' >
+                   
+                </div>
+                <div class="review_detail">
+                    <div class="review_detail_name">
+                       ${s.First_name} &nbsp: ${s.First_name}
+                     </div>
+                     <div class="do_rate_star_row">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="false"></i>
+                        <i class="fa fa-star-o" aria-hidden="false"></i>
+                        <i class="fa fa-star-o" aria-hidden="false"></i>
+                      </div>
+                      <div class="date">
+                         ${s.Review_date}
+                      </div>
+                      <div class="review_para">
+                        ${s.Review}
+
+                      </div>
+
+                </div>
+                 
+             </div>
+             <hr>
+         
+       
+          
+         `;
+        }
+      }
+    xhr.send();
+   
+    return false;
+
+  }
+}

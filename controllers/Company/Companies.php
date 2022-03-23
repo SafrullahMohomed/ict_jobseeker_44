@@ -9,12 +9,17 @@ class Companies extends Controller
 
     function Companies()
     {
-        #$this->model->printSomething();
         
-        #echo "Hello from the Test controller - Index Method";
-
         //pass view name
         $this->view ->render('Company/Companies'); 
         
+    }
+    //load all companies
+    function load_all_companies(){
+
+      $company=$this->model->select_company_data();     
+      echo json_encode(count($company) == 0 ? null : $company);
+      return $company;
+
     }
 }

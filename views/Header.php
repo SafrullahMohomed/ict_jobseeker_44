@@ -363,11 +363,11 @@ align-items: center;
               <?php
               // if user is company
               if ($_SESSION['User_type'] == "Company") :
-                $My_profile = "Company/Company_profile";
+                $My_profile = "Company/Company_profile/Company_profilejs/".$_SESSION['User_ID'];
               endif;
               // if user is Contract_provider
               if ($_SESSION['User_type'] == "Contract provider") :
-                $My_profile = "Contract_provider/Contract_provider_profile";
+                $My_profile = "Contract_provider/Contract_provider_profile/Cp_profilejs/".$_SESSION['User_ID'];
               endif;
                // if user is Jobseeker
                if ($_SESSION['User_type'] == "Jobseeker") :

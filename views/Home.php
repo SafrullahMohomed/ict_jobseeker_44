@@ -98,12 +98,19 @@
     </div>
 </div>
 
+
 <!--  job search part ends here -->
+
+  <!-- posing part start here -->
+  <div class="post_button">
+    <a class=" btn"href="<?php echo URL ?>jobs/Post_job">Post a Job</a>
+
 
 <!-- themes image and job search part ends here -->
 
 <div class="theme-image">
     <img src='<?php echo URL ?>views/images/Home/hometheme.jpg'>
+    <a  class=" btn" href="<?php echo URL ?>Contracts/Post_contract"> Post a Contract</a>
 
 </div>
 <!-- theme image ends here -->

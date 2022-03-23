@@ -53,7 +53,7 @@ function select_sys_rate_data(){
       $s2 = $stmt2->fetch(PDO::FETCH_ASSOC);
       $sum = $s2['value_sum'];
 
-      $s3= $sum /$count;
+      $s3= round($sum /$count);
 
       $data['count'] = $count;;
       $data['avg'] = $s3;
