@@ -9,6 +9,10 @@
   color: #585656;
   /*font-size: 1.1em;*/
 }
+.required:after {
+  content:" *";
+  color: red;
+  }
 
 .post_job_description{
     
