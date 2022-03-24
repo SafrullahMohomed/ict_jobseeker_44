@@ -62,6 +62,11 @@ textarea{
     border: 2px solid #1D6989;
 
 }
+span
+{
+        color: red;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 

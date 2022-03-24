@@ -12,14 +12,14 @@ class Contact_us_Model extends Model{
         $name=$data['name'];
         $email=$data['email'];
         $message=$data['message'];
-        $user=$_SESSION['User_ID'];
+        // $user=$_SESSION['User_ID'];
         
         try
         {
-        $sql= "INSERT INTO inquiry (Inquiry,Inquiry_from,Inquiry_email_to,User_ID) VALUES (?,?,?,?) ";
+        $sql= "INSERT INTO inquiry (Inquiry,Inquiry_from,Inquiry_email_to) VALUES (?,?,?) ";
             
             $stmt=$this->db->prepare($sql);
-            $stmt->execute([$message,$name,$email,$user]);
+            $stmt->execute([$message,$name,$email]);
 
         echo "Successfully inserted"  ;
         }

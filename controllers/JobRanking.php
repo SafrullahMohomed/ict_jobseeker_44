@@ -21,9 +21,10 @@ class JobRanking extends Controller
     function get_job_category_data()
     {
 
+        // echo "Hi";
         if (isset($_POST["query"])) {
 
-            $limit = 5;
+            $limit = 25;
             $page = 1;
 
 
