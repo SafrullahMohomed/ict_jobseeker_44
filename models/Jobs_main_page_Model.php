@@ -33,12 +33,14 @@ function select_data_table($query, $page, $start, $limit)
             ':Job_title' => '%' . $condition . '%',
             ':Company_name' => '%' . $condition . '%',
             ':JobCategory_name' => '%' . $condition . '%',
-            ':Job_deadline' => '%' . $condition . '%'
+            ':Job_deadline' => '%' . $condition . '%',
+            ':Job_city' => '%' . $condition . '%',
+            ':Job_type' => '%' . $condition . '%'
         );
        
 
 
-        $sql = "SELECT job.Job_ID, Job_title, Company_name, JobCategory_name, Job_deadline\n"
+        $sql = "SELECT job.Job_ID, Job_title, Company_name,Job_city,Job_type, JobCategory_name, Job_deadline\n"
             . "FROM job\n"
             . "JOIN company ON job.User_ID = company.User_ID\n"
             . "JOIN jobcategory ON job.JobCategory_ID = jobcategory.JobCategory_ID\n"
@@ -46,6 +48,8 @@ function select_data_table($query, $page, $start, $limit)
                 Job_title LIKE :Job_title OR
                 Company_name LIKE :Company_name OR
                 JobCategory_name LIKE :JobCategory_name OR
+                Job_type LIKE :Job_type OR
+                Job_city LIKE :Job_city OR
                 Job_deadline LIKE :Job_deadline\n"
             . "ORDER BY job.Job_ID\n";
 
@@ -73,21 +77,33 @@ function select_data_table($query, $page, $start, $limit)
                 'Job_title' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_title"]),
                 'Company_name' => str_ireplace($replace_array_1, $replace_array_2, $row["Company_name"]),
                 'JobCategory_name' => str_ireplace($replace_array_1, $replace_array_2, $row["JobCategory_name"]),
-                'Job_deadline' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_deadline"])
+                'Job_deadline' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_deadline"]),
+                'Job_city' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_city"]),
+                'Job_type' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_type"])
             );
         }
 //        return print_r($data);
 
-        return array(json_encode($data), $total_data);
+//get features category data start
 
-    }
+$sql3 = "SELECT JobCategory_name FROM jobcategory ORDER BY JobCategory_count DESC LIMIT 6";
+
+$stmt1=$this->db->prepare($sql3);   
+$stmt1->execute();
+$category=$stmt1->fetchAll();
+
+////get features category data end
+
+ return array(json_encode($data),$total_data,json_encode($category));
+
+}
 
 //when searching job
     function select_data_table2($start, $limit)
     {
 //        declare an empty array
         $final = array();
-        $sql2 = "SELECT job.Job_ID, Job_title, Company_name, JobCategory_name, Job_deadline\n"
+        $sql2 = "SELECT job.Job_ID, Job_title, Company_name,Job_city,Job_type, JobCategory_name, Job_deadline\n"
 
             . "FROM job\n"
 
@@ -117,18 +133,39 @@ function select_data_table($query, $page, $start, $limit)
                 'Job_title' => $row['Job_title'],
                 'Company_name' => $row['Company_name'],
                 'JobCategory_name' => $row['JobCategory_name'],
-                'Job_deadline' => $row['Job_deadline']
+                'Job_deadline' => $row['Job_deadline'],
+                'Job_city'=> $row['Job_city'],
+                'Job_type'=> $row['Job_type']
             );
         }
+        //get features category data start
 
+$sql3 = "SELECT JobCategory_name FROM jobcategory ORDER BY JobCategory_count DESC LIMIT 6";
+
+$stmt1=$this->db->prepare($sql3);   
+$stmt1->execute();
+$category=$stmt1->fetchAll();
+
+////get features category data end
 
 
 //        array_push($final,$data);
-        return array(json_encode($data), $total_data);
+        return array(json_encode($data), $total_data,json_encode($category));
 //
 
 
     }
+    
+  //load available ict job categories from database
+public function getJobCategory(){
+    $query1="SELECT JobCategory_ID,JobCategory_name
+    FROM jobcategory ";
+
+    $s=$this->db->runQuery($query1);   
+    return $s;
+}
+
+  
    
 }
 
