@@ -73,4 +73,16 @@ class View
         require 'views/Resume/' . $viewName . '.php';
     }
 
+    // counsellor
+    // public function renderJobseeker($viewName)
+    // {
+    //     require 'views/Counsellor/' . $viewName . '.php';
+    // }
+
+    // public function renderJobseeker2($viewName, $data = [])
+    // {
+    //     require 'views/Counsellor/' . $viewName . '.php';
+
+    // }
+
 }
