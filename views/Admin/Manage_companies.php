@@ -5,144 +5,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Manage_companies.css">
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Manage_companies.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script defer src="<?php echo URL ?>views/JS/Admin/Manage_companies.js">
+
+    </script>
+    <title>Manage Companies</title>
 </head>
 
-<!-- header part starts here -->
+<body>
+
 <div class="header_div">
     <?php include './views/Header.php' ?>
 </div>
 
-<!-- header part ends here -->
+<!-- main container -->
+<div class="main-container">
+    <!--    dashboard part starts here-->
+    <div class="left-division">
 
-<body>
-    <!-- main container -->
-    <div class="main-conatainer">
-        <!-- divisoin for admin home -->
-        <a href="<?php echo URL ?>Admin/Admin_home">
-            <div class="admin-home-button">
-                <button>Admin Home</button>
+
+        <a href="<?php echo URL?>Admin/Admin_home">
+            <div class="admin-dashboard-option">
+
+                <div class="dashboard-box-option">
+                    <i class="fa fa-dashboard" style="font-size:42px;color:aliceblue"></i>
+                    Dashboard
+                </div>
+
+
             </div>
         </a>
 
-        <!-- seach part -->
-        <div class="search-company">
-            <input type="text" name="search-company" id="search-company" placeholder="Search Companies">
-            <button>Search</button>
+        <div class="admin-options">
+            <a href="<?php echo URL ?>Admin/Manage_jobseeker">
+                <div class="manage_jobseekers box">Manage Jobseekers</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_jobs">
+                <div class="manage_jobs box">Manage Jobs</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_companies">
+                <div class="manage_companies box">Manage Companies</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_contracts">
+                <div class="manage_contracts box">Manage Contracts</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_resume">
+                <div class="manage_resume box">Manage Resume</div>
+            </a>
+
+            <a href="<?php echo URL ?>Admin/Manage_cp">
+                <div class="manage_contract_providers box">
+                    Manage Contract Providers
+                </div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_counselling">
+                <div class="manage_counsellor box">Manage Counselling</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_chat">
+                <div class="chat_messages box">Chat Messages</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_lm">
+                <div class="manage_lm box">Manage Learning Materials</div>
+            </a>
+        </div>
+    </div>
+
+    <!--    dashboard part ends here-->
+
+    <!--    admin part starts here-->
+    <div class="right-division">
+
+
+        <div class="search-toggle">
+
+            <!--            toggle left-->
+            <div class="toggle-dashboard-left">
+                <i class='fa fa-chevron-circle-left' style='font-size:40px;color:#003144;margin-top: 2px'></i>
+            </div>
+
+            <!--            toggle right-->
+            <div class="toggle-dashboard-right">
+                <!--                <i class="fa fa-dashboard" style="font-size:38px;color:#003144"></i>-->
+                <i class='fa fa-chevron-circle-right' style='font-size:40px;color:#003144'></i>
+
+            </div>
+
+
+            <!-- search part -->
+            <div class="search-company">
+                <input type="text" name="search-companies" id="search-companies" placeholder="Search Companies"
+                       onkeyup="ajaxload(this.value);">
+
+            </div>
         </div>
 
-        <!-- add company division -->
-        <a href="<?php echo URL ?>Admin/Admin_add_companies">
-            <div class="add-company">
-                <button><span class="plus">+</span>Add Company</button>
-            </div>
-        </a>
 
+        <!-- add companies -->
+        <div class="add-companies">
+            <button id = "add-button"><span class="plus">+</span>Add Company</button>
+        </div>
 
-        <!-- table starts here-->
+        <div id="total-data">
 
-        <div class="Table">
+        </div>
+
+        <!-- table -->
+        <div class="Table" id="company_table">
             <table>
-                <tr>
-                    <th colspan="4" id="topic">Registered Companies</th>
-                </tr>
+                <thead>
                 <tr id="columnTopic">
                     <th>ID</th>
                     <th>Email</th>
                     <th>Company Name</th>
                     <th>Total Job Posts</th>
                     <th>Phone Number</th>
+                    <th>Actions</th>
 
                 </tr>
-                <tr>
-                    <td>03</td>
-                    <td>company1@gmail.com</td>
-                    <td>Company1</td>
-                    <td>3</td>
-                    <td>0712345678</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>company2@gmail.com</td>
-                    <td>Company2</td>
-                    <td>4</td>
-                    <td>0774521678</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>company3@gmail.com</td>
-                    <td>Company3</td>
-                    <td>1</td>
-                    <td>0713215677</td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>company4@gmail.com</td>
-                    <td>Company4</td>
-                    <td>0</td>
-                    <td>0712345567</td>
-                </tr>
-                <tr>
-                    <td>25</td>
-                    <td>company5@gmail.com</td>
-                    <td>Company5</td>
-                    <td>7</td>
-                    <td>0723455678</td>
-                </tr>
-                <tr>
-                    <td>31</td>
-                    <td>company6@gmail.com</td>
-                    <td>Company6</td>
-                    <td>7</td>
-                    <td>0718938438</td>
-                </tr>
-                <tr>
-                    <td>112</td>
-                    <td>company7@gmail.com</td>
-                    <td>Company7</td>
-                    <td>2</td>
-                    <td>0752323456</td>
-                </tr>
-                <tr>
-                    <td>113</td>
-                    <td>company8@gmail.com</td>
-                    <td>Company8</td>
-                    <td>3</td>
-                    <td>0766778432</td>
-                </tr>
-                <tr>
-                    <td>140</td>
-                    <td>company9@gmail.com</td>
-                    <td>Company9</td>
-                    <td>0</td>
-                    <td>0778382983</td>
-                </tr>
-                <tr>
-                    <td>168</td>
-                    <td>company10@gmail.com</td>
-                    <td>Company10</td>
-                    <td>1</td>
-                    <td>0712300838</td>
-                </tr>
+                </thead>
+
+                <tbody id="company_tbody">
+
+
+                </tbody>
+
+
             </table>
         </div>
 
         <!-- table ends here -->
 
-        <!-- load more button -->
-        <div class="load-more">
-            <button>Load More</button>
+
+        <!-- pagination link -->
+        <div id="pagination-link">
         </div>
 
     </div>
+    <!--    admin part ends here-->
 
-<!-- footer part starts here -->
 
-    <?php include './views/Footer.php' ?>
+</div>
 
-    <!-- footer part ends here -->
+<?php include './views/Footer.php' ?>
+
+
 </body>
 
 </html>

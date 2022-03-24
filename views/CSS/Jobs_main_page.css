@@ -56,7 +56,7 @@ body{
   
   /* search box inside for input fields */
   .search-your-keywords input,
-  .location input {
+  select {
     height: 30px;
     width: 277px;
     border-radius: 7px;
@@ -264,6 +264,7 @@ align-items: center;
    
     line-height: 35px;
     margin: auto;
+    text-align: center;
     
 }
 .features_job_row__company{
@@ -320,36 +321,36 @@ margin: auto;
  
 margin-bottom: auto;
 }
-.features_job_row_deadline_and_urgent{
+.features_job_row_deadline_date_container{
  width: 20%;
-height: 100%; 
-    
+height: 88%;     
 display: flex;
 flex-direction: column;
 justify-content:space-around;
  align-items: center;
  }
-    
-.features_job_row_deadline{
-    
+ 
+/*.features_job_row_deadline{
+ height: 100%;      
 margin: auto;
 display: flex;
 flex-direction: row;
 flex:1;
    
-}
-.features_job_row_deadline_date_container{
-       
+}*/
+/*.features_job_row_deadline_date_container{
+    height: 100%;      
 display: flex;
+ustify-content:space-around;
 flex-direction: column;
 align-items: center;
         
-}
-.features_job_row_deadline_date_container p{
+}*/
+**.features_job_row_deadline_date_container p{
     
  
   margin-top:38px;
- }
+ }/*
     .features_job_row_deadline_date{
         
        
@@ -365,7 +366,7 @@ visibility: hidden;
         font-size: 30px;
         margin-top:38px;
     }*/
-    .features_job_row_urgent{
+   /* .features_job_row_urgent{
      width: 60%;
     height: 18px;
     font-size: 15px;
@@ -385,7 +386,7 @@ visibility: hidden;
         25% {background-color: rgb(238, 64, 64);}
         50%   {background-color: #e60909;}
     
-    }
+    }*/
 
 
 .load_more{
@@ -424,7 +425,33 @@ visibility: hidden;
  
 }
 
+/*pagination*/
 
+.pagination {
+    display: inline-block;
+}
+
+.pagination-hidden{
+    visibility: hidden;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
 
 
 

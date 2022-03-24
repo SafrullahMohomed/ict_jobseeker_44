@@ -7,6 +7,11 @@
     color: #585656;
     font-size: 1em;
 }
+.required:after {
+    content:" *";
+    color: red;
+    }
+    
 .main_container{
 width:60%;
 min-height:1000px;
@@ -143,7 +148,13 @@ font-weight: 600;
    cursor: pointer;
     
 }
-
+#view{
+    color: green !important;
+    }
+    #delete{
+        color: red !important;
+    
+    }
 
 
 

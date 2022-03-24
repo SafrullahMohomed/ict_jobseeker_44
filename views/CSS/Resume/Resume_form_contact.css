@@ -8,6 +8,10 @@
   display: none;
 }
 
+.add-button-display-none {
+    display: none;!important;
+}
+
 /* next, input button */
 .bn_buttons {
 display: flex;
@@ -71,11 +75,11 @@ button:disabled:hover{
 }
 
 #stepProgressBar{
-  width: 300px;
+  width: 70%;
   display:flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin:0 auto 40px auto;
+  margin:130px auto 40px auto;
 
 }
 
@@ -105,16 +109,16 @@ button:disabled:hover{
   background-color: green;
 }
 
-.bullet.completed:after{
-  content: '';
-  position: absolute;
-  background-color:green;
-  height:4px;
-  width:55px;
-  transform: translate(0px, -60px, 10px, 0px);
-  right: -60px;
-  bottom:8px;
-}
+/*.bullet.completed:after{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  background-color:green;*/
+/*  height:4px;*/
+/*  width:55px;*/
+/*  transform: translate(0px, -60px, 10px, 0px);*/
+/*  right: -60px;*/
+/*  bottom:8px;*/
+/*}*/
 /* stepper and buttons ends here */
 
 
@@ -128,11 +132,11 @@ button:disabled:hover{
 }
 
 .text1{
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .text2{
-  font-size:x-large;
+  font-size:large;
   font-weight: lighter;
 }
 
@@ -163,7 +167,7 @@ button:disabled:hover{
 
 /* labels */
 .inp label, .image_insertion label{
-    font-size: 25px;
+    font-size: 17px;
 }
 
 /* profile label */
@@ -205,14 +209,14 @@ input#profilePicture{
   width: 80%;
   margin:auto;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
  
 }
 
 /* each input boxes */
 input {
   width: 100%;
-  height:35px;
+  height:25px;
   border-radius: 2px;
   border: 1px solid black;
 }
@@ -226,6 +230,21 @@ textarea#aboutYou{
     border-radius: 2px;
     border: 1px solid black;
 }
+
+.cancelButtonExtra {
+    position: absolute;
+    transform: translate(261px, -4px);
+    font-size: 30px;
+    color: darkred;
+}
+
+/*to shake the delete button in response*/
+.cancelButtonExtra:hover {
+    font-size: 35px;
+
+}
+
+
 
 
 /* input{
@@ -277,18 +296,33 @@ textarea#aboutYou{
 
 /* media queries */
 
-@media only screen and (max-width:750px){
-  
+@media only screen and (max-width:780px){
+
+        margin:0px auto 40px auto;
+
+    }
 }
 
 @media only screen and (max-width:960px){
   .time_period{
     flex-direction: column;
   }
-  
+
+
 }
 
 @media only screen and (max-width:750px){
+
+  /*  stepper*/
+
+    #stepProgressBar{
+        width: 90%;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin:0 auto 40px auto;
+
+    }
   /* title text */
   .title_text{
     display:flex;
@@ -298,11 +332,11 @@ textarea#aboutYou{
 }
 
 .text1{
-  font-size: x-large;
+  font-size: large;
 }
 
 .text2{
-  font-size: large;
+  font-size: medium;
   font-weight: lighter;
 }
 
@@ -320,23 +354,31 @@ textarea#aboutYou{
   .inp{
     width:90%;
   }
-  .inp label{
-    font-size: 20px;
-  }
+  /*.inp label{*/
+  /*  font-size: 20px;*/
+  /*}*/
 
   }
 
 
 @media only screen and (max-width:600px) {
+    #stepProgressBar{
+        width: 100%;
+        display:flex;
+        /*justify-content: space-between;*/
+        align-items: flex-end;
+        margin:0 auto 40px auto;
+
+    }
   
   /* heading texts */
   .text1{
-    font-size: larger;
+    font-size: medium;
     text-align: center;
   }
 
   .text2{
-    font-size: large;
+    font-size: small;
     text-align: center;
   }
   

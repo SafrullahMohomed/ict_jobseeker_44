@@ -2,121 +2,172 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Admin_home.css" />
-  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css" />
-  <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Admin_dashboard.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Admin_home.css"/>
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css"/>
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Admin_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script defer src="<?php echo URL ?>views/JS/Admin/Admin_home.js"></script>
 
-  <title>Document</title>
+    <title>Document</title>
 </head>
 <!-- header part with css html js -->
 <div class="header_div">
-  <?php include './views/Header.php' ?>
+    <?php include './views/Header.php' ?>
 
 </div>
 <!-- header part end  -->
 
 <body>
 
-  <div class="main-container">
 
-    <!-- admin dashboard starts here -->
-    <div class="dashboard">
-      <div class="main-part">
-        <div class="cpanel">
-          <div class="icon-part">
-            <i class="fa fa-users" aria-hidden="true"></i><br>
-            <small>Jobseekers</small>
-            <p>28560</p>
-          </div>
+<div class="main-container">
 
-        </div>
-        <div class="cpanel cpanel-green">
-          <div class="icon-part">
-            <i class="fa fa-money" aria-hidden="true"></i><br>
-            <small>Jobs</small>
-            <p>1250</p>
-          </div>
 
-        </div>
-        <div class="cpanel cpanel-orange">
-          <div class="icon-part">
-            <i class="fa fa-id-card" aria-hidden="true"></i><br>
-            <small>Companies</small>
-            <p>55</p>
-          </div>
-          
-        </div>
-        <div class="cpanel cpanel-blue">
-          <div class="icon-part">
-            <i class="fa fa-tasks" aria-hidden="true"></i><br>
-            <small>Contracts</small>
-            <p>198</p>
-          </div>
+    <!-- admin dashboard starts here-->
+    <div class="left-division">
 
-        </div>
-        <div class="cpanel cpanel-red">
-          <div class="icon-part">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>
-            <small>Contract Providers</small>
-            <p>110</p>
-          </div>
+        <a href="<?php echo URL ?>Admin/Admin_home">
+            <div class="admin-dashboard-option">
 
-        </div>
-        <div class="cpanel cpanel-skyblue">
-          <div class="icon-part">
-            <i class="fa fa-comments" aria-hidden="true"></i><br>
-            <small>Counsellors</small>
-            <p>20</p>
-          </div>
+                <div class="dashboard-box-option">
+                    <i class="fa fa-dashboard" style="font-size:42px;color:aliceblue"></i>
+                    Dashboard
+                </div>
 
+
+            </div>
+        </a>
+
+        <div class="admin-options">
+            <a href="<?php echo URL ?>Admin/Manage_jobseeker">
+                <div class="manage_jobseekers box">Manage Jobseekers</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_jobs">
+                <div class="manage_jobs box">Manage Jobs</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_companies">
+                <div class="manage_companies box">Manage Companies</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_contracts">
+                <div class="manage_contracts box">Manage Contracts</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_resume">
+                <div class="manage_resume box">Manage Resume</div>
+            </a>
+
+            <a href="<?php echo URL ?>Admin/Manage_cp">
+                <div class="manage_contract_providers box">
+                    Manage Contract Providers
+                </div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_counselling">
+                <div class="manage_counsellor box">Manage Counselling</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_chat">
+                <div class="chat_messages box">Chat Messages</div>
+            </a>
+            <a href="<?php echo URL ?>Admin/Manage_lm">
+                <div class="manage_lm box">Manage Learning Materials</div>
+            </a>
         </div>
-      </div>
     </div>
     <!-- admin dashboard ends here -->
 
-    <!-- admin boxes starts here-->
-    <div class="admin-boxes">
-      <div class="first-row">
-        <a href="<?php echo URL ?>Admin/Manage_jobseeker">
-          <div class="manage_jobseekers box">Manage Jobseekers</div>
-        </a>
-        <a href="<?php echo URL ?>Admin/Manage_jobs">
-          <div class="manage_jobs box">Manage Jobs</div>
-        </a>
-        <a href="<?php echo URL ?>Admin/Manage_companies">
-          <div class="manage_companies box">Manage Companies</div>
-        </a>
-        <a href="<?php echo URL ?>Admin/Manage_contracts">
-          <div class="manage_contracts box">Manage Contracts</div>
-        </a>
-        <a href="<?php echo URL ?>Admin/Manage_resume">
-          <div class="manage_resume box">Manage Resume</div>
-        </a>
-      </div>
 
-      <div class="second-row">
-        <a href="<?php echo URL ?>Admin/Manage_cp">
-          <div class="manage_contract_providers box">
-            Manage Contract Providers
-          </div>
-        </a>
-        <a href="<?php echo URL ?>Admin/Manage_counselling">
-          <div class="manage_counsellor box">Manage Counselling</div>
-        </a>
-        <a href="<?php echo URL ?>Admin/Manage_chat">
-          <div class="chat_messages box">Chat Messages</div>
-        </a>
-        <a href="<?php echo URL ?>Admin/Manage_lm">
-          <div class="manage_lm box">Manage Learning Materials</div>
-        </a>
-      </div>
+    <!-- admin details starts here -->
+    <div class="right-division">
+        <div class="dashboard-content">
+            <div class="main-part">
+                <div class="cpanel">
+                    <div class="icon-part">
+                        <i class="fa fa-users" aria-hidden="true"></i><br>
+                        Jobseekers
+                        <p id="jobseeker-count"></p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-green">
+                    <div class="icon-part">
+                        <i class="fa fa-money" aria-hidden="true"></i><br>
+                        Jobs
+                        <p id="job-count"></p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-orange">
+                    <div class="icon-part">
+                        <i class="fa fa-id-card" aria-hidden="true"></i><br>
+                        Companies
+                        <p id="company-count"></p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-blue">
+                    <div class="icon-part">
+                        <i class="fa fa-tasks" aria-hidden="true"></i><br>
+                        Contracts
+                        <p id="contract-count"></p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-red">
+                    <div class="icon-part">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>
+                        Contract Providers
+                        <p id="cp-count"></p>
+                    </div>
+
+                </div>
+                <div class="cpanel cpanel-skyblue">
+                    <div class="icon-part">
+                        <i class="fa fa-comments" aria-hidden="true"></i><br>
+                        Counsellors
+                        <p id="counsellor-count"></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- admin details ends here -->
+
+        <!--        graphs starts here-->
+        <div class="graphs_div">
+            <!--        job category graph starts here -->
+
+<!--            job category count-->
+            <div class="job_category">
+                <canvas id="job_category_chart" width="400px" height="400px"></canvas>
+            </div>
+
+<!--            contract category count-->
+            <div class="job_category">
+                <canvas id="contract_category_chart" width="400px" height="400px"></canvas>
+            </div>
+
+            <div id="reportGen">
+                <form action="http://localhost/ict_jobseeker_44/Admin/Report_generator" method="post">
+                    <!--from date/time-->
+                    <label for="from-date">from</label>
+                    <input type="datetime-local" id="from-date" , name="from-date"> <br>
+
+                    <!--to date/time-->
+                    <label for="to-date">from</label>
+                    <input type="datetime-local" id="to-date" , name="to-date"> <br>
+                    <button type="submit" id="reportGen" name="reportGen">Generate Report</button>
+
+                </form>
+            </div>
+        </div>
+
     </div>
-    <!-- admin boxes ends here -->
-  </div>
+
+
+</div>
+
 
 </body>
 

@@ -67,8 +67,8 @@
         </div>
     
         <div class="row">
-            <label for="avg_bid" class="labelfield">Averag_bid</label><br>
-            <input type="text" id="avg_bid" name="avg_bid" onfocus=" hideFormError(avg_bid_error)" placeholder= "avg_bid(Rs.)" class="inputfield" required><br>    
+            <label for="avg_bid" class="labelfield">Budget</label><br>
+            <input type="text" id="avg_bid" name="avg_bid" onfocus=" hideFormError(avg_bid_error)" placeholder= "You can give average_bid(Rs.)" class="inputfield" required><br>    
             <span id="avg_bid_error"></span>
         </div>
         

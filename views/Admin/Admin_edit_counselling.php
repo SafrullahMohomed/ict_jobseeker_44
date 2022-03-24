@@ -10,9 +10,10 @@
   <title>Document</title>
 </head>
 
-<!-- <div class="header_div">
- 
-</div> -->
+ <div class="header_div" >
+        <?php include './views/Header.php'?>
+</div>
+</div>
 
 
 <body>
@@ -147,6 +148,8 @@
   </div>
 
   <!-- next, back buttons ends here -->
+  <?php include './views/Footer.php' ?>
+  <script src="<?php echo URL ?>views/JS/Post_contract.js"></script>
 </body>
 
 </html>

@@ -21,12 +21,12 @@
             <!-- profile image -->
 
             <div class="profile_image">
-                <img src="/ict_jobseeker_44/views/images/lulakshi/lulz.png" alt="profile picture">
+                <img src="/ict_jobseeker_44/views/images/Resume/images.jpeg" alt="profile picture">
             </div>
 
             <!-- Header part starts here -->
             <div class="resume_header">
-                <div class="candidate_name">LULAKSHI HETTIARACHCHI</div>
+                <div class="candidate_name">ROWAN ATKINSON</div>
                 <div class="candidate_address candidate_personal_details"><span class="address_emoji"><i class="fa fa-map-marker" style="font-size:18px;color:white;width:20px"></i>
                     </span>12, Main Street, <span class="candidate_city ">Matara</span></div>
                 <div class="candidate_email candidate_personal_details"><i class="fa fa-envelope" style="font-size:18px;color:white;width:20px"></i>

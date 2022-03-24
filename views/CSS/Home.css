@@ -52,17 +52,16 @@ body {
   padding-left: 10px;
 }
 
-/* .category select {
-  height: 36px;
-  width: fit-content;
-  border-radius: 7px;
-} */
+
 .category select, .location select {
   height: 36px;
   width: fit-content;
   border-radius: 7px;
 }
 
+select{
+  height:50px;
+}
 .search-button button {
   color: rgb(255, 255, 255);
   background-color: #1d6989;
@@ -143,8 +142,13 @@ body {
   margin: auto;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 80px;
 }
-.post_job, .post_contracts {
+
+
+.btn {
+  margin-top: 40px;
+  
   display:flex;
   justify-content: center;
   align-items: center;
@@ -160,7 +164,7 @@ body {
   border: 1px solid #273c75;
   transition: ease-in-out 0.2s;
 }
-.post_job:hover, .post_contracts:hover {
+.btn:hover {
   color: white;
   background-color: #273c75;
   cursor: pointer;
