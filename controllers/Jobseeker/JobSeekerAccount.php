@@ -224,7 +224,7 @@ class JobSeekerAccount extends Controller
 
     function update_jobseeker_data()
     {
-        var_dump($_POST);
+        // var_dump($_POST);
         if (isset($_POST)) {
         //   print_r($_POST);
           
