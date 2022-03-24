@@ -14,11 +14,11 @@
 }
 
 .text1 {
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .text2 {
-  font-size: x-large;
+  font-size: large;
   font-weight: lighter;
 }
 
@@ -140,11 +140,11 @@ textarea#skillDetails {
   }
 
   .text1 {
-    font-size: x-large;
+    font-size: large;
   }
 
   .text2 {
-    font-size: large;
+    font-size: medium;
     font-weight: lighter;
   }
 
@@ -158,12 +158,12 @@ textarea#skillDetails {
 @media only screen and (max-width: 600px) {
   /* heading texts */
   .text1 {
-    font-size: larger;
+    font-size: medium;
     text-align: center;
   }
 
   .text2 {
-    font-size: large;
+    font-size: small;
     text-align: center;
   }
 

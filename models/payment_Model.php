@@ -1,0 +1,10 @@
+
+<?php
+
+class payment_Model extends Model
+{
+    function __construct()
+    {
+        parent::__construct();
+    }
+}

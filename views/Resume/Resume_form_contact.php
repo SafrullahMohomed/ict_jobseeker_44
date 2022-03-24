@@ -49,10 +49,11 @@
 <!-- stepper is ends here -->
 
 <!-- form starts here -->
-<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact/Resume_form_data" method="post" id="form_resume">
 
+<!-- contact field starts here -->
 
-    <!-- contact feild starts here -->
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_1">
+
     <div class="" id="form1_contact">
         <!-- title field starts here -->
         <div class="title_text">
@@ -68,7 +69,8 @@
             <!-- profile picture -->
             <div class="profilePic">
                 <div class="profilePic_image">
-                    <img src="/ict_jobseeker_44/views/images/Resume/Resume.png" alt="image for profile picture"/>
+                    <img src="/ict_jobseeker_44/views/images/Resume/Resume.png" alt="image for profile picture"
+                         id="profilePicImage"/>
                 </div>
                 <div class="image_insertion">
                     <label for="profilePic">Profile Picture</label>
@@ -81,20 +83,20 @@
             <div class="firstName inp">
                 <label for="firstName">First Name</label>
                 <br/>
-                <input type="text" name="firstName" id="firstName" />
+                <input type="text" name="firstName" id="firstName"/>
             </div>
             <!-- last name  -->
             <div class="lastName inp">
                 <label for="lastName">Last Name</label>
                 <br/>
-                <input type="text" name="lastName" id="lastName" />
+                <input type="text" name="lastName" id="lastName"/>
             </div>
 
             <!-- email -->
             <div class="email inp">
                 <label for="email">Email</label>
                 <br/>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email"/>
             </div>
 
             <!-- phone number -->
@@ -108,7 +110,7 @@
             <div class="address inp">
                 <label for="address">Address</label>
                 <br/>
-                <input type="text" name="address" id="firstName"/>
+                <input type="text" name="address" id="address"/>
             </div>
 
             <!-- city -->
@@ -127,11 +129,27 @@
             </div>
         </div>
 
+        <!-- next, back buttons -->
+
+        <div class="bn_buttons">
+            <div class="back">
+                <button id="back_1" type="button" disabled>
+                    Back
+                </button>
+            </div>
+            <div class="next">
+                <button id="next_1" type="button">Next</button>
+            </div>
+        </div>
     </div>
-    <!-- contact form ends here -->
 
 
-    <!-- experience field starts here -->
+</form>
+
+<!-- contact form ends here -->
+
+<!-- experience field starts here -->
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_2">
 
     <div class="tab" id="form2_experience">
         <!-- text field starts here -->
@@ -148,7 +166,16 @@
         </div>
 
         <!-- experience form field starts here -->
-        <div class="experience_form">
+        <div class="experience_form" id=experience_form1>
+
+            <!--            cancel response-->
+
+            <div id="cancelButton${id_experience}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_experience(${id_experience})" class="fa fa-trash-o"
+                   aria-hidden="true"></i>
+            </div>
+
+
             <!-- job title -->
             <div class="jobTitle inp">
                 <label for="jobTitle">Job Title</label>
@@ -167,7 +194,7 @@
             <div class="city inp">
                 <label for="city">City</label>
                 <br/>
-                <input type="email" name="city" id="city"/>
+                <input type="text" name="city" id="city_experience"/>
             </div>
 
             <!-- state -->
@@ -181,7 +208,7 @@
             <div class="country inp">
                 <label for="country">Country</label>
                 <br/>
-                <input type="text" name="country" id="country"/>
+                <input type="text" name="country" id="country_experience"/>
             </div>
 
             <!-- experience details -->
@@ -195,11 +222,11 @@
             <div class="time_period inp">
                 <div class="from">
                     <label for="from">From</label>
-                    <input type="date" name="from" id="from"/>
+                    <input type="date" name="from" id="from_experience"/>
                 </div>
                 <div class="to">
                     <label for="to">To</label>
-                    <input type="date" name="to" id="to"/>
+                    <input type="date" name="to" id="to_experience"/>
                 </div>
             </div>
             <!-- currently working field starts here -->
@@ -209,19 +236,38 @@
                     I currently work here</label>
             </div>
 
-            <!-- add another experience button -->
-            <div class="add-another">
-                <button id = "add-experience"><span class="plus_for_button">+</span>Add another experience</button>
-            </div>
 
+        </div>
+
+        <div id="dynamic_experience">
+
+        </div>
+        <!-- add another experience button -->
+        <div class="add-another add-button-display-none" id="add-another-experience">
+            <button id="add-experience"><span class="plus_for_button">+</span>Add another experience</button>
+        </div>
+
+        <!-- next, back buttons -->
+        <div class="bn_buttons">
+            <div class="back">
+                <button id="back_2" type="button">
+                    Back
+                </button>
+            </div>
+            <div class="next">
+                <button id="next_2" type="button">Next</button>
+            </div>
         </div>
 
     </div>
 
 
-    <!-- experience feild ends here -->
+</form>
+<!-- experience field ends here -->
 
-    <!-- education feild starts here -->
+<!-- education field starts here -->
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_3">
+
     <div class="tab" id="form3_education">
 
         <!-- text field starts here -->
@@ -238,9 +284,16 @@
         </div>
 
         <!-- education form field starts here -->
-        <div class="education_form">
+        <div class="education_form" id="education_form1">
+            <!--            cancel response-->
+
+            <div id="cancelButton${id_education}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_education(${id_education})" class="fa fa-trash-o"
+                   aria-hidden="true"></i>
+            </div>
+
             <!-- Institute -->
-            <div class="instite inp">
+            <div class="institute inp">
                 <label for="institute">Institute</label>
                 <br/>
                 <input type="text" name="institute" id="institute"/>
@@ -257,7 +310,7 @@
             <div class="city inp">
                 <label for="city">City</label>
                 <br/>
-                <input type="text" name="city" id="city"/>
+                <input type="text" name="city" id="city_education"/>
             </div>
 
             <!-- state -->
@@ -271,7 +324,7 @@
             <div class="country inp">
                 <label for="country">Country</label>
                 <br/>
-                <input type="text" name="Country" id="country"/>
+                <input type="text" name="Country" id="country_education"/>
             </div>
 
             <!-- education details -->
@@ -286,11 +339,11 @@
             <div class="time_period inp">
                 <div class="from">
                     <label for="from">From</label>
-                    <input type="date" name="from" id="from"/>
+                    <input type="date" name="from" id="from_education"/>
                 </div>
                 <div class="to">
                     <label for="to">To</label>
-                    <input type="date" name="to" id="to"/>
+                    <input type="date" name="to" id="to_education"/>
                 </div>
             </div>
             <!-- study here field -->
@@ -301,20 +354,41 @@
             </div>
 
 
-            <!-- add another education button -->
-            <div class="add-another">
-                <button type="button" id = "add-education">
-                    <span class="plus_for_button"> + </span>Add another education
-                    qualification
-                </button>
-            </div>
         </div>
 
 
-    </div>
-    <!-- education feild ends here -->
+        <div id="dynamic_education">
 
-    <!-- skills starts here -->
+        </div>
+
+        <!-- add another education button -->
+        <div class="add-another" id="add-another-education">
+            <button type="button" id="add-education">
+                <span class="plus_for_button"> + </span>Add another education
+                qualification
+            </button>
+        </div>
+        <!-- next, back buttons -->
+
+        <div class="bn_buttons">
+            <div class="back">
+                <button id="back_3" type="button">
+                    Back
+                </button>
+            </div>
+            <div class="next">
+                <button id="next_3" type="button">Next</button>
+            </div>
+
+        </div>
+    </div>
+
+
+</form>
+<!-- education field ends here -->
+
+<!-- skills starts here -->
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_4">
 
     <div class="tab" id="form4_skills">
         <!-- text field starts here -->
@@ -337,12 +411,27 @@
                 <textarea name="skillDetails" id="skillDetails" cols="40" rows="10"></textarea>
             </div>
         </div>
+        <!-- next, back buttons -->
+
+        <div class="bn_buttons">
+            <div class="back">
+                <button id="back_4" type="button">
+                    Back
+                </button>
+            </div>
+            <div class="next">
+                <button id="next_4" type="button">Next</button>
+            </div>
+        </div>
     </div>
 
-    <!-- skills ends here -->
+
+</form>
+<!-- skills ends here -->
 
 
-    <!-- projects starts here -->
+<!-- projects starts here -->
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_5">
 
     <div class="tab" id="form5_projects">
         <!-- text field starts here -->
@@ -361,7 +450,15 @@
         </div>
 
         <!-- project form field starts here -->
-        <div class="project_form">
+        <div class="project_form" id="project_form1">
+
+            <!--            cancel response-->
+
+            <div id="cancelButton${id_project}" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_project(${id_project})" class="fa fa-trash-o"
+                   aria-hidden="true"></i>
+            </div>
+
             <!-- project title -->
             <div class="projectTitle inp">
                 <label for="projectTitle">Project title</label>
@@ -373,39 +470,39 @@
                 <label class="description">Project Description</label>
                 <textarea name="projectDetails" id="projectDetails" cols="30" rows="10"></textarea>
             </div>
+
+
         </div>
 
+        <div id="dynamic_project">
+
+        </div>
 
         <!-- add another project button -->
-        <div class="add-another">
-            <button type="button" id = "add-project">
+        <div class="add-another" id="add-another-project">
+            <button type="button" id="add-project">
                 <span class="plus_for_button"> + </span>Add another project
             </button>
         </div>
-    </div>
 
-    <!-- projects ends here -->
-
-    <!-- next, back buttons -->
-
-    <div class="bn_buttons">
-        <div class="back">
-            <button id="back" type="button" form="contact_form" disabled>
-                Back
-            </button>
-        </div>
-        <div class="next">
-            <button id="next" type="button" form="contact_form">Next</button>
-        </div>
-        <div class="next">
-            <button id="finish" type="submit" form="contact_form" disabled>
-                Submit
-            </button>
+        <!-- next, back buttons -->
+        <div class="bn_buttons">
+            <div class="back">
+                <button id="back_5" type="button">
+                    Back
+                </button>
+            </div>
+            <div class="next">
+                <button id="finish_5" type="button">
+                    Submit
+                </button>
+            </div>
         </div>
     </div>
-
-
 </form>
+
+
+<!-- projects ends here -->
 
 
 <!-- <div class="bn_buttons">

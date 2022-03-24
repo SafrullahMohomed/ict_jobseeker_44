@@ -19,31 +19,30 @@
           <img src='<?php echo URL ?>views/images/LearningMaterials/hometheme.jpg' >
         </div>
         <!-- theme image ends here -->
-        <form action="http://localhost/ict_jobseeker_44/LearningMaterials/SearchLearningMaterials" method="POST"  name="myForm">
+        <!-- <form action="http://localhost/ict_jobseeker_44/LearningMaterials/SearchLearningMaterials" method="POST"  name="myForm"> -->
         <div class="resource-search-box">
           <div class="search-your-keywords">
-            <input type="text" name="ResourceName" placeholder="Search your resource"/>
+            <input type="text" name="ResourceName" placeholder="Search your resource" onkeyup="ajaxload(this.value)">
           </div>
-          <div class="category">
+          <!-- <div class="category">
             <select name="Category">
               <option value="none" selected disabled hidden>
                 <span id="category-id-home">Select a Catogory</span>
               </option>
               <option value="Tutorials">Tutorials</option>
               <option value="Videos">Videos</option>
-              <!-- <option value="Exercises">Exercises</option>
-              <option value="Quizes">Quizes</option> -->
+              
             </select>
           </div>
           <div class="search-button">
-            <!-- <button type="submit" id="submit" name="submit">Search</button> -->
+            
             <input type="submit" id="submit" name="submit" value="Search"  onclick="return validateForm()"><br>
-          </div>
+          </div> -->
         </div>
-        </form>
+        <!-- </form> -->
       </div>
       <div class="Trending">Top Trending Resources</div>
-      <div class="ResourceRow">
+      <!-- <div class="ResourceRow">
           <div class="Academy">
             <img src='<?php echo URL ?>views/images/LearningMaterials/w3.png' >
           </div>
@@ -75,7 +74,7 @@
             <div class="Lesson">
               <img src='<?php echo URL ?>views/images/LearningMaterials/css3-.png' >
             </div>
-        </div>
+        </div> -->
       <!-- <div class="resource-boxes">
         <div class="first-row">
           <div class="Resource"><a href="#" id="link">Tutorials</a></div>
@@ -85,6 +84,21 @@
           <div class="Resource"><a href="#" id="link">Exercises</a></div>
           <div class="Resource"><a href="#" id="link">Quizes</a></div>
         </div> -->
+
+
+          <!-- learning materials list starts here -->
+
+          <div id="learning-materials">
+
+          </div>
+
+
+
+
+          <!-- load more button -->
+          <div id="pagination-link">
+          </div>
+
       </div>
       <?php include 'Footer.php'?>
     <script src="<?php echo URL ?>views/JS/LearningMaterials.js"></script>

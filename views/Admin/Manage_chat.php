@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Manage_chat.css">
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Normalize/Normalize.css">
-    <title>Document</title>
+    <title>Manage Chat</title>
 </head>
 
 <body>
@@ -23,8 +23,8 @@
 
         <!-- search part -->
         <div class="search-chats">
-            <input type="text" name="search-chats" id="search-chats" placeholder="Search Chats">
-            <button>Search</button>
+            <input type="text" name="search-chats" id="search-chats" placeholder="Search Chats" onkeyup="ajaxload(this.value)">
+            <!-- <button>Search</button> -->
         </div>
 
         <!-- add chats -->
@@ -32,19 +32,33 @@
             <button><span class="plus">+</span>Add Chats</button>
         </div> -->
 
-        <!-- table -->
-        <div class="table-chats">
-        Table
+        <!-- <div class="MsgRow">
+
+            <div class="InquiryFrom">
+                Java Script Java Script Java Script
+            </div>
+            <div class="Inquiry">
+                Java Script Tutorial chat-messages chat-messageschat-messages
+            </div>
+            <div class="InquiryStatus">
+                Java Script 
+            </div>
+            
+        </div> -->
+
+        <!-- message list starts here -->
+
+        <div id="chat-messages">
+
         </div>
 
-        <!-- load more button -->
-        <div class="load-more">
-            <button>Load More</button>
+        <div id="pagination-link">
+
         </div>
 
     </div>
 
-
+    <script  src="<?php echo URL?>views/JS/Manage_chat.js"></script>
 </body>
 
 </html>

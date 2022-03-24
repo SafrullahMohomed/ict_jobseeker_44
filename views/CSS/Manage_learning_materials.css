@@ -8,8 +8,8 @@
 }
 .MainContainer
 {
-    width:60%;
-    min-height:380px;
+    width:80%;
+    min-height:580px;
     margin: 200px auto 20px auto;
     padding: 10px;
     display: flex;
