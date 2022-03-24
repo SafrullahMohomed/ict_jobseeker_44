@@ -32,13 +32,13 @@
 
 }
 /*.left-division{*/
-/*  width:90%;*/
+/*  background-color: #1d6d86;*/
 /*}*/
 
 /*admin dashboard options*/
 .admin-dashboard-option{
   padding: 10px 0;
-  background-color: #003144;
+  background-color: #1d6d86;
   border-radius: 10px;
   margin-bottom: 5px;
 
@@ -64,7 +64,7 @@
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 30px;
-  background-color: #003144;
+  background-color: #1d6d86;
   border-radius: 10px;
 
 }

@@ -29,16 +29,13 @@ class Manage_counselling extends Controller
             if ($_POST["page"] > 1) {
                 $start = (($_POST["page"] - 1) * $limit);
                 $page = $_POST["page"];
-            }
-            else {
+            } else {
                 $start = 0;
             }
-            if($_POST["query"] != '')
-            {
+            if ($_POST["query"] != '') {
 
                 $counsellor_data = $this->model->select_data_table($_POST["query"], $page, $start, $limit);
-            }
-            else{
+            } else {
                 $counsellor_data = $this->model->select_data_table2($start, $limit);
             }
 
@@ -47,7 +44,7 @@ class Manage_counselling extends Controller
   
 	';
 
-            $total_links = ceil($counsellor_data[1]/$limit);
+            $total_links = ceil($counsellor_data[1] / $limit);
 
             $previous_link = '';
 
@@ -57,40 +54,30 @@ class Manage_counselling extends Controller
 
 
 //            pagination page array starts here
-            if($total_links > 4)
-            {
-                if($page < 5)
-                {
-                    for($count = 1; $count <= 5; $count++)
-                    {
+            if ($total_links > 4) {
+                if ($page < 5) {
+                    for ($count = 1; $count <= 5; $count++) {
                         $page_array[] = $count;
                     }
                     $page_array[] = '...';
                     $page_array[] = $total_links;
-                }
-                else
-                {
+                } else {
                     $end_limit = $total_links - 5;
 
-                    if($page > $end_limit)
-                    {
+                    if ($page > $end_limit) {
                         $page_array[] = 1;
 
                         $page_array[] = '...';
 
-                        for($count = $end_limit; $count <= $total_links; $count++)
-                        {
+                        for ($count = $end_limit; $count <= $total_links; $count++) {
                             $page_array[] = $count;
                         }
-                    }
-                    else
-                    {
+                    } else {
                         $page_array[] = 1;
 
                         $page_array[] = '...';
 
-                        for($count = $page - 1; $count <= $page + 1; $count++)
-                        {
+                        for ($count = $page - 1; $count <= $page + 1; $count++) {
                             $page_array[] = $count;
                         }
 
@@ -99,11 +86,8 @@ class Manage_counselling extends Controller
                         $page_array[] = $total_links;
                     }
                 }
-            }
-            else
-            {
-                for($count = 1; $count <= $total_links; $count++)
-                {
+            } else {
+                for ($count = 1; $count <= $total_links; $count++) {
                     $page_array[] = $count;
                 }
             }
@@ -111,24 +95,19 @@ class Manage_counselling extends Controller
 //pagination page array ends here
 
 
-            for($count = 0; $count < count($page_array); $count++)
-            {
-                if($page == $page_array[$count])
-                {
+            for ($count = 0; $count < count($page_array); $count++) {
+                if ($page == $page_array[$count]) {
                     $page_link .= '
 			
-	      		<a class="page-link active" href="#">'.$page_array[$count].' <span class="sr-only">(current)</span></a>
+	      		<a class="page-link active" href="#">' . $page_array[$count] . ' <span class="sr-only">(current)</span></a>
 	    	
 			';
 
                     $previous_id = $page_array[$count] - 1;
 
-                    if($previous_id > 0)
-                    {
-                        $previous_link = '<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$previous_id.')">Previous</a>';
-                    }
-                    else
-                    {
+                    if ($previous_id > 0) {
+                        $previous_link = '<a class="page-link" href="javascript:ajaxload(`' . $_POST["query"] . '`,' . $previous_id . ')">Previous</a>';
+                    } else {
                         $previous_link = '
 				
 			        <a class="page-link pagination-hidden" href="#">Previous</a>
@@ -138,37 +117,29 @@ class Manage_counselling extends Controller
 
                     $next_id = $page_array[$count] + 1;
 
-                    if($next_id > $total_links)
-                    {
+                    if ($next_id > $total_links) {
                         $next_link = '
 				
 	        		<a class="page-link pagination-hidden" href="#">Next</a>
 	      		
 				';
-                    }
-                    else
-                    {
+                    } else {
                         $next_link = '
-				<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$next_id.')">Next</a>
+				<a class="page-link" href="javascript:ajaxload(`' . $_POST["query"] . '`,' . $next_id . ')">Next</a>
 				';
                     }
 
-                }
-                else
-                {
-                    if($page_array[$count] == '...')
-                    {
+                } else {
+                    if ($page_array[$count] == '...') {
                         $page_link .= '
 				
 	          		<a class="page-link" href="#">...</a>
 	      	
 				';
-                    }
-                    else
-                    {
+                    } else {
                         $page_link .= '
 			
-					<a class="page-link" href="javascript:ajaxload(`'.$_POST["query"].'`,'.$page_array[$count].')">'.$page_array[$count].'</a>
+					<a class="page-link" href="javascript:ajaxload(`' . $_POST["query"] . '`,' . $page_array[$count] . ')">' . $page_array[$count] . '</a>
 				
 				';
                     }
@@ -183,12 +154,12 @@ class Manage_counselling extends Controller
 	</div>
 	';
             $output = array(
-                'data'				=>	$counsellor_data[0],
-                'pagination'		=>	$pagination_html,
-                'total_data'		=>	$counsellor_data[1],
-                'page_array'        =>  $page_array,
-                'page_no'           =>  $page,
-                'pagination_html'   =>  $pagination_html
+                'data' => $counsellor_data[0],
+                'pagination' => $pagination_html,
+                'total_data' => $counsellor_data[1],
+                'page_array' => $page_array,
+                'page_no' => $page,
+                'pagination_html' => $pagination_html
 
             );
 
@@ -202,8 +173,17 @@ class Manage_counselling extends Controller
         }
 
 
-
     }
+
+    function delete_counsellor_data()
+    {
+        $User_ID = $_GET['User'];
+        if($_SESSION['User_type'] == 'Admin44'){
+            $this->model->delete_counsellor_data_m($User_ID);
+        }
+        header("Location:http://localhost/ict_jobseeker_44/Admin/Manage_counselling");
+    }
+
 }
 
 ?>

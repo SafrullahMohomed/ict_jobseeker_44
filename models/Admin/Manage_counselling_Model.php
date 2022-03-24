@@ -9,7 +9,6 @@ class Manage_counselling_Model extends Model
 
     function select_data_table($query, $page, $start, $limit)
     {
-
         $condition = preg_replace('/[^A-Za-z0-9\- ]/', '', $query);
         $condition = trim($condition);
         $condition = str_replace(" ", "%", $condition);
@@ -47,7 +46,7 @@ class Manage_counselling_Model extends Model
                 Last_name LIKE :Last_name OR
                 Counsellor_provide_mock_interviews LIKE :Counsellor_provide_mock_interviews OR
                 Phone_number LIKE :Phone_number\n"
-            . "ORDER BY user.User_ID\n";
+            . "ORDER BY user.User_ID DESC\n";
 
         $filter_query = $sql . 'LIMIT ' . $start . ',' . $limit;
 //        return $filter_query;
@@ -111,18 +110,17 @@ class Manage_counselling_Model extends Model
         $result = $statement->fetchAll();
 
 
-            foreach ($result as $row) {
-                $data[] = array(
-                    'User_ID' => $row["User_ID"],
-                    'Email' => $row['Email'],
-                    'First_name' => $row['First_name'],
-                    'Last_name' => $row['Last_name'],
-                    'Counsellor_provide_mock_interviews' => $row['Counsellor_provide_mock_interviews'],
-                    'Phone_number' => $row['Phone_number'],
+        foreach ($result as $row) {
+            $data[] = array(
+                'User_ID' => $row["User_ID"],
+                'Email' => $row['Email'],
+                'First_name' => $row['First_name'],
+                'Last_name' => $row['Last_name'],
+                'Counsellor_provide_mock_interviews' => $row['Counsellor_provide_mock_interviews'],
+                'Phone_number' => $row['Phone_number'],
 
-                );
-            }
-
+            );
+        }
 
 
 //        array_push($final,$data);
@@ -132,6 +130,12 @@ class Manage_counselling_Model extends Model
 
     }
 
+    function delete_counsellor_data_m($User_ID)
+    {
+        $sql = "DELETE user.*, counsellor.* FROM user, counsellor WHERE user.User_ID = counsellor.User_ID AND user.User_ID = '".$User_ID."';";
+        $statement = $this->db->prepare($sql);
+        $statement->execute();
+    }
 
 }
 

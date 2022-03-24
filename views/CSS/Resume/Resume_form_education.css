@@ -14,11 +14,11 @@
 }
 
 .text1 {
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .text2 {
-  font-size: x-large;
+  font-size: large;
   font-weight: lighter;
 }
 
@@ -76,13 +76,13 @@
   width: 80%;
   margin: auto;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* each input boxes */
 input {
   width: 100%;
-  height: 35px;
+  height: 25px;
   border-radius: 2px;
   border: 1px solid black;
 }
@@ -99,7 +99,7 @@ input {
 /* input labels */
 
 .inp label {
-  font-size: 25px;
+  font-size: 17px;
 }
 
 /* input{
@@ -154,7 +154,7 @@ label .studying_label {
   max-width: 450px;
   min-width: 250px;
   height: 45px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   transition: ease-in-out 0.2s;
   border: 1px solid #1f78fb87;
@@ -169,7 +169,7 @@ label .studying_label {
 
 .add-another button .plus_for_button {
   font-weight: bolder;
-  font-size: xx-large;
+  /*font-size: xx-large;*/
 }
 
 /* add another button ends here */
@@ -234,11 +234,11 @@ label .studying_label {
   }
 
   .text1 {
-    font-size: x-large;
+    font-size: large;
   }
 
   .text2 {
-    font-size: large;
+    font-size: medium;
     font-weight: lighter;
   }
 
@@ -251,9 +251,9 @@ label .studying_label {
   .inp {
     width: 90%;
   }
-  .inp label {
-    font-size: 20px;
-  }
+  /*.inp label {*/
+  /*  font-size: 20px;*/
+  /*}*/
 
   input#studyHere {
     margin-left: 0px;
@@ -266,19 +266,19 @@ label .studying_label {
   /* add another field */
   .add-another button {
     height: 35px;
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   /* heading texts */
   .text1 {
-    font-size: larger;
+    font-size: medium;
     text-align: center;
   }
 
   .text2 {
-    font-size: large;
+    font-size: small;
     text-align: center;
   }
 

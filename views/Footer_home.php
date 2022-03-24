@@ -33,7 +33,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      background-color: #2c3e50;
+      background-color: #1d6d86;
       color: white;
       font-size: 15px;
       font-weight: 400;
@@ -52,14 +52,14 @@
 
     /* name logo */
     .ictjobseeker-name {
-      color: rgb(255, 255, 255);
+      color: rgb(165 165 165);
       font-size: 30px;
       font-weight: bold;
       margin-bottom: 5px;
     }
 
     .ictjobseeker-name .footer-jobseeker {
-      color: rgb(222, 206, 248);
+      color: #1e233a;
       font-size: 22px;
     }
 
@@ -70,7 +70,7 @@
     }
 
     .contactus-header {
-      color: #748aff;
+      color: #1e233a;
       font-size: 25px;
       font-weight: bolder;
       transform: translate(0%, 73%);
@@ -90,11 +90,15 @@
     /* footer second column starts here */
     .services-link-header,
     .information-header {
-      color: #748aff;
+      color: #1e233a;
       font-size: 25px;
       font-weight: bolder;
       position: relative;
       /*left: 37px;*/
+    }
+
+    .social-media-icons{
+        margin-top: -10px;
     }
 
     /* css for links */

@@ -33,7 +33,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      background-color: #2c3e50;
+      background-color: #1d6d86;
       color: white;
       font-size: 15px;
       font-weight: 400;

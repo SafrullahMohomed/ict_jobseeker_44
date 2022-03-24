@@ -52,7 +52,7 @@
     }
     /*This is for login bar of the header*/
     .login-bar {
-      background-color: #004867;
+      background-color: #1d6d86;
       width: 100%;
       height: 35px;
       border-radius: 0px;
@@ -117,23 +117,25 @@
       /*display: flex;*/
       width: 100%;
 
-      height: 58px;
-      background-color: #1d6989;
+      height: 40px;
+      background-color: white;
       border-radius: 0 0 7px 7px;
       justify-content: space-between;
         align-items: center;
+        box-shadow:  0 1px 3px 0 rgb(41 43 48 / 45%), 0 6px 20px 0 rgb(90 127 210 / 15%);
     }
 
     /*navigation logo style*/
 
     .navigation-header .logo img {
       float: left;
-
       border-radius: 50%;
       object-fit: cover;
-      height: 50px;
-      margin: 4px 7px !important;
+      height: 35px;
+      margin: 0
+      px 7px !important;
       width: 50px;
+
     }
 
     /*navigation menu main division*/
@@ -168,16 +170,17 @@
       letter-spacing: 1px;
       display: block;
       text-decoration: none;
-      color: white;
-      font-size: 22px;
+      color: #1d6989;
+      /*font-size: 22px;*/
       margin-right: 20px;
       transition: ease-in-out 0.2s;
+        font-weight: bold;
     }
 
     /*make the navigation menu hover property*/
     .navigation-menu a:hover {
       color: rgb(127, 135, 245);
-      font-weight: xx-large;
+      /*font-weight: xx-large;*/
     }
 
     /*header part ends here*/
@@ -187,7 +190,7 @@
     /* media queries */
     @media only screen and (max-width: 885px) {
         .navigation-menu a {
-            font-size: 18px;
+            /*font-size: 18px;*/
         }
     }
 
@@ -199,7 +202,7 @@
         }
 
         .navigation-menu a {
-            font-size: 17px;
+            /*font-size: 17px;*/
         }
 
         .navigation-header {
@@ -245,7 +248,7 @@
       }
 
       .navigation-menu a {
-        font-size: 16px;
+        /*font-size: 16px;*/
       }
 
       .navigation-header {
@@ -374,14 +377,30 @@ align-items: center;
               if ($_SESSION['User_type'] == "Counsellor") :
                   $My_profile = "Counsellor/Counsellor_profile?User=".$_SESSION['User_ID'];
               endif;
-
-
+              if ($_SESSION['User_type'] == "Admin44") :
+                  $Admin_home = "<?php echo URL?>.'Admin/Admin_home'";
+              endif;
 
 
               ?>
-              <a href="<?php echo URL . $My_profile ?>">My profile</a>
-              <a href="<?php echo URL ?>ChangePassword">Change password</a>
-              <a href="<?php echo URL ?>Login/logout">Logout</a>
+                <?php
+
+                $URL = "http://localhost/ict_jobseeker_44/";
+                if ($_SESSION['User_type'] == 'Admin44') {
+                    echo '<a href="';
+                    echo $URL . 'Admin/Admin_home">Admin Home</a>
+                    <a href="';
+                    echo $URL . 'Login/logout">Logout</a>';
+                } elseif ($_SESSION['User_type'] == 'Company' or 'Contract provider' or 'Jobseeker' or 'Counsellor') {
+                    echo '<a href="';
+                    echo $URL . $My_profile . '">My profile</a>
+                    <a href="';
+                    echo $URL . 'ChangePassword">Change password</a>
+                    <a href="';
+                    echo $URL . 'Login/logout">Logout</a>';
+                }
+
+                ?>
             </div>
           </div>
 

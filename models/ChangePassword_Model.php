@@ -9,7 +9,8 @@ class ChangePassword_Model extends Model{
     // compare current password and new password
     public function Verify_curr_password($CurrPassword)
     {
-        $query = "SELECT Password FROM user WHERE email =" . $_SESSION['email'] . "";
+        // var_dump($_SESSION['Email']);
+        $query = "SELECT Password FROM user WHERE email =" . $_SESSION['Email'] . "";
         $result= $this->db->runQuery_single($query);
 
         if($result->Password==$CurrPassword)
@@ -24,7 +25,7 @@ class ChangePassword_Model extends Model{
     }
     public function Update_password($NewPassword)
     {
-        $query = "UPDATE user SET Password='$NewPassword' WHERE email =" . $_SESSION['email'] . "";
+        $query = "UPDATE user SET Password='$NewPassword' WHERE email =" . $_SESSION['Email'] . "";
         $this->db->runQuery($query);
     }
    

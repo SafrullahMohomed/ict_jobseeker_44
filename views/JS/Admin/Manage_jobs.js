@@ -8,7 +8,6 @@ function ajaxload(query = '', page_number = 1) {
     form_data.append('page', page_number);
     const urlparam = new URLSearchParams(form_data);
 
-
     //initialize connection
     const xhr = new XMLHttpRequest();
 

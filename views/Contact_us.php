@@ -16,6 +16,7 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
+<?php if ( isset($_SESSION['User_ID']) && ($_SESSION['User_type']=="Jobseeker" || $_SESSION['User_type']=="Company" || $_SESSION['User_type']=="Contract provider" || $_SESSION['User_type']=="Counsellor")): ?>
 <body>
 <div class="container">
   <div style="text-align:center">
@@ -23,15 +24,16 @@
     <p> Leave us a message</p>
   </div>
   <div class="row">
-    
     <div class="input_box">
-      <form action="/action_page.php">
+      <form name="myForm" action="<?php echo URL ?>Contact_us/InsertMessage" method="post" id="jobseeker_form">
         
-        <input type="text" id="fname" name="firstname" placeholder="Your name.."> 
-        <input type="email" id="email" name="email" placeholder="Email">
-        <textarea type="text" id="message" row = "10" name="message" placeholder="Message.."></textarea>
-       
-       
+        <input type="text" id="name" name="name" placeholder="Enter Your Name" required onfocus=" hideFormError(name_error)"><br>  
+        <span id="name_error"> </span>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email" required onfocus="hideFormError(email_error)"><br>
+        <span id="email_error"> </span>
+        <textarea rows="10" id="message" name="message"  placeholder="Inquiry Or Message " required onfocus=" hideFormError(message_error)"></textarea><br>
+        <span id="message_error"></span>
+        
        
 
         <input type="submit" value="Submit" class="submit_button">
@@ -39,6 +41,12 @@
     </div>
   </div>
 </div>
+<?php endif; ?>
+    <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']=="Jobseeker" || $_SESSION['User_type']=="Company" || $_SESSION['User_type']=="Contract provider" || $_SESSION['User_type']=="Counsellor") : ?>
+        <div class="login_msg"> Before enter to this page you should login as User</div>
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
+    <?php endif; ?> 
 <?php include 'Footer.php'?>
+<script  src="<?php echo URL?>views/JS/ContactUs.js"></script>
 </body>
 </html>

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Manage_learning_materials.css">
+    <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Admin/Admin_add_lm.css">
     <style>
-        <?php include "CSS/Manage_learning_materials.css" ?> 
+        <?php include "CSS/Admin_add_lm.css" ?> 
         
     </style>
     <title>Add Learning Materials</title>
@@ -17,12 +17,15 @@
         <?php #include 'Header.php'?>
     </div> -->
     <!-- header part end  -->
-    
     <div>
-    <form class="MainContainer" name="myForm" action="<?php echo URL ?>admin/Admin_add_lm/AddLearningMaterials"  method="post">
+        
+    </div>
+    <div >
+    <form class="MainContainer" name="myForm" action="<?php echo URL ?>admin/Admin_add_lm/AddLearningMaterials"  method="post" enctype="multipart/form-data">
         <div class="Title">
             Add Learning Materials
         </div>
+        
         <div class="row" id="link">
             <label for="MaterialLink" class="labelfield">Learning Material Link </label><br>
             <input type="url" id="MaterialLink" name="MaterialLink" placeholder= "Enter Learning Material Link" class="inputfield" required onfocus=" hideFormError(MaterialLink_error)><br>
@@ -43,7 +46,20 @@
             <h3 id="disp" style= "color:red"> </h3>  
             <h4 id="error" style= "color:red"> </h4>  
         </div> 
-        
+        <div class="flex-container">
+            <div class="AcademyImgRow">
+                <label for="AcademyLogo" class="labelfield">Academy logo</label><br>
+                <img src='<?php echo URL ?>views/images/LearningMaterials/academy.jpg' id="AcademyImg">
+                <input type="file" id="AcademyFile" name="AcademyFile">
+                <label for="AcademyLogo" class="labelfield" id="AcademyLogoBtnUpload">Choose a photo</label><br>
+            </div> 
+            <div class="ResourceImgRow">
+                <label for="ResourceLogo" class="labelfield">Resource logo</label><br>
+                <img src='<?php echo URL ?>views/images/LearningMaterials/resource.jpg' id="ResourceImg">
+                <input type="file" id="ResourceFile" name="ResourceFile">
+                <label for="ResourceLogo" class="labelfield" id="ResourceLogoBtnUpload">Choose a photo</label><br>
+            </div>
+        </div>
        <div class="submit">
         <label for="submit" class="labelfield"></label><br>
         <input type="submit" id="submit" value="Add"  class="submit_button" onclick="return validateForm()"><br>
@@ -51,6 +67,6 @@
     </div>
      
     <!-- <?php #include 'Footer.php'?> -->
-    <script src="<?php echo URL ?>views/JS/AddLearningMaterials.js"></script>
+    <script src="<?php echo URL ?>views/JS/Admin_add_lm.js"></script>
 </body>
 </html>
