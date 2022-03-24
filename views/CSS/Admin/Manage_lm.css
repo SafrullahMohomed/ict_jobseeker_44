@@ -1,159 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    
+} 
 
 /* admin home button */
-/* admin home page */
 
-
-.main-container {
-    display: flex;
-    flex-direction: row;
-    /*align-content: center;*/
-    box-sizing: border-box;
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /* padding-top: 100px; */
-    margin-top: 170px;
+.admin-home-button{
+    display:flex;
+    justify-content: right;
+    margin:30px auto;
 }
 
 
-/* div dashboard */
-
-.right-division{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /*width:70%;*/
-    margin:auto;
-    margin-top: 0px;
-
-}
-
-/*admin dashboard options*/
-.admin-dashboard-option{
-    padding: 10px 0;
-    background-color: #003144;
-    border-radius: 10px;
-    margin-bottom: 5px;
-
-}
-.admin-dashboard-option:hover{
-    cursor: pointer;
-}
-
-.dashboard-box-option{
-    font-size: 32px;
-    text-align: center;
-    color: aliceblue;
-}
-
-
-/* admin boxes */
-
-.admin-options{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    /*margin:40px;*/
-    max-width: 300px;
-    max-height: 468px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 30px;
-    background-color: #003144;
-    border-radius: 10px;
-
-}
-/*admin dashboard options*/
-/* box link */
-.box {
-    width: 225px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3px;
-    border: 1px solid #91a4c7;
+.admin-home-button button{
+    color: white;
+    background-color: #496575;
     border-radius: 7px;
-    font-weight: 600;
+    width: 140px;
+    height: 35px;
     font-size: 17px;
-    color: aliceblue;
-    text-align: center;
-    box-shadow: 0 1px 0px 0 rgb(90 127 210 / 45%), 0 0px 20px 0 rgb(90 127 210 / 15%);
-    margin: 6px auto;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin-right: 40px;
 }
 
-.box:hover{
+.admin-home-button button:hover{
     cursor: pointer;
-    box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
 }
-
-/*.admin-home-button{*/
-/*    display:flex;*/
-/*    justify-content: right;*/
-/*    margin:30px auto;*/
-/*}*/
-
-
-/*.admin-home-button button{*/
-/*    color: white;*/
-/*    background-color: #496575;*/
-/*    border-radius: 7px;*/
-/*    width: 140px;*/
-/*    height: 35px;*/
-/*    font-size: 17px;*/
-/*    font-weight: 700;*/
-/*    transition: ease-in-out 0.2s;*/
-/*    border: 0;*/
-/*    letter-spacing: 1px;*/
-/*    margin-right: 40px;*/
-/*}*/
-
-/*.admin-home-button button:hover{*/
-/*    cursor: pointer;*/
-/*    color: #496575;*/
-/*    background-color: #ffffff;*/
-/*    border: 1px solid #496575;*/
-/*}*/
 /* admin home button ends here */
 
-/* counsellor search part starts here */
-/*.toggle-dashboard-left{*/
-/*    display: block;*/
-/*}*/
-/*.toggle-dashboard-right{*/
-/*    display:none;*/
-/*}*/
-/*  */
+/* learning materials search part starts here */
 
-
-.display-none{
-    /*display: none;*/
-    /*transform: translate(-100%);*/
-    overflow: hidden;
-    width:0px;
-}
-
-.search-counsellor {
+  
+  .search-lms {
     margin: auto;
-    margin-bottom: 6px;
+    margin-bottom: 30px;
     display: flex;
     background-color: #eeeeee;
     width: 70%;
-    height: 80px;
+    height: 145px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 7px;
-    padding-bottom: 0px;
-}
+    padding-bottom: 10px;
+  }
 
-.search-counsellor input{
-    width:60%;
-    max-width: 600px;
-    height:30px;
-}
-
-
-.search-counsellor button {
+  .search-lms input{
+      width:60%;
+      max-width: 600px;
+      height:30px;
+  }
+  
+  
+  .search-lms button {
     color: rgb(255, 255, 255);
     background-color: #1d6989;
     height: 37px;
@@ -163,46 +72,44 @@
     border: 0;
     font-weight: 600;
     letter-spacing: 1px;
-}
-
-.search-counsellor button:hover {
+  }
+  
+  .search-lms button:hover {
     cursor: pointer;
     color: #1d6989;
     background-color: #ffffff;
     border: 1px solid #1d6989;
     /* border-color: #1D6989 ; */
-}
+  }
 
-/* search counsellors field ends here */
+  /* search learning materials field ends here */
 
 
-/*  add counsellors button*/
-.add-counsellors button{
+/*  add learning materials button*/
+.add-lms button{
     background-color: #1f78fb87;
     border-radius: 25px;
-    width: 170px;
-    height: 32px;
-    font-size: 17px;
+    width: 400px;
+    height: 45px;
+    font-size: 25px;
     font-weight: 700;
     transition: ease-in-out 0.2s;
     border: 0;
     letter-spacing: 1px;
-    margin: 20px;
-    margin-bottom: 0px;
-
+    margin:30px;
+    
 }
 
-.add-counsellors button:hover{
+.add-lms button:hover{
     cursor: pointer;
     background-color: #ffffff;
     border: 1px solid #1f78fb87;
 }
 
-.add-counsellors .plus{
+.add-lms .plus{
     font-weight:bolder;
 }
 
-/* add counsellors button ends here */
 
 /* table starts here */
 
@@ -218,11 +125,11 @@ table {
     border-spacing: 2px;
     border-color: gray;
     /* margin: 10% 25% 10% 15%; */
-    margin: 50px 0px;
+    margin: 40px 0px;
     /*width:110%;*/
     /*overflow-x:auto;*/
     /*width:95%;*/
-
+    margin-left: 8%;
 
 }
 
@@ -285,29 +192,13 @@ td {
     flex-direction: row;
 }
 
-.left-division{
-    /*position: relative;*/
-    /*transform: translate(0%);*/
-    /*z-index: 100px;*/
-    background-color: #003144;
-}
-
-.toggle-dashboard-left{
-    display: block;
-}
-.toggle-dashboard-right{
-    display:block;
-}
-
-.show-sidebar{
-    transform: translate(0%);!important;
-    /*display: block;!important;*/
-}
-
-/*pagination*/
 
 .pagination {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+    margin-bottom: 50px;
+
 }
 
 .pagination-hidden{
@@ -332,120 +223,81 @@ td {
     border-radius: 5px;
 }
 
-@media only screen and (max-width: 960px) {
+/* add learning materials button ends here */
 
+/* table starts here */
 
-
-
-    .right-division{
-        /*width:90%;*/
-    }
-    table {
-        /*border-collapse: collapse; */
-        display: table;
-        border-collapse: separate;
-        border-spacing: 2px;
-        border-color: gray;
-        margin: 5% 4% 5% 4%;
-        /*width:100%;*/
-
-    }
-
-}
 /* table ends here */
 
-
 /* load more button starts here */
-/*.load-more{*/
-/*    margin:20px auto;*/
-/*    display:flex;*/
-/*    justify-content: center;*/
-/*    margin: auto;*/
-/*}*/
-/*.load-more button{*/
-/*    color: white;*/
-/*    background-color: #496575;*/
-/*    border-radius: 25px;*/
-/*    width: 200px;*/
-/*    height: 45px;*/
-/*    font-size:25px;*/
-/*    font-weight: 700;*/
-/*    transition: ease-in-out 0.2s;*/
-/*    border: 0;*/
-/*    letter-spacing: 1px;*/
-/*    */
-/*}*/
-
-/*.load-more button:hover{*/
-/*    cursor: pointer;*/
-/*    color: #496575;*/
-/*    background-color: #ffffff;*/
-/*    border: 1px solid #496575;*/
-/*}*/
-/* laod more button ends here */
-
-/* registration text */
-
-.registration-text{
-    margin: 40px auto;
-    width:80%;
-    font-size: 40px;
-    text-align: center;
-
+.load-more{
+    margin:20px auto;
+    display:flex;
+    justify-content: center;
+    margin: auto;
 }
+.load-more button{
+    color: white;
+    background-color: #496575;
+    border-radius: 25px;
+    width: 200px;
+    height: 45px;
+    font-size:25px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    
+}
+
+.load-more button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+}
+/* laod more button ends here */
 /* media queries */
+@media only screen and (max-width: 952px){
+    /* search learning materials input feild */
+    .search-lms input{
+        width:60%;
+        max-width: 600px;
+        height:30px;
+    }
+  }
 
 
 @media only screen and (max-width:900px){
     /* search part */
-    .search-counsellor{
+    .search-lms{
         display:flex;
         flex-direction: column;
     }
 
-    .search-counsellor input{
+    .search-lms input{
         width: 80%;
     }
 
-    /* add counsellors part */
-    .add-counsellors button{
+    /* add learning materials part */
+    .add-lms button{
         border-radius: 25px;
-        width: 170px;
-        height: 32px;
-        font-size: 17px;
+        width: 250px;
+        height: 35px;
+        font-size: 15px;
     }
-
-
-
+    
     /* load more button */
 
-
     .load-more button{
-
+       
         border-radius: 25px;
         width: 150px;
         height: 35px;
         font-size:20px;
         font-weight: 700;
-
-    }
-
-    .registration-text{
-        font-size: 30px;
+        
+        
     }
 }
 
-@media only screen and (max-width: 780px) {
-    .toggle-dashboard-left{
-        display: block;
-    }
-    .toggle-dashboard-right{
-        display:block;
-    }
-    .main-container{
-        margin-top: 50px;
-    }
-
-
-
-}

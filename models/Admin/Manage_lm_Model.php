@@ -9,45 +9,28 @@ class Manage_lm_Model extends Model
 
     function select_data_table($query, $page, $start, $limit)
     {
-
         $condition = preg_replace('/[^A-Za-z0-9\- ]/', '', $query);
         $condition = trim($condition);
         $condition = str_replace(" ", "%", $condition);
         $sample_data = array(
-            ':User_ID' => '%' . $condition . '%',
-            ':Email' => '%' . $condition . '%',
-            ':First_name' => '%' . $condition . '%',
-            ':Last_name' => '%' . $condition . '%',
-            ':Counsellor_provide_mock_interviews' => '%' . $condition . '%',
-            ':Phone_number' => '%' . $condition . '%'
+            ':LearningMaterial_ID' => '%' . $condition . '%',
+            ':LearningMaterial_link' => '%' . $condition . '%',
+            ':LearningMaterial_category' => '%' . $condition . '%',
+            ':LearningMaterial_title	' => '%' . $condition . '%',
+            ':Academy_logo' => '%' . $condition . '%',
+            ':Resource_logo' => '%' . $condition . '%'
         );
 
-//        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Counsellor_provide_mock_interviews, Phone_number\n"
-//
-//            . "FROM user\n"
-//
-//            . "JOIN counsellor ON user.User_ID = counsellor.User_ID\n"
-//
-//            . "WHERE user.User_ID LIKE :User_ID OR
-//            Email LIKE :Email OR
-//            First_name LIKE :First_name OR
-//            Last_name LIKE :Last_name OR
-//            Counsellor_provide_mock_interviews LIKE :Counsellor_provide_mock_interviews OR
-//            Phone_number LIKE :Phone_number\n"
-//
-//
-//            . "ORDER BY user.User_ID\n";
 
-        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Counsellor_provide_mock_interviews, Phone_number\n"
-            . "FROM user\n"
-            . "JOIN counsellor ON user.User_ID = counsellor.User_ID\n"
-            . "WHERE user.User_ID LIKE :User_ID OR
-                Email LIKE :Email OR
-                First_name LIKE :First_name OR
-                Last_name LIKE :Last_name OR
-                Counsellor_provide_mock_interviews LIKE :Counsellor_provide_mock_interviews OR
-                Phone_number LIKE :Phone_number\n"
-            . "ORDER BY user.User_ID\n";
+        $sql = "SELECT LearningMaterial_ID, LearningMaterial_link, LearningMaterial_category, LearningMaterial_title, Academy_logo, Resource_logo\n"
+            . "FROM learningmaterial\n"
+            . "WHERE LearningMaterial_ID LIKE :LearningMaterial_ID OR
+                LearningMaterial_link LIKE :LearningMaterial_link OR
+                LearningMaterial_category LIKE :LearningMaterial_category OR
+                LearningMaterial_title LIKE :LearningMaterial_title OR
+                Academy_logo LIKE :Academy_logo OR
+                Resource_logo LIKE :Resource_logo\n"
+            . "ORDER BY LearningMaterial_ID ASC\n";
 
         $filter_query = $sql . 'LIMIT ' . $start . ',' . $limit;
 //        return $filter_query;
@@ -69,12 +52,12 @@ class Manage_lm_Model extends Model
 
         foreach ($result as $row) {
             $data[] = array(
-                'User_ID' => str_ireplace($replace_array_1, $replace_array_2, $row["User_ID"]),
-                'Email' => str_ireplace($replace_array_1, $replace_array_2, $row["Email"]),
-                'First_name' => str_ireplace($replace_array_1, $replace_array_2, $row["First_name"]),
-                'Last_name' => str_ireplace($replace_array_1, $replace_array_2, $row["Last_name"]),
-                'Counsellor_provide_mock_interviews' => str_ireplace($replace_array_1, $replace_array_2, $row["Counsellor_provide_mock_interviews"]),
-                'Phone_number' => str_ireplace($replace_array_1, $replace_array_2, $row["Phone_number"])
+                'LearningMaterial_ID' => str_ireplace($replace_array_1, $replace_array_2, $row["LearningMaterial_ID"]),
+                'LearningMaterial_link' => str_ireplace($replace_array_1, $replace_array_2, $row["LearningMaterial_link"]),
+                'LearningMaterial_category' => str_ireplace($replace_array_1, $replace_array_2, $row["LearningMaterial_category"]),
+                'LearningMaterial_title' => str_ireplace($replace_array_1, $replace_array_2, $row["LearningMaterial_title"]),
+                'Academy_logo' => str_ireplace($replace_array_1, $replace_array_2, $row["Academy_logo"]),
+                'Resource_logo' => str_ireplace($replace_array_1, $replace_array_2, $row["Resource_logo"])
             );
         }
 //        return print_r($data);
@@ -88,12 +71,11 @@ class Manage_lm_Model extends Model
     {
 //        declare an empty array
         $final = array();
-        $sql2 = "SELECT user.User_ID, Email, First_name, Last_name, Counsellor_provide_mock_interviews, Phone_number\n"
+        $sql2 = "SELECT LearningMaterial_ID, LearningMaterial_link, LearningMaterial_category, LearningMaterial_title, Academy_logo, Resource_logo\n"
 
-            . "                FROM user\n"
+            . "FROM learningmaterial\n"
 
-            . "                JOIN counsellor ON user.User_ID = counsellor.User_ID\n"
-            . "ORDER BY user.User_ID DESC";
+            . "ORDER BY LearningMaterial_ID ASC";
 
         $filter_query = $sql2 . ' LIMIT ' . $start . ', ' . $limit;
 
@@ -113,16 +95,15 @@ class Manage_lm_Model extends Model
 
         foreach ($result as $row) {
             $data[] = array(
-                'User_ID' => $row["User_ID"],
-                'Email' => $row['Email'],
-                'First_name' => $row['First_name'],
-                'Last_name' => $row['Last_name'],
-                'Counsellor_provide_mock_interviews' => $row['Counsellor_provide_mock_interviews'],
-                'Phone_number' => $row['Phone_number'],
+                'LearningMaterial_ID' => $row["LearningMaterial_ID"],
+                'LearningMaterial_link' => $row['LearningMaterial_link'],
+                'LearningMaterial_category' => $row['LearningMaterial_category'],
+                'LearningMaterial_title' => $row['LearningMaterial_title'],
+                'Academy_logo' => $row['Academy_logo'],
+                'Resource_logo' => $row['Resource_logo'],
 
             );
         }
-
 
 
 //        array_push($final,$data);
@@ -132,7 +113,11 @@ class Manage_lm_Model extends Model
 
     }
 
-
+    // function delete_lm_data_m($LearningMaterial_ID)
+    // {
+    //     $sql = "DELETE * FROM learningmaterial WHERE user.User_ID = counsellor.User_ID AND user.User_ID = '".$User_ID."';";
+    //     $statement = $this->db->prepare($sql);
+    //     $statement->execute();
+    // }
 }
-
 
