@@ -7,6 +7,11 @@
     color: #585656;
     font-size: 1em;
 }
+.required:after {
+    content:" *";
+    color: red;
+    }
+    
 .main_container{
 width:60%;
 min-height:1000px;

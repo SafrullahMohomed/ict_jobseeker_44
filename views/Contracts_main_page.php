@@ -16,7 +16,7 @@
 </head>
 
 
-<body onload="contractLoad()">
+<body >
       <!-- header part with css html js -->
       <div class="header_div" >
         <?php include 'Header.php'?>
@@ -38,23 +38,28 @@
             type="text"
             name="Search your keyword"
             placeholder="Search for a contract"
+            onkeyup="ajaxload(this.value);"
           />
         </div>
         <div class="category">
-          <select name="Category">
-            <option value="none" selected disabled hidden>
-              <span id="category-id-home">Select a contract Catogory</span>
-            </option>
-            <option value="Software Engineering">Software Engineering</option>
-            <option value="Qaulity Assurance">Qaulity Assurance</option>
-            <option value="Frontend Developing">Frontend Developing</option>
-            <option value="Backend Developing">Backend Developing</option>
-            <option value="Senior Sofware Engineering">
-              Senior Sofware Engineering
-            </option>
-            <option value="Fullstack developing">Fullstack developing</option>
-            <option value="Data Science">Data Science</option>
-          </select>
+        <select name="Category"  onchange="ajaxload(this.value);" >
+                    <option value="none" selected disabled hidden>
+                        <span id="category-id-home">Select a Catogory</span>
+                    </option>
+                    <?php 
+        $data_count=count($data['ContractCategory']);
+      
+        for($x = 0; $x < $data_count; $x++  )
+        {
+          echo "<option value=' " .$data['ContractCategory'][$x]['Contract_category'] ." '>" ;
+          echo $data['ContractCategory'][$x]['Contract_category'];
+          echo"</option>";
+        
+        }
+        
+        ?>
+                </select>
+          
         </div>
         <!-- <div class="location">
           <input type="text" name="location" placeholder="location" />
@@ -68,32 +73,10 @@
 
   <div class="main_container">
   <!--   Top trending contracts category start -->
-  <div class="top_trending_categories_title ">Top Trending Categories </div>
-  <div class="top_trending_categories_container">
+  <div class="top_trending_categories_title" id="top_trending_categories_title">Top Trending Categories </div>
+  <div class="top_trending_categories_container" id="top_trending_categories_container">
    
-    <div class="top_trending_categories_box_row">
-    
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Graphic & Design</p></div>
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Video Editing</p></div>
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Data Analyst</p></div>
-
-    
-    </div>
-    <!-- <div class="top_trending_categories_box_arrows">
-        <i class="fa fa-chevron-left" ></i>
-        <i class="fa fa-chevron-right" ></i>
-    </div> -->
-    
-    <div class="top_trending_categories_box_row">
-    
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Computer Service Technician</p></div>
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Software Engineer</p></div>
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Data Analyst</p></div>
-    
-        
-    
-    </div>
-    
+  <!-- load top contract categories from database -->
     </div>
     <!-- top trending category contracts end -->
     <!-- features contracts start -->
@@ -108,14 +91,16 @@
 <!-- contract row end -->
 
   </div>
-
+<!-- pagination link -->
+<div id="pagination-link">
+        </div>
   <!-- Footer part with css html js -->
   <div class="Footer_div" >
         <?php include 'Footer.php'?>
 </div>
       <!-- Footer part end  -->
 
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script  src="<?php echo URL?>views/JS/Contracts_main_page.js"></script>
  

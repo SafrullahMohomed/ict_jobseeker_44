@@ -35,14 +35,14 @@
        </div>
         </div>
         <div class="row">
-            <label for="fname" class="labelfield">First Name</label><br>
+            <label for="fname" class="labelfield required" >First Name</label><br>
             <input type="text" id="fname" name="fname" placeholder= "Enter your first name..." value="<?php echo $_SESSION['First_name']?>" autocomplete="fname" require class="inputfield" onfocus=" hideFormError(fname_error)"><br>
             <span id="fname_error"><?php #echo  $_SESSION["fnameErr"] ?></span>
 
            
         </div>
         <div class="row">
-            <label for="lname" class="labelfield">Last Name</label><br>
+            <label for="lname" class="labelfield required">Last Name</label><br>
             <input type="text" id="lname" name="lname" placeholder= "Enter your last name..."  value=" <?php echo $_SESSION['Last_name']?>" autocomplete="lname" require class="inputfield" onfocus=" hideFormError(lname_error)"><br>
             <span id="lname_error"><?php #echo  $_SESSION["lnameErr"]?></span>
         </div>
@@ -53,11 +53,11 @@
         </div>
         <div class="row">
             <label for="Phone_number" class="labelfield">Phone number</label><br>
-            <input type="text" id="phonenumber" name="phone_number" placeholder= "use format 0775689756"  require class="inputfield" onfocus=" hideFormError(phonenumber_error)"><br>    
+            <input type="text" id="phonenumber" name="phone_number" placeholder= "use format 0775689756"   class="inputfield" onfocus=" hideFormError(phonenumber_error)"><br>    
             <span id="phonenumber_error"><?php #echo   $_SESSION["phone_numberErr"] ?></span>
         </div>
         <div class="row">
-            <label for="NIC" class="labelfield">NIC</label><br>
+            <label for="NIC" class="labelfield required">NIC</label><br>
             <input type="text" id="NIC" name="nic" placeholder= "NIC" class="inputfield" require onfocus=" hideFormError(nic_error)"><br>
             <span id="nic_error"><?php #echo   $_SESSION["nicErr"]?></span>
 
@@ -71,7 +71,7 @@
         </div>
         
         <div class="row">
-            <label for="email" class="labelfield">Email</label><br>
+            <label for="email" class="labelfield required">Email</label><br>
             <input type="email" id="email" name="email" placeholder= "Email" value="<?php echo $_SESSION['Email']  ?>" autocomplete="email" readonly  require class="inputfield" onfocus=" hideFormError(email_error)"><br>
             <span id="email_error" class="error"><?php #echo   $_SESSION["emailErr"]?></span>
         </div>

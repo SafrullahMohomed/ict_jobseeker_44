@@ -72,7 +72,7 @@
     <option value="" selected>Select job category</option> 
         <?php 
         $data_count=count($data['jobCategory']);
-        echo  $data_count;
+       
         for($x = 0; $x < $data_count; $x++  )
         {
           echo "<option value=' " .$data['jobCategory'][$x]['JobCategory_ID'] ." '>" ;
@@ -121,8 +121,9 @@
     <!-- <label for="Country" class="labelfield">Country</label><br>
     <input type="text" id="Country" name="Country" placeholder="" class="inputfield"><br> -->
 
-    <label for="City" class="labelfield ">City</label><br>
+    <label for="City" class="labelfield ">District</label><br>
     <select type="text" id="City" name="City" placeholder="" class="inputfield"><br>
+    <option value=" "selected disable >Select a district  </option>
     <option value="Ampara ">Ampara  </option>
               <option value="Anuradhapura ">Anuradhapura </option>
               <option value="Badulla ">Badulla </option>
@@ -194,7 +195,7 @@
 
     </div> -->
     <div class="radiobutton_class" onmouseover=" hideFormError(Supply_Mock_Interviews_answer_error)">
-        <span class="labelfield">Supply Mock Interviews</span>
+        <span class="labelfield">Provide Mock Interviews</span>
      <div class="radiobutton_style">
         <div class="radiobutton_style">
       <input type="radio" id="Supply_Mock_Interviews_yes" name="Supply_Mock_Interviews_answer" required value="Yes" class="radiobutton">
