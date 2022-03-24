@@ -13,6 +13,7 @@ class Contracts_main_page extends Controller
         //load available ict Contract categories from database
         $ContractCategory=$this->model->getContractCategory();
         $data['ContractCategory']=$ContractCategory;
+       
         //pass view name
         $this->view ->render2('Contracts_main_page',$data);
       
@@ -32,7 +33,7 @@ class Contracts_main_page extends Controller
   function search_Contracts(){
     if (isset($_POST["query"])) {
 
-      $limit = 5;
+      $limit = 4;
       $page = 1;
 
 
@@ -194,6 +195,7 @@ class Contracts_main_page extends Controller
 ';
       $output = array(
           'data'				=>	$job_data[0],
+          'category'            =>	$job_data[2],
           'pagination'		=>	$pagination_html,
           'total_data'		=>	$job_data[1],
           'page_array'        =>  $page_array,

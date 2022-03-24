@@ -192,6 +192,7 @@ class Jobs_main_page extends Controller
 ';
       $output = array(
           'data'				=>	$job_data[0],
+          'category'            =>	$job_data[2],
           'pagination'		=>	$pagination_html,
           'total_data'		=>	$job_data[1],
           'page_array'        =>  $page_array,

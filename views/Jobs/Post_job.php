@@ -121,8 +121,9 @@
     <!-- <label for="Country" class="labelfield">Country</label><br>
     <input type="text" id="Country" name="Country" placeholder="" class="inputfield"><br> -->
 
-    <label for="City" class="labelfield ">City</label><br>
+    <label for="City" class="labelfield ">District</label><br>
     <select type="text" id="City" name="City" placeholder="" class="inputfield"><br>
+    <option value=" "selected disable >Select a district  </option>
     <option value="Ampara ">Ampara  </option>
               <option value="Anuradhapura ">Anuradhapura </option>
               <option value="Badulla ">Badulla </option>

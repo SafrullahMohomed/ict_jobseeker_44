@@ -16,7 +16,7 @@
 </head>
 
 
-<body onload="contractLoad()">
+<body >
       <!-- header part with css html js -->
       <div class="header_div" >
         <?php include 'Header.php'?>
@@ -51,8 +51,8 @@
       
         for($x = 0; $x < $data_count; $x++  )
         {
-          echo "<option value=' " .$data['ContractCategory'][$x]['ContractCategory_name'] ." '>" ;
-          echo $data['ContractCategory'][$x]['ContractCategory_name'];
+          echo "<option value=' " .$data['ContractCategory'][$x]['Contract_category'] ." '>" ;
+          echo $data['ContractCategory'][$x]['Contract_category'];
           echo"</option>";
         
         }
@@ -73,33 +73,10 @@
 
   <div class="main_container">
   <!--   Top trending contracts category start -->
-  <div class="top_trending_categories_title ">Top Trending Categories </div>
-  <div class="top_trending_categories_container">
+  <div class="top_trending_categories_title" id="top_trending_categories_title">Top Trending Categories </div>
+  <div class="top_trending_categories_container" id="top_trending_categories_container">
    
-    <div class="top_trending_categories_box_row">
-    
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Graphic & Design</p></div>
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Video Editing</p></div>
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Data Analyst</p></div>
-    
-        
-    
-    </div>
-    <!-- <div class="top_trending_categories_box_arrows">
-        <i class="fa fa-chevron-left" ></i>
-        <i class="fa fa-chevron-right" ></i>
-    </div> -->
-    
-    <div class="top_trending_categories_box_row">
-    
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Computer Service Technician</p></div>
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Software Engineer</p></div>
-        <div class="top_trending_categories_box"><p class="top_trending_categories_box_text">Data Analyst</p></div>
-    
-        
-    
-    </div>
-    
+  <!-- load top contract categories from database -->
     </div>
     <!-- top trending category contracts end -->
     <!-- features contracts start -->
@@ -114,14 +91,16 @@
 <!-- contract row end -->
 
   </div>
-
+<!-- pagination link -->
+<div id="pagination-link">
+        </div>
   <!-- Footer part with css html js -->
   <div class="Footer_div" >
         <?php include 'Footer.php'?>
 </div>
       <!-- Footer part end  -->
 
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script  src="<?php echo URL?>views/JS/Contracts_main_page.js"></script>
  

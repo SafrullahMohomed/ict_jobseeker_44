@@ -84,9 +84,19 @@ function select_data_table($query, $page, $start, $limit)
         }
 //        return print_r($data);
 
-        return array(json_encode($data), $total_data);
+//get features category data start
 
-    }
+$sql3 = "SELECT JobCategory_name FROM jobcategory ORDER BY JobCategory_count DESC LIMIT 6";
+
+$stmt1=$this->db->prepare($sql3);   
+$stmt1->execute();
+$category=$stmt1->fetchAll();
+
+////get features category data end
+
+ return array(json_encode($data),$total_data,json_encode($category));
+
+}
 
 //when searching job
     function select_data_table2($start, $limit)
@@ -128,11 +138,19 @@ function select_data_table($query, $page, $start, $limit)
                 'Job_type'=> $row['Job_type']
             );
         }
+        //get features category data start
 
+$sql3 = "SELECT JobCategory_name FROM jobcategory ORDER BY JobCategory_count DESC LIMIT 6";
+
+$stmt1=$this->db->prepare($sql3);   
+$stmt1->execute();
+$category=$stmt1->fetchAll();
+
+////get features category data end
 
 
 //        array_push($final,$data);
-        return array(json_encode($data), $total_data);
+        return array(json_encode($data), $total_data,json_encode($category));
 //
 
 

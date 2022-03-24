@@ -36,7 +36,7 @@ class Contracts_main_page_Model extends Model{
 
 
 
-        $sql = "SELECT Contract_ID, Contract_title, First_name, Last_name,Contract_deadline\n"
+        $sql = "SELECT Contract_ID, Contract_title, First_name,Contract_description,Contract_bid_avg, Last_name,Contract_deadline\n"
             . "FROM contractprovider\n"
             . "JOIN contract ON contract.Contract_provider_ID = contractprovider.User_ID\n"
             . "JOIN user ON user.User_ID = contractprovider.User_ID\n"
@@ -71,12 +71,22 @@ class Contracts_main_page_Model extends Model{
                 'Contract_title' => str_ireplace($replace_array_1, $replace_array_2, $row["Contract_title"]),
                 'First_name' => str_ireplace($replace_array_1, $replace_array_2, $row["First_name"]),
                 'Last_name' => str_ireplace($replace_array_1, $replace_array_2, $row["Last_name"]),
+                'Contract_description' => str_ireplace($replace_array_1, $replace_array_2, $row["Contract_description"]),
+                'Contract_bid_avg' => str_ireplace($replace_array_1, $replace_array_2, $row["Contract_bid_avg"]),
                 'Contract_deadline' => str_ireplace($replace_array_1, $replace_array_2, $row["Contract_deadline"])
             );
         }
 //        return print_r($data);
+//get features category data start
 
-        return array(json_encode($data), $total_data);
+$sql3 = "SELECT Contract_category FROM contract_category ORDER BY Contract_count DESC LIMIT 6";
+
+$stmt1=$this->db->prepare($sql3);   
+$stmt1->execute();
+$category=$stmt1->fetchAll();
+
+//get features category data end
+        return array(json_encode($data), $total_data,json_encode($category));
 
     }
 
@@ -85,7 +95,7 @@ class Contracts_main_page_Model extends Model{
     {
 //        declare an empty array
         $final = array();
-        $sql2 = "SELECT Contract_ID, Contract_title, First_name, Last_name, Contract_deadline\n"
+        $sql2 = "SELECT Contract_ID, Contract_title, First_name, Last_name,Contract_description,Contract_bid_avg, Contract_deadline\n"
             . "FROM contractprovider\n"
             . "JOIN contract ON contract.Contract_provider_ID = contractprovider.User_ID\n"
             . "JOIN user ON user.User_ID = contractprovider.User_ID\n"
@@ -114,6 +124,8 @@ class Contracts_main_page_Model extends Model{
                 'Contract_title' => $row['Contract_title'],
                 'First_name' => $row['First_name'],
                 'Last_name' => $row['Last_name'],
+                'Contract_description' => $row['Contract_description'],
+                'Contract_bid_avg' => $row['Contract_bid_avg'],
                 'Contract_deadline' => $row['Contract_deadline']
             );
         }
@@ -121,7 +133,16 @@ class Contracts_main_page_Model extends Model{
 
 
 //        array_push($final,$data);
-        return array(json_encode($data), $total_data);
+//get features category data start
+
+$sql3 = "SELECT Contract_category FROM contract_category ORDER BY Contract_count DESC LIMIT 6";
+
+$stmt1=$this->db->prepare($sql3);   
+$stmt1->execute();
+$category=$stmt1->fetchAll();
+
+////get features category data end
+        return array(json_encode($data), $total_data,json_encode($category));
 //
 
 
@@ -129,11 +150,11 @@ class Contracts_main_page_Model extends Model{
 
     //load available ict contract categories from database
 public function getContractCategory(){
-    $query1="SELECT ContractCategory_ID,ContractCategory_name
-    FROM contractcategory ";
-
-    $s=$this->db->runQuery($query1);   
-    return $s;
+    $query1="SELECT Contractcatergory_ID,Contract_category FROM contract_category ";
+    $stmt1=$this->db->prepare($query1);   
+    $stmt1->execute();
+    $category=$stmt1->fetchAll();   
+    return $category;
 }
 
 

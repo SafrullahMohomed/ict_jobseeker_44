@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload="jobLoad()">
+<body>
     <!-- header part with css html js -->
     <div class="header_div">
 
@@ -59,6 +59,9 @@
             </div>
             <div class="location">
                 <select type="text" name="location" placeholder="location" onchange="ajaxload(this.value);" >
+                <option value="none" selected disabled hidden>
+                        <span id="category-id-home">Select a Distric</span>
+                    </option>
                 <option value="Ampara ">Ampara  </option>
               <option value="Anuradhapura ">Anuradhapura </option>
               <option value="Badulla ">Badulla </option>
@@ -92,48 +95,15 @@
         </div>
     </div>
     <!-- themes image and job search part ends here -->
-    <div class="main_container">
+    <div class="main_container" id="main_container">
 
+        <div class="top_trending_categories_title " id="top_trending_categories_title">Top Trending Categories </div>
 
-
-        <div class="top_trending_categories_title ">Top Trending Categories </div>
-
-        <div class="top_trending_categories_container">
-
-            <div class="top_trending_categories_box_row">
-
-                <div class="top_trending_categories_box"><a href="">Computer Service Technician</a></div>
-
-
-                <div class="top_trending_categories_box"><a href="">Software Engineer</a></div>
-
-
-                <div class="top_trending_categories_box"><a href="">Data Analyst</a></div>
-
-
-
-
-            </div>
-            <!-- <div class="top_trending_categories_box_arrows">
-    <i class="fa fa-chevron-left" ></i>
-    <i class="fa fa-chevron-right" ></i>
-</div> -->
-
-            <div class="top_trending_categories_box_row">
-
-                <div class="top_trending_categories_box"><a href="">Computer Service Technician</a></div>
-
-
-                <div class="top_trending_categories_box"><a href="">Software Engineer</a></div>
-
-
-                <div class="top_trending_categories_box"><a href="">Data Analyst</a></div>
-
-
-            </div>
-
+        <div class="top_trending_categories_container" id="top_trending_categories_container">
+<!-- load top 6 job categories data from data base -->
+            
         </div>
-        <div class="features_job">
+        <div class="features_job"id="features_job">
 
 <!-- load job data from data base -->
         </div>
@@ -141,7 +111,7 @@
  <!-- pagination link -->
  <div id="pagination-link">
         </div>
-    </div>
+   
 
     <?php include 'Footer.php' ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
