@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    
+} 
 
 /* admin home button */
 
@@ -100,6 +108,119 @@
 
 .add-lms .plus{
     font-weight:bolder;
+}
+
+
+/* table starts here */
+
+.Table{
+    overflow-x: auto;
+    /*width:100%;*/
+}
+table {
+    /* border-collapse: collapse; */
+    /* margin-top: 40px; */
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+    /* margin: 10% 25% 10% 15%; */
+    margin: 40px 0px;
+    /*width:110%;*/
+    /*overflow-x:auto;*/
+    /*width:95%;*/
+    margin-left: 8%;
+
+}
+
+#topic,
+#columnTopic {
+    background-color: #1d6989;
+    color: white;
+    text-align: center;
+}
+th {
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #d9eff8;
+}
+tr:hover:not(#action) {
+    background-color: #1d6989;
+    color: white;
+}
+
+th,
+td {
+    padding-top: 6px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon .fa-eye{
+    font-size: 20px;
+    color: green !important;
+    margin: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon .fa-pencil{
+    font-size: 20px;
+    color: #081b48 !important;
+    margin: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon .fa-trash-o{
+    font-size: 20px;
+    color: #8b0822 !important;
+    margin: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+    margin-bottom: 50px;
+
+}
+
+.pagination-hidden{
+    visibility: hidden;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
 }
 
 /* add learning materials button ends here */
