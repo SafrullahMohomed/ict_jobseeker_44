@@ -14,11 +14,13 @@ class View_job_Model extends Model{
         b.Email,a.Job_phone_no,b.Profile_picture
        FROM job a, user b,post c
        WHERE a.Job_ID=$Job_ID AND c.User_ID=b.User_ID";*/
-       $query1 ="  SELECT d.Company_name, a.Job_type, a.Job_title,
-        a.Job_deadline,a.Job_provide_mock_interviews,a.Job_description,a.Job_image,
-        b.Email,a.Job_phone_no,b.Profile_picture,d.Company_facebook,d.Company_twitter,d.Company_LinkedIn,b.User_ID
-       FROM job a, user b,post c,company d
-       WHERE a.Job_ID=$Job_ID AND c.User_ID=b.User_ID AND c.User_ID=d.User_ID" ;
+       $query1 ="  SELECT a.Job_ID ,d.Company_name, a.Job_type, a.Job_title, a.Job_deadline,
+       a.Job_provide_mock_interviews,
+       a.Job_description,a.Job_image, b.Email,a.Job_phone_no,b.Profile_picture,
+       d.Company_facebook,d.Company_twitter,d.Company_LinkedIn,b.User_ID
+       FROM job a, user b,post c,company d 
+       WHERE a.Job_ID=$Job_ID AND a.Job_ID = c.Job_ID AND c.User_ID=b.User_ID AND c.User_ID=d.User_ID 
+       AND a.User_ID=d.User_ID AND a.User_ID=b.User_ID" ;
    
        $stmt1=$this->db->prepare($query1);
    

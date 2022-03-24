@@ -83,7 +83,8 @@ function cpData(User_ID){
             
         };
         xhr.send();
-      
+        //after loading a cp profile data then call to -->load_cp_rating function to load rating part
+        load_cp_rating(User_ID);
         return false;
     
     
@@ -244,11 +245,11 @@ function cpData(User_ID){
   }
 //load rates and reviews from data base 
   function load_cp_rating(User_ID){
-    alert("hi")
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_profile/req_cp_rate_data/"+User_ID);
     
-     xhr.onload = function () {
+    var xhr1 = new XMLHttpRequest();
+    xhr1.open("POST", "http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_profile/req_cp_rate_data/"+User_ID);
+    alert(xhr1)
+     xhr1.onload = function () {
      let review = document.querySelector(".review");
      
      

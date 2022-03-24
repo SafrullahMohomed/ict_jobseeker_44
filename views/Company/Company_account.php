@@ -31,19 +31,19 @@
        </div>
         </div>
         <div class="row">
-            <label for="name" class="labelfield">Company Name</label><br>
+            <label for="name" class="labelfield  required">Company Name</label><br>
             <input type="text" name="name" placeholder= "Name" class="inputfield" required onfocus=" hideFormError(name_error)"><br>
             <span  id="name_error" class="error"><?php echo $data['name_err']?></span>  
 
         </div>
         <div class="row">
-            <label for="address" class="labelfield">Company Address</label><br>
+            <label for="address" class="labelfield  required">Company Address</label><br>
             <input type="text" id="address" name="address" placeholder="Company address " class="inputfield" required ><br>
             
         </div>
         <div class="row">
             <label for="phonenumber" class="labelfield">Phone number</label><br>
-            <input type="tel" name="Phone_number" placeholder= "0774225687" class="inputfield" required onfocus=" hideFormError(phonenumber_error)"><br> 
+            <input type="tel" name="Phone_number" placeholder= "0774225687" class="inputfield" onfocus=" hideFormError(phonenumber_error)"><br> 
             <span  id="phonenumber_error" class="error"><?php echo $data['phone_number_err']?></span>   
         </div>
         
@@ -54,7 +54,7 @@
         </div>
         
         <div class="row">
-            <label for="email" class="labelfield">Email</label><br>
+            <label for="email" class="labelfield  required">Email</label><br>
             <input type="email" id="email" name="email" placeholder= "Email" class="inputfield" required onfocus=" hideFormError(email_error)"><br>
             <span id="email_error" class="error"><?php echo $data['email_err']?></span>
         </div>
