@@ -13,8 +13,8 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <title>view_contract</title>
 </head>
-<!-- onload="BidLoad()" -->
-<body >
+<!-- <body onload="BidLoad()"> -->
+    <body onload="viewContract(<?php echo $data['Contract_ID']?>)">
      <!-- header part start  -->
 <div class="header_div" >
         <?php include 'Header.php'?>
@@ -28,145 +28,24 @@
         
         <div class="job_detail_sub_container">
            
-            <div class="job_detail_left">
-                <div class="job_detail_title_and_apply_button">
-                    <div class="job_detail_title_and_company">
-                        <div class="job_detail_title">
-                            I am looking for a react native expert
-                        </div>
-                        <div class="company">
-                            Chamal Perera
-                        </div>
-                        <div class="social_media_icons">
-                            <i class="fab fa-facebook-square"></i>
-                            <i class="fab fa-linkedin"></i>
-                            <i class="fab fa-twitter-square"></i>
-                        </div>
-                        
-        
-                    </div>
-                   
-                    <button onclick="BidContract()">Bid Now</button>
-        
-                </div>
-                <div class="job_description_title">
-                    Contract Description
-                </div>
-
-                <div class="job_description_text">
-                    We need a React Native developer to create a mobile
-                     app similar to this one ASAP
-                    https://apps.apple.com/in/app
-                    
-                    We will need a MVP version first at the first phase 
-                    and then complete all the app.
-                    
-
-                </div>
-                
-                
-                
-                
-            </div>
-            <div class="job_detail_right">
-                <div class="company_details">
-                   <!--
-<div class="mock_interview">
-                        We would like to supply mock interviews
-                    </div>
-                   --> 
-                   <p>
-                    Click here to veiw contract provider details</p> 
-                   <button id="clickme" onclick="contractProviderProfile()"> Click Here</button>
-                </div>
-                <div class="job_overview">
-                    <div class="job_overview_text">
-                        Contract overview
-                    </div>
-                    <div class="application_deadline">
-                        <div class="application_deadline_text">
-                            contract deadline :
-                        </div>
-                        <div class="application_deadline_date">
-                            2021/09/30
-                        </div>
-                       
-                    </div>
-                    <div class="salary">
-                            <div class="salary_text">
-                                Avg Bid (RS) :
-                            </div>
-                            <div class="salary_number">
-                              1500
-                            </div>
-                    </div>
-                   
-                   <div class="phone_number">
-                    <div class="phone_number_text">
-                        Phone number :
-                    </div>
-                    <div class="phone_number_answer">
-                        077 2568942
-                    </div>
-               </div>
-               <div class="Email">
-                <div class="Email_text">
-                       E-mail :
-                </div>
-                <div class="Email_answer">
-                  chamal@gmail.com
-                </div>
-           </div>
-
-                </div>
-                
-            </div>
+          <!-- load data from database -->
 
             
         </div>
-        <!-- bid proposal parts start from here
+        
+        <!-- bid proposal parts start from here -->
         <div class="bid_part">
-            <div class="bid_row">
-            <!-- load data from  database -->
-            
-            <?php
-            #$result = $data['result'];
-            #foreach ($result
-
-                     #as $row):
-                ?>
-            <!-- <div class="first">
-                     <div class="name">
-                     
-                     </div>
-                     <div class="rs_price">
-                     <div class="rs">
-                            Rs.
-                        </div>
-                        <div class="price">
-                            <!-- 1500 -->
-                            <?php #echo $row['Bid_value'] ?>
-                        </div>  
-                     </div>
-                     
-                    </div>
-                    <div class="second"> -->
-                    <!-- I have more experience with other university projects.I would like to
-             do my work within average time and average
-             hourly rate.I will do my best.I have good typing speed because of my previous projects. -->
-             <?php #echo $row['Bid_proposal'] ?>
-                    </div>
-            </div>
-            <?php# endforeach; ?>
-            </div>
             <!-- <div class="bid_row">
+           
+            </div> -->
+            <div class="bid_row">
                     <div class="first">
                      <div class="name">
                      Maneesha Yohani
                      </div>
                      <div class="rs_price">
                      <div class="rs">
-                            Rs.
+                            Rs.1500
                         </div>
                         <div class="price">
                             1500
@@ -179,16 +58,18 @@
              do my work within average time and average
              hourly rate.I will do my best.I have good typing speed because of my previous projects.
                     </div>
-            </div> -->
+            </div>
 
-        </div> -->
+        </div>
 
         <!-- bid proposal parts end from here -->
       
         <?php include 'Footer.php'?>
 
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="<?php echo URL ?>views/JS/View_contract.js"></script>
+<script src="<?php echo URL ?>views/JS/Contracts_main_page.js"></script>
 
 </body>
 </html>

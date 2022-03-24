@@ -21,7 +21,7 @@
 <body>
     <!-- header part with css html js -->
     <div class="header_div">
-        <?php include 'Header.php' ?>
+        <?php include './views/Header.php' ?>
     </div>
     <!-- header part end  -->
     <?php
@@ -140,7 +140,7 @@
 
     <!-- cancel, update buttons ends here -->
 
-    <?php include 'Footer.php' ?>
+    <?php include './views/Footer.php' ?>
     <script src="<?php echo URL ?>views/JS/Contract_provider_account.js"></script>
 </body>
 

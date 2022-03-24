@@ -1,50 +1,149 @@
 
 /* admin home button */
+/* admin home page */
 
-.admin-home-button{
-    display:flex;
-    justify-content: right;
-    margin:30px auto;
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    /*align-content: center;*/
+    box-sizing: border-box;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /* padding-top: 100px; */
+    margin-top: 170px;
 }
 
 
-.admin-home-button button{
-    color: white;
-    background-color: #496575;
-    border-radius: 7px;
-    width: 140px;
-    height: 35px;
-    font-size: 17px;
-    font-weight: 700;
-    transition: ease-in-out 0.2s;
-    border: 0;
-    letter-spacing: 1px;
-    margin-right: 40px;
+/* div dashboard */
+
+.right-division{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*width:70%;*/
+    margin:auto;
+    margin-top: 0px;
+
 }
 
-.admin-home-button button:hover{
+/*admin dashboard options*/
+.admin-dashboard-option{
+    padding: 10px 0;
+    background-color: #003144;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+}
+.admin-dashboard-option:hover{
     cursor: pointer;
-    color: #496575;
-    background-color: #ffffff;
-    border: 1px solid #496575;
 }
+
+.dashboard-box-option{
+    font-size: 32px;
+    text-align: center;
+    color: aliceblue;
+}
+
+
+/* admin boxes */
+
+.admin-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /*margin:40px;*/
+    max-width: 300px;
+    max-height: 468px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+    background-color: #003144;
+    border-radius: 10px;
+
+}
+/*admin dashboard options*/
+/* box link */
+.box {
+    width: 225px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    border: 1px solid #91a4c7;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 17px;
+    color: aliceblue;
+    text-align: center;
+    box-shadow: 0 1px 0px 0 rgb(90 127 210 / 45%), 0 0px 20px 0 rgb(90 127 210 / 15%);
+    margin: 6px auto;
+}
+
+.box:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+}
+
+/*.admin-home-button{*/
+/*    display:flex;*/
+/*    justify-content: right;*/
+/*    margin:30px auto;*/
+/*}*/
+
+
+/*.admin-home-button button{*/
+/*    color: white;*/
+/*    background-color: #496575;*/
+/*    border-radius: 7px;*/
+/*    width: 140px;*/
+/*    height: 35px;*/
+/*    font-size: 17px;*/
+/*    font-weight: 700;*/
+/*    transition: ease-in-out 0.2s;*/
+/*    border: 0;*/
+/*    letter-spacing: 1px;*/
+/*    margin-right: 40px;*/
+/*}*/
+
+/*.admin-home-button button:hover{*/
+/*    cursor: pointer;*/
+/*    color: #496575;*/
+/*    background-color: #ffffff;*/
+/*    border: 1px solid #496575;*/
+/*}*/
 /* admin home button ends here */
 
 /* counsellor search part starts here */
+/*.toggle-dashboard-left{*/
+/*    display: block;*/
+/*}*/
+/*.toggle-dashboard-right{*/
+/*    display:none;*/
+/*}*/
+/*  */
 
-  
-  .search-counsellor {
-    margin: auto;
-    margin-bottom: 30px;
-    display: flex;
-    background-color: #eeeeee;
-    width: 70%;
-    height: 145px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 7px;
-    padding-bottom: 10px;
+
+.display-none{
+    /*display: none;*/
+    /*transform: translate(-100%);*/
+    overflow: hidden;
+    width:0px;
+}
+
+.search-counsellor {
+      margin: auto;
+      margin-bottom: 6px;
+      display: flex;
+      background-color: #eeeeee;
+      width: 70%;
+      height: 80px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 7px;
+      padding-bottom: 0px;
   }
 
   .search-counsellor input{
@@ -81,14 +180,15 @@
 .add-counsellors button{
     background-color: #1f78fb87;
     border-radius: 25px;
-    width: 400px;
-    height: 45px;
-    font-size: 25px;
+    width: 170px;
+    height: 32px;
+    font-size: 17px;
     font-weight: 700;
     transition: ease-in-out 0.2s;
     border: 0;
     letter-spacing: 1px;
-    margin:30px;
+    margin: 20px;
+    margin-bottom: 0px;
     
 }
 
@@ -106,35 +206,182 @@
 
 /* table starts here */
 
+.Table{
+    overflow-x: auto;
+    /*width:100%;*/
+}
+table {
+    /* border-collapse: collapse; */
+    /* margin-top: 40px; */
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+    /* margin: 10% 25% 10% 15%; */
+    margin: 50px 0px;
+    /*width:110%;*/
+    /*overflow-x:auto;*/
+    /*width:95%;*/
+
+
+}
+
+#topic,
+#columnTopic {
+    background-color: #1d6989;
+    color: white;
+    text-align: center;
+}
+th {
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #d9eff8;
+}
+tr:hover:not(#action) {
+    background-color: #1d6989;
+    color: white;
+}
+
+th,
+td {
+    padding-top: 6px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon .fa-eye{
+    font-size: 20px;
+    color: green !important;
+    margin: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon .fa-pencil{
+    font-size: 20px;
+    color: #081b48 !important;
+    margin: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon .fa-trash-o{
+    font-size: 20px;
+    color: #8b0822 !important;
+    margin: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-division{
+    /*position: relative;*/
+    /*transform: translate(0%);*/
+    /*z-index: 100px;*/
+    background-color: #003144;
+}
+
+.toggle-dashboard-left{
+    display: block;
+}
+.toggle-dashboard-right{
+    display:block;
+}
+
+.show-sidebar{
+    transform: translate(0%);!important;
+    /*display: block;!important;*/
+}
+
+/*pagination*/
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination-hidden{
+    visibility: hidden;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 960px) {
+
+
+
+
+    .right-division{
+        /*width:90%;*/
+    }
+    table {
+         /*border-collapse: collapse; */
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: gray;
+        margin: 5% 4% 5% 4%;
+        /*width:100%;*/
+
+    }
+
+}
 /* table ends here */
 
-/* load more button starts here */
-.load-more{
-    margin:20px auto;
-    display:flex;
-    justify-content: center;
-    margin: auto;
-}
-.load-more button{
-    color: white;
-    background-color: #496575;
-    border-radius: 25px;
-    width: 200px;
-    height: 45px;
-    font-size:25px;
-    font-weight: 700;
-    transition: ease-in-out 0.2s;
-    border: 0;
-    letter-spacing: 1px;
-    
-}
 
-.load-more button:hover{
-    cursor: pointer;
-    color: #496575;
-    background-color: #ffffff;
-    border: 1px solid #496575;
-}
+/* load more button starts here */
+/*.load-more{*/
+/*    margin:20px auto;*/
+/*    display:flex;*/
+/*    justify-content: center;*/
+/*    margin: auto;*/
+/*}*/
+/*.load-more button{*/
+/*    color: white;*/
+/*    background-color: #496575;*/
+/*    border-radius: 25px;*/
+/*    width: 200px;*/
+/*    height: 45px;*/
+/*    font-size:25px;*/
+/*    font-weight: 700;*/
+/*    transition: ease-in-out 0.2s;*/
+/*    border: 0;*/
+/*    letter-spacing: 1px;*/
+/*    */
+/*}*/
+
+/*.load-more button:hover{*/
+/*    cursor: pointer;*/
+/*    color: #496575;*/
+/*    background-color: #ffffff;*/
+/*    border: 1px solid #496575;*/
+/*}*/
 /* laod more button ends here */
 
 /* registration text */
@@ -163,12 +410,15 @@
     /* add counsellors part */
     .add-counsellors button{
         border-radius: 25px;
-        width: 250px;
-        height: 35px;
-        font-size: 15px;
+        width: 170px;
+        height: 32px;
+        font-size: 17px;
     }
-    
+
+
+
     /* load more button */
+
 
     .load-more button{
        
@@ -183,4 +433,19 @@
     .registration-text{
         font-size: 30px;
     }
+}
+
+@media only screen and (max-width: 780px) {
+    .toggle-dashboard-left{
+        display: block;
+    }
+    .toggle-dashboard-right{
+        display:block;
+    }
+    .main-container{
+        margin-top: 50px;
+    }
+
+
+
 }

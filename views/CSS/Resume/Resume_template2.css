@@ -5,7 +5,8 @@
 .resume_page {
   display: flex;
   flex-direction: row;
-  width: 660px;
+  width: 700px;
+  height: 1100px;
   margin: auto;
   border: 1px solid black;
 }
@@ -82,6 +83,7 @@
 .rightbox {
   width: 70%;
   margin: 20px;
+  margin-top: 10px;
 }
 
 .sub_title:not(.skills_title_head) {

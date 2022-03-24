@@ -12,158 +12,21 @@
     <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <title>rate_and_review_main_page</title>
 </head>
-<body>
+<body  onload="reviewLoad()">
      <!-- header part start  -->
          <div class="header_div" >
         <?php include 'Header.php'?>
          </div>
   <!-- header part end  -->
    <div class="all"> <div class="main_container">
-        <div class="rating_overview_row">
-            <div class="total_rate">
-                4.0
-            </div>
-            <div class="star_row">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="false"></i>
-            </div>
-            <div class="rating_description">
-                <p>based on <span>53</span> reviews</p>
-            </div>
+        <div  class="rating_overview_row">
+           <!-- load total star  rating  data from database    -->
         </div>
-        <div class="review">
-            <hr>
-             <div class="review_row">
-                <div class="user_picture">
-           
-                <img src='<?php echo URL?>views/images/Sys_rate/review_user1.jpg' >  
-                
-                </div>
-                <div class="review_detail">
-                    <div class="review_detail_name">
-                        Teran Gomaz
-                     </div>
-                     <div class="do_rate_star_row">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                      </div>
-                      <div class="date">
-                          10/20/2021
-                      </div>
-                      <div class="review_para">
-                        I could find a good jobs from this site.
-                      </div>
 
-                </div>
-                 
-             </div>
-             <hr>
-             <div class="review_row">
-                <div class="user_picture">
-                <img src='<?php echo URL?>views/images/Sys_rate/review_user2.jpg' >  
-                
-                </div>
-                <div class="review_detail">
-                    <div class="review_detail_name">
-                        Chanax Fernado
-                     </div>
-                     <div class="do_rate_star_row">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                        <i class="fa fa-star-o" aria-hidden="false"></i>
-                      </div>
-                      <div class="date">
-                        10/02/2020
-                      </div>
-                      <div class="review_para">
-                        Thanks for your projects.
-                      </div>
-
-                </div>
-                  
-             </div>
-            
-             <hr>
-             
-             <button class="loadmore_button"id="loadmore_btn" onclick=" loadmore()">Load more..</button>
-
-          <span id="more"><hr>
-            <div class="review_row">
-               <div class="user_picture">
-               <img src='<?php echo URL?>views/images/Sys_rate/review_user3.jfif' >  
-                   
-               </div>
-               <div class="review_detail">
-                   <div class="review_detail_name">
-                       Chalani Fernado
-                    </div>
-                    <div class="do_rate_star_row">
-                       <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star-o" aria-hidden="false"></i>
-                       <i class="fa fa-star-o" aria-hidden="false"></i>
-                     </div>
-                     <div class="date">
-                       10/02/2020
-                     </div>
-                     <div class="review_para">
-                       Thanks for your projects.
-                     </div>
-
-               </div>
-                 
-            </div>
-            
-            
-            <hr>
-
-            <hr>
-            <div class="review_row">
-               <div class="user_picture">
-               <img src='<?php echo URL?>views/images/Sys_rate/review_user4.jfif' > 
-                  
-               </div>
-               <div class="review_detail">
-                   <div class="review_detail_name">
-                      Nishali kemal
-                    </div>
-                    <div class="do_rate_star_row">
-                       <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star" aria-hidden="true"></i>
-                       <i class="fa fa-star-o" aria-hidden="false"></i>
-                       <i class="fa fa-star-o" aria-hidden="false"></i>
-                     </div>
-                     <div class="date">
-                       10/02/2020
-                     </div>
-                     <div class="review_para">
-                       Thanks for your projects.
-                     </div>
-
-               </div>
-                 
-            </div>
-            
-
-
-
-
-
-            
-            <hr></span>
-
-
+        <div class="review">    
+          <!-- load review data from database    -->
         </div>
+
         <div class="description">
                 As one of our preferred users, your feedback
                 is of the utmost importance to us. We are 
@@ -178,21 +41,26 @@
                 Rate Us
             </div>
             <div class="star_row" >
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star-o" aria-hidden="false"></i>
+           
+                <i class="fa fa-star-o" aria-hidden="false" id="s1"onclick="color_star(this)"></i>
+                <i class="fa fa-star-o" aria-hidden="false"id="s2" onclick="color_star(this)"></i>
+                <i class="fa fa-star-o" aria-hidden="false" id="s3" onclick="color_star(this)"></i>
+                <i class="fa fa-star-o" aria-hidden="false" id="s4" onclick="color_star(this)"></i>
+                <i class="fa fa-star-o" aria-hidden="false" id="s5" onclick="color_star(this)"></i>
+                
             </div>
-            
+           
             <div class="row">        
-                <textarea  id="brief_description" rows="4" brief_description="brief_description" placeholder="Write your review here..." class="inputfield" required></textarea><br>
+                <textarea  id="review_text" rows="4" name="brief_description" placeholder="Write your review here..." class="inputfield"  ></textarea><br>
             </div>
-            <button class="loadmore_button">Submit</button>
+            <button class="loadmore_button" onclick="review()">Submit</button>
         </div>
-      
-    </div></div>
+      <div id="star_count"></div>
+    </div>
+  
+  </div>
     <?php include 'Footer.php'?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="<?php echo URL ?>views/JS/Sys_rate.js"></script>
 </body>
 </html>

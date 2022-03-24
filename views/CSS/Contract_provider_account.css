@@ -143,7 +143,13 @@ font-weight: 600;
    cursor: pointer;
     
 }
-
+#view{
+    color: green !important;
+    }
+    #delete{
+        color: red !important;
+    
+    }
 
 
 

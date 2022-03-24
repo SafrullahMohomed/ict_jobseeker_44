@@ -47,17 +47,43 @@
 <div class="main_container">
   <form name="myForm" action="<?php echo URL ?>Jobs/Post_job/insert_post_job_data" method="post"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
     <label for="Company_name" class="labelfield">Company Name</label><br>
-    <input type="text" id="Companyname" name="Company_name" placeholder="" class="inputfield" onfocus=" hideFormError(Company_name_error)"><br>
+    <input  id="Companyname" name="Company_name"
+    <?php
+    if($data['Company_name']!=null) {
+      $value= $data['Company_name']; 
+    }
+    else{
+      $value= "";
+    }
+    
+    ?>
+    
+    
+   value="<?php  echo  $value  ?>" autocomplete="Company_name" onkeyup="passCompanyName(this.value);" placeholder="" class="inputfield" required onfocus=" hideFormError(Company_name_error)"><br>
     <span class="err" id="Company_name_error"><?php echo $data['Company_name_err']?></span><br>
 
 
     <label for="Job_Title" class="labelfield">Job Title</label><br>
-    <input type="text" id="JobTitle" name="Job_Title" placeholder="" class="inputfield" onfocus=" hideFormError(Job_Title_error)"><br>
+    <input type="text" id="JobTitle" name="Job_Title" placeholder="" class="inputfield" required onfocus=" hideFormError(Job_Title_error)"><br>
     <span class="err" id="Job_Title_error"><?php echo $data['Job_Title_err']?></span><br>
 
     <label for="Job_Category" class="labelfield">Job Category</label><br>
     <select id="JobCategory" name="Job_Category" class="inputfield" onfocus=" hideFormError(Job_Category_error)">
-        <option value="Data Scientist">Data Scientist</option>
+    <option value="" selected>Select job category</option> 
+        <?php 
+        $data_count=count($data['jobCategory']);
+        echo  $data_count;
+        for($x = 0; $x < $data_count; $x++  )
+        {
+          echo "<option value=' " .$data['jobCategory'][$x]['JobCategory_ID'] ." '>" ;
+          echo $data['jobCategory'][$x]['JobCategory_name'];
+           echo"</option>";
+        
+        }
+        
+        ?>
+
+        <!-- <option value="Data Scientist">Data Scientist</option>
         <option value="Software Developer">Software Developer</option>
         <option value="Information Security Analyst">Information Security Analyst</option>
         <option value="Web Developer">Web Developer</option>
@@ -66,7 +92,7 @@
         <option value="Computer Research Scientist">Computer Research Scientist</option>
         <option value="Network and Systems Administrator">Network and Systems Administrator</option>
         <option value="Computer Support Specialists ">Computer Support Specialists </option>
-        <option value="other ">other </option>
+        <option value="other ">other </option> -->
       </select>
       <br>
       <span class="err" id="Job_Category_error"><?php echo $data['Job_Category_err']?></span><br>
@@ -74,7 +100,7 @@
 
 
     <label for="Brief_Description" class="labelfield"> Brief Description</label><br>
-    <textarea  id="description" rows="6"  placeholder="Type here small description about the job (qulifications/other)..." class="inputfield" required name="Brief_Description"></textarea><br>
+    <textarea  id="description" rows="6"  placeholder="Type here small description about the job (qulifications/other)..." class="inputfield" name="Brief_Description"></textarea><br>
 
     <label for="Job_Type" class="labelfield">Job Type</label><br>
     <select id="JobType" name="Job_Type" class="inputfield">
@@ -83,8 +109,8 @@
         <option value="Intern">Intern</option>
       </select><br>
 
-    <label for="Sallary_Offered" class="labelfield">Sallary Offered</label><br>
-    <input type="text" id="SallaryOffered" name="Sallary_Offered" placeholder="LKR 50 000 / LKR 20 000-50000" class="inputfield"><br>
+    <label for="Sallary_Offered" class="labelfield">Sallary Offered (Optional)</label><br>
+    <input type="text" id="SallaryOffered" name="Sallary_Offered" placeholder="LKR 50 000 / LKR 20 000-50000" class="inputfield"><br> 
 
     <!-- <label for="Year_Of_Experience" class="labelfield">Year Of Experience</label><br>
     <input type="text" id="Year_Of_Experience" name="Year_Of_Experience" placeholder="" class="inputfield"><br> -->
@@ -97,32 +123,31 @@
 
     <label for="City" class="labelfield ">City</label><br>
     <select type="text" id="City" name="City" placeholder="" class="inputfield"><br>
-    <option value="Colombo">Colombo</option>
-    <option value="Gampaha">Gampaha</option>
-    <option value="Kaluthara ">Kaluthara </option>
-    <option value="Matale  ">Matale  </option>
-    <option value="Nuwera Eliya ">Nuwera Eliya </option>
-    <option value="Galle  ">Galle  </option>
-    <option value="Matara ">Matara </option>
-    <option value="Hambanthota ">Hambanthota </option>
-    <option value="Jaffna  ">Jaffna  </option>
-    <option value="Mannar ">Mannar </option>
-
-    <option value="Vauniya ">Vauniya </option>
-    <option value="Mulathivu  ">Mulathivu  </option>
-    <option value="Kilinochchi ">Kilinochchi </option>
-    <option value="Batticaloa ">Batticaloa </option>
     <option value="Ampara ">Ampara  </option>
-    <option value="Trincomalee  ">Trincomalee </option>
-    <option value="Kurunegala ">Kurunegala </option>
-    <option value="Puttalam ">Puttalam </option>
-    <option value="Anuradhapura ">Anuradhapura </option>
-    <option value=" Polonnaruwa "> Polonnaruwa </option>
-
-    <option value="Badulla ">Badulla </option>
-    <option value="Monaragala ">Monaragala </option>
-    <option value="Rathnapura ">Rathnapura </option>
-    <option value="Kegalle ">Kegalle </option>
+              <option value="Anuradhapura ">Anuradhapura </option>
+              <option value="Badulla ">Badulla </option>
+              <option value="Batticaloa ">Batticaloa </option>
+              <option value="Colombo">Colombo</option>
+              <option value="Galle  ">Galle  </option>
+              <option value="Gampaha">Gampaha</option>
+              <option value="Hambanthota ">Hambanthota </option>
+              <option value="Jaffna  ">Jaffna  </option>
+              <option value="Kaluthara ">Kaluthara </option>
+              <option value="Kandy  ">Kandy  </option>
+              <option value="Kegalle ">Kegalle </option>
+              <option value="Kilinochchi ">Kilinochchi </option>
+              <option value="Kurunegala ">Kurunegala </option>
+              <option value="Mannar ">Mannar </option>
+              <option value="Matale  ">Matale  </option>
+              <option value="Matara ">Matara </option>
+              <option value="Monaragala ">Monaragala </option>
+              <option value="Mulathivu  ">Mulathivu  </option>
+              <option value="Nuwera Eliya ">Nuwera Eliya </option>
+              <option value=" Polonnaruwa "> Polonnaruwa </option>
+              <option value="Puttalam ">Puttalam </option>
+              <option value="Rathnapura ">Rathnapura </option>
+              <option value="Trincomalee  ">Trincomalee </option>
+              <option value="Vauniya ">Vauniya </option>
     
     </select><br>
     <!-- <label for="Full_Address" class="labelfield">Full Address</label><br>
@@ -142,41 +167,41 @@
     <input type="date" id="Deadline" name="Deadline" placeholder="" class="inputfield" onfocus=" hideFormError(Deadline_error)"><br>
     <span class="err" id="Deadline_error"><?php echo $data['Deadline_err']?></span><br>
 
-    <label for="Company_logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
-    <input type="file" id="CompanyLogo" name="Company_logo" placeholder="" class="inputfield" accept="image/*"><br>
+    <label for="Company_Logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
+    <input type="file" id="CompanyLogo" name="Company_Logo" placeholder="" class="inputfield" accept="image/*"><br>
     
     <label for="Job_image" class="labelfield">Job post image(JPEG/PNG)</label><br>
     <input type="file" id="CompanyLogo" name="Job_image" placeholder="" class="inputfield" accept="image/*"><br>
 
 
 
-    <div class="radiobutton_class" onmouseover=" hideFormError(Urgent_answer_error)">
+    <!-- <div class="radiobutton_class" onmouseover=" hideFormError(Urgent_answer_error)">
         <span class="labelfield">Urgent</span>
 
 
           <div class="radiobutton_style">
-          <input type="radio" id="urgent_yes" name="Urgent_answer" value="Yes" class="radiobutton">
+          <input type="radio" id="urgent_yes" name="Urgent_answer" value="Yes" required class="radiobutton">
             <label for="Urgent_answer" class="radiolabel">Yes</label>
       
-            <input type="radio" id="urgent_no" name="Urgent_answer" value="No" class="radiobutton">
+            <input type="radio" id="urgent_no" name="Urgent_answer" value="No" required class="radiobutton">
             <label for="Urgent_answer" class="radiolabel">No</label>
 
-        </div>
+        </div> 
           
           
         <br>
         <span class="err" id="Urgent_answer_error"><?php echo $data['Urgent_answer_err']?></span><br>
 
-    </div>
+    </div> -->
     <div class="radiobutton_class" onmouseover=" hideFormError(Supply_Mock_Interviews_answer_error)">
         <span class="labelfield">Supply Mock Interviews</span>
      <div class="radiobutton_style">
         <div class="radiobutton_style">
-      <input type="radio" id="Supply_Mock_Interviews_yes" name="Supply_Mock_Interviews_answer" value="Yes" class="radiobutton">
+      <input type="radio" id="Supply_Mock_Interviews_yes" name="Supply_Mock_Interviews_answer" required value="Yes" class="radiobutton">
       <label for="Supply_Mock_Interviews_answer" class="radiolabel">Yes</label>
  
 
-      <input type="radio" id="Supply_Mock_Interviews_no" name="Supply_Mock_Interviews_answer" value="No" class="radiobutton">
+      <input type="radio" id="Supply_Mock_Interviews_no" name="Supply_Mock_Interviews_answer"required  value="No" class="radiobutton">
       <label for="Supply_Mock_Interviews_answer" class="radiolabel">No</label>
     
 
@@ -193,10 +218,10 @@
       <span class="labelfield">Post a forum</span>
     <div class="radiobutton_style">
 
-    <input type="radio" id="Post_a_forum_yes" name="Post_a_forum_answer" value="Yes" class="radiobutton">
+    <input type="radio" id="Post_a_forum_yes" name="Post_a_forum_answer"required value="Yes" class="radiobutton">
     <label for="Post_a_forum_answer" class="radiolabel">Yes</label>
 
-    <input type="radio" id="Post_a_forum_no" name="Post_a_forum_answer" value="No" class="radiobutton">
+    <input type="radio" id="Post_a_forum_no" name="Post_a_forum_answer"required value="No" class="radiobutton">
     <label for="Post_a_forum_answer" class="radiolabel">No</label>
 
      </div>
@@ -207,8 +232,9 @@
   </div>
   <div class="btn">
   <!-- <button type="submit" class="post_New_Job_submit" onclick="successPost()">Post New Job</button> -->
-  <button type="submit" class="post_New_Job_submit" >Post New Job</button>
+  <button type="submit" class="post_New_Job_submit" onclick="companyNameWarning()">Post New Job</button>
 </div>
+
    
 
 </form>

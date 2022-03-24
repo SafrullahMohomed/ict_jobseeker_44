@@ -11,8 +11,8 @@ class Registration extends Controller
      
     public function Registration()
     {
-        #$this->model->printSomething();
-        #echo "Hello from the Test controller - Index Method";
+        // $this->model->printSomething();
+        // echo "Hello from the Test controller - Index Method";
 
         //pass view name
         $data = [
@@ -62,6 +62,7 @@ class Registration extends Controller
                 $_SESSION['email'] = $data['email'];
                 $_SESSION['password'] = $data['password'];
 
+                // var_dump($_POST);
                 //Validate user_type
                 if(empty($data['user_type'])) {
                     $data['user_type_err'] = "Please enter the user type";
@@ -164,11 +165,16 @@ class Registration extends Controller
           
         
             $info['active_msg'] = $this->model->verifyemail_update($email,$emailToken);
-           
-          
+           // after 10 seconds redirect to user account form for get detail of user and then create account
+         //  header( "refresh:5;url=http://localhost/ict_jobseeker_44/Company/Company_account ");
+
+          // after 10 seconds redirect to login form
+          header( "refresh:3;url=http://localhost/ict_jobseeker_44/Login");
             $this->view ->render('Success_post');
 
-            }
+            
+
+          }
 
 
             //js call to this and pass json array
