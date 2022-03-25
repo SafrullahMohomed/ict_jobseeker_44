@@ -1,8 +1,8 @@
-
+alert("Welcome")
 function validateForm() {
     var fname=document.myForm.fname.value;  
    
-  //  console.log(fname) 
+   console.log(fname) 
     var brief_intro
     /*validate first name*/
     if (fname == "") {
