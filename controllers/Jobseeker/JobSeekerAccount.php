@@ -17,13 +17,13 @@ class JobSeekerAccount extends Controller
 
         $_SESSION['User'] = $_GET['User'];
         if (($_SESSION['User_type'] == 'Jobseeker' and $_SESSION['User_ID'] == $_GET['User']) or $_SESSION['User_type'] == 'Admin44') {
-            $data = $this->model->get_jobseeker_data($_GET['User']);
+            $data = $this->model->get_jobseeker_data_m($_GET['User']);
 //                print_r($data);
             //pass view name
             $this->view->render2('JobSeekerAccount', $data);
 
         } else {
-            //  $this->view->render("YouDontHavePermission");
+             $this->view->render("YouDontHavePermission");
         }
 
         //pass view name
@@ -63,13 +63,13 @@ class JobSeekerAccount extends Controller
         
     }
 
-    function get_jobseeker_data()
-    {
-////        $User_ID = 108;
-//        $data = $this->model->get_jobseeker_data_m($GLOBALS['User']);
-//        echo json_encode($data);
-////        echo $GLOBALS['User_Id'];
-    }
+//     function get_jobseeker_data()
+//     {
+// ////        $User_ID = 108;
+// //        $data = $this->model->get_jobseeker_data_m($GLOBALS['User']);
+// //        echo json_encode($data);
+// ////        echo $GLOBALS['User_Id'];
+//     }
 
     // public function UserValidation()
     // {
@@ -224,9 +224,10 @@ class JobSeekerAccount extends Controller
 
     function update_jobseeker_data()
     {
+        // var_dump($_POST);
         if (isset($_POST)) {
-//            print_r($_POST);
-          var_dump($_POST);
+        //   print_r($_POST);
+          
             $this->model->update_jobseeker_data_m($_POST, $_POST['User_ID']);
         }
         header("Location:http://localhost/ict_jobseeker_44/Jobseeker/JobSeekerProfile?User=" . $_POST['User_ID']);
