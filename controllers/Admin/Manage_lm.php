@@ -9,8 +9,12 @@ class Manage_lm extends Controller
     function Manage_lm()
     {
 
-        //pass view name
-        $this->view->renderAdmin('Manage_lm');
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $this->view->renderAdmin('Manage_lm');
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }
     }
 
     //    to get the counsellor data
