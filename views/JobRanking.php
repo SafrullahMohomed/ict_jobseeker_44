@@ -16,7 +16,26 @@
         <?php include 'Header.php' ?>
     </div>
     <div class="MainContainer">
-        <div class="Table">
+
+        <!-- seach part -->
+        <div class="jobcategory-search-part">
+            <!-- theme image starts here -->
+            <div class="theme-image">
+                <img src='<?php echo URL ?>views/images/LearningMaterials/hometheme.jpg' >
+            </div>
+            <!-- theme image ends here -->
+            
+            <div class="jobcategory-search-box">
+                <div class="search-your-keywords">
+                    <input type="text" name="JobcategoryName" placeholder="Search Job Categories" onkeyup="ajaxload(this.value);">
+                </div>
+            </div>
+
+        </div>
+        <!-- search part ends here -->
+
+
+        <div class="Table" id="Table">
             <table>
                 <tr>
                     <th colspan="4" id="topic">Career Role Rankings According To Vacancies</th>
@@ -27,7 +46,13 @@
                     <th>Rank</th>
                     <th>%</th>
                 </tr>
-                <tr>
+
+                <tbody id="job_category_tbody">
+
+
+                </tbody>
+
+                <!-- <tr>
                     <td>Software Engineer</td>
                     <td>1365</td>
                     <td>1</td>
@@ -86,14 +111,27 @@
                     <td>74</td>
                     <td>10</td>
                     <td>0.67%</td>
-                </tr>
+                </tr> -->
             </table>
         </div>
+
+         <!--        graph devision starts here-->
         <div class="Graph">
+             <!--        job category graph starts here -->
+             <div class="job_categories">
+                <canvas id="job_category_chart" width="400px" height="400px"></canvas>
+            </div>
+        </div>
+
+        <!-- load more button -->
+        <div id="pagination-link">
 
         </div>
+
     </div>
     <?php include 'Footer.php' ?>
+    <script src="<?php echo URL ?>views/JS/JobRanking.js"></script>
+    <script src="<?php echo URL ?>views/JS/JobRankingGraph.js"></script>
 </body>
 
 </html>

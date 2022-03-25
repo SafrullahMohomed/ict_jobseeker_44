@@ -54,7 +54,7 @@ onload="cpData(<?php echo  $data['User_ID']?>)"
          </div>
 
 
-         <div onload="load_cp_rating(<?php echo  $data['User_ID']?>)" class="review">
+         <div  class="review">
           
              <!-- load data from database (cp rate and review data) -->
             
