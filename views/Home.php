@@ -34,9 +34,30 @@
     <?php include './views/Header.php' ?>
 </div>
 <!-- header part end  -->
-<!-- header  ends here -->
 
 <!-- theme image and jobs search part divisions starts here -->
+
+<div class="theme-image">
+    <img src='<?php echo URL ?>views/images/Home/hometheme.jpg'>
+</div>
+
+
+<!-- posing part start here -->
+<div class="post_button">
+    <a href="<?php echo URL ?>jobs/Post_job">
+        <div class="post_but" id="post_job_but">Post a Job</div>
+    </a>
+    <!---->
+    <!---->
+    <a href="<?php echo URL ?>Contracts/Post_contract">
+        <div class="post_but" id="post_contract_but"> Post a Contract</div>
+    </a>
+    <!---->
+</div>
+<!-- posting part end here -->
+
+<!-- theme image ends here -->
+
 <div class="job-search-part">
     <!--  job search part starts here-->
 
@@ -84,7 +105,7 @@
                 <option value="Monaragala ">Monaragala</option>
                 <option value="Mulathivu  ">Mulathivu</option>
                 <option value="Nuwera Eliya ">Nuwera Eliya</option>
-                <option value=" Polonnaruwa "> Polonnaruwa</option>
+                <option value="Polonnaruwa "> Polonnaruwa</option>
                 <option value="Puttalam ">Puttalam</option>
                 <option value="Rathnapura ">Rathnapura</option>
                 <option value="Trincomalee  ">Trincomalee</option>
@@ -98,38 +119,8 @@
     </div>
 </div>
 
-
 <!--  job search part ends here -->
 
-  <!-- posing part start here -->
-  <div class="post_button">
-    <a class=" btn"href="<?php echo URL ?>jobs/Post_job">Post a Job</a>
-
-
-<!-- themes image and job search part ends here -->
-
-<div class="theme-image">
-    <img src='<?php echo URL ?>views/images/Home/hometheme.jpg'>
-    <a  class=" btn" href="<?php echo URL ?>Contracts/Post_contract"> Post a Contract</a>
-
-</div>
-<!-- theme image ends here -->
-
-<!-- posing part start here -->
-<div class="post_button">
-    <a href="<?php echo URL ?>jobs/Post_job">
-        <div class="post_job">Post a Job</div>
-    </a>
-
-
-    <a href="<?php echo URL ?>Contracts/Post_contract">
-        <div class="post_contracts"> Post a Contract</div>
-    </a>
-
-</div>
-
-
-<!-- posing part end here -->
 <!-- counting part starts here -->
 <div class="counting-part">
     <div class="posted-jobs">
@@ -165,52 +156,76 @@
     <div class="first-row box-row">
 
         <a href="<?php echo URL ?>Resume/Resume_home">
-            <div class="create-resume service-name">
-                <div class="create-resume-header service-name-header">
-                    Create and manage create resume
-                </div>
-                <div class="create-resume-text service-text">By clicking this section you can create a resume for free
-                    and can manage it as a jobseeker. we provide different templates to create your own resume
+            <div class="service-main-content" id="service-main-content-resume">
+                <div class="service-name" id="create-resume">
+                    <div class="service-name-header" id="create-resume-header">
+                    </div>
+                    <div class="service-text" id="create-resume-text" >
+                    </div>
                 </div>
 
+                <div class="service-default-content-parent">
+                    <div class="service-default-content" id="service-default-content-resume">
+                        Create and manage create resume
+                    </div>
+                </div>
             </div>
+
         </a>
         <a href="<?php echo URL ?>JobRanking">
-            <div class="create-resume service-name">
-                <div class="job-rankings-header service-name-header">Job Rankings</div>
-                <div class="job-rankings-text service-text">In this field you can explore job rankings according to
-                    posted jobs in our system.
+            <div class="service-main-content" id="service-main-content-job-ranking">
+                <div class="service-name" id="job-rankings">
+                    <div class="service-name-header" id="job-rankings-header"></div>
+                    <div class="service-text" id="job-rankings-text">
+                    </div>
+
+                </div>
+                <div class="service-default-content-parent">
+                    <div class="service-default-content" id="service-default-content-jobr">
+                        Job Rankings
+                    </div>
                 </div>
             </div>
         </a>
     </div>
     <div class="second-row box-row">
         <a href="<?php echo URL ?>LearningMaterials">
-            <div class="create-resume service-name">
-                <div class="learning-materials-header service-name-header">
-                    Learning Materials
+            <div class="service-main-content" id="service-main-content-learning-materials">
+                <div class="service-name" id="learning-materials">
+                    <div class="service-name-header" id="learning-materials-header">
+                    </div>
+                    <div class="service-text" id="learning-materials-text">
+                    </div>
                 </div>
-                <div class="lm-text service-text">We provide learning material's links which are recommended by the ICT
-                    community
+                <div class="service-default-content-parent">
+                    <div class="service-default-content" id="service-default-content-lm">
+                        Learning Materials
+                    </div>
                 </div>
             </div>
         </a>
         <a href="<?php echo URL ?>Counsellor/Counsellor_home_js">
-            <div class="create-resume service-name">
-                <div class="counselling-header service-name-header">
-                    Counselling & Mock interviews
+            <div class="service-main-content" id="service-main-content-counselling">
+
+                <div class="service-name" id="counselling-services">
+                    <div class="service-name-header" id="counselling-header">
+                    </div>
+                    <div class="service-text" id="counselling-text">
+                    </div>
+
                 </div>
-                <div class="counselling-text service-text">Before selecting a job you can consume a counselling service
-                    from our expertise and you can take mock interviews to get a better experience before facing an
-                    interview
+                <div class="service-default-content-parent">
+                    <div class="service-default-content" id="service-default-content-counselling">
+                        Counselling & Mock interviews
+                    </div>
                 </div>
+
 
             </div>
         </a>
     </div>
 </div>
 <!-- service boxes ends here -->
-
 <!-- review part starts here -->
 <div class="main_container">
     <div class="left">
@@ -248,6 +263,10 @@
 ?>
 <!-- footer part starts here -->
 
+<!--theme image 2-->
+<!--<div class="theme-image" id="theme-image2">-->
+<!--    <img src='http://localhost/ict_jobseeker_44/views/images/Home/themeimage2.jpeg' alt="theme image 2">-->
+<!--</div>-->
 
 <?php include './views/Footer_home.php' ?>
 <!-- js links -->
