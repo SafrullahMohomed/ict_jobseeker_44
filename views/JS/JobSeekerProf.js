@@ -34,7 +34,7 @@ function JobSeekerProfilerData() {
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Jobseeker/JobSeekerProfile/get_JobSeeker_data");
     xhr.onload = function () {
         if(xhr.status == 200){
-            console.log(this.responseText);
+            // console.log(this.responseText);
             // const obj = JSON.parse(this.responseText);
             // console.log(obj.Email);
         //     name.innerHTML = `${obj.First_name} ${obj.Last_name}`;

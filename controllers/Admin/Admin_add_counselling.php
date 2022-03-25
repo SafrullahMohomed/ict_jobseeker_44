@@ -9,14 +9,19 @@ class Admin_add_counselling extends Controller
 
     function Admin_add_counselling()
     {
-        $data = ['firstName_error' => '',
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $data = ['firstName_error' => '',
                 'lastName_error' => '',
                 'email_error' => '',
                 'phoneNumber_error' => ''];
 
 
-        //pass view name
-        $this->view->renderAdmin2('Admin_add_counselling',$data);
+            //pass view name
+            $this->view->renderAdmin2('Admin_add_counselling',$data);
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }
+
     }
 
     function insert_counsellor_admin()

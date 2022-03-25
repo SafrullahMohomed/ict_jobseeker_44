@@ -9,8 +9,12 @@ class Manage_cp extends Controller
     function Manage_cp()
     {
 
-        //pass view name
-        $this->view->renderAdmin('Manage_cp');
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $this->view->renderAdmin('Manage_cp');
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }
     }
 
     //    to get the cprovider data

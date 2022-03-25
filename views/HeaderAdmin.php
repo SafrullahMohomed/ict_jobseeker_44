@@ -38,7 +38,7 @@
       position: fixed;
       width: 100%;
 
-      height: 167px;
+      height: 138px;
 
 
 

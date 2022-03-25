@@ -19,7 +19,7 @@ class JobRanking_Model extends Model{
         );
 
 
-        $sql = "SELECT JobCategory_ID, JobCategory_name, JobCategory_count\n"
+        $sql = "SELECT JobCategory_ID, JobCategory_name, JobCategory_count, JobCategory_count*100/SUM(JobCategory_count)\n"
         . "FROM jobcategory\n"
         . "WHERE JobCategory_ID LIKE :JobCategory_ID OR
         JobCategory_name LIKE :JobCategory_name OR
@@ -94,7 +94,7 @@ class JobRanking_Model extends Model{
 //        array_push($final,$data);
         return array(json_encode($data), $total_data);
 //
-
+// SELECT JobCategory_name, JobCategory_count, JobCategory_count * 100 / t.s AS `JobCategory_percentage` FROM jobcategory CROSS JOIN (SELECT SUM(JobCategory_count) AS s FROM jobcategory) t;
 
     }
    

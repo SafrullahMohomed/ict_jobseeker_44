@@ -1,6 +1,7 @@
-// alert("SANDARUWAN");
+// console.log("SSSSSSSSS")
 
 //buttons
+
 const cancel = document.getElementById("cancel")
 const update = document.getElementById("update");
 
@@ -24,6 +25,7 @@ const Facebook_link = document.querySelector("#Facebook_link");
 const Twitter_link = document.querySelector("#Twitter_link");
 const website_link = document.querySelector("#website_link");
 
+
 function loadJobseekerData(){
     const xhr = new XMLHttpRequest();
 
@@ -40,14 +42,14 @@ function loadJobseekerData(){
             age.value = `${obj.Age}`;
             phonenumber.value = `${obj.Phone_number}`;
             address.value = `${obj.Address}`;
-            skills.value = `${obj.Description}`;
+            brief_description.value = `${obj.Description}`;
             experience.value = `${obj.Experience}`;
-            experience.value = `${obj.Skills}`;
+            skills.value = `${obj.Skills}`;
             education.value = `${obj.Education}`;
-            linkedin_url.value = `${obj.Jobseeker_In}`;
-            fb_url.value = `${obj.Jobseeker_Fb}`;
-            twitter_url.value = `${obj.Jobseeker_Twitter}`;
-            web_url.value = `${obj.Jobseeker_Web}`;
+            LinkedIn_link.value = `${obj.Jobseeker_In}`;
+            Facebook_link.value = `${obj.Jobseeker_Fb}`;
+            Twitter_link.value = `${obj.Jobseeker_Twitter}`;
+            website_link.value = `${obj.Jobseeker_Web}`;
             
                     
         }
@@ -72,14 +74,17 @@ function Cancelclick(){
 function Update(){
   update.addEventListener("click", (event) => {
       event.preventDefault();
-      let value = confirm("Are you sure, you want to update this profile");
-        console.log(value);
-        if(value == true){
-            jobseeker_form.submit();
-        }
+    //   if(validateForm()){
+            let value = confirm("Are you sure, you want to update this profile");
+            console.log(value);
+            if(value == true ){
+                jobseeker_form.submit();
+            }
+        // }
     });
 
-  
+    // location.href = "http://localhost/ict_jobseeker_44/Jobseeker/JobSeekerProfile?User="+User_ID;
+
 }
 
 

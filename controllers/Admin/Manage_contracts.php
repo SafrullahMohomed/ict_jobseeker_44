@@ -10,8 +10,12 @@ class Manage_contracts extends Controller
     function Manage_contracts()
     {
 
-        //pass view name
-        $this->view->renderAdmin('Manage_contracts');
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $this->view->renderAdmin('Manage_contracts');
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }
     }
 
     //    to get the contract data

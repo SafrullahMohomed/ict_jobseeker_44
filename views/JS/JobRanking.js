@@ -1,5 +1,10 @@
 // alert("GGSS");
 //function to load the job category data
+function ajaxloadTotal()
+{
+    
+}
+
 function ajaxload(query = '', page_number = 1) 
 {
     // e.preventDefault();
@@ -28,22 +33,26 @@ function ajaxload(query = '', page_number = 1)
             // console.log(job_category_data2);
             let job_category_data = JSON.parse(job_category_data2.data); //convert the data array into js object
 
-
+            let total = 0;
                 var job_category_tbody = ``; //variable for table body
 
                 if (job_category_data.length > 0) {
+                    for (let i = 0; i < job_category_data.length; i++) {
+                        total += parseInt(job_category_data[i].JobCategory_count)
+                    }
                     for (let i = 0; i < job_category_data.length; i++) {
                         job_category_tbody += ` <tr>
                         <td>${job_category_data[i].JobCategory_name}</td>
                         <td>${job_category_data[i].JobCategory_count}</td>
                         <td>${job_category_data[i].JobCategory_ID}</td>
-                        <td>${job_category_data[i].Counsellor_provide_mock_interviews}</td>
+                        <td>${(parseInt(job_category_data[i].JobCategory_count) *100/ total).toFixed(2)}%</td>
                     </tr>`
                     }
                 } else {
                     job_category_tbody += `<tr> No matching data is found</tr>`;
                 }
-
+                console.log('total');
+                console.log(total);
 
                 document.getElementById("job_category_tbody").innerHTML = job_category_tbody;
                 document.getElementById("pagination-link").innerHTML = job_category_data2.pagination;

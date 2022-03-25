@@ -41,7 +41,7 @@
         </div>
         <!-- </form> -->
       </div>
-      <div class="Trending">Top Trending Resources</div>
+      <div class="Trending">Resources</div>
       <!-- <div class="ResourceRow">
           <div class="Academy">
             <img src='<?php echo URL ?>views/images/LearningMaterials/w3.png' >

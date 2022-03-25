@@ -8,14 +8,20 @@ class Admin_add_lm extends Controller
 
     function Admin_add_lm()
     {
-        $data = [
-            'learning_material_link_err' => '',
-            'learning_material_title_err' => '',
-            // 'controller'=>'ChangePassword'
-          ];
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $data = [
+                'learning_material_link_err' => '',
+                'learning_material_title_err' => '',
+                // 'controller'=>'ChangePassword'
+            ];
 
-        //pass view name
-        $this->view->renderAdmin('Admin_add_lm');
+            //pass view name
+            $this->view->renderAdmin('Admin_add_lm');
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }
+
     }
     public function AddLearningMaterials()
     {

@@ -27,7 +27,7 @@
             
             <div class="jobcategory-search-box">
                 <div class="search-your-keywords">
-                    <input type="text" name="JobcategoryName" placeholder="Search Job Categories" onkeyup="ajaxload(this.value)">
+                    <input type="text" name="JobcategoryName" placeholder="Search Job Categories" onkeyup="ajaxload(this.value);">
                 </div>
             </div>
 
@@ -35,7 +35,7 @@
         <!-- search part ends here -->
 
 
-        <div class="Table">
+        <div class="Table" id="Table">
             <table>
                 <tr>
                     <th colspan="4" id="topic">Career Role Rankings According To Vacancies</th>
@@ -114,8 +114,13 @@
                 </tr> -->
             </table>
         </div>
-        <div class="Graph">
 
+         <!--        graph devision starts here-->
+        <div class="Graph">
+             <!--        job category graph starts here -->
+             <div class="job_categories">
+                <canvas id="job_category_chart" width="400px" height="400px"></canvas>
+            </div>
         </div>
 
         <!-- load more button -->
@@ -126,6 +131,7 @@
     </div>
     <?php include 'Footer.php' ?>
     <script src="<?php echo URL ?>views/JS/JobRanking.js"></script>
+    <script src="<?php echo URL ?>views/JS/JobRankingGraph.js"></script>
 </body>
 
 </html>
