@@ -9,7 +9,7 @@ class JobSeekerAccount_Model extends Model
 
     function get_jobseeker_data_m($ID)
     {
-        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Phone_number, Address, Jobseeker_In, Jobseeker_Twitter, Jobseeker_Fb, Jobseeker_Web, Profile_picture, Description, Gender, Age, Applied_jobs_count, Applied_contracts_count, Jobseeker_rate_total_star_count, Jobseeker_rate_and_review_count \n"
+        $sql = "SELECT user.User_ID, Email, First_name, Last_name, Phone_number, Address, Jobseeker_In, Jobseeker_Twitter, Jobseeker_Fb, Jobseeker_Web, Profile_picture, Description, Skills, Education, Experience, Gender, Age, Applied_jobs_count, Applied_contracts_count, Jobseeker_rate_total_star_count, Jobseeker_rate_and_review_count \n"
 
             . "\n"
 

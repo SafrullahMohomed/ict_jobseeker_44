@@ -23,7 +23,7 @@ class JobSeekerAccount extends Controller
             $this->view->render2('JobSeekerAccount', $data);
 
         } else {
-            //  $this->view->render("YouDontHavePermission");
+             $this->view->render("YouDontHavePermission");
         }
 
         //pass view name

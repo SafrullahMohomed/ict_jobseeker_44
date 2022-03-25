@@ -24,6 +24,6 @@ function getBotResponse(input) {
     } else if (input == "goodbye" || input == "Goodbye" || input == "Good bye" || input == "good bye" || input == "Good Bye" ) {
         return "Talk to you later!";
     } else {
-        return "Try asking something else! Or Click here to connect with Contact US";
+        return "Try asking something else! Or Connect with Contact US";
     }
 }
