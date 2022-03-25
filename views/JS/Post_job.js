@@ -19,5 +19,44 @@ function hideFormError(x) {
   
   function companyNameWarning(){
     
-confirm("Your company profile company name also changes as above mentioned company name.If you want to change it click on the user icon in the top right corner then go to my profile and edit");
+
+ 
+window.open("http://localhost/ict_jobseeker_44/Jobs/Post_job","_self");
+
+}
+
+  function open_post_job_page(){
+
+    window.open("http://localhost/ict_jobseeker_44/Jobs/Post_job","_self");
   }
+  //bullet list
+
+const bullet = "\u2022";
+const bulletWithSpace = `${bullet} `;
+const enter = 13;
+
+
+//for bullet points
+
+const handleInput = (event) => {
+    const { keyCode, target } = event;
+    const { selectionStart, value } = target;
+
+    if (keyCode === enter) {
+        console.log('a');
+        target.value = [...value]
+            .map((c, i) => i === selectionStart - 1
+                ? `\n${bulletWithSpace}`
+                : c
+            )
+            .join('');
+        console.log(target.value);
+
+        target.selectionStart = selectionStart+bulletWithSpace.length;
+        target.selectionEnd = selectionStart+bulletWithSpace.length;
+    }
+
+    if (value[0] !== bullet) {
+        target.value = `${bulletWithSpace}${value}`;
+    }
+}
