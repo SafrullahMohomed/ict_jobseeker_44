@@ -32,7 +32,20 @@
          FREE trial<br> and get more<br> and more benefits.<br>Oh!!! Do not worry,<br>otherwise
           you can go with <br>flexible packages</div>
 
-              <button  class="post_job_description_left_button">FREE Trial</button>
+              <button  class="post_job_description_left_button" 
+             <?php 
+              //if company is at intial six month and their job count is less than ten they can use free trail
+              //$data1=diif_y,$data1=diif_m,$data1=count2,
+              if($data1<1 && $data2<=6 && $data3<=10):?>
+               onclick="open_post_job_page()"
+              <?php endif; ?>  
+
+              <?php 
+               if($data1>1 || $data2>6 || $data3>10):?>
+               onclick="open_post_job_page()"
+              <?php endif; ?> > 
+              Free Trial
+            </button>
         
               <button class="post_job_description_left_button">Pay</button>
     </div>

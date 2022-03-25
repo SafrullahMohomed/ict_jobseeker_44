@@ -22,25 +22,7 @@
 <!-- check user is company or not -->
       <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Company" ): ?>
 
-  <div class="post_job_description" style="background-image:url('<?php echo URL?>views/images/Post_job/1.png');" >
-    <div class="post_job_description_left">
-
-      <div class="post_job_description_left_text">If you are NEW <br>
-        try with our initial <br>
-        SIX-month
-         <br>
-         FREE trial<br> and get more<br> and more benefits.<br>Oh!!! Do not worry,<br>otherwise
-          you can go with <br>flexible packages</div>
-
-              <button  class="post_job_description_left_button">FREE Trial</button>
-        
-              <button class="post_job_description_left_button">Pay</button>
-    </div>
-    
-
-<div class="post_job_description_text">It is time to post your new job </div>
-
-  </div>
+  
 
 <div class="post_job">
 <p> Job Details</p>
@@ -91,7 +73,7 @@
 
 
     <label for="Brief_Description" class="labelfield required"> Brief Description</label><br>
-    <textarea  id="description" rows="6"  placeholder="Type here small description about the job (qulifications/other)..." class="inputfield" name="Brief_Description" require></textarea><br>
+    <textarea onkeyup="" id="description" rows="6"  placeholder="Type here small description about the job (qulifications/other)..." class="inputfield" name="Brief_Description" require></textarea><br>
 
     <label for="Job_Type" class="labelfield">Job Type</label><br>
     <select id="JobType" name="Job_Type" class="inputfield">
