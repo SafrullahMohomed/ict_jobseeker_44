@@ -218,8 +218,6 @@
 
 </div>
 
-<?php include './views/Footer.php' ?>
-
     <script src="<?php echo URL ?>views/JS/Manage_lm.js"></script>
 </body>
 
