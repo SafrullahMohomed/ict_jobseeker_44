@@ -23,8 +23,8 @@ class Post_job_main_page_Model extends Model{
     }
     
     function get_job_count(){
-        $query1 ="SELECT COUNT(Job_ID) FROM job WHERE User_ID=133" ;
-       // $query1 ="SELECT COUNT(Job_ID) FROM job WHERE User_ID=$_SESSION['User_ID']" ;
+       //$query1 ="SELECT COUNT(Job_ID) FROM job WHERE User_ID=133" ;
+        $query1 ="SELECT COUNT(Job_ID) FROM job WHERE User_ID=$_SESSION['User_ID']" ;
         $stmt1=$this->db->prepare($query1);
         $stmt1->execute();
         $s=$stmt1->fetch();

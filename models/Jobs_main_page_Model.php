@@ -165,7 +165,82 @@ public function getJobCategory(){
     return $s;
 }
 
-  
+  //city location union search
+  function select_data_table3($query1,$query2, $page, $start, $limit)
+    {
+
+        $condition1 = preg_replace('/[^A-Za-z0-9\- ]/', '', $query1);
+        $condition1 = trim($condition1);
+        $condition1 = str_replace(" ", "%", $condition1);
+
+        $condition2 = preg_replace('/[^A-Za-z0-9\- ]/', '', $query2);
+        $condition2 = trim($condition2);
+        $condition2 = str_replace(" ", "%", $condition2);
+echo  $query1 ;
+        $sample_data = array(
+            ':JobCategory_name' => '%' . $condition1 . '%',
+            ':Job_city' => '%' . $condition2 . '%',
+        );
+       
+
+
+        $sql = "SELECT job.Job_ID, Job_title, Company_name,Job_city,Job_type, JobCategory_name, Job_deadline\n"
+            . "FROM job\n"
+            . "JOIN company ON job.User_ID = company.User_ID\n"
+            . "JOIN jobcategory ON job.JobCategory_ID = jobcategory.JobCategory_ID\n"
+            . "WHERE 
+                JobCategory_name LIKE :JobCategory_name AND
+                Job_city LIKE :Job_city\n"
+            . "ORDER BY job.Job_ID\n";
+
+        $filter_query = $sql . 'LIMIT ' . $start . ',' . $limit;
+//        return $filter_query;
+        $statement = $this->db->prepare($sql);
+        $statement->execute($sample_data);
+        $total_data = $statement->rowCount();
+
+        $statement = $this->db->prepare($filter_query);
+        $statement->execute($sample_data);
+
+        $result = $statement->fetchAll();
+        print_r($result) ;
+
+//        to highlight the word
+         $replace_array_1 = explode('%', $condition1);
+        $replace_array_3 = explode('%', $condition2);
+
+        foreach ($replace_array_1 as $row_data) {
+            $replace_array_2[] = '<span style="background-color:#' . rand(100000, 999999) . '; color:#fff">' . $row_data . '</span>';
+        }
+
+        foreach ($result as $row) {
+            $data[] = array(
+                'Job_ID' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_ID"]),
+                'Job_title' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_title"]),
+                'Company_name' => str_ireplace($replace_array_1, $replace_array_2, $row["Company_name"]),
+                'JobCategory_name' => str_ireplace($replace_array_1, $replace_array_2, $row["JobCategory_name"]),
+                'Job_deadline' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_deadline"]),
+                'Job_city' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_city"]),
+                'Job_type' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_type"])
+            );
+        }
+
+     
+//        return print_r($data);
+
+//get features category data start
+
+$sql3 = "SELECT JobCategory_name FROM jobcategory ORDER BY JobCategory_count DESC LIMIT 6";
+
+$stmt1=$this->db->prepare($sql3);   
+$stmt1->execute();
+$category=$stmt1->fetchAll();
+
+////get features category data end
+
+ return array(json_encode($data),$total_data,json_encode($category));
+
+}
    
 }
 
