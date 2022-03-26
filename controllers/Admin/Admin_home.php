@@ -14,7 +14,7 @@ class Admin_home extends Controller
         if ($_SESSION['User_type'] == 'Admin44') {
             $this->view->renderAdmin('Admin_home');
         } else {
-            $this->view->render('YouDontHavePermisson');
+            $this->view->render('YouDontHavePermission');
         }
 
     }
@@ -39,9 +39,10 @@ class Admin_home extends Controller
     function get_monthly_user_registered()
     {
         if(isset($_POST)){
-//            $year = $_POST['user_year'];
+            $year = $_POST['user_year'];
+//            echo json_encode($year);
         }
-        $results = $this->model->get_monthly_user_registered_m();
+        $results = $this->model->get_monthly_user_registered_m($year);
         echo json_encode($results);
     }
 

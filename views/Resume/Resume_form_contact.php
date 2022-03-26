@@ -52,7 +52,7 @@
 
 <!-- contact field starts here -->
 
-<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_1">
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form1">
 
     <div class="" id="form1_contact">
         <!-- title field starts here -->
@@ -149,9 +149,11 @@
 <!-- contact form ends here -->
 
 <!-- experience field starts here -->
-<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_2">
 
-    <div class="tab" id="form2_experience">
+<!--experience form 1-->
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form2a">
+
+    <div class="tab" id="form2_experience2a">
         <!-- text field starts here -->
         <div class="title_text">
             <div class="text1">Work experiences</div>
@@ -166,12 +168,12 @@
         </div>
 
         <!-- experience form field starts here -->
-        <div class="experience_form" id=experience_form1>
+        <div class="experience_form" id=experience_form2a>
 
             <!--            cancel response-->
 
-            <div id="cancelButton${id_experience}" class="cancelButtonExtra">
-                <i title="Delete this response" onclick="delete_experience(${id_experience})" class="fa fa-trash-o"
+            <div id="cancelButton2a" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_experience()" class="fa fa-trash-o"
                    aria-hidden="true"></i>
             </div>
 
@@ -180,21 +182,21 @@
             <div class="jobTitle inp">
                 <label for="jobTitle">Job Title</label>
                 <br/>
-                <input type="text" name="jobTitle" id="jobTitle"/>
+                <input type="text" name="jobTitle" id="jobTitle2a"/>
             </div>
 
             <!-- employer -->
             <div class="employer inp">
                 <label for="employer">Employer</label>
                 <br/>
-                <input type="text" name="employer" id="employer"/>
+                <input type="text" name="employer" id="employer2a"/>
             </div>
 
             <!-- city -->
             <div class="city inp">
                 <label for="city">City</label>
                 <br/>
-                <input type="text" name="city" id="city_experience"/>
+                <input type="text" name="city" id="city_experience2a"/>
             </div>
 
             <!-- state -->
@@ -208,31 +210,31 @@
             <div class="country inp">
                 <label for="country">Country</label>
                 <br/>
-                <input type="text" name="country" id="country_experience"/>
+                <input type="text" name="country" id="country_experience2a"/>
             </div>
 
             <!-- experience details -->
             <div class="experienceDetails inp">
                 <label for="experienceDetails">What did do in this job?</label>
                 <br/>
-                <textarea name="experienceDetails" id="experienceDetails" cols="30" rows="10"></textarea>
+                <textarea name="experienceDetails" id="experienceDetails2a" cols="30" rows="10"></textarea>
             </div>
 
             <!-- time period -->
             <div class="time_period inp">
                 <div class="from">
                     <label for="from">From</label>
-                    <input type="date" name="from" id="from_experience"/>
+                    <input type="date" name="from" id="from_experience2a"/>
                 </div>
                 <div class="to">
                     <label for="to">To</label>
-                    <input type="date" name="to" id="to_experience"/>
+                    <input type="date" name="to" id="to_experience2a"/>
                 </div>
             </div>
             <!-- currently working field starts here -->
             <div class="workingHere inp">
-                <input type="checkbox" name="workHere" id="workHere"/>
-                <label class="working_label" for="workHere">
+                <input type="checkbox" name="workHere" id="workHere2a"/>
+                <label class="working_label" for="workHere2a">
                     I currently work here</label>
             </div>
 
@@ -240,8 +242,157 @@
         </div>
 
         <div id="dynamic_experience">
+            <form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" id="form2b">
+                <div class="experience_form" id=experience_form${id_experience}>
+
+                    <!--cancel button-->
+                    <div id="cancelButton2b" class="cancelButtonExtra">
+                        <i title="Delete this response" onclick="delete_experience()"
+                           class="fa fa-trash-o" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- job title -->
+                    <div class="jobTitle inp">
+                        <label for="jobTitle">Job Title</label>
+                        <br/>
+                        <input type="text" name="jobTitle" id="jobTitle2b"/>
+                    </div>
+
+                    <!-- employer -->
+                    <div class="employer inp">
+                        <label for="employer">Employer</label>
+                        <br/>
+                        <input type="text" name="employer" id="employer2b"/>
+                    </div>
+
+                    <!-- city -->
+                    <div class="city inp">
+                        <label for="city">City</label>
+                        <br/>
+                        <input type="text" name="city" id="city_experience2b"/>
+                    </div>
+
+                    <!-- state -->
+                    <!-- <div class="state inp">
+                      <label for="state">State</label>
+                      <br />
+                      <input type="tel" name="state" id="state" />
+                    </div> -->
+
+                    <!-- country -->
+                    <div class="country inp">
+                        <label for="country">Country</label>
+                        <br/>
+                        <input type="text" name="country" id="country_experience2b"/>
+                    </div>
+
+                    <!-- experience details -->
+                    <div class="experienceDetails inp">
+                        <label for="experienceDetails">What did do in this job?</label>
+                        <br/>
+                        <textarea name="experienceDetails" id="experienceDetails2b" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <!-- time period -->
+                    <div class="time_period inp">
+                        <div class="from">
+                            <label for="from">From</label>
+                            <input type="date" name="from" id="from_experience2b"/>
+                        </div>
+                        <div class="to">
+                            <label for="to">To</label>
+                            <input type="date" name="to" id="to_experience2b"/>
+                        </div>
+                    </div>
+                    <!-- currently working field starts here -->
+                    <div class="workingHere inp">
+                        <input type="checkbox" name="workHere" id="workHere2b"/>
+                        <label class="working_label" for="workHere">
+                            I currently work here</label>
+                    </div>
+
+
+                </div>
+            </form>
+            <!--        experience 2b form ends here-->
+
+            <form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" id="form2c">
+                <div class="experience_form" id=experience_form2c>
+
+                    <!--cancel button-->
+                    <div id="cancelButton2c" class="cancelButtonExtra">
+                        <i title="Delete this response" onclick="delete_experience()"
+                           class="fa fa-trash-o" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- job title -->
+                    <div class="jobTitle inp">
+                        <label for="jobTitle">Job Title</label>
+                        <br/>
+                        <input type="text" name="jobTitle" id="jobTitle2c"/>
+                    </div>
+
+                    <!-- employer -->
+                    <div class="employer inp">
+                        <label for="employer">Employer</label>
+                        <br/>
+                        <input type="text" name="employer" id="employer2c"/>
+                    </div>
+
+                    <!-- city -->
+                    <div class="city inp">
+                        <label for="city">City</label>
+                        <br/>
+                        <input type="text" name="city" id="city_experience2c"/>
+                    </div>
+
+                    <!-- state -->
+                    <!-- <div class="state inp">
+                      <label for="state">State</label>
+                      <br />
+                      <input type="tel" name="state" id="state" />
+                    </div> -->
+
+                    <!-- country -->
+                    <div class="country inp">
+                        <label for="country">Country</label>
+                        <br/>
+                        <input type="text" name="country" id="country_experience2c"/>
+                    </div>
+
+                    <!-- experience details -->
+                    <div class="experienceDetails inp">
+                        <label for="experienceDetails">What did do in this job?</label>
+                        <br/>
+                        <textarea name="experienceDetails" id="experienceDetails2c" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <!-- time period -->
+                    <div class="time_period inp">
+                        <div class="from">
+                            <label for="from">From</label>
+                            <input type="date" name="from" id="from_experience2c"/>
+                        </div>
+                        <div class="to">
+                            <label for="to">To</label>
+                            <input type="date" name="to" id="to_experience2c"/>
+                        </div>
+                    </div>
+                    <!-- currently working field starts here -->
+                    <div class="workingHere inp">
+                        <input type="checkbox" name="workHere" id="workHere2c"/>
+                        <label class="working_label" for="workHere">
+                            I currently work here</label>
+                    </div>
+
+
+                </div>
+            </form>
+            <!--        experience 2c form ends here-->
 
         </div>
+        <!--        dynamic experience ends here -->
+
         <!-- add another experience button -->
         <div class="add-another add-button-display-none" id="add-another-experience">
             <button id="add-experience"><span class="plus_for_button">+</span>Add another experience</button>
@@ -266,9 +417,11 @@
 <!-- experience field ends here -->
 
 <!-- education field starts here -->
-<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_3">
 
-    <div class="tab" id="form3_education">
+<!--education 3a-->
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form3a">
+
+    <div class="tab" id="form3_education3a">
 
         <!-- text field starts here -->
         <div class="title_text">
@@ -284,10 +437,10 @@
         </div>
 
         <!-- education form field starts here -->
-        <div class="education_form" id="education_form1">
+        <div class="education_form" id="education_form3a">
             <!--            cancel response-->
 
-            <div id="cancelButton${id_education}" class="cancelButtonExtra">
+            <div id="cancelButton3a" class="cancelButtonExtra">
                 <i title="Delete this response" onclick="delete_education(${id_education})" class="fa fa-trash-o"
                    aria-hidden="true"></i>
             </div>
@@ -296,21 +449,21 @@
             <div class="institute inp">
                 <label for="institute">Institute</label>
                 <br/>
-                <input type="text" name="institute" id="institute"/>
+                <input type="text" name="institute" id="institute3a"/>
             </div>
 
             <!-- Degree -->
             <div class="degree inp">
                 <label for="degree">Degree</label>
                 <br/>
-                <input type="text" name="degree" id="degree"/>
+                <input type="text" name="degree" id="degree3a"/>
             </div>
 
             <!-- city -->
             <div class="city inp">
                 <label for="city">City</label>
                 <br/>
-                <input type="text" name="city" id="city_education"/>
+                <input type="text" name="city" id="city_education3a"/>
             </div>
 
             <!-- state -->
@@ -324,7 +477,7 @@
             <div class="country inp">
                 <label for="country">Country</label>
                 <br/>
-                <input type="text" name="Country" id="country_education"/>
+                <input type="text" name="Country" id="country_education3a"/>
             </div>
 
             <!-- education details -->
@@ -332,23 +485,23 @@
                 <div class="edu_Discription_text">
                     Brief description about education
                 </div>
-                <textarea name="educationDetails" id="educationDetails" cols="30" rows="10"></textarea>
+                <textarea name="educationDetails" id="educationDetails3a" cols="30" rows="10"></textarea>
             </div>
 
             <!-- time period -->
             <div class="time_period inp">
                 <div class="from">
                     <label for="from">From</label>
-                    <input type="date" name="from" id="from_education"/>
+                    <input type="date" name="from" id="from_education3a"/>
                 </div>
                 <div class="to">
                     <label for="to">To</label>
-                    <input type="date" name="to" id="to_education"/>
+                    <input type="date" name="to" id="to_education3a"/>
                 </div>
             </div>
             <!-- study here field -->
             <div class="studyHere inp">
-                <input type="checkbox" name="studyHere" id="studyHere"/>
+                <input type="checkbox" name="studyHere" id="studyHere3a"/>
                 <label class="studying_label" for="studyHere">
                     I currently study here</label>
             </div>
@@ -359,6 +512,157 @@
 
         <div id="dynamic_education">
 
+            <!--            education 3b-->
+            <form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form3b">
+
+                <div class="education_form" id="education_form3b">
+
+                    <!--cancel button-->
+                    <div id="cancelButton3b" class="cancelButtonExtra">
+                        <i title="Delete this response" onclick="delete_education()" class="fa fa-trash-o"
+                           aria-hidden="true"></i>
+                    </div>
+                    <!-- Institute -->
+                    <div class="institute inp">
+                        <label for="institute">Institute</label>
+                        <br/>
+                        <input type="text" name="institute" id="institute3b"/>
+                    </div>
+
+                    <!-- Degree -->
+                    <div class="degree inp">
+                        <label for="degree">Degree</label>
+                        <br/>
+                        <input type="text" name="degree" id="degree3b"/>
+                    </div>
+
+                    <!-- city -->
+                    <div class="city inp">
+                        <label for="city">City</label>
+                        <br/>
+                        <input type="text" name="city" id="city_education3b"/>
+                    </div>
+
+                    <!-- state -->
+                    <!-- <div class="state inp">
+                      <label for="state">State</label>
+                      <br />
+                      <input type="tel" name="state" id="state" />
+                    </div> -->
+
+                    <!-- country -->
+                    <div class="country inp">
+                        <label for="country">Country</label>
+                        <br/>
+                        <input type="text" name="Country" id="country_education3b"/>
+                    </div>
+
+                    <!-- education details -->
+                    <div class="educationDetails inp">
+                        <div class="edu_Discription_text">
+                            Brief description about education
+                        </div>
+                        <textarea name="educationDetails" id="educationDetails3b" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <!-- time period -->
+                    <div class="time_period inp">
+                        <div class="from">
+                            <label for="from">From</label>
+                            <input type="date" name="from" id="from_education3b"/>
+                        </div>
+                        <div class="to">
+                            <label for="to">To</label>
+                            <input type="date" name="to" id="to_education3b"/>
+                        </div>
+                    </div>
+                    <!-- study here field -->
+                    <div class="studyHere inp">
+                        <input type="checkbox" name="studyHere" id="studyHere3b"/>
+                        <label class="studying_label" for="studyHere">
+                            I currently study here</label>
+                    </div>
+
+
+                </div>
+            </form>
+            <!--            education 3b ends here -->
+
+            <!--            education 3c-->
+            <form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form3c">
+
+                <div class="education_form" id="education_form3c">
+
+                    <!--cancel button-->
+                    <div id="cancelButton3c" class="cancelButtonExtra">
+                        <i title="Delete this response" onclick="delete_education()" class="fa fa-trash-o"
+                           aria-hidden="true"></i>
+                    </div>
+                    <!-- Institute -->
+                    <div class="institute inp">
+                        <label for="institute">Institute</label>
+                        <br/>
+                        <input type="text" name="institute" id="institute3c"/>
+                    </div>
+
+                    <!-- Degree -->
+                    <div class="degree inp">
+                        <label for="degree">Degree</label>
+                        <br/>
+                        <input type="text" name="degree" id="degree3c"/>
+                    </div>
+
+                    <!-- city -->
+                    <div class="city inp">
+                        <label for="city">City</label>
+                        <br/>
+                        <input type="text" name="city" id="city_education3c"/>
+                    </div>
+
+                    <!-- state -->
+                    <!-- <div class="state inp">
+                      <label for="state">State</label>
+                      <br />
+                      <input type="tel" name="state" id="state" />
+                    </div> -->
+
+                    <!-- country -->
+                    <div class="country inp">
+                        <label for="country">Country</label>
+                        <br/>
+                        <input type="text" name="Country" id="country_education3c"/>
+                    </div>
+
+                    <!-- education details -->
+                    <div class="educationDetails inp">
+                        <div class="edu_Discription_text">
+                            Brief description about education
+                        </div>
+                        <textarea name="educationDetails" id="educationDetails3c" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <!-- time period -->
+                    <div class="time_period inp">
+                        <div class="from">
+                            <label for="from">From</label>
+                            <input type="date" name="from" id="from_education3c"/>
+                        </div>
+                        <div class="to">
+                            <label for="to">To</label>
+                            <input type="date" name="to" id="to_education3c"/>
+                        </div>
+                    </div>
+                    <!-- study here field -->
+                    <div class="studyHere inp">
+                        <input type="checkbox" name="studyHere" id="studyHere3c"/>
+                        <label class="studying_label" for="studyHere">
+                            I currently study here</label>
+                    </div>
+
+
+                </div>
+            </form>
+            <!--            education 3c ends here -->
         </div>
 
         <!-- add another education button -->
@@ -388,7 +692,7 @@
 <!-- education field ends here -->
 
 <!-- skills starts here -->
-<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_4">
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form4">
 
     <div class="tab" id="form4_skills">
         <!-- text field starts here -->
@@ -431,9 +735,11 @@
 
 
 <!-- projects starts here -->
-<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form_5">
 
-    <div class="tab" id="form5_projects">
+<!--project 5a starts here -->
+<form action="http://localhost/ict_jobseeker_44/Resume/Resume_form_contact" method="post" id="form5a">
+
+    <div class="tab" id="form5_projects5a">
         <!-- text field starts here -->
         <div class="title_text">
             <div class="text1">Projects</div>
@@ -450,12 +756,12 @@
         </div>
 
         <!-- project form field starts here -->
-        <div class="project_form" id="project_form1">
+        <div class="project_form" id="project_form5a">
 
             <!--            cancel response-->
 
-            <div id="cancelButton${id_project}" class="cancelButtonExtra">
-                <i title="Delete this response" onclick="delete_project(${id_project})" class="fa fa-trash-o"
+            <div id="cancelButton5a" class="cancelButtonExtra">
+                <i title="Delete this response" onclick="delete_project()" class="fa fa-trash-o"
                    aria-hidden="true"></i>
             </div>
 
@@ -463,18 +769,73 @@
             <div class="projectTitle inp">
                 <label for="projectTitle">Project title</label>
                 <br/>
-                <input type="text" name="projectTitle" id="projectTitle"/>
+                <input type="text" name="projectTitle" id="projectTitle5a"/>
             </div>
             <!-- project details -->
             <div class="projectDetails inp">
                 <label class="description">Project Description</label>
-                <textarea name="projectDetails" id="projectDetails" cols="30" rows="10"></textarea>
+                <textarea name="projectDetails" id="projectDetails5a" cols="30" rows="10"></textarea>
             </div>
 
 
         </div>
 
+<!--        project 5a ends here-->
+
         <div id="dynamic_project">
+
+<!--project 5b starts here-->
+            <form action="" id="form5b">
+                <div class="project_form" id="project_form5b">
+
+                    <!--cancel button-->
+                    <div id="cancelButton5b" class="cancelButtonExtra">
+                        <i title="Delete this response" onclick="delete_project()" class="fa fa-trash-o" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- project title -->
+                    <div class="projectTitle inp">
+                        <label for="projectTitle">Project title</label>
+                        <br/>
+                        <input type="text" name="projectTitle" id="projectTitle5b"/>
+                    </div>
+                    <!-- project details -->
+                    <div class="projectDetails inp">
+                        <label class="description">Project Description</label>
+                        <textarea name="projectDetails" id="projectDetails5b" cols="30" rows="10"></textarea>
+                    </div>
+
+
+                </div>
+            </form>
+            <!--project 5b starts here-->
+
+            <!--project 5b starts here-->
+            <form action="" id="form5c">
+                <div class="project_form" id="project_form5c">
+
+                    <!--cancel button-->
+                    <div id="cancelButton5c" class="cancelButtonExtra">
+                        <i title="Delete this response" onclick="delete_project()" class="fa fa-trash-o" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- project title -->
+                    <div class="projectTitle inp">
+                        <label for="projectTitle">Project title</label>
+                        <br/>
+                        <input type="text" name="projectTitle" id="projectTitle5c"/>
+                    </div>
+                    <!-- project details -->
+                    <div class="projectDetails inp">
+                        <label class="description">Project Description</label>
+                        <textarea name="projectDetails" id="projectDetails5c" cols="30" rows="10"></textarea>
+                    </div>
+
+
+                </div>
+            </form>
+            <!--project 5c starts here-->
+
 
         </div>
 
