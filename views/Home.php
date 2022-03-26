@@ -63,9 +63,12 @@
 
     <div class="job-search-box">
         <div class="search-your-keywords">
-            <input type="text" name="Search your keyword" placeholder="Search for a job"/>
+            <input type="text" name="Search your keyword"
+             placeholder="Search jobs(Title,Location)"
+             onkeyup="ajaxload(this.value);"
+             />
         </div>
-        <div class="category">
+       <!--  <div class="category">
             <select name="Category">
                 <option value="none" selected disabled hidden>
                     <span id="category-id-home">Select a Catogory</span>
@@ -82,8 +85,7 @@
             </select>
         </div>
         <div class="location">
-            <!--        <input type="text" name="location" placeholder="location" />-->
-            <!--          <label for="City" class="labelfield ">City</label><br>-->
+           
             <select type="text" id="City" name="City" placeholder="" class="inputfield" aria-multiselectable=><br>
                 <option value="Ampara ">Ampara</option>
                 <option value="Anuradhapura ">Anuradhapura</option>
@@ -112,10 +114,10 @@
                 <option value="Vauniya ">Vauniya</option>
 
             </select>
-        </div>
-        <div class="search-button">
+        </div> -->
+        <!-- <div class="search-button">
             <button type="submit">Search</button>
-        </div>
+        </div> -->
     </div>
 </div>
 

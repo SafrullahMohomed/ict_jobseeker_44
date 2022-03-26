@@ -1,4 +1,5 @@
 
+
   function successPost(){
     window.open("http://localhost/ict_jobseeker_44/Jobs/Success_post","_self");
   }
@@ -17,18 +18,33 @@ function hideFormError(x) {
 
   //show alert to user to give warrning about company name changes
   
-  function companyNameWarning(){
-    
-
  
-window.open("http://localhost/ict_jobseeker_44/Jobs/Post_job","_self");
+  
 
-}
+  function valid_free_trail(){
+   // window.open("http://localhost/ict_jobseeker_44/Jobs/Success_post","_self");
+    //setTimeout(valid_free_trail, 10000);
+    window.location.href ="http://localhost/ict_jobseeker_44/Jobs/Post_Job/insertData";
+  
 
-  function open_post_job_page(){
-
-    window.open("http://localhost/ict_jobseeker_44/Jobs/Post_job","_self");
   }
+  function invalid_free_trail(){
+    alert("Sorry your free trail is invalid.Try with payment option");
+    
+    //window.open("http://localhost/ict_jobseeker_44/Jobs/Success_post","_self");
+    //window.location.href ="http://localhost/ict_jobseeker_44/Jobs/Post_Job/insert_query_post_job"
+  
+
+  }
+
+
+
+
+
+
+
+
+
   //bullet list
 
 const bullet = "\u2022";

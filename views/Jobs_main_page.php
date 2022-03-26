@@ -35,16 +35,16 @@
         <div class="job-search-box">
             <div class="search-your-keywords">
                 <input type="text"  require
-                name="search-jobs" id="search-jobs" placeholder="Search jobs"
+                name="search_jobs" id="search-jobs" placeholder="Search jobs(Title,Location)"
                 onkeyup="ajaxload(this.value);"/>
             </div>
-            <div class="category">
-                <select name="Category"  onchange="ajaxload(this.value);" >
+           <!--  <div class="category">
+                <select name="Category" id="category"  >
                     <option value="none" selected disabled hidden>
                         <span id="category-id-home">Select a Catogory</span>
                     </option>
                     <?php 
-        $data_count=count($data['jobCategory']);
+       /*$data_count=count($data['jobCategory']);
       
         for($x = 0; $x < $data_count; $x++  )
         {
@@ -52,13 +52,13 @@
           echo $data['jobCategory'][$x]['JobCategory_name'];
            echo"</option>";
         
-        }
+        }*/
         
         ?>
                 </select>
             </div>
             <div class="location">
-                <select type="text" name="location" placeholder="location" onchange="ajaxload(this.value);" >
+                <select type="text" name="location" id="location" placeholder="location" >
                 <option value="none" selected disabled hidden>
                         <span id="category-id-home">Select a Distric</span>
                     </option>
@@ -88,10 +88,10 @@
               <option value="Trincomalee  ">Trincomalee </option>
               <option value="Vauniya ">Vauniya </option>
                 </select>
-            </div>
-            <div class="search-button">
-                <button type="submit">Search</button>
-            </div>
+            </div> -->
+            <!-- <div class="search-button">
+                <button type="submit" onclick="ajaxload(search_jobs.value);">Search</button>
+            </div> -->
         </div>
     </div>
     <!-- themes image and job search part ends here -->

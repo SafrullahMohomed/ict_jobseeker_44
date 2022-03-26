@@ -33,16 +33,16 @@
           you can go with <br>flexible packages</div>
 
               <button  class="post_job_description_left_button" 
-             <?php 
+             <?php  
               //if company is at intial six month and their job count is less than ten they can use free trail
               //$data1=diif_y,$data1=diif_m,$data1=count2,
-              if($data1<1 && $data2<=6 && $data3<=10):?>
-               onclick="open_post_job_page()"
+              if(($data1<1) && ($data2<=6) && ($data3<=10)):?>
+               onclick="valid_free_trail()"
               <?php endif; ?>  
 
-              <?php 
+              <?php
                if($data1>1 || $data2>6 || $data3>10):?>
-               onclick="open_post_job_page()"
+               onclick="invalid_free_trail()"
               <?php endif; ?> > 
               Free Trial
             </button>

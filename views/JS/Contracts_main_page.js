@@ -262,9 +262,10 @@ function ajaxload(query = '', page_number = 1) {
 
   if(query != '' ){
     document.getElementById("top_trending_categories_container").style.height='0';
+    document.getElementById("top_trending_categories_container").style.display = "none";
     document.getElementById("top_trending_categories_container").style.visibility = "hidden";
-    //document.getElementById("top_trending_categories_title").style.visibility = "hidden";
-  //  document.getElementById("features_contract").style.marginTop = "0";
+    document.getElementById("title").style.visibility = "hidden";
+    //document.getElementById("main_container").style.height = "500px";
  
  }
   //pass the page number and search query
@@ -287,6 +288,8 @@ function ajaxload(query = '', page_number = 1) {
       if (xhr.status == 200) {
         const contract_data1 = xhr.responseText; //ajax response data  
         const contract_data2 = JSON.parse(contract_data1); //convert the response data to js object
+
+        //used to convert a string containing JSON notation into a Javascript object.
         let  search = JSON.parse(contract_data2.data); //convert the data array into js object
         let  category = JSON.parse(contract_data2.category); //convert the category array into js object
         //search = JSON.parse(this.response);
@@ -298,13 +301,13 @@ function ajaxload(query = '', page_number = 1) {
 
                   `<div class="top_trending_categories_box_row">
 
-                  <div class="top_trending_categories_box"><a href="javascript:ajaxload('${category[0][0]}');">${category[0][0]}</a></div>
+                  <div class="top_trending_categories_box" title= "click to browse contract by category"><a href="javascript:ajaxload('${category[0][0]}');">${category[0][0]}</a></div>
 
 
-                  <div class="top_trending_categories_box"><a href="javascript:ajaxload('${category[1][0]}');">${category[1][0]}</a></div>
+                  <div class="top_trending_categories_box" title= "click to browse contract by category"><a href="javascript:ajaxload('${category[1][0]}');">${category[1][0]}</a></div>
 
 
-                  <div class="top_trending_categories_box"><a href="javascript:ajaxload('${category[2][0]}');">${category[2][0]}</a></div>
+                  <div class="top_trending_categories_box" title= "click to browse contract by category"><a href="javascript:ajaxload('${category[2][0]}');">${category[2][0]}</a></div>
 
 
 
@@ -317,13 +320,13 @@ function ajaxload(query = '', page_number = 1) {
 
                   <div class="top_trending_categories_box_row">
 
-                  <div class="top_trending_categories_box"><a href="javascript:ajaxload('${category[3][0]}');">${category[3][0]}</a></div>
+                  <div class="top_trending_categories_box" title= "click to browse contract by category"><a href="javascript:ajaxload('${category[3][0]}');">${category[3][0]}</a></div>
 
 
-                  <div class="top_trending_categories_box"><a href="javascript:ajaxload('${category[4][0]}');">${category[4][0]}</a></div>
+                  <div class="top_trending_categories_box" title= "click to browse contract by category"><a href="javascript:ajaxload('${category[4][0]}');">${category[4][0]}</a></div>
 
 
-                  <div class="top_trending_categories_box"><a href="javascript:ajaxload('${category[5][0]}');">${category[5][0]}</a></div>
+                  <div class="top_trending_categories_box" title= "click to browse contract by category"><a href="javascript:ajaxload('${category[5][0]}');">${category[5][0]}</a></div>
 
 
                   </div>`

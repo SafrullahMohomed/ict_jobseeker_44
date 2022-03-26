@@ -1,4 +1,5 @@
 <?php
+
 class Post_job extends Controller
 {
     function __construct()
@@ -25,9 +26,12 @@ class Post_job extends Controller
         
 
         //if there is a company name in company table then we take it and display job post form
+        
+        if(isset($_SESSION['User_ID']))
+        {
         $Company_name=$this->model->getCompanyName($_SESSION['User_ID']);
         $data['Company_name']=$Company_name;
-        
+        }
         //load available ict job categories from database
         $jobCategory=$this->model->getJobCategory();
         $data['jobCategory']=$jobCategory;
@@ -70,7 +74,22 @@ class Post_job extends Controller
                     
                 ];
                
-     
+                $_SESSION['Company_name'] = trim($_POST['Company_name']);
+                $_SESSION['Job_Title'] = trim($_POST['Job_Title']);
+                $_SESSION['Job_Category'] = trim($_POST['Job_Category']);
+                $_SESSION['Brief_Description'] = trim($_POST['Brief_Description']);
+                $_SESSION['Job_Type'] = trim($_POST['Job_Type']);
+                $_SESSION['Sallary_Offered'] =trim($_POST['Sallary_Offered']);
+                $_SESSION['City'] = trim($_POST['City']);
+                $_SESSION['Phone_Number'] = trim($_POST['Phone_Number']);
+                $_SESSION['Email'] = trim($_POST['Email']);
+                $_SESSION['Deadline'] =trim($_POST['Deadline']);
+                $_SESSION['Company_Logo'] =trim($_POST['Company_Logo']);
+                $_SESSION['Job_image'] = trim($_POST['Job_image']);
+                $_SESSION[ 'Supply_Mock_Interviews_answer'] = trim($_POST['Supply_Mock_Interviews_answer']);
+                $_SESSION[ 'Post_a_forum_answer'] = trim($_POST['Post_a_forum_answer']);
+                
+    
                 //Validate Company_name
                 if(empty($data['Company_name'])) {
                     $data['Company_name_err'] = "Please enter the company name";
@@ -117,10 +136,11 @@ class Post_job extends Controller
                 //if there are no errors then insert data to database
                 if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) &&empty($data['Post_a_forum_answer_err'] ) 
                   )
-                {
-
-                   $this->model->insert_query_post_job( $data);
-                   $this->view ->render('Jobs_main_page');  
+                {   $data1=$data;
+                    $this->Post_job_main_page();
+                    //after display post job main page and check free trail and then insert data to db
+                   //$this->model->insert_query_post_job( $data);
+                   //$this->view ->render('Jobs_main_page');  
                   
                 }
                 //if there is invalid data or empty data then render same page ith errors
@@ -139,4 +159,37 @@ class Post_job extends Controller
 
 
 }
+function insertData(){
+    //after display post job main page and check free trail and then insert data to db
+    $this->model->insert_query_post_job();
+    $this->view ->render('Jobs_main_page'); 
+
+}
+function Post_job_main_page()
+    {  //get registration data
+       $reg_date1=$this->model->get_reg_date()[0];
+       $reg_date2= new DateTime($reg_date1);
+      // $reg_date2= date('Y-m-d', strtotime($reg_date1));
+      // print_r($reg_date2);
+       
+      date_default_timezone_set("Asia/Colombo");
+      $now = new DateTime();
+      // $now1= $now->format('Y-m-d');
+     // print_r($now);
+     // $diff=date_diff($now1,$reg_date2);
+      $diff=date_diff($now,$reg_date2);
+
+      $diff_y=$diff->{'y'};
+      $diff_m=$diff->{'m'};
+    
+      $count1=$this->model->get_job_count();
+     //Array ( [COUNT(Job_ID)] => 37 [0] => 37 )
+      
+      $count2= $count1['COUNT(Job_ID)'];
+       //print_r($count2);
+        //pass view name
+    
+       $this->view ->render6('Jobs/Post_job_main_page',$diff_y,$diff_m,$count2); 
+        
+    }
 }
