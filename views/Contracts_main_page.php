@@ -64,16 +64,16 @@
         <!-- <div class="location">
           <input type="text" name="location" placeholder="location" />
         </div> -->
-        <div class="search-button">
+        <!-- <div class="search-button">
           <button type="submit">Search</button>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- themes image and job search part ends here -->
 
-  <div class="main_container">
+  <div class="main_container" id="main_container">
   <!--   Top trending contracts category start -->
-  <div class="top_trending_categories_title" id="top_trending_categories_title">Top Trending Categories </div>
+  <div class="top_trending_categories_title" id="title">Top Trending Categories </div>
   <div class="top_trending_categories_container" id="top_trending_categories_container">
    
   <!-- load top contract categories from database -->

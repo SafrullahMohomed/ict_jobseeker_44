@@ -15,7 +15,7 @@
    
     <title>company main page</title>
 </head>
-<body onload="all_companies()">
+<body >
    <!-- header part with css html js -->
    <div class="header_div" >
         <?php include 'views/Header.php'?>
@@ -34,13 +34,15 @@
             <input
               type="text"
               name="Search your keyword"
-              placeholder="Company Name"
+              placeholder="Search company by name or location"
+              onkeyup="ajaxload(this.value);"
             />
           </div>
           <div class="category">
-            <select name="Category">
+          
+            <!-- <select name="Category"onchange="ajaxload(this.value);">
               <option value="none" selected disabled hidden>
-                <span id="category-id-home">Select a City</span>
+                <span id="category-id-home">Select a Distric</span>
               </option>
               <option value="Ampara ">Ampara  </option>
               <option value="Anuradhapura ">Anuradhapura </option>
@@ -68,11 +70,11 @@
               <option value="Trincomalee  ">Trincomalee </option>
               <option value="Vauniya ">Vauniya </option>
               
-            </select>
+            </select> -->
           </div>
-          <div class="search-button">
+          <!-- <div class="search-button">
             <button type="submit" >Search</button>
-          </div>
+          </div> -->
         </div> 
        
       </div>
@@ -81,7 +83,9 @@
       <div class="company">
      
       </div>
-      
+      <!-- pagination link -->
+<div id="pagination-link">
+        </div>
       <?php include 'views/Footer.php'?>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script  src="<?php echo URL?>views/JS/Companies.js"></script>

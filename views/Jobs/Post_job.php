@@ -27,7 +27,7 @@
 <div class="post_job">
 <p> Job Details</p>
 <div class="main_container">
-  <form name="myForm" action="<?php echo URL ?>Jobs/Post_job/insert_post_job_data" method="post"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
+  <form name="myForm" id="form"action="<?php echo URL ?>Jobs/Post_job/insert_post_job_data" method="post"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
     <label for="Company_name" class="labelfield required">Company Name</label><br>
     <input  id="Companyname" name="Company_name"
     <?php
@@ -186,7 +186,7 @@
   </div>
   <div class="btn">
   <!-- <button type="submit" class="post_New_Job_submit" onclick="successPost()">Post New Job</button> -->
-  <button type="submit" class="post_New_Job_submit" onclick="companyNameWarning()">Post New Job</button>
+  <button type="submit" class="post_New_Job_submit">Post New Job</button>
 </div>
 
    

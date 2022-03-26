@@ -326,6 +326,11 @@ flex-direction: row;
 align-items: center;
 
     }
+  
+    #Jobs:focus
+    {
+color:black;
+    }
   </style>
 
 
@@ -421,8 +426,8 @@ align-items: center;
           <!-- navigation menu starts here -->
           <div class="navigation-menu">
             <ul>
-              <li><a href="<?php echo URL ?>Home">Home</a></li>
-              <li><a href="<?php echo URL ?>Jobs_main_page">Jobs</a></li>
+              <li><a id="Home" href="<?php echo URL ?>Home" >Home</a></li>
+              <li><a id="Jobs" href="<?php echo URL ?>Jobs_main_page">Jobs</a></li>
               <li><a href="<?php echo URL ?>Company/Companies">Companies</a></li>
               <li> <a href="<?php echo URL ?>Contracts_main_page">Freelancing&nbsp;Projects</a> </li>
               <li><a href="<?php echo URL ?>Contact_us">Contact&nbsp;Us</a></li>
