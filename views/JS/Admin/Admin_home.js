@@ -2,9 +2,18 @@
 
 //button for user year get function
 const user_year_button = document.getElementById("user_year_but");
+const user_year_form = document.getElementById('user_year_form');
 
-user_year_button.addEventListener("click", () => {
-    location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_home"
+user_year_button.addEventListener("click", (e) => {
+    // location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_home";
+    // user_year_form.submit();
+    console.log();
+    let year = user_year_form.elements['user_year'].value
+    e.preventDefault();
+    get_monthly_user_registered(year)
+
+
+
 })
 
 function get_counts() {
@@ -31,8 +40,13 @@ get_counts();
 
 //get the jobs details to draw the graph job category vs count
 function get_job_category() {
+
+
+    //initialize connection
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Admin/Admin_home/get_job_category");
+
+
     xhr.onload = function () {
         const categoryData = JSON.parse(this.responseText);
         // console.log(categoryData);
@@ -66,9 +80,12 @@ function get_job_category() {
             },
             options: {
                 scales: {
-                    y: {
-                        beginAtZero: true
-                    }
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 1,
+                            beginAtZero: true
+                        }
+                    }]
                 }
             }
         });
@@ -120,13 +137,13 @@ function get_contract_category() {
             },
             options: {
                 scales: {
-                    y: {
-                        beginAtZero: true,
-                        // userCallback: function(label, index, labels) {
-                        //     // when the floored value is the same as the value we have a whole number
-                        //     if (Math.floor(label) === label) {
-                        //         return label;
-                    }
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 1,
+                            beginAtZero: true,
+                            //
+                        }
+                    }]
                 }
             }
         });
@@ -140,9 +157,17 @@ function get_contract_category() {
 get_contract_category();
 
 //user count per month by selecting the year
-function get_monthly_user_registered() {
+function get_monthly_user_registered(year = 2021) {
+
+    //pass the year in the ajax
+    const form_data = new FormData();
+    form_data.append('user_year', year);
+    const urlparam = new URLSearchParams(form_data);
+
+
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Admin/Admin_home/get_monthly_user_registered");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
     xhr.onload = function () {
         const categoryData = JSON.parse(this.responseText);
         console.log(categoryData);
@@ -215,6 +240,10 @@ function get_monthly_user_registered() {
         //     //    chart.js graph code
         //
         const ctx = document.getElementById('monthly-user-count').getContext('2d');
+        let chartStatus = Chart.getChart("monthly-user-count");
+        if (chartStatus !== undefined) {
+            chartStatus.destroy();
+        }
 
         const chart = new Chart(ctx, {
             type: 'bar',
@@ -259,7 +288,9 @@ function get_monthly_user_registered() {
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            stepSize: 1
+
                         }
                     }]
                 }
@@ -268,8 +299,26 @@ function get_monthly_user_registered() {
 
     }
 
-    xhr.send();
+    xhr.send(urlparam);
 
 }
 
 get_monthly_user_registered();
+
+//report generation
+const from_date_report = document.getElementById('from-date');
+const to_date_report = document.getElementById('to-date');
+
+const report_button = document.getElementById('reportGen');
+
+report_button.addEventListener("click", ()=>{
+    if (from_date_report.valueAsDate > to_date_report.valueAsDate)
+    {
+        if(alert("from date cannot be greater than to date")){
+            from_date_report.value = null;
+            to_date_report.value = null;
+        };
+
+    }
+
+});
