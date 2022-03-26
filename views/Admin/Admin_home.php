@@ -153,7 +153,7 @@
             <!--           monthly user registered count -->
             <div class="graph_second_row">
                 <div id="user_monthly_data">
-                    <form action="http://localhost/ict_jobseeker_44/Admin/get_monthly_user_registered" method="post">
+                    <form id="user_year_form" action="http://localhost/ict_jobseeker_44/Admin/get_monthly_user_registered" method="post">
                         <!--from date/time-->
                         <label for="year">Select the year</label>
                         <input type="number" id="user_year" name="user_year" value="2021">
