@@ -10,7 +10,7 @@ class Admin_home extends Controller
 
     function Admin_home()
     {
-//        error_reporting(0);
+        error_reporting(0);
         if ($_SESSION['User_type'] == 'Admin44') {
             $this->view->renderAdmin('Admin_home');
         } else {
