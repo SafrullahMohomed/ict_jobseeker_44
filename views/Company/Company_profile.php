@@ -39,7 +39,7 @@ onload="companyData(<?php echo $data['User_ID']?>)"
 
     <!-- check user loging  -->
 
-    <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Company" ): ?>  
+    <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Company" && $_SESSION['User_ID']==$data['User_ID'] ): ?>  
       <!-- edit your profile -->
     <div class="edit_profile">
       <a href="<?php echo URL ?>Company/company_account"><button>Edit your profile</button></a>

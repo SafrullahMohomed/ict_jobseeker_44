@@ -10,7 +10,10 @@
     margin-top: 60px;
     font-size: 1.08em;
 }
-
+.required:after {
+    content:" *";
+    color: red;
+    }
 
 .main_container{
 width:60%;

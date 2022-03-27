@@ -9,8 +9,12 @@ class Manage_companies extends Controller
     function Manage_companies()
     {
 
-        //pass view name
-        $this->view->renderAdmin('Manage_companies');
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $this->view->renderAdmin('Manage_companies');
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }//pass view name
     }
 
     //    to get the company data

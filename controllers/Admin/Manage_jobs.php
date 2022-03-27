@@ -9,8 +9,12 @@ class Manage_jobs extends Controller
     function Manage_jobs()
     {
 
-        //pass view name
-        $this->view->renderAdmin('Manage_jobs');
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $this->view->renderAdmin('Manage_jobs');
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }
     }
 
     //    to get the job data

@@ -9,8 +9,13 @@ class Manage_resume extends Controller
     function Manage_resume()
     {
 
-        //pass view name
-        $this->view->renderAdmin('Manage_resume');
+
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $this->view->renderAdmin('Manage_resume');
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }
     }
 
     //    to get the counsellor data
