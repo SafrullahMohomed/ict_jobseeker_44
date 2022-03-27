@@ -48,6 +48,11 @@
     color: #ffff;
     font-size: 1.2em;
 }
+
+#ProfilePicBtnUpload
+{
+    display: none;
+}
 .WelcomeBanner #name
 {
     font-size: 1.4em;
@@ -73,7 +78,7 @@
 .row
 {
     width: 80%;
-    margin-top:15px ;
+    margin-top:10px ;
 }
 #gender
 {
@@ -93,7 +98,7 @@ label
     background-color: #1D6989;
     padding: 5px 5px;
     float: left;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 10px;
     width: 80%;
 }
@@ -156,7 +161,13 @@ label
     text-decoration: none;
     font-size: 16px; 
 } 
-.submit_button
+.flex-container
+{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+.cancel_button
 {
     background-color: #1D6989;
     width:150px;
@@ -166,13 +177,35 @@ label
     font-weight: 600;
     font-size: 1.1em;
     margin: 10px;  
+    border: none;
+    margin-left: -75%; 
 }
-.submit_button:hover
+.cancel_button:hover
 {
     cursor: pointer;
     color:#1D6989 ;
     background-color: white;
     border: 2px solid #1D6989;
+}
+.update_button
+{
+    background-color: #0bb660;
+    width:150px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin: 10px;  
+    border: none;
+    margin-left: 80%;
+}
+.update_button:hover
+{
+    cursor: pointer;
+    color:#0bb660 ;
+    background-color: white;
+    border: 2px solid #0bb660;
 }
 span
 {

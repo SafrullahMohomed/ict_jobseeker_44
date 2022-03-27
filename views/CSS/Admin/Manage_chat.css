@@ -1,0 +1,275 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #585656;
+    font-size: 1em;
+}
+
+/* admin home button */
+.admin-home-button{
+    display:flex;
+    justify-content: right;
+    margin:30px auto;
+}
+
+
+.admin-home-button button{
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 140px;
+    height: 35px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin-right: 40px;
+}
+
+.admin-home-button button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+}
+/* admin home button ends here */
+
+/* chat search part starts here */
+
+  
+  .search-chats {
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    background-color: #eeeeee;
+    width: 70%;
+    height: 145px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 7px;
+    padding-bottom: 10px;
+  }
+
+  .search-chats input{
+      width:60%;
+      max-width: 600px;
+      height:30px;
+  }
+  
+  
+  .search-chats button {
+    color: rgb(255, 255, 255);
+    background-color: #1d6989;
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .search-chats button:hover {
+    cursor: pointer;
+    color: #1d6989;
+    background-color: #ffffff;
+    border: 1px solid #1d6989;
+    /* border-color: #1D6989 ; */
+  }
+
+  /* search jobseeker field ends here */
+
+
+/*  add jobseeker button*/
+.add-chats button{
+    background-color: #1f78fb87;
+    border-radius: 25px;
+    width: 400px;
+    height: 45px;
+    font-size: 25px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin:30px;
+    
+}
+
+.add-chats button:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #1f78fb87;
+}
+
+.add-chats .plus{
+    font-weight:bolder;
+}
+
+/* add chats button ends here */
+
+/* table starts here */
+
+/* table ends here */
+
+/* load more button starts here */
+
+
+ .InquiryFrom
+{
+    width: 20%;
+    height: 100%; 
+    display: flex;
+    align-items: center; 
+    font-weight:bold;
+} 
+
+.Inquiry
+{
+    width: 70%;
+    height:100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.InquiryStatus
+{
+    width: 10%;
+    height: 100%; 
+    display: flex;
+    align-items: center; 
+}
+
+.MsgRow
+{
+    height: 80px;
+    /* width: 95vw; */
+    width: 80%;
+    margin: 20px;
+    border-radius: 20px;
+    border-left: 10px solid #c0c1c4 !important;
+    border: 3px solid #c0c1c4;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    color: #585656;  
+    justify-content: space-around;
+    margin-left: 10%;
+}
+
+.MsgRow:hover
+{
+    border-left: 10px solid #0C1778 !important;    
+    border-top-left-radius: 0;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgb(248, 244, 244);
+    /* border: 3px solid #c0c1c4; */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+    margin-bottom: 50px;
+
+}
+
+.pagination-hidden{
+    visibility: hidden;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+.load-more{
+    margin:20px auto;
+    display:flex;
+    justify-content: center;
+}
+.load-more button{
+    color: white;
+    background-color: #496575;
+    border-radius: 25px;
+    width: 200px;
+    height: 45px;
+    font-size:25px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    
+}
+
+.load-more button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+}
+/* laod more button ends here */
+/* media queries */
+@media only screen and (max-width: 952px){
+    /* search jobseeker input feild */
+    .search-contract-provider input{
+        width:60%;
+        max-width: 600px;
+        height:30px;
+    }
+  }
+
+
+@media only screen and (max-width:900px){
+
+
+
+    /* search part */
+    .search-contract-provider{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .search-contract-provider input{
+        width: 80%;
+    }
+
+    /* add jobseeker part */
+    .add-contract-provider button{
+        border-radius: 25px;
+        width: 350px;
+        height: 45px;
+        font-size: 25px;
+    }
+    
+    /* load more button */
+
+    .load-more button{
+       
+        border-radius: 25px;
+        width: 150px;
+        height: 35px;
+        font-size:20px;
+        font-weight: 700;
+        
+        
+    }
+}

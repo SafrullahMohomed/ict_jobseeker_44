@@ -1,3 +1,4 @@
+<?php if ( empty(session_id()) ) session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +12,41 @@
     <title>JobSeeker Profile</title>
 </head>
 <body>
-    <div class="header_div" >
+<div class="header_div" >
         <?php include 'Header.php'?>
-    </div>
+</div>
     <div class="MainContainer">
         <div class="MainDetails">
             <div class="ProfilePic">
                 <img src='<?php echo URL ?>views/images/JobSeekerProfile/JobSeeker.jpg' >
             </div>
-            <div class="Name">
-                <div class="FirstName">
-                    Chamal
-                </div>
-                <div class="LastName">
-                    Perera
+            <div class="Intro">
+                <div class="Name">
+                    <!-- Chamal Perera -->
+                    <?php echo $data['First_name']." ".$data['Last_name']?> 
                 </div>
                 <div class="Post">
                     Software Engineer
+                </div>
+            </div>
+            <?php  ?>
+        </div>
+        <div class="SubContainer">
+            <div class="Contact">
+                <div class="Address">
+                    <!-- 52,Senanayake Road,Colombo 02 -->
+                    <?php echo $data['Address'] ?>
+                </div>
+                <div class="ContactNumber">
+                    <!-- +94 71 244 1238 -->
+                    <?php echo $data['Phone_number'] ?>
+                </div>
+                <div class="Projects">
+                    10 Projects
+                </div>
+                <div class="Rating">
+                    <i class="fa fa-star-o" aria-hidden="false"></i>
+                    <div class="NoOfRating">4.2<?php echo $data['Phone_number']?></div>
                 </div>
             </div>
             <div class="SocialLinks">
@@ -36,7 +55,7 @@
                       <p id="topic">Email</p>
                     </div>
                     <div class="email_data">
-                      <a href="chamal@gmail.com"> chamal@gmail.com  </a>
+                      <a href="$data['Email']">  <?php echo $data['Email']?>  </a>
                     </div>
                    
                 </div>
@@ -45,7 +64,7 @@
                         <p id="topic">Web site</p>
                     </div>
                     <div class="website_data">
-                      <a href="chamalcontract.com"> chamalcontract.com  </a> 
+                      <a href="$data['Jobseeker_Web']"> <?php echo $data['Jobseeker_Web']?> </a> 
                     </div>
                   
                 </div>
@@ -54,65 +73,64 @@
                         <p id="topic">Social media</p>
                     </div>
                     <div class="social_media_links">
-                      <i class="fab fa-facebook-square"></i>
-                      <i class="fab fa-linkedin"></i>
-                      <i class="fab fa-twitter-square"></i>
+                        <a href="<?php echo $data['Jobseeker_Fb'] ;?>" target="_blank" id="facebook_icon"><i class="fab fa-facebook-square"></i></a>
+                      <!-- <i class="fab fa-facebook-square"></i> -->
+                        <a href="<?php echo $data['Jobseeker_In'] ;?>" target="_blank" id="linkedin_icon"><i class="fab fa-linkedin"></i></a>
+                      <!-- <i class="fab fa-linkedin"></i> -->
+                        <a href="<?php echo $data['Jobseeker_Twitter'] ;?>"  target="_blank" id="twitter_icon"><i class="fab fa-twitter-square"></i></a>
+                      <!-- <i class="fab fa-twitter-square"></i> -->
+
                      </div>
                   
                 </div>
             </div>
         </div>
         <div class="About">
-            <div class="Contact">
-                <div class="Address">
-                    52,Senayaka Road,Colombo 02
-                </div>
-                <div class="ContactNumber">
-                    +94 71 244 1238
-                </div>
-                <div class="Projects">
-                    10 Projects
-                </div>
-                <div class="Rating">
-                    <i class="fa fa-star-o" aria-hidden="false"></i>
-                    <div class="NoOfRating">4.2</div>
-                </div>
-            </div>
             <div class="JobSeekerDetails">
                 <p id="titles">About Me</p>
                 <div class="row">
                    Software engineer with through hands on experience in all levels of testing 
                    including performance, functional integration, system and user acceptance testing.
+                   
+                   <?php echo $data['Description']?>
                 </div>  
+                
                 <p id="titles">Experience</p>
-                <div class="row">
-                    <p id="Jobs"><span>Software engineer</span> WSO2(2019-present)</p>
+                <div class="row" id="experience">
+                    <p hidden="hidden" id = 'experience_uf'><?php echo $data['Experience'] ;?></p>
+
+                    <!-- <p id="Jobs"><span>Software engineer</span> WSO2(2019-present)</p>
                     <ul id="works">
                         <li>Direct software design</li>
                         <li>Evaluate interface between hardware and software</li>
                         <li>Advice customers regarding maintenance of software system</li>
+                        
                     </ul>
-                    <p id="Jobs"><span>Junior software engineer</span> Arimac(2017-2019)</p>
+                    <p id="Jobs"><span>Junior software engineer </span> Arimac(2017-2019)</p>
                     <ul id="works">
                         <li>Stored, retieved and manipulated data</li>
                         <li>Modified existing softwares to correct errors</li>
                         <li>Prepaired detailed reports</li>
-                    </ul>
+                    </ul> -->
                 </div>  
                 <p id="titles">Skills</p>
-                <div class="Skills">
+                <div class="Skills" id="skills">
+                    <p hidden="hidden" id = 'skills_uf'><?php echo $data['Skills'] ;?></p>
+                    
                     <ul>
-                        <li>Performance and scalability optimisation</li>
+                        <!-- <li>Performance and scalability optimisation</li>
                         <li>Sharepoint</li>
                         <li>API design</li>
-                        <li>Data warehousing and analitics</li>
+                        <li>Data warehousing and analitics</li> -->
                     </ul>
                 </div>
                 <p id="titles">Education</p>
-                <div class="Education">
-                    <ul>
+                <div class="Education" id="education">
+                    <p hidden="hidden" id = 'education_uf'><?php echo $data['Education'] ;?></p>
+                    
+                    <!-- <ul>
                         <li>BSc(Computer Science) University Of Colombo School Of Computing(2013-2017)</li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <p id="titles">Resume</p>
                 <div class="resume">
@@ -123,10 +141,11 @@
         </div>
         <p id="titles">Reviews</p>
         <div class="review">
+           
             <hr>
             <div class="review_row">
                <div class="user_picture">
-                   <img src='<?php echo URL ?>views/images/JobSeekerProfile/review1.jpg' >
+                    <img src='<?php echo URL ?>views/images/JobSeekerProfile/review1.jpg' >
                </div>
                <div class="review_detail">
                    <div class="review_detail_name">
@@ -152,7 +171,7 @@
             <hr>
             <div class="review_row">
                <div class="user_picture">
-               <img src='<?php echo URL ?>views/images/JobSeekerProfile/review2.jpg' >
+                    <img src='<?php echo URL ?>views/images/JobSeekerProfile/review2.jpg' >
                </div>
                <div class="review_detail">
                    <div class="review_detail_name">
@@ -176,6 +195,7 @@
                  
             </div>
             <hr>
+            <?php if ( !isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>  
             <p id="titles">Your Review</p>
             <div class="YourReview">
                 <div class="rate_me_text">
@@ -192,13 +212,22 @@
                     <input type="email" id="email" email="email" placeholder= "Email" class="inputfield" required><br>
                 </div> -->
                 <div class="Review1">        
-                    <textarea  id="brief_description" rows="4" brief_description="brief_description" placeholder="Write your review here..." class="inputfield" required></textarea><br>
+                    <textarea  id="brief_description" rows="8" brief_description="brief_description" placeholder="Write your review here..." class="inputfield" required></textarea><br>
                 </div>
                 <button class="submit_button">Submit</button>
             </div>
+            <?php endif; ?>  
+            <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>  
+      <!-- edit your profile -->
+        <div class="edit_profile">
+            <button id="edit-profile-button">Edit your profile</button></a> 
+        </div>
+        <?php endif; ?>
         </div>
     </div>
     <?php include 'Footer.php'?>
-    <script src="<?php echo URL ?>views/JS/JobSeekerProfile.js"></script>
+   
+    
+    <script  src="<?php echo URL?>views/JS/JobSeekerProf.js"></script>
 </body>
 </html>

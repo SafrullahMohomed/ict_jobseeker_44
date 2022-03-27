@@ -9,11 +9,11 @@
 {
     height: 100vh;
     width: 100vw;
-    padding-top: 250px; 
+    
 }
 .flex-container
 {
-    height: 540px;
+    height: 580px;
     width: 675px;
     background-color:rgb(141, 188, 235);
     border-radius: 7px;
@@ -27,7 +27,7 @@
 .right-container
 {
     width: 360px;
-    height: 520px;
+    height: 560px;
     background-color: #f6f6f8;
     align-items: center;
     justify-content: end;
@@ -41,20 +41,21 @@
     align-items: center;
     margin: auto;
     padding-left: 50px;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 #users
 {
-    margin-left: 60px;
+    margin-left: 5%;
     border:solid rgb(6, 8, 124) ;
     border-radius: 12px;
-    width:50% ;
+    width:60% ;
     height: 40px;
     font-family:'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 600;
     color: rgb(6, 8, 124);
-    padding: auto;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 #users select :focus{
     border-radius: 12px;
@@ -65,17 +66,18 @@
     padding: 0;
     font-weight: bold;
     font-size: 16px;
+    margin-top: 12px;
 }
 .right-container form
 {
     padding-left: 40px;
-    padding-top: 30px;
+    padding-top: 15px;
 }
 .right-container input
 {
     width: 300px;
     margin: auto;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     
 }
 .right-container input[type="text"],input[type="email"], input[type="password"]
@@ -83,9 +85,9 @@
     border: none;
     border-bottom: 2px solid;
     background: transparent;
-    height: 20px;
+    height: 30px;
     outline: none;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     width: 80%;
     font-size: 14px;
     font: pt-serif caption;
@@ -105,7 +107,7 @@
     font-size: 20px;
     align-items: center;
     cursor: pointer;
-    
+    margin-top: 35px;
 }
 .right-container input[type="submit"]:hover
 {
@@ -117,7 +119,7 @@
 }
 .right-container input[type="text"]:hover,input[type="email"]:hover, input[type="password"]:hover
 {
-    padding-bottom: 20px;
+    padding-bottom: 8px;
     border-bottom: 2px solid rgb(6, 8, 124);
     transition: 0.5s;
     
@@ -148,10 +150,10 @@
     color: rgb(6, 8, 124);
     font-weight: 550;
 }
-#register
+#Register
 {
     position: relative;
-    top: -110px;
+    top: -135px;
     left: 30px;
     font-family: 'Quicksand', sans-serif;
     color: rgb(6, 8, 124);
@@ -163,19 +165,26 @@
 #log_link 
 {
     position: relative;
-    top: -95px;
+    top: -125px;
     left: 30px;
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
     color:rgb(6, 8, 124);
     text-align:inherit;
-    font: weight 550px; ;
+    font-weight: 600;
 }
 #log_link a
 {
     text-decoration: none;
     font-family: 'Quicksand', sans-serif; 
+    color: rgb(21, 27, 216);
+    font-weight: 550;
+}
+#log_link a :hover
+{
+    color:rgb(6, 8, 124);
+    transition: 0.5s;
 }
 .left-container p
 {
@@ -184,17 +193,23 @@
     font-family: 'Quicksand', sans-serif;
     color: rgb(6, 8, 124);
     font-weight:550;
-    font-size: 14px;
+    font-size: 15px;
 
+    font-size: 14px;
+}
 span
 {
-    color: red;
+    color:red ;
     font-size: 12px;
+    
 }
-
-
-
-
+/* remove default styles of input box*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px #f6f6f8 inset !important;
+}
 
 @media screen and (max-width: 680px)
  {
@@ -240,7 +255,7 @@ span
     border-width: 3px*/
 } 
 
-#register
+#Register
 {
     position: relative;
     top: -50px;

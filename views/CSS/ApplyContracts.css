@@ -75,6 +75,7 @@ label
     font-weight: 600;
     margin: 10px;
     font-size: 1.1em;
+    border: none;
 }
 .submit_button:hover{
     cursor: pointer;

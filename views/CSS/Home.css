@@ -2,128 +2,14 @@
 
 * {
   font-family: "Quicksand", sans-serif;
-
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   border-radius: 7px;
-  
 }
-
-/*header division* starts here*/
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  overflow-x:hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-/*This is for login bar of the header*/
-.login-bar {
-  background-color: #004867;
-  width: 100%;
-  height: 35px;
-  border-radius: 7px;
-}
-
-.login-bar ul {
-  float: right;
-  background-color: rgba(226, 226, 226, 0);
-  padding-right: 6px;
-  margin-top: 9px;
-  margin-right: 12px;
-}
-.login-list {
-  list-style: none;
-  text-decoration: none;
-  display: inline-block;
-  color: rgb(255, 255, 255);
-  padding: 0%;
-  background-color: #04293500;
-  margin-left: 5px;
-}
-
-.login-list a {
-  text-decoration: none;
-  color: white;
-  font-weight: xx-large;
-  transition: ease-in-out 0.2s;
-}
-
-.login-list a:hover {
-  color: rgb(127, 135, 245);
-  font-weight: xx-large;
-}
-
-/*here login bar of the header ends*/
-
-/*here navigation menu and logo starts*/
-
-/*navigation header style*/
-
-.navigation-header {
-  display: flex;
-  width: 100%;
-  height: 90px;
-  background-color: #1d6989;
-  border-radius: 7px;
-  justify-content: space-between;
-}
-
-/*navigation logo style*/
-
-.navigation-header .logo img {
-  float: left;
-  border-radius: 7px;
-  object-fit: cover;
-  height: 85px;
-  margin-top: 2px;
-  width: 90px;
-
-}
-
-/*navigation menu main division*/
-
-.navigation-menu {
-  align-self: flex-end;
-  float: right;
-}
-
-/* make the ul as right in that div*/
-.navigation-menu ul {
-  float: right;
-  list-style: none;
-}
-
-/*make the lists to one horizontal block*/
-.navigation-menu ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/*menu items property*/
-.navigation-menu a {
-  letter-spacing: 1px;
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-size: 22px;
-  margin-right: 20px;
-  transition: ease-in-out 0.2s;
-}
-
-/*make the navigation menu hover property*/
-.navigation-menu a:hover {
-  color: rgb(127, 135, 245);
-  font-weight: xx-large;
-}
-
-/*header part ends here*/
 
 /*division for jobs search part starts here*/
 
@@ -135,10 +21,10 @@ header {
 .theme-image img {
   object-fit: cover;
   width: 100%;
-  height: 226px;
+  height: 163px;
   border-radius: 10px;
-  margin-top: 140px;
-  
+  margin-top: 56px;
+  transform: translate(0%, -75%);
 }
 
 .job-search-box {
@@ -146,31 +32,37 @@ header {
   display: flex;
   background-color: #eeeeee;
   width: 95%;
-  height: 145px;
+  height: 40px;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  transform: translate(0%, -50%);
+  transform: translate(0%, -564%);
   border-radius: 7px;
   padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* search box inside for input fields */
 .search-your-keywords input,
 .location input {
   height: 30px;
-  width: 277px;
+  width: 560px;
   border-radius: 7px;
   border: 1px solid #1d6989;
-  margin:10px auto;
+  margin: 10px auto;
+  padding-left: 10px;
 }
 
-.category select {
+
+.category select, .location select {
   height: 36px;
   width: fit-content;
   border-radius: 7px;
 }
 
+select{
+  height:50px;
+}
 .search-button button {
   color: rgb(255, 255, 255);
   background-color: #1d6989;
@@ -198,13 +90,15 @@ header {
 .counting-part {
   display: flex;
   flex-direction: row;
-  background-color: #c4c4c4;
+  background-color: #f1f0f0;
   justify-content: space-evenly;
-  margin: 0 auto;
+  margin: 0px auto 20px;
   width: 78%;
   height: 99px;
   border-radius: 7px;
   padding-bottom: 10px;
+  /* padding-top: 18px; */
+  transform: translate(0%, -218%);
 }
 
 .posted-jobs,
@@ -244,10 +138,72 @@ header {
 
 /* counting part ends here */
 
+/*post job button start here*/
+.post_button {
+  width: 100%;
+  height: 107px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  /*border: black 2px solid;*/
+  align-content: center;
+  align-items: center;
+  transform: translate(0%, -240%);
+}
+
+.post_but{
+  height: 50px;
+  width: 313px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #053950;
+  font-weight: 500;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 5px 0 rgb(0 0 0), 0 6px 20px 0 rgb(102 131 195 / 15%);
+  border: 4px solid #1d5017;
+  border-radius: 7px;
+}
+
+.post_but:hover{
+  cursor: pointer;
+  box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+  color:white;
+  background-color: black;
+}
+.btn {
+  margin-top: 40px;
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  color: #273c75;
+
+  font-size: 18px;
+  border-color: #273c75;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid #273c75;
+  transition: ease-in-out 0.2s;
+}
+.btn:hover {
+  color: white;
+  background-color: #273c75;
+  cursor: pointer;
+  border: 1px solid #273c75;
+}
+/*post job button start here*/
+
 /* our services and text part starts here */
 
 .our-services {
-  transform: translate(0%, 28%);
+  transform: translate(0%, -193%);
   margin-bottom: 55px;
 }
 
@@ -272,6 +228,7 @@ header {
   font-size: 44px;
   margin-bottom: 14px;
 }
+
 .our-services #services {
   font-weight: bold;
 }
@@ -297,6 +254,7 @@ header {
   margin: auto;
   width: 100%;
   align-content: center;
+  transform: translate(0%, -57%);
 }
 
 .box-row {
@@ -307,35 +265,82 @@ header {
   margin: 30px;
 }
 
+.service-name {
+  /*visibility: hidden;*/
+
+  /*width: 450px;*/
+  /*height: 150px;*/
+  /*box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%),*/
+  /*0 6px 20px 0 rgb(90 127 210 / 15%);*/
+  /*border: 1px solid #91a4c7;*/
+  /*border-radius: 7px;*/
+}
+.service-default-content-parent{
+  /* visibility: hidden; */
+  width: 450px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  text-align: center;
+  color: #1f622a;
+  transform: translate(0%, -40%);
+  /* position: inherit; */
+}
+
+.service-default-content{
+/*visibility: hidden;*/
+}
 /* .create-resume, .job-rankings, .learning-materials, .counselling{
     border: 1px solid blue;
     width:230px;
     height:100px;
 
 } */
-.service-name {
-  width: 285px;
-  height: 100px;
+.service-name-header {
+  width: 100%;
+  margin: auto;
+  height: 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 3px;
-  border: 1px solid #91a4c7;
+  padding-top: 15px;
+  /* border: 1px solid #91a4c7; */
   border-radius: 7px;
   font-weight: 600;
   font-size: 24px;
   text-align: center;
-  box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%), 0 6px 20px 0 rgb(90 127 210 / 15%);
+  /* box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%), 0 6px 20px 0 rgb(90 127 210 / 15%); */
 }
 
-.service-name:hover{
+.service-main-content{
+
+  width: 450px;
+  height: 150px;
+  box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%),
+  0 6px 20px 0 rgb(90 127 210 / 15%);
+  border: 1px solid #91a4c7;
+  border-radius: 7px;
+}
+
+.service-main-content:hover{
   cursor: pointer;
   box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
-  }
+}
 
+
+/*.service-name:hover {*/
+/*  cursor: pointer;*/
+/*  box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);*/
+/*}*/
 
 .service-text {
   text-decoration: none;
+  width: 90%;
+  margin: auto;
+  text-align: justify;
 }
 /* service boxes ends here */
 
@@ -352,6 +357,7 @@ header {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 50px;
   border-radius: 20px;
+  transform: translate(0%, -24%);
 }
 
 .left {
@@ -373,42 +379,60 @@ img {
 }
 
 .tittle {
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: 800;
   color: #1d6989;
+  margin-bottom: 20px;
 }
 .description {
-  font-size:20px;
+  font-size: 18px;
   font-weight: 600;
   text-align: justify;
 }
 .button {
+  color: rgb(255, 255, 255);
+  background-color: #1d6989;
+  height: 30px;
+  width: 120px;
+  border-radius: 15px;
+  transition: ease-in-out 0.2s;
+  border: 1px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+
+  /*
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   background-color: #1d6989;
-  width: 150px;
-  height: 30px;
-  border-radius: 30px;
-  padding: 10px;
+  width: 120px;
+  height: 25px;
+  border-radius: 25px;
+  padding:8px 5px;
   text-align: center;
   border: 1px;
   margin:auto;
+  transition: ease-in-out 0.2s;*/
 }
-
+.button .btn_div {
+  text-align: center;
+  width: 120px;
+}
 .button:hover {
   cursor: pointer;
-  color: #585656;
+  color: #1d6989;
   background-color: white;
   border: 1px solid #1d6989;
 }
-
 
 /* review part ends here */
 
 /* footer starts here */
 
 .footer {
+  /*margin-top: 40px;*/
   padding-top: 20px;
   display: flex;
   flex-direction: row;
@@ -451,16 +475,17 @@ img {
   font-size: 25px;
   font-weight: bolder;
   transform: translate(0%, 73%);
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 .contactus-details {
   transform: translate(0%, 25%);
   position: relative;
-}  
+}
 
-.contactus-details .footer-list, .contactus-details .footer-list a:link{
- color:white;
-}   
+.contactus-details .footer-list,
+.contactus-details .footer-list a:link {
+  color: white;
+}
 
 /* footer second column starts here */
 .services-link-header,
@@ -515,8 +540,6 @@ img {
 
 /* footer ends here */
 
-
-
 /* media queries */
 
 /* for review parts */
@@ -539,15 +562,41 @@ img {
   /* review part ends here */
 }
 
-/* media queries starts here */
-@media only screen and (max-width: 952px){
-  /* to adjust the job search part */
-  .job-search-box{
+/* media queries for service boxes @ 975 */
+
+@media only screen and (max-width: 985px) {
+  /* for service boxes */
+  .box-row {
     display: flex;
     flex-direction: column;
-    height:auto;
+    align-items: center;
   }
-  
+
+  .box-row a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .first-row {
+    margin: 30px 30px 0px 30px;
+  }
+  .second-row {
+    margin: 0px 30px 30px 30px;
+  }
+  /* service boxes ends here */
+}
+
+
+/* media queries starts here */
+@media only screen and (max-width: 952px) {
+  /* to adjust the job search part */
+  .job-search-box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -568,22 +617,20 @@ img {
 }
 
 @media only screen and (max-width: 690px) {
-/* header starts here */
-/* login */
-.login-list a {
-  text-decoration: none;
-  color: white;
-  font-weight: xx-large;
-  transition: ease-in-out 0.2s;
-  font-size: 16px;
-}
-  
+  /* header starts here */
+  /* login */
+  .login-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: xx-large;
+    transition: ease-in-out 0.2s;
+    font-size: 16px;
+  }
 
-  
   /* review part */
-  .main_container{
-    height:100%;
-    padding:20px;
+  .main_container {
+    height: 100%;
+    padding: 20px;
   }
   .main_container .tittle {
     font-size: 22px;
@@ -608,129 +655,83 @@ img {
   }
 
   /* for service boxes */
-  .box-row{
+  .box-row {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .box-row a{
+  .box-row a {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
   }
 
-  .first-row{
+  .first-row {
     margin: 30px 30px 0px 30px;
   }
-  .second-row{
+  .second-row {
     margin: 0px 30px 30px 30px;
   }
-/* service boxes ends here */
+  /* service boxes ends here */
 
-/* counter part starts here */
-  .counting-part{
+  /* counter part starts here */
+  .counting-part {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height:100%;
-}
+    height: 100%;
+  }
 
-/* counting values */
-.posted-jobs-value, .companies-value, .jobseekers-value {
- font-size: 25px;
-}
+  /* counting values */
+  .posted-jobs-value,
+  .companies-value,
+  .jobseekers-value {
+    font-size: 25px;
+  }
 
-.descriptive-text{
-  font-size: 20px;
-  margin:auto 10px;
-}
+  .descriptive-text {
+    font-size: 20px;
+    margin: auto 10px;
+  }
 }
 
 @media only screen and (max-width: 570px) {
- /* navigation list starts here */
- .navigation-menu ul li {
-  display: flex;
-  flex-direction: column;
-  margin-right: 10px;
-}
+  /* navigation list starts here */
+  .navigation-menu ul li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
 
-.navigation-menu a{
-  font-size: 16px;
-}
-.navigation-header{
-  height: 100%;
-  display:flex;
-  align-items: center;
-  justify-content: flex-start
-}
- 
- 
-  /* footer */
-.footer{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .navigation-menu a {
+    font-size: 16px;
+  }
+  .navigation-header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-/* footer header */
-
-.footer-head{
-  font-size: 22px;
-}
-.first-col, .second-col, .third-col{
- min-width: 220px;
- display:flex;
- align-items: left;
-}
-
-.site-text{
-  margin-left:0px;
-  width:250px;
-  font-size: 14px;
-}
-
-/* contact us */
-
-
-.contactus-details .footer-list, .contactus-details .footer-list a:link{
-  font-size:16px;
-}  
-.second-col{
-  margin-top: 30px;
-}
-.services-link-header{
-  font-size:22px;
-  position:relative;
-  transform: translate(-18%, 10%);
-
-}
-
-.information-header{
-  font-size: 22px;
-  position:relative;
-  transform: translate(-18%, 20%);
-
-}
-
-.services-link-details, .information-details{
-  position:relative;
-  transform: translate(-18%, 5%);
-  font-size: 14px;
-}
-
-
-.social-media-icons ul{
-  position:relative;
-  transform:translate(-18%, -11%);
-}
-/* footer ends here */
+  /* for service boxes */
   
-}
 
+  .box-row .service-name {
+    width:300px;
+  }
+
+  .service-name{
+    height: 180px;
+  }
+  
+  .service-name-header{
+    height:50px;
+  }
+  /* service boxes ends here */
+}
 
 @media only screen and (max-width: 501px) {
   /* review part starts here */
@@ -750,7 +751,4 @@ img {
     font-size: 0.6em;
   }
   /* review part ends here */
-
 }
-
-

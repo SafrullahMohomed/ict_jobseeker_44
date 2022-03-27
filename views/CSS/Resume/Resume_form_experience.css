@@ -1,0 +1,304 @@
+/* font style */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* title field starts here */
+
+.title_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.text1 {
+  font-size: x-large;
+}
+
+.text2 {
+  font-size: large;
+  font-weight: lighter;
+}
+
+/* skip button */
+.skip{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 10px 10px;
+  width: 70%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px 0px;
+}
+
+.skip button{
+  color: white;
+  background-color: #496575;
+  border-radius: 7px;
+  width: 130px;
+  height: 35px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  letter-spacing: 1px;
+  margin-right: 40px;
+}
+
+.skip button:hover{
+  cursor: pointer;
+  color: #496575;
+  background-color: #ffffff;
+  border: 1px solid #496575;
+}
+
+/* skip ends here */
+
+
+/* form field starts here */
+
+/* main division of experience form */
+.experience_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px 10px;
+  width: 70%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 10px 0px;
+}
+
+/* input fields division element */
+.inp {
+  width: 80%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* each input boxes */
+input {
+  width: 100%;
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+/* text area box */
+.experienceDetails textarea {
+  margin: 0px;
+  width: 100%;
+  height: 90%;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+/* input labels */
+
+.inp label {
+  font-size: 17px;
+}
+
+/* input{
+  border: 1px solid rgb(32, 15, 184);
+} */
+
+/* time period starts here */
+.time_period {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.from,
+.to {
+  margin: 10px 0px;
+}
+
+/* currently working here */
+.workingHere {
+  display: flex;
+  align-items: center;
+}
+
+.workingHere input {
+  width: 20%;
+  margin: 5px;
+}
+label .working_label {
+  width: 95%;
+  display: flex;
+}
+
+/* form ends here */
+
+/* add another button starts here */
+
+.add-another {
+  width: 50%;
+  margin: 30px auto;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+}
+.add-another button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1f78fb87;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 450px;
+  min-width: 250px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 1px solid #1f78fb87;
+  letter-spacing: 1px;
+}
+
+.add-another button:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #1f78fb87;
+}
+
+.add-another button .plus_for_button {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+/* add another button ends here */
+
+/* next, input button */
+.bn_buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.back button,
+.next button {
+  color: white;
+  background-color: #496575;
+  border-radius: 7px;
+  width: 140px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  letter-spacing: 1px;
+}
+
+.next button {
+  background-color: green;
+}
+
+.back button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #496575;
+  border: 1px solid #496575;
+}
+
+.next button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: green;
+  border: 1px solid green;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 960px) {
+  .time_period {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  /* title text */
+  .title_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+  }
+
+  .text1 {
+    font-size: large;
+  }
+
+  .text2 {
+    font-size: medium;
+    font-weight: lighter;
+  }
+
+  /* skip */
+  .skip button{
+    width:100px;
+  }
+
+  /* experience form */
+  .experience_form {
+    width: 90%;
+  }
+
+  /* input fields */
+  .inp {
+    width: 90%;
+  }
+  /*.inp label {*/
+  /*  font-size: 17px;*/
+  /*}*/
+
+  .workingHere input {
+    width: 10%;
+  }
+  .workingHere label {
+    font-size: 18px;
+  }
+
+  /* add another field */
+  .add-another button {
+    height: 35px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* heading texts */
+  .text1 {
+    font-size: medium;
+    text-align: center;
+  }
+
+  .text2 {
+    font-size: small;
+    text-align: center;
+  }
+
+  .back button,
+  .next button {
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .next button {
+    background-color: green;
+  }
+}

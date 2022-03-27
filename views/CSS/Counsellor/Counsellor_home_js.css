@@ -1,0 +1,250 @@
+/* title */
+
+.main_container{
+    margin-top: 150px;
+}
+
+.counsellor_title{
+    display:flex;
+    margin:50px auto;
+    text-align: center;
+    width:80%;
+    justify-content: center;
+    font-size: 60px;
+    color: #9C5E5E;
+}
+
+/* text */
+.counsellor_text{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin:20px auto;
+    text-align: center;
+    margin-bottom: 80px;
+    width:80%;
+}
+
+/* mock interviews */
+
+
+a .mock_interviews{
+    text-align: center;
+    color:white;
+    width:30%;
+    min-width: 280px;
+    margin:60px;
+    background-color: rgb(127, 127, 134);
+    border-radius: 7px;
+    border:1px solid transparent;
+    padding:10px 0px;
+
+}
+
+.mock_interviews:hover{
+    
+    background-color: white;
+    color: rgb(127, 127, 134);
+    border: 1px solid rgb(127, 127, 134);
+    
+
+}
+
+/* counsellor search part starts here */
+
+  
+.search-counsellor {
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    background-color: #eeeeee;
+    width: 70%;
+    height: 60px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 7px;
+
+  }
+
+  .search-counsellor input{
+      width:60%;
+      max-width: 600px;
+      height:30px;
+  }
+  
+  
+  .search-counsellor button {
+    color: rgb(255, 255, 255);
+    background-color: #1d6989;
+    height: 37px;
+    width: 150px;
+    border-radius: 25px;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .search-counsellor button:hover {
+    cursor: pointer;
+    color: #1d6989;
+    background-color: #ffffff;
+    border: 1px solid #1d6989;
+    /* border-color: #1D6989 ; */
+  }
+
+  /* search counsellors field ends here */
+
+/* counsellor list starts here */
+
+.counsellor{
+    display:flex;
+    width:80%;
+    height: auto;
+    margin:20px auto;
+    justify-content: space-around;
+    display:flex;
+    align-items: center;
+    border: 1px solid;
+
+}
+
+.counsellor:hover{
+    box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+
+}
+
+/* profile image */
+.counsellor_profile img{
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* counsellor name */
+.counsellor_name{
+    font-size: 30px;
+    margin: 20px;
+    width: 200px;
+}
+
+
+/* mock interview providing mark */
+.mi_provider{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.mk_interview{
+    margin:10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.tick{
+    margin:auto;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+    margin-bottom: 50px;
+
+}
+
+.pagination-hidden{
+    visibility: hidden;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* media queries */
+
+@media only screen and (max-width:820px){
+    /*counsellor title */
+    .counsellor_title{
+       font-size: 50px;
+    }
+    
+    /* text */
+    .counsellor_text{
+       font-size: 20px;
+    }
+    
+    /* mock interviews */
+    
+    
+    a .mock_interviews{
+        font-size: 15px;
+        min-width: 200px;
+    
+    }
+
+    /* search part */
+    .search-counsellor{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .search-counsellor input{
+        width: 80%;
+    }
+
+    /* counsellor list part */
+    .counsellor{
+        flex-direction: column;
+    }
+
+    /* cousellor name */
+    .counsellor_name{
+        font-size: 22px;
+        margin:auto;
+        text-align: center;
+    }
+
+    .star_value{
+        font-size: 25px;
+    }
+
+    .mk_interview{
+        font-size: 20px;
+    }
+    /* load more button */
+
+    .load-more button{
+       
+        border-radius: 25px;
+        width: 150px;
+        height: 35px;
+        font-size:20px;
+        font-weight: 700;
+               
+    }
+    
+}

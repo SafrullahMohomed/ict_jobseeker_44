@@ -1,3 +1,4 @@
+<?php if ( empty(session_id()) ) session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,8 @@
     <div class="header_div" >
             <?php include 'Header.php'?>
     </div>
-    <form class="MainContainer">
+    <div>
+    <form class="MainContainer" action="http://localhost/ict_jobseeker_44/ForgotPassword/ResetForgotPassword" method="POST"  name="myForm">
         <div class="Title">
             Forgot Password
         </div>
@@ -28,8 +30,9 @@
         </div> 
        <div class="submit">
         <label for="submit" class="labelfield"></label><br>
-        <input type="submit" id="submit" submit="submit"  class="submit_button"><br>
+        <input type="submit" id="submit" name="submit" value="Send Reset Password Link" class="submit_button"><br>
     </form>
+    </div>
     
 <?php include 'Footer.php'?>
 </body>

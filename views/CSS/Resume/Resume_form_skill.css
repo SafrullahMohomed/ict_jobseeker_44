@@ -1,0 +1,189 @@
+/* font style */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* title field starts here */
+
+.title_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.text1 {
+  font-size: x-large;
+}
+
+.text2 {
+  font-size: large;
+  font-weight: lighter;
+}
+
+/* form field starts here */
+
+/* skip button */
+.skip{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 10px 10px;
+    width: 70%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px 0px;
+  }
+  
+  .skip button{
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 130px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin-right: 40px;
+  }
+  
+  .skip button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+  }
+  
+  /* skip ends here */
+
+
+/* main division of skill form */
+.skill_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px 10px;
+  width: 70%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 10px 0px;
+}
+
+.skillDetails{
+    text-align: center;
+}
+
+/* text area box */
+textarea#skillDetails {
+  margin: auto;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+
+/* next, input button */
+.bn_buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.back button,
+.next button {
+  color: white;
+  background-color: #496575;
+  border-radius: 7px;
+  width: 140px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  letter-spacing: 1px;
+}
+
+.next button {
+  background-color: green;
+}
+
+.back button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #496575;
+  border: 1px solid #496575;
+}
+
+.next button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: green;
+  border: 1px solid green;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 750px) {
+  /* title text */
+  .title_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+  }
+
+  .text1 {
+    font-size: large;
+  }
+
+  .text2 {
+    font-size: medium;
+    font-weight: lighter;
+  }
+
+  /* project form */
+  .skill_form {
+    width: 90%;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  /* heading texts */
+  .text1 {
+    font-size: medium;
+    text-align: center;
+  }
+
+  .text2 {
+    font-size: small;
+    text-align: center;
+  }
+
+  /* skill details */
+
+textarea#skillDetails{
+    width:90%;
+}
+
+  .back button,
+  .next button {
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .next button {
+    background-color: green;
+  }
+}

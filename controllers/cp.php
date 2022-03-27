@@ -15,7 +15,7 @@ class cp extends Controller
         
     }
 
-    //insert ontract provider data into database (user and contract provider table)
+    //insert contract provider data into database (user and contract provider table)
     function insert_cp_data()
     {
        
@@ -27,7 +27,8 @@ class cp extends Controller
         $this->view ->render('Contract_provider_profile'); 
         
     }
-
+    
+   //insert post contract data
     function insert_post_contract_data()
     {
        

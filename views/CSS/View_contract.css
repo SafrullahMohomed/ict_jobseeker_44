@@ -86,7 +86,7 @@ cursor: pointer;
 .job_description_title{
     background-color:#227093 ;
     color: white;
-    height: 60px;
+    height: 40px;
     font-size: 30px;
     font-weight: 600;
     padding-left: 3px;
@@ -132,7 +132,7 @@ p{
 #clickme{
     background-color: white;
     color: gray;
-    box-shadow: 2px 3px 1px gray;
+    transition: ease-in-out 0.2s;
     border: 3px solid #227093 ;
     margin: auto;
     
@@ -160,6 +160,7 @@ background-color:#227093 ;
 margin-right: 20px;
 color: white;
 text-align: center;
+height: 30px;
 }
 .application_deadline{
    font-weight: bolder; 
@@ -265,6 +266,43 @@ font-weight: 700;
     font-weight: 400;
         
  }
+ .fa-linkedin::before{
+    content: "\f08c" !important;
+ }
+
+ /* bid proposal parts start from here*/
+ .bid_row{
+
+width: 80%;
+margin: 50px auto;
+padding: 10px;
+cursor: pointer;
+
+border: 3px solid grey;
+border-radius: 5px;
+font-size: 20px;
+ }
+
+ .first{
+     width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  font-weight: 500;
+ }
+.rs_price{
+    display: flex;
+    flex-direction: row;
+    
+}
+/* bid proposal parts end from here*/
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 1190px){

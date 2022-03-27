@@ -3,7 +3,6 @@ function validateForm() {
    
     var brief_intro
 
-    /validate first name/
 
     /*validate first name*/
 
@@ -13,10 +12,10 @@ function validateForm() {
    
       return false;
     }
-<
-    /validate last name/
-    var lname=document.myForm.lname.value;  
-    if (lname == "") {
+
+    // /validate last name/
+    // var lname=document.myForm.lname.value;  
+    // if (lname == "") {
 
 
     /*validate last name*/
@@ -29,23 +28,17 @@ function validateForm() {
         return false;
       }
 
-      /*validate email*/
-
-
-      /validate email/
-
-      var email=document.myForm.email.value;  
-      var validRegex = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
-
+     
       /*validate email*/
       var email=document.myForm.email.value;  
       var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     
-      if (!email.match(validRegex) ){ 
+      if (!email.match(validRegex) )
+      { 
           document.getElementById("email_error").innerHTML="Please enter a valid e-mail address";
     
-      return false;  
+          return false;  
       } 
 
       var password=document.myForm.password.value; 
@@ -55,7 +48,7 @@ function validateForm() {
       var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
     if(!password.match(passw)) 
     { 
-      document.getElementById("password_error").innerHTML =" password must be between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter";
+      document.getElementById("password_error").innerHTML ="A password must have at least 1 numeric digit, 1 uppercase, and 1 lowercase letter and be between 6 and 20 characters long.";
       return false;
     }
     var confirmPassword=document.myForm.confirmPassword.value; 

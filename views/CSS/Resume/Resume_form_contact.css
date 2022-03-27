@@ -1,0 +1,399 @@
+/* font style */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+}
+/* stepper and buttons starts here */
+.tab{
+  display: none;
+}
+
+.add-button-display-none {
+    display: none;!important;
+}
+
+/* next, input button */
+.bn_buttons {
+display: flex;
+justify-content: space-around;
+width: 80%;
+margin: auto;
+margin-top: 70px;
+margin-bottom: 100px;
+
+}
+
+.back button,
+.next button {
+color: white;
+background-color: #496575;
+border-radius: 7px;
+width: 140px;
+height: 45px;
+font-size: 20px;
+font-weight: 700;
+transition: ease-in-out 0.2s;
+border: 0;
+letter-spacing: 1px;
+}
+
+.next button {
+background-color: green;
+}
+
+.back button:hover {
+cursor: pointer;
+background-color: white;
+color: #496575;
+border: 1px solid #496575;
+}
+
+.next button:hover {
+cursor: pointer;
+background-color: white;
+color: green;
+border: 1px solid green;
+}
+
+button:disabled{
+  opacity: 0.2;
+}
+
+button:disabled:hover{
+  opacity: 0.2;
+  cursor:not-allowed;
+}
+
+.text_center{
+  text-align: center;
+}
+
+.container{
+  max-width:400px;
+  margin: 20px auto 0 auto;
+  padding:40px;
+}
+
+#stepProgressBar{
+  width: 70%;
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin:0px auto 40px auto;
+
+}
+
+.step{
+  align-items: center;
+}
+
+.step_text{
+  margin-bottom: 10px;
+  color: green;
+}
+
+.bullet{
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  border:1px solid green;
+  border-radius: 100%;
+  margin:0 auto;
+  text-align: center;
+
+  
+}
+
+.bullet.completed{
+  color:white;
+  background-color: green;
+}
+
+/*.bullet.completed:after{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  background-color:green;*/
+/*  height:4px;*/
+/*  width:55px;*/
+/*  transform: translate(0px, -60px, 10px, 0px);*/
+/*  right: -60px;*/
+/*  bottom:8px;*/
+/*}*/
+/* stepper and buttons ends here */
+
+
+/* title field starts here */
+
+.title_text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:40px auto;
+}
+
+.text1{
+  font-size: x-large;
+}
+
+.text2{
+  font-size:large;
+  font-weight: lighter;
+}
+
+
+
+/* form field starts here */
+
+/* main division of contactform */
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px 10px;
+  width:70%;
+  max-width: 800px;
+  margin:30px auto;
+  padding:10px 0px;
+
+}
+
+/* profile picture division */
+
+.profilePic{
+    display:flex;
+    margin:20px auto;
+}
+
+/* labels */
+.inp label, .image_insertion label{
+    font-size: 17px;
+}
+
+/* profile label */
+input#profilePicture{
+  margin:auto;
+  width:80%;
+}
+
+.profilePic_image{
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin:auto;
+}
+
+/* image */
+.profilePic_image img{
+    width:50%;
+    min-width: 100px;
+    min-height: 100;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* image insertion */
+.image_insertion{
+    margin:auto 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+
+/* input fields division element */
+.inp {
+  width: 80%;
+  margin:auto;
+  margin-top: 5px;
+  margin-bottom: 15px;
+ 
+}
+
+/* each input boxes */
+input {
+  width: 100%;
+  height:25px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+
+/* text area box */
+textarea#aboutYou{
+    margin: 0px;
+    width: 100%;
+    height: 90%;
+    border-radius: 2px;
+    border: 1px solid black;
+}
+
+.cancelButtonExtra {
+    position: absolute;
+    transform: translate(261px, -4px);
+    font-size: 30px;
+    color: darkred;
+}
+
+/*to shake the delete button in response*/
+.cancelButtonExtra:hover {
+    font-size: 35px;
+
+}
+
+
+
+
+/* input{
+  border: 1px solid rgb(32, 15, 184);
+} */
+
+/* next, input button */
+/* .bn_buttons{
+  display:flex;
+  justify-content: space-around;
+  width:80%;
+  margin:auto;
+  margin-bottom:100px;
+  margin-top: 100px;
+}
+
+.back button, .next button{
+  color: white;
+  background-color: #496575;
+  border-radius: 7px;
+  width: 140px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  letter-spacing: 1px;
+}
+
+.next button{
+  background-color:green;
+}
+.back button:hover{
+  cursor: pointer;
+  background-color: white;
+  color:#496575;
+  border: 1px solid #496575;
+
+}
+
+.next button:hover{
+  cursor: pointer;
+  background-color:white;
+  color:green;
+  border:1px solid green;
+} */
+
+
+
+/* media queries */
+
+@media only screen and (max-width:780px){
+
+        margin:0px auto 40px auto;
+
+    }
+}
+
+@media only screen and (max-width:960px){
+  .time_period{
+    flex-direction: column;
+  }
+
+
+}
+
+@media only screen and (max-width:750px){
+
+  /*  stepper*/
+
+    #stepProgressBar{
+        width: 90%;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin:0 auto 40px auto;
+
+    }
+  /* title text */
+  .title_text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:40px auto;
+}
+
+.text1{
+  font-size: large;
+}
+
+.text2{
+  font-size: medium;
+  font-weight: lighter;
+}
+
+/* for profile picture */
+  .profilePic{
+    flex-direction: column;
+  }
+  
+  /* experience form */
+  .contact_form {
+    width:90%;
+  }
+
+  /* input fields */
+  .inp{
+    width:90%;
+  }
+  /*.inp label{*/
+  /*  font-size: 20px;*/
+  /*}*/
+
+  }
+
+
+@media only screen and (max-width:600px) {
+    #stepProgressBar{
+        width: 100%;
+        display:flex;
+        /*justify-content: space-between;*/
+        align-items: flex-end;
+        margin:0 auto 40px auto;
+
+    }
+  
+  /* heading texts */
+  .text1{
+    font-size: medium;
+    text-align: center;
+  }
+
+  .text2{
+    font-size: small;
+    text-align: center;
+  }
+  
+
+  .back button, .next button{
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 80px;
+    height:30px;
+    font-size: 16px;
+    
+  }
+
+  .next button{
+    background-color:green;
+  }
+}

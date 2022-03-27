@@ -1,0 +1,143 @@
+
+
+/* admin home page */
+
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  /*align-content: center;*/
+  box-sizing: border-box;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /* padding-top: 100px; */
+  /*margin-top: 170px;*/
+}
+
+
+/* div dashboard */
+
+.right-division{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+
+
+}
+
+.graphs_div{
+  margin:30px auto;
+
+
+}
+/*.left-division{*/
+/*  background-color: #1d6d86;*/
+/*}*/
+
+/*admin dashboard options*/
+.admin-dashboard-option{
+  padding: 10px 0;
+  background-color: #1d6d86;
+  border-radius: 10px;
+  margin-bottom: 5px;
+
+}
+.admin-dashboard-option:hover{
+  cursor: pointer;
+}
+
+.dashboard-box-option{
+  font-size: 32px;
+  text-align: center;
+  color: aliceblue;
+}
+/* admin boxes */
+
+.admin-options{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  /*margin:40px;*/
+  max-width: 300px;
+  max-height: 468px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 30px;
+  background-color: #1d6d86;
+  border-radius: 10px;
+
+}
+/* first row*/
+/*.first-row{*/
+/*display:flex;*/
+/*flex-direction: column;*/
+/*align-items:center;*/
+/*justify-content: center;*/
+/*}*/
+
+/*!* second row *!*/
+/*.second-row{*/
+/*  display:flex;*/
+/*  flex-direction: column;*/
+/*  align-items:center;*/
+/*  justify-content: center;*/
+/*}*/
+
+
+/* box link */
+.box {
+  width: 225px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid #91a4c7;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 17px;
+  color: aliceblue;
+  text-align: center;
+  box-shadow: 0 1px 0px 0 rgb(90 127 210 / 45%), 0 0px 20px 0 rgb(90 127 210 / 15%);
+  margin: 6px auto;
+}
+
+.box:hover{
+  cursor: pointer;
+  box-shadow: 0 4px 5px 0 #3d5e90d1, 0 6px 20px 0 rgb(0 0 0 / 31%);
+  }
+/*dashboard pannel*/
+.cpanel{
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 7px;
+  /*width:30px;*/
+}
+
+.dashboard-content{
+  width:100%;
+}
+
+
+/*right division*/
+.category_graph_div{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+/* media queries starts here */
+@media only screen and (max-width:750px) {
+
+
+  .dashboard{
+    margin-top:0px;
+  }
+
+
+  .box{
+    font-size: 15px;
+    width: 200px;
+    height: 20px;
+  }
+}

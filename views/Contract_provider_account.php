@@ -1,4 +1,4 @@
-
+<?php if ( empty(session_id()) ) session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,15 +35,15 @@
        </div>
         </div>
         <div class="row">
-            <label for="fname" class="labelfield">First Name</label><br>
-            <input type="text" id="fname" name="fname" placeholder= "Enter your first name..." require class="inputfield" onfocus=" hideFormError(fname_error)"><br>
+            <label for="fname" class="labelfield required" >First Name</label><br>
+            <input type="text" id="fname" name="fname" placeholder= "Enter your first name..." value="<?php echo $_SESSION['First_name']?>" autocomplete="fname" require class="inputfield" onfocus=" hideFormError(fname_error)"><br>
             <span id="fname_error"><?php #echo  $_SESSION["fnameErr"] ?></span>
 
            
         </div>
         <div class="row">
-            <label for="lname" class="labelfield">Last Name</label><br>
-            <input type="text" id="lname" name="lname" placeholder= "Enter your last name..." require class="inputfield" onfocus=" hideFormError(lname_error)"><br>
+            <label for="lname" class="labelfield required">Last Name</label><br>
+            <input type="text" id="lname" name="lname" placeholder= "Enter your last name..."  value=" <?php echo $_SESSION['Last_name']?>" autocomplete="lname" require class="inputfield" onfocus=" hideFormError(lname_error)"><br>
             <span id="lname_error"><?php #echo  $_SESSION["lnameErr"]?></span>
         </div>
         <div class="row">
@@ -53,11 +53,11 @@
         </div>
         <div class="row">
             <label for="Phone_number" class="labelfield">Phone number</label><br>
-            <input type="text" id="phonenumber" name="phone_number" placeholder= "use format 0775689756"  require class="inputfield" onfocus=" hideFormError(phonenumber_error)"><br>    
+            <input type="text" id="phonenumber" name="phone_number" placeholder= "use format 0775689756"   class="inputfield" onfocus=" hideFormError(phonenumber_error)"><br>    
             <span id="phonenumber_error"><?php #echo   $_SESSION["phone_numberErr"] ?></span>
         </div>
         <div class="row">
-            <label for="NIC" class="labelfield">NIC</label><br>
+            <label for="NIC" class="labelfield required">NIC</label><br>
             <input type="text" id="NIC" name="nic" placeholder= "NIC" class="inputfield" require onfocus=" hideFormError(nic_error)"><br>
             <span id="nic_error"><?php #echo   $_SESSION["nicErr"]?></span>
 
@@ -66,13 +66,13 @@
         <div class="row">
             <label for="brief_description" class="labelfield"> Brief description</label><br>
             
-            <textarea  id="brief_description"name="brief_description" rows="4"   require placeholder="Type brief introduction about your self..." class="inputfield"></textarea><br>
+            <textarea  id="brief_description"name="brief_description" rows="4"   placeholder="Type brief introduction about your self..." class="inputfield"></textarea><br>
             <span id="brief_description_error"><?php #echo    $_SESSION["Brief_descriptionErr"]  ?></span>
         </div>
         
         <div class="row">
-            <label for="email" class="labelfield">Email</label><br>
-            <input type="email" id="email" name="email" placeholder= "Email" require class="inputfield" onfocus=" hideFormError(email_error)"><br>
+            <label for="email" class="labelfield required">Email</label><br>
+            <input type="email" id="email" name="email" placeholder= "Email" value="<?php echo $_SESSION['Email']  ?>" autocomplete="email" readonly  require class="inputfield" onfocus=" hideFormError(email_error)"><br>
             <span id="email_error" class="error"><?php #echo   $_SESSION["emailErr"]?></span>
         </div>
     
@@ -116,8 +116,9 @@
         <div class="my_jobs_title">
             My Contract Posts
         </div>
-        <div class="my_jobs_row_container">
-            <div class="my_jobs_row">
+        <div class="my_jobs_row_container" >
+        <!-- <a href="<?php echo URL ?>Jobseeker/Search_jobseeker" style="text-decoration: none;"> -->
+        <div class="my_jobs_row" title = "click to view details of applied jobseekers" onclick="return loadAppliedJobseekers()">
                <div class="job_id">
                    <div class="job_id_text">
                     Contract ID
@@ -132,23 +133,33 @@
                     Contract Title
                 </div>
                 <div class="job_title_data">
-                    Mockup UI Design
+                I am looking for a react native expert
                 </div>
 
             </div> 
             <div class="icon">
-                <i class="fa fa-eye" aria-hidden="true"></i>
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <a href="<?php echo URL ?>Contracts/View_contract" style="text-decoration: none;">
+            <i title ="View post"class="fa fa-eye" id="view"  aria-hidden="true"></i>
+        <!-- </a> -->
+        <a href="<?php echo URL ?>Contracts/Post_contract" style="text-decoration: none;">
+        <i title ="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
+        </a>
+
+               
+               
+                <i title ="Delete post" class="fa fa-trash-o"  id="delete" aria-hidden="true"></i>
             </div>
             </div>
-            <div class="my_jobs_row">
+
+        </a>
+         
+            <div  title = "click to view details of applied jobseekers" class="my_jobs_row">
                 <div class="job_id">
                     <div class="job_id_text">
                         Contract ID
                     </div>
                     <div class="job_id_data">
-                        0001
+                        0002
                     </div>
  
                 </div> 
@@ -157,14 +168,14 @@
                     Contract Title
                  </div>
                  <div class="job_title_data">
-                    Data Entry
+                 CHANGE Re-type a PDF into WORD 83 pages
                  </div>
  
              </div> 
              <div class="icon">
-                 <i class="fa fa-eye" aria-hidden="true"></i>
-                 <i class="fa fa-pencil" aria-hidden="true"></i>
-                 <i class="fa fa-trash-o" aria-hidden="true"></i>
+                 <i title ="View post" class="fa fa-eye" id="view"   aria-hidden="true"></i>
+                 <i title ="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
+                 <i title ="Delete post"  class="fa fa-trash-o"  id="delete"aria-hidden="true"></i>
              </div>
              </div>
         </div>

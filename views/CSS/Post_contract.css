@@ -5,11 +5,15 @@
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     color: #585656;
-    font-size: 1em;
-}
+} 
 .all{
-    margin-top: 150px;
+    margin-top: 60px;
+    font-size: 1.08em;
 }
+.required:after {
+    content:" *";
+    color: red;
+    }
 
 .main_container{
 width:60%;
@@ -47,11 +51,13 @@ margin-right: 20px;
 label{
     font-weight: 600;
  
+ 
 }
 .inputfield{
     width: 100%;
     border: 3px solid #ccc;
     padding: 3px;
+    margin-top: 5px;
 }
 
 .inputfield:hover{
@@ -68,9 +74,9 @@ label{
     color: white;
     padding: 5px;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 10px;
-    border: 0px;
+    border:1px solid #1D6989;
     transition: ease-in-out 0.2s;
    
 }
@@ -78,7 +84,7 @@ label{
     cursor: pointer;
     color:#1D6989 ;
     background-color: white;
-    border: 2px solid #1D6989;
+    border:1px solid #1D6989;
 
 }
 .my_jobs{
@@ -130,7 +136,45 @@ span{
     font-size: 15px;
 }
 
-
+/*user access msg start*/
+.login_msg{
+    margin-top: 140px;
+    height: 100px;
+    text-align: center;
+    padding: 60px;
+   
+  }
+  #a_tag_login{
+    display: flex;
+    align-items: center;
+    margin-bottom: 110px;
+    text-decoration: none;
+  }
+  #login_button{
+    background-color: #1D6989;
+    width:150px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin: auto;  
+    border: 2px solid #1D6989;
+    transition: ease-in-out 0.2s;
+  }
+  #login_button :hover{
+    cursor: pointer;
+      color:#1D6989 ;
+      background-color: white;
+      border: 2px solid #1D6989;
+  }
+  input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;}
+  /*user access msg end*/
+  
 @media only screen and (max-width: 990px){
 *{
    font-size: 1em;

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,24 @@
 </head>
 <body>
     <p>hi</p>
-<?php print_r($this->c);?>
+<?php
+$URL = "http://localhost/ict_jobseeker_44/";
+ if (0){   echo '<a href="'; echo $URL.'Admin/Admin_home">Admin Home</a>
+                    <a href="'; echo $URL.'Login/logout">Logout</a>';
+                }else{
+                    echo '<a href="'; echo $URL . $My_profile.'">My profile</a>
+                    <a href="'; echo $URL. 'ChangePassword">Change password</a>
+                    <a href="'; echo $URL. 'Login/logout">Logout</a>';
+                }
+                ?>
+
+    if ($_SESSION['User_type'] == 'Admin44'){
+    echo '<a href="{$Admin_home}">Admin Home</a>
+    <a href="<?php echo URL ?>Login/logout">Logout</a>';
+    }elseif ($_SESSION['User_type'] == 'Company' or 'Contract provider' or 'Jobseeker' or 'Counsellor'){
+    echo '<a href="<?php echo URL . $My_profile. ?>">My profile</a>
+    <a href="<?php echo URL ?>ChangePassword">Change password</a>
+    <a href="<?php echo URL ?>Login/logout">Logout</a>';
+    }
 </body>
 </html>

@@ -7,19 +7,89 @@
   font-family: 'Quicksand', sans-serif;
   color:#2f3640 ;
 }
+/*search bar start*/
+/*division for jobs search part starts here*/
+
+.job-search-part {
+    
+    position: relative;
+    transform: translate(0%, 10%);
+  }
+  
+  .theme-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 226px;
+    border-radius: 10px;
+    margin-top: -70px;
+    
+  }
+  
+  .job-search-box {
+    margin:  auto;
+    display: flex;
+    background-color: #eeeeee;
+    width: 95%;
+    height: 75px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translate(0%, -50%);
+    border-radius: 7px;
+    padding-bottom: 10px;
+  }
+  
+  /* search box inside for input fields */
+  .search-your-keywords input,
+  .location input {
+    height: 30px;
+    width: 277px;
+    border-radius: 7px;
+    border: 1px solid #1d6989;
+    margin:10px auto;
+    padding-left: 10px;
+  }
+  
+  .category select {
+    height: 36px;
+    width: fit-content;
+    border-radius: 7px;
+    padding-left: 8px;
+  }
+  
+  .search-button button {
+    color: rgb(255, 255, 255);
+    background-color: #1d6989;
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .search-button button:hover {
+    cursor: pointer;
+    color: #1d6989;
+    background-color: #ffffff;
+    height: 30px;
+    border: 1px solid #1d6989;
+    /* border-color: #1D6989 ; */
+  }
+  
+  /* themes image and jobsearching part ends here */
+  
+/*search bar end*/
 .top_trending_categories_title  {
 
-    font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
-    font-size: 64px;
-    line-height: 75px;
- 
-    margin-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-top: 30px;
     color: #084C8B;
     text-align: center;
-    text-shadow: 0px 2px 4px #192a56 ;
-    margin-top: 140px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
 }
 .top_trending_categories_container{
     height: 300px;
@@ -42,13 +112,24 @@
 }
 
 .top_trending_categories_box{
-width: 23vw;
+/*width: 23vw;
 height: 117px;
 
 padding: auto;
 border: 3px solid #1a479c;
 /*border-radius: 20px;*/
-
+width: 25%;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 3px;
+border: 1px solid #91a4c7;
+border-radius: 7px;
+font-weight: 600;
+font-size: 24px !important;
+text-align: center;
+box-shadow: 0 4px 5px 0 rgb(90 127 210 / 45%), 0 6px 20px 0 rgb(90 127 210 / 15%);
 
 }
 .top_trending_categories_box:hover{
@@ -60,8 +141,8 @@ border: 3px solid #1a479c;
 
 .top_trending_categories_box_text{
   
-    font-size: 36px;
-    line-height: 32px;
+    font-size: 24px;
+    
     text-align: center;
     color: #585656;
 }
@@ -109,12 +190,12 @@ margin: 20px;
 
 .features_contract_row_contract{
 /*border:1px solid #a4b0be;*/
-height: 450px;
+height: 350px;
 width:22%;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-
+margin-bottom: 20px;
 
 padding: 10px;
 box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -193,14 +274,16 @@ flex-direction: row;
    margin-left: 5px; 
 }
 .features_contract_row_contract_bid_container_count_bid_button{
+width: 60px;
 background-color: #273c75;
 color:#f5f6fa ;
 font-weight: 400;
+border-radius: 4px;
 border: 3px solid #273c75;
 }
 .features_contract_row_contract_bid_container_count_bid_button:hover{
 color:#273c75 ;
-background-color:#f5f6fa;
+background-color:white;
 border: 3px solid #273c75;
 cursor: pointer;
 }
@@ -211,17 +294,18 @@ cursor: pointer;
     color: white;
     padding: 5px;
     border-radius: 30px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 30px auto;
-    border: none;
-    font-size: 0.8em;
+    border: 1px solid #1D6989;
+    font-size:15px;
+    transition: ease-in-out 0.2s;
 }
 .load_more:hover{
     cursor: pointer;
     color:#1D6989 ;
     background-color: white;
 
-    border: 2px solid #1D6989;
+    border: 1px solid #1D6989;
 }
 
 
@@ -235,6 +319,36 @@ cursor: pointer;
 .btn_div{
     display: flex;
     align-items: center;
+}
+/*pagination*/
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination-hidden{
+    visibility: hidden;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
 }
 @media only screen and (max-width: 1200px){
     body{

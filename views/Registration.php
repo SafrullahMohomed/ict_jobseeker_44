@@ -1,3 +1,4 @@
+<?php if ( empty(session_id()) ) session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +18,13 @@
     <div class="container">
         <div class="flex-container">
             <div class="left-container" style="background-image:url('http://localhost/ict_jobseeker_44/views/images/Registration/login1.jpg');">
-                <h3 id="register">Register</h3>
+                <h3 id="Register">Register</h3>
                 <form id="log_link">
                     <p>Already Registered?</p>
-                    <a href="#">Login here</a>
+                    <a href="<?php echo URL?>Login">Login here</a>
                 </form>
             </div>
             <div class="right-container" >
-
                 
                 <form action="http://localhost/ict_jobseeker_44/Registration/UserRegistration" method="POST"  name="myForm">
                     <div class="input-container">
@@ -48,59 +48,21 @@
                     <span id="email_error" class="error"><?php echo $data['email_err']?></span>
 
                     <p id="label">Password</p>
-                    <input type="password" id="password" name="password" placeholder="Enter Your Password" onfocus="hideFormError(password_error)"><br>
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required onfocus="hideFormError(password_error)"><br>
                     <span id="password_error" class="error"><?php echo $data['password_err']?></span>
 
                     <p id="label">Confirm Password</p>
-                    <input type="password" name="confirmPassword" placeholder="Confirm Your Password" onfocus="hideFormError(confirm_password_error)"><br>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Your Password" required onfocus="hideFormError(confirm_password_error)"><br>
                     <span id="confirm_password_error" class="error"><?php echo $data['confirmPassword_err']?></span>
-
 
                    <input type="submit" id="submit" name="submit" value="Register" onclick="return validateForm()"><br>
                     <!-- <input type="submit" id="submit" name="submit" value="Register" ><br> -->
-
-                    <!-- <input type="submit" id="submit" name="submit" value="Register" onclick="return validateForm()"><br> -->
-                    <input type="submit" id="submit" name="submit" value="Register" ><br>
-
-                <div class="input-container">
-                    <select name="users" id="users">
-                        <option value="jobseeker">Job Seeker</option>
-                        <option value="company">Company</option>
-                        <option value="contract provider">Contract Provider</option>
-                        <option value="counsellor">Counsellor</option>
-                    </select>
-                </div>
-                <form action="http://localhost/ict_jobseeker_44/Registration" method="POST" >
-                    <p id="label">First Name</p>
-                    <input type="text" id="fname" name="fname" placeholder="Enter Your First Name" class="inputfield" required onfocus=" hideFormError(fname_error)">
-                    <span id="fname_error"></span>
-                    <p id="label">Last Name</p>
-                    <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name" class="inputfield" required onfocus=" hideFormError(lname_error)">
-                    <p id="label">Email</p>
-                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required onfocus="hideFormError(email_error)">
-                    <span id="email_error" class="error"></span>
-                    <p id="label">Password</p>
-                    <input type="password" id="password" name="password" placeholder="Enter Your Password">
-                    <p id="label">Confirm Password</p>
-                    <input type="password" name="" placeholder="Confirm Your Password">
-                    <input type="submit" id="submit" name="submit" value="Register" onclick="return validateForm()"><br>
-                    
-
-
                 </form>
             </div>
         </div>
     </div>
     <?php include 'Footer.php'?>
-
     <script  src="<?php echo URL?>views/JS/Registration.js"></script>
 
 </body>
 </html>
-
-    <script  src="<?php echo URL?>views/JS/Register.js"></script>
-
-</body>
-</html>
-
-

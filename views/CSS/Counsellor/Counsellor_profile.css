@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #585656;
+  font-size: 1em;
+}
+.main_container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 150px;
+}
+
+/* edit your profile starts here */
+
+.edit_profile{
+  display:flex;
+  justify-content: right;
+  margin:30px left;
+}
+
+
+.edit_profile button{
+  color: white;
+  background-color: #496575;
+  border-radius: 7px;
+  width: 240px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  height: 35px;
+  font-size: 17px;
+  font-weight: 700;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  letter-spacing: 1px;
+  margin-right: 40px;
+}
+
+.edit_profile button:hover{
+  cursor: pointer;
+  color: #496575;
+  background-color: #ffffff;
+  border: 1px solid #496575;
+}
+/* edit profile button ends here */
+
+
+.main_details {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* .picture {
+} */
+.picture img {
+  width: 200px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.main_details_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+
+.name {
+  font-size: 50px;
+  font-weight: 800;
+  color: #227093;
+}
+
+/* .full_address{
+  text-align: center;
+} */
+
+.address,
+.city {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.city{
+  font-size: 30px;
+  color: rgb(25, 25, 53);
+  
+}
+
+/* detailsText */
+.detailsText{
+  margin: 0px 0px;
+}
+
+/* mock interview providing mark */
+.mi_provider {
+  display: flex;
+  border: 1px solid blue;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  padding-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.mk_interview {
+  margin: 10px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.tick {
+  display: flex;
+  padding: auto 5px;
+}
+/* mock interviews end here */
+
+.description {
+  height: fit-content;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 30px 30px 0 0;
+  text-align: justify;
+}
+/* sub part starts here */
+/* .sub_parts {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 30px 30px 0 0;
+} */
+
+.subhead{
+  margin:40px 0px;
+}
+
+.subhead_text{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(13, 13, 80);
+}
+
+/* make the list inside */
+
+.qualifications_data ul{
+  list-style-position: inside;
+}
+.social_media i {
+  font-size: 30px;
+}
+.social_media i:hover {
+  color: #5eacda;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 975px) {
+  .name {
+    font-size: 2.5em;
+  }
+  .address,
+  .city {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  /* mock interview providing mark */
+  .mi_provider {
+    width: 60%;
+  }
+
+  .mk_interview {
+    font-size: 30px;
+  }
+  /* mock interviews end here */
+
+  @media only screen and (max-width: 750px) {
+    .main_details {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .picture {
+      margin: auto;
+    }
+
+    .name {
+      font-size: 2.2em;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin: auto;
+    }
+    .address,
+    .city {
+      font-size: 1.3em;
+    }
+
+    /* mock interview providing mark */
+    .mi_provider {
+      width: 80%;
+    }
+
+    .mk_interview {
+      font-size: 25px;
+    }
+
+    /* mock interviews end here */
+  }
+}
+@media only screen and (max-width: 650px) {
+  /* edit profile part starts here */
+  .edit_profile{
+    margin:auto;
+  }
+  
+  
+  .edit_profile button{
+    margin:auto;
+    margin-top:30px;
+    
+  }
+  .main_details {
+    flex-direction: column;
+  }
+
+  .main_details_text {
+    margin-left: 0px;
+  }
+  .picture img {
+    width: 150px;
+  }
+  .name {
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .address,
+  .city {
+    font-size: 1.2em;
+  }
+
+  /* mock interview providing mark */
+
+  .mi_provider {
+    width: 90%;
+  }
+
+  .mk_interview {
+    font-size: 20px;
+  }
+  /* mock interviews end here */
+}

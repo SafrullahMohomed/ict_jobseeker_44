@@ -1,3 +1,4 @@
+<?php if ( empty(session_id()) ) session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,7 @@
 <div class="header_div" >
         <?php include 'Header.php'?>
 </div>
+
     <div class="main_container">
         <div class="circle">
             
@@ -23,15 +25,18 @@
  
            
         </div>
-        <div class="text">
-            <div class="text1">
-                Successfully
+        <div class="text" >
+            <div class="text2" >
+            You can go with free trail and
+             Successfully Posted
+               <?php #echo $info['mail_msg'];?>
 
-            </div> 
+
+</div> 
            
-           <div class="text2" id="change">
-               Posted
-           </div>
+           <!-- <div class="text2" id="change">
+               
+           </div> -->
         </div> 
     </div>
     <?php include 'Footer.php'?>

@@ -5,15 +5,47 @@
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     color: #585656;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
 }
 .MainContainer
 {
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 150px auto 20px auto;
+    margin: 160px auto 100px auto;
+    font-size: 1.1em; 
 }
+/*edit profile button start here*/
+.edit_profile
+{
+    margin-top:110px;
+    display:flex;
+    justify-content: right;
+    margin:30px left;
+}
+.edit_profile button{
+    color: white;
+    background-color: #496575;
+    border-radius: 7px;
+    width: 240px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    height: 35px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+    border: 0;
+    letter-spacing: 1px;
+    margin-right: 40px;
+  }
+  
+  .edit_profile button:hover{
+    cursor: pointer;
+    color: #496575;
+    background-color: #ffffff;
+    border: 1px solid #496575;
+  }
+  /* edit profile button ends here */
 .MainDetails
 {
     display: flex;
@@ -21,7 +53,8 @@
     min-height: 250px;
     margin-top:30px;
     margin-bottom: 30px;
-    gap: 7%;
+    gap: 15%;
+    font-size: 1.1em; 
 }
 .ProfilePic img
 {
@@ -29,22 +62,35 @@
     width: 200px;
     margin: 10px;    
 }
-.FirstName
+.Name
 {
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 600;
     color:#227093;
     padding-top: 15%;  
 }
-.LastName
-{
-    font-size: 2.8em;
-    font-weight: 600;
-    color:#935522;
-}
+
 .Post
 {
-    color: #585656;
+    color: #935522;
+    font-weight: 600;
+    font-size: 1.8em; 
+
+}
+.Contact
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4em; 
+}
+.SubContainer
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 1.1em; 
 }
 .SocialLinks
 { 
@@ -52,13 +98,22 @@
     flex-direction: column;
     gap: 6%;
     font-size: 0.8em;
-    font-weight: 500;
-    margin-top: 3%;
-    margin-left: 7%;
+    font-weight: 600;
+    font-size: 1.1em; 
+    /* margin-top: 3%; */
+    /* margin-left: 7%; */
+}
+#topic
+{
+    color:#227093 ;
+}
+.SocialLinks a
+{
+    font-size: 0.8em;
 }
 .social_media i
 {
-    font-size: 50px;
+    font-size: 40px;
 }
 .social_media i:hover
 {
@@ -72,28 +127,24 @@
     
 }
 
-.Address 
+.Address, .Projects, .ContactNumber
 {
-    font-size:1.4em;
+    font-size:1em;
     font-weight: 600;
 }
-.Projects
-{
-    font-size: 1.2em;
 
-}
 .Rating
 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     font-weight: 600;
-}
+    gap: 1.5%;
+} 
 .Rating i
 {
     color: gold; 
-    font-size: 40px;
-    margin-right: 20px;  
+    font-size: 30px;
+    /* margin-right: 20px;   */
 } 
 
 .star_row
@@ -107,8 +158,8 @@
 } 
 .NoOfRating
 {
-    font-size: 30px;  
-    margin-top: 0.5%; 
+    font-size: 1em;
+    /* margin-top: 0.5%;  */
 }
 
 .Contact
@@ -124,15 +175,9 @@
     flex-direction: column;
     text-align: center;
 }
-.ContactNumber
+.row
 {
-    font-size:1.2em;
-    font-weight: 550;
-}
-#topic
-{
-    font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.1em; 
 }
 .do_rate
 {
@@ -181,15 +226,16 @@ span
 ul
 {
     margin-left: 2%;
+    font-size: 1em; 
 }
 #works
 {
     margin: 1.5% 0% 0% 10%;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 .Skills , .Education
 {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .resume #link
@@ -197,11 +243,11 @@ ul
     font-weight: 500;
     text-decoration: none;
     color: #1D6989;
-    font-size: 0.8em;
+    font-size: 1.1em;
 } 
 #resumeDetails
 {
-    font-size: 0.8em;
+    font-size: 1.1em;
     color: #585656;
 }
 .review_row
@@ -222,7 +268,7 @@ ul
     flex-direction:column;
     justify-content: space-around;
     margin-left: 20px;
-    font-size: 0.7em;
+    font-size: 1em;
 }
 .review_detail_name
 {
@@ -241,18 +287,19 @@ hr
 .YourReview
 {
     width :100%;
-    min-height:300px;
+    min-height:320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
  }
  .Review1
  {
      width: 85%;
      margin-top:15px ;
-     font-size: 0.8em;
+     font-size: 1em;
  }  
  .rate_me_text
  {
@@ -287,6 +334,7 @@ hr
     font-weight: 600;
     font-size: 1.1em;
     margin: 10px;  
+    border: none; 
 }
 .submit_button:hover
 {
@@ -305,23 +353,26 @@ hr
         flex-direction: column;
         align-items: center;
     }
+    .SubContainer
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .ProfilePic img
     {
         height: 200px;
         width: 160px;
         margin: 10px;    
     }
-    .FirstName
+    .Name
     {
 
-        font-size: 2.5em;
+        font-size: 2.2em;
         padding-top: 0%;
          
     }
-    .LastName
-    {
-        font-size: 2.2em;
-    }
+    
     .Post
     {
         font-size: 0.8em;
@@ -334,17 +385,17 @@ hr
     }
     .social_media i
     {
-        font-size: 40px;
+        font-size: 25px;
     }   
     #titles
     {
         align-items: center;
         font-size: 18px;
     }
-    .Address , .ContactNumber
+    .Address, .Projects, .ContactNumber
     {
         font-size:0.9em;
-    
+        justify-content: center;
     }
     .Projects
     {
@@ -400,29 +451,24 @@ hr
         width: 120px;
         margin: 10px;    
     }
-    .FirstName
+    .Name
     {
-
         font-size: 2em;
-        padding-top: 0%;
-         
+        padding-top: 0%;   
     }
-    .LastName
-    {
-        font-size: 1.8em;
-    }
+    
     .Post
     {
         font-size: 0.7em;
     }
-    .Address , .ContactNumber
+    .Address, .Projects, .ContactNumber
     {
         font-size:0.8em;
     
     }
     .social_media i
     {
-        font-size: 30px;
+        font-size: 20px;
     }
     .rate_me_text
     {

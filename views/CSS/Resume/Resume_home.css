@@ -1,0 +1,81 @@
+/* font style */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+.main-container{
+    margin-top: 150px;
+}
+.template_title{
+    text-align: center;
+    margin: 30px auto;
+    font-size: 40px;
+    color: rgb(19, 19, 54);
+}
+
+.template_text{
+    text-align: center;
+    margin:0px 50px auto auto;
+    font-size: 25px;
+}
+
+.resume_templates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin:150px auto;
+}
+
+.resume_template1, .resume_template2, .resume_template3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.template_preview img{
+    width:250px;
+    height: 400px;
+
+
+}
+
+.template_name{
+    font-size: 40px;
+    color: #15243f;
+    font-weight: bolder;
+    margin:20px auto;
+
+}
+
+@media only screen and (max-width: 780px) {
+
+    .main-container{
+        margin-top: 0px;
+    }
+    .template_preview img{
+        width:230px;
+        height: 350px;
+
+
+    }
+
+    .template_name{
+        font-size: 30px;
+        color: #15243f;
+        font-weight: bolder;
+        margin:20px auto;
+
+    }
+
+    .resume_templates{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin:150px auto;
+    }
+
+
+}

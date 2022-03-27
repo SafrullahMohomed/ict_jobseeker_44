@@ -11,13 +11,13 @@ if (contract_name == "") {
   return false;
 }
 /*validate description*/
-var description=document.myForm.description.value;  
+/*var description=document.myForm.description.value;  
 if (description.length<100 ) {
   
     document.getElementById("description_error").innerHTML="Project description must be filled with minimum 100 letters";
   
     return false;
-  }
+  }*/
 
   /*validate description*/
 var avg_bid=document.myForm.avg_bid.value;  
