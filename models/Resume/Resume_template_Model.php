@@ -8,9 +8,9 @@ class Resume_template_Model extends Model
     }
 
     function get_resume_data_m(){
-        $sql_resume = "SELECT `Resume_ID`, `Resume_type`, `First_name`, `Last_name`, `Address`, `Email`, `Phone_no`, `City`, `About you`, `Skills`, `Jobseeker_ID` FROM `resume` WHERE Resume_ID = '32'";
+        $sql_resume = "SELECT `Resume_ID`, `Resume_type`, `First_name`, `Last_name`, `Address`, `Email`, `Phone_no`, `City`, `About you`, `Skills`, `Jobseeker_ID` FROM `resume` WHERE Resume_ID = '1'";
 
-        $resume_ID = 32;
+        $resume_ID = 1;
 //        to get resume experiece details
         $sql_resume_experience2a = "SELECT * FROM `resume_experience` WHERE Resume_ID = ".$resume_ID." AND Resume_experience_ID = '2a'";
         $sql_resume_experience2b = "SELECT * FROM `resume_experience` WHERE Resume_ID = ".$resume_ID." AND Resume_experience_ID = '2b'";
