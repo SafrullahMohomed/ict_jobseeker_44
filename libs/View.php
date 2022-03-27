@@ -93,6 +93,11 @@ class View
         require 'views/Resume/' . $viewName . '.php';
     }
 
+    public function renderResume2($viewName, $data = [])
+    {
+        require 'views/Resume/' . $viewName . '.php';
+    }
+
 
 //     // test view
 //     public function renderTest($viewName)
