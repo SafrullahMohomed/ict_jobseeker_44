@@ -44,7 +44,7 @@
 
       top: 0;
       z-index: 2;
-      overflow-x: hidden;
+      /*overflow-x: hidden;*/
       display: flex;
       flex-direction: column;
 
