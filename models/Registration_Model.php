@@ -33,7 +33,7 @@ class Registration_Model extends Model
         $mail->SMTPAuth = true;
         //Provide username and password     
         $mail->Username = "secondyeargroupproject44@gmail.com";
-        $mail->Password = "Second@44";
+        $mail->Password = "Second@123";
         //If SMTP requires TLS encryption then set it
         $mail->SMTPSecure = "tls";
         //Set TCP port to connect to

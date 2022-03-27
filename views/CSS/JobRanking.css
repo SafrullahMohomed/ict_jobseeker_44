@@ -52,7 +52,11 @@
     border-radius: 7px;
     margin-left: 240%;
 }
-
+.flex-container
+{
+    display: flex;
+    flex-direction: row;
+}
 table
 {
     /* border-collapse: collapse; */
@@ -61,7 +65,8 @@ table
     border-collapse: separate;
     border-spacing: 2px;
     border-color: gray;
-    margin: 10% 25% 10% 15%;
+    margin: 10% 35% 15% 15%;
+    width: 110%;
 }
 #topic,#columnTopic
 {
@@ -85,6 +90,12 @@ th, td
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 40px;
+}
+.Graph
+{
+    width: 20%;
+    margin-left: 20%;
+    margin-top: 5%;
 }
 
 

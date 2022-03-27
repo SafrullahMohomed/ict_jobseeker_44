@@ -6,6 +6,34 @@ class JobRanking_Model extends Model{
        parent :: __construct(); 
     }
 
+//     function get_job_category_total_m()
+//     {
+
+//         $sql = "SELECT SUM(JobCategory_count) as total FROM `jobcategory`";
+
+//         $statement = $this->db->prepare($sql);
+
+//         $statement->execute();
+
+// //         $total_data = $statement->rowCount();
+// // //        array_push($final, $total_data);
+
+//         $result = $statement->fetchAll();
+
+//         return json_encode($result);
+//     }
+//  to get the job category data
+    function get_job_category_m()
+    {
+        $sql = "SELECT JobCategory_name, JobCategory_count FROM `jobcategory`;";
+//        $sql1 = "SELECT COUNT()";
+
+        return $this->db->runQuery($sql);
+
+    }
+
+
+    
     function select_data_table($query, $page, $start, $limit)
     {
 
@@ -24,7 +52,7 @@ class JobRanking_Model extends Model{
         . "WHERE JobCategory_ID LIKE :JobCategory_ID OR
         JobCategory_name LIKE :JobCategory_name OR
         JobCategory_count LIKE :JobCategory_count OR\n"
-        .  "ORDER BY JobCategory_ID DESC\n";
+        .  "ORDER BY JobCategory_count DESC\n";
 
         $filter_query = $sql . 'LIMIT ' . $start . ',' . $limit;
 //        return $filter_query;
@@ -62,7 +90,7 @@ class JobRanking_Model extends Model{
     {
 //        declare an empty array
         $final = array();
-        $sql2 = "SELECT JobCategory_ID, JobCategory_name, JobCategory_count FROM jobcategory";
+        $sql2 = "SELECT JobCategory_ID, JobCategory_name, JobCategory_count FROM jobcategory ORDER BY JobCategory_count DESC\n";
 
         $filter_query = $sql2 . ' LIMIT ' . $start . ', ' . $limit;
 

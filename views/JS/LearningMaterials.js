@@ -117,16 +117,17 @@ function ajaxload(query = '', page_number = 1) {
           const learningMaterials_data2 = JSON.parse(learningMaterials_data1); //convert the response data to js object
 
           let learningMaterials_data = JSON.parse(learningMaterials_data2.data); //convert the data array into js object
-
+// alert("j");
           
 
               var learningMaterials_list = ``; //variable for list
 
               if (learningMaterials_data.length > 0) {
-                  for (let i = 0; i < learningMaterials_data.length; i++) {
+                  for (let i = 0; i < learningMaterials_data.length; i++) 
+                  {
 
                       learningMaterials_list += ` 
-                      <div class="ResourceRow">
+                     <a href="${learningMaterials_data[i].LearningMaterial_link}" > <div class="ResourceRow">
                         <div class="Academy">
                             <img src='views/images/LearningMaterials/${learningMaterials_data[i].Academy_logo}' >
                         </div>
@@ -136,7 +137,7 @@ function ajaxload(query = '', page_number = 1) {
                         <div class="Lesson">
                             <img src='views/images/LearningMaterials/${learningMaterials_data[i].Resource_logo}' >
                         </div>
-                      </div>
+                      </div></a>
                        `
                       
                   }

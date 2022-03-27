@@ -19,13 +19,29 @@ const address = document.querySelector("#address");
 // const linkedin = document.getElementById("linkedin_icon");
 // const twitter = document.getElementById("twitter_icon");
 
-// const experience_uf = document.getElementById("experience").innerText;
-// console.log(experience_uf);
+const experience_uf = document.getElementById("experience_uf").innerText;
+console.log(experience_uf);
 
-// const experience_list = experience_uf.split('• ').filter(n => n.length > 0).map(n => `<li> ${n} </li><br>`);
-// experience_bullets = '<ul>' + experience_list.join('') + '</ul>';
+const experience_list = experience_uf.split('• ').filter(n => n.length > 0).map(n => `<li> ${n} </li><br>`);
+experience_bullets = '<ul>' + experience_list.join('') + '</ul>';
 
-// experiences.innerHTML = experience_bullets;
+experience.innerHTML = experience_bullets;
+
+const skills_uf = document.getElementById("skills_uf").innerText;
+console.log(skills_uf);
+
+const skills_list = skills_uf.split('• ').filter(n => n.length > 0).map(n => `<li> ${n} </li><br>`);
+skills_bullets = '<ul>' + skills_list.join('') + '</ul>';
+
+skills.innerHTML = skills_bullets;
+
+const education_uf = document.getElementById("education_uf").innerText;
+console.log(skills_uf);
+
+const education_list = education_uf.split('• ').filter(n => n.length > 0).map(n => `<li> ${n} </li><br>`);
+education_bullets = '<ul>' + education_list.join('') + '</ul>';
+
+education.innerHTML = education_bullets;
 
 
 function JobSeekerProfilerData() {
