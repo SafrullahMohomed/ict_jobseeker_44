@@ -19,14 +19,14 @@
 <?php  include 'Header.php'?>
 </div>
       <!-- header part end  -->
-
+  
       <!-- check user is contract provider or not -->
       <?php if ( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Contract provider" ): ?>
  <div class="all">
  <div class="post_contract_bar">
         Post a Project 
     </div>
-    <form class="main_container" name="myForm" action="<?php echo URL ?>cp/insert_post_contract_data " method="post" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
+    <form class="main_container" name="myForm" action="<?php echo URL ?>Contracts/Post_contract/insert_post_contract_data " method="post" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
         
         <div class="row">
             <label for="projectname" class="labelfield required">Project Name</label><br>
@@ -34,20 +34,22 @@
             <span id="contract_name_error"></span>
         </div>
         <div class="row">
-            <label for="project_category" class="labelfield required">Project Category (Skills)</label><br>
-            <select type="text" id="project_category" name="contract_category"  class="inputfield" required><br>
-         <option>Select Category</option>      
-        <option>Logo Design</option>
-        <option>Mobile App Development</option>
-        <option>Article Writing</option>
-        <option>HTML</option>      
-        <option>Graphic Design</option>
-        <option>Front End Development</option>
-        <option>Back End Development</option>
-        <option>WordPress</option>
-        <option>PHP</option>
         
-        <option>Data Entry</option>
+            <label for="project_category" class="labelfield required">Project Category (Skills)</label><br>
+            <select type="text" id="project_category" name="contract_category"  class="inputfield" required>
+
+            <option value="" selected>Select contract category</option> 
+        <?php  $data_count=count($data['contract_Category']);
+      
+        for($x = 0; $x < $data_count; $x++  )
+        {
+          echo "<option value=' " .$data['contract_Category'][$x]['Contractcatergory_ID'] ." '>" ;
+          echo $data['contract_Category'][$x]['Contract_category'];
+          echo"</option>";
+        
+        }
+        
+        ?>
     
     
     </select>

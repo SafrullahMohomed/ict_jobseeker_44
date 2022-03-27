@@ -76,10 +76,9 @@ class Database extends PDO
 
         // prepare sql and bind parameters 
         //Insert data into contract tables
+       
         $stmt1 = $this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
-   VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,75 )");
-        $stmt1 = $this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
-    VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,:user_id )");
+        VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,:user_id )");
         $stmt1->bindParam(':contract_name', $contract_name);
         $stmt1->bindParam(':contract_category', $contract_category);
         $stmt1->bindParam(':description', $description);

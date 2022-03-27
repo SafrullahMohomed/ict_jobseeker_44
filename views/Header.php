@@ -329,7 +329,7 @@ align-items: center;
   
     #Jobs:focus
     {
-color:black;
+ color:black;
     }
   </style>
 

@@ -19,7 +19,7 @@
 #then it is his own profile.then show profile with edit profile option
 if( isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Contract provider" && $_SESSION['User_ID']==$data['User_ID']):?>
 onload="cpData(<?php echo  $_SESSION['User_ID']?>)"
-?>
+
 
 <?php
 else:

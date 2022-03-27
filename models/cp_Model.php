@@ -56,6 +56,27 @@ $stmt2->execute();
 
 //post contract data
 function insert_query_post_contract(){
+
+     $contract_name  = $_POST["contract_name"];
+        $contract_category       = $_POST["contract_category"];
+        $description    = $_POST["description"];
+        $deadline  = $_POST["deadline"];
+        $avg_bid  = $_POST["avg_bid"];
+
+
+        // prepare sql and bind parameters 
+        //Insert data into contract tables
+       
+        $stmt1 = $this->prepare("INSERT INTO contract (Contract_title,Contract_description, Contract_deadline, Contract_bid_avg,Contract_category,contract_provider_ID)
+        VALUES (:contract_name,:description, :deadline,:avg_bid,:contract_category,:user_id )");
+        $stmt1->bindParam(':contract_name', $contract_name);
+        $stmt1->bindParam(':contract_category', $contract_category);
+        $stmt1->bindParam(':description', $description);
+        $stmt1->bindParam(':deadline', $deadline);
+        $stmt1->bindParam(':avg_bid', $avg_bid);
+        $stmt1->bindParam(':user_id', $_SESSION['User_ID']);
+
+        $stmt1->execute();
     return $this->db-> run_post_contract_insert_query();
    
    }
