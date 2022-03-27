@@ -72,22 +72,22 @@ class Admin_home_Model extends Model
 
     }
 
-    function get_monthly_user_registered_m()
+    function get_monthly_user_registered_m($year = 2021)
     {
         $data = array();
-        $sql1 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Jobseeker' GROUP BY YEAR(Created_at), month(Created_at);";
+        $sql1 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Jobseeker' AND YEAR(Created_at) = $year GROUP BY YEAR(Created_at), month(Created_at);";
         $data['Jobseeker'] = $this->db->runQuery($sql1);
 
-        $sql2 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Counsellor' GROUP BY YEAR(Created_at), month(Created_at);";
+        $sql2 = "SELECT COUNT(User_ID) AS Count_Counsellor, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Counsellor' AND YEAR(Created_at) = $year GROUP BY YEAR(Created_at), month(Created_at);";
         $statement = $this->db->prepare($sql2);
         $data['Counsellor'] = $this->db->runQuery($sql2);
 
-        $sql3 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Company' GROUP BY YEAR(Created_at), month(Created_at);";
-        $statement = $this->db->prepare($sql2);
+        $sql3 = "SELECT COUNT(User_ID) AS Count_Company, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Company' AND YEAR(Created_at) = $year GROUP BY YEAR(Created_at), month(Created_at);";
+        $statement = $this->db->prepare($sql3);
         $data['Company'] = $this->db->runQuery($sql3);
 
-        $sql4 = "SELECT COUNT(User_ID) AS Count_Jobseeker, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Company' GROUP BY YEAR(Created_at), month(Created_at);";
-        $statement = $this->db->prepare($sql2);
+        $sql4 = "SELECT COUNT(User_ID) AS Count_Cprovider, MONTH(Created_at) AS Month FROM user WHERE User_type = 'Company' AND YEAR(Created_at) = $year GROUP BY YEAR(Created_at), month(Created_at);";
+        $statement = $this->db->prepare($sql4);
         $data['Contract_provider'] = $this->db->runQuery($sql4);
 
         return $data;

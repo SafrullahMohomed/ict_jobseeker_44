@@ -35,7 +35,10 @@ class View
    
         include 'views/'.$viewName. '.php';
  }
-
+ public function render6($viewName,$data1,$data2,$data3) {
+   
+    include 'views/'.$viewName. '.php';
+}
 
 
 
