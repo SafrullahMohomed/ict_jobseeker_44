@@ -481,12 +481,12 @@
             </div>
 
             <!-- education details -->
-            <div class="educationDetails inp">
-                <div class="edu_Discription_text">
-                    Brief description about education
-                </div>
-                <textarea name="educationDetails" id="educationDetails3a" cols="30" rows="10"></textarea>
-            </div>
+<!--            <div class="educationDetails inp">-->
+<!--                <div class="edu_Discription_text">-->
+<!--                    Brief description about education-->
+<!--                </div>-->
+<!--                <textarea name="educationDetails" id="educationDetails3a" cols="30" rows="10"></textarea>-->
+<!--            </div>-->
 
             <!-- time period -->
             <div class="time_period inp">
@@ -558,12 +558,12 @@
                     </div>
 
                     <!-- education details -->
-                    <div class="educationDetails inp">
-                        <div class="edu_Discription_text">
-                            Brief description about education
-                        </div>
-                        <textarea name="educationDetails" id="educationDetails3b" cols="30" rows="10"></textarea>
-                    </div>
+<!--                    <div class="educationDetails inp">-->
+<!--                        <div class="edu_Discription_text">-->
+<!--                            Brief description about education-->
+<!--                        </div>-->
+<!--                        <textarea name="educationDetails" id="educationDetails3b" cols="30" rows="10"></textarea>-->
+<!--                    </div>-->
 
                     <!-- time period -->
                     <div class="time_period inp">
@@ -634,12 +634,12 @@
                     </div>
 
                     <!-- education details -->
-                    <div class="educationDetails inp">
-                        <div class="edu_Discription_text">
-                            Brief description about education
-                        </div>
-                        <textarea name="educationDetails" id="educationDetails3c" cols="30" rows="10"></textarea>
-                    </div>
+<!--                    <div class="educationDetails inp">-->
+<!--                        <div class="edu_Discription_text">-->
+<!--                            Brief description about education-->
+<!--                        </div>-->
+<!--                        <textarea name="educationDetails" id="educationDetails3c" cols="30" rows="10"></textarea>-->
+<!--                    </div>-->
 
                     <!-- time period -->
                     <div class="time_period inp">
@@ -698,7 +698,7 @@
         <!-- text field starts here -->
         <div class="title_text">
             <div class="text1">Skills</div>
-            <div class="text2">state your skills (optional)</div>
+            <div class="text2" >state your skills (optional)</div>
         </div>
 
         <!-- text field ends here -->
@@ -712,7 +712,7 @@
         <div class="skill_form">
             <!-- skill details -->
             <div class="skillDetails">
-                <textarea name="skillDetails" id="skillDetails" cols="40" rows="10"></textarea>
+                <textarea name="skillDetails" id="skillDetails" cols="40" rows="10" onkeyup="handleInput(event)"></textarea>
             </div>
         </div>
         <!-- next, back buttons -->
@@ -774,7 +774,7 @@
             <!-- project details -->
             <div class="projectDetails inp">
                 <label class="description">Project Description</label>
-                <textarea name="projectDetails" id="projectDetails5a" cols="30" rows="10"></textarea>
+                <textarea name="projectDetails" id="projectDetails5a" cols="30" rows="10" onkeyup="handleInput(event)"></textarea>
             </div>
 
 
@@ -802,15 +802,15 @@
                     <!-- project details -->
                     <div class="projectDetails inp">
                         <label class="description">Project Description</label>
-                        <textarea name="projectDetails" id="projectDetails5b" cols="30" rows="10"></textarea>
+                        <textarea name="projectDetails" id="projectDetails5b" cols="30" rows="10" onkeyup="handleInput(event)"></textarea>
                     </div>
 
 
                 </div>
             </form>
-            <!--project 5b starts here-->
+            <!--project 5b ends here-->
 
-            <!--project 5b starts here-->
+            <!--project 5c starts here-->
             <form action="" id="form5c">
                 <div class="project_form" id="project_form5c">
 
@@ -828,13 +828,13 @@
                     <!-- project details -->
                     <div class="projectDetails inp">
                         <label class="description">Project Description</label>
-                        <textarea name="projectDetails" id="projectDetails5c" cols="30" rows="10"></textarea>
+                        <textarea name="projectDetails" id="projectDetails5c" cols="30" rows="10" onkeyup="handleInput(event)"></textarea>
                     </div>
 
 
                 </div>
             </form>
-            <!--project 5c starts here-->
+            <!--project 5c ends here-->
 
 
         </div>
