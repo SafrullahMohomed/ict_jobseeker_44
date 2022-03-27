@@ -8,10 +8,13 @@
     <style>
         <?php include "CSS/JobRanking.css" ?>
     </style>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script  src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script defer src="<?php echo URL ?>views/JS/JobRankingGraph.js"></script>
     <title>JobRanking</title>
 </head>
 
-<body>
+<body onload="ajaxloadTotal()">
     <div class="header_div">
         <?php include 'Header.php' ?>
     </div>
@@ -34,7 +37,7 @@
         </div>
         <!-- search part ends here -->
 
-
+    <div class="flex-container">
         <div class="Table" id="Table">
             <table>
                 <tr>
@@ -119,19 +122,63 @@
         <div class="Graph">
              <!--        job category graph starts here -->
              <div class="job_categories">
-                <canvas id="job_category_chart" width="400px" height="400px"></canvas>
+                <canvas id="job_category_chart" width="400" height="400"></canvas>
+                <!-- <canvas id="myChart" width="400" height="400"></canvas>
+                        <script>
+                            var ctx = document.getElementById("myChart");
+                        var myChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['OK', 'WARNING', 'CRITICAL', 'UNKNOWN'],
+                            datasets: [{
+                            label: '# of Tomatoes',
+                            data: [12, 19, 3, 5],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)'
+                            ],
+                            borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            //cutoutPercentage: 40,
+                            responsive: false,
+
+                        }
+                        });
+                        </script> -->
             </div>
         </div>
-
+    </div>
         <!-- load more button -->
         <div id="pagination-link">
 
         </div>
 
+
+
+        
+
+
     </div>
     <?php include 'Footer.php' ?>
     <script src="<?php echo URL ?>views/JS/JobRanking.js"></script>
-    <script src="<?php echo URL ?>views/JS/JobRankingGraph.js"></script>
+    <!-- <script src="<?php echo URL ?>views/JS/JobRankingGraph.js"></script> -->
+
+
+
+
+
+
+
 </body>
 
 </html>

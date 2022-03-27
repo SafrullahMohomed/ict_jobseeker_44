@@ -104,7 +104,7 @@
   <!-- posing part start here -->
   <div class="post_button">
     <a class=" btn"href="<?php echo URL ?>jobs/Post_job">Post a Job</a>
-
+</div>
 
 <!-- themes image and job search part ends here -->
 

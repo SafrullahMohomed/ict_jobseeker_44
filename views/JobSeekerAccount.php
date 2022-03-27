@@ -21,12 +21,14 @@
             <p id="info">To complete your profile, please fill out and submit the following information.</p>
         </div>       
     </div>
-    <form name="myForm" action="<?php echo URL ?>Jobseeker/JobSeekerAccount/update_jobseeker_data" method="post" id="jobseeker_form">
+    <form name="myForm" action="<?php echo URL ?>Jobseeker/JobSeekerAccount/update_jobseeker_data" method="post" id="jobseeker_form" enctype="multipart/form-data">
     <div class="ProfileBar">
-        <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' id="output">
+            <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' id="output">
          <div class="row1">
+         <!-- <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' id="output"> -->
             <label for="profile_pic" class="labelfield">Profile picture</label><br>
             <input type="file" id="profile_pic" name="profile_pic" class="inputfield" accept="image/*" onchange="loadFile(event)" ><br>
+            <label for="profile_pic" class="labelfield" id="ProfilePicBtnUpload">Choose a photo</label><br>
         </div>
     </div>
     <div class="main_container" >
@@ -72,22 +74,22 @@
         </div>
         <p id="titles">About Me</p>
         <div class="row">
-            <textarea rows="6"  class="inputfield" name="brief_description" id="brief_description" placeholder="Enter Brief Introduction About Your Self " value="<?php echo $data['Description']?>" required onfocus=" hideFormError(brief_description_error)"></textarea><br>
+            <textarea rows="6"  class="inputfield" name="brief_description" id="brief_description" placeholder="Enter Brief Introduction About Your Self " required onfocus=" hideFormError(brief_description_error)"><?php echo $data['Description']?></textarea><br>
             <span id="brief_description_error"></span>
         </div>  
         <p id="titles">Professional Experience</p>
         <div class="row">
-            <textarea rows="8"  class="inputfield" name="experience" id="experience" placeholder="Enter Your Overall Professional Experience " value="<?php echo $data['Experience']?>" required onfocus=" hideFormError(experience_error)"></textarea><br>
+            <textarea rows="8"  class="inputfield" name="experience" id="experience" placeholder="Enter Your Overall Professional Experience " onkeyup = "handleInput(event)" required onfocus=" hideFormError(experience_error)"><?php echo $data['Experience']?></textarea><br>
             <span id="experience_error"></span>
         </div> 
         <p id="titles">Skills</p>
         <div class="row">
-            <textarea rows="6"  class="inputfield" name="skills" id="skills" placeholder="Enter Your Skills briefly " value="<?php echo $data['Skills']?>" required onfocus=" hideFormError(skills_error)"></textarea><br>
+            <textarea rows="6"  class="inputfield" name="skills" id="skills" placeholder="Enter Your Skills briefly " onkeyup = "handleInput(event)" required onfocus=" hideFormError(skills_error)"><?php echo $data['Skills']?></textarea><br>
             <span id="skills_error"></span>
         </div>
         <p id="titles">Education</p>
         <div class="row">
-            <textarea rows="4"  class="inputfield" name="education" id="education" placeholder="Enter Your Educational Qualifications " value="<?php echo $data['Education']?>" required onfocus=" hideFormError(education_error)"></textarea><br>
+            <textarea rows="4"  class="inputfield" name="education" id="education" placeholder="Enter Your Educational Qualifications " onkeyup = "handleInput(event)" required onfocus=" hideFormError(education_error)"><?php echo $data['Education']?></textarea><br>
             <span id="education_error"></span>
         </div>
         <p id="titles">On The Web</p>

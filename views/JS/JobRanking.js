@@ -1,9 +1,29 @@
 // alert("GGSS");
 //function to load the job category data
-function ajaxloadTotal()
-{
-    
-}
+// let total_count;
+// function ajaxloadTotal()
+// {
+//     const xhr = new XMLHttpRequest();
+
+//     //establish connection
+//     xhr.open("POST", "http://localhost/ict_jobseeker_44/JobRanking/get_job_category_total");
+//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+//     xhr.onload = function () {
+
+//         if (xhr.status == 200) {
+//             total_count = xhr.responseText; //ajax response data
+//             console.log("total_count");
+//             console.log(total_count);
+//             console.log("total_count");
+//             // const job_category_data2 = JSON.parse(total_count); //convert the response data to js object
+//             // console.log(job_category_data2);
+            
+
+//         }
+      
+//         xhr.send();
+// }
+// }
 
 function ajaxload(query = '', page_number = 1) 
 {
@@ -44,7 +64,7 @@ function ajaxload(query = '', page_number = 1)
                         job_category_tbody += ` <tr>
                         <td>${job_category_data[i].JobCategory_name}</td>
                         <td>${job_category_data[i].JobCategory_count}</td>
-                        <td>${job_category_data[i].JobCategory_ID}</td>
+                        <td>${i+1}</td>
                         <td>${(parseInt(job_category_data[i].JobCategory_count) *100/ total).toFixed(2)}%</td>
                     </tr>`
                     }

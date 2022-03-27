@@ -23,6 +23,7 @@ class Admin_home extends Controller
 //    get the job category counts
     function get_job_category()
     {
+        
         $results = $this->model->get_job_category_m();
         echo json_encode($results);
     }

@@ -175,3 +175,27 @@ function validateForm() {
       var image = document.getElementById("output");
       image.src = URL.createObjectURL(event.target.files[0]);
     };
+
+  // declaring html elements 
+  const profileDiv=document.querySelector('.row1');
+  const profilePicImg=document.querySelector('#output');
+  const profilePicFile=document.querySelector('#profile_pic');
+  const profileBtnUpload=document.querySelector('#ProfilePicBtnUpload');
+
+
+  profilePicFile.addEventListener('change',function()
+  {
+    const choosedprofilePicFile=this.files[0];
+
+    if(choosedprofilePicFile)
+    {
+        const ProfReader=new FileReader();
+        ProfReader.addEventListener('load',function()
+        {
+          profilePicImg.setAttribute('src',ProfReader.result);
+        }
+        );
+        ProfReader.readAsDataURL(choosedprofilePicFile);
+    }
+  }
+  );

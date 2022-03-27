@@ -17,7 +17,22 @@ class JobRanking extends Controller
         
     }
 
+    // function get_job_category_total()
+    // {
+    //     echo"Hi";
+    //     $data = $this->model->get_job_category_total_m();
+    //     //echo json_encode($data);
+    // }
+
     //    to get the job category data
+
+    function get_jobCategoryGraph()
+    {
+        // echo "Welcome";
+        $results = $this->model->get_job_category_m();
+        echo json_encode($results);
+    }
+
     function get_job_category_data()
     {
 
