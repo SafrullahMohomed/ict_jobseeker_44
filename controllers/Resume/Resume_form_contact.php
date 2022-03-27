@@ -20,7 +20,7 @@ class Resume_form_contact extends Controller
         $mainObj = json_decode($mainObj_json);
 //        print_r($mainObj);
 
-        echo $this->model->Resume_form_data_m($mainObj);
+       echo $this->model->Resume_form_data_m($mainObj);
 
     }
 }

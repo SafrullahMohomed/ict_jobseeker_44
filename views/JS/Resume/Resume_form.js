@@ -16,6 +16,14 @@ const bullets = [...document.querySelectorAll(".bullet")];
 
 //classes
 
+// to avoid the default enter press
+document.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13 || e.which === 13) {
+        e.preventDefault();
+        return false;
+    }
+
+});
 //experience class
 class Experience {
     constructor(id_experience, jobTitle, employer, city, country, experienceDetails, from_experience, to_experience, workHere, filled) {
@@ -84,8 +92,8 @@ function objAssignment(firstName, lastName, email, phoneNumber, address, city, a
 
     //project object
     var proj1 = new Project('5a', projectTitle5a, projectDetails5a);
-    var proj2 = new Project('5a', projectTitle5b, projectDetails5b);
-    var proj3 = new Project('5a', projectTitle5c, projectDetails5c);
+    var proj2 = new Project('5b', projectTitle5b, projectDetails5b);
+    var proj3 = new Project('5c', projectTitle5c, projectDetails5c);
 
     var mainObj = {
         profilePic: null,
@@ -1319,6 +1327,7 @@ finish_button5.addEventListener("click", () => {
 
     xhr.send(mainObj_json);
     // location.href = 'http://localhost/ict_jobseeker_44/Resume/Resume_form_contact';
+
 });
 
 id_project = 1;
