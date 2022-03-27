@@ -19,7 +19,15 @@ class Company_account extends Controller
             'fburl' => trim($_POST['fburl']),
             'linkedin_url' => trim($_POST['linkedin_url']),
             'twitter_url' => trim($_POST['twitter_url']),*/
-    
+            'Company_name' => '',
+            'address' =>'',
+            'phone_number' =>'',
+            'brief_description' =>'',
+            'url' =>'',
+            'fburl' =>'',
+            'linkedin_url' =>'',
+            'twitter_url' =>'',
+            'email'=>'',
             'name_err' => '',
             'address_err' => '',
             'phone_number_err' => '',
@@ -29,6 +37,23 @@ class Company_account extends Controller
             'linkedin_url_err' => '',
             'twitter_url_err' => ''
         ];
+
+        if(isset($_SESSION['User_ID']))
+        {
+        $Company_data=$this->model->getCompanyData($_SESSION['User_ID']);
+
+        $data['Company_name']=$Company_data['Company_name'];
+        $data['address']=$Company_data['Address'];
+        $data['phone_number']=$Company_data['Phone_number'];
+        $data['brief_description']=$Company_data['Description'];
+        $data['url']=$Company_data['Company_website'];
+        $data['fburl']=$Company_data['Company_facebook'];
+        $data['linkedin_url']=$Company_data['Company_LinkedIn'];
+        $data['twitter_url']=$Company_data['Company_twitter'];
+        $data['email']=$Company_data['Email'];
+        
+        
+        }
 
         //pass view name
         $this->view ->render2('Company/Company_account',$data); 
@@ -42,7 +67,7 @@ class Company_account extends Controller
            
                 $data = [
                     
-                    'name' => trim($_POST['name']),
+                    'Company_name' => trim($_POST['name']),
                     'address' => trim($_POST['address']),
                     'phone_number' => trim($_POST['Phone_number']),
                     'brief_description' => trim($_POST['brief_description']),
@@ -63,7 +88,7 @@ class Company_account extends Controller
                 ];
                 
                 //Validate user_name
-                if(empty($data['name'])) {
+                if(empty($data['Company_name'])) {
                     $data['name_err'] = "Please enter the company name";
                 
                 }
@@ -114,7 +139,8 @@ class Company_account extends Controller
                 empty($data['phone_number_err']) && empty($data['fburl_err'])&& empty($data['linkedin_url_err'])&& empty($data['twitter_url_err'])  ) {
                 
                     $this->model->insert_company_data($data);
-                    
+                    $data['User_ID']= $_SESSION['User_ID'];
+                    $this->view ->render2('Company/Company_Profile',$data); 
 
 
                 }

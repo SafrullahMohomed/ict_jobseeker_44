@@ -30,6 +30,7 @@ function validateForm() {
 
     /*validate phone number*/
     var phone_number = document.myForm.phone_number.value;
+    
     if (isNaN(phone_number) || phone_number.length != 10) {
         document.getElementById("phonenumber_error").innerHTML = "Enter valid phone number";
 
@@ -125,4 +126,83 @@ var loadFile = function (event) {
 function loadAppliedJobseekers() {
 
     window.open("http://localhost/ict_jobseeker_44/Jobseeker/Search_jobseeker", "_self");
+}
+
+//load company posted jobs
+function my_jobs(){
+
+
+    const xhr = new XMLHttpRequest();
+   
+      //establish connection
+      xhr.open("POST", "http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_account/load_cp_contracts");
+      
+  
+      let company = document.querySelector(".my_jobs_row_container");
+      xhr.onload = function () {
+  
+          if (xhr.status == 200) {
+              const company_data1 = xhr.responseText; //ajax response data
+             
+            const company_data2 = JSON.parse(company_data1); //convert the response data to js object
+           
+              company.innerHTML = ``;
+                 
+                  if(company_data2 != null) {
+         
+                      for (var s of company_data2) {
+                    
+                        company.innerHTML += ` 
+                        
+                        <div class="my_jobs_row" title = "click to view details of applied jobseekers" onclick="return loadAppliedJobseekers()">
+              <div class="job_id">
+                   <div class="job_id_text">
+                    Contract ID
+                   </div>
+                   <div class="job_id_data">
+                      ${s.Contract_ID}
+                   </div>
+
+               </div> 
+
+               <div class="job_title">
+                    <div class="job_title_text">
+                        Contract Title
+                    </div>
+                    <div class="job_title_data">
+                    ${s.Contract_title}
+                    </div>
+
+              </div> 
+
+            <div class="icon">
+                <a href="http://localhost/ict_jobseeker_44/Contracts/View_contract/View_contractjs/${s.Contract_ID}" style="text-decoration: none;">
+                <i title ="View post"class="fa fa-eye" id="view"  aria-hidden="true"></i>
+                </a>
+                <a href="http://localhost/ict_jobseeker_44/Contracts/Post_contract" style="text-decoration: none;">
+                <i title ="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+            
+               
+                <a href="http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_account/delete_contract/${s.Contract_ID}" style="text-decoration: none;">
+                <i title ="Delete post" class="fa fa-trash-o"  id="delete" aria-hidden="true"></i>
+                </a>
+                
+            </div>
+
+        </div>
+                        
+                       `;
+                      }
+                    } 
+  
+
+              }
+  
+  
+          }
+        
+          xhr.send();
+  
+          return false;
 }

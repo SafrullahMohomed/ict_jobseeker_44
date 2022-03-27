@@ -15,8 +15,9 @@
 
     <style>
         <?php include "CSS/Normalize/Normalize.css" ?><?php include "CSS/Home.css" ?>
+       
     </style>
-
+  <script src="https://kit.fontawesome.com/f299a8aeaa.js" crossorigin="anonymous"></script>
     <!--  <link rel="stylesheet" href="C:/xampp new/htdocs/ict_jobseeker_44/views/CSS/Home.css"/> -->
 
     <!-- link to font awesome -->
@@ -124,6 +125,13 @@
 <!--  job search part ends here -->
 
 <!-- counting part starts here -->
+
+<div class="div_for_jobs">
+
+</div>
+<div id=big_container>
+
+
 <div class="counting-part">
     <div class="posted-jobs">
         <div class="posted-jobs-heading">Posted&nbsp;jobs</div>
@@ -257,6 +265,9 @@
     </div>
 </div>
 
+
+</div>
+
 <!-- review part ends here -->
 <!--  <a href="../../rate and review-sys/1/sys_rate_and_review.html"></a> -->
 
@@ -269,7 +280,9 @@
 <!--<div class="theme-image" id="theme-image2">-->
 <!--    <img src='http://localhost/ict_jobseeker_44/views/images/Home/themeimage2.jpeg' alt="theme image 2">-->
 <!--</div>-->
-
+<!-- pagination link -->
+<div id="pagination-link">
+        </div>
 <?php include './views/Footer_home.php' ?>
 <!-- js links -->
 
