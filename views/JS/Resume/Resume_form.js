@@ -11,56 +11,225 @@ const next_button4 = document.getElementById("next_4");
 const back_button5 = document.getElementById("back_5");
 const finish_button5 = document.getElementById("finish_5");
 
-// const finish_button = document.getElementById("finish");
 const content = document.getElementById("content");
 const bullets = [...document.querySelectorAll(".bullet")];
-// const form1 = document.getElementById("form_1");
-// const form2 = document.getElementById("form_2");
-// const form3 = document.getElementById("form_3");
-// const form4 = document.getElementById("form_4");
-// const form5 = document.getElementById("form_5");
-// form5.querySelector()
 
-//input field assignments
+//classes
 
-//contact form variables
-var firstName = document.getElementById("firstName").value;
-var lastName = document.getElementById("lastName").value;
-var email = document.getElementById("email").value;
-var phoneNumber = document.getElementById("phoneNumber").value;
-var address = document.getElementById("address").value;
-var city = document.getElementById("city").value;
-var aboutYou = document.getElementById("aboutYou").value;
-var skillDetails = document.getElementById("skillDetails").value;
+// to avoid the default enter press
+document.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13 || e.which === 13) {
+        e.preventDefault();
+        return false;
+    }
+
+});
+//experience class
+class Experience {
+    constructor(id_experience, jobTitle, employer, city, country, experienceDetails, from_experience, to_experience, workHere, filled) {
+        this.id_experience = id_experience;
+        this.jobTitle = jobTitle;
+        this.employer = employer;
+        this.city = city;
+        this.country = country;
+        this.experienceDetails = experienceDetails;
+        this.from_experience = from_experience;
+        this.to_experience = to_experience;
+        this.workHere = workHere;
+        this.filled = filled;
+
+
+    }
+}
+
+//education class
+class Education {
+    constructor(id_education, institute, degree, city, country, educationDetails, from_education, to_education, studyHere, filled) {
+        this.id_education = id_education;
+        this.institute = institute;
+        this.degree = degree;
+        this.city = city;
+        this.country = country;
+        this.educationDetails = educationDetails;
+        this.from_education = from_education;
+        this.to_education = to_education;
+        this.studyHere = studyHere;
+        this.filled = filled;
+
+    }
+}
+
+//project class
+class Project {
+    constructor(id_project, projectTitle, projectDetails, filled) {
+        this.id_project = id_project;
+        this.projectTitle = projectTitle;
+        this.projectDetails = projectDetails;
+        this.filled = filled;
+
+    }
+}
+
+//main object
+function objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+                       jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+                       jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+                       jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+                       institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+                       institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+                       institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+                       projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c) {
+    //experience objects
+    var exp1 = new Experience('2a', jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a, 0);
+    var exp2 = new Experience('2b', jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b, 0);
+    var exp3 = new Experience('2c', jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c, 0);
+
+
+    //education objects
+    var edu1 = new Education('3a', institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a, 0);
+    var edu2 = new Education('3b', institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b, 0);
+    var edu3 = new Education('3c', institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c, 0);
+
+    //project object
+    var proj1 = new Project('5a', projectTitle5a, projectDetails5a);
+    var proj2 = new Project('5b', projectTitle5b, projectDetails5b);
+    var proj3 = new Project('5c', projectTitle5c, projectDetails5c);
+
+    var mainObj = {
+        profilePic: null,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phoneNumber: phoneNumber,
+        address: address,
+        city: city,
+        about: aboutYou,
+        experience_id: {'2a': true, '2b': false, '2c': false},
+        experience: [exp1, exp2, exp3],
+        education_id: {'3a': true, '3b': false, '3c': false},
+        education: [edu1, edu2, edu3],
+        skills: skillDetails,
+        project_id: {'5a': true, '5b': false, '5c': false},
+        project: [proj1, proj2, proj3]
+
+    }
+
+    console.log(mainObj);
+    return mainObj;
+}
+
+function variableAssignments() {
+    //contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").valvaraddress = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
 
 //experience form variables
-var jobTitle = document.getElementById("jobTitle").value;
-var employer = document.getElementById("employer").value;
-var city_experience = document.getElementById("city_experience").value;
-var country_experience = document.getElementById("country_experience").value;
-var experienceDetails = document.getElementById("experienceDetails").value;
-var from_experience = document.getElementById("from_experience").value;
-var to_experience = document.getElementById("to_experience").value;
-var workHere = document.getElementById("workHere").value;
 
-//education form variables
-var institute = document.getElementById("institute").value;
-var degree = document.getElementById("degree").value;
-var city_education = document.getElementById("city_education").value;
-var country_education = document.getElementById("country_education").value;
-var educationDetails = document.getElementById("educationDetails").value;
-var from_education = document.getElementById("from_education").value;
-var to_education = document.getElementById("to_education").value;
-var studyHere = document.getElementById("studyHere").value;
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").valvarworkHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
 
 
-//project form variables
-var projectTitle = document.getElementById("projectTitle").value;
-var projectDetails = document.getElementById("projectDetails").value;
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
 
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+}
+
+variableAssignments();
+
+//main obj
+const mainObj = {
+    profilePic: null,
+    firstName: null,
+    lastName: null,
+    email: null,
+    phoneNumber: null,
+    address: null,
+    city: null,
+    about: null,
+    experience_id: {'2a': true, '2b': false, '2c': false},
+    experience: [],
+    education_id: {'3a': true, '3b': false, '3c': false},
+    education: [],
+    skills: null,
+    project_id: {'5a': true, '5b': false, '5c': false},
+    project: []
+}
 
 //for add another fields
-
 const addExperience = document.getElementById("add-experience");
 const addEducation = document.getElementById("add-education");
 const addProject = document.getElementById("add-project");
@@ -85,6 +254,7 @@ const MAX_STEPS = 5;
 let currentStep = 1;
 // showTab(currentStep);
 
+
 //contact form
 next_button1.addEventListener("click", (e) => {
     e.preventDefault();
@@ -94,21 +264,110 @@ next_button1.addEventListener("click", (e) => {
     showTab(currentStep);
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
+    // variableAssignments();
+
+    //contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
+
+//experience form variables
+
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
 
 
-    mainObj.firstName = firstName;
-    mainObj.lastName = lastName;
-    mainObj.email = email;
-    mainObj.phoneNumber = phoneNumber;
-    mainObj.address = address;
-    mainObj.city = city;
-    mainObj.about = aboutYou;
-    mainObj.skills = skillDetails;
-    console.log(mainObj);
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
 
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+
+    //function call for object assignment
+    objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 });
 
-
+// console.log(firstName);
 back_button2.addEventListener("click", (e) => {
     e.preventDefault();
     const previousBullet = bullets[0];
@@ -117,6 +376,103 @@ back_button2.addEventListener("click", (e) => {
     showTab(currentStep);
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
+//contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
+
+//experience form variables
+
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
+
+
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
+
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+    objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 
 });
@@ -131,16 +487,112 @@ next_button2.addEventListener("click", (e) => {
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
 
+//contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
 
-    if (mainObj.experience.length === 0) {
-        let experience_object1 = new Experience(1, jobTitle, employer, city_experience, country_experience, experienceDetails, from_experience, to_experience, workHere);
-        mainObj.experience.push(experience_object1)
+//experience form variables
+
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
 
 
-    }
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
 
 
-    console.log(mainObj);
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+
+    objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
+
+    // if (mainObj.experience.length === 0) {
+    //     let experience_object1 = new Experience(1, jobTitle, employer, city_experience, country_experience, experienceDetails, from_experience, to_experience, workHere);
+    //     mainObj.experience.push(experience_object1)
+    //
+    //
+    // }
+
 });
 
 //to add or remove the add-another response button
@@ -184,93 +636,14 @@ addExperience.addEventListener("click", (e) => {
     e.preventDefault();
     let flag = false;
     let id_experience;
-    for(let i = 0; i < 5; i++){
-        if(mainObj.experience_id[i] == false){
-            flag = true;
-            id_experience = i;
-            mainObj.experience_id[i] = true;
-        }
-
-    }
-    if (flag == true) {
-
-        let experience_html = `<div class="experience_form" id = experience_form${id_experience}>
-
-            <!--cancel button-->
-            <div id="cancelButton${id_experience}" class="cancelButtonExtra">
-                <i title="Delete this response" onclick="delete_experience(${id_experience})" class="fa fa-trash-o" aria-hidden="true"></i>
-            </div>
-            
-            <!-- job title -->
-            <div class="jobTitle inp">
-                <label for="jobTitle">Job Title</label>
-                <br/>
-                <input type="text" name="jobTitle" id="jobTitle"/>
-            </div>
-
-            <!-- employer -->
-            <div class="employer inp">
-                <label for="employer">Employer</label>
-                <br/>
-                <input type="text" name="employer" id="employer"/>
-            </div>
-
-            <!-- city -->
-            <div class="city inp">
-                <label for="city">City</label>
-                <br/>
-                <input type="text" name="city" id="city_experience"/>
-            </div>
-
-            <!-- state -->
-            <!-- <div class="state inp">
-              <label for="state">State</label>
-              <br />
-              <input type="tel" name="state" id="state" />
-            </div> -->
-
-            <!-- country -->
-            <div class="country inp">
-                <label for="country">Country</label>
-                <br/>
-                <input type="text" name="country" id="country_experience"/>
-            </div>
-
-            <!-- experience details -->
-            <div class="experienceDetails inp">
-                <label for="experienceDetails">What did do in this job?</label>
-                <br/>
-                <textarea name="experienceDetails" id="experienceDetails" cols="30" rows="10"></textarea>
-            </div>
-
-            <!-- time period -->
-            <div class="time_period inp">
-                <div class="from">
-                    <label for="from">From</label>
-                    <input type="date" name="from" id="from_experience"/>
-                </div>
-                <div class="to">
-                    <label for="to">To</label>
-                    <input type="date" name="to" id="to_experience"/>
-                </div>
-            </div>
-            <!-- currently working field starts here -->
-            <div class="workingHere inp">
-                <input type="checkbox" name="workHere" id="workHere"/>
-                <label class="working_label" for="workHere">
-                    I currently work here</label>
-            </div>
-
-
-        </div>
-`;
-        // mainObj.experience.push()
-        dynamic_experience.innerHTML += experience_html;
-
-        // dynamic_experience.append(experience_html);
-        console.log(id_experience);
-    }
-
+    // for(let i = 0; i < 5; i++){
+    //     if(mainObj.experience_id[i] == false){
+    //         flag = true;
+    //         id_experience = i;
+    //         mainObj.experience_id[i] = true;
+    //     }
+    //
+    // }
 });
 
 
@@ -282,6 +655,105 @@ back_button3.addEventListener("click", (e) => {
     showTab(currentStep);
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
+
+    //contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
+
+//experience form variables
+
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
+
+
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
+
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+
+    objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
 
@@ -295,12 +767,104 @@ next_button3.addEventListener("click", (e) => {
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
 
+    //contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
 
-    if (mainObj.education.length === 0) {
-        mainObj.education.push(new Education(institute, degree, city_education, country_education, educationDetails, from_education, to_education, studyHere));
-    }
+//experience form variables
 
-    console.log(mainObj);
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
+
+
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
+
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+
+    objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
 
@@ -308,83 +872,7 @@ next_button3.addEventListener("click", (e) => {
 //add another experience
 addEducation.addEventListener("click", (e) => {
     e.preventDefault();
-    if (id_education < 5) {
-        id_education++;
 
-        let education_html = `<div class="education_form" id = "education_form${id_education}">
-
-            <!--cancel button-->
-            <div id="cancelButton${id_education}" class="cancelButtonExtra">
-                <i title="Delete this response" onclick="delete_education(${id_education})" class="fa fa-trash-o" aria-hidden="true"></i>
-            </div>
-            <!-- Institute -->
-            <div class="institute inp">
-                <label for="institute">Institute</label>
-                <br/>
-                <input type="text" name="institute" id="institute"/>
-            </div>
-
-            <!-- Degree -->
-            <div class="degree inp">
-                <label for="degree">Degree</label>
-                <br/>
-                <input type="text" name="degree" id="degree"/>
-            </div>
-
-            <!-- city -->
-            <div class="city inp">
-                <label for="city">City</label>
-                <br/>
-                <input type="text" name="city" id="city_education"/>
-            </div>
-
-            <!-- state -->
-            <!-- <div class="state inp">
-              <label for="state">State</label>
-              <br />
-              <input type="tel" name="state" id="state" />
-            </div> -->
-
-            <!-- country -->
-            <div class="country inp">
-                <label for="country">Country</label>
-                <br/>
-                <input type="text" name="Country" id="country_education"/>
-            </div>
-
-            <!-- education details -->
-            <div class="educationDetails inp">
-                <div class="edu_Discription_text">
-                    Brief description about education
-                </div>
-                <textarea name="educationDetails" id="educationDetails" cols="30" rows="10"></textarea>
-            </div>
-
-            <!-- time period -->
-            <div class="time_period inp">
-                <div class="from">
-                    <label for="from">From</label>
-                    <input type="date" name="from" id="from_education"/>
-                </div>
-                <div class="to">
-                    <label for="to">To</label>
-                    <input type="date" name="to" id="to_education"/>
-                </div>
-            </div>
-            <!-- study here field -->
-            <div class="studyHere inp">
-                <input type="checkbox" name="studyHere" id="studyHere"/>
-                <label class="studying_label" for="studyHere">
-                    I currently study here</label>
-            </div>
-
-
-        </div>
-`;
-        // mainObj.experience.push()
-        dynamic_education.innerHTML += education_html;
-        console.log(id_education);
-    }
 });
 
 back_button4.addEventListener("click", (e) => {
@@ -395,6 +883,105 @@ back_button4.addEventListener("click", (e) => {
     showTab(currentStep);
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
+
+    //contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
+
+//experience form variables
+
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
+
+
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
+
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+
+    objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
 
@@ -408,7 +995,104 @@ next_button4.addEventListener("click", (e) => {
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
 
-    mainObj.skills = document.getElementById("skillDetails").value;
+    //contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
+
+//experience form variables
+
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
+
+
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
+
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+
+    objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
 
@@ -422,67 +1106,243 @@ back_button5.addEventListener("click", (e) => {
     console.log(currentStep);
     window.scrollTo({top: 0, behavior: 'smooth'});
 
+    //contact form variables
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
+
+//experience form variables
+
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
+
+
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
+
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+
+    objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
 
 //project form
 finish_button5.addEventListener("click", () => {
 
-    if (mainObj.project.length === 0) {
-        mainObj.project.push(new Project(projectTitle, projectDetails));
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var aboutYou = document.getElementById("aboutYou").value;
+    var skillDetails = document.getElementById("skillDetails").value;
+
+//experience form variables
+
+//experience 2a
+    var jobTitle2a = document.getElementById("jobTitle2a").value;
+    var employer2a = document.getElementById("employer2a").value;
+    var city_experience2a = document.getElementById("city_experience2a").value;
+    var country_experience2a = document.getElementById("country_experience2a").value;
+    var experienceDetails2a = document.getElementById("experienceDetails2a").value;
+    var from_experience2a = document.getElementById("from_experience2a").value;
+    var to_experience2a = document.getElementById("to_experience2a").value;
+    var workHere2a = document.getElementById("workHere2a").value;
+
+//experience 2b
+    var jobTitle2b = document.getElementById("jobTitle2b").value;
+    var employer2b = document.getElementById("employer2b").value;
+    var city_experience2b = document.getElementById("city_experience2b").value;
+    var country_experience2b = document.getElementById("country_experience2b").value;
+    var experienceDetails2b = document.getElementById("experienceDetails2b").value;
+    var from_experience2b = document.getElementById("from_experience2b").value;
+    var to_experience2b = document.getElementById("to_experience2b").value;
+    var workHere2b = document.getElementById("workHere2b").value;
+
+//experience 2c
+    var jobTitle2c = document.getElementById("jobTitle2c").value;
+    var employer2c = document.getElementById("employer2c").value;
+    var city_experience2c = document.getElementById("city_experience2c").value;
+    var country_experience2c = document.getElementById("country_experience2c").value;
+    var experienceDetails2c = document.getElementById("experienceDetails2c").value;
+    var from_experience2c = document.getElementById("from_experience2c").value;
+    var to_experience2c = document.getElementById("to_experience2c").value;
+    var workHere2c = document.getElementById("workHere2c").value;
+
+    //education form variables
+
+// education 3a
+    var institute3a = document.getElementById("institute3a").value;
+    var degree3a = document.getElementById("degree3a").value;
+    var city_education3a = document.getElementById("city_education3a").value;
+    var country_education3a = document.getElementById("country_education3a").value;
+    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    var from_education3a = document.getElementById("from_education3a").value;
+    var to_education3a = document.getElementById("to_education3a").value;
+    var studyHere3a = document.getElementById("studyHere3a").value;
+
+
+//education 3b
+    var institute3b = document.getElementById("institute3b").value;
+    var degree3b = document.getElementById("degree3b").value;
+    var city_education3b = document.getElementById("city_education3b").value;
+    var country_education3b = document.getElementById("country_education3b").value;
+    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    var from_education3b = document.getElementById("from_education3b").value;
+    var to_education3b = document.getElementById("to_education3b").value;
+    var studyHere3b = document.getElementById("studyHere3b").value;
+
+
+// education 3c
+    var institute3c = document.getElementById("institute3c").value;
+    var degree3c = document.getElementById("degree3c").value;
+    var city_education3c = document.getElementById("city_education3c").value;
+    var country_education3c = document.getElementById("country_education3c").value;
+    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    var from_education3c = document.getElementById("from_education3c").value;
+    var to_education3c = document.getElementById("to_education3c").value;
+    var studyHere3c = document.getElementById("studyHere3c").value;
+
+    //project form variables
+
+//project form 5a
+    var projectTitle5a = document.getElementById("projectTitle5a").value;
+    var projectDetails5a = document.getElementById("projectDetails5a").value;
+
+//project form 5b
+    var projectTitle5b = document.getElementById("projectTitle5b").value;
+    var projectDetails5b = document.getElementById("projectDetails5b").value;
+
+//project form 5c
+    var projectTitle5c = document.getElementById("projectTitle5c").value;
+    var projectDetails5c = document.getElementById("projectDetails5c").value;
+
+    const mainObj = objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
+
+//    convert the js object ot json
+    const mainObj_json = JSON.stringify(mainObj);
+// to send the javascript object via ajax
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "http://localhost/ict_jobseeker_44/Resume/Resume_form_contact/Resume_form_data")
+    xhr.setRequestHeader("Content-Type",  "application/json")
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            console.log(xhr.responseText);
+
+            //selecting input values
+            // const profilePi
+
+        }
     }
 
-    console.log(mainObj);
+    xhr.send(mainObj_json);
+    // location.href = 'http://localhost/ict_jobseeker_44/Resume/Resume_form_contact';
+
 });
 
 id_project = 1;
 //add another experience
 addProject.addEventListener("click", (e) => {
     e.preventDefault();
-    if (id_project < 5) {
-        id_project++;
-
-        let project_html = `<div class="project_form" id="project_form${id_project}">
-
-            <!--cancel button-->
-            <div id="cancelButton${id_project}" class="cancelButtonExtra">
-                <i title="Delete this response" onclick="delete_project(${id_project})" class="fa fa-trash-o" aria-hidden="true"></i>
-            </div>
-            
-            <!-- project title -->
-            <div class="projectTitle inp">
-                <label for="projectTitle">Project title</label>
-                <br/>
-                <input type="text" name="projectTitle" id="projectTitle"/>
-            </div>
-            <!-- project details -->
-            <div class="projectDetails inp">
-                <label class="description">Project Description</label>
-                <textarea name="projectDetails" id="projectDetails" cols="30" rows="10"></textarea>
-            </div>
-
-
-        </div>
-`;
-        // mainObj.experience.push()
-        dynamic_project.innerHTML += project_html;
-        console.log(id_project);
-    } else {
-        addProjectDiv.classList.add("tab");
-    }
 
 });
 
 
-//to submit the form
-// finish_button.addEventListener("click", () => {
-//   document.getElementById("form_resume").submit();
-// });
 const form1_contact = document.getElementById("form1_contact");
-const form2_experience = document.getElementById("form2_experience");
-const form3_education = document.getElementById("form3_education");
+const form2_experience = document.getElementById("form2_experience2a");
+const form3_education = document.getElementById("form3_education3a");
 const form4_skills = document.getElementById("form4_skills");
-const form5_projects = document.getElementById("form5_projects");
+const form5_projects = document.getElementById("form5_projects5a");
 
 function showTab(n) {
 
@@ -511,95 +1371,7 @@ function showTab(n) {
 
 }
 
-//experience class
-class Experience {
-    constructor(id_experience, jobTitle, employer, city, country, experienceDetails, from_experience, to_experience, workHere, filled) {
-        this.id_experience = id_experience;
-        this.jobTitle = jobTitle;
-        this.employer = employer;
-        this.city = city;
-        this.country = country;
-        this.experienceDetails = experienceDetails;
-        this.from_experience = from_experience;
-        this.to_experience = to_experience;
-        this.workHere = workHere;
-        this.filled = filled;
 
-
-    }
-}
-
-//experience objects
-var exp1 = new Experience(1,null, null, null, null, null, null, null, null);
-var exp2 = new Experience(2,null, null, null, null, null, null, null, null);
-var exp3 = new Experience(3,null, null, null, null, null, null, null, null);
-var exp4 = new Experience(4,null, null, null, null, null, null, null, null);
-var exp5 = new Experience(5,null, null, null, null, null, null, null, null);
-
-
-//education class
-class Education {
-    constructor(id_education, institute, degree, city, country, educationDetails, from_education, to_education, studyHere, filled) {
-        this.id_education = id_education;
-        this.institute = institute;
-        this.degree = degree;
-        this.city = city;
-        this.country = country;
-        this.educationDetails = educationDetails;
-        this.from_education = from_education;
-        this.to_education = to_education;
-        this.studyHere = studyHere;
-        this.filled = filled;
-
-    }
-}
-
-//education objects
-var edu1 = new Education(1, null, null, null, null, null, null, null, null);
-var edu2 = new Education(2, null, null, null, null, null, null, null, null);
-var edu3 = new Education(3, null, null, null, null, null, null, null, null);
-var edu4 = new Education(4, null, null, null, null, null, null, null, null);
-var edu5 = new Education(5, null, null, null, null, null, null, null, null);
-
-
-//project class
-class Project {
-    constructor(id_project, projectTitle, projectDetails, filled) {
-        this.id_project = id_project;
-        this.projectTitle = projectTitle;
-        this.projectDetails = projectDetails;
-        this.filled = filled;
-
-    }
-}
-
-//project object
-var proj1 = new Project(1, null, null);
-var proj2 = new Project(2, null, null);
-var proj3 = new Project(3, null, null);
-var proj4 = new Project(4, null, null);
-var proj5 = new Project(5, null, null);
-
-
-//main object
-const mainObj = {
-    profilePic: null,
-    firstName: null,
-    lastName: null,
-    email: null,
-    phoneNumber: null,
-    address: null,
-    city: null,
-    about: null,
-    experience_id: {0:true, 1:false, 2:false, 3:false, 4:false},
-    experience: [exp1, exp2, exp3, exp4, exp5],
-    education_id: {0:true, 1:false, 2:false, 3:false, 4:false},
-    education: [edu1, edu2, edu3, edu4, edu5],
-    skills: null,
-    project_id: {0:true, 1:false, 2:false, 3:false, 4:false},
-    project: [proj1, proj2, proj3, proj4, proj5]
-
-}
 //main object for data
 // next_button.addEventListener("click", () => {
 //
@@ -617,7 +1389,7 @@ function ajaxcall() {
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Resume/Resume_form_contact")
     xhr.onload = function () {
         if (xhr.status == 200) {
-
+            xhr.responseText;
 
             //selecting input values
             // const profilePi
@@ -633,24 +1405,24 @@ function ajaxcall() {
 
 //delete experiences
 function delete_experience(exp_id) {
-        let total_exp = 0;// to store how many slots are reserved
-        for (let i = 0; i < mainObj.experience_id.length; i++){
-            if(mainObj.experience_id[i] === true){
-                total_exp++
-            }
+    let total_exp = 0;// to store how many slots are reserved
+    for (let i = 0; i < mainObj.experience_id.length; i++) {
+        if (mainObj.experience_id[i] === true) {
+            total_exp++
         }
-        if (total_exp > 1){
-            mainObj.experience_id[exp_id] = false;
-        }
-        let objName = "exp"+exp_id;
-        objName.jobTitle = null;
-        objName.employer = null;
-        objName.city = null;
-        objName.country = null;
-        objName.experienceDetails = null;
-        objName.from_experience = null;
-        objName.to_experience = null;
-        objName.workHere = null;
+    }
+    if (total_exp > 1) {
+        mainObj.experience_id[exp_id] = false;
+    }
+    let objName = "exp" + exp_id;
+    objName.jobTitle = null;
+    objName.employer = null;
+    objName.city = null;
+    objName.country = null;
+    objName.experienceDetails = null;
+    objName.from_experience = null;
+    objName.to_experience = null;
+    objName.workHere = null;
 
 
 }
@@ -660,15 +1432,15 @@ function delete_experience(exp_id) {
 
 function delete_education(edu_id) {
     let total_edu = 0;// to store how many slots are reserved
-    for (let i = 0; i < mainObj.education_id.length; i++){
-        if(mainObj.education_id[i] === true){
+    for (let i = 0; i < mainObj.education_id.length; i++) {
+        if (mainObj.education_id[i] === true) {
             total_edu++
         }
     }
-    if (total_edu > 1){
+    if (total_edu > 1) {
         mainObj.education_id[edu_id] = false;
     }
-    let objName = "edu"+edu_id;
+    let objName = "edu" + edu_id;
     objName.institute = null;
     objName.degree = null;
     objName.city = null;
@@ -682,20 +1454,19 @@ function delete_education(edu_id) {
 }
 
 
-
 //delete project
 
 function delete_project(proj_id) {
     let total_proj = 0;// to store how many slots are reserved
-    for (let i = 0; i < mainObj.project_id.length; i++){
-        if(mainObj.project_id[i] === true){
+    for (let i = 0; i < mainObj.project_id.length; i++) {
+        if (mainObj.project_id[i] === true) {
             total_proj++
         }
     }
-    if (total_proj > 1){
+    if (total_proj > 1) {
         mainObj.project_id[proj_id] = false;
     }
-    let objName = "proj"+proj_id;
+    let objName = "proj" + proj_id;
     objName.projectTitle = null;
     objName.projectDetails = null;
 

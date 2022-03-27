@@ -136,31 +136,53 @@
 
         <!--        graphs starts here-->
         <div class="graphs_div">
-            <!--        job category graph starts here -->
+            <!--       category graph starts here -->
+            <div class="category_graph_div">
+                <!--            job category count-->
+                <div class="graph_data" id="job_category">
+                    <canvas id="job_category_chart" width="350px" height="350px"></canvas>
+                </div>
 
-<!--            job category count-->
-            <div class="job_category">
-                <canvas id="job_category_chart" width="400px" height="400px"></canvas>
+                <!--            contract category count-->
+                <div class="graph_data" id="contract_category">
+                    <canvas id="contract_category_chart" width="400px" height="400px"></canvas>
+                </div>
+            </div>
+            <!--            category graph ends here -->
+
+            <!--           monthly user registered count -->
+            <div class="graph_second_row">
+                <div id="user_monthly_data">
+                    <form id="user_year_form" action="http://localhost/ict_jobseeker_44/Admin/get_monthly_user_registered" method="post">
+                        <!--from date/time-->
+                        <label for="year">Select the year</label>
+                        <input type="number" id="user_year" name="user_year" value="2021">
+
+                        <button type="submit" id="user_year_but" name="user_year_but">See the graph</button>
+                    </form>
+                    <div class="job_category">
+                        <canvas id="monthly-user-count" width="400px" height="200px"></canvas>
+                    </div>
+                </div>
             </div>
 
-<!--            contract category count-->
-            <div class="job_category">
-                <canvas id="contract_category_chart" width="400px" height="400px"></canvas>
-            </div>
+            <!--           monthly user registered count ends here -->
 
-            <div id="reportGen">
-                <form action="http://localhost/ict_jobseeker_44/Admin/Report_generator" method="post">
-                    <!--from date/time-->
-                    <label for="from-date">from</label>
-                    <input type="datetime-local" id="from-date" , name="from-date"> <br>
+        </div>
 
-                    <!--to date/time-->
-                    <label for="to-date">from</label>
-                    <input type="datetime-local" id="to-date" , name="to-date"> <br>
-                    <button type="submit" id="reportGen" name="reportGen">Generate Report</button>
 
-                </form>
-            </div>
+        <div id="reportGen">
+            <form action="http://localhost/ict_jobseeker_44/Admin/Report_generator" method="post">
+                <!--from date/time-->
+                <label for="from-date">from</label>
+                <input type="datetime-local" id="from-date" , name="from-date"> <br>
+
+                <!--to date/time-->
+                <label for="to-date">from</label>
+                <input type="datetime-local" id="to-date" , name="to-date"> <br>
+                <button type="submit" id="reportGen" name="reportGen">Generate Report</button>
+
+            </form>
         </div>
 
     </div>

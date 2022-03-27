@@ -8,23 +8,29 @@ class Report_generator extends Controller
     }
     function Report_generator()
     {
-        if (isset($_POST['reportGen'])) {
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            if (isset($_POST['reportGen'])) {
 //            changing format to support with the timestamp in mysqldatabase
-            $from_date = $_POST['from-date'];
-            $to_date = $_POST['to-date'];
-            $from_date = explode("T", $from_date);
-            $to_date = explode("T", $to_date);
-            $from_date = $from_date[0] . " " . $from_date[1] . ":00";
-            $to_date = $to_date[0] . " " . $to_date[1] . ":00";
-            $_SESSION['from-date'] = $from_date;
-            $_SESSION['to-date'] = $to_date;
+                $from_date = $_POST['from-date'];
+                $to_date = $_POST['to-date'];
+                $from_date = explode("T", $from_date);
+                $to_date = explode("T", $to_date);
+                $from_date = $from_date[0] . " " . $from_date[1] . ":00";
+                $to_date = $to_date[0] . " " . $to_date[1] . ":00";
+                $_SESSION['from-date'] = $from_date;
+                $_SESSION['to-date'] = $to_date;
 
-            $data = $this->model->get_duration_data_m($from_date, $to_date);
+                $data = $this->model->get_duration_data_m($from_date, $to_date);
 
 
+            }
+
+            $this->view->renderAdmin2('Report_generator', $data);
+        } else {
+            $this->view->render('YouDontHavePermisson');
         }
 
-        $this->view->renderAdmin2('Report_generator', $data);
 
 
     }
