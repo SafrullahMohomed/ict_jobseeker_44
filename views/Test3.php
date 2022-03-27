@@ -1,0 +1,2 @@
+<?php
+$sqlsample = "INSERT INTO `resume_experience`(`Resume_experience_ID`, `Job_title`, `Employer`, `City`, `Country`, `What_did_you_do_in_this_job`, `From`, `To`, `I_currently_working_here`, `Resume_ID`) VALUES (".$experience[0]->id_experience.", ".$experience[0]->jobTitle.", ".$experience[0]->employer.", ".$experience[0]->city.", ".$experience[0]->country.", ".$experience[0]->experienceDetails.", ".$experience[0]->from_experience.", ".$experience[0]->to_experience.", ".'no'.", ".$sql_resume_id.")";
