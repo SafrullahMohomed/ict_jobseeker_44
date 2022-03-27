@@ -149,7 +149,7 @@ $category=$stmt1->fetchAll();
     }
 
     //load available ict contract categories from database
-public function getContractCategory(){
+    public function getContractCategory(){
     $query1="SELECT Contractcatergory_ID,Contract_category FROM contract_category ";
     $stmt1=$this->db->prepare($query1);   
     $stmt1->execute();

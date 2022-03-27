@@ -10,7 +10,7 @@
 /*edit profile button start here*/
 .edit_profile
 {
-    margin-top:110px;
+    margin-top:-110px;
     display:flex;
     justify-content: right;
     margin:30px left;

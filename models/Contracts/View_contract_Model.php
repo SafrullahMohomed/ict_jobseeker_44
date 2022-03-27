@@ -44,7 +44,7 @@ class View_contract_Model extends Model{
 //        }
 
        function select_Contract_data($Contract_ID){
-        $query1 =" SELECT a.Contract_title, a.Contract_description, a.Contract_deadline, a.Contract_bid_avg,a.Contract_category,
+        $query1 =" SELECT a.Contract_title, a.Contract_description, a.Contract_deadline, a.Contract_bid_avg,
          b.Email,b.Phone_number,b.Profile_picture,b.First_name,b.Last_name,
          d.Fb_url,d.Linkedin_url,d.Twitter_url,b.User_ID 
          FROM contract a, user b,contract_post c,contractprovider d
