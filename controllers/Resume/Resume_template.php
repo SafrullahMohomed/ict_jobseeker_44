@@ -61,6 +61,6 @@ class Resume_template extends Controller
         print_r($project5c);
         echo "<br><br>";
         //pass view name
-        $this->view->renderResume2('Resume_template1', $data);
+        $this->view->renderResume2('Resume_template3', $data);
     }
 }
