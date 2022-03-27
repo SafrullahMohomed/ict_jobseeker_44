@@ -14,11 +14,11 @@ class Admin_home extends Controller
         if ($_SESSION['User_type'] == 'Admin44') {
             $this->view->renderAdmin('Admin_home');
         } else {
-            $this->view->render('YouDontHavePermisson');
+            $this->view->render('YouDontHavePermission');
         }
 
-
     }
+
 
 //    get the job category counts
     function get_job_category()
@@ -35,12 +35,18 @@ class Admin_home extends Controller
         echo json_encode($results);
     }
 
+
 //    get the user registered count in each month
     function get_monthly_user_registered()
     {
-        $results = $this->model->get_monthly_user_registered_m();
+        if(isset($_POST)){
+            $year = $_POST['user_year'];
+//            echo json_encode($year);
+        }
+        $results = $this->model->get_monthly_user_registered_m($year);
         echo json_encode($results);
     }
+
 
 //    get the total user
     function get_counts()

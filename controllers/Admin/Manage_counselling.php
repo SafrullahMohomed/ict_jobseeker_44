@@ -10,8 +10,12 @@ class Manage_counselling extends Controller
     function Manage_counselling()
     {
 
-
-        $this->view->renderAdmin('Manage_counselling');
+//        error_reporting(0);
+        if ($_SESSION['User_type'] == 'Admin44') {
+            $this->view->renderAdmin('Manage_counselling');
+        } else {
+            $this->view->render('YouDontHavePermisson');
+        }
 
     }
 

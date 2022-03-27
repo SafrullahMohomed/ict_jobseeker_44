@@ -27,7 +27,8 @@
         </div>
         <div class="text" >
             <div class="text2" >
-             Successfully Registered
+            You can go with free trail and
+             Successfully Posted
                <?php #echo $info['mail_msg'];?>
 
 

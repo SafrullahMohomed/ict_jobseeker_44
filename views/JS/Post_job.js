@@ -1,4 +1,5 @@
 
+
   function successPost(){
     window.open("http://localhost/ict_jobseeker_44/Jobs/Success_post","_self");
   }
@@ -17,7 +18,61 @@ function hideFormError(x) {
 
   //show alert to user to give warrning about company name changes
   
-  function companyNameWarning(){
-    
-confirm("Your company profile company name also changes as above mentioned company name.If you want to change it click on the user icon in the top right corner then go to my profile and edit");
+ 
+  
+
+  function valid_free_trail(){
+   // window.open("http://localhost/ict_jobseeker_44/Jobs/Success_post","_self");
+    //setTimeout(valid_free_trail, 10000);
+    window.location.href ="http://localhost/ict_jobseeker_44/Jobs/Post_Job/insertData";
+  
+
   }
+  function invalid_free_trail(){
+    alert("Sorry your free trail is invalid.Try with payment option");
+    
+    //window.open("http://localhost/ict_jobseeker_44/Jobs/Success_post","_self");
+    //window.location.href ="http://localhost/ict_jobseeker_44/Jobs/Post_Job/insert_query_post_job"
+  
+
+  }
+
+
+
+
+
+
+
+
+
+  //bullet list
+
+const bullet = "\u2022";
+const bulletWithSpace = `${bullet} `;
+const enter = 13;
+
+
+//for bullet points
+
+const handleInput = (event) => {
+    const { keyCode, target } = event;
+    const { selectionStart, value } = target;
+
+    if (keyCode === enter) {
+        console.log('a');
+        target.value = [...value]
+            .map((c, i) => i === selectionStart - 1
+                ? `\n${bulletWithSpace}`
+                : c
+            )
+            .join('');
+        console.log(target.value);
+
+        target.selectionStart = selectionStart+bulletWithSpace.length;
+        target.selectionEnd = selectionStart+bulletWithSpace.length;
+    }
+
+    if (value[0] !== bullet) {
+        target.value = `${bulletWithSpace}${value}`;
+    }
+}
