@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/ict_jobseeker_44/views/CSS/Resume/Resume_template1.css">
+    <script defer src="<?php echo URL ?>views/JS/Resume/Resume_template1.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -26,7 +28,6 @@ $project5b = $data['project5b'];
 $project5c = $data['project5c'];
 ?>
 
-<input type="text" hidden id="skills_temp1" name="skills_temp1" value = "<?php echo $resume['Skills'] ?>">
 <body>
 
     <!-- resume division -->
@@ -49,9 +50,10 @@ $project5c = $data['project5c'];
         <!-- skills starts here -->
         <div class="skills ">
             <div class="skills_title_head sub_title">Skills</div>
-            <div class="skills_details">
-<!--                --><?php //echo $resume['Skills']?>
+            <div class="skills_details" id="skills_details">
+
             </div>
+            <input type="text" id="skills_details_hidden" hidden value="<?php echo $resume['Skills']?>">
         </div>
 
 
@@ -215,31 +217,34 @@ $project5c = $data['project5c'];
         <div class="project">
             <div class="project_title_head sub_title">Project</div>
 
+
             <!-- project1 -->
             <div class="project1">
-                <div class="project_title">E-Commerce website</div>
-                <div class="project_details">
-                    <ul>
-                        <li>project point 1</li>
-                        <li>project point 2</li>
-                        <li>project point 3</li>
-                        <li>project point 4</li>
-                    </ul>
+                <div class="project_title"><?php echo $project5a['Project_title']?></div>
+                <div class="project_details" id="project_details5a">
+
+
                 </div>
             </div>
+            <input type="text" id="project_details5a_hidden"  hidden value="<?php echo $project5a['Description']?>">
 
             <!-- project2 -->
             <div class="project2">
-                <div class="project_title">Colombo 04</div>
-                <div class="project_details">
-                    <ul>
-                        <li>project point 1</li>
-                        <li>project point 2</li>
-                        <li>project point 3</li>
-                        <li>project point 4</li>
-                    </ul>
+                <div class="project_title"><?php echo $project5b['Project_title']?></div>
+                <div class="project_details" id="project_details5b">
+
                 </div>
             </div>
+            <input type="text" id="project_details5b_hidden" hidden value="<?php echo $project5b['Description']?>">
+
+            <!-- project3 -->
+            <div class="project3">
+                <div class="project_title"><?php echo $project5c['Project_title']?></div>
+                <div class="project_details" id="project_details5c">
+
+                </div>
+            </div>
+            <input type="text" id="project_details5c_hidden" hidden value="<?php echo $project5c['Description']?>">
 
         </div>
 
