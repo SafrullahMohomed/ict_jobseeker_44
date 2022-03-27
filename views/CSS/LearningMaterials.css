@@ -8,6 +8,10 @@
     font-size: 1em;
 }
 
+.a{
+    text-decoration: none !important;
+}
+
 .resource-search-part 
 {
     margin-top: 100px;

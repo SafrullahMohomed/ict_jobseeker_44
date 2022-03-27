@@ -34,10 +34,7 @@ class ChangePassword extends Controller
                 // 'controller'=>'ChangePassword'
               ];
 
-            $_SESSION['CurrPassword'] = $data['CurrPassword'];
-            $_SESSION['NewPassword'] = $data['NewPassword'];
-            $_SESSION['CurrPassword'] = $data['CurrPassword'];
-
+            
             //Validate current password
             if(empty($data['CurrPassword'])) 
             {
@@ -71,9 +68,10 @@ class ChangePassword extends Controller
             if(empty($data['curr_password_err']) && empty($data['new_password_err']) && empty($data['confirm_password_err']))
             {
                 //Validated
-                   
+                // var_dump($data);
                 //Hash new password
                 $data['NewPassword'] = password_hash($data['NewPassword'], PASSWORD_DEFAULT);
+                
                 if($this->model->Verify_curr_password($data['CurrPassword']))
                 {
                     $this->model->Update_password($data['NewPassword']);

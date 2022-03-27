@@ -91,12 +91,15 @@
                 <div class="row">
                    Software engineer with through hands on experience in all levels of testing 
                    including performance, functional integration, system and user acceptance testing.
+                   
                    <?php echo $data['Description']?>
                 </div>  
+                
                 <p id="titles">Experience</p>
-                <div class="row">
-                    <?php echo $data['Experience']?>
-                    <p id="Jobs"><span>Software engineer</span> WSO2(2019-present)</p>
+                <div class="row" id="experience">
+                    <p hidden="hidden" id = 'experience_uf'><?php echo $data['Experience'] ;?></p>
+
+                    <!-- <p id="Jobs"><span>Software engineer</span> WSO2(2019-present)</p>
                     <ul id="works">
                         <li>Direct software design</li>
                         <li>Evaluate interface between hardware and software</li>
@@ -108,24 +111,26 @@
                         <li>Stored, retieved and manipulated data</li>
                         <li>Modified existing softwares to correct errors</li>
                         <li>Prepaired detailed reports</li>
-                    </ul>
+                    </ul> -->
                 </div>  
                 <p id="titles">Skills</p>
-                <div class="Skills">
-                    <?php echo $data['Skills']?>
+                <div class="Skills" id="skills">
+                    <p hidden="hidden" id = 'skills_uf'><?php echo $data['Skills'] ;?></p>
+                    
                     <ul>
-                        <li>Performance and scalability optimisation</li>
+                        <!-- <li>Performance and scalability optimisation</li>
                         <li>Sharepoint</li>
                         <li>API design</li>
-                        <li>Data warehousing and analitics</li>
+                        <li>Data warehousing and analitics</li> -->
                     </ul>
                 </div>
                 <p id="titles">Education</p>
-                <div class="Education">
-                    <?php echo $data['Education']?>
-                    <ul>
+                <div class="Education" id="education">
+                    <p hidden="hidden" id = 'education_uf'><?php echo $data['Education'] ;?></p>
+                    
+                    <!-- <ul>
                         <li>BSc(Computer Science) University Of Colombo School Of Computing(2013-2017)</li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <p id="titles">Resume</p>
                 <div class="resume">

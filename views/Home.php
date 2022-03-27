@@ -123,6 +123,7 @@
 
 <!--  job search part ends here -->
 
+
 <!-- counting part starts here -->
 <div class="counting-part">
     <div class="posted-jobs">

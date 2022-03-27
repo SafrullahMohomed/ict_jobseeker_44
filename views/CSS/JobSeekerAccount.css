@@ -48,6 +48,11 @@
     color: #ffff;
     font-size: 1.2em;
 }
+
+#ProfilePicBtnUpload
+{
+    display: none;
+}
 .WelcomeBanner #name
 {
     font-size: 1.4em;
