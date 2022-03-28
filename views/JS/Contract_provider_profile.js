@@ -36,7 +36,7 @@ function cpData(User_ID){
                 ${s.Phone_number}
                 </div>
                 <div class="no_of_contracts">
-                  6 contract post
+                ${s.Contract_count}contract post
                 </div>
                  <div class="rating">
                      <i class="fa fa-star-o" aria-hidden="false"></i>
@@ -62,7 +62,7 @@ function cpData(User_ID){
                Web site
            </div>
            <div class="website_data">
-             <a href="chamalcontract.com"> chamalcontract.com  </a> 
+             <a href="${s.Website_url}"> ${s.Website_url}  </a> 
            </div>
          
        </div>
@@ -245,10 +245,63 @@ function cpData(User_ID){
   }
 //load rates and reviews from data base 
   function load_cp_rating(User_ID){
+    var search;
+    $.post("http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_profile/req_cp_rate_data/"+User_ID,
+   
+    function(search,status){
+     let a= JSON.parse(search);
+      console.log(a)
+      let review = document.querySelector(".review");
+      review.innerHTML = "";
+
+    if (a!==null) {
+     
+      for (var s of a) {
+
+      
+        review.innerHTML += `  
+        <div class="review_row">
+              <div class="user_picture">
+              <img src='<?php echo URL ?>views/images/Contract_provider_profile/review_user1.jpg' >
+                 
+              </div>
+              <div class="review_detail">
+                  <div class="review_detail_name">
+                     ${s.First_name} &nbsp ${s.Last_name}
+                   </div>
+                   <div class="do_rate_star_row">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-o" aria-hidden="false"></i>
+                      <i class="fa fa-star-o" aria-hidden="false"></i>
+                      <i class="fa fa-star-o" aria-hidden="false"></i>
+                    </div>
+                    <div class="date">
+                       ${s.Review_date}
+                    </div>
+                    <div class="review_para">
+                      ${s.Review}
+
+                    </div>
+
+              </div>
+               
+           </div>
+           <hr>
+       
+     
+        
+       `;
+      }
+    }
     
-    var xhr1 = new XMLHttpRequest();
+    });
+
+    
+
+    /*var xhr1 = new XMLHttpRequest();
     xhr1.open("POST", "http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_profile/req_cp_rate_data/"+User_ID);
-    alert(xhr1)
+   
      xhr1.onload = function () {
      let review = document.querySelector(".review");
      
@@ -302,5 +355,5 @@ function cpData(User_ID){
    
     return false;
 
-  }
+  }*/
 }

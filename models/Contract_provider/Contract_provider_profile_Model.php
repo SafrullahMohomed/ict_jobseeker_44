@@ -8,7 +8,7 @@ class Contract_provider_profile_Model extends Model{
     function  select_cp_data($User_ID){
 
         $query1="SELECT a.Website_url,a.Fb_url, a.Twitter_url,
-        a.Linkedin_url,
+        a.Linkedin_url,a.Contract_count,
        b.First_name,b.Last_name, b.Email,b.Phone_number,b.Address,
        b.Profile_picture,b.Description
         FROM contractprovider a,user b
@@ -46,7 +46,7 @@ function select_cp_rate_data($User_ID) {
    $stmt1=$this->db->prepare($query1);   
    $stmt1->execute();
    $s=$stmt1->fetchAll();
-
+//print_r($s);
     return $s;   
 }  
 }

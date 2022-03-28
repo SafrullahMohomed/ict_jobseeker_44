@@ -61,8 +61,8 @@ class Contract_provider_account extends Controller
 
   //load posted contracts of cp
   function load_cp_contracts(){
-    $User_ID=77;
-  //$User_ID=$_SESSION('User_ID');
+    //$User_ID=77;
+  $User_ID=$_SESSION['User_ID'];
   $cp=$this->model->select_contracts($User_ID);
   echo json_encode(count($cp) == 0 ? null : $cp);
   return $cp;

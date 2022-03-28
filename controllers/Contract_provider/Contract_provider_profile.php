@@ -47,12 +47,12 @@ class Contract_provider_profile extends Controller
       $count=$_POST['count'];
       $review= $_POST['review'];
       $User_ID_CP=$_POST['User_ID_CP'];
-         if(isset($_SESSION['User_ID'])){
+         if(isset($_SESSION['User_ID'])&& ($_SESSION['User_type']=="Jobseeker" )){
            $this->model->insert_cp_review_data($User_ID_CP,$count,$review);
            echo("Successfully added your rate and review.Thank you");
          }
        else{
-        echo("Before rate the system you should login");
+        echo("Before rate the system you should login as a Jobseeker");
        
          }
       

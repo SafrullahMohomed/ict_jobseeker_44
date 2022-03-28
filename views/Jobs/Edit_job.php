@@ -72,7 +72,7 @@
 
 
 
-    <label for="Brief_Description" class="labelfield" required> Brief Description</label><br>
+    <label for="Brief_Description" class="labelfield required"> Brief Description</label><br>
     <textarea onkeyup="" id="description" rows="6"  placeholder="Type here small description about the job (qulifications/other)..." class="inputfield" name="Brief_Description" require></textarea><br>
 
     <label for="Job_Type" class="labelfield">Job Type</label><br>
