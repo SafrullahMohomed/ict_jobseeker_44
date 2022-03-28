@@ -16,7 +16,8 @@ class JobSeekerAccount extends Controller
         #echo "Hello from the Test controller - Index Method";
 
         $_SESSION['User'] = $_GET['User'];
-        if (($_SESSION['User_type'] == 'Jobseeker' and $_SESSION['User_ID'] == $_GET['User']) or $_SESSION['User_type'] == 'Admin44') {
+        if (($_SESSION['User_type'] == 'Jobseeker' and $_SESSION['User_ID'] == $_GET['User']) or $_SESSION['User_type'] == 'Admin44') 
+        {
             $data = $this->model->get_jobseeker_data_m($_GET['User']);
 //                print_r($data);
         // var_dump($data);
@@ -52,10 +53,10 @@ class JobSeekerAccount extends Controller
     function update_jobseeker_data()
     {
         
-        echo "<pre>";
-        print_r($_FILES);
+        // echo "<pre>";
+        // print_r($_FILES);
         
-        echo "</pre>";
+        // echo "</pre>";
         // move_uploaded_file($data['ProfileTmpName'],$ProfilePicUploadTo . $data['profile_pic']);
         // var_dump($_POST);
         if(isset($_POST)) {
@@ -77,24 +78,24 @@ class JobSeekerAccount extends Controller
                                 'twitter_url' => trim($_POST['twitter_url']),
                                 'web_url' => trim($_POST['web_url']),
 
-                                'profile_pic_name'=>$_FILES['profile_pic']['name'],
-                                'profile_type'=>$_FILES['profile_pic']['type'],
-                                'profile_size'=>$_FILES['profile_pic']['size'],
-                                'ProfileTmpName'=>$_FILES['profile_pic']['tmp_name'],
+                                // 'profile_pic_name'=>$_FILES['profile_pic']['name'],
+                                // 'profile_type'=>$_FILES['profile_pic']['type'],
+                                // 'profile_size'=>$_FILES['profile_pic']['size'],
+                                // 'ProfileTmpName'=>$_FILES['profile_pic']['tmp_name'],
                 
                     ];  
-                    echo "<br>";
-                    echo($data['ProfileTmpName']);
-                    echo "<br>";
+                    // echo "<br>";
+                    // echo($data['ProfileTmpName']);
+                    // echo "<br>";
 
                 // if()
 
-                $ProfilePicUploadTo='views/images/UserProfile/';
+                // $ProfilePicUploadTo='views/images/UserProfile/';
                 
               
                 $this->model->update_jobseeker_data_m($_POST, $_POST['User_ID']);
             }
-            // header("Location:http://localhost/ict_jobseeker_44/Jobseeker/JobSeekerProfile?User=" . $_POST['User_ID']);
+            header("Location:http://localhost/ict_jobseeker_44/Jobseeker/JobSeekerProfile?User=" . $_POST['User_ID']);
         
         
         
