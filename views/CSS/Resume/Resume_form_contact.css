@@ -12,6 +12,13 @@
     display: none;!important;
 }
 
+
+.required:after {
+    content:" *";
+    color: red;
+    /*font-size: 13px;*/
+}
+
 /* next, input button */
 .bn_buttons {
 display: flex;
@@ -301,7 +308,7 @@ textarea#aboutYou{
         margin:0px auto 40px auto;
 
     }
-}
+
 
 @media only screen and (max-width:960px){
   .time_period{

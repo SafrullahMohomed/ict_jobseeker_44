@@ -5,7 +5,7 @@
 .resume_page {
   width: 700px;
   margin: auto;
-  height: 900px;
+  height: auto;
   border: 1px solid black;
   padding-left: 20px;
 }
