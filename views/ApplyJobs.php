@@ -25,39 +25,39 @@
             <p>Virtusa Pvt Limited, 752 Dr Danister De Silva Mawatha, Colombo 00900</p>
         </div>       
     </div>
-    <form class="main_container" method="POST" name="myForm" action="<?php echo URL ?>Jobseeker/ApplyJobs/update_jobseeker_data">
+    <form class="main_container" method="POST" name="myForm" action="<?php echo URL ?>Jobseeker/ApplyJobs/insertJobData/<?php echo $data['Job_ID'] ?>">
         <p id="titles">Personal Details</p>
         <div class="row">
             <label for="fname" class="labelfield">First Name</label><br>
-            <input type="text" id="fname" name="fname" placeholder= "Enter Your First Name" value = "<?php echo $data['First_name'] ?>" class="inputfield" required onfocus=" hideFormError(fname_error)"><br>
+            <input type="text" id="fname" name="fname" placeholder= "Enter Your First Name" value = "<?php echo $data['fname'] ?>" autocomplete class="inputfield" required onfocus=" hideFormError(fname_error)"><br>
             <span id="fname_error"></span>
         </div>
         <div class="row">
             <label for="lname" class="labelfield">Last Name</label><br>
-            <input type="text" id="lname" name="lname" placeholder= "Enter Your Last Name" value = "<?php echo $data['Last_name'] ?>" class="inputfield" required onfocus=" hideFormError(lname_error)"><br>
+            <input type="text" id="lname" name="lname" placeholder= "Enter Your Last Name" value = "<?php echo $data['lname'] ?>" autocomplete class="inputfield" required onfocus=" hideFormError(lname_error)"><br>
             <span id="lname_error"></span>
         </div>
         <div class="row">
             <label for="email" class="labelfield">Email</label><br>
-            <input type="email" id=email" name="email" placeholder="Enter Your Email" value="<?php echo $data['Email'] ;?>" class="inputfield" required onfocus="hideFormError(email_error)"><br>
+            <input type="email" id=email" name="email" placeholder="Enter Your Email" value="<?php echo $data['email'] ;?>" autocomplete readonly class="inputfield" required onfocus="hideFormError(email_error)"><br>
             <span id="email_error" class="error"></span> 
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <label for="email" class="labelfield">Confirm Email</label><br>
             <input type="email" id="email" name="confirm_email" placeholder= "Confirm Your Email" class="inputfield" required onfocus="hideFormError(confirm_email_error)"><br>   
             <span id="confirm_email_error" class="error"></span> 
-        </div>
+        </div> -->
         <div class="row">
             <label for="phonenumber" class="labelfield">Phone Number</label><br>
-            <input type="text" id="phonenumber" name="phonenumber" placeholder= "Enter Your Phone Number" value="<?php echo $data['Phone_number'] ;?>"  class="inputfield" required onfocus="hideFormError(phonenumber_error)"><br>    
+            <input type="text" id="phonenumber" name="phonenumber" placeholder= "Enter Your Phone Number" value="<?php echo $data['phonenumber'] ;?>"  class="inputfield" required onfocus="hideFormError(phonenumber_error)"><br>    
             <span id="phonenumber_error" class="error"></span>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <label for="Residence" class="labelfield">Place Of Residence</label><br>
             <input type="text" id="Residence" name="residence" placeholder= "Enter Place Of Your Residence" value="<?php echo $data['Address']?>" class="inputfield" required onfocus="hideFormError(residence_error)"><br>  
             <span id="residence_error" class="error"></span> 
-        </div>
-        <p id="titles">On The Web</p>
+        </div> -->
+        <!-- <p id="titles">On The Web</p>
         <div class="row">
             <label for="LinkedIn_link" class="labelfield">LinkedIn</label><br>
             <input type="url" id="LinkedIn_link" name="LinkedInlink" placeholder= "Enter Your Linkedin Link" value="<?php echo $data['Jobseeker_In']?>" class="inputfield" onfocus="hideFormError(LinkedInlink_error)"><br>
@@ -77,7 +77,7 @@
             <label for="website_link" class="labelfield">Website</label><br>
             <input type="url" id="website_link" name="websitelink" placeholder= "Enter Your Website Link" value="<?php echo $data['Jobseeker_Web']?>" class="inputfield" onfocus="hideFormError(websitelink_error)"><br>
             <span id="websitelink_error" class="error"></span> 
-        </div>
+        </div> -->
         <p id="titles">Resume</p>
         <div class="Resume">
             <div class="attach">
@@ -91,7 +91,7 @@
         </div>
         <p id="titles">Message</p>
         <div class="row">
-            <textarea  id="Message" rows="12"  class="inputfield" required></textarea><br>
+            <textarea  id="Message" name="Message" rows="12"  class="inputfield" required></textarea><br>
         </div>   
        <div class="submit">
         <label for="submit" class="labelfield"></label><br>

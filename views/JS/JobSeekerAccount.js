@@ -1,4 +1,4 @@
-alert("Welcome")
+// alert("Welcome")
 function validateForm() {
     var fname=document.myForm.fname.value;  
    
