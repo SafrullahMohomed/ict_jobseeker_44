@@ -1,12 +1,13 @@
 /* title */
 
 .main_container{
-    margin-top: 150px;
+    /*margin-top: 150px;*/
+    transform: translate(0%, -6%);
 }
 
 .counsellor_title{
     display:flex;
-    margin:50px auto;
+    margin:20px auto;
     text-align: center;
     width:80%;
     justify-content: center;

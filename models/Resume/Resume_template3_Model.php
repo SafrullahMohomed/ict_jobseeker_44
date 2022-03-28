@@ -6,4 +6,6 @@ class Resume_template3_Model extends Model
     {
         parent::__construct();
     }
+
+
 }

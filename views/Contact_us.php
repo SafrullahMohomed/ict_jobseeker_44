@@ -16,7 +16,7 @@
         <?php include 'Header.php'?>
 </div>
       <!-- header part end  -->
-<?php if ( isset($_SESSION['User_ID']) && ($_SESSION['User_type']=="Jobseeker" || $_SESSION['User_type']=="Company" || $_SESSION['User_type']=="Contract provider" || $_SESSION['User_type']=="Counsellor")): ?>
+
 <body>
 <div class="container">
   <div style="text-align:center">
@@ -41,11 +41,11 @@
     </div>
   </div>
 </div>
-<?php endif; ?>
-    <?php if ( !isset($_SESSION['User_ID'])||$_SESSION['User_type']=="Jobseeker" || $_SESSION['User_type']=="Company" || $_SESSION['User_type']=="Contract provider" || $_SESSION['User_type']=="Counsellor") : ?>
+
+    <!-- 
         <div class="login_msg"> Before enter to this page you should login as User</div>
-        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a>
-    <?php endif; ?> 
+        <a id="a_tag_login" href="<?php echo URL?>Login"><button class="submit_button"id="login_button">Login</button></a> -->
+    
 <?php include 'Footer.php'?>
 <script  src="<?php echo URL?>views/JS/ContactUs.js"></script>
 </body>

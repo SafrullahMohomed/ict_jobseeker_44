@@ -74,6 +74,21 @@
                 <div class="manage_lm box">Manage Learning Materials</div>
             </a>
         </div>
+        <div id="reportGen">
+            <form action="http://localhost/ict_jobseeker_44/Admin/Report_generator" method="post">
+                <!--from date/time-->
+                <p id="generate_report_head">Generate Report</p>
+                <label for="from-date" class="to_from_head">From</label>
+                <input type="datetime-local" id="from-date" , name="from-date"> <br>
+
+                <!--to date/time-->
+                <label for="to-date" class="to_from_head">To</label>
+                <input type="datetime-local" id="to-date" , name="to-date"> <br>
+                <button type="submit" id="reportGen" name="reportGen">Generate Report</button>
+
+            </form>
+        </div>
+
     </div>
     <!-- admin dashboard ends here -->
 
@@ -171,19 +186,6 @@
         </div>
 
 
-        <div id="reportGen">
-            <form action="http://localhost/ict_jobseeker_44/Admin/Report_generator" method="post">
-                <!--from date/time-->
-                <label for="from-date">from</label>
-                <input type="datetime-local" id="from-date" , name="from-date"> <br>
-
-                <!--to date/time-->
-                <label for="to-date">from</label>
-                <input type="datetime-local" id="to-date" , name="to-date"> <br>
-                <button type="submit" id="reportGen" name="reportGen">Generate Report</button>
-
-            </form>
-        </div>
 
     </div>
 

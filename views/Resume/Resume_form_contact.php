@@ -81,7 +81,7 @@
 
             <!-- first name -->
             <div class="firstName inp">
-                <label for="firstName">First Name</label>
+                <label for="firstName" class="required">First Name</label>
                 <br/>
                 <input type="text" name="firstName" id="firstName"/>
             </div>
@@ -94,7 +94,7 @@
 
             <!-- email -->
             <div class="email inp">
-                <label for="email">Email</label>
+                <label for="email" class="required">Email</label>
                 <br/>
                 <input type="email" name="email" id="email"/>
             </div>
@@ -180,14 +180,14 @@
 
             <!-- job title -->
             <div class="jobTitle inp">
-                <label for="jobTitle">Job Title</label>
+                <label for="jobTitle" class="required">Job Title</label>
                 <br/>
                 <input type="text" name="jobTitle" id="jobTitle2a"/>
             </div>
 
             <!-- employer -->
             <div class="employer inp">
-                <label for="employer">Employer</label>
+                <label for="employer" class="required">Employer</label>
                 <br/>
                 <input type="text" name="employer" id="employer2a"/>
             </div>
@@ -253,14 +253,14 @@
 
                     <!-- job title -->
                     <div class="jobTitle inp">
-                        <label for="jobTitle">Job Title</label>
+                        <label for="jobTitle" class="required">Job Title</label>
                         <br/>
                         <input type="text" name="jobTitle" id="jobTitle2b"/>
                     </div>
 
                     <!-- employer -->
                     <div class="employer inp">
-                        <label for="employer">Employer</label>
+                        <label for="employer" class="required">Employer</label>
                         <br/>
                         <input type="text" name="employer" id="employer2b"/>
                     </div>
@@ -327,14 +327,14 @@
 
                     <!-- job title -->
                     <div class="jobTitle inp">
-                        <label for="jobTitle">Job Title</label>
+                        <label for="jobTitle" class="required">Job Title</label>
                         <br/>
                         <input type="text" name="jobTitle" id="jobTitle2c"/>
                     </div>
 
                     <!-- employer -->
                     <div class="employer inp">
-                        <label for="employer">Employer</label>
+                        <label for="employer" class="required">Employer</label>
                         <br/>
                         <input type="text" name="employer" id="employer2c"/>
                     </div>
@@ -447,14 +447,14 @@
 
             <!-- Institute -->
             <div class="institute inp">
-                <label for="institute">Institute</label>
+                <label for="institute" class="required">Institute</label>
                 <br/>
                 <input type="text" name="institute" id="institute3a"/>
             </div>
 
             <!-- Degree -->
             <div class="degree inp">
-                <label for="degree">Degree</label>
+                <label for="degree" class="required">Degree</label>
                 <br/>
                 <input type="text" name="degree" id="degree3a"/>
             </div>
@@ -481,12 +481,12 @@
             </div>
 
             <!-- education details -->
-            <div class="educationDetails inp">
-                <div class="edu_Discription_text">
-                    Brief description about education
-                </div>
-                <textarea name="educationDetails" id="educationDetails3a" cols="30" rows="10"></textarea>
-            </div>
+<!--            <div class="educationDetails inp">-->
+<!--                <div class="edu_Discription_text">-->
+<!--                    Brief description about education-->
+<!--                </div>-->
+<!--                <textarea name="educationDetails" id="educationDetails3a" cols="30" rows="10"></textarea>-->
+<!--            </div>-->
 
             <!-- time period -->
             <div class="time_period inp">
@@ -524,14 +524,14 @@
                     </div>
                     <!-- Institute -->
                     <div class="institute inp">
-                        <label for="institute">Institute</label>
+                        <label for="institute" class="required">Institute</label>
                         <br/>
                         <input type="text" name="institute" id="institute3b"/>
                     </div>
 
                     <!-- Degree -->
                     <div class="degree inp">
-                        <label for="degree">Degree</label>
+                        <label for="degree" class="required">Degree</label>
                         <br/>
                         <input type="text" name="degree" id="degree3b"/>
                     </div>
@@ -558,12 +558,12 @@
                     </div>
 
                     <!-- education details -->
-                    <div class="educationDetails inp">
-                        <div class="edu_Discription_text">
-                            Brief description about education
-                        </div>
-                        <textarea name="educationDetails" id="educationDetails3b" cols="30" rows="10"></textarea>
-                    </div>
+<!--                    <div class="educationDetails inp">-->
+<!--                        <div class="edu_Discription_text">-->
+<!--                            Brief description about education-->
+<!--                        </div>-->
+<!--                        <textarea name="educationDetails" id="educationDetails3b" cols="30" rows="10"></textarea>-->
+<!--                    </div>-->
 
                     <!-- time period -->
                     <div class="time_period inp">
@@ -600,14 +600,14 @@
                     </div>
                     <!-- Institute -->
                     <div class="institute inp">
-                        <label for="institute">Institute</label>
+                        <label for="institute" class="required">Institute</label>
                         <br/>
                         <input type="text" name="institute" id="institute3c"/>
                     </div>
 
                     <!-- Degree -->
                     <div class="degree inp">
-                        <label for="degree">Degree</label>
+                        <label for="degree" class="required">Degree</label>
                         <br/>
                         <input type="text" name="degree" id="degree3c"/>
                     </div>
@@ -634,12 +634,12 @@
                     </div>
 
                     <!-- education details -->
-                    <div class="educationDetails inp">
-                        <div class="edu_Discription_text">
-                            Brief description about education
-                        </div>
-                        <textarea name="educationDetails" id="educationDetails3c" cols="30" rows="10"></textarea>
-                    </div>
+<!--                    <div class="educationDetails inp">-->
+<!--                        <div class="edu_Discription_text">-->
+<!--                            Brief description about education-->
+<!--                        </div>-->
+<!--                        <textarea name="educationDetails" id="educationDetails3c" cols="30" rows="10"></textarea>-->
+<!--                    </div>-->
 
                     <!-- time period -->
                     <div class="time_period inp">
@@ -698,7 +698,7 @@
         <!-- text field starts here -->
         <div class="title_text">
             <div class="text1">Skills</div>
-            <div class="text2">state your skills (optional)</div>
+            <div class="text2" >state your skills (optional)</div>
         </div>
 
         <!-- text field ends here -->
@@ -712,7 +712,7 @@
         <div class="skill_form">
             <!-- skill details -->
             <div class="skillDetails">
-                <textarea name="skillDetails" id="skillDetails" cols="40" rows="10"></textarea>
+                <textarea name="skillDetails" id="skillDetails" cols="40" rows="10" onkeyup="handleInput(event)"></textarea>
             </div>
         </div>
         <!-- next, back buttons -->
@@ -774,7 +774,7 @@
             <!-- project details -->
             <div class="projectDetails inp">
                 <label class="description">Project Description</label>
-                <textarea name="projectDetails" id="projectDetails5a" cols="30" rows="10"></textarea>
+                <textarea name="projectDetails" id="projectDetails5a" cols="30" rows="10" onkeyup="handleInput(event)"></textarea>
             </div>
 
 
@@ -802,15 +802,15 @@
                     <!-- project details -->
                     <div class="projectDetails inp">
                         <label class="description">Project Description</label>
-                        <textarea name="projectDetails" id="projectDetails5b" cols="30" rows="10"></textarea>
+                        <textarea name="projectDetails" id="projectDetails5b" cols="30" rows="10" onkeyup="handleInput(event)"></textarea>
                     </div>
 
 
                 </div>
             </form>
-            <!--project 5b starts here-->
+            <!--project 5b ends here-->
 
-            <!--project 5b starts here-->
+            <!--project 5c starts here-->
             <form action="" id="form5c">
                 <div class="project_form" id="project_form5c">
 
@@ -828,13 +828,13 @@
                     <!-- project details -->
                     <div class="projectDetails inp">
                         <label class="description">Project Description</label>
-                        <textarea name="projectDetails" id="projectDetails5c" cols="30" rows="10"></textarea>
+                        <textarea name="projectDetails" id="projectDetails5c" cols="30" rows="10" onkeyup="handleInput(event)"></textarea>
                     </div>
 
 
                 </div>
             </form>
-            <!--project 5c starts here-->
+            <!--project 5c ends here-->
 
 
         </div>

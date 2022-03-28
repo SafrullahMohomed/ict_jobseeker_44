@@ -15,7 +15,7 @@ function loadmore() {
   /*after click on the job detail box for view more details about job*/
   function jobView(Job_ID)
   {
-    
+
    data['Job_ID']=Job_ID;
     $.post("http://localhost/ict_jobseeker_44/Jobs/View_job/view_clicked_job",
    data,
@@ -31,6 +31,8 @@ function loadmore() {
    }
    //view relevent job after click job main page box
    function  viewJob(data){
+
+    
   
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost/ict_jobseeker_44/Jobs/View_job/view_clicked_job2/"+data);
@@ -64,8 +66,11 @@ function loadmore() {
                  
  
              </div>
-            <a href ="<?php echo URL ?>Jobseeker/ApplyJobs">
-            <button >Apply Now</button>
+             
+
+             <a>
+             
+            <button  onclick="load_job(${s.Job_ID})" >Apply Now</button>
             </a>
             
  
@@ -516,7 +521,10 @@ function ajaxload1(query1 = '',query2 = '', page_number = 1) {
             xhr.send();
         }
     
-
+function load_job(data){
+    
+    location.href="http://localhost/ict_jobseeker_44/Jobseeker/ApplyJobs/ApplyJobs1/"+data;
+}
 
 
 

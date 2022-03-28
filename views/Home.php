@@ -124,6 +124,7 @@
 
 <!--  job search part ends here -->
 
+
 <!-- counting part starts here -->
 
 <div class="div_for_jobs">

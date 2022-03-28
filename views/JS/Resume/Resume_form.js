@@ -16,6 +16,48 @@ const bullets = [...document.querySelectorAll(".bullet")];
 
 //classes
 
+// to avoid the default enter press
+// document.addEventListener('keypress', function (e) {
+//     if (e.keyCode === 13 || e.which === 13) {
+//         e.preventDefault();
+//         return false;
+//     }
+//
+// });
+
+//for bullet points
+//bullet list
+
+const bullet = "\u2022";
+const bulletWithSpace = `${bullet} `;
+const enter = 13;
+
+
+//for bullet points
+
+const handleInput = (event) => {
+    const { keyCode, target } = event;
+    const { selectionStart, value } = target;
+
+    if (keyCode === enter) {
+        console.log('a');
+        target.value = [...value]
+            .map((c, i) => i === selectionStart - 1
+                ? `\n${bulletWithSpace}`
+                : c
+            )
+            .join('');
+        console.log(target.value);
+
+        target.selectionStart = selectionStart+bulletWithSpace.length;
+        target.selectionEnd = selectionStart+bulletWithSpace.length;
+    }
+
+    if (value[0] !== bullet) {
+        target.value = `${bulletWithSpace}${value}`;
+    }
+}
+
 //experience class
 class Experience {
     constructor(id_experience, jobTitle, employer, city, country, experienceDetails, from_experience, to_experience, workHere, filled) {
@@ -36,13 +78,13 @@ class Experience {
 
 //education class
 class Education {
-    constructor(id_education, institute, degree, city, country, educationDetails, from_education, to_education, studyHere, filled) {
+    constructor(id_education, institute, degree, city, country, from_education, to_education, studyHere, filled) {
         this.id_education = id_education;
         this.institute = institute;
         this.degree = degree;
         this.city = city;
         this.country = country;
-        this.educationDetails = educationDetails;
+        // this.educationDetails = educationDetails;
         this.from_education = from_education;
         this.to_education = to_education;
         this.studyHere = studyHere;
@@ -67,9 +109,9 @@ function objAssignment(firstName, lastName, email, phoneNumber, address, city, a
                        jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
                        jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
                        jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-                       institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-                       institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-                       institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+                       institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+                       institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+                       institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
                        projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c) {
     //experience objects
     var exp1 = new Experience('2a', jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a, 0);
@@ -78,14 +120,14 @@ function objAssignment(firstName, lastName, email, phoneNumber, address, city, a
 
 
     //education objects
-    var edu1 = new Education('3a', institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a, 0);
-    var edu2 = new Education('3b', institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b, 0);
-    var edu3 = new Education('3c', institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c, 0);
+    var edu1 = new Education('3a', institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a, 0);
+    var edu2 = new Education('3b', institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b, 0);
+    var edu3 = new Education('3c', institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c, 0);
 
     //project object
     var proj1 = new Project('5a', projectTitle5a, projectDetails5a);
-    var proj2 = new Project('5a', projectTitle5b, projectDetails5b);
-    var proj3 = new Project('5a', projectTitle5c, projectDetails5c);
+    var proj2 = new Project('5b', projectTitle5b, projectDetails5b);
+    var proj3 = new Project('5c', projectTitle5c, projectDetails5c);
 
     var mainObj = {
         profilePic: null,
@@ -158,7 +200,7 @@ function variableAssignments() {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -169,7 +211,7 @@ function variableAssignments() {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -180,7 +222,7 @@ function variableAssignments() {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -307,7 +349,7 @@ next_button1.addEventListener("click", (e) => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -318,7 +360,7 @@ next_button1.addEventListener("click", (e) => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -329,7 +371,7 @@ next_button1.addEventListener("click", (e) => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -353,9 +395,9 @@ next_button1.addEventListener("click", (e) => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 });
 
@@ -417,7 +459,7 @@ back_button2.addEventListener("click", (e) => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -428,7 +470,7 @@ back_button2.addEventListener("click", (e) => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -439,7 +481,7 @@ back_button2.addEventListener("click", (e) => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -461,9 +503,9 @@ back_button2.addEventListener("click", (e) => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 
@@ -528,7 +570,7 @@ next_button2.addEventListener("click", (e) => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -539,7 +581,7 @@ next_button2.addEventListener("click", (e) => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -550,7 +592,7 @@ next_button2.addEventListener("click", (e) => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -573,9 +615,9 @@ next_button2.addEventListener("click", (e) => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
     // if (mainObj.experience.length === 0) {
@@ -697,7 +739,7 @@ back_button3.addEventListener("click", (e) => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -708,7 +750,7 @@ back_button3.addEventListener("click", (e) => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -719,7 +761,7 @@ back_button3.addEventListener("click", (e) => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -742,9 +784,9 @@ back_button3.addEventListener("click", (e) => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
@@ -808,7 +850,7 @@ next_button3.addEventListener("click", (e) => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -819,7 +861,7 @@ next_button3.addEventListener("click", (e) => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -830,7 +872,7 @@ next_button3.addEventListener("click", (e) => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -853,9 +895,9 @@ next_button3.addEventListener("click", (e) => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
@@ -925,7 +967,7 @@ back_button4.addEventListener("click", (e) => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -936,7 +978,7 @@ back_button4.addEventListener("click", (e) => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -947,7 +989,7 @@ back_button4.addEventListener("click", (e) => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -970,9 +1012,9 @@ back_button4.addEventListener("click", (e) => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
@@ -1036,7 +1078,7 @@ next_button4.addEventListener("click", (e) => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -1047,7 +1089,7 @@ next_button4.addEventListener("click", (e) => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -1058,7 +1100,7 @@ next_button4.addEventListener("click", (e) => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -1081,9 +1123,9 @@ next_button4.addEventListener("click", (e) => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
@@ -1147,7 +1189,7 @@ back_button5.addEventListener("click", (e) => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -1158,7 +1200,7 @@ back_button5.addEventListener("click", (e) => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -1169,7 +1211,7 @@ back_button5.addEventListener("click", (e) => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -1192,9 +1234,9 @@ back_button5.addEventListener("click", (e) => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 });
@@ -1250,7 +1292,7 @@ finish_button5.addEventListener("click", () => {
     var degree3a = document.getElementById("degree3a").value;
     var city_education3a = document.getElementById("city_education3a").value;
     var country_education3a = document.getElementById("country_education3a").value;
-    var educationDetails3a = document.getElementById("educationDetails3a").value;
+    // var educationDetails3a = document.getElementById("educationDetails3a").value;
     var from_education3a = document.getElementById("from_education3a").value;
     var to_education3a = document.getElementById("to_education3a").value;
     var studyHere3a = document.getElementById("studyHere3a").value;
@@ -1261,7 +1303,7 @@ finish_button5.addEventListener("click", () => {
     var degree3b = document.getElementById("degree3b").value;
     var city_education3b = document.getElementById("city_education3b").value;
     var country_education3b = document.getElementById("country_education3b").value;
-    var educationDetails3b = document.getElementById("educationDetails3b").value;
+    // var educationDetails3b = document.getElementById("educationDetails3b").value;
     var from_education3b = document.getElementById("from_education3b").value;
     var to_education3b = document.getElementById("to_education3b").value;
     var studyHere3b = document.getElementById("studyHere3b").value;
@@ -1272,7 +1314,7 @@ finish_button5.addEventListener("click", () => {
     var degree3c = document.getElementById("degree3c").value;
     var city_education3c = document.getElementById("city_education3c").value;
     var country_education3c = document.getElementById("country_education3c").value;
-    var educationDetails3c = document.getElementById("educationDetails3c").value;
+    // var educationDetails3c = document.getElementById("educationDetails3c").value;
     var from_education3c = document.getElementById("from_education3c").value;
     var to_education3c = document.getElementById("to_education3c").value;
     var studyHere3c = document.getElementById("studyHere3c").value;
@@ -1295,9 +1337,9 @@ finish_button5.addEventListener("click", () => {
         jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
         jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
         jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-        institute3a, degree3a, city_education3a, country_education3a, educationDetails3a, from_education3a, to_education3a, studyHere3a,
-        institute3b, degree3b, city_education3b, country_education3b, educationDetails3b, from_education3b, to_education3b, studyHere3b,
-        institute3c, degree3c, city_education3c, country_education3c, educationDetails3c, from_education3c, to_education3c, studyHere3c,
+        institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+        institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+        institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
         projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
 
 //    convert the js object ot json
@@ -1319,6 +1361,7 @@ finish_button5.addEventListener("click", () => {
 
     xhr.send(mainObj_json);
     // location.href = 'http://localhost/ict_jobseeker_44/Resume/Resume_form_contact';
+
 });
 
 id_project = 1;
@@ -1436,7 +1479,7 @@ function delete_education(edu_id) {
     objName.degree = null;
     objName.city = null;
     objName.country = null;
-    objName.educationDetails = null;
+    // objName.educationDetails = null;
     objName.from_education = null;
     objName.to_education = null;
     objName.studyHere = null;
