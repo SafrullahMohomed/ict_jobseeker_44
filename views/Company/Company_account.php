@@ -21,13 +21,15 @@
 </div>
  <!-- header part end with css html js -->
     <div class="all">
-    <form class="main_container" name="myForm" method="POST" action="<?php echo URL ?>Company/Company_account/UserValidation">
+    <form class="main_container" name="myForm" method="POST" action="<?php echo URL ?>Company/Company_account/UserValidation"  enctype="multipart/form-data">
         <div class="picture_bar">
         <img src='<?php echo URL ?>views/images/Company/user.png' id="output">
 
- <div class="row">
+        <div class="row">
         <label for="profile_pic" class="labelfield">Profile picture</label><br>
         <input type="file" id="profile_pic" name="profilepic" placeholder= "profile picture" class="inputfield" accept="image/*"  onchange="loadFile(event)"><br>
+        <label for="profImg" class="labelfield" id="profImgBtnUpload">Choose a photo</label><br>
+
        </div>
         </div>
         <div class="row">

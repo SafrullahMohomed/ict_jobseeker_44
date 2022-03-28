@@ -168,7 +168,10 @@ cursor: pointer;
    cursor: pointer;
 }
 
-
+#profImgBtnUpload
+{
+    display: none;
+}
 
 span{
     font-size: 0.7em;
