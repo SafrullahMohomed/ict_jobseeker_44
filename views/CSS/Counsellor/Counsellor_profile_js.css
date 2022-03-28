@@ -23,7 +23,11 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
+.required{
+.required:after {
+  content:" *";
+  color: red;
+}
 /* .picture {
 } */
 .picture img {

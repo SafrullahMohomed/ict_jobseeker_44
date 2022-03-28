@@ -17,6 +17,10 @@
 
 }
 
+.required{
+  content:" *";
+  color: red;
+}
 /* edit your profile starts here */
 
 .edit_profile{
