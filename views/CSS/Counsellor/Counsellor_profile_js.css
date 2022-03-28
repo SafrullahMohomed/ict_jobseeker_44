@@ -12,7 +12,9 @@
   flex-direction: column;
   width: 80%;
   margin: auto;
-  margin-top: 150px;
+  /*margin-top: 150px;*/
+  transform: translate(0%, -6%);
+
 }
 .main_details {
   display: flex;

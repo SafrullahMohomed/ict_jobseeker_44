@@ -1,7 +1,20 @@
 
 
 /* admin home page */
+#generate_report_head{
+  font-size: 29px;
+  color: #7e2020;
+}
 
+#reportGen{
+  color: #fd4343;
+  margin: 10px 0px;
+}
+.to_from_head{
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+}
 
 .main-container {
   display: flex;
@@ -11,7 +24,8 @@
   /*justify-content: center;*/
   /*align-items: center;*/
   /* padding-top: 100px; */
-  /*margin-top: 170px;*/
+
+  transform: translate(0%, -5%);
 }
 
 
@@ -64,7 +78,7 @@
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 30px;
-  background-color: #1d6d86;
+  /*background-color: #1d6d86;*/
   border-radius: 10px;
 
 }
@@ -101,6 +115,7 @@
   text-align: center;
   box-shadow: 0 1px 0px 0 rgb(90 127 210 / 45%), 0 0px 20px 0 rgb(90 127 210 / 15%);
   margin: 6px auto;
+  background-color: #1d6d86;
 }
 
 .box:hover{
@@ -125,6 +140,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-bottom: 50px;
+
 }
 /* media queries starts here */
 @media only screen and (max-width:750px) {
@@ -132,6 +149,10 @@
 
   .dashboard{
     margin-top:0px;
+  }
+  .main-container{
+    transform: translate(0%, 2%);
+
   }
 
 

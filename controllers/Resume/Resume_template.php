@@ -25,42 +25,42 @@ class Resume_template extends Controller
         $project5b = $data['project5b'];
         $project5c = $data['project5c'];
 
-        print_r($resume);
-//        echo $resume['First_name'];
-        echo "<br><br>";
-
+//        print_r($resume);
+////        echo $resume['First_name'];
+//        echo "<br><br>";
 //
-        print_r($experience2a);
-        echo "<br><br>";
+////
+//        print_r($experience2a);
+//        echo "<br><br>";
+////
+//        print_r($experience2b);
+//        echo "<br><br>";
 //
-        print_r($experience2b);
-        echo "<br><br>";
-
-        print_r($experience2c);
-        echo "<br><br>";
-
-
-
-        print_r($education3a);
-        echo "<br><br>";
-
-        print_r($education3b);
-        echo "<br><br>";
-
-        print_r($education3c);
-        echo "<br><br>";
+//        print_r($experience2c);
+//        echo "<br><br>";
 //
 //
 //
-        print_r($project5a);
-        echo "<br><br>";
-
-        print_r($project5b);
-        echo "<br><br>";
-
-        print_r($project5c);
-        echo "<br><br>";
+//        print_r($education3a);
+//        echo "<br><br>";
+//
+//        print_r($education3b);
+//        echo "<br><br>";
+//
+//        print_r($education3c);
+//        echo "<br><br>";
+////
+////
+////
+//        print_r($project5a);
+//        echo "<br><br>";
+//
+//        print_r($project5b);
+//        echo "<br><br>";
+//
+//        print_r($project5c);
+//        echo "<br><br>";
         //pass view name
-        $this->view->renderResume2('Resume_template3', $data);
+        $this->view->renderResume2('Resume_template1', $data);
     }
 }
