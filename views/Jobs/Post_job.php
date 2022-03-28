@@ -141,8 +141,8 @@
     <input type="date" id="Deadline" name="Deadline"require placeholder="" class="inputfield" onfocus=" hideFormError(Deadline_error)"><br>
     <span class="err" id="Deadline_error"><?php echo $data['Deadline_err']?></span><br>
 
-    <label for="Company_Logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
-    <input type="file" id="CompanyLogo" name="Company_Logo" placeholder="" class="inputfield" accept="image/*"><br>
+   <!--  <label for="Company_Logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
+    <input type="file" id="CompanyLogo" name="Company_Logo" placeholder="" class="inputfield" accept="image/*"><br> -->
     
     <label for="Job_image" class="labelfield">Job post image(JPEG/PNG)</label><br>
     <input type="file" id="CompanyLogo" name="Job_image" placeholder="" class="inputfield" accept="image/*"><br>
@@ -168,7 +168,7 @@
         <span class="err" id="Supply_Mock_Interviews_answer_error"><?php echo $data['Supply_Mock_Interviews_answer_err']?></span><br>
     </div>
 
-    <div class="radiobutton_class" onmouseover=" hideFormError(Post_a_forum_answer_error)">
+    <!-- <div class="radiobutton_class" onmouseover=" hideFormError(Post_a_forum_answer_error)">
       <span class="labelfield required">Post a forum</span>
     <div class="radiobutton_style">
 
@@ -179,7 +179,7 @@
     <label for="Post_a_forum_answer" class="radiolabel">No</label>
 
      </div>
-       
+        -->
         
       <br>
       <span class="err" id="Post_a_forum_answer_error"><?php echo $data['Post_a_forum_answer_err']?></span><br>

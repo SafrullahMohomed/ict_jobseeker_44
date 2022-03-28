@@ -161,7 +161,7 @@ class Company_account extends Controller
 
     //load company job posts
     function load_company_jobs(){
-        $User_ID=133;
+       // $User_ID=133;
         $User_ID=$_SESSION['User_ID'];
         $job=$this->model->select_jobs($User_ID);
         echo json_encode(count($job) == 0 ? null : $job);
