@@ -81,9 +81,9 @@
 
             <!-- first name -->
             <div class="firstName inp">
-                <label for="firstName" class="required">First Name</label>
+                <label for="firstName" class="required">First Name <span class="error_message" id="error_first_name"></span></label>
                 <br/>
-                <input type="text" name="firstName" id="firstName"/>
+                <input type="text" name="firstName" id="firstName" onfocus="hideFormError(error_first_name)"/>
             </div>
             <!-- last name  -->
             <div class="lastName inp">
@@ -94,14 +94,14 @@
 
             <!-- email -->
             <div class="email inp">
-                <label for="email" class="required">Email</label>
+                <label for="email" class="required">Email <span class="error_message" id="error_email"></span></label>
                 <br/>
                 <input type="email" name="email" id="email"/>
             </div>
 
             <!-- phone number -->
             <div class="phoneNumber inp">
-                <label for="phoneNumber">Phone Number</label>
+                <label for="phoneNumber">Phone Number <span class="error_message" id="error_phoneNumber"></span></label>
                 <br/>
                 <input type="tel" name="phoneNumber" id="phoneNumber"/>
             </div>
@@ -180,14 +180,14 @@
 
             <!-- job title -->
             <div class="jobTitle inp">
-                <label for="jobTitle" class="required">Job Title</label>
+                <label for="jobTitle" class="required">Job Title <span class="error_message" id="error_jobTitle2a"></span> </label>
                 <br/>
                 <input type="text" name="jobTitle" id="jobTitle2a"/>
             </div>
 
             <!-- employer -->
             <div class="employer inp">
-                <label for="employer" class="required">Employer</label>
+                <label for="employer" class="required">Employer <span class="error_message" id="error_employer2a"></span></label>
                 <br/>
                 <input type="text" name="employer" id="employer2a"/>
             </div>
@@ -223,7 +223,7 @@
             <!-- time period -->
             <div class="time_period inp">
                 <div class="from">
-                    <label for="from">From</label>
+                    <label for="from">From <span class="error_message" id="date_error_experience2a"></span></label>
                     <input type="date" name="from" id="from_experience2a"/>
                 </div>
                 <div class="to">
@@ -253,14 +253,14 @@
 
                     <!-- job title -->
                     <div class="jobTitle inp">
-                        <label for="jobTitle" class="required">Job Title</label>
+                        <label for="jobTitle" class="required">Job Title <span class="error_message" id="error_jobTitle2b"></span></label>
                         <br/>
                         <input type="text" name="jobTitle" id="jobTitle2b"/>
                     </div>
 
                     <!-- employer -->
                     <div class="employer inp">
-                        <label for="employer" class="required">Employer</label>
+                        <label for="employer" class="required">Employer <span class="error_message" id="error_employer2b"></span></label>
                         <br/>
                         <input type="text" name="employer" id="employer2b"/>
                     </div>
@@ -296,7 +296,7 @@
                     <!-- time period -->
                     <div class="time_period inp">
                         <div class="from">
-                            <label for="from">From</label>
+                            <label for="from">From <span class="error_message" id="date_error_experience2b"></span></label>
                             <input type="date" name="from" id="from_experience2b"/>
                         </div>
                         <div class="to">
@@ -327,14 +327,14 @@
 
                     <!-- job title -->
                     <div class="jobTitle inp">
-                        <label for="jobTitle" class="required">Job Title</label>
+                        <label for="jobTitle" class="required">Job Title <span class="error_message" id="error_jobTitle2c"></span></label>
                         <br/>
                         <input type="text" name="jobTitle" id="jobTitle2c"/>
                     </div>
 
                     <!-- employer -->
                     <div class="employer inp">
-                        <label for="employer" class="required">Employer</label>
+                        <label for="employer" class="required">Employer <span class="error_message" id="error_employer2c"></span></label>
                         <br/>
                         <input type="text" name="employer" id="employer2c"/>
                     </div>
@@ -370,8 +370,8 @@
                     <!-- time period -->
                     <div class="time_period inp">
                         <div class="from">
-                            <label for="from">From</label>
-                            <input type="date" name="from" id="from_experience2c"/>
+                            <label for="from">From <span class="error_message" id="date_error_experience2c"></span></label>
+                            <input type="date" name="from" id="from_experience2c" onfocus="hideFormError(date_error_experience2c)"/>
                         </div>
                         <div class="to">
                             <label for="to">To</label>
@@ -447,14 +447,14 @@
 
             <!-- Institute -->
             <div class="institute inp">
-                <label for="institute" class="required">Institute</label>
+                <label for="institute" class="required">Institute <span class="error_message" id="error_institute3a"></label>
                 <br/>
                 <input type="text" name="institute" id="institute3a"/>
             </div>
 
             <!-- Degree -->
             <div class="degree inp">
-                <label for="degree" class="required">Degree</label>
+                <label for="degree" class="required">Degree <span class="error_message" id="error_degree3a"></label>
                 <br/>
                 <input type="text" name="degree" id="degree3a"/>
             </div>
@@ -524,14 +524,14 @@
                     </div>
                     <!-- Institute -->
                     <div class="institute inp">
-                        <label for="institute" class="required">Institute</label>
+                        <label for="institute" class="required">Institute <span class="error_message" id="error_institute3b"></label>
                         <br/>
                         <input type="text" name="institute" id="institute3b"/>
                     </div>
 
                     <!-- Degree -->
                     <div class="degree inp">
-                        <label for="degree" class="required">Degree</label>
+                        <label for="degree" class="required">Degree <span class="error_message" id="error_degree3b"></label>
                         <br/>
                         <input type="text" name="degree" id="degree3b"/>
                     </div>
@@ -600,14 +600,14 @@
                     </div>
                     <!-- Institute -->
                     <div class="institute inp">
-                        <label for="institute" class="required">Institute</label>
+                        <label for="institute" class="required">Institute <span class="error_message" id="error_institute3c"></label>
                         <br/>
                         <input type="text" name="institute" id="institute3c"/>
                     </div>
 
                     <!-- Degree -->
                     <div class="degree inp">
-                        <label for="degree" class="required">Degree</label>
+                        <label for="degree" class="required">Degree <span class="error_message" id="error_degree3c"></label>
                         <br/>
                         <input type="text" name="degree" id="degree3c"/>
                     </div>

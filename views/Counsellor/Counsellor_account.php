@@ -48,21 +48,21 @@
 
         <!-- first name -->
         <div class="firstName inp">
-            <label for="firstName">First Name</label>
+            <label for="firstName" class="required">First Name</label>
             <br/>
             <input type="text" name="firstName" id="firstName" value = "<?php echo $data['First_name'] ?>" required/>
 
         </div>
         <!-- last name  -->
         <div class="lastName inp">
-            <label for="lastName">Last Name</label>
+            <label for="lastName" class="required">Last Name</label>
             <br/>
             <input type="text" name="lastName" id="lastName" value = "<?php echo $data['Last_name'] ?>"required/>
         </div>
 
         <!-- email -->
         <div class="email inp">
-            <label for="email">Email</label>
+            <label for="email" class="required">Email</label>
             <br/>
             <input type="email" name="email" id="email" value="<?php echo $data['Email'] ;?>" required/>
         </div>
@@ -70,7 +70,7 @@
 
         <!-- phone number -->
         <div class="phoneNumber inp">
-            <label for="phoneNumber">Phone Number</label>
+            <label for="phoneNumber" class="required">Phone Number</label>
             <br/>
             <input type="tel" name="phoneNumber" id="phoneNumber" value="<?php echo $data['Phone_number'] ;?>"/>
         </div>
