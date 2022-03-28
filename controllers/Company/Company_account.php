@@ -159,6 +159,24 @@ class Company_account extends Controller
     }
     }
 
+    //load company job posts
+    function load_company_jobs(){
+        $User_ID=133;
+        $User_ID=$_SESSION['User_ID'];
+        $job=$this->model->select_jobs($User_ID);
+        echo json_encode(count($job) == 0 ? null : $job);
+       // print_r( $job);
+        return $job;
+    }
+
+   
+    //delete a contract after click on the delete icon
+   function  delete_job($job_ID,$JobCategory_ID){
+
+    $this->model->delete_job($job_ID,$JobCategory_ID);
+    $this-> Company_account();
+
+   }
      //insert company data into database (user and company table)
     /* function insert_company_data($data)
      {

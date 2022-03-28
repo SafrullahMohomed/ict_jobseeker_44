@@ -44,6 +44,7 @@
     flex-direction: column;
     width: 80%;
     margin: 90px auto;
+    margin-top: 70px;
 }
 .main_details{
     display: flex;

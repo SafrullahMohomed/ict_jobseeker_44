@@ -80,6 +80,31 @@ function getCompanyData($User_ID){
 
     return $s;
 }
+//company posted jobs
+function select_jobs($User_ID){
+    $query1="SELECT Job_ID ,Job_title,JobCategory_ID
+    FROM job 
+    WHERE User_ID=$User_ID";
+
+   $stmt1=$this->db->prepare($query1);
+   $stmt1->execute();
+   $s=$stmt1->fetchAll();
+ 
+   return $s;
+
+}
+
+//delet job
+function delete_job($job_ID,$JobCategory_ID){
+    $query1="DELETE FROM `job` WHERE `Job_ID` =$job_ID";
+    $stmt1=$this->db->prepare($query1);
+    $stmt1->execute();
+
+//insert job categorey data
+$query5="UPDATE jobcategory SET JobCategory_count= JobCategory_count-1 WHERE JobCategory_ID =  $JobCategory_ID";
+$this->db->runQuery($query5);
+
+ }
 }
 
 

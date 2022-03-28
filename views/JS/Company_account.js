@@ -78,3 +78,85 @@ function loadAppliedJobseekers(){
 
   window.open("http://localhost/ict_jobseeker_44/Jobseeker/Search_jobseeker","_self");
 }
+
+//load company posted jobs
+function my_jobs(){
+
+
+  const xhr = new XMLHttpRequest();
+ 
+    //establish connection
+    xhr.open("POST", "http://localhost/ict_jobseeker_44/Company/Company_account/load_company_jobs");
+    
+
+    let company = document.querySelector(".my_jobs_row_container");
+    xhr.onload = function () {
+
+        if (xhr.status == 200) {
+            const company_data1 = xhr.responseText; //ajax response data
+           
+          const company_data2 = JSON.parse(company_data1); //convert the response data to js object
+           console.log(company_data1)
+            company.innerHTML = ``;
+               
+                if(company_data2 != null) {
+       
+                    for (var s of company_data2) {
+                  
+                      company.innerHTML += ` 
+                      
+                     
+
+        
+                      <div class="my_jobs_row" title = "click to view details of applied jobseekers" onclick="return loadAppliedJobseekers()">
+                  <!-- <a href="<?php echo URL ?>Jobseeker/Search_jobseeker" style="text-decoration: none;"> -->
+                         <div class="job_id">
+                             <div class="job_id_text">
+                                Job ID
+                             </div>
+                             <div class="job_id_data">
+                                 ${s.Job_ID}
+                             </div>
+          
+                         </div> 
+                         <div class="job_title">
+                              <div class="job_title_text">
+                              Job Title
+                              </div>
+                              <div class="job_title_data">
+                              ${s.Job_title}
+                              </div>
+          
+                          </div> 
+                          <div class="icon">
+                             <a href="http://localhost/ict_jobseeker_44/Jobs/View_job/View_jobjs/${s.Job_ID}" style="text-decoration: none;">
+                              <i title="View post" class="fa fa-eye"id="view"  aria-hidden="true"></i>
+                              </a>
+                              <a href="http://localhost/ict_jobseeker_44/jobs/Post_job" style="text-decoration: none;">
+                              <i  title="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
+                                </a>
+                              
+                                <a href="http://localhost/ict_jobseeker_44/Company/Company_account/delete_job/${s.Job_ID}/${s.JobCategory_ID}" style="text-decoration: none;">
+                                <i title ="Delete post" class="fa fa-trash-o"  id="delete" aria-hidden="true"></i>
+                                </a>
+                          </div>
+                      
+                      </div>
+          
+                  
+                 
+                      
+                     `;
+                    }
+                  } 
+
+
+            }
+
+
+        }
+      
+        xhr.send();
+
+        return false;
+}
