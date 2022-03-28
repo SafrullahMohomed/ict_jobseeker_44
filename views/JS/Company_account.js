@@ -164,7 +164,7 @@ function my_jobs(){
         const profileDiv=document.querySelector('.picture_bar');
         const profImg=document.querySelector('#output');
         const imgFile=document.querySelector('#profile_pic');
-        const academyBtnUpload=document.querySelector('#AcademyLogoBtnUpload');
+        const academyBtnUpload=document.querySelector('#profImgBtnUpload');
 
         imgFile.addEventListener('change',function()
         {
@@ -173,12 +173,12 @@ function my_jobs(){
           if(choosedImgFile)
           {
               const ImgReader=new FileReader();
-              ResourceReader.addEventListener('load',function()
+              ImgReader.addEventListener('load',function()
               {
-                  resourceLogo.setAttribute('src',ResourceReader.result);
+                  resourceLogo.setAttribute('src',ImgReader.result);
               }
               );
-              ResourceReader.readAsDataURL(choosedResourceFile);
+              ImgReader.readAsDataURL(choosedImgFile);
           }
         }
         );
