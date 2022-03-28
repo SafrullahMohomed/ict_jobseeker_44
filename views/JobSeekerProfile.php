@@ -17,16 +17,16 @@
 </div>
     <div class="MainContainer">
         <div class="MainDetails">
-            <div class="ProfilePic">
+            <!-- <div class="ProfilePic">
                 <img src='<?php echo URL ?>views/images/JobSeekerProfile/JobSeeker.jpg' >
-            </div>
+            </div> -->
             <div class="Intro">
                 <div class="Name">
                     <!-- Chamal Perera -->
                     <?php echo $data['First_name']." ".$data['Last_name']?> 
                 </div>
                 <div class="Post">
-                    Software Engineer
+                    <!-- Software Engineer -->
                 </div>
             </div>
             <?php  ?>
@@ -42,11 +42,11 @@
                     <?php echo $data['Phone_number'] ?>
                 </div>
                 <div class="Projects">
-                    10 Projects
+                    <!-- 10 Projects -->
                 </div>
                 <div class="Rating">
-                    <i class="fa fa-star-o" aria-hidden="false"></i>
-                    <div class="NoOfRating">4.2<?php echo $data['Phone_number']?></div>
+                    <!-- <i class="fa fa-star-o" aria-hidden="false"></i> -->
+                    <!-- <div class="NoOfRating">4.2<?php #echo $data['Phone_number']?></div> -->
                 </div>
             </div>
             <div class="SocialLinks">
@@ -89,8 +89,8 @@
             <div class="JobSeekerDetails">
                 <p id="titles">About Me</p>
                 <div class="row">
-                   Software engineer with through hands on experience in all levels of testing 
-                   including performance, functional integration, system and user acceptance testing.
+                   <!-- Software engineer with through hands on experience in all levels of testing 
+                   including performance, functional integration, system and user acceptance testing. -->
                    
                    <?php echo $data['Description']?>
                 </div>  
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <p id="titles">Reviews</p>
+        <!-- <p id="titles">Reviews</p>
         <div class="review">
            
             <hr>
@@ -168,8 +168,8 @@
                </div>
                 
             </div>
-            <hr>
-            <div class="review_row">
+            <hr> -->
+            <!-- <div class="review_row">
                <div class="user_picture">
                     <img src='<?php echo URL ?>views/images/JobSeekerProfile/review2.jpg' >
                </div>
@@ -193,7 +193,7 @@
 
                </div>
                  
-            </div>
+            </div> -->
             <hr>
             <?php if ( !isset($_SESSION['User_ID']) && $_SESSION['User_type']=="Jobseeker" ): ?>  
             <p id="titles">Your Review</p>
