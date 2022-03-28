@@ -21,9 +21,10 @@
             <p id="info">To complete your profile, please fill out and submit the following information.</p>
         </div>       
     </div>
-    <form name="myForm" action="<?php echo URL ?>Jobseeker/JobSeekerAccount/update_jobseeker_data" method="post" id="jobseeker_form" enctype="multipart/form-data">
+
+    <form name="profileForm" action="<?php echo URL ?>Jobseeker/JobSeekerAccount/insertProfile" method="post" id="profile_form" enctype="multipart/form-data">
     <div class="ProfileBar">
-            <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' id="output">
+         <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' id="output">
          <div class="row1">
          <!-- <img src='<?php echo URL ?>views/images/JobSeekerAccount/user.png' id="output"> -->
             <label for="profile_pic" class="labelfield">Profile picture</label><br>
@@ -31,6 +32,10 @@
             <label for="profile_pic" class="labelfield" id="ProfilePicBtnUpload">Choose a photo</label><br>
         </div>
     </div>
+    </form>
+
+    <form name="myForm" action="<?php echo URL ?>Jobseeker/JobSeekerAccount/update_jobseeker_data" method="post" id="jobseeker_form" enctype="multipart/form-data">
+    
     <div class="main_container" >
         <p id="titles">Check & Update The Personal Details In Your Profile</p>
         <div class="row">
@@ -45,7 +50,7 @@
         </div>
         <div class="row">
             <label for="email" class="labelfield">Email</label><br>
-            <input type="email" id="email" name="email" placeholder="Enter Your Email" value="<?php echo $data['Email'] ;?>" class="inputfield" required onfocus="hideFormError(email_error)"><br>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" readonly value="<?php echo $data['Email'] ;?>" class="inputfield" required onfocus="hideFormError(email_error)"><br>
             <span id="email_error" class="error"></span>
         </div>
         <div class="row">
