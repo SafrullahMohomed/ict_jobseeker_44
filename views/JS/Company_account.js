@@ -159,4 +159,27 @@ function my_jobs(){
         xhr.send();
 
         return false;
+
+        // declaring html elements 
+        const profileDiv=document.querySelector('.picture_bar');
+        const profImg=document.querySelector('#output');
+        const imgFile=document.querySelector('#profile_pic');
+        const academyBtnUpload=document.querySelector('#AcademyLogoBtnUpload');
+
+        imgFile.addEventListener('change',function()
+        {
+          const choosedImgFile=this.files[0];
+      
+          if(choosedImgFile)
+          {
+              const ImgReader=new FileReader();
+              ResourceReader.addEventListener('load',function()
+              {
+                  resourceLogo.setAttribute('src',ResourceReader.result);
+              }
+              );
+              ResourceReader.readAsDataURL(choosedResourceFile);
+          }
+        }
+        );
 }

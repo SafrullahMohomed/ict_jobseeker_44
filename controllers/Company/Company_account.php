@@ -42,6 +42,7 @@ class Company_account extends Controller
         {
         $Company_data=$this->model->getCompanyData($_SESSION['User_ID']);
 
+        
         $data['Company_name']=$Company_data['Company_name'];
         $data['address']=$Company_data['Address'];
         $data['phone_number']=$Company_data['Phone_number'];
