@@ -132,7 +132,7 @@ function my_jobs(){
                              <a href="http://localhost/ict_jobseeker_44/Jobs/View_job/View_jobjs/${s.Job_ID}" style="text-decoration: none;">
                               <i title="View post" class="fa fa-eye"id="view"  aria-hidden="true"></i>
                               </a>
-                              <a href="http://localhost/ict_jobseeker_44/jobs/Post_job" style="text-decoration: none;">
+                              <a href="http://localhost/ict_jobseeker_44/Jobs/Edit_job/Edit_jobs/${s.Job_ID}" style="text-decoration: none;">
                               <i  title="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
                                 </a>
                               

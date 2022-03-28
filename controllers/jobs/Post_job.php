@@ -56,11 +56,11 @@ class Post_job extends Controller
                     'Phone_Number' => trim($_POST['Phone_Number']),
                     'Email' => trim($_POST['Email']),
                     'Deadline' => trim($_POST['Deadline']),
-                    'Company_Logo' => trim($_POST['Company_Logo']),
+                    'Company_Logo' => '',
                     'Job_image' => trim($_POST['Job_image']),
                   //  'Urgent_answer' => trim($_POST['Urgent_answer']),
                     'Supply_Mock_Interviews_answer' => trim($_POST['Supply_Mock_Interviews_answer']), 
-                    'Post_a_forum_answer' => trim($_POST['Post_a_forum_answer']),
+                    'Post_a_forum_answer' => '',
                    
             
                     'Company_name_err' => '',
@@ -84,10 +84,10 @@ class Post_job extends Controller
                 $_SESSION['Phone_Number'] = trim($_POST['Phone_Number']);
                 $_SESSION['Email'] = trim($_POST['Email']);
                 $_SESSION['Deadline'] =trim($_POST['Deadline']);
-                $_SESSION['Company_Logo'] =trim($_POST['Company_Logo']);
+                $_SESSION['Company_Logo'] ='';
                 $_SESSION['Job_image'] = trim($_POST['Job_image']);
                 $_SESSION[ 'Supply_Mock_Interviews_answer'] = trim($_POST['Supply_Mock_Interviews_answer']);
-                $_SESSION[ 'Post_a_forum_answer'] = trim($_POST['Post_a_forum_answer']);
+                $_SESSION[ 'Post_a_forum_answer'] = '';
                 
     
                 //Validate Company_name
@@ -128,14 +128,14 @@ class Post_job extends Controller
                     if(empty($data['Supply_Mock_Interviews_answer'])) {
                         $data['Supply_Mock_Interviews_answer_err'] = "Please select one";
                 }
-                    if(empty($data['Post_a_forum_answer'])) {
+                  /* if(empty($data['Post_a_forum_answer'])) {
                         $data['Post_a_forum_answer_err'] = "Please select one";
-                 }
+                 }*/
     
                
                 //if there are no errors then insert data to database
-                if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) &&empty($data['Post_a_forum_answer_err'] ) 
-                  )
+                if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) ) 
+                  
                 {   $data1=$data;
                     $this->Post_job_main_page();
                     //after display post job main page and check free trail and then insert data to db
