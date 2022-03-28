@@ -1,5 +1,11 @@
 
 //project 1
+const print_button = document.getElementById("print_button");
+const resume_div = document.querySelector(".resume-page");
+
+print_button.addEventListener("click", ()=>{
+});
+
 const project_details5a = document.getElementById("project_details5a");
 const project_details5a_hidden = document.getElementById("project_details5a_hidden").value;
 //project 2

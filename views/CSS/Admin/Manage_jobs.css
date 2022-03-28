@@ -12,6 +12,7 @@
     /*align-items: center;*/
     /* padding-top: 100px; */
     /*margin-top: 170px;*/
+    transform: translate(0%, -7%);
 }
 
 
@@ -30,7 +31,7 @@
 /*admin dashboard options*/
 .admin-dashboard-option{
     padding: 10px 0;
-    background-color: #003144;
+    background-color: #1d6d86;
     border-radius: 10px;
     margin-bottom: 5px;
 
@@ -58,7 +59,7 @@
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 30px;
-    background-color: #003144;
+    /*background-color: #003144;*/
     border-radius: 10px;
 
 }
@@ -79,6 +80,7 @@
     text-align: center;
     box-shadow: 0 1px 0px 0 rgb(90 127 210 / 45%), 0 0px 20px 0 rgb(90 127 210 / 15%);
     margin: 6px auto;
+    background-color: #1d6d86;
 }
 
 .box:hover{
@@ -289,7 +291,7 @@ td {
     /*position: relative;*/
     /*transform: translate(0%);*/
     /*z-index: 100px;*/
-    background-color: #003144;
+    /*background-color: #003144;*/
 }
 
 .toggle-dashboard-left{
@@ -444,6 +446,8 @@ td {
     }
     .main-container{
         margin-top: 50px;
+        transform: translate(0%, -3%);
+
     }
 
 

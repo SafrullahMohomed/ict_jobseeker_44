@@ -81,7 +81,7 @@
 
             <!-- first name -->
             <div class="firstName inp">
-                <label for="firstName">First Name</label>
+                <label for="firstName" class="required">First Name</label>
                 <br/>
                 <input type="text" name="firstName" id="firstName"/>
             </div>
@@ -94,7 +94,7 @@
 
             <!-- email -->
             <div class="email inp">
-                <label for="email">Email</label>
+                <label for="email" class="required">Email</label>
                 <br/>
                 <input type="email" name="email" id="email"/>
             </div>
@@ -180,14 +180,14 @@
 
             <!-- job title -->
             <div class="jobTitle inp">
-                <label for="jobTitle">Job Title</label>
+                <label for="jobTitle" class="required">Job Title</label>
                 <br/>
                 <input type="text" name="jobTitle" id="jobTitle2a"/>
             </div>
 
             <!-- employer -->
             <div class="employer inp">
-                <label for="employer">Employer</label>
+                <label for="employer" class="required">Employer</label>
                 <br/>
                 <input type="text" name="employer" id="employer2a"/>
             </div>
@@ -253,14 +253,14 @@
 
                     <!-- job title -->
                     <div class="jobTitle inp">
-                        <label for="jobTitle">Job Title</label>
+                        <label for="jobTitle" class="required">Job Title</label>
                         <br/>
                         <input type="text" name="jobTitle" id="jobTitle2b"/>
                     </div>
 
                     <!-- employer -->
                     <div class="employer inp">
-                        <label for="employer">Employer</label>
+                        <label for="employer" class="required">Employer</label>
                         <br/>
                         <input type="text" name="employer" id="employer2b"/>
                     </div>
@@ -327,14 +327,14 @@
 
                     <!-- job title -->
                     <div class="jobTitle inp">
-                        <label for="jobTitle">Job Title</label>
+                        <label for="jobTitle" class="required">Job Title</label>
                         <br/>
                         <input type="text" name="jobTitle" id="jobTitle2c"/>
                     </div>
 
                     <!-- employer -->
                     <div class="employer inp">
-                        <label for="employer">Employer</label>
+                        <label for="employer" class="required">Employer</label>
                         <br/>
                         <input type="text" name="employer" id="employer2c"/>
                     </div>
@@ -447,14 +447,14 @@
 
             <!-- Institute -->
             <div class="institute inp">
-                <label for="institute">Institute</label>
+                <label for="institute" class="required">Institute</label>
                 <br/>
                 <input type="text" name="institute" id="institute3a"/>
             </div>
 
             <!-- Degree -->
             <div class="degree inp">
-                <label for="degree">Degree</label>
+                <label for="degree" class="required">Degree</label>
                 <br/>
                 <input type="text" name="degree" id="degree3a"/>
             </div>
@@ -524,14 +524,14 @@
                     </div>
                     <!-- Institute -->
                     <div class="institute inp">
-                        <label for="institute">Institute</label>
+                        <label for="institute" class="required">Institute</label>
                         <br/>
                         <input type="text" name="institute" id="institute3b"/>
                     </div>
 
                     <!-- Degree -->
                     <div class="degree inp">
-                        <label for="degree">Degree</label>
+                        <label for="degree" class="required">Degree</label>
                         <br/>
                         <input type="text" name="degree" id="degree3b"/>
                     </div>
@@ -600,14 +600,14 @@
                     </div>
                     <!-- Institute -->
                     <div class="institute inp">
-                        <label for="institute">Institute</label>
+                        <label for="institute" class="required">Institute</label>
                         <br/>
                         <input type="text" name="institute" id="institute3c"/>
                     </div>
 
                     <!-- Degree -->
                     <div class="degree inp">
-                        <label for="degree">Degree</label>
+                        <label for="degree" class="required">Degree</label>
                         <br/>
                         <input type="text" name="degree" id="degree3c"/>
                     </div>
