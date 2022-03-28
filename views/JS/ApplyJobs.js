@@ -1,5 +1,7 @@
+
 function validateForm() 
 {
+    // alert("GGS");
     /*validate first name*/
     var fname=document.myForm.fname.value;  
     if (fname == "")

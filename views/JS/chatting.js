@@ -157,25 +157,25 @@ function InquireButtonOne()
     getResponseInquireOne();
 }
 
-//If button one clicked then call to getResponseInquireTwo function for display question
+//If button two clicked then call to getResponseInquireTwo function for display question
 function InquireButtonTwo()
 {
     getResponseInquireTwo();
 }
 
-//If button one clicked then call to getResponseInquireThree function for display question
+//If button three clicked then call to getResponseInquireThree function for display question
 function InquireButtonThree()
 {
     getResponseInquireThree();
 }
 
-//If button one clicked then call to getResponseInquireFour function for display question
+//If button four clicked then call to getResponseInquireFour function for display question
 function InquireButtonFour()
 {
     getResponseInquireFour();
 }
 
-//If button one clicked then call to getResponseInquireFive function for display question
+//If button five clicked then call to getResponseInquireFive function for display question
 function InquireButtonFive()
 {
     getResponseInquireFive();
