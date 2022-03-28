@@ -14,7 +14,7 @@
     <script src="company_account.js"></script>
     <title>company_account</title>
 </head>
-<body>
+<body onload="my_jobs()">
      <!-- header part with css html js -->
  <div class="header_div" >
         <?php include 'views/Header.php'?>
@@ -100,75 +100,13 @@
         <div class="my_jobs_title">
             My Job Posts
         </div>
-       
-        <div class="my_jobs_row_container">
-
+        <div class="my_jobs_row_container"> </div>
         
-        <div class="my_jobs_row" title = "click to view details of applied jobseekers" onclick="return loadAppliedJobseekers()">
-        <!-- <a href="<?php echo URL ?>Jobseeker/Search_jobseeker" style="text-decoration: none;"> -->
-               <div class="job_id">
-                   <div class="job_id_text">
-                      Job ID
-                   </div>
-                   <div class="job_id_data">
-                       0001
-                   </div>
-
-               </div> 
-               <div class="job_title">
-                <div class="job_title_text">
-                   Job Title
-                </div>
-                <div class="job_title_data">
-                    Senior Engineer
-                </div>
-
-            </div> 
-            <div class="icon">
-            <a href="<?php echo URL ?>jobs/View_job" style="text-decoration: none;">
-            <i title="View post" class="fa fa-eye"id="view"  aria-hidden="true"></i>
-        </a>
-        <a href="<?php echo URL ?>jobs/Post_job" style="text-decoration: none;">
-        <i  title="Edit post" class="fa fa-pencil" aria-hidden="true"></i>
-         </a>
-                
-                <i
-                 title="Delete post" class="fa fa-trash-o" id="delete" aria-hidden="true"></i>
-            </div>
-            <!-- </a> -->
-            </div>
-
-           
-            
-            <div title= "click to view details of applied jobseekers" class="my_jobs_row">
-                <div class="job_id">
-                    <div class="job_id_text">
-                       Job ID
-                    </div>
-                    <div class="job_id_data">
-                        0002
-                    </div>
- 
-                </div> 
-                <div class="job_title">
-                 <div class="job_title_text">
-                    Job Title
-                 </div>
-                 <div class="job_title_data">
-                    Manager Vacancy 
-                 </div>
- 
-             </div> 
-             <div class="icon">
-                 <i class="fa fa-eye" id="view" aria-hidden="true"></i>
-                 <i class="fa fa-pencil" aria-hidden="true"></i>
-                 <i class="fa fa-trash-o" id="delete" aria-hidden="true"></i>
-             </div>
-             </div>
-        </div>
     </div>
-    </div>
+    
     <?php include 'views/Footer.php'?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script  src="<?php echo URL?>views/JS/Company_account.js"></script>
 </body>
 </html>

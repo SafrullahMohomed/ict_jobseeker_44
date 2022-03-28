@@ -57,6 +57,10 @@ function insert_query_post_contract(){
        $query3="UPDATE contract_category SET Contract_count= Contract_count+1 WHERE Contractcatergory_ID = $Contractcatergory_ID";
        $this->db->runQuery($query3);
 
+       //update contract count of the cp
+       $query4="UPDATE contractprovider SET Contract_count= Contract_count+1 WHERE User_ID = $User_ID";
+       $this->db->runQuery($query4);
+
 
    }
     

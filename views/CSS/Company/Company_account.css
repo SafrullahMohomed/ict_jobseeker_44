@@ -126,6 +126,12 @@ font-weight: 600;
     margin-bottom: 40px;
 }
 
+.job_title_data{
+    width: 300px; 
+    text-overflow:clip;
+    overflow: hidden;
+   
+ } 
 .my_jobs_row_container:hover{
 cursor: pointer;
 }
