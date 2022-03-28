@@ -12,7 +12,10 @@
     display: none;!important;
 }
 
-
+.error_message{
+    color:red;
+    font-size: 12px;
+}
 .required:after {
     content:" *";
     color: red;
