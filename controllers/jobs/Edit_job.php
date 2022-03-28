@@ -7,17 +7,21 @@ class Edit_job extends Controller
       parent:: __construct();
 
     }
+function Edit_job(){
 
-    function Edit_job()
+}
+    function Edit_jobs($Job_ID)
     {
         $data = [
             'Job_title' => '',
             'Job_description' => '',
-            'Job Type' => '',
-            'Company_name' => '',
-            'Company_name' => '',
-            'Company_name' => '',
-            'Company_name' => '',
+            'Job_Type' => '',
+            'Job_salary' => '',
+            'Job_city' => '',
+            'Job_provide_mock_interviews' => '',
+            'Job_image'=>'',
+            'Job_phone_no'=>'',
+            'Job_deadline'=>'',
             'Company_name_err' => '',
             'Job_Title_err' => '',
             'Job_Category_err' => '',
@@ -28,7 +32,29 @@ class Edit_job extends Controller
             'Post_a_forum_answer_err' => '',
             'jobCategory'=>''
         ];
+
+
+        if(isset($_SESSION['User_ID']))
+        {
+        $Company_data=$this->model->autoload_job($Job_ID);
+     // print_r($Company_data);
+
+        $data['Job_title']=$Company_data['Job_title'];
+        $data['Job_description']=$Company_data['Job_description'];
+        $data['Job_Type']=$Company_data['Job_type'];
+        $data['Job_salary']=$Company_data['Job_salary'];
+        $data['Job_city']=$Company_data['Job_city'];
+        $data['Job_provide_mock_interviews']=$Company_data['Job_provide_mock_interviews'];
+        $data['Job_image']=$Company_data['Job_image'];
+        $data['Job_phone_no']=$Company_data['Job_phone_no'];
+        $data['email']=$_SESSION['Email'];
+        $data['Job_deadline']=$Company_data['Job_deadline'];
         
+        
+        }
+
+        //pass view name
+        //$this->view ->render2('Company/Company_account',$data); 
 
         //if there is a company name in company table then we take it and display job post form
         
@@ -46,8 +72,8 @@ class Edit_job extends Controller
     }
 
     //check validation before insert post job data
-    function insert_post_job_data()
-    {
+    function update_post_job_data($Job_ID)
+    {    $_SESSION['$Job_ID']=$Job_ID;
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
                 $data = [
@@ -61,11 +87,11 @@ class Edit_job extends Controller
                     'Phone_Number' => trim($_POST['Phone_Number']),
                     'Email' => trim($_POST['Email']),
                     'Deadline' => trim($_POST['Deadline']),
-                    'Company_Logo' => trim($_POST['Company_Logo']),
+                    'Company_Logo' => '',
                     'Job_image' => trim($_POST['Job_image']),
                   //  'Urgent_answer' => trim($_POST['Urgent_answer']),
                     'Supply_Mock_Interviews_answer' => trim($_POST['Supply_Mock_Interviews_answer']), 
-                    'Post_a_forum_answer' => trim($_POST['Post_a_forum_answer']),
+                    'Post_a_forum_answer' => '',
                    
             
                     'Company_name_err' => '',
@@ -89,10 +115,10 @@ class Edit_job extends Controller
                 $_SESSION['Phone_Number'] = trim($_POST['Phone_Number']);
                 $_SESSION['Email'] = trim($_POST['Email']);
                 $_SESSION['Deadline'] =trim($_POST['Deadline']);
-                $_SESSION['Company_Logo'] =trim($_POST['Company_Logo']);
+                $_SESSION['Company_Logo'] ='';
                 $_SESSION['Job_image'] = trim($_POST['Job_image']);
                 $_SESSION[ 'Supply_Mock_Interviews_answer'] = trim($_POST['Supply_Mock_Interviews_answer']);
-                $_SESSION[ 'Post_a_forum_answer'] = trim($_POST['Post_a_forum_answer']);
+                $_SESSION[ 'Post_a_forum_answer'] = '';
                 
     
                 //Validate Company_name
@@ -133,14 +159,14 @@ class Edit_job extends Controller
                     if(empty($data['Supply_Mock_Interviews_answer'])) {
                         $data['Supply_Mock_Interviews_answer_err'] = "Please select one";
                 }
-                    if(empty($data['Post_a_forum_answer'])) {
+                  /* if(empty($data['Post_a_forum_answer'])) {
                         $data['Post_a_forum_answer_err'] = "Please select one";
-                 }
+                 }*/
     
                
                 //if there are no errors then insert data to database
-                if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) &&empty($data['Post_a_forum_answer_err'] ) 
-                  )
+                if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) ) 
+                  
                 {   $data1=$data;
                     $this->Post_job_main_page();
                     //after display post job main page and check free trail and then insert data to db
@@ -151,7 +177,7 @@ class Edit_job extends Controller
                 //if there is invalid data or empty data then render same page ith errors
                 else{
                    
-                    $this->view ->render2('Jobs/Edit_job',$data);   
+                    $this->view ->render2('Jobs/Edit_jobs/'. $_SESSION['$Job_ID'],$data);   
                 }
        
        
@@ -161,12 +187,13 @@ class Edit_job extends Controller
     else{
         echo "Invalid access";
     }
-
-
 }
+
+
 function insertData(){
     //after display post job main page and check free trail and then insert data to db
-    $this->model->insert_query_post_job();
+    $Job_ID=$_SESSION['$Job_ID'];
+    $this->model->update_query_post_job($Job_ID);
     $this->view ->render('Jobs_main_page'); 
 
 }
@@ -197,4 +224,6 @@ function Post_job_main_page()
        $this->view ->render6('Jobs/Post_job_main_page',$diff_y,$diff_m,$count2); 
         
     }
+
+    
 }

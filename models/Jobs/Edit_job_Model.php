@@ -33,7 +33,7 @@ public function getJobCategory(){
 
 
     //insert job post data to jobs table in the database
-    public function insert_query_post_job(){
+    public function update_query_post_job($Job_ID){
 
         $Company_name = $_SESSION['Company_name'];
         $Job_Title = $_SESSION['Job_Title'];
@@ -66,39 +66,38 @@ public function getJobCategory(){
         $Post_a_forum_answer = trim($_POST['Post_a_forum_answer']);*/
         
 try{
-      // $this->db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      // $this->db->beginTransaction();
-      
-        //insert data into job table when post a job
-        $query1="INSERT INTO job (User_ID,JobCategory_ID,Job_type,Job_title,Job_deadline,Job_salary,
-        Job_provide_mock_interviews,Job_city,Job_description,Job_forum,Job_phone_no)
-        VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-        $stmt1=$this->db->prepare($query1);
+         //select job categoryid old and compare if it is change then update job category count
+       $query1 ="SELECT JobCategory_ID FROM job WHERE Job_ID= $Job_ID" ;
+       $stmt1=$this->db->prepare($query1);
+       $stmt1->execute();
+       $s1=$stmt1->fetch();
+       if($s1!=$Job_Category_ID){
+            //insert job categorey data
+        $query2="UPDATE jobcategory SET JobCategory_count= JobCategory_count-1 WHERE JobCategory_ID =  $s1";
+        $this->db->runQuery($query2);
+        //insert job categorey data
+        $query3="UPDATE jobcategory SET JobCategory_count= JobCategory_count+1 WHERE JobCategory_ID =  $Job_Category_ID";
+        $this->db->runQuery($query3);
+       }
 
-        $stmt1->execute([$_SESSION['User_ID'],$Job_Category_ID, $Job_Type,$Job_Title,$Deadline,$Sallary_Offered,$Supply_Mock_Interviews_answer,$City, $Brief_Description,$Post_a_forum_answer,$Phone_Number]);
-
-        $Job_ID = $this->db->lastInsertId();
-
-        //insert data into post table and make a relation
-        $query2="INSERT INTO post (User_ID ,Job_ID,Payment_ID)
-        VALUES (?,?,?)";
-        $stmt2=$this->db->prepare($query2);
-        //at this point intial 6  months are free for posting jobs.therefore i add payement ID as 1 here.
-        $stmt2->execute([$_SESSION['User_ID'], $Job_ID,1]);
-
-        /*$query3="UPDATE user SET Profile_picture=$Company_Logo";
-        $this->db->prepare($query3);
-        $this->db->execute();*/
         $User_ID= $_SESSION['User_ID'];
         //update company name of company profile as new name 
-      
-       
-       $query4="UPDATE company SET Company_name='$Company_name',Company_posted_job_count=Company_posted_job_count+1 WHERE User_ID = $User_ID";     
-       $this->db->runQuery($query4);
+        $query4="UPDATE company SET Company_name='$Company_name',Company_posted_job_count=Company_posted_job_count+1 WHERE User_ID = $User_ID";     
+        $this->db->runQuery($query4);
+    
 
-        //insert job categorey data
-        $query5="UPDATE jobcategory SET JobCategory_count= JobCategory_count+1 WHERE JobCategory_ID =  $Job_Category_ID";
-        $this->db->runQuery($query5);
+       //update job data when editing
+       $query5="UPDATE job SET JobCategory_ID='$JobCategory_ID',Job_type='$Job_type',Job_title='$Job_title',
+       Job_deadline='$Job_deadline',Job_salary=$Job_salary,
+       Job_provide_mock_interviews='$Job_provide_mock_interviews',Job_city='$Job_city',
+       Job_description='$Job_description',Job_forum='$Job_forum',Job_phone_no='$Job_phone_no' 
+       WHERE Job_ID = $Job_ID";     
+       $this->db->runQuery($query5);
+
+      
+        
+
+       
         /*$stmt5=$this->db->prepare($query4);
         $stmt5->execute();*/
 
@@ -144,6 +143,26 @@ catch(Exception $e){
         return $s;
  
 
+    }
+
+    //get posted job data when edit job auto loading
+    function autoload_job($Job_ID){
+        $query1 ="  SELECT a.Job_ID ,d.Company_name, a.Job_type, a.Job_title, a.Job_deadline,
+       a.Job_provide_mock_interviews,a.Job_salary,a.Job_city,
+       a.Job_description,a.Job_image, b.Email,a.Job_phone_no,b.Profile_picture,
+       d.Company_facebook,d.Company_twitter,d.Company_LinkedIn,b.User_ID
+       FROM job a, user b,post c,company d 
+       WHERE a.Job_ID=$Job_ID AND a.Job_ID = c.Job_ID AND c.User_ID=b.User_ID AND c.User_ID=d.User_ID 
+       AND a.User_ID=d.User_ID AND a.User_ID=b.User_ID" ;
+       
+       $stmt1=$this->db->prepare($query1);
+   
+       $stmt1->execute();
+       $s=$stmt1->fetch();
+      
+  
+   
+       return $s;
     }
 
 
