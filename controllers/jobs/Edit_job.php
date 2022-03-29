@@ -11,8 +11,10 @@ function Edit_job(){
 
 }
     function Edit_jobs($Job_ID)
-    {
+    {//when post a job flag=0 and when edit flag =1
         $data = [
+            
+            'Job_ID'=>'',
             'Job_title' => '',
             'Job_description' => '',
             'Job_Type' => '',
@@ -22,6 +24,7 @@ function Edit_job(){
             'Job_image'=>'',
             'Job_phone_no'=>'',
             'Job_deadline'=>'',
+            'JobCategory_name'=>'',
             'Company_name_err' => '',
             'Job_Title_err' => '',
             'Job_Category_err' => '',
@@ -38,7 +41,7 @@ function Edit_job(){
         {
         $Company_data=$this->model->autoload_job($Job_ID);
      // print_r($Company_data);
-
+        $data['Job_ID']=$Company_data['Job_ID'];
         $data['Job_title']=$Company_data['Job_title'];
         $data['Job_description']=$Company_data['Job_description'];
         $data['Job_Type']=$Company_data['Job_type'];
@@ -49,6 +52,7 @@ function Edit_job(){
         $data['Job_phone_no']=$Company_data['Job_phone_no'];
         $data['email']=$_SESSION['Email'];
         $data['Job_deadline']=$Company_data['Job_deadline'];
+        $data['JobCategory_name']=$Company_data['JobCategory_name'];
         
         
         }
@@ -120,7 +124,7 @@ function Edit_job(){
                 $_SESSION[ 'Supply_Mock_Interviews_answer'] = trim($_POST['Supply_Mock_Interviews_answer']);
                 $_SESSION[ 'Post_a_forum_answer'] = '';
                 
-    
+        
                 //Validate Company_name
                 if(empty($data['Company_name'])) {
                     $data['Company_name_err'] = "Please enter the company name";
@@ -168,16 +172,16 @@ function Edit_job(){
                 if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) ) 
                   
                 {   $data1=$data;
-                    $this->Post_job_main_page();
+                    $this->Post_job_main_page(1);
                     //after display post job main page and check free trail and then insert data to db
                    //$this->model->insert_query_post_job( $data);
                    //$this->view ->render('Jobs_main_page');  
                   
                 }
-                //if there is invalid data or empty data then render same page ith errors
+                //if there is invalid data or empty data then render same page with errors
                 else{
-                   
-                    $this->view ->render2('Jobs/Edit_jobs/'. $_SESSION['$Job_ID'],$data);   
+                  
+                    //$this->view ->render2('Jobs/Edit_job',$data);  
                 }
        
        
@@ -197,7 +201,7 @@ function insertData(){
     $this->view ->render('Jobs_main_page'); 
 
 }
-function Post_job_main_page()
+function Post_job_main_page($flag)
     {  //get registration data
        $reg_date1=$this->model->get_reg_date()[0];
        $reg_date2= new DateTime($reg_date1);
@@ -220,8 +224,15 @@ function Post_job_main_page()
       $count2= $count1['COUNT(Job_ID)'];
        //print_r($count2);
         //pass view name
-    
-       $this->view ->render6('Jobs/Post_job_main_page',$diff_y,$diff_m,$count2); 
+    $data=[
+        'diff_y'=>$diff_y,
+        'diff_m'=>$diff_m,
+        'count2'=>$count2,
+        'flag'=>$flag
+
+    ];
+    $this->view ->render2('Jobs/Post_job_main_page',$data);
+      /// $this->view ->render6('Jobs/Post_job_main_page',$diff_y,$diff_m,$count2,$flag); 
         
     }
 

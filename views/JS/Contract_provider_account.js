@@ -131,7 +131,6 @@ function loadAppliedJobseekers() {
 //load company posted jobs
 function my_jobs(){
 
-
     const xhr = new XMLHttpRequest();
    
       //establish connection
@@ -184,7 +183,7 @@ function my_jobs(){
                 </a>
             
                
-                <a href="http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_account/delete_contract/${s.Contract_ID}" style="text-decoration: none;">
+                <a href="http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_account/delete_contract/${s.Contract_ID}/${s.Contractcatergory_ID }" style="text-decoration: none;">
                 <i title ="Delete post" class="fa fa-trash-o"  id="delete" aria-hidden="true"></i>
                 </a>
                 

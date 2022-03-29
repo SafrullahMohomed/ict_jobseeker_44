@@ -58,7 +58,7 @@
 
     <label for="Job_Category" class="labelfield required">Job Category</label><br>
     <select id="JobCategory" name="Job_Category" class="inputfield" onfocus=" hideFormError(Job_Category_error)" require>
-    <option value="" autocomplete selected>Select job category</option> 
+    <option  value="<?php  echo $data['JobCategory_name']  ?>"  autocomplete selected ><?php  echo $data['JobCategory_name']  ?></option> 
         <?php 
         $data_count=count($data['jobCategory']);
        
@@ -151,7 +151,7 @@
 
     <!-- <label for="Company_Logo" class="labelfield">Company_Logo(JPEG/PNG)</label><br>
     <input type="file" id="CompanyLogo" name="Company_Logo" placeholder="" class="inputfield" accept="image/*"><br> -->
-    
+   
     <label for="Job_image" class="labelfield">Job post image(JPEG/PNG)</label><br>
     <input value="<?php  echo $data['Job_image'] ?>"  autocomplete  type="file" id="CompanyLogo" name="Job_image" placeholder="" class="inputfield" accept="image/*"><br>
 
@@ -164,7 +164,7 @@
         checked
         <?php endif;?>
       
-      autocomplete type="radio" id="Supply_Mock_Interviews_yes" name="Supply_Mock_Interviews_answer" required value="Yes" class="radiobutton">
+      autocomplete type="radio" id="Supply_Mock_Interviews_yes" name="Supply_Mock_Interviews_answer" required value="1" class="radiobutton">
       <label for="Supply_Mock_Interviews_answer" class="radiolabel">Yes</label>
  
 
@@ -172,7 +172,7 @@
        <?php  if ($data['Job_provide_mock_interviews'] =='0'): ?>
         checked
         <?php endif;?>
-      type="radio" id="Supply_Mock_Interviews_no" name="Supply_Mock_Interviews_answer"required  value="No" class="radiobutton">
+      type="radio" id="Supply_Mock_Interviews_no" name="Supply_Mock_Interviews_answer"required  value="0" class="radiobutton">
       <label for="Supply_Mock_Interviews_answer" class="radiolabel">No</label>
     
 

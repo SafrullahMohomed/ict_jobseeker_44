@@ -9,9 +9,9 @@ class Post_job extends Controller
     }
 
     function Post_job()
-    {
+    {//when post a job flag=0 and when edit flag =1
         $data = [
-            
+            'flag'=>'0',
             'Company_name' => '',
             'Company_name_err' => '',
             'Job_Title_err' => '',
@@ -137,7 +137,7 @@ class Post_job extends Controller
                 if(empty($data['Company_name_err']) && empty($data['Job_Title_err']) && empty($data['Email_err']) && empty($data['Job_Category_err']) && empty($data['Deadline_err'])&&empty($data['Supply_Mock_Interviews_answer_err'] ) ) 
                   
                 {   $data1=$data;
-                    $this->Post_job_main_page();
+                    $this->Post_job_main_page(0);
                     //after display post job main page and check free trail and then insert data to db
                    //$this->model->insert_query_post_job( $data);
                    //$this->view ->render('Jobs_main_page');  
@@ -165,7 +165,7 @@ function insertData(){
     $this->view ->render('Jobs_main_page'); 
 
 }
-function Post_job_main_page()
+function Post_job_main_page($flag)
     {  //get registration data
        $reg_date1=$this->model->get_reg_date()[0];
        $reg_date2= new DateTime($reg_date1);
@@ -189,7 +189,16 @@ function Post_job_main_page()
        //print_r($count2);
         //pass view name
     
-       $this->view ->render6('Jobs/Post_job_main_page',$diff_y,$diff_m,$count2); 
+        $data=[
+            'diff_y'=>$diff_y,
+            'diff_m'=>$diff_m,
+            'count2'=>$count2,
+            'flag'=>$flag
+    
+        ];
+        print_r($data);
+        $this->view ->render2('Jobs/Post_job_main_page',$data);
+      // $this->view ->render6('Jobs/Post_job_main_page',$diff_y,$diff_m,$count2); 
         
     }
 }

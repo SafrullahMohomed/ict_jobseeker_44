@@ -21,7 +21,7 @@ class View
     public function render3($viewName, $data)
     {
 
-        require 'views/' . $viewName . '.php';
+        require 'views/'.$viewName .'.php';
     }
 
     //when view file is inside a folder
@@ -35,7 +35,7 @@ class View
    
         include 'views/'.$viewName. '.php';
  }
- public function render6($viewName,$data1,$data2,$data3) {
+ public function render6($viewName,$data1,$data2,$data3,$data4) {
    
     include 'views/'.$viewName. '.php';
 }

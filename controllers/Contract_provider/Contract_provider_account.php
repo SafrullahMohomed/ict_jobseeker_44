@@ -69,9 +69,9 @@ class Contract_provider_account extends Controller
   }
 
   //delete a contract after click on the delete icon
-   function delete_contract($contract_ID){
+   function delete_contract($contract_ID,$Contractcatergory_ID){
 
-    $this->model->delete_contract($contract_ID);
+    $this->model->delete_contract($contract_ID,$Contractcatergory_ID);
     $this->Contract_provider_account();
 
    }

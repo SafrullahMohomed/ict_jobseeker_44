@@ -102,7 +102,7 @@ function getCpData($User_ID){
 
 //select cp contracts when loading
 function select_contracts($User_ID){
-        $query1="SELECT Contract_ID  ,Contract_title
+        $query1="SELECT Contract_ID  ,Contract_title,Contractcatergory_ID 
          FROM contract 
          WHERE Contract_provider_ID=$User_ID";
 
@@ -115,10 +115,14 @@ function select_contracts($User_ID){
        } 
 
 //delet contract
-function delete_contract($contract_ID){
+function delete_contract($contract_ID,$Contractcatergory_ID){
    $query1="DELETE FROM `contract` WHERE `contract`.`Contract_ID` = $contract_ID";
    $stmt1=$this->db->prepare($query1);
    $stmt1->execute();
+   //insert Contract categorey data
+$query5="UPDATE contract_category SET Contract_count= Contract_count-1 WHERE Contractcatergory_ID = $Contractcatergory_ID";
+$this->db->runQuery($query5);
+
 }
    
 }

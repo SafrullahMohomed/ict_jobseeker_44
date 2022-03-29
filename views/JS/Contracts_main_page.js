@@ -10,7 +10,7 @@ function Bidnow(){
     }
     /*after click on the category box*/
     function viewContract(data){
-      
+    
       var xhr = new XMLHttpRequest();
       xhr.open("POST", "http://localhost/ict_jobseeker_44/Contracts/View_contract/view_clicked_contract2/"+data);
       
@@ -385,7 +385,7 @@ function ajaxload(query = '', page_number = 1) {
               <div class="features_contract_row_contract_bid_container_count_and_bid_button">
               <div class="features_contract_row_contract_bid_container_count">
               <div class="features_contract_row_contract_bid_container_count_no">
-                No bids yet
+                0 bids 
               </div>
               <div class="features_contract_row_contract_bid_container_count_bid_text"></div>
               </div>

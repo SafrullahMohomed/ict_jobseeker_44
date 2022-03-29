@@ -7,13 +7,21 @@ class Search_jobseeker extends Controller
 
     }
 
-    function Search_jobseeker()
+    function Search_jobseeker($Job_ID)
     {
-        #$this->model->printSomething();
-        #echo "Hello from the Test controller - Index Method";
-
+     //  print_r($Job_ID);
         //pass view name
-        $this->view ->render('Search_jobseeker'); 
+        $this->view ->render3('Search_jobseeker',$Job_ID); 
         
     }
+
+    function Search_jobseeker_for_job($Job_ID){
+    $jobseeker=$this->model->Search_jobseeker_for_job_m($Job_ID);
+    
+    echo json_encode(count($jobseeker) == 0 ? null : $jobseeker);
+    return  $jobseeker;
+
+    }
+
+
 }

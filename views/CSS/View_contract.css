@@ -111,7 +111,14 @@ cursor: pointer;
    
     
 }
-
+.job_description_text{
+    
+  
+    overflow-wrap: break-word;
+    display: inline-block;
+   
+    white-space: pre-line;
+}
 .company_details{
 
 height: 200px;

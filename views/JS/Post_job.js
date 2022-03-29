@@ -21,13 +21,21 @@ function hideFormError(x) {
  
   
 
-  function valid_free_trail(){
+  function valid_free_trail(flag){
    // window.open("http://localhost/ict_jobseeker_44/Jobs/Success_post","_self");
     //setTimeout(valid_free_trail, 10000);
-    window.location.href ="http://localhost/ict_jobseeker_44/Jobs/Post_Job/insertData";
-  
 
+    //if post job then insert
+    if(flag==0)
+   { 
+     window.location.href ="http://localhost/ict_jobseeker_44/Jobs/Post_Job/insertData";
+   }
+   //if edit job then update
+   else{
+    window.location.href ="http://localhost/ict_jobseeker_44/Jobs/Edit_Job/insertData";
+   }
   }
+
   function invalid_free_trail(){
     alert("Sorry your free trail is invalid.Try with payment option");
     
