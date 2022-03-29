@@ -74,9 +74,10 @@ var loadFile = function (event) {
   };
 
 //after click my job post then load a applied job seekers for relavent job
-function loadAppliedJobseekers(){
+function loadAppliedJobseekers(Job_ID){
+  window.open("http://localhost/ict_jobseeker_44/Jobseeker/Search_jobseeker/Search_jobseeker/"+Job_ID,self);
 
-  window.open("http://localhost/ict_jobseeker_44/Jobseeker/Search_jobseeker","_self");
+  
 }
 
 //load company posted jobs
@@ -108,7 +109,7 @@ function my_jobs(){
                      
 
         
-                      <div class="my_jobs_row" title = "click to view details of applied jobseekers" onclick="return loadAppliedJobseekers()">
+                      <div class="my_jobs_row" title = "click to view details of applied jobseekers" onclick="return loadAppliedJobseekers(${s.Job_ID})">
                   <!-- <a href="<?php echo URL ?>Jobseeker/Search_jobseeker" style="text-decoration: none;"> -->
                          <div class="job_id">
                              <div class="job_id_text">
@@ -164,7 +165,7 @@ function my_jobs(){
         const profileDiv=document.querySelector('.picture_bar');
         const profImg=document.querySelector('#output');
         const imgFile=document.querySelector('#profile_pic');
-        const academyBtnUpload=document.querySelector('#AcademyLogoBtnUpload');
+        const academyBtnUpload=document.querySelector('#profImgBtnUpload');
 
         imgFile.addEventListener('change',function()
         {
@@ -173,12 +174,12 @@ function my_jobs(){
           if(choosedImgFile)
           {
               const ImgReader=new FileReader();
-              ResourceReader.addEventListener('load',function()
+              ImgReader.addEventListener('load',function()
               {
-                  resourceLogo.setAttribute('src',ResourceReader.result);
+                  resourceLogo.setAttribute('src',ImgReader.result);
               }
               );
-              ResourceReader.readAsDataURL(choosedResourceFile);
+              ImgReader.readAsDataURL(choosedImgFile);
           }
         }
         );

@@ -36,12 +36,12 @@
              <?php  
               //if company is at intial six month and their job count is less than ten they can use free trail
               //$data1=diif_y,$data1=diif_m,$data1=count2,
-              if(($data1<1) && ($data2<=6) && ($data3<=10)):?>
-               onclick="valid_free_trail()"
+              if(($data['diff_y']<1) && ($data['diff_m']<=6) && ($data['count2']<=10)):?>
+               onclick="valid_free_trail(<?php echo $data['flag']?>)"
               <?php endif; ?>  
 
               <?php
-               if($data1>1 || $data2>6 || $data3>10):?>
+               if($data['diff_y']>1 || $data['diff_m']>6 || $data['count2']>10):?>
                onclick="invalid_free_trail()"
               <?php endif; ?> > 
               Free Trial

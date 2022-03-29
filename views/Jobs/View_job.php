@@ -36,7 +36,7 @@
      
    </div>
    <!--FAQ session start from here--> 
-    <div class="FAQ">
+    <!-- <div class="FAQ">
         <div class="FAQ_button">
             <button onclick="openfaqForum()">Post Forum Question</button>
         </div>
@@ -79,7 +79,7 @@
 
     </div>
     
-</div>
+</div> -->
 
 <?php include  ("views/Footer.php" )?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

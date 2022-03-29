@@ -176,11 +176,11 @@ height: 30px;
 }
 .job_description_text{
     
-  width:500px;
+  
     overflow-wrap: break-word;
     display: inline-block;
    
-    white-space: pre;
+    white-space: pre-line;
 }
 .application_deadline{
    font-weight: bolder; 
