@@ -26,11 +26,11 @@ function ajaxload(query = '', page_number = 1) {
             let cprovider_data = JSON.parse(cprovider_data2.data); //convert the data array into js object
 
 
-                var cprovider_tbody = ``; //variable for table body
+            var cprovider_tbody = ``; //variable for table body
 
-                if (cprovider_data.length > 0) {
-                    for (let i = 0; i < cprovider_data.length; i++) {
-                        cprovider_tbody += ` <tr>
+            if (cprovider_data.length > 0) {
+                for (let i = 0; i < cprovider_data.length; i++) {
+                    cprovider_tbody += ` <tr>
                         <td>${cprovider_data[i].User_ID}</td>
                         <td>${cprovider_data[i].Email}</td>
                         <td>${cprovider_data[i].First_name}&nbsp${cprovider_data[i].Last_name}</td>
@@ -38,34 +38,33 @@ function ajaxload(query = '', page_number = 1) {
                         <td>${cprovider_data[i].Phone_number}</td>
                         <td id="action">
                             <div class="icon">
-                                <i title="View post" onclick="view_counselling(${cprovider_data[i].User_ID})" class="fa fa-eye" aria-hidden="true"></i>
-                                <i title="Edit post" onclick="edit_counselling(${cprovider_data[i].User_ID})" class="fa fa-pencil" aria-hidden="true"></i>
-                                <i title="Delete post" onclick="delete_counselling(${cprovider_data[i].User_ID})" class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i title="View post" onclick="view_cp(${cprovider_data[i].User_ID})" class="fa fa-eye" aria-hidden="true"></i>
+                                <i title="Edit post" onclick="edit_cp(${cprovider_data[i].User_ID})" class="fa fa-pencil" aria-hidden="true"></i>
+                                <i title="Delete post" onclick="delete_cp(${cprovider_data[i].User_ID})" class="fa fa-trash-o" aria-hidden="true"></i>
                             </div>
                         </td>
 
                     </tr>`
-                    }
-                } else {
-                    cprovider_tbody += `<tr> No matching data is found</tr>`;
                 }
-
-
-                document.getElementById("cprovider_tbody").innerHTML = cprovider_tbody;
-                document.getElementById("pagination-link").innerHTML = cprovider_data2.pagination;
-                document.getElementById("total-data").innerHTML = cprovider_data2.total_data;
-                // document.getElementById("page_no").innerHTML = cprovider_data2.page_no;
-
+            } else {
+                cprovider_tbody += `<tr> No matching data is found</tr>`;
             }
 
 
-        }
-        for (var pair of form_data.entries()) {
-            console.log(pair);
-        }
-        xhr.send(urlparam);
-    }
+            document.getElementById("cprovider_tbody").innerHTML = cprovider_tbody;
+            document.getElementById("pagination-link").innerHTML = cprovider_data2.pagination;
+            document.getElementById("total-data").innerHTML = cprovider_data2.total_data;
+            // document.getElementById("page_no").innerHTML = cprovider_data2.page_no;
 
+        }
+
+
+    }
+    for (var pair of form_data.entries()) {
+        console.log(pair);
+    }
+    xhr.send(urlparam);
+}
 
 
 ajaxload();
@@ -99,6 +98,23 @@ toggle_left.addEventListener("click", () => {
 
 const add_cprovider = document.getElementById("add-button");
 
-add_cprovider.addEventListener("click", function (){
+add_cprovider.addEventListener("click", function () {
     location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_add_counselling"
 });
+
+function view_cp(User_ID) {
+    location.href = "http://localhost/ict_jobseeker_44/Contract_provider/Contract_provider_profile/Cp_profilejs/" + User_ID;
+    ;
+}
+
+function edit_cp(User_ID) {
+    location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_account?User=" + User_ID;
+
+}
+
+function delete_cp(User_ID) {
+    let value = confirm("Are you sure, you want to delete this account");
+    if (value == true) {
+        location.href = "http://localhost/ict_jobseeker_44/Admin/Manage_counselling/delete_counsellor_data?User=" + User_ID;
+    }
+}

@@ -311,14 +311,18 @@ const to_date_report = document.getElementById('to-date');
 
 const report_button = document.getElementById('reportGen');
 
-report_button.addEventListener("click", ()=>{
-    if (from_date_report.valueAsDate > to_date_report.valueAsDate)
+report_button.addEventListener("click", (e)=>{
+    // e.preventDefault();
+    if (from_date_report > to_date_report)
     {
         if(alert("from date cannot be greater than to date")){
             from_date_report.value = null;
             to_date_report.value = null;
+            console.log("I am clicked")
+
         };
 
     }
+
 
 });

@@ -37,9 +37,9 @@ function ajaxload(query = '', page_number = 1) {
                         <td>${job_data[i].Job_deadline}</td>
                         <td id="action">
                             <div class="icon">
-                                <i title="View post" onclick="view_job(${job_data[i].User_ID})" class="fa fa-eye" aria-hidden="true"></i>
-                                <i title="Edit post" onclick="edit_job(${job_data[i].User_ID})" class="fa fa-pencil" aria-hidden="true"></i>
-                                <i title="Delete post" onclick="delete_job(${job_data[i].User_ID})" class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i title="View post" onclick="view_job(${job_data[i].Job_ID})" class="fa fa-eye" aria-hidden="true"></i>
+                                <i title="Edit post" onclick="edit_job(${job_data[i].Job_ID})" class="fa fa-pencil" aria-hidden="true"></i>
+                                <i title="Delete post" onclick="delete_job(${job_data[i].Job_ID}, ${job_data[i].JobCategory_ID})" class="fa fa-trash-o" aria-hidden="true"></i>
                             </div>
                         </td>
 
@@ -102,8 +102,9 @@ add_job.addEventListener("click", function (){
     location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_add_counselling"
 });
 
-function view_job(User_ID) {
-    location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_profile?User=" + User_ID;
+function view_job(Job_ID) {
+    location.href = "http://localhost/ict_jobseeker_44/Jobseeker/Search_jobseeker/Search_jobseeker/" + Job_ID;
+    ;
 }
 
 function edit_job(User_ID) {
@@ -111,11 +112,13 @@ function edit_job(User_ID) {
 
 }
 
-function delete_job(User_ID) {
+function delete_job(Job_ID, JobCategory_ID) {
     let value = confirm("Are you sure, you want to delete this account");
     if(value == true){
-        location.href = "http://localhost/ict_jobseeker_44/Admin/Manage_counselling/delete_counsellor_data?User=" + User_ID;
+        location.href = "http://localhost/ict_jobseeker_44/Company/Company_account/delete_job/"+ Job_ID+ "/" + JobCategory_ID;
     }
+    // location.href = "http://localhost/ict_jobseeker_44/Admin/Manage_jobs";
+
 
 
 }

@@ -26,11 +26,11 @@ function ajaxload(query = '', page_number = 1) {
             let company_data = JSON.parse(company_data2.data); //convert the data array into js object
 
             console.log(company_data)
-                var company_tbody = ``; //variable for table body
+            var company_tbody = ``; //variable for table body
 
-                if (company_data.length > 0) {
-                    for (let i = 0; i < company_data.length; i++) {
-                        company_tbody += ` <tr>
+            if (company_data.length > 0) {
+                for (let i = 0; i < company_data.length; i++) {
+                    company_tbody += ` <tr>
                         <td>${company_data[i].User_ID}</td>
                         <td>${company_data[i].Email}</td>
                         <td>${company_data[i].Company_name}</td>
@@ -45,27 +45,26 @@ function ajaxload(query = '', page_number = 1) {
                         </td>
 
                     </tr>`
-                    }
-                } else {
-                    company_tbody += `<tr> No matching data is found</tr>`;
                 }
-
-
-                document.getElementById("company_tbody").innerHTML = company_tbody;
-                document.getElementById("pagination-link").innerHTML = company_data2.pagination;
-                document.getElementById("total-data").innerHTML = company_data2.total_data;
-                // document.getElementById("page_no").innerHTML = company_data2.page_no;
-
+            } else {
+                company_tbody += `<tr> No matching data is found</tr>`;
             }
 
 
-        }
-        for (var pair of form_data.entries()) {
-            console.log(pair);
-        }
-        xhr.send(urlparam);
-    }
+            document.getElementById("company_tbody").innerHTML = company_tbody;
+            document.getElementById("pagination-link").innerHTML = company_data2.pagination;
+            document.getElementById("total-data").innerHTML = company_data2.total_data;
+            // document.getElementById("page_no").innerHTML = company_data2.page_no;
 
+        }
+
+
+    }
+    for (var pair of form_data.entries()) {
+        console.log(pair);
+    }
+    xhr.send(urlparam);
+}
 
 
 ajaxload();
@@ -99,6 +98,24 @@ toggle_left.addEventListener("click", () => {
 
 const add_company = document.getElementById("add-button");
 
-add_company.addEventListener("click", function (){
+add_company.addEventListener("click", function () {
     location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_add_company"
 });
+
+
+function view_company(User_ID) {
+    location.href = "http://localhost/ict_jobseeker_44/Company/Company_profile/Company_profilejs/" + User_ID;
+    ;
+}
+
+function edit_company(User_ID) {
+    location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_account?User=" + User_ID;
+
+}
+
+function delete_company(User_ID) {
+    let value = confirm("Are you sure, you want to delete this account");
+    if (value == true) {
+        location.href = "http://localhost/ict_jobseeker_44/Admin/Manage_counselling/delete_counsellor_data?User=" + User_ID;
+    }
+}
