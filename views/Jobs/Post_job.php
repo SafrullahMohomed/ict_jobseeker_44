@@ -48,7 +48,7 @@
     <label for="Job_Title" class="labelfield required">Job Title</label><br>
     <input type="text" id="JobTitle" name="Job_Title" placeholder="" class="inputfield" required onfocus=" hideFormError(Job_Title_error)"><br>
     <span class="err" id="Job_Title_error"><?php echo $data['Job_Title_err']?></span><br>
-
+   
     <label for="Job_Category" class="labelfield required">Job Category</label><br>
     <select id="JobCategory" name="Job_Category" class="inputfield" onfocus=" hideFormError(Job_Category_error)" require>
     <option value="" selected>Select job category</option> 

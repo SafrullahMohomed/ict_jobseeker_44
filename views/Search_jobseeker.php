@@ -16,7 +16,7 @@
    
     <title>Applied Jobseekers</title>
 </head>
-<body>
+<body onload="load_jobseeker(<?php echo $data; ?>)">
    <!-- header part with css html js -->
    <div class="header_div" >
         <?php include 'Header.php'?>
@@ -58,49 +58,14 @@
         </div> 
        
       </div>
-      <div class="Trending">Applied Jobseekers</div>
-      <a href="<?php echo URL ?>Jobseeker/JobSeekerprofile" class="ResourceRow" type = " button" >
-          <div class="Academy">
-          <img src='<?php echo URL ?>views/images/Jobseeker/j1.jfif' > 
-        
-           
-          </div>
-          <div class="Tutorial">
-             Chamal Perera
-          </div>
-         <!--  <div class="Lesson">
-            <img src="images/2.jfif" alt="company icon">
-          </div> -->
-</a>
-      <div class="ResourceRow">
-        <div class="Academy">
-        <img src='<?php echo URL ?>views/images/Jobseeker/j3.jfif' > 
+      <p class="Trending_title">Applied Jobseekers</p>
+      <div class="Trending"></div>
        
-    
-         
-        </div>
-        <div class="Tutorial">
-          Binuri Herath
-        </div>
-        <!-- <div class="Lesson">
-          <img src="js.png" alt="Lesson icon">
-        </div> -->
-      </div>
-        <div class="ResourceRow">
-            <div class="Academy">
-            <img src='<?php echo URL ?>views/images/Jobseeker/j2.jfif' > 
-            
-             
-            </div>
-            <div class="Tutorial">
-              Supun Sandaruwan
-            </div>
-           
-        </div>
-      
+      <!-- load data from db -->
       </div>
       <?php include 'Footer.php'?>
-     
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="<?php echo URL ?>views/JS/Search_jobseeker.js"></script>
       <script src = "companies_search.js"></script>
 </body>
 </html>
