@@ -22,6 +22,8 @@ class Resume_form_contact extends Controller
 
        echo $this->model->Resume_form_data_m($mainObj);
 
+       $this->model->Resume_form_data_m_update($mainObj);
+
     }
 
     function get_resume_data(){
