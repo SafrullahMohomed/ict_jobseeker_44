@@ -39,9 +39,9 @@ function ajaxload(query = '', page_number = 1) {
                         <td>${contract_data[i].Contract_deadline}</td>
                         <td id="action">
                             <div class="icon">
-                                <i title="View post" onclick="view_counselling(${contract_data[i].User_ID})" class="fa fa-eye" aria-hidden="true"></i>
-                                <i title="Edit post" onclick="edit_counselling(${contract_data[i].User_ID})" class="fa fa-pencil" aria-hidden="true"></i>
-                                <i title="Delete post" onclick="delete_counselling(${contract_data[i].User_ID})" class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i title="View post" onclick="view_contract(${contract_data[i].Contract_ID})" class="fa fa-eye" aria-hidden="true"></i>
+                                <i title="Edit post" onclick="edit_contract(${contract_data[i].Contract_ID})" class="fa fa-pencil" aria-hidden="true"></i>
+                                <i title="Delete post" onclick="delete_contract(${contract_data[i].Contract_ID})" class="fa fa-trash-o" aria-hidden="true"></i>
                             </div>
                         </td>
 
@@ -101,5 +101,24 @@ toggle_left.addEventListener("click", () => {
 const add_contract = document.getElementById("add-button");
 
 add_contract.addEventListener("click", function (){
-    location.href = "http://localhost/ict_jobseeker_44/Admin/Admin_add_counselling"
+    // location.href =
 });
+
+http://localhost/ict_jobseeker_44/Contracts/View_contract/View_contractjs/9
+
+    function view_contract(Contract_ID) {
+        location.href = "http://localhost/ict_jobseeker_44/Contracts/View_contract/View_contractjs/" + Contract_ID;
+        ;
+    }
+
+function edit_contract(Contract_ID) {
+    location.href = "http://localhost/ict_jobseeker_44/Counsellor/Counsellor_account?User=" + Contract_ID;
+
+}
+
+function delete_contract(Contract_ID) {
+    let value = confirm("Are you sure, you want to delete this account");
+    if (value == true) {
+        location.href = "http://localhost/ict_jobseeker_44/Admin/Manage_counselling/delete_counsellor_data?User=" + Contract_ID;
+    }
+}

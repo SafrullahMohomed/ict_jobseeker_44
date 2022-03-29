@@ -23,7 +23,7 @@ class Manage_jobs_Model extends Model
 
 
 
-        $sql = "SELECT job.Job_ID, Job_title, Company_name, JobCategory_name, Job_deadline\n"
+        $sql = "SELECT job.Job_ID, job.JobCategory_ID, Job_title, Company_name, JobCategory_name, Job_deadline\n"
             . "FROM job\n"
             . "JOIN company ON job.User_ID = company.User_ID\n"
             . "JOIN jobcategory ON job.JobCategory_ID = jobcategory.JobCategory_ID\n"
@@ -58,7 +58,9 @@ class Manage_jobs_Model extends Model
                 'Job_title' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_title"]),
                 'Company_name' => str_ireplace($replace_array_1, $replace_array_2, $row["Company_name"]),
                 'JobCategory_name' => str_ireplace($replace_array_1, $replace_array_2, $row["JobCategory_name"]),
-                'Job_deadline' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_deadline"])
+                'Job_deadline' => str_ireplace($replace_array_1, $replace_array_2, $row["Job_deadline"]),
+                'JobCategory_ID' => str_ireplace($replace_array_1, $replace_array_2,$row['JobCategory_ID'])
+
             );
         }
 //        return print_r($data);
@@ -72,7 +74,7 @@ class Manage_jobs_Model extends Model
     {
 //        declare an empty array
         $final = array();
-        $sql2 = "SELECT job.Job_ID, Job_title, Company_name, JobCategory_name, Job_deadline\n"
+        $sql2 = "SELECT job.Job_ID, job.JobCategory_ID, Job_title, Company_name, JobCategory_name, Job_deadline\n"
 
             . "FROM job\n"
 
@@ -102,7 +104,9 @@ class Manage_jobs_Model extends Model
                 'Job_title' => $row['Job_title'],
                 'Company_name' => $row['Company_name'],
                 'JobCategory_name' => $row['JobCategory_name'],
-                'Job_deadline' => $row['Job_deadline']
+                'Job_deadline' => $row['Job_deadline'],
+                'JobCategory_ID' => $row['JobCategory_ID']
+
             );
         }
 

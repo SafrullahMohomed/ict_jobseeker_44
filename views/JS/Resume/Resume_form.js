@@ -229,6 +229,7 @@ function validate_education() {
 }
 
 
+
 function hideFormError(x) {
     x.value = '';
 }
@@ -238,6 +239,92 @@ function compareDate(from, to) {
     if (from > to) {
         return true;
     } else return false;
+}
+
+//date validation
+function date_validation_experience(){
+    let flag = 0;
+    const date_error_experience2a = document.getElementById("date_error_experience2a");
+    const date_error_experience2b = document.getElementById("date_error_experience2b");
+    const date_error_experience2c = document.getElementById("date_error_experience2c");
+
+    //compare from date and to date
+    if (compareDate(from_experience2a, to_experience2a)) {
+        date_error_experience2a.innerHTML = 'From Date cannot be greater than To Date';
+        flag = 1;
+    }
+    else{
+        date_error_experience2a.innerHTML = '';
+    }
+
+    if (compareDate(from_experience2b, to_experience2b)) {
+        date_error_experience2b.innerHTML = 'From Date cannot be greater than To Date';
+        flag = 1;
+    }
+    else{
+        date_error_experience2b.innerHTML = '';
+    }
+
+    if (compareDate(from_experience2c, to_experience2c)) {
+        date_error_experience2c.innerHTML = 'From Date cannot be greater than To Date';
+        flag = 1;
+    }
+    else{
+        date_error_experience2c.innerHTML = '';
+    }
+
+    if (flag === 1) {
+        console.log("Hi I am inside flag 1 in date");
+        console.log(flag);
+        return false;
+    }
+    console.log("Hi I am inside flag 0 in date");
+    console.log(flag);
+    return true;
+
+}
+
+//date validation education
+function date_validation_education(){
+
+    let flag = 0;
+    const date_error_education3a = document.getElementById("date_error_education3a");
+    const date_error_education3b = document.getElementById("date_error_education3b");
+    const date_error_education3c = document.getElementById("date_error_education3c");
+
+    //compare from date and to date
+    if (compareDate(from_education3a, to_education3a)) {
+        date_error_education3a.innerHTML = 'From Date cannot be greater than To Date';
+        flag = 1;
+    }
+    else{
+        date_error_education3a.innerHTML = '';
+    }
+
+    if (compareDate(from_education3b, to_education3b)) {
+        date_error_education3b.innerHTML = 'From Date cannot be greater than To Date';
+        flag = 1;
+    }
+    else{
+        date_error_education3b.innerHTML = '';
+    }
+
+    if (compareDate(from_education3c, to_education3c)) {
+        date_error_education3c.innerHTML = 'From Date cannot be greater than To Date';
+        flag = 1;
+    }
+    else{
+        date_error_education3c.innerHTML = '';
+    }
+
+    if (flag === 1) {
+        console.log("Hi I am inside flag 1 in date");
+        console.log(flag);
+        return false;
+    }
+    console.log("Hi I am inside flag 0 in date");
+    console.log(flag);
+    return true;
 }
 
 //compare to to date and currently study or work
@@ -386,6 +473,16 @@ function objAssignment(firstName, lastName, email, phoneNumber, address, city, a
 
     console.log(mainObj);
     return mainObj;
+}
+
+//to get resume data
+function ajax_get_resume_data(){
+    //establish connection
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", )
+    xhr.onload = function (){
+
+    }
 }
 
 function variableAssignments() {
@@ -641,6 +738,7 @@ next_button1.addEventListener("click", (e) => {
 });
 
 // console.log(firstName);
+//exit from experience
 back_button2.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -756,11 +854,7 @@ back_button2.addEventListener("click", (e) => {
 next_button2.addEventListener("click", (e) => {
     e.preventDefault();
     if (validate_experience()) {
-        const currenBullet = bullets[1];
-        currenBullet.classList.add("completed");
-        currentStep++;
-        showTab(currentStep);
-        console.log(currentStep);
+
 
 //contact form variables
         var firstName = document.getElementById("firstName").value;
@@ -852,19 +946,30 @@ next_button2.addEventListener("click", (e) => {
         var projectTitle5c = document.getElementById("projectTitle5c").value;
         var projectDetails5c = document.getElementById("projectDetails5c").value;
 
-        //compare from date and to date
-        if (compareDate(from_experience2a, to_experience2a)) {
+        var from_experience2a_date_validate = document.getElementById("from_experience2a");
+        var to_experience2a_date_validate = document.getElementById("to_experience2a");
 
+        var from_experience2b_date_validate = document.getElementById("from_experience2b");
+        var to_experience2b_date_validate = document.getElementById("to_experience2b");
+
+        var from_experience2c_date_validate = document.getElementById("from_experience2c");
+        var to_experience2c_date_validate = document.getElementById("to_experience2c");
+
+            date_validation_experience();
+            const currenBullet = bullets[1];
+            currenBullet.classList.add("completed");
+            currentStep++;
+            showTab(currentStep);
+            console.log(currentStep);
+            objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
+                jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
+                jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
+                jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
+                institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
+                institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
+                institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
+                projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
         }
-        objAssignment(firstName, lastName, email, phoneNumber, address, city, aboutYou, skillDetails,
-            jobTitle2a, employer2a, city_experience2a, country_experience2a, experienceDetails2a, from_experience2a, to_experience2a, workHere2a,
-            jobTitle2b, employer2b, city_experience2b, country_experience2b, experienceDetails2b, from_experience2b, to_experience2b, workHere2b,
-            jobTitle2c, employer2c, city_experience2c, country_experience2c, experienceDetails2c, from_experience2c, to_experience2c, workHere2c,
-            institute3a, degree3a, city_education3a, country_education3a, from_education3a, to_education3a, studyHere3a,
-            institute3b, degree3b, city_education3b, country_education3b, from_education3b, to_education3b, studyHere3b,
-            institute3c, degree3c, city_education3c, country_education3c, from_education3c, to_education3c, studyHere3c,
-            projectTitle5a, projectDetails5a, projectTitle5b, projectDetails5b, projectTitle5c, projectDetails5c);
-
         // if (mainObj.experience.length === 0) {
         //     let experience_object1 = new Experience(1, jobTitle, employer, city_experience, country_experience, experienceDetails, from_experience, to_experience, workHere);
         //     mainObj.experience.push(experience_object1)
@@ -872,7 +977,7 @@ next_button2.addEventListener("click", (e) => {
         //
         // }
 
-    }
+
     window.scrollTo({top: 0, behavior: 'smooth'});
 
 });
@@ -1042,7 +1147,7 @@ back_button3.addEventListener("click", (e) => {
 //education form
 next_button3.addEventListener("click", (e) => {
     e.preventDefault();
-    if (validate_education()) {
+    if (validate_education() && date_validation_education()) {
         const currenBullet = bullets[2];
         currenBullet.classList.add("completed");
         currentStep++;
