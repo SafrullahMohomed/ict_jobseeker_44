@@ -491,7 +491,7 @@
             <!-- time period -->
             <div class="time_period inp">
                 <div class="from">
-                    <label for="from">From</label>
+                    <label for="from">From <span class="error_message" id="date_error_education3a"></span></label>
                     <input type="date" name="from" id="from_education3a"/>
                 </div>
                 <div class="to">
@@ -568,7 +568,7 @@
                     <!-- time period -->
                     <div class="time_period inp">
                         <div class="from">
-                            <label for="from">From</label>
+                            <label for="from">From <span class="error_message" id="date_error_education3b"></span></label>
                             <input type="date" name="from" id="from_education3b"/>
                         </div>
                         <div class="to">
@@ -644,7 +644,7 @@
                     <!-- time period -->
                     <div class="time_period inp">
                         <div class="from">
-                            <label for="from">From</label>
+                            <label for="from">From <span class="error_message" id="date_error_education3c"></span></label>
                             <input type="date" name="from" id="from_education3c"/>
                         </div>
                         <div class="to">
